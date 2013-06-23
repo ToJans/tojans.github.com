@@ -1,0 +1,788 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="May 30th, 2011 Comments Continuous Thinking: Why a 4GL Should Be Avoided to Start a New App Introduction
+As an avid member of the DDD/CQRS &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/page/6/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T00:00:00+02:00" data-updated="true" itemprop="datePublished">May 30<span>th</span>, 2011</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2011/05/30/continuous-thinking-why-a-4gl-should-be-avoided-to-start-a-new-app/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2011/05/30/continuous-thinking-why-a-4gl-should-be-avoided-to-start-a-new-app/" itemprop="url">Continuous Thinking: Why a 4GL Should Be Avoided to Start a New App</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction<br /></h3>
+<p>As an avid member of the <a href="https://groups.google.com/forum/?hl=en#!forum/dddcqrs" target="_blank">DDD/CQRS discussion group</a>, somebody <a href="https://groups.google.com/d/msg/dddcqrs/ymg615XWCr0/gEgIts8bwjcJ" target="_blank">asked me what I meant with the following sentence</a>:</p>
+<pre><em>it looks a lot like a 4GL, and I assume we all know what that means...</em></pre>
+<p>Since I tend to think my answer formulated my ideas pretty well, I decided to post it on my blog too; I hope this might help some of you to avoid the 4GL pitfall&#8230;</p>
+<p>&nbsp;</p>
+<h3>Why should a business avoid writing apps in a 4GL ?</h3>
+<p>This was <a href="https://groups.google.com/d/msg/dddcqrs/ymg615XWCr0/beX7AxPlE1QJ" target="_blank">my answer</a>:</p>
+<p style="padding-left: 30px;"><em>WARNING: This might be a bit off-topic here, but I do want to clarify my **PERSONAL** opinion on 4GLs.<br /><br />[AD  MODE]As an independent consultant one of my key specializations is  brownfield migrations (together with non-communicating teams).[/AD MODE]<br /><br />Having  seen numerous examples, I think most of these homegrown x-year old+  MSAccess or similar applications are usually the perfect example of why  one should respect the SOLID principles. <br /><br />Here a typical evolution of a 4GL app:<br />There  is a business need for a small piece of software (think CRUD client  list), which does not need to do a lot. So someone drags and drops a  CRUD app together in a few hours/days/weeks depending on the scope&#8230;  Everybody is thrilled and excited about the custom piece of software,  which was developed in a fraction of the time, it is custom  built,cheaper,[Add the obvious here],&#8230;.<br /><br />Unfortunately, an app  is bound to grow more complicated as the business is evolving, f.e.  &#8220;Could you add products/quotes/&#8221;,&#8221;except for this and that this should  do that&#8221;, &#8230;<br />After some time, such an app is also bound to have &#8220;user hacks&#8221; (i.e. changing a field&#8217;s  meaning to work around a limitation for example, because it would cost to much to implement the change), so when this specific  coworker is on holiday nobody knows how to work with the app&#8230;<br />Educating new users/software devs might also become quite a steep hill to climb.<br /><br />I  usually get consulted by the time the app has been growing for about 3  to 10 years into an unmaintainable behemoth with a massive amount of  implicit business knowledge in it, where a single change might break  everything or take numerous days to implement, <br /><br />Unfortunately, there is no nearby river available to clean this kind of Augeas stable.<br />I  do not intend to describe the whole process we need to go through, but I  can assure you it takes a lot of time/effort/resources, and requires  quite a lot of engagement from both the management and the software  team.<br />A business in this kind of situation needs to handle this  problem, better sooner then later, because it is bound to constrain the  business growth/evolution sooner or later.<br /><br />[sarcastic mode]<br />If you do decide to implement an app in a 4GL, please send me your coordinates, and I will give you a call in about a year or 3<br />[/sarcastic mode]</em></p>
+<h3><br /></h3>
+<h3>Conclusion</h3>
+<p>In my honest opinion,<strong> a 4GL should never be used to implement business logic</strong>; if you do break this rule, you are bound to get into problematic situations sooner or later; in case you do decide on using a 4GL, I would stongly advise to use it<strong> only for the front-end</strong>, and respect the <a href="http://en.wikipedia.org/wiki/Solid_%28object-oriented_design%29" target="_blank">SOLID</a> principles.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-31T00:00:00+02:00" data-updated="true" itemprop="datePublished">Mar 31<span>st</span>, 2011</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2011/03/31/continuous-thinking-nerdbeers-providing-business-value-by-issue-tracking/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2011/03/31/continuous-thinking-nerdbeers-providing-business-value-by-issue-tracking/" itemprop="url">Continuous Thinking: Nerdbeers - Providing Business Value by Issue Tracking</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Note: this post is part of a series; you can find the first post <a href="http://www.corebvba.be/blog/post/Continuous-thinking-just-ship-it-the-story-of-NerdBeers.aspx">here</a>.</p>
+<h3>Introduction</h3>
+<p>Well, another 14 days passed by for the <a href="http://github.com/ToJans/NerdBeers" target="_blank">NerdBeers</a> project, and a lot has happened:</p>
+<ul>
+<li><a href="http://github.com/ToJans/NerdBeers/pull/6" target="_blank">@Grumpydev added a proper design</a></li>
+<li>I did some major refactoring in the FailingSqlite branch, which will allow us in the future to have full integration testing available for doing proper BDD (or top-down TDD, if you prefer to call it like that). Unfortunately this branch is still pending for integration due to some problems.</li>
+<li>I got some followers/forks over at github (Yay!!)</li>
+<li>Some more people offered to help me out</li>
+<li>Both @MarkRendle and @NotMyself progressed a lot with both Simple.Data and Simple.Data.SQLite</li>
+<li>Spring started; I enjoyed the sunshine outside with the kids and the Mrs.</li>
+<li>Social obligations            
+<ul>
+<li>My brother in law&#8217;s house renovation deadline is approaching</li>
+<li>My brother&#8217;s birthday party</li>
+<li>Lots of catching up with some friends</li>
+<li>&#8230;</li>
+</ul>
+</li>
+</ul>
+<h3><br /></h3>
+<h3>So Nerdbeers has not really changed a lot ? Are you lamenting ???</h3>
+<p>No, in fact I am not, <a href="http://github.com/ToJans/NerdBeers/commits/FailingSqlite" target="_blank">I spent quite a lot of time on trying to get the &#8220;FailingSqlite branch&#8221; going</a>, but unfortunately I have not been able to finish it, so I can not integrate all my changes into the master branch.</p>
+<p>After receiving a kind offer from someone to help me out on the project, he asked me what still needed to be implemented. This got me thinking:</p>
+<p>In this project, I reject tools/methodology as long as possible. Since I noticed the project was starting to slip - I&#8217;ve spent a lot of time on it, but the Net result for the end user is still zero -, I wondered how I could prevent this from happening again.</p>
+<p style="padding-left: 30px;"><strong><em>After all, that is what Agile/Lean is all about: be as efficient as possible in what you do, and the minute you are getting less efficient, look back at what happened, and find a way to make sure it does not happen again.</em></strong></p>
+<p>I used this approach all the time in the Nerdbeers project: I started without any tests or IOC, I postponed them until the manual testing process was slowing me down/not error-prone enough. This might mean I have a suboptimal design, but since there is no real business value in this, I can safely neglect this. When the suboptimal design starts getting in the way of doing efficient development, I can always refactor.</p>
+<p>Anyway, back to the slipping part.</p>
+<h3><br /></h3>
+<h3>How can I prevent this lamenting stuff ?</h3>
+<p>The reason for lamenting is quite straightforward: I need a proper way to determine my - and the contributor&#8217;s priorities. So I started creating issues on github, and after a few attempts of tagging, I finally found a method that works for me. It is heavily inspired by the Kanban stuff I use all the time during dev.</p>
+<p>This is what the open issues list currently looks like:</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2011%2f3%2fOpenIssues.png" alt="" width="659" height="465" /></p>
+<p>&nbsp;</p>
+<h3>Whoa, that&#8217;s a lot of tags!! Why is that ?</h3>
+<p>Well, because I need them; let&#8217;s look at them one by one, in the order they are assigned:</p>
+<ul>
+<li>Type: determine whether an issue is providing direct business value (bug or feature) or not (Tech)</li>
+<li>Time: a very rough estimate how much time it might take to implement; the purpose is helping you prioritize issues</li>
+<li>Care: this tag points to the person who is taking care of this issue (you could consider this a bit like an assignment)</li>
+<li>Stat: (short for status) Using stat you can follow the progress of the task</li>
+</ul>
+<p>I tried searching for the minimal amount of tags which would allow to determine the correct priorities.</p>
+<p>Using these tags I found out that the huge branch I&#8217;m currently working on, does not really provide a lot of added business value, so I decided to lower the priority and make it a bottom one. This is actually something that happens a lot with projects: things get implemented because they are &#8220;cool&#8221;, but they actually do not provide a lot of direct business value. These tags should help me to prioritize.</p>
+<p>Another cool thing is that the closed issues list now actually provides some value:</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2011%2f3%2fClosedIssues.png" alt="" width="659" height="465" /></p>
+<p>&nbsp;</p>
+<h3>Fixing the features</h3>
+<p>As I was thinking about all the possible features, I noticed that I was adding a lot of them, without actually thinking them through. Since I wanted to avoid adding features which do not provide business value, I decided to implement a BDD technique into my feature definition.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2011%2f3%2fIssueAddPinMap.png" alt="" width="659" height="465" /></p>
+<p>Lets take a look at this in detail:</p>
+<pre><span style="text-decoration: underline;"><strong>As a</strong></span> site owner
+<span style="text-decoration: underline;"><strong>I would like</strong></span> the Nerd
+<span style="text-decoration: underline;"><strong>To be able to</strong></span> view a map of all upcoming nerdbeers
+<span style="text-decoration: underline;"><strong>So that</strong></span> he can choose whether he would organise one himself, or just join another one<br /></pre>
+<p>This uses my favorte BDD format for BDD stories: you inform the reader who wants the feature, for whom it is designated, what it is and what the business value is.</p>
+<p>This approach actually made me remove some of the issues I had entered, and made me alter some others. Someone who looks at a feature should now be able to figure out a lot based on these four simple sentences.</p>
+<h3><br /></h3>
+<h3>Conclusion</h3>
+<p>While the app in itself has not really evolved a lot, the way we approached it now has; this is what Agile/Lean is all about to me: provide business value in small incremental steps, reducing waste/being efficient as much as you can. I am rather curious to know what the next step will be in this project !!!</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-16T00:00:00+01:00" data-updated="true" itemprop="datePublished">Mar 16<span>th</span>, 2011</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2011/03/16/continuous-thinking-nerdbeers-continued-we-all-win/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2011/03/16/continuous-thinking-nerdbeers-continued-we-all-win/" itemprop="url">Continuous Thinking: Nerdbeers Continued - We All Win !!</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p><strong>Note: this post is the successor to<a href="http://www.corebvba.be/blog/post/Continuous-thinking-just-ship-it-the-story-of-NerdBeers.aspx"> the previous post</a> on <a href="https://github.com/ToJans/NerdBeers" target="_blank">NerdBeers</a>; if you have not read it yet, you might want to browse through that one first in order to have some context for this one.</strong></p>
+<p><strong><br /></strong></p>
+<p><span style="font-size: 12px; font-weight: bold; ">Introduction</span></p>
+<p>The initial development on the Nerdbeers app was started <a href="https://github.com/ToJans/NerdBeers/commit/b5077c460aab1abd26ceeb49bf045ee63a850fe0" target="_blank">about two weeks ago</a>, and I never imagined it to be such a big thing really; I just wanted to build a small app to prove to myself that I could write an app without falling in the usual architecture trap.</p>
+<p>But things evolved quite a lot, or, to quote <a href="http://en.wikipedia.org/wiki/The_Art_of_War" target="_blank">a famous book</a>:</p>
+<pre>"Opportunities multiply as they are seized"<br />Sun Tzu - "The Art of War"</pre>
+<p>I will try to give you a short overview of the key things that happened in the past two weeks.</p>
+<p>&nbsp;</p>
+<h3><span style="font-weight: bold; ">The components matched perfectly</span></h3>
+<p>As I had been reading around on the web about <a href="https://github.com/jacksonh/manos" target="_blank">Manos</a>, <a href="https://github.com/kayak/kayak" target="_blank">Kayak</a>, <a href="https://github.com/robconery/massive" target="_blank">Massive</a>, <a href="http://en.wikipedia.org/wiki/Lean_software_development" target="_blank">lean software practices</a>, <a href="http://en.wikipedia.org/wiki/Getting_things_done" target="_blank">getting things done</a>, &#8230;, I was looking for an opportunity. The main focus point for me was avoiding protocol/boilerplate code, and thus having as much functionality as possible while writing the smallest possible amount LOC (Lines Of Code)&nbsp;&nbsp;.</p>
+<p>The minute I saw the Nancy web framework at github I knew that this would have to be it; it had such a nice and clean syntax, and it was similar <a href="http://www.corebvba.be/blog/post/SoWhatcs-An-example-of-a-possible-Net-web-framework-looking-like-Sinatra.aspx" target="_blank">to the thing I had been thinking about building myself.</a> After one of the main coders provided the idea of reimplementing nerddinner, I just started implementing it.</p>
+<p>Doing this, I did notice that I needed some kind of a data access layer as wel. Looking for&nbsp;the ultimate LOC/efficiency, I opted for the relatively new Simple.Data, which looked like it was the tersest possible approach possible to data access for me.</p>
+<p>They matched perfectly !</p>
+<p>&nbsp;</p>
+<h3>The components were really young OSS projects</h3>
+<p>Since both of the components were still in an early development phase, they were bound to have at least some bugs, so choosing a relatively new player on the block might seem like a stupid mistake to make, but in my opinion this was one of the best decisions:</p>
+<pre>By&nbsp;choosing very "young" open source projects,&nbsp;<br />the contibutors were all willing and able to help me out <br />with my newbie issues in a very direct way.</pre>
+<p>Think about it: if you use a mature open-source component, the OSS contributors get flooded with support requests, and are probably being asked the same questions over and over again. If you choose a young project, the authors will probably notice your questions, and they even might be able to help you out directly.</p>
+<p>While I was hoping for some help, I never expected such a massive amount of response.</p>
+<p>&nbsp;</p>
+<h3>The component authors all contributed a huge amount to the NerdBeers project</h3>
+<p>What happened here was WAY beyond my expectations: next to getting almost instant help from all the component authors over twitter, they even started looking at my code, telling me what could be improved, and they even launched a few pull requests.</p>
+<p>Most of the &#8220;bugs in their components&#8221; were actually bugs in my app due to my malpractices, but they were always there to help me out.</p>
+<p>They also liked the fact that Nerdbeers was an implementation which showed of the results of their labour.</p>
+<p>After a numerous amount of tweets with <a href="https://twitter.com/#!/Grumpydev" target="_blank">@GrumpyDev</a>, <a href="https://twitter.com/#!/TheCodeJunkie" target="_blank">@TheCodeJunkie</a> <a href="https://twitter.com/#!/markrendle" target="_blank">@MarkRendle</a> and others, I finally had an app boilerplate ready.</p>
+<p>Next to this, someone from appharbor (<a href="https://twitter.com/#!/troethom" target="_blank">@troethom</a>) helped me to resolve a &#8220;bug&#8221; in my solution so that I could deploy the app to a demo website (for free), and the maintainer of AutoTest.Net (<a href="https://twitter.com/#!/ackenpacken" target="_blank">@AckenPacken</a>) was there to help me after a tweet, even though I just made a stupid mistake (using the wrong MSpec runner).</p>
+<p>&nbsp;</p>
+<h3>The NerdBeers development team - a.k.a. &#8220;Wow, it really does happen!&#8221;</h3>
+<p>Here is a confession:</p>
+<pre>Without all those brittle minds, this would never have happened.</pre>
+<p>I have had projects skyrocketing in the past during my professional career. IMHO the usual way to get this happening is following these steps:</p>
+<p>&nbsp;</p>
+<ol>
+<li>Think about an idea</li>
+<li>Care about it, grow it, be passionate about it</li>
+<li>Set an initial target: both in scope and time</li>
+<li>Start implementing it</li>
+<li>Ship it at the time you planned it - really early, no matter how bad it looks, even if it does not have any true functionality yet</li>
+<li>Get other people passionate about it, and try to trigger their intrests</li>
+<li>Go to step 1, hoping to have at least triggered the interest of a few persons who might join you in the process later on</li>
+</ol>
+<div>If you want this to happen, I can tell you one thing in advance: it will be hard, you have to be really persistent. You will have to take shortcuts, make some tough decisions, and be prepared to take the blame. It also requires some experience in <a href="http://en.wikipedia.org/wiki/Team_leader" target="_blank">team lead</a>, <a href="http://en.wikipedia.org/wiki/Group_dynamics" target="_blank">group dynamics</a>, <a href="http://en.wikipedia.org/wiki/Neuro-linguistic_programming" target="_blank">NLP</a>, <a href="http://en.wikipedia.org/wiki/Timeline_of_management_techniques" target="_blank">management techniques</a>, <a href="http://en.wikipedia.org/wiki/Sales_techniques" target="_blank">sales techniques</a>, especially for step 6.</div>
+<div><br /></div>
+<div>If you manage to pull this off, you will notice that the team&#8217;s interaction augments the individual team members achievements to a new high.</div>
+<div><br /></div>
+<div>For Nerdbeers, step 6 happened naturally; it did not take any effort at all. Agreed, there was some persistence required for the first steps, and sending out a version like this might have even damaged my &#8220;being professional about software architecture&#8221; (LOL), but at least I got something out there.</div>
+<div><br /></div>
+<div>Here is what happened: the people started caring. No effort from my side was required at all. Those people influenced other people, and those might actually influence other people. All by themselves, no extra effort required. While this might not be a &#8220;traditional&#8221; software team, I would still call it a team. Agreed, we communicate over twitter, instant messages, github, without having any real contacts, or even some kind of direction, but everybody cares and takes his responsibility. Which is great, especially so soon in something so small !!</div>
+<div><br /></div>
+<h3>Conclusion &amp; things to consider</h3>
+<p>After two weeks in the project, we have progressed a lot. We still have a long way to go, but I am confident that we will get there. For me the journey is more important than the destination, and I have had a very interesting journey already. It kind of makes me wonder on the path that lies ahead of me.&nbsp;</p>
+<p>The app in itself is still pretty useless, but the real value is in the way it has been constructed, both technically and on a social level.</p>
+<p>This experience also makes me wonder about the future of software development teams. As far as I know, everyone on the N-team has day jobs. We do not share a common language or country. Yet, we still manage to be quite effective in handling problems quite efficient.</p>
+<p>This makes me think about my future projects. As a small ISV, I currently have to turn down some projects, because they are to big for a single person. Working like this makes me wonder whether I might be able to take on a bigger project, working in the same way as we did on the NerdBeers team, with people whom I trust from previous experiences. We could sit together in an office, but we would not need to.</p>
+<p>Maybe that&#8217;s what work 2.0 will be about: a truely global work environment in the comfort of your own home.</p>
+<p>&nbsp;</p>
+<p>Signing off,</p>
+<p>Tom</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-07T00:00:00+01:00" data-updated="true" itemprop="datePublished">Mar 7<span>th</span>, 2011</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2011/03/07/continuous-thinking-just-ship-it-the-story-of-nerdbeers/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2011/03/07/continuous-thinking-just-ship-it-the-story-of-nerdbeers/" itemprop="url">Continuous Thinking: Just Ship It - the Story of NerdBeers</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h2>Note</h2>
+<p>This is the first in a series of posts :</p>
+<ol>
+<li><a href="http://www.corebvba.be/blog/post.aspx?id=47b4b0d1-1c1f-46a0-8a8d-5e4733b92868">Continuous thinking: just ship it - the story of NerdBeers</a> (this post)</li>
+<li><a href="http://www.corebvba.be/blog/post.aspx?id=567301d7-eb44-4622-ba2a-1bb53ff54cb6">Continuous thinking: Nerdbeers continued - We all win !!</a></li>
+<li><a href="http://www.corebvba.be/blog/post.aspx?id=e10561a4-bb3b-40cd-a333-4aa28b8b0f27">Continuous thinking: Nerdbeers - Providing business value by issue tracking</a></li>
+</ol>
+<h2>Introduction</h2>
+<p>Ok, I will admit it: I am a software architecture junkie. I love thinking about it, and try to use it in every app I can. I am <a href="http://www.corebvba.be/blog/?tag=/CQRS">an avid fan of CQRS</a> (more info <a href="http://cqrsinfo.com/about/">here</a>), and I try to use it as much as possible.</p>
+<p>Next to this, I am also a <a href="http://www.corebvba.be/blog/?tag=/BDD">very big fan of BDD</a>; to me it feels like there is nothing that even comes close to the process of describing a problem domain using the example stories.</p>
+<p>I spend a huge amount of time on reading as much relevant articles as possible,<a href="http://groups.google.com" target="_blank"> joining discussions in newsgroups</a>, on blogs. This has provided me quite a broad knowledge about software approaches one should use. (Think SOLID,BDD. &#8230;)</p>
+<p>&nbsp;</p>
+<h2>Ok, stop bragging please, what is your point here ?</h2>
+<p>A while ago I got together with someone on a new idea (yes Geert, I am talking about you). We talked it through and started prototyping. So I set up a basic project, and built a CQRS architecture in order to get started, so we would have better scalable/testable/more maintainable code. In the mean time, the other person had already started prototyping, so I spend a few days converting his ADO code into a more appropriate model for CQRS, and convert everything.</p>
+<p>I heard about the latest version of <a href="http://msdn.microsoft.com/en-us/library/aa697427%28v=vs.80%29.aspx" target="_blank">enitity framework</a>, which had a <a href="http://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx" target="_blank">code-first approach</a>, and since <a href="http://github.com/ToJans/MVCExtensions" target="_blank">I had been using fluent-nhibernate in the past</a> for view storage, I decided to go for the new player on the block. Unfortunately, the EF apparently did not support Enum storage, so we had to adjust about 80% of the viewmodels.</p>
+<p>After migrating everything, it seemed like the other person was implementing code in the wrong places. He has always been a DAL/ORM kind of person, so the whole CQRS thing was really confusing to him. (which is completely normal; cqrs requires a different mindset than CRUD, and I did not take in to account the rather steep learning process I had made in the past).</p>
+<p>I can go on and on about this, but to cut a long story short, the project was temporarily postponed to an undefined later date&#8230;</p>
+<p>I also quit another project like this because I lost intrest in the project while building up the whole required architecture setup and a few basic screens.</p>
+<p>So a lot of effort resulted in &#8230; absolutely nothing</p>
+<p>&nbsp;</p>
+<h3>Fast-Forward to a few months later</h3>
+<p>As time progressed, I read even more about architecture, learned some new frameworks on the way, and tried out a few things from which most did not even get to a usable phase. My software hobby projects were all seeded quickly, but abandoned even more quickly.</p>
+<p>Until I read <a title="1.0 is the lonliest number" href="http://ma.tt/2010/11/one-point-oh/" target="_blank">an article on the blog of Matt Mullenweg</a>. The one phrase that kept lingering around in my mind was this one:</p>
+<p style="padding-left: 30px;"><strong>if you&rsquo;re not embarrassed when you ship your first version you waited too long.</strong></p>
+<p>Wow! That is a strong statement !! So I decided that my next project would respect this statement; I was just waiting for the perfect opportunity to come along</p>
+<p>&nbsp;</p>
+<h3>And there it was&#8230;</h3>
+<p>I discovered <a href="http://github.com/thecodejunkie/Nancy" target="_blank">NancyFx</a>, a .Net web framework loosely inspired by <a href="http://github.com/bmizerany/sinatra" target="_blank">the ruby/sinatra approach</a>, as well as <a href="https://github.com/markrendle/Simple.Data" target="_blank">Simple.Data</a>, which one can compare to the <a href="http://ar.rubyonrails.org/" target="_blank">ruby ActiveRecord</a> approach. If there is one web platform that is known for it&#8217;s productivity, it has to be <a href="http://rubyonrails.org/" target="_blank">RubyOnRails</a>. So I decided to give it a go, and merge the two in a new project.</p>
+<p>As I was looking for an idea on an app to implement, <a href="http://twitter.com/grumpydev" target="_blank">@grumpydev</a> told me he had been thinking about trying to implement something like <a href="http://www.nerddinner.com" target="_blank">NerdDinner.com</a>, but maybe a bit more limited, and that I was free to try it.</p>
+<h3>So I came up with NerdBeers<br /></h3>
+<p>After taking a few hurdles (cloning the NancyFx git repo,installing ruby, building, installing sqlce, building, installing F#, building, cloning the simple.data repo, building it, finding an SQLCE editor, finding a Migrator.Net that supported SQLCE 4.0 and building it), I started a basic web project, where I had an index screen showing all upcoming nerdbeers and the possibility to add a new one, and a details screen where one could edit a nerdbeer.</p>
+<p>I ditched Migrator.Net, since it was making things to complicated at this phase of the project.</p>
+<p>I <a href="http://github.com/tojans/NerdBeers" target="_blank">published it at github</a>, tweeted about it, and got some very enthousiastic reponses from the creators as well as from the community, even inluding some people whom I consider to be impossible to reach&#8230;</p>
+<p>As I published my sourcecode to github, I was thinking about my idle <a href="http://www.appharbor.com" target="_blank">appharbor </a>test account that I requested a few weeks before&#8230; Continuous deployment is required if one wants to approach lean development&#8230;. So I started hacking/reading/making stupid mistakes. Luckily the people from appharbor were there to help me, and pointed out what was wrong.</p>
+<p>So after a few attempts and sleepless nights, I had a pretty useless app online, but it looked kind of cool due to the tersness of the code.</p>
+<p>&nbsp;</p>
+<h3>NerdBeers&#8230; The story continues</h3>
+<p>Since I got so much positive responses to an app which was basically an empty shell, but showed a lot of potential, I was motivated enough to start hacking together something usable. After trying out a few things, checking out the Nancy sourcecode and bothering @GrumpyDev, <a href="http://twitter.com/thecodejunkie" target="_blank">@TheCodeJunkie</a> and <a href="http://twitter.com/markrendle" target="_blank">@MarkRendle </a>with all my noob questions, I finally got around to publishing something usable - allbeit in a very limited way - .</p>
+<p>It still looks ugly as hell, but I am a developer, not a designer. Strings are being pulled currently to help me out (=replace) the design.</p>
+<p>&nbsp;</p>
+<h3>Conclusion<br /></h3>
+<p>For me, this approach was WAY OUT of my comfort zone, but apparently it does work&#8230; If I take out the time to build the libs and workaround the bugs, check the source, bothering people about it, I have published a usable app in about a day&#8230;</p>
+<p>It still looks really ugly (both the design and the code), but it works in a very basic way. I also cut out every possible feature not needed (i.e. currently one does not even have a login), so I would be able to ship it fast. And I have to say it worked: the short cycles kept me productive/motivated, and the small featureset helped me to focus on what was really important.So I did ship something !!</p>
+<p>As the libs for NancyFx and Simple.Data progress, we will get a very mature platform which will enable truly lean development.</p>
+<p>You can see the demo application at <a href="http://NerdBeers.apphb.com" target="_blank">http://NerdBeers.apphb.com</a>.</p>
+<p>For me this has been a valuable lesson, and from now on, I will try to respect these principles more and more&#8230; I hope you found this an interesting read, and if you have had a similar experience, do not hesitate to let me know&#8230;</p>
+<h3><br /></h3>
+<h3>Update!!</h3>
+<p>There is a followup post <a href="http://www.corebvba.be/blog/post/Continuous-thinking-Nerdbeers-continued-We-all-win-!!.aspx">here</a>.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-08T00:00:00+01:00" data-updated="true" itemprop="datePublished">Feb 8<span>th</span>, 2011</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2011/02/08/rant-ik-verdien-niet-genoeg-toplonen-zijn-onverantwoord/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2011/02/08/rant-ik-verdien-niet-genoeg-toplonen-zijn-onverantwoord/" itemprop="url">Rant: Ik Verdien Niet genoeg/Toplonen Zijn Onverantwoord</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Inleiding</h3>
+<p>Naar aanleiding van een thread op een populair Nederlands forum over zin en onzin van verloning, heb ik onlangs een relatief uitgebreid antwoord gepost.</p>
+<p>Gezien ik dit wel een interessant onderwerp vind, heb ik besloten om dit met jullie te delen. Hopelijk steken jullie er wat van op. Aarzel ook niet om commentaren te posten.</p>
+<p>&nbsp;</p>
+<h3>Dit is mijn post (integraal overgenomen)</h3>
+<p>* even de knuppel in het hoenderhok gooien<br /> <br /> Ik zie hier veel discussies rondgaan over lonen die al dan niet verantwoord zijn volgens anderen.<br /> Uiteindelijk moet je uitgaan van de volgende veronderstelling: je  werkgever zal voor jou nooit meer betalen dan hij aan jou kan verdienen  op lange termijn.<br /> (Minder kan wel, maar dat is een andere discussie. :P  )</p>
+<p><br /><br /> Zo kan ik me bijvoorbeeld perfect voorstellen dat iemand van 2x jaar met  heel veel specifieke technische kennis beoordeeld en betaald wordt als  een senior. Waarom ? Omdat dit voor sommige technische specialisaties  kan; er zijn hier 2 belangrijke punten:<br /> - Technisch: het gaat om een functie die vooral technische expertise vereist, en niet zo zeer soft skills.<br /> - Specialisatie: je zit in een bepaalde branche/tak waarvoor zeer  specifieke kennis vereist is die niet heel veel mensen hebben, en een  relatief grote instapdrempel heeft.<br /> <br /> Een technisch expert hoeft niet noodzakelijk extreem goede soft skills te hebben om senior te zijn IMHO.<br /> Het is wel zo dat je in dit type van job relatief snel aan je plafond  zit qua verloning; je zal heel snel je plafond bereiken, want na een  aantal jaren is het marginaal nut van die extra ervaring relatief  klein&#8230;<br /> <br /> Voor een niet-technische functie kan je IMHO onmogelijk senior zijn  onder de 27 a 28, en ik zou eerder opteren voor 30+ a 40+, en dit alles  is dan nog sterk afhankelijk van je afgelegde traject&#8230; <br /> Wat hier IMHO vooral belangrijk is:<br /> - doorzettingsvermogen<br /> - betrouwbaarheid<br /> - uitstraling/imago<br /> - begrijpen en gebruiken van groepsdynamica<br /> - NLP<br /> - organisatietalent<br /> - denken &#8220;vanuit de business&#8221;<br /> - vertalen van zakelijke naar technische noden<br /> - creatief aanwenden van beschikbare resources<br /> - zelfstandig en probleemoplossend vermogen<br /> - meedenken &#8220;ten dienste van de werkgever&#8221;, nieuwe opportuniteiten kunnen zien en inschatten<br /> - professioneel netwerk<br /> - &#8230;.<br /> <br /> Zoals je ziet zijn dit zaken die je niet zomaar kan leren dmv een cursus  (al is een MBA volgens sommigen wel een goede voorbereiding).<br /> De enige manier waarop je deze skills kan verbeteren (naast studeren),  is door ze toe te passen in het dagelijkse leven en te begrijpen hoe  alles werkt, ze te ervaren en te verbeteren met andere woorden.<br /> <br /> Zoals jullie nu waarschijnlijk wel al duidelijk wordt, bereik je bij het  technische traject relatief snel (5 a 10 jaar) het merendeel van je  potentieel (en je respectievelijke loon), het marginaal nut verlaagt  voor extra ervaring.<br /> Voor niet-technische zaken gaat het starten zeer traag, maar kan je  uiteindelijk wel veel meer waard worden voor je werkgever (met relevante  verloning), het marginaal nut verhoogt met extra ervaring.<br /> <br /> Het dient ook gezegd te worden dat iemand die in een technische job zit  meestal wel van zichzelf ongeveer kan inschatten waar zijn/haar  persoonlijk plafond zit.<br /> Voor iemand die in een management-positie zit is dit veel moeilijker, en  dit heeft regelmatig tot gevolg dat iemand een trapje te hoog gaat, met  alle gevolgen die erbij horen (&#8220;l&#8217; esprit de l&#8217;escalier&#8221; zoals de  Fransen het zo mooi omschrijven).<br /> <br /> EDIT:<br /> In KMO&#8217;s/MKB&#8217;s hoeft deze regel niet noodzakelijk te gelden, want zoals  de mensen wel meer zeggen: &#8220;In het land der blinden, is &eacute;&eacute;noog koning&#8221;</p>
+<h3>Kortom</h3>
+<p>Over zin en onzin van lonen en toplonen is al veel gezegd, maar ik vind dat toplonen gerechtvaardigd zijn. Uitindelijk gaat het nog altijd over hetzelfde vraagstuk: wat is een persoon waard voor een bedrijf, zowel op het gebied van technische kennis, soft skills, als reputatie/netwerk.</p>
+<p>Wordt U2 zoveel meer betaald dan een willekeurige groep omdat ze zoveel keer beter zijn ? Uiteindelijk niet; dit is gewoon vraag en aanbod&#8230;</p>
+<p>&nbsp;</p>
+<p class="edit">&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-30T00:00:00+01:00" data-updated="true" itemprop="datePublished">Dec 30<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/12/30/continuous-thinking-essential-business-books-shortlist-3-business-books-everyone-should-have-read/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/12/30/continuous-thinking-essential-business-books-shortlist-3-business-books-everyone-should-have-read/" itemprop="url">Continuous Thinking: Essential Business Books Shortlist: 3 Business Books Everyone Should Have Read</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction</h3>
+<p>I like to read books, lots of them. Some I read only once (very fast, usually in a few hours, to get the main picture), and the good ones I read over and over again, or at a slower pace.</p>
+<p>In case of non-fiction, I either read books about physics, economics or business methodologies.</p>
+<p>While I read a lot of books, and some books gradually bring me a bit closer to the essential knowledge on a business level, I finally think I have a shortlist of 3 essential books one should read in order to acquire the basics.</p>
+<p>I am not saying that this list is the only one possible, but it should give you enough universal business knowledge to get started. For every single book I mention, there will probably be umphteen alternatives providing similar content.</p>
+<p>The list does not cover any specific techniques or methodologies, just universal approaches.</p>
+<p>If you do have any suggestions or alternatives, do not hesitate to let me know.</p>
+<p>(FYI I usually read the Dutch version, but I post the links to the original ones)</p>
+<p>&nbsp;</p>
+<h3>1. &#8220;Skills for new managers&#8221; - McGraw-Hill</h3>
+<p><a href="http://www.amazon.com/Skills-New-Managers-Morey-Stettner/dp/0071356185" target="_blank">(link on amazon)</a></p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f12%2fman_with_Book.jpg" alt="Looks like he could use some skills" /></p>
+<p>I know the title says &#8220;managers&#8221;, but in my opinion this book can be used as a guidance for business in general.</p>
+<p>This is the first on my list for a very good reason: it is packed with essential knowledge and touches the most important aspects of working in a company/dealing with collegues:</p>
+<ul>
+<li>What makes a manager succesful ?</li>
+<li>Management myths - things you should avoid</li>
+<li>How to give a good first impression</li>
+<li>How to manage by listening</li>
+<li>How to talk like a manager</li>
+<li>How to motivate</li>
+<li>How to criticize</li>
+<li>How to sanctionize</li>
+<li>How to be efficient/time management</li>
+<li>How to delegate</li>
+<li>How to handle your boss</li>
+<li>How to build a network</li>
+</ul>
+<p>It is written in a very down to earth style, and the book is full of examples and pragmatic guidelines. In my opinion one can apply these tips in a much broader context then just being a manager.</p>
+<p>I reread this every few years, since it brings you back to the most essential things one should do.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>&#8220;How to Connect in Business in 90 Seconds or Less&#8221; - Nicholas Boothman</h3>
+<p><a href="http://www.amazon.com/How-Connect-Business-Seconds-Less/dp/0761125957/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1293709920&amp;sr=1-1" target="_blank">(Link on amazon)</a></p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f12%2fconnect.jpg" alt="One can never have enough connections" /></p>
+<p>Since building a network and interacting with people is in my opinion one of the most important aspects in business, this needs a little special attention.</p>
+<p>This book offers a very entertaining review of techniques one should apply in order to extend your business network and talk to customers/personel/bosses in general. It offers a very down-to-earth approach on how to improve your communication skills.</p>
+<p>Unfortunately I can not recall who I lended this book to the last time (I lended it to numerous people), so if the person who has it reads this, please give it back, since I would like to read it again to refresh my memory.</p>
+<p>&nbsp;</p>
+<h3>&#8220;The Management Myth: Debunking Modern Business Philosophy&#8221; - Matthew Stewart</h3>
+<p><a href="http://www.amazon.com/Management-Myth-Debunking-Business-Philosophy/dp/0393338525/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1293710453&amp;sr=1-1" target="_blank">(Link on amazon)</a></p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f12%2fmyth.jpg" alt="&quot;The big giant head&quot; from &quot;Third rock under the sun&quot; ?" /></p>
+<p>While I read numerous books on methodologies and techniques on how to do business, this book points out what it is all about: techniques and methodolgies are there to help you, not to worship them.</p>
+<p>I just recently (fast-) read this book a few days ago (in about 6 hours or so, so not very thoroughly), and while reading it, I was thinking &#8220;Now my list of essential business books is complete, I need to write a blog post on this&#8221;.</p>
+<p>I still have to read it a few times or take the time to read it through in a slower pace, but the key point here is that this book points out the major flaws in preferring methodologies over common sense.</p>
+<p>Every time I read a new book (<a href="http://www.amazon.com/Good-Great-Companies-Leap-Others/dp/0066620996/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1293711209&amp;sr=1-1" target="_blank">&#8220;Good to great&#8221; - Jim Collins</a>, <a href="http://www.amazon.com/hohe-Kunst-%C3%9Cberzeugung-Christian-Altmann/dp/347881216X/ref=sr_1_11?s=books&amp;ie=UTF8&amp;qid=1293711268&amp;sr=1-11" target="_blank">&#8220;Die hohe Kunst der &Uuml;berzeuging&#8221; - Hans Christian Altmann</a>, <a href="http://www.amazon.com/80-20-Principle-Secret-Achieving/dp/0385491743/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1293711338&amp;sr=1-1" target="_blank">&#8220;The 80/20 Principle: The Secret to Achieving More with Less&#8221; - Richard Koch</a>, <a href="http://www.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307353133/ref=sr_1_2?s=books&amp;ie=UTF8&amp;qid=1293711369&amp;sr=1-2" target="_blank">&#8220;The 4-Hour Workweek: Escape 9-5, Live Anywhere, and Join the New Rich&#8221; - Timothy Ferris</a>, &#8230;) I am really thinking this is the next big thing. This book is there to remind me to be a little bit more suspicious on the next <a href="http://en.wikipedia.org/wiki/Silver_bullet" target="_blank">silver bullet</a>.</p>
+<p>&nbsp;</p>
+<h3>Conclusion</h3>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f12%2fwin.jpg" alt="I'm not there yet, but I am making progress ;-)" /></p>
+<p>There you have it, this is my shortlist. The books on the list offer you a very broad amount of universal tips, techniques and methodologies one can use in business. The first one is there to give you a general idea, the second one specializes in a very important aspect of doing business/management, and finally the last one reminds you of the fact that one has to be a little bit conservative when reading in on &#8220;The next big thing&trade;&#8221;.</p>
+<p>I hope you enjoyed the post, and if you think the list can be improved (taking into consideration you can only have 3 books), please leave your suggestions in the comments !!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-15T00:00:00+01:00" data-updated="true" itemprop="datePublished">Dec 15<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/12/15/continuous-thinking-the-future-of-software/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/12/15/continuous-thinking-the-future-of-software/" itemprop="url">Continuous Thinking: The Future of Software</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction</h3>
+<p>In this small article I am going to ventilate my recent thoughts on the evolutions and the future of software (both platform and development methodology). This is my first attempt for such an article, so please do not take it too serious. Maybe within 5 to 10 years time, one will be able to read this article and have a big laugh, but then again, I am hoping to get at least a few predictions right.</p>
+<h3>Application architecture</h3>
+<p>I think the next big thing leveraging software and it&#8217;s development will be HTML5. The basic architecture would be like this:</p>
+<ul>
+<li>the client will be a task-based GUI running on the HTML5 platform; HTML5 will be supported on most peripherals.</li>
+<li>the GUI will be able to generate explicit commands (poco class instances) and query view data L/WS* (=local and/or from one or more webservices)</li>
+<li>these commands will be handled L/WS*</li>
+<li>when the command is executed, the changes will be propagated explicitly through events (=poco class instances), or change the view data directly</li>
+<li>these events will be processed L/WS* and will update the respective view data L/WS*</li>
+<li>viewdata can be generated and persisted locally and/or on the server, and syncing is a mather of syncing commands and events</li>
+<li>commands, events and view data will probably be published through some kind of ATOM/ODATA-like interface (or persisted locally)</li>
+<li>due to more and more microdata formats and standards, webservices will become interchangeable (think address lists for example)</li>
+<li>All devices will get a webservice interface (think phones/peripherals in general), usually with a full REST implementation</li>
+</ul>
+<h3>Consequences<br /></h3>
+<p>This would imply that a well written app (in HTML5) would be able to:</p>
+<ul>
+<li>query/consolidate microdata or other standardized formats locally and from multiple sources</li>
+<li>disconnected apps could easily be synchronized</li>
+<li>app components should be reusable, apps should be composed of multiple HTML5 components</li>
+<li>it could work in both offline and online mode</li>
+<li>it should support multiple media/input methods</li>
+<li>apps should work on a plethora of platforms without to much effort</li>
+</ul>
+<h3>The environment/tools</h3>
+<p>In order to make this possible I expect the following</p>
+<ul>
+<li>the development language of choice will probably need to be the same for both the webservice and the client-side. This does not need to be javascript; it can be an other language translated to javascript for the HTML5 side (think Coffeescript for example)</li>
+<li>commands, events and the handlers should be first-class members of the language of choice, or at least offer a framework that makes it easy to use this.</li>
+<li>there will be a registry which would contain the mappings to resources (either local or on one of more webservices) - this registry might be a webservice in itself, for example a webservice of registry for all your personal multimedia resources</li>
+<li>sharing data between different platforms would become universal (think movies/music for example)</li>
+<li>caching/syncing data should be as simple as calling a single function</li>
+<li>replication/failover is a piece of cake to setup</li>
+<li>CQRS/BDD will be hot</li>
+<li>monitoring the infrastructure is easy</li>
+<li>everything will become continuous: continuous integration through a buildserver, continuous testing (think autotest.Net for example), continuous deployment, continuous monitoring</li>
+<li>authentication will also be done through webservices or through current http/SSL/OID/&#8230; implementations</li>
+<li>some kind of universal search which goes through all resources in the registry should be possible</li>
+</ul>
+<h3>Finally</h3>
+<p>I think in the end we will get an application that sends commands to a bus, which is either handling things locally and/or on one or more webservices. The app will also be able to either query the local data or some webservice for view data.</p>
+<p>The registry of webservices will make it possible to plugin your own stuff without much hassle, and caching/backup/failover/monitoring should all become a non-issue.</p>
+<p>A few possible problems come to mind here, which might be excuses why my predictions could be false:</p>
+<ul>
+<li>migrating/integrating legacy systems</li>
+<li>software/Services ownership and -protection</li>
+<li>CQRS/BDD acceptance might be hard for some devs</li>
+<li>implementations differences of HTML5</li>
+<li>REST webservices might be replaced by something faster/with less overhead (protobuf comes to my mind for example)</li>
+</ul>
+<p>In the end, what it all comes down to, is finding a balance between simplicity, flexibility, complexity availability and concurrency.</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-13T00:00:00+01:00" data-updated="true" itemprop="datePublished">Dec 13<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/12/13/motivating-people/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/12/13/motivating-people/" itemprop="url">Motivating People</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>
+<object width="640" height="390">
+<param name="movie" value="http://www.youtube.com/v/u6XAPnuFjJc&amp;hl=en_GB&amp;feature=player_embedded&amp;version=3" />
+<param name="allowFullScreen" value="true" />
+<param name="allowScriptAccess" value="always" /><embed type="application/x-shockwave-flash" width="640" height="390" src="http://www.youtube.com/v/u6XAPnuFjJc&amp;hl=en_GB&amp;feature=player_embedded&amp;version=3" allowfullscreen="true" allowscriptaccess="always"></embed>
+</object>
+</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-07T00:00:00+01:00" data-updated="true" itemprop="datePublished">Dec 7<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/12/07/testing-how-far-you-can-go-with-removing-cqrs-infrastructure/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/12/07/testing-how-far-you-can-go-with-removing-cqrs-infrastructure/" itemprop="url">Testing How Far You Can Go With Removing CQRS Infrastructure</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>This is an example of something that would be easily converted to CQRS, but without the overhead:</p>
+<p>
+<script src="https://gist.github.com/731644.js?file=AbsoluteminimumCQRS.cs"></script>
+</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-01T00:00:00+01:00" data-updated="true" itemprop="datePublished">Dec 1<span>st</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/12/01/sowhat.cs-an-example-of-a-possible-.net-web-framework-looking-like-sinatra/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/12/01/sowhat.cs-an-example-of-a-possible-.net-web-framework-looking-like-sinatra/" itemprop="url">SoWhat.cs - an Example of a Possible .Net Web Framework Looking Like Sinatra</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>
+<script src="https://gist.github.com/723376.js?file=SoWhat.cs"></script>
+</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+</div>
+<nav id="pagenavi">
+    
+        <a href="/blog/page/5/" class="prev">Prev</a>
+    
+    
+        <a href="/blog/page/7/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,1172 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="Nov 6th, 2009 Comments BDD With DSL: Aubergine, a Ruby/cucumber Like Alternative for .NET - Download Available Update
+Again a lot has changed : look &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/page/10/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-06T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 6<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/11/06/bdd-with-dsl-aubergine-a-ruby-cucumber-like-alternative-for-.net-download-available/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/11/06/bdd-with-dsl-aubergine-a-ruby-cucumber-like-alternative-for-.net-download-available/" itemprop="url">BDD With DSL: Aubergine, a Ruby/cucumber Like Alternative for .NET - Download Available</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h2>Update</h2>
+<p style="padding-left: 30px;">Again a lot has changed : look <a href="http://www.corebvba.be/blog/post/Aubergine-Net-BDD-support-for-namedtyped-parameters-2b-RECURSIVE-DSL-2b-bugfix.aspx">here</a></p>
+<p style="padding-left: 30px;">&nbsp;</p>
+<p style="padding-left: 30px;">&nbsp;</p>
+<h2>Introduction</h2>
+<p>In this article you can download the very first alpha version of Aubergine; a BDD /DSL framework for .Net, initially based on Machine.Specifications, but later on heavily inspired by Cucumber. It is AFAIK the very first Cucumber like environment in .NET available, and you will see that it is very easy to use. Due to it&#8217;s inspirator (Cucumber, I have decided to use the name Aubergine - I have no idea if they are actually related or not <img title="Undecided" src="http://www.corebvba.be/blog/editors/tiny_mce3/plugins/emotions/img/smiley-undecided.gif" border="0" alt="Undecided" /> .</p>
+<p>Please do note that it is an alpha version, so right now we only have a single testrunner that outputs to the console (i.e. no unit test integration yet). In the article I do include a postbuild step, which automatically makes my BDD tests run after each build, and displays the output in notepad, which is fine for me atm.</p>
+<p>Anyway, enough with the talkin, Let&#8217;s Get Busy !!!</p>
+<p>&nbsp;</p>
+<h3>Getting Started</h3>
+<p>First you need to download the example project; it includes all the binaries needed to do your BDD development. You can find it here :</p>
+<p><a href="http://www.corebvba.be/blog/file.axd?file=2009%2f11%2fBe.Corebvba.Aubergine.Examples.zip">Be.Corebvba.Aubergine.Examples.zip (16,43 kb)</a></p>
+<p>Once you have the zip file, you can either explore the project, or walk through the following scenario to create your own test.</p>
+<ol>
+<li>Create a new .Net project in visual studio/any ide you use</li>
+<li>Add a reference to Be.Corebvba.Aubergine.DLL (can be found in the zip under the &#8220;lib&#8221; folder</li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Creating a story</h3>
+<p>Add a class named &#8220;BrowserContext&#8221; to your project</p>
+<p>Add a class named &#8220;Make_sure_my_website_gets_enough_visibility&#8221; , import the Be.Corebvba.Aubergine namespace, and derive your class from Story&lt;BrowserContext&gt;</p>
+<p>Then you can start typeing your story; the final file should look like this :</p>
+<p><div class="code">
+<br /><span class="kwrd">using</span> System;<br /><span class="kwrd">using</span> System.Collections.Generic;<br /><span class="kwrd">using</span> System.Linq;<br /><span class="kwrd">using</span> System.Text;<br /><span class="kwrd">using</span> Be.Corebvba.Aubergine;<br /><br /><span class="kwrd">namespace</span> Example<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Make_sure_my_website_gets_enough_visibility: Story&amp;lt;BrowserContext&amp;gt;<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As_a website_owner;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I_want to_make_sure_that_I_get_enough_visibility;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So_that I_can_get_enough_traffic;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Cols(<span class="str">&#8220;searchengine&#8221;</span>,<span class="str">&#8220;search_url&#8221;</span>,<span class="str">&#8220;keywords&#8221;</span>,<span class="str">&#8220;my_url&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(<span class="str">&#8220;google&#8221;</span>,<span class="str">&#8220;http://www.google.be/search?q=&#8221;</span>,<span class="str">&#8220;core bvba tom janssens&#8221;</span>,<span class="str">&#8220;www.corebvba.be&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(<span class="str">&#8220;google&#8221;</span>,<span class="str">&#8220;http://www.google.be/search?q=&#8221;</span>,<span class="str">&#8220;BDD .Net&#8221;</span>,<span class="str">&#8220;www.corebvba.be&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(<span class="str">&#8220;bing&#8221;</span>,<span class="str">&#8220;http://www.bing.com/search?q=&#8221;</span>,<span class="str">&#8220;core bvba tom janssens&#8221;</span>,<span class="str">&#8220;www.corebvba.be&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Search_results_for_keywords_on_searchengine_should_contain_my_url : Scenario<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given current_url_is_search_url;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When searching_for_keywords;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then result_should_contain_my_url;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp; <br />}<br /></div></p>
+<p>&nbsp;</p>
+<h3>Define the context class</h3>
+<p>After having created a story with scenarios we need to define the context for these scenarios.</p>
+<p>You add all your domain objects that need to be tested to the &#8220;BrowserContext&#8221; class</p>
+<p>In this case it is quite simple :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> BrowserContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Url { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Result { get; set; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">private</span> WebClient wc = <span class="kwrd">new</span> WebClient();<br />&nbsp;&nbsp;&nbsp; }<br /></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>This should be enough to test, but wait, isn&#8217;t there something missing ?</p>
+<p>&nbsp;</p>
+<h3>The context DSL</h3>
+<p>Next up we need to define how to interpret the story. As I allready mentioned; this is heavily inspired by Ruby/Cucumber : regular expressions are used to find out how all scenario steps should be matched to a real function. While this maybe sounds complicated, it really isn&#8217;t; this is the code :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> BrowserContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Url { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Result { get; set; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">private</span> WebClient wc = <span class="kwrd">new</span> WebClient();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;current_url_is_(.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SetUrl(<span class="kwrd">string</span> url)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Url = url;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;searching_for_(.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SearchForKeyWords(<span class="kwrd">string</span> keywords)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result = wc.DownloadString(Url + HttpUtility.UrlEncode(keywords));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;result_should_contain_(.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> ResultShouldContain(<span class="kwrd">string</span> myurl)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result.Contains(myurl).ShouldEqual(<span class="kwrd">true</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp;&nbsp; }<br /></div><br /><br /><br />That&#8217;s all there is to it; you are ready to run your tests now !!!</p>
+<p>&nbsp;</p>
+<h3>Running the specs</h3>
+<p>Ok, since we do not want to run these tests manually each time, but at every build action, we need to add a postbuildstep.</p>
+<p>In visual studio you can do it like this :</p>
+<ol>
+<li>Menu : Project/Properties</li>
+<li>Tab build events</li>
+<li>put the following text in the post-build-event commandline :</li>
+</ol>
+<p>&nbsp;</p>
+<pre>"$(ProjectDir)\lib\Be.Corebvba.Aubergine.ConsoleRunner.exe" "$(TargetPath)" &gt; "$(TargetDir)output.txt"</pre>
+<pre>"$(TargetDir)output.txt"</pre>
+<pre>exit 0 </pre>
+<p>&nbsp;</p>
+<p>Now build your project, and the tests will be ran !! Your default texteditor will start, and it should contain this text :</p>
+<pre>==STORY================================================================</pre>
+<pre>Make_sure_my_website_gets_enough_visibility =&gt; OK</pre>
+<pre>========================================================================</pre>
+<pre>&nbsp;&nbsp; Search_results_for_core bvba tom janssens_on_google_should_contain_www.corebvba.be =&gt; OK</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given current_url_is_http://www.google.be/search?q= =&gt; OK</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When searching_for_core bvba tom janssens =&gt; OK</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then result_should_contain_www.corebvba.be =&gt; OK</pre>
+<pre>&nbsp;&nbsp; Search_results_for_core bvba tom janssens_on_bing_should_contain_www.corebvba.be =&gt; OK</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given current_url_is_http://www.bing.com/search?q= =&gt; OK</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When searching_for_core bvba tom janssens =&gt; OK</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then result_should_contain_www.corebvba.be =&gt; OK</pre>
+<pre>&nbsp;&nbsp; Search_results_for_BDD .Net_on_google_should_contain_www.corebvba.be =&gt; OK</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given current_url_is_http://www.google.be/search?q= =&gt; OK</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When searching_for_BDD .Net =&gt; OK</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then result_should_contain_www.corebvba.be =&gt; OK</pre>
+<p>&nbsp;</p>
+<h3>So how does this work ?</h3>
+<p>It&#8217;s actually quite easy once you have the hang of it; this is pseudocode :</p>
+<p>&nbsp;</p>
+<pre>&nbsp;&nbsp; foreach (var story in AllClassesDerivedFromTheAubergineStoryClass) <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach(var scenario in AllPossibleScenariosFor(story))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; create a new context object<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach (var possiblesteps in AllSteps (given,when,then) in story and scenario)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; find a regex DSL match for possiblesteps.name in the context, extract all the regex groups and add them as string parameters to the function you call<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; call the corresponding step function</pre>
+<p>&nbsp;</p>
+<p>If one of this steps should fail then the test fails and the reason is mentioned in the report.</p>
+<p>If you expect a step to fail, then you should add a membervariable named &#8220;&amp;lt;steptype&amp;gt;Exception&#8221;, and if a step of that type fails, the step is marked as successfull, but the Exceptionvariable will contain the exception thrown. You can see an example of this in the Example zip file.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-04T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 4<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/11/04/a-new-bdd-framework-in-.net-aubergine/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/11/04/a-new-bdd-framework-in-.net-aubergine/" itemprop="url">A New BDD Framework in .Net : Aubergine</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>REMARK : An executable testrunner and some sample code is available</h3>
+<p>Here : <a href="http://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx">http://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx</a></p>
+<h3>REMARK : Skip to &#8220;Edit 2&#8221; to see the current syntax</h3>
+<p>&nbsp;</p>
+<p>Just a quick update !!</p>
+<p>After thinking a bit more about the problems mentioned by Aaron <a href="http://www.corebvba.be/blog/post/A-new-BDD-framework-in-Net-NetSpec.aspx">in my previous post</a>, and taking a look at <a href="http://cukes.info/" target="_blank">Cucumber (in ruby)</a>, I decided to give it another go. Since I have to be in the shop within<span style="text-decoration: line-through;"> half an hour</span> 20 mins I can only give you a sample of what the current spec looks like; explanations will come in later posts..</p>
+<p>I&#8217;m also considering a rename, since <a href="http://gitorious.org/netspec" target="_blank">netspec already seems to exist</a> as a .Net spec platform&#8230; Since Cucumber was my inspiration, I&#8217;m currently thinking about <a href="http://simple.wikipedia.org/wiki/Aubergine" target="_blank">Aubergine/Eggplant</a>. Suggestions are welcome</p>
+<p>I&#8217;m not really fond of the implementation yet, but I&#8217;ll have to think about that a little bit more&#8230; As you might notice there has been a slight shift towards the Cucumber method of doing things.</p>
+<p>Here we go :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> TransferFundsBetweenAccounts : Story<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AsAn AccountUser;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IWant ToTransferMoneyBetweenAccounts;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SoThat ICanHaveRealUseForMyMoney;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer1MBetweenTwoAccounts : Scenario&amp;lt;Context&amp;gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountAHas1M;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountBHas1M;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When Transfering1MFromAccountAToAccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then ShouldHave0MOnAccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then ShouldHave2MOnAccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> TransferTooMuch : Scenario&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountAHas1M;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountBHas1M;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When Transfering3MFromAccountAToAccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then ShouldHave1MOnAccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then ShouldHave1MOnAccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then ShouldFailWithError;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Context<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountA = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountB = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Contextimpl : ContextImplementation&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">bool</span> Get(<span class="kwrd">string</span> name,Context ctx)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implement(<span class="str">@&#8221;(Account[AB])Has(\d+)M&#8221;</span>, (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.ByName&amp;lt;Account&amp;gt;(0,c).Balance = e.Get&amp;lt;<span class="kwrd">int</span>&amp;gt;(1) * 1m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }).Run(name, ctx) &amp;&amp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implement(<span class="str">@&#8221;ShouldHave(\d+)MOn(Account[AB])&#8221;</span>, (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.ByName&amp;lt;Account&amp;gt;(1,c).Balance.ShouldEqual(e.Get&amp;lt;<span class="kwrd">int</span>&amp;gt;(0) * 1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }).Run(name, ctx) &amp;&amp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implement(<span class="str">@&#8221;Transfering(\d+)MFrom(Account[AB])To(Account[AB])&#8221;</span>, (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.ByName&amp;lt;Account&amp;gt;(1,c).Transfer(e.Get&amp;lt;<span class="kwrd">decimal</span>&amp;gt;(0) * 1m, e.ByName&amp;lt;Account&amp;gt;(2,c));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }).Run(name, ctx);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>As you might notice the biggest advantage is that multiple test scenarios can now be implemented since we have created some kind of a context-specific DSL&#8230; I&#8217;m not very fond of the way you Specify the DSL however; I&#8217;ll probably need to rethink it.</p>
+<p>As always I&#8217;ll keep you posted on any progress I make.</p>
+<p>&nbsp;</p>
+<h3>Edit</h3>
+<p>After having dinner and thinking a bit about this, i got another eureka moment; this is what the code now looks like (Yes Aaron, you were also right about the box_case/PascalCase thingy ;-) ):</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_money_between_accounts : Story<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As_a user;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I_want to_transfer_money_between_accounts;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So_that I_can_have_real_use_for_my_money;<br /><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given&amp;lt;Context&amp;gt; AccountA_has_1m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given&amp;lt;Context&amp;gt; AccountB_has_1m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_1m_between_2_accounts : Scenario&amp;lt;Context&amp;gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_1m_from_AccountA_to_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_0m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_2m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_too_much : Scenario&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_2m_from_AccountA_to_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_1m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_1m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_fail_with_error;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Not_authorized_for_transfer : Scenario&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_1m_from_AccountB_to_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_1m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_1m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_fail_with_error;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Context<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountA = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountB = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Dsl_for&amp;lt;Context&amp;gt; Dsl_for_Context = <span class="kwrd">new</span> Dsl_for&amp;lt;Context&amp;gt;();<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Transfer_money_between_accounts() <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dsl_for_Context[<span class="str">@&#8221;(Account[AB])_has_(\d+)m&#8221;</span>] = (c, e) =&amp;gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.Get&amp;lt;Account&amp;gt;(e[0]).Balance = e[1].As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;() * 1m;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dsl_for_Context[<span class="str">@&#8221;should_have_(\d+)m_on_(Account[AB])&#8221;</span>] = (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.Get&amp;lt;Account&amp;gt;(e[1]).Balance.ShouldEqual(e[0].As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;() * 1m);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dsl_for_Context[<span class="str">@&#8221;transfering_(\d+)m_from_(Account[AB])_to_(Account[AB])&#8221;</span>] = (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.Get&amp;lt;Account&amp;gt;(e[1]).Transfer(e[0].As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;() * 1m, c.Get&amp;lt;Account&amp;gt;(e[2]));<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dsl_for_Context[<span class="str">@&#8221;the_current_user_is_authenticated_for_(Account[AB])&#8221;</span>] = (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.Get&amp;lt;Account&amp;gt;(e[0]).IsAuthenticated = <span class="kwrd">true</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>I have extended the story a bit in order to show that you can use story-wide givens as well.<br />Please do note that one can still assign the delegates as in MSpec, i.e. adding your code inline to the scenarios.<br />The DSL definition syntax looks a bit quirky, but it works like this :</p>
+<ul>
+<li>&#8220;c&#8221; is an instance of the contextobject</li>
+<li>&#8220;e&#8221; is an array of strings containing the regex matched subgroups <br />An example : &#8220;e[1]&#8221; would return &#8220;AccountA&#8221; or &#8220;AccountB&#8221; in the case of &#8220;should_have_(\d+)m_on_(Account[AB])&#8221; </li>
+<li>&#8220;c.Get&amp;lt;Account&amp;gt;(e[1])&#8221; gets the field- or propertyvalue from the context object &#8220;c&#8221; with the name found in e[1] and casts it to an &#8220;Account&#8221;</li>
+</ul>
+<p>Also note that this is starting to look a lot like cucumber (which is a good thing, i think).</p>
+<p>Again, another step closer to our destination and still going&#8230; Any reflections on this representation are welcome !!</p>
+<h3>Edit 2</h3>
+<p>Again, I have taken it a step further; I must say it is looking pretty acceptable now. The spec class is now separated from the contextclass, and the dsl is implemented in the contextclass.</p>
+<p>First we have the Story in itself:</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_money_between_accounts : Story&amp;lt;AccountContext&amp;gt;<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As_a user;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I_want to_transfer_money_between_accounts;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So_that I_can_have_real_use_for_my_money;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountA_has_3_m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountB_has_2_m;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Cols(<span class="str">&#8220;xx&#8221;</span>,<span class="str">&#8220;yy&#8221;</span>,<span class="str">&#8220;zz&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(0, 3, 2)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(1, 2, 3)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(2, 1, 4)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(3, 0, 5)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_xx_m_between_2_accounts : Scenario<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_xx_m_from_AccountA_to_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_yy_m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_zz_m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_too_much : Scenario<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_4_m_from_AccountA_to_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_3_m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_2_m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_fail_with_error;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Not_authorized_for_transfer : Scenario<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_1_m_from_AccountB_to_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_2_m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_3_m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_fail_with_error;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>Which is perfectly understandable and should be maintainable by a domain expert.</p>
+<p>Next we have the DSL/Context implementation which looks like this (Thank you cucumber) :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> AccountContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountA = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountB = <span class="kwrd">new</span> Account();<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;(Account[AB])_has_(\d+)_m&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> accountX_has_Ym(<span class="kwrd">string</span> x, <span class="kwrd">string</span> y)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.Get&amp;lt;Account&amp;gt;(x).Balance = y.As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;()*1m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;should_have_(\d+)_m_on_(Account[AB])&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> should_have_Xm_on_AccountY(<span class="kwrd">string</span> x, <span class="kwrd">string</span> y)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.Get&amp;lt;Account&amp;gt;(y).Balance.ShouldEqual(x.As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;() * 1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;transfering_(\d+)_m_from_(Account[AB])_to_(Account[AB])&#8221;</span>)] <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> transfering_xm_from_a_to_b(<span class="kwrd">string</span> x,<span class="kwrd">string</span> a,<span class="kwrd">string</span> b)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.Get&amp;lt;Account&amp;gt;(a).Transfer(x.As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;() * 1m, <span class="kwrd">this</span>.Get&amp;lt;Account&amp;gt;(b));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;the_current_user_is_authenticated_for_(Account[AB])&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> authenticate_for_account_x(<span class="kwrd">string</span> x)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.Get&amp;lt;Account&amp;gt;(x).IsAuthenticated = <span class="kwrd">true</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> should_fail_with_error()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //TODO<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>I think that with this approach we might be getting close to the best possible BDD syntax in .Net. <br />We have the story for the domain expert, and the implementation of the context class can be left to the programmer.<br /><br />Please let me know what you think.</p>
+<h3><br /></h3>
+<h3>Edit #3</h3>
+<p>I also added support for Example/Tables so that one can test the same scenario with different values.</p>
+<h3><br /></h3>
+<h3>Edit #4</h3>
+<p>It just occured to me: another advantage of the Example extension is that one can include special characters in the test_data. An example :</p>
+<p>&nbsp;</p>
+<p><div class="code">
+<br /><span class="kwrd">class</span> Make_sure_my_website_gets_enough_visibility: Story&amp;lt;BrowserContext&amp;gt<br />{<br />&nbsp;&nbsp;&nbsp; As_a website_owner;<br />&nbsp;&nbsp;&nbsp; I_want to_make_sure_that_I_get_enough_visibility;<br />&nbsp;&nbsp;&nbsp; So_that I_can_get_enough_traffic;<br /><br />&nbsp;&nbsp;&nbsp; [Cols(<span class="str">&#8220;searchengine&#8221;</span>,<span class="str">&#8220;search_url&#8221;</span>,<span class="str">&#8220;keywords&#8221;</span>,<span class="str">&#8220;my_url&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">&#8220;google&#8221;</span>,<span class="str">&#8220;http://www.google.be/search?q=&#8221;</span>,<span class="str">&#8220;core bvba tom janssens&#8221;</span>,<span class="str">&#8220;www.corebvba.be&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">&#8220;google&#8221;</span>,<span class="str">&#8220;http://www.google.be/search?q=&#8221;</span>,<span class="str">&#8220;BDD .Net&#8221;</span>,<span class="str">&#8220;www.corebvba.be&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">&#8220;bing&#8221;</span>,<span class="str">&#8220;http://www.bing.com/search?q=&#8221;</span>,<span class="str">&#8220;core bvba tom janssens&#8221;</span>,<span class="str">&#8220;www.corebvba.be&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Search_results_for_keywords_on_searchengine_should_contain_my_url : Scenario<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Given current_url_is_search_url;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; When searching_for_keywords;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Then result_should_contain_my_url;<br />&nbsp;&nbsp;&nbsp; }<br />}<br /></div></p>
+<p>&nbsp;</p>
+<p>Which makes your testing scenarios even better. After running these tests you should get an output like this :</p>
+<pre><br />Make sure my website gets enough visibility =&gt; NOK<br />&nbsp;&nbsp; As a website owner<br />&nbsp;&nbsp; I want to make sure that I get enough visibility<br />&nbsp;&nbsp; So that I can get enough traffic<br /><br />&nbsp;&nbsp; Search results for "core bvba tom janssens" on "google" should contain "www.corebvba.be" =&gt; OK<br />&nbsp;&nbsp; &nbsp;&nbsp; Given current url is "http://www.google.be/search?q="<br />&nbsp;&nbsp; &nbsp;&nbsp; When searching for "core bvba tom janssens"<br />&nbsp;&nbsp; &nbsp;&nbsp; Then result should contain "www.corebvba.be"<br /><br />&nbsp;&nbsp; Search results for "BDD .net" on "google" should contain "www.corebvba.be" =&gt; NOK<br />&nbsp;&nbsp; &nbsp;&nbsp; Given current url is "http://www.google.be/search?q="<br />&nbsp;&nbsp; &nbsp;&nbsp; When searching for "BDD .Net"<br />&nbsp;&nbsp; &nbsp;&nbsp; Then result should contain "www.corebvba.be"<br /><br />&nbsp;&nbsp; Search results for "core bvba tom janssens" on "bing" should contain "www.corebvba.be" =&gt; OK<br />&nbsp;&nbsp;  &nbsp; Given current url is "http://www.bing.com/search?q="&nbsp; <br />&nbsp;&nbsp;  &nbsp; When searching for "core bvba tom janssens"<br />&nbsp;&nbsp;  &nbsp; Then result should contain "www.corebvba.be"</pre>
+<p>&nbsp;</p>
+<p>Which is pretty neat I think !!!<br /><br />Finally, this is the implementation of the BrowserContext class :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> BrowserContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Url { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Result { get; set; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">private</span> WebClient wc = <span class="kwrd">new</span> WebClient();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;current_url_is_(.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SetUrl(<span class="kwrd">string</span> url)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Url = url;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;searching_for_(.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SearchForKeyWords(<span class="kwrd">string</span> keywords)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result = wc.DownloadString(Url + HttpUtility.UrlEncode(keywords));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;result_should_contain_(.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> ResultShouldContain(<span class="kwrd">string</span> myurl)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result.Contains(myurl).ShouldEqual(<span class="kwrd">true</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-03T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 3<span>rd</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/11/03/a-new-bdd-framework-in-.net-aubergine/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/11/03/a-new-bdd-framework-in-.net-aubergine/" itemprop="url">A New BDD Framework in .Net : Aubergine</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Update !! this has changed a lot</h3>
+<p>&nbsp;</p>
+<p><a href="http://www.corebvba.be/blog/post/A-new-BDD-framework-in-Net-NetSpec-3d3e-Aubergine.aspx">Check this post !!!</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Introduction</h3>
+<p>During my exploration of <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development" target="_blank">BDD</a> frameworks for .NET&nbsp; I only had one final runner-up as a BDD framework : <a href="http://codebetter.com/blogs/aaron.jensen/archive/2008/09/02/mspec-v0-2.aspx" target="_blank">Machine.Specifications</a> . This is a very nice framework, but in my quest for the holy grail on BDD it got me started on thinking about an even better BDD framework. In this article I will layout my initial ideas about a BDD framework named Aubergine.</p>
+<p>&nbsp;</p>
+<h3>Likes and dislikes about MSpec</h3>
+<p>MSpec is in my personal opinion one of the best BDD frameworks available for .Net, due to the very nice syntax.</p>
+<p>An example :</p>
+<p>First I&#8217;ll show you the account class :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> Account<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Decimal Balance {get;set;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">void</span> Transfer(<span class="kwrd">decimal</span> amount,Account ToAccount)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (Balance &lt; amount)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">throw</span> <span class="kwrd">new</span> ArgumentOutOfRangeException(<span class="str">&#8220;There is not enough money available on the account&#8221;</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Balance-=amount;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ToAccount.Balance+=amount;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>Next up I will show you the specs in Mspec :</p>
+<p><div class="code">
+</p>
+<p><span class="kwrd">using</span> System;<br />&nbsp;<br /><span class="kwrd">namespace</span> Machine.Specifications.Example<br />{<br />[Subject(<span class="kwrd">typeof</span>(Account), <span class="str">&#8220;Funds transfer&#8221;</span>)]<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> when_transferring_between_two_accounts<br />&nbsp;&nbsp;&nbsp; : with_from_account_and_to_account<br />&nbsp; {<br />&nbsp;&nbsp;&nbsp; Because of = () =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fromAccount.Transfer(1m, toAccount);<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; It should_debit_the_from_account_by_the_amount_transferred = () =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fromAccount.Balance.ShouldEqual(0m);<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; It should_credit_the_to_account_by_the_amount_transferred = () =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; toAccount.Balance.ShouldEqual(2m);<br />&nbsp; }<br />&nbsp;<br />[Subject(<span class="kwrd">typeof</span>(Account), <span class="str">&#8220;Funds transfer&#8221;</span>), Tags(<span class="str">&#8220;failure&#8221;</span>)]<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> when_transferring_an_amount_larger_than_the_balance_of_the_from_account<br />&nbsp;&nbsp;&nbsp; : with_from_account_and_to_account<br />&nbsp; {<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">static</span> Exception exception;<br />&nbsp;&nbsp;&nbsp; Because of =()=&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exception = Catch.Exception(()=&gt;fromAccount.Transfer(2m, toAccount));<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; It should_not_allow_the_transfer =()=&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exception.ShouldBeOfType&lt;Exception&gt;();<br />&nbsp; }<br />&nbsp;<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> failure {}<br />&nbsp;<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">abstract</span> <span class="kwrd">class</span> with_from_account_and_to_account<br />&nbsp; {<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">protected</span> <span class="kwrd">static</span> Account fromAccount;<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">protected</span> <span class="kwrd">static</span> Account toAccount;<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; Establish context =()=&gt;<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fromAccount = <span class="kwrd">new</span> Account {Balance = 1m};<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; toAccount = <span class="kwrd">new</span> Account {Balance = 1m};<br />&nbsp;&nbsp;&nbsp; };<br />&nbsp; }<br />}<br /></div></p>
+<p>While this is a very keen and intelligent approach there are a few things that I am not very fond of :</p>
+<ul>
+<li>The &#8220;Subject&#8221; attribute : is really code litter, and not really acceptable IMHO</li>
+<li>The fact that we use classes and subclasses for each scenario; sometimes this becomes too much of a hassle; your code gets split up into several places, and this is not very transparent anymore&#8230;</li>
+<li>The lack of Story support</li>
+<li>The catching of expected exceptions should not need a try catch block but have some kind of other mechanism.<br /><strong>Edit: My bad;there is a mechanism in MSpec&#8230; However, I&#8217;m not a real fan of it, since it is in the because part. IMHO this should be an &#8220;it&#8221;, not a &#8220;because&#8221;<br /></strong></li>
+<li>The fact that the context is intermixed with the class itself =&gt; this might be a subject of discussion, but it is certainly not my personal preference; I prefer a seperate context class per story and/or scenario</li>
+<li>Some definitions, i.e. &#8220;because of&#8221;, &#8220;Establish&#8221;,&#8221;It&#8221; etc&#8230; are not good enough in my opinion</li>
+<li>The use of underscores; I am more of a PascalCasing fan<br /><strong>Edit: After the remark of Aaron, I decided to implement both</strong></li>
+</ul>
+<p>Based on my ideas I created a new BDD Framework : NetSpec</p>
+<p>&nbsp;</p>
+<h3>The Aubergine approach</h3>
+<p>Based on my findings I started coding this morning, and this is the spec defined in NetSpec :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> TransferFundsBetweenAccounts : Story<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AsAn AccountUser;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IWant ToTransferMoneyBetweenAccounts;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SoThat ICanHaveRealUseForMyMoney;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer1MBetweenTwoAccounts : Scenario&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given BothAccountsHave1M = () =&gt; <span class="kwrd">new</span> Context(1m,1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When Transfering1MFromAToB = c =&gt; c.AccountA.Transfer(1m,c.AccountB);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ItShould Have0mOnAccountA = c =&gt; c.AccountA.Balance.ShouldEqual(0m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ItShould Have2mOnAccountB = c =&gt; c.AccountB.Balance.ShouldEqual(2m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> TransferTooMuch : Scenario&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given BothAccountsHave1M = () =&gt; <span class="kwrd">new</span> Context(1m, 1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When Transfering2MFromAToB = c =&gt; c.AccountA.Transfer(2m,c.AccountB);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ItShould Have1mOnAccountA = c =&gt; c.AccountA.Balance.ShouldEqual(1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ItShould Have1mOnAccountB = c =&gt; c.AccountB.Balance.ShouldEqual(1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ItShouldFailWithError AmountToLarge = e =&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.ShouldBeOfType&amp;lt;ArgumentOutOfRangeException&amp;gt;();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> Context<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Context(<span class="kwrd">decimal</span> amounta, <span class="kwrd">decimal</span> amountb)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AccountA.Balance = amounta;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AccountB.Balance = amountb;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountA = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountB = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>&nbsp;</p>
+<p><strong>Edit : After Aaron&#8217;s remarks I replaced</strong></p>
+<p><div class="code">
+<br /> ItShouldThrowException&amp;lt;ArgumentOutOfRangeException&amp;gt; AmountToHigh;<br /> </div></p>
+<p><strong>with</strong></p>
+<p><div class="code">
+<br /> ItShouldFailWithError AmountToLarge = e =&gt; e.ShouldBeOfType&amp;lt;ArgumentOutOfRangeException&amp;gt;();<br /> </div></p>
+<p><strong>which is closer to the domain expert&#8217;s language then the developer&#8217;s.</strong></p>
+<p>Now, I do not know what You think, but in my opinion this is a lot more readable then the MSpec version.</p>
+<p>While the code currently compiles, the testing itself is not implemented yet, but this should not be such a big hurdle. The automatic catching of the exception should only happen in the &#8220;When&#8221;-phase afaik, other exceptions should ALWAYS return a fail.</p>
+<p>&nbsp;</p>
+<h3>Conclusion</h3>
+<p>In my quest for the holy grail I have met a lot of hurdles but I do think I am getting closer to my target. I hope/think that a domain expert should be able to read the code I present in the specifications; In my opinion this should be a viable DSL-like human-readable text. While the current representation still has some constraints due to it&#8217;s implementation language, most of the disturbing stuff has been left out.</p>
+<p>Up next is the implementation of the testrunner, but I will have to take a look at my schedule when I will be able to complete this, since I sometimes have to do some work that pays the bills as well ;) &#8230;</p>
+<p>If you have any suggestions or remarks please do let me know in the comment section !!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-20T00:00:00+02:00" data-updated="true" itemprop="datePublished">Oct 20<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/10/20/w00t-building-a-new-app-from-the-ground-up-ioc-database-and-other-stuff%3B-a-real-framework/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/10/20/w00t-building-a-new-app-from-the-ground-up-ioc-database-and-other-stuff%3B-a-real-framework/" itemprop="url">W00t : Building a New App From the Ground Up : IOC, Database and Other Stuff; a Real Framework</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>This is one of the articles in our series; the parts are:</p>
+<ol>
+<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-methodology-technology-tools-used.aspx">Methodology, technology &amp; tools used</a></li>
+<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-setting-up-the-environment.aspx">Setting up the environment</a></li>
+<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-First-specs-and-getting-started.aspx">First specs and getting started</a></li>
+<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-IOC-database-and-other-stuff3b-a-real-framework.aspx">IOC, database and other stuff; a real framework</a>&nbsp; </li>
+</ol>
+<p>&nbsp;Happy reading !</p>
+<h2>Finally a framework ! <br /></h2>
+<p class="MsoNormal">&nbsp;When I went to bed last night, I was thinking about a few things, so I said to myself : &#8220;Ok, I&#8217;ll quickly implement them&#8221;. But, as one can expect, a few minutes became a few hours, so in the end I did not get much sleep. I decided to finish it this morning, so the now the main stuff of the framework is finsished, and I&#8217;ll write a little post about this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h2 class="MsoNormal">Back to the drawing board <br /></h2>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">After taking a closer look at simplerepository to know the domain model conventions I noticed that the support for relationships was a mess (i.e. you have to join data yourself using Id&#8217;s etc, so I decided to go back to the one thing I know : fluent nhibernate.</span></p>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">In the mean time my specs were constantly evolving&hellip; It lead me to do a complete refactoring of my code; you can see the current state of the spec in the end :</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<h2 class="MsoNormal">Delete subsonic and get FluentNhibernate, Nhibernate.Linq and Castle.Windsor <br /></h2>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">1. In the project folder, delete the folder &#8220;SubSonic-3.0&#8221;<br />2. Start a git bash in the project folder, and type :<br />git clone git://github.com/jagregory/fluent-nhibernate.git<br />3. look for fluentnhbernate.csproj and build it (make sure the configuration mode is set to release)<br />4. look for machine.Specifications.sln and build it<br />5. Change the batch file tools\copydependenciesandtools.cmd to the following :&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">@Echo off<br />echo.<br />echo<span>&nbsp;&nbsp; </span>Copying all tools and dependencies<br />echo.<br />copy ..\machine.Specifications\Build\Release\*.dll<br />copy ..\machine.Specifications\Build\Release\*.exe<br />copy ..\machine.Specifications\Build\Release\*.dll ..\lib\*.*<br />copy ..\fluent-nhibernate\src\FluentNHibernate\bin\Release\*.dll ..\lib\*.*<br />pause <br />6. execute tools\copydependenciesandtools.cmd<br />7. execute tools\cleanup.Cmd<br />8. Download <a href="http://sourceforge.net/projects/castleproject/files/InversionOfControl/2.0/Castle-Windsor-2.0.zip/download" target="_blank">Castle.Windsor</a> for IOC and put the dll&rsquo;s in the lib folder<br />9. Download <a href="http://sourceforge.net/projects/nhibernate/files/NHibernate/2.1.0.GA/NHibernate.Linq-1.0.0.GA-bin.zip/download" target="_blank">NHibernate.Linq</a> and put the dll&rsquo;s in the lib folder</span></p>
+<h2 class="MsoNormal">Setup your business logic project</h2>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">11. Creat a new class lib project and name it &ldquo;xxx.Core&rdquo;<br />12. Add references to the following libs in both your specs project and your Core project :<br />..\lib\Castle.Core<br />..\lib\Castle.MicroKernel<br />..\lib\Castle.Windsor<br />..\lib\FluentNHibernate<br />..\lib\NHibernate<br />..\lib\NHibernate.ByteCode.Castle<br />..\lib\NHibernate.Linq<br />..\lib\System.Data.SqlLite<br />..\lib\System.Data.SqlLite.Linq</span></p>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">Add the core project as a <span>&nbsp;</span>ref to your specs project .</span></p>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: 'Courier New'">13. Create your model classes according to the fluentnhbibernate conventions. An example :</span></p>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: 'Courier New'"><div class="code">
+<br />&nbsp; // models\_ModelBase.cs<br />//<br />// the <span class="kwrd">abstract</span> <span class="kwrd">base</span> <span class="kwrd">class</span> <span class="kwrd">for</span> the domain objects<br />//<br /><span class="kwrd">namespace</span> Be.HorecaTouch.Core.Models<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">abstract</span> <span class="kwrd">class</span> ModelBase<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">int</span> Id {get;set;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">string</span> Description { get; set; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br />// models\Product.cs<br />//<br />// a product<br />//<br /><span class="kwrd">namespace</span> Be.HorecaTouch.Core.Models<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> Product : ModelBase<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">int</span> Number { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> ProductGroup Group { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">bool</span> Available { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">bool</span> PrintOutToReceipt { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">bool</span> PrintOutToKitchen { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">string</span> CourseName { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">bool</span> NonProfit { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> ICollection&lt;Lookup&gt; Lookups { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">int</span> SellingPrice1 { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">int</span> SellingPrice2 { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">int</span> SellingPrice3 { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">int</span> SellingPrice4 { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> <span class="kwrd">int</span> SellingPrice5 { get; set; }<br />&nbsp;&nbsp;&nbsp; }<br />}</span><span style=<span class="str">&#8220;font-size: 10pt; font-family: &#8216;Courier New&#8217;&#8221;</span>><br /></div><br /></span></p>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">14. After this I created the interfaces in the core project :<br /><div class="code">
+<br />// Interfaces \ IIOC.cs<br /><span class="kwrd">namespace</span> Be.HorecaTouch.Core.Services.Interfaces<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">interface</span> IIOC<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T Resolve&lt;T&gt;();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T Resolve&lt;T&gt;(<span class="kwrd">string</span> name);<br />&nbsp;&nbsp;&nbsp; }<br />}<br />// interfaces\IRepository.cs<br /><span class="kwrd">namespace</span> Be.HorecaTouch.Core.Services.Interfaces<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">interface</span> IRepository&lt;T&gt; <span class="kwrd">where</span> T:Models.ModelBase<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T GetById(<span class="kwrd">int</span> id);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IQueryable&lt;T&gt; Find { get; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SaveOrUpdate(T instance);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> Delete(T instance);<br />&nbsp;&nbsp;&nbsp; }<br />}<br />// interfaces\IUnitOfWork.cs<br /><span class="kwrd">namespace</span> Be.HorecaTouch.Core.Services.Interfaces<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">interface</span> IUnitOfWork : IDisposable<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> Commit();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dictionary&lt;<span class="kwrd">string</span>, <span class="kwrd">object</span>&gt; SessionVars { get; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br />// interfaces\IUnitOfWorkFactory.cs<br /><span class="kwrd">namespace</span> Be.HorecaTouch.Core.Services.Interfaces<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">interface</span> IUnitOfWorkFactory<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IUnitOfWork CurrentUnitOfWork {get;}<br />&nbsp;&nbsp;&nbsp; }<br />}<br />// interfaces\IUnitOfWorkFactory.cs<br /><span class="kwrd">namespace</span> Be.HorecaTouch.Core.Services.Interfaces<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">interface</span> IXmlAdapter<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> Import(<span class="kwrd">string</span> xml);<br />&nbsp;&nbsp;&nbsp; }<br />}</span><span style=<span class="str">&#8220;font-size: 10pt; font-family: &#8216;Courier New&#8217;&#8221;</span>><br /></div></span></p>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: 'Courier New'">15. Implement concrete classes that implement the interfaces </span><br /><br /><span style="font-size: 10pt; font-family: 'Courier New'"><div class="code">
+<br />//implementations\database.cs<br />//<br />// Automaticly creates an sqllite db based on the classes <span class="kwrd">in</span> the Models <span class="kwrd">namespace</span>.<br />//<br /><span class="kwrd">using</span> System;<br /><span class="kwrd">using</span> System.Collections.Generic;<br /><span class="kwrd">using</span> System.Linq;<br /><span class="kwrd">using</span> System.Text;<br /><span class="kwrd">using</span> NHibernate;<br /><span class="kwrd">using</span> FluentNHibernate;<br /><span class="kwrd">using</span> FluentNHibernate.Cfg;<br /><span class="kwrd">using</span> FluentNHibernate.Cfg.Db;<br /><span class="kwrd">using</span> FluentNHibernate.Automapping;<br /><span class="kwrd">using</span> Be.HorecaTouch.Core.Models;<br /><span class="kwrd">using</span> Be.HorecaTouch.Core.Services.Interfaces;<br /><span class="kwrd">using</span> NHibernate.Tool.hbm2ddl; <br /><span class="kwrd">namespace</span> Be.HorecaTouch.Core.Services.Implementations<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">abstract</span> <span class="kwrd">class</span> Database : IUnitOfWorkFactory<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">protected</span> ISessionFactory SessionFactory;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">protected</span> <span class="kwrd">static</span> ISession LocalSession; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">protected</span> Database(IPersistenceConfigurer pcfg)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var cfg = Fluently.Configure()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Database(pcfg)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Mappings(m =&gt; m.AutoMappings.Add(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AutoMap.AssemblyOf&lt;Product&gt;()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .IgnoreBase&lt;ModelBase&gt;()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Where(am =&gt; am.Namespace == <span class="kwrd">typeof</span>(Product).Namespace)))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .BuildConfiguration();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SessionFactory = cfg.BuildSessionFactory();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LocalSession = SessionFactory.OpenSession();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">new</span> SchemaExport(cfg).Execute(<span class="kwrd">false</span>, <span class="kwrd">true</span>, <span class="kwrd">false</span>, LocalSession.Connection, <span class="kwrd">null</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br /><br />&nbsp;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="preproc">#region</span> IUnitOfWorkFactory Members<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">virtual</span> IUnitOfWork CurrentUnitOfWork<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LocalSession = <span class="kwrd">null</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">new</span> UnitOfWork(()=&gt;SessionFactory.OpenSession(),<span class="kwrd">true</span>,<span class="kwrd">false</span> );<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="preproc">#endregion</span> <br />&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> SqlLiteInMemoryDatabase : Database<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> SqlLiteInMemoryDatabase() : <span class="kwrd">base</span>(SQLiteConfiguration.Standard.InMemory())<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">override</span> IUnitOfWork CurrentUnitOfWork<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">new</span> UnitOfWork(() =&gt; LocalSession, <span class="kwrd">false</span>, <span class="kwrd">true</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; } <br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> SqlLiteDatabase : Database<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> SqlLiteDatabase(<span class="kwrd">string</span> filename) : <span class="kwrd">base</span>(SQLiteConfiguration.Standard.UsingFile(filename))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">override</span> IUnitOfWork CurrentUnitOfWork<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">new</span> UnitOfWork(() =&gt; SessionFactory.OpenSession(), <span class="kwrd">false</span>, <span class="kwrd">false</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br />// implementations\IOC.cs<br />//<br />// use the <span class="kwrd">default</span> castle windsor IOC container<br />//<br /><span class="kwrd">using</span> Be.HorecaTouch.Core.Services.Interfaces; <br /><span class="kwrd">namespace</span> Be.HorecaTouch.Core.Services.Implementations<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> IOC : Castle.Windsor.WindsorContainer, IIOC {}<br />}<br />// implementations\Repository<br />//<br />// a generic repository <span class="kwrd">for</span> nhibernate<br />//<br /><span class="kwrd">using</span> System;<br /><span class="kwrd">using</span> System.Collections.Generic;<br /><span class="kwrd">using</span> System.Linq;<br /><span class="kwrd">using</span> System.Text;<br /><span class="kwrd">using</span> Be.HorecaTouch.Core.Services.Interfaces;<br /><span class="kwrd">using</span> FluentNHibernate;<br /><span class="kwrd">using</span> NHibernate.Linq;<br /><br /><span class="kwrd">namespace</span> Be.HorecaTouch.Core.Services.Implementations<br />{<br /><br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> Repository&lt;T&gt; : IRepository&lt;T&gt; <span class="kwrd">where</span> T:Models.ModelBase<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NHibernate.ISession session; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Repository(Database db)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; session = ((UnitOfWork)db.CurrentUnitOfWork).Session.Instance&nbsp; ;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="preproc">#region</span> IRepository&lt;T&gt; Members <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> T GetById(<span class="kwrd">int</span> id)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> session.Get&lt;T&gt;(id);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> IQueryable&lt;T&gt; Find<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get { <span class="kwrd">return</span> session.Linq&lt;T&gt;(); }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">void</span> SaveOrUpdate(T instance)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; session.SaveOrUpdate(instance);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">void</span> Delete(T instance)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; session.Delete(instance);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #endregion<br />&nbsp;&nbsp;&nbsp; }<br />}<br /></div></span></p>
+<h2>So what is the Result until now ?</h2>
+<p class="MsoNormal">Now you have a fully setup environment with an (inmemory/file) database for your domainmodel,&nbsp; acessible with a generic iRepository. All your service interfaces are available through an IOC, and your data can be easily persisted&hellip;</p>
+<p class="MsoNormal">Your development can now also be driven by specs</p>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial">Adjust the spec file to your likings;this is currently mine :</span></p>
+<p class="MsoNormal"><span style="font-size: 10pt; font-family: Arial"><div class="code">
+<br /><span class="kwrd">using</span> System;<br /><span class="kwrd">using</span> System.Collections.Generic;<br /><span class="kwrd">using</span> System.Linq;<br /><span class="kwrd">using</span> System.Text;<br /><span class="kwrd">using</span> Machine.Specifications;<br /><span class="kwrd">using</span> Be.HorecaTouch.Core.Models;<br /><span class="kwrd">using</span> Be.HorecaTouch.Core.Services.Interfaces;<br /><span class="kwrd">using</span> Be.HorecaTouch.Core.Services.Implementations; <br /><span class="kwrd">namespace</span> Specs<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">abstract</span> <span class="kwrd">class</span> with_empty_database<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">protected</span> <span class="kwrd">static</span> IIOC ioc; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Establish context = () =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var cont = <span class="kwrd">new</span> IOC();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cont.AddComponent&lt;Database, SqlLiteInMemoryDatabase&gt;();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cont.AddComponent&lt;IRepository&lt;Product&gt;,Repository&lt;Product&gt;&gt;();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cont.AddComponent&lt;IRepository&lt;Lookup&gt;, Repository&lt;Lookup&gt;&gt;();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cont.AddComponent&lt;IXmlAdapter, XmlAdapter&gt;();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ioc = cont;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br />&nbsp;&nbsp;&nbsp; } <br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> when_products_are_imported_from_external_xmlfile : with_empty_database<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Because of = () =&gt; ioc.Resolve&lt;IXmlAdapter&gt;().Import(Properties.Resources.ExternalProductsXml);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It should_contain_multiple_products = () =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ioc.Resolve&lt;IRepository&lt;Product&gt;&gt;().Find.Count().ShouldBeGreaterThan(0);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It should_have_a_product_called_steak_with_cooking_and_sauce_lookups = () =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ioc.Resolve&lt;IRepository&lt;Product&gt;&gt;().Find<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Where(a =&gt; a.Description == <span class="str">&#8220;Steak&#8221;</span>).Count().ShouldBeGreaterThan(0); <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It should_contain_multiple_lookups = () =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ioc.Resolve&lt;IRepository&lt;Lookup&gt;&gt;().Find.Count().ShouldBeGreaterThan(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It should_contain_multiple_cookings;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It should_contain_multiple_courses;<br />&nbsp;&nbsp;&nbsp; } <br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">abstract</span> <span class="kwrd">class</span> with_filled_database : with_empty_database<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Establish context = () =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ioc.Resolve&lt;IXmlAdapter&gt;().Import(Properties.Resources.ExternalProductsXml);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br />&nbsp;&nbsp;&nbsp; }<br /></span><span style=<span class="str">&#8220;font-size: 10pt; font-family: Arial&#8221;</span>>}<br /></div><br /></span></p>
+<p class="MsoNormal">Finally, this is what my current Spec build html looks like :</p>
+<h1><span style="font-family: Arial">Specs&nbsp;&nbsp;&nbsp;&nbsp;</span></h1>
+<h2><span style="font-family: Arial; color: lightgrey">1 concern, 1 context, 5 specifications, </span><span class="notimplemented1"><span style="font-family: Arial">2 not implemented specs</span></span><span style="font-family: Arial; color: lightgrey"> </span></h2>
+<p class="MsoNormal"><span style="font-size: 11pt; font-family: Arial">&nbsp;</span></p>
+<div class="MsoNormal" style="text-align: center"><span style="font-size: 11pt; font-family: Arial">
+<hr size="1" />
+</span></div>
+<div class="MsoNormal" style="text-align: center"><span style="font-size: 11pt; font-family: Arial">
+<hr size="1" />
+</span></div>
+<h2><span style="font-family: Arial">specifications&nbsp;&nbsp;&nbsp;&nbsp;</span></h2>
+<h3><span class="count1"><span style="font-family: Arial">1 context, 5 specifications, </span></span><span class="notimplemented1"><span style="font-family: Arial">2 not implemented specs</span></span></h3>
+<h3><span style="font-family: Arial">when products are imported from external xmlfile&nbsp;&nbsp;&nbsp;&nbsp;</span></h3>
+<h4><span class="count1"><span style="font-family: Arial">5 specifications, </span></span><span class="notimplemented1"><span style="font-family: Arial">2 not implemented specs</span></span></h4>
+<p class="MsoNormal" style="margin-left: 36pt">&nbsp;</p>
+<ul>
+<li class="MsoNormal"><span style="font-size: 11pt; font-family: Arial">should contain multiple products </span></li>
+<li class="MsoNormal"><span style="font-size: 11pt; font-family: Arial">should have a product called steak with cooking and sauce lookups </span></li>
+<li class="MsoNormal"><span style="font-size: 11pt; font-family: Arial">should contain multiple lookups </span></li>
+<li class="MsoNormal"><span style="font-size: 11pt; font-family: Arial">should contain multiple cookings</span><strong><span style="font-size: 11pt; font-family: Arial; color: orange">&lt; NOT IMPLEMENTED</span></strong> <span style="font-size: 11pt; font-family: Arial"><br /></span></li>
+<li class="MsoNormal"><span style="font-size: 11pt; font-family: Arial">should contain multiple courses</span><strong><span style="font-size: 11pt; font-family: Arial; color: orange">&lt; NOT IMPLEMENTED</span></strong><span style="font-size: 11pt; font-family: Arial"> <br /></span></li>
+</ul>
+<p class="MsoNormal" style="margin-left: 36pt">&nbsp;</p>
+<div class="MsoNormal" style="text-align: center"><span style="font-size: 11pt; font-family: Arial">
+<hr size="1" />
+</span></div>
+<h2 class="MsoNormal">Conclusion <br /></h2>
+<p class="MsoNormal">Et voila, in a few easy steps we have created a framework which offers quite some advantages, and should be easy to extend&#8230; and is BDD (hype hype hype !!) I do not offer the holy grail however, so always make sure you adapt the code to your wishes.</p>
+<p class="MsoNormal">Since blogging about this does take quite some time, and the development now becomes really specific, I think this will probably be my last post about this new project, but he, never say never !!!</p>
+<p class="MsoNormal">Maybe if I have some issues regarding MVC testing I might blog about it, but I can not guarantee anything&#8230; Happy coding !!&lt;&#8211;&gt;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-19T00:00:00+02:00" data-updated="true" itemprop="datePublished">Oct 19<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/10/19/w00t-building-a-new-app-from-the-ground-up-setting-up-the-environment/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/10/19/w00t-building-a-new-app-from-the-ground-up-setting-up-the-environment/" itemprop="url">W00t : Building a New App From the Ground Up : Setting Up the Environment</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		This is one of the articles in our series; the parts are:<br />
+<ol>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-methodology-technology-tools-used.aspx">Methodology, technology &amp; tools used</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-setting-up-the-environment.aspx">Setting up the environment</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-First-specs-and-getting-started.aspx">First specs and getting started</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-IOC-database-and-other-stuff3b-a-real-framework.aspx">IOC, database and other stuff; a real framework</a>&nbsp; <br />
+	</li>
+</ol>
+<p>
+&nbsp;Happy reading !<br />
+</p>
+<p>
+Ok, here are the steps to setup the development environment for my new project :
+</p>
+<h2>Prerequisites<br />
+</h2>
+<p>
+&nbsp;
+</p>
+<ul>
+	<li><a href="http://code.google.com/p/msysgit/" target="_blank">MSysGit</a></li>
+	<li>Visual Studio pro or express - <a href="http://www.microsoft.com/express/download/#webInstall" target="_blank">web developer &amp; c#</a>&nbsp;</li>
+	<li><a href="http://www.microsoft.com/downloads/details.aspx?familyid=D3F06BB9-5F5F-4F46-91E9-813B3FCE2DB1&amp;displaylang=en" target="_blank">Asp.net MVC 2 preview 2</a> <br />
+	</li>
+</ul>
+<h2>The steps</h2>
+<p>
+1. Create a project folder <br />
+2. Start Git bash on this folder (right click in windows explorer)<br />
+3. Get MSpec : type in git bash : 
+</p>
+<pre>
+git clone git://github.com/machine/machine.specifications.git
+</pre>
+<p>
+4. Get Subsonic : type in git bash :
+</p>
+<pre>
+git clone git://github.com/subsonic/SubSonic-3.0.git 
+</pre>
+<p>
+5. Search for Subsonic.Core.csproj and build it<br />
+6. Search for Machine.specifications.sln and build it<br />
+7. Make a folder Tools in the project folder<br />
+8. Make a folder Lib in the project folder<br />
+9. Make a folder Source in the project folder<br />
+10. In the folder Tools create a file named &quot;CopyDependenciesAndTools.cmd&quot; with the following content:
+</p>
+<pre>
+@echo off
+echo.
+echo&nbsp;&nbsp; Copying all tools &amp; dependencies
+echo.
+copy ..\machine.Specifications\Build\Release\*.dll
+copy ..\machine.Specifications\Build\Release\*.exe
+copy ..\machine.Specifications\Build\Release\*.dll ..\lib\*.*
+copy ..\machine.Specifications\Build\Release\*.dll ..\lib\*.*
+copy ..\subsonic-3.0\lib\*.dll ..\lib\*.*
+copy ..\subsonic-3.0\subsonic.core\bin\release\*.dll ..\lib\*.*
+pause
+</pre>
+<p>
+11. Execute this cmd-file<br />
+12. Make another cmd file in the tools-folder : &quot;CleanUp.cmd&quot; with the following content:
+</p>
+<pre>
+@Echo off
+echo.
+echo&nbsp;&nbsp; Cleaning up
+echo.
+dir /ad /b /s ..\bin &gt; folderstodelete.txt
+dir /ad /b /s ..\obj &gt;&gt; folderstodelete.txt
+dir /ad /b /s ..\build &gt;&gt; folderstodelete.txt
+for /f %%i in (folderstodelete.txt) do rd %%i /s /q
+pause
+</pre>
+<p>
+13. Execute it<br />
+14. Start up Visual studio and create a new ASP.NET MVC 2 application in the src folder (make sure the checkbox create directory for this solution is off)<br />
+15. Once the project is created choose File/New project / Windows/Class library, name it &quot;Specs&quot;, and make sure you choose the option &quot;Add to solution&quot;<br />
+16. Save and close visual studio<br />
+17. Execute &quot;Tools\CleanUp.Cmd&quot;
+</p>
+<pre>
+15. Go back to the Git Bash and type (line by line, do not copy and paste this in one block):
+</pre>
+<pre>
+git init
+</pre>
+<pre>
+git add .
+</pre>
+<pre>
+git commit -m &quot;+ Initial commit&quot;
+</pre>
+<p>
+<br />
+That&#39;s all there is to&nbsp; it; our initial setup. In the next post we&#39;ll get started writing specs !!
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-19T00:00:00+02:00" data-updated="true" itemprop="datePublished">Oct 19<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/10/19/w00t-building-a-new-app-from-the-ground-up-methodology-technology-tools-used/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/10/19/w00t-building-a-new-app-from-the-ground-up-methodology-technology-tools-used/" itemprop="url">W00t : Building a New App From the Ground Up : Methodology, Technology & Tools Used</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>
+This is one of the articles in our series; the parts are:<br />
+</p>
+<ol>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-methodology-technology-tools-used.aspx">Methodology, technology &amp; tools used</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-setting-up-the-environment.aspx">Setting up the environment</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-First-specs-and-getting-started.aspx">First specs and getting started</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-IOC-database-and-other-stuff3b-a-real-framework.aspx">IOC, database and other stuff; a real framework</a>&nbsp; <br />
+	</li>
+</ol>
+<p>
+&nbsp;Happy reading !<br />
+</p>
+<h1>Introduction</h1>
+<p>
+Since I have always been very interested in the latest technology developments, and I needed to start a new and initially very simple project, I decided to do some studying and opt for new things&#8230;<br />
+After reading quite some articles, I decided to write about my experiences in my blog, in order to learn some things about my experiences, and even help you decide on some aspects&#8230; 
+</p>
+<p>
+If you disagree in any way with my opinions, or have some interesting suggestions please comment, since I am always eager to know about the opinion of somebody else.
+</p>
+<p>
+&nbsp;
+</p>
+<h1>Methodology : the paradigm shift<br />
+</h1>
+<p>
+Since my programming in <a href="http://en.wikipedia.org/wiki/TRS-80" target="_blank">TRS-80-basic</a> as a 7-year old, a lot has changed&#8230; This is an overview of my personal evolution :
+</p>
+<h2><a href="http://en.wikipedia.org/wiki/Procedural_programming" target="_blank">Procedural programming</a><br />
+</h2>
+<p>
+Initially I got started with <a href="http://en.wikipedia.org/wiki/BASIC" target="_blank">BASIC</a>, since it was the most understandable development platform at the time, very easy to get started with. A few years later, I had been developing in <a href="http://en.wikipedia.org/wiki/MASM" target="_blank">MASM</a>, <a href="http://en.wikipedia.org/wiki/Turbo_pascal" target="_blank">Turbo Pascal</a> and even <a href="http://en.wikipedia.org/wiki/C--" target="_blank">C&#8211;</a> in the <a href="http://en.wikipedia.org/wiki/Demo_scene" target="_blank">demoscene</a> (<a href="http://www.pouet.net/prod.php?which=8765" target="_blank">only limited tracks available</a>), all choices that opted my preference for execution speed, before I really entered my next level of programming consciousness&#8230;
+</p>
+<h2><a href="http://en.wikipedia.org/wiki/Object_oriented" target="_blank">Object oriented programming</a><br />
+</h2>
+<p>
+Since I had been a hardcore developer in the demo-scene, most OO-concepts were a stranger to me (speed was king)&#8230; It has only been a few years later in my professional carreer that the advantages of OO were becoming obvious to me. Unfortunately, until then I reinvented the wheel for just about each problem I had, since I never heard about the next part..
+</p>
+<h2><a href="http://en.wikipedia.org/wiki/Design_pattern" target="_blank">Design patterns</a> </h2>
+<p>
+After hearing about <a href="http://en.wikipedia.org/wiki/Factory_method_pattern" target="_blank">factories</a>, <a href="http://en.wikipedia.org/wiki/Service_%28systems_architecture%29" target="_blank">services</a>, <a href="http://en.wikipedia.org/wiki/Command_pattern" target="_blank">command patterns</a>, all kinds of <a href="http://en.wikipedia.org/wiki/Interface_%28computer_science%29" target="_blank">interfaces </a>etc. I decided that that was the next thing for me, so I started studying the <a href="http://en.wikipedia.org/wiki/Design_Patterns_%28book%29" target="_blank">GOF design patterns</a>, <a href="http://en.wikipedia.org/wiki/Martin_Fowler" target="_blank">Martin Fowler</a>&#39;s <a href="http://martinfowler.com/" target="_blank">blog </a>and all kinds of reference material that I could find. Slowy some of the more interesting concepts were getting to me, but in the meantime there was a new buzz on the development scene&#8230; 
+</p>
+<h2><a href="http://en.wikipedia.org/wiki/Unit_testing" target="_blank">Unit testing</a> </h2>
+<p>
+What&#39;s that ? Testing your code by programming tests as well ? Although I read a lot about this subject, it never seemed to be able to convince me, since i was more of a fan of the higher level automated testing, aka
+</p>
+<h2><a href="http://en.wikipedia.org/wiki/Functional_testing" target="_blank">Functional/acceptance testing</a> </h2>
+<p>
+I allready used this from the beginning on, I wrote programs that did some kind of black box testing, before tools like <a href="http://fitnesse.org/" target="_blank">Fitnesse </a>were available by means of simple input/output. This seemed more usefull then writing unit tests. Until now : the next buzz
+</p>
+<h2><a href="http://www.corebvba.be/blog/admin/Pages/Behavior%20Driven%20Development" target="_blank">Behavior driven development</a></h2>
+<p>
+Finally something that replaces the ubiqutous unit tests with a more interesting approach, write in &quot;business language&quot; what a program has to do, and implement that in code afterwards.. Since I am quite new to this I expect that I will have some problems on the go, so I will share them with all of u in the future..
+</p>
+<p>
+&nbsp;
+</p>
+<h1>Technology</h1>
+<p>
+Regarding the technology : my choice is quite simply based on my experience :
+</p>
+<h2>Development platform&nbsp; : <a href="http://en.wikipedia.org/wiki/ASP.NET_MVC" target="_blank">ASP.Net MVC</a> / <a href="http://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29" target="_blank">C#</a></h2>
+<p>
+2 very simple reasons : It needed to be web-based, and I have had lots of experience with&nbsp; this platform since the early betas. (The design of ASP.NET MVC also encourages seperation of concerns.)
+</p>
+<h2>DB/<a href="http://en.wikipedia.org/wiki/Object-relational_mapping" target="_blank">ORM</a> : <a href="http://subsonicproject.com/docs/Using_SimpleRepository" target="_blank"></a><a href="http://subsonicproject.com/" target="_blank">Subsonic </a>SimpleRepository</h2>
+<p>
+On the database part I am not quite sure yet, but I think a good ORM should not make me obliged to keep using the same DB after all, so I think I will use SqlLite initially, but switch later on to a better one. Strict POCO is not a necessity for me<br />
+Since I have no interest whatsoever on the db part, I think i have to choose between 2 options :
+</p>
+<ul>
+	<li><a href="http://fluentnhibernate.org/" target="_blank">FluentNHibernate</a></li>
+	<li>SubSonic SimpleRepository</li>
+</ul>
+<p>
+While I have been using FluentNhibernate in the past, I have a gut/good feeling about Subsonic SimpleRepository, so I will initially probably start with the second one. Since I wil be using an interface anyway I should be able to switch between two versions quite quick.
+</p>
+<h2><a href="http://en.wikipedia.org/wiki/Inversion_of_Control" target="_blank">IOC </a>container : <a href="http://www.castleproject.org/container/index.html" target="_blank">Castle Windsor</a></h2>
+<p>
+Since I have no idea about an IOC container, I will probably use the one I have the most experience with : Castle Windsor.
+</p>
+<h2>BDD : <a href="http://codebetter.com/blogs/aaron.jensen/archive/2008/05/08/introducing-machine-specifications-or-mspec-for-short.aspx" target="_blank">MSpec</a> </h2>
+<p>
+Because I am new to this mather,I will choose the one that got me interested in this : MSpec.
+</p>
+<p>
+&nbsp;
+</p>
+<h1>Tools </h1>
+<p>
+There is only a very limited list of extra tools I need :
+</p>
+<h2>IDE</h2>
+<p>
+For the programming/web design : <a href="http://en.wikipedia.org/wiki/Visual_studio" target="_blank">Visual studio</a>. For the initial SqlLite management I will use <a href="http://sqliteadmin.orbmu2k.de/" target="_blank">SqlLiteAdmin</a>.
+</p>
+<h2>
+Source control
+</h2>
+<p>
+No doubt about this : <a href="http://en.wikipedia.org/wiki/Git_%28software%29" target="_blank">GIT </a>.<br />
+Because of :
+</p>
+<ul>
+	<li>Atomic commits</li>
+	<li>Ease to setup</li>
+	<li>Ease to do branching/merging/pulling other sources etc <br />
+	</li>
+</ul>
+<p>
+&nbsp;You can read more about this in my <a href="http://www.corebvba.be/blog/post/To-git-or-not-to-git-Source-control-done-right-intro-and-quick-tutorial.aspx" target="_blank">other blog article</a>.
+</p>
+<h2>Timetracker</h2>
+<p>
+Even though this is not a project that I can bill by the hour, I like to keep track of the hours I invested in this. Here I simply use <a href="http://en.wikipedia.org/wiki/Google_Calendar" target="_blank">google calendar</a>, as I do for all my customers. I even wrote an article about this <a href="http://www.corebvba.be/blog/post/Convert-ICal-icsgoogle-calendar-to-textcsv-file.aspx" target="_blank">here</a>.
+</p>
+<h1>Summary</h1>
+<p>
+Those are the inital choicesI have made. I will now setup my development environment and I&#39;ll keep you all posted on my blog (<a href="http://www.corebvba.be/blog/?tag=/w00t" target="_blank">articles with tag w00t </a>). 
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-19T00:00:00+02:00" data-updated="true" itemprop="datePublished">Oct 19<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/10/19/w00t-building-a-new-app-from-the-ground-up-first-specs-and-getting-started/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/10/19/w00t-building-a-new-app-from-the-ground-up-first-specs-and-getting-started/" itemprop="url">W00t : Building a New App From the Ground Up : First Specs and Getting Started</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		This is one of the articles in our series; the parts are:<br />
+<ol>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-methodology-technology-tools-used.aspx">Methodology, technology &amp; tools used</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-setting-up-the-environment.aspx">Setting up the environment</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-First-specs-and-getting-started.aspx">First specs and getting started</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-IOC-database-and-other-stuff3b-a-real-framework.aspx">IOC, database and other stuff; a real framework</a>&nbsp; <br />
+	</li>
+</ol>
+<p>
+&nbsp;Happy reading !<br />
+</p>
+<h2>
+Automating specs&nbsp;
+</h2>
+<p>
+Ok, this step took quite some time to figure out, but once you know how to do this this should be really simple.
+</p>
+<p>
+1. Open the solution and go to the properties of the Specs project<br />
+2. Go to the build events, and put the following text in the post-build event command line :
+</p>
+<pre>
+del &quot;$(TargetDir)*.html&quot;
+&quot;$(ProjectDir)..\..\tools\Machine.Specifications.ConsoleRunner.exe&quot; &quot;$(TargetPath)&quot; --html $(TargetDir) 
+ren &quot;$(TargetDir)$(TargetName)*.html&quot; output.html
+&quot;$(TargetDir)output.html&quot;
+exit 0 
+</pre>
+<p>
+This will make sure that everytime you do a build, the old Mspec html file&nbsp; gets deleted, mspec is ran, and the html is renamed to output.html and shown in your default browser.
+</p>
+<p>
+Please do note that as long as you have the browser open, you build will not be considered finished, so you should close this window in order to continue developing.<br />
+Another possibility would be to build the html file somewhere in your project path, and add it to the project, so you can load it in your project each time, and get a message if it has changed.
+</p>
+<p>
+3. Add a reference to ..\lib\Machine.specifications.dll<br />
+4. Remove the bogus class and start writing your specs.
+</p>
+<p>
+Regarding this part there might be some discussions. I created a file called ProductSpecs.cs, which has the following content :
+</p>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Machine.Specifications;
+namespace Specs
+{
+&nbsp;&nbsp;&nbsp; public class Product { };
+&nbsp;&nbsp;&nbsp; public interface IRepository&lt;T&gt;
+&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IQueryable&lt;T&gt; Find {get;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool Add(T instance);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool Delete(T instance);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool Update(T instance);
+&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; public interface IUnitOfWork : IDisposable 
+&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void Commit();
+&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; public interface IProductRepository : IRepository&lt;Product&gt;
+&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ICollection&lt;Product&gt; GetFromXml(string xml);
+&nbsp;&nbsp;&nbsp; };
+&nbsp;&nbsp;&nbsp; public abstract class with_empty_productlist
+&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protected static IProductRepository productrepo;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protected static ICollection&lt;Product&gt; products;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Establish context = () =&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; products = new List&lt;Product&gt;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };
+&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; public abstract class with_productlist : with_empty_productlist
+&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Establish context = () =&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; products = new List&lt;Product&gt;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; products.Add(new Product());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; products.Add(new Product());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; products.Add(new Product());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };
+&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; public class when_products_are_imported_from_external_xmlfile : with_productlist
+&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Because of = () =&gt; products = productrepo.GetFromXml(Properties.Resources.ExternalProductsXml);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It should_contain_xx_products;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It should_have_an_article_matching_xx;
+&nbsp;&nbsp;&nbsp; }
+}
+</pre>
+<p>
+So as you might see I added some of my code to be in order to be able to start writing some code in my specs; the next thing I am going to do is write code to match these simple specs, and move the respective app code in a proper project of it&#39;s own. 
+</p>
+<p>
+Once this is finished, I am going to extend my specs to match a bigger part of the scope&#8230; 
+</p>
+<p>
+I&#39;ll keep you all posted !!
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-01T00:00:00+02:00" data-updated="true" itemprop="datePublished">Oct 1<span>st</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/10/01/using-google-calendar-as-a-timetracker-for-your-customers-convert-import-export-ical-ics-google-calendar-to-text-csv-file/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/10/01/using-google-calendar-as-a-timetracker-for-your-customers-convert-import-export-ical-ics-google-calendar-to-text-csv-file/" itemprop="url">Using Google Calendar as a Timetracker for Your Customers/ Convert-import-export iCal /ics/google Calendar to Text/csv File</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>
+Since I use a single shared Google calendar for every customer I have, so all the customers can see when I worked on their projects, I needed an easy way to import each calendar into my invoice program.
+</p>
+<p>
+I did it a few times manually in the beginning, but since this was too much of a hassle i decided to write a small program for it.
+</p>
+<p>
+The program is very simple an reads files from the stdinput and outputs to stdout. I Use the <a href="http://www.ddaysoftware.com/Pages/Projects/DDay.iCal/" target="_blank" title="Open source iCal lib">DDay.iCal</a> library for this. 
+</p>
+<p>
+This is the source for the program (pretty straightforward) : 
+</p>
+<pre>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ic = DDay.iCal;
+namespace ICALToCSVPipe
+{
+&nbsp;&nbsp;&nbsp; class Program
+&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; static void Main(string[] args)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var c = ic.iCalendar.LoadFromStream(Console.OpenStandardInput());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach (ic.Components.Event occ in c.Events)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(&quot;{0:yyyy/MM/dd&nbsp; HH:mm} - {1:HH:mm} : {2:0.00} : {3}&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,occ.DTStart.Local 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,occ.DTEnd.Local&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,occ.Duration.Value.TotalHours 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,occ.Summary);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; }
+}
+&nbsp;
+</pre>
+<p>
+You can find the program in the attached zip.
+</p>
+<p>
+In order to convert a calender, I use the following steps :
+</p>
+<ol>
+	<li>Export the binaries to a folder on your hard drive, i.e. &quot;c:\tools&quot; for example<br />
+	</li>
+	<li>Login to Google Calendar</li>
+	<li>Choose Settings/Calendars</li>
+	<li>Click on &quot;Export&quot;, and extract the zip files to the same folder as the program, i.e. &quot;c:\tools&quot;<br />
+	</li>
+	<li>Open a command window ( click Start/Run - type &quot;cmd&quot; +&lt;Enter&gt;)</li>
+	<li>Go to the program folder i.e. type &quot;cd c:\tools&quot; + &lt;Enter&gt;</li>
+	<li>Type the following : ICALToCSVPipe.exe &lt; xxx@group.calendar.google.com.ics |sort&gt; calendar.txt . You do not need to type the full filenames, just type the first few letters of each filename and press the &lt;Tab&gt; until you hit the right filename<br />
+	</li>
+	<li>Now type Notepad &quot;calendar.txt&quot; in order to view the file</li>
+</ol>
+<p>
+The resulting output should look like this :
+</p>
+<pre>
+2009/09/01&nbsp; 10:30 - 11:15 : 0,75 : probleem ouwe hoeve - server traag
+2009/09/01&nbsp; 11:45 - 12:00 : 0,25 : 
+2009/09/01&nbsp; 12:45 - 13:15 : 0,50 : Versie 1.3.3461 versturen
+2009/09/02&nbsp; 09:30 - 09:45 : 0,25 : tel jose protocol
+2009/09/02&nbsp; 13:30 - 15:00 : 1,50 : Eigen/Gratis
+2009/09/04&nbsp; 11:00 - 12:30 : 1,50 : Verwerken nieuwe settings van server
+2009/09/04&nbsp; 13:15 - 13:45 : 0,50 : 
+2009/09/04&nbsp; 14:00 - 16:00 : 2,00 : SharedTables/settings
+2009/09/07&nbsp; 13:30 - 18:15 : 4,75 : v1.3.3462
+2009/09/08&nbsp; 11:00 - 11:45 : 0,75 : Tel Jose todo
+2009/09/08&nbsp; 13:00 - 18:00 : 5,00 : v1.3.3463 : Aanpassen van XML parse routines en implementeren van getreceiptinfo cache
+2009/09/10&nbsp; 11:30 - 12:00 : 0,50 : overlopen volgende punten
+2009/09/10&nbsp; 14:00 - 16:45 : 2,75 : 
+2009/09/15&nbsp; 17:00 - 17:30 : 0,50 : Testdata ouwe hoeve
+2009/09/21&nbsp; 09:00 - 12:00 : 3,00 : v1.3.3464
+2009/09/23&nbsp; 09:00 - 12:00 : 3,00 : debug packets
+2009/09/23&nbsp; 12:30 - 13:30 : 1,00 : v1.3.3465
+2009/09/23&nbsp; 15:30 - 18:30 : 3,00 : tel jose getreceiptinfo
+2009/09/25&nbsp; 10:00 - 12:00 : 2,00 : 1.3.3465
+2009/09/25&nbsp; 14:00 - 15:00 : 1,00 : 1.3.3465
+2009/09/25&nbsp; 16:00 - 17:30 : 1,50 : 1.3.3465
+2009/09/25&nbsp; 20:00 - 22:00 : 2,00 : 1.3.3465
+2009/09/29&nbsp; 15:00 - 17:30 : 2,50 : bakwijzen aangepast...
+2009/10/01&nbsp; 09:15 - 10:45 : 1,50 : 
+2009/10/01&nbsp; 11:00 - 12:00 : 1,00 : 
+2009/10/01&nbsp; 12:30 - 16:30 : 4,00 : 
+2009/10/01&nbsp; 17:00 - 17:45 : 0,75 : Oplevering 1.3466
+</pre>
+<p>
+&nbsp;
+</p>
+<p>
+That&#39;s all folks !!! Enjoy !!
+</p>
+<p>
+<a href="http://www.corebvba.be/blog/file.axd?file=2009%2f10%2fIcalToCSVPipe.zip">IcalToCSVPipe.zip (108,58 kb)</a>
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-10T00:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 10<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/09/10/jong-voka-kick-off-09-09-09-een-succes/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/09/10/jong-voka-kick-off-09-09-09-een-succes/" itemprop="url">Jong Voka Kick-off 09/09/09 - Een Succes !</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>
+Normaalgezien ben ik niet zo&#39;n fan van netwerkevents en -clubs, en ik ben dan ook zelden aanwezig op dergelijke evenementen. 
+</p>
+<p>
+Het was dan ook pas na enig aandringen van &eacute;&eacute;n van de stichtende leden ( Meester Jeroen Vande Sijpe - <a href="http://www.rabotlaw.be" target="_blank">rabotlaw.be</a> ) dat ik dan toch maar besloten had me samen met mijn zus ( Sabine - <a href="http://www.markomo.be" target="_blank">Markomo.be</a> ) in te schrijven voor de <a href="http://www.jongvoka.be/event090909.html" target="_blank">kick-off meeting</a> van <a href="http://www.jongvoka.be/" target="_blank">Jong-voka</a>; zowel het <a href="http://nl.wikipedia.org/wiki/Stadhuis_van_Gent" target="_blank" title="Stadhuis van Gent">kader</a> als de <a href="http://www.frederikimbo.be/" target="_blank" title="Frederik Imbo">gastspreker</a> en <a href="http://www.frederikimbo.be/2oren1mond/index.html" target="_blank" title="Waarom we 2 oren hebben en slechts 1 mond">zijn onderwerp</a> leken me interessant genoeg om toch even te gaan rondneuzen. 
+</p>
+<p>
+De gastspreker bracht zijn onderwerp heel boeiend, en alhoewel het merendeel van de aanwezigen waarschijnlijk wel al heel veel trainingsessies over <a href="http://nl.wikipedia.org/wiki/Neurolingu%C3%AFstisch_programmeren" target="_blank">nlp</a> heeft gehad, wist hij zijn publiek toch te entertainen met een frisse kijk op het onderwerp. 
+</p>
+<p>
+Het &quot;echte netwerken&quot; daarna verliep tot mijn grote verrassing - in tegenstelling tot op veel andere events - heel gemoedelijk en in eerder vriendschappelijke sfeer, al zal dat natuurlijk ook wel aan mijn gesprekspartners van die avond gelegen hebben.<br />
+Zo had ik onder andere eindelijk eens de gelegenheid om eens te weten te komen van de zaakvoerders van <a href="http://www.openminds.be/" target="_blank">openminds.be</a> (Bernard en Frank) waar nu precies hun expertise ligt, en wat de uitdagingen zijn van zo&#39;n jong en dynamisch bedrijf. <br />
+Daarnaast had ik ook een zeer boeiend gesprek met Pieter van <a href="http://www.voortlabo.be/">voortlabo.be</a> over de automatisatie van productieketens, en wat daar allemaal bij komt kijken. <br />
+Ik vond dit stuk voor stuk boeiende en verrijkende gesprekken; geen gepush maar gewoon ervaringen en meningen uitwisselen, zoals het volgens mij hoort op zo&#39;n event. 
+</p>
+<p>
+Daarnaast wil ik ook nog vermelden dat de catering ruimschoots in orde was; ik heb zelfs even de gelegenheid genomen om naast <a href="http://www.witkap.be" target="_blank">witkap</a> eens van een echte &quot;Gentsche&quot; creatie te proeven : een <a href="http://www.roomer.be/" target="_blank">Roomer</a>. Bernard wist mij trouwens te vertellen dat men in dit produkt wereldwijde interesse vertoont. 
+</p>
+<p>
+Al bij al wil ik jong-voka bedanken voor en feliciteren met deze geslaagde avond. Wat mij betreft (en als mijn agenda het toe laat) : tot volgende keer !!
+</p>
+<p>
+PS : wie nog op zoek is naar interessante en onderhoudende lectuur over nlp e.a. kan ik ten zeerste het volgende boek aanraden : <a href="http://www.bol.com/nl/p/boeken/eerste-indruk-in-business/1001004001995620/index.html" target="_blank">&quot;Eerste indruk in business&quot;</a> van <a href="http://www.nicholasboothman.com/" target="_blank">Nicolas Boothman</a>. (isbn :&nbsp; 9058711544 )
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-10T00:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 10<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/07/10/why-pick-git-over-any-other-source-control-repository/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/07/10/why-pick-git-over-any-other-source-control-repository/" itemprop="url">Why Pick Git Over Any Other Source Control Repository</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I found a very nice article that names some of the major advantages of Git over any other source control system; it certainly is worth a read :</p>
+<p><a href="http://www.jukie.net/%7Ebart/blog/why-pick-git" target="_blank"> Why Pick GIT ?</a></p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+</div>
+<nav id="pagenavi">
+    
+        <a href="/blog/page/9/" class="prev">Prev</a>
+    
+    
+        <a href="/blog/page/11/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

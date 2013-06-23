@@ -1,0 +1,222 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>A new BDD framework in .Net : Aubergine - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="A New BDD Framework in .Net : Aubergine Update !! this has changed a lot
+&nbsp;
+Check this post !!!
+&nbsp;
+&nbsp;
+&nbsp;
+Introduction
+During my &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2009/11/03/a-new-bdd-framework-in-.net-aubergine/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">A New BDD Framework in .Net : Aubergine</h1>
+	<div class="entry-content" itemprop="articleBody"><h3>Update !! this has changed a lot</h3>
+<p>&nbsp;</p>
+<p><a href="http://www.corebvba.be/blog/post/A-new-BDD-framework-in-Net-NetSpec-3d3e-Aubergine.aspx">Check this post !!!</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Introduction</h3>
+<p>During my exploration of <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development" target="_blank">BDD</a> frameworks for .NET&nbsp; I only had one final runner-up as a BDD framework : <a href="http://codebetter.com/blogs/aaron.jensen/archive/2008/09/02/mspec-v0-2.aspx" target="_blank">Machine.Specifications</a> . This is a very nice framework, but in my quest for the holy grail on BDD it got me started on thinking about an even better BDD framework. In this article I will layout my initial ideas about a BDD framework named Aubergine.</p>
+<p>&nbsp;</p>
+<h3>Likes and dislikes about MSpec</h3>
+<p>MSpec is in my personal opinion one of the best BDD frameworks available for .Net, due to the very nice syntax.</p>
+<p>An example :</p>
+<p>First I&#8217;ll show you the account class :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> Account<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Decimal Balance {get;set;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">void</span> Transfer(<span class="kwrd">decimal</span> amount,Account ToAccount)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (Balance &lt; amount)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">throw</span> <span class="kwrd">new</span> ArgumentOutOfRangeException(<span class="str">&#8220;There is not enough money available on the account&#8221;</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Balance-=amount;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ToAccount.Balance+=amount;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>Next up I will show you the specs in Mspec :</p>
+<p><div class="code">
+</p>
+<p><span class="kwrd">using</span> System;<br />&nbsp;<br /><span class="kwrd">namespace</span> Machine.Specifications.Example<br />{<br />[Subject(<span class="kwrd">typeof</span>(Account), <span class="str">&#8220;Funds transfer&#8221;</span>)]<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> when_transferring_between_two_accounts<br />&nbsp;&nbsp;&nbsp; : with_from_account_and_to_account<br />&nbsp; {<br />&nbsp;&nbsp;&nbsp; Because of = () =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fromAccount.Transfer(1m, toAccount);<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; It should_debit_the_from_account_by_the_amount_transferred = () =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fromAccount.Balance.ShouldEqual(0m);<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; It should_credit_the_to_account_by_the_amount_transferred = () =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; toAccount.Balance.ShouldEqual(2m);<br />&nbsp; }<br />&nbsp;<br />[Subject(<span class="kwrd">typeof</span>(Account), <span class="str">&#8220;Funds transfer&#8221;</span>), Tags(<span class="str">&#8220;failure&#8221;</span>)]<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> when_transferring_an_amount_larger_than_the_balance_of_the_from_account<br />&nbsp;&nbsp;&nbsp; : with_from_account_and_to_account<br />&nbsp; {<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">static</span> Exception exception;<br />&nbsp;&nbsp;&nbsp; Because of =()=&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exception = Catch.Exception(()=&gt;fromAccount.Transfer(2m, toAccount));<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; It should_not_allow_the_transfer =()=&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exception.ShouldBeOfType&lt;Exception&gt;();<br />&nbsp; }<br />&nbsp;<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> failure {}<br />&nbsp;<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">abstract</span> <span class="kwrd">class</span> with_from_account_and_to_account<br />&nbsp; {<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">protected</span> <span class="kwrd">static</span> Account fromAccount;<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">protected</span> <span class="kwrd">static</span> Account toAccount;<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; Establish context =()=&gt;<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fromAccount = <span class="kwrd">new</span> Account {Balance = 1m};<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; toAccount = <span class="kwrd">new</span> Account {Balance = 1m};<br />&nbsp;&nbsp;&nbsp; };<br />&nbsp; }<br />}<br /></div></p>
+<p>While this is a very keen and intelligent approach there are a few things that I am not very fond of :</p>
+<ul>
+<li>The &#8220;Subject&#8221; attribute : is really code litter, and not really acceptable IMHO</li>
+<li>The fact that we use classes and subclasses for each scenario; sometimes this becomes too much of a hassle; your code gets split up into several places, and this is not very transparent anymore&#8230;</li>
+<li>The lack of Story support</li>
+<li>The catching of expected exceptions should not need a try catch block but have some kind of other mechanism.<br /><strong>Edit: My bad;there is a mechanism in MSpec&#8230; However, I&#8217;m not a real fan of it, since it is in the because part. IMHO this should be an &#8220;it&#8221;, not a &#8220;because&#8221;<br /></strong></li>
+<li>The fact that the context is intermixed with the class itself =&gt; this might be a subject of discussion, but it is certainly not my personal preference; I prefer a seperate context class per story and/or scenario</li>
+<li>Some definitions, i.e. &#8220;because of&#8221;, &#8220;Establish&#8221;,&#8221;It&#8221; etc&#8230; are not good enough in my opinion</li>
+<li>The use of underscores; I am more of a PascalCasing fan<br /><strong>Edit: After the remark of Aaron, I decided to implement both</strong></li>
+</ul>
+<p>Based on my ideas I created a new BDD Framework : NetSpec</p>
+<p>&nbsp;</p>
+<h3>The Aubergine approach</h3>
+<p>Based on my findings I started coding this morning, and this is the spec defined in NetSpec :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> TransferFundsBetweenAccounts : Story<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AsAn AccountUser;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IWant ToTransferMoneyBetweenAccounts;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SoThat ICanHaveRealUseForMyMoney;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer1MBetweenTwoAccounts : Scenario&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given BothAccountsHave1M = () =&gt; <span class="kwrd">new</span> Context(1m,1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When Transfering1MFromAToB = c =&gt; c.AccountA.Transfer(1m,c.AccountB);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ItShould Have0mOnAccountA = c =&gt; c.AccountA.Balance.ShouldEqual(0m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ItShould Have2mOnAccountB = c =&gt; c.AccountB.Balance.ShouldEqual(2m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> TransferTooMuch : Scenario&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given BothAccountsHave1M = () =&gt; <span class="kwrd">new</span> Context(1m, 1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When Transfering2MFromAToB = c =&gt; c.AccountA.Transfer(2m,c.AccountB);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ItShould Have1mOnAccountA = c =&gt; c.AccountA.Balance.ShouldEqual(1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ItShould Have1mOnAccountB = c =&gt; c.AccountB.Balance.ShouldEqual(1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ItShouldFailWithError AmountToLarge = e =&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.ShouldBeOfType&amp;lt;ArgumentOutOfRangeException&amp;gt;();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> Context<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Context(<span class="kwrd">decimal</span> amounta, <span class="kwrd">decimal</span> amountb)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AccountA.Balance = amounta;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AccountB.Balance = amountb;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountA = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountB = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>&nbsp;</p>
+<p><strong>Edit : After Aaron&#8217;s remarks I replaced</strong></p>
+<p><div class="code">
+<br /> ItShouldThrowException&amp;lt;ArgumentOutOfRangeException&amp;gt; AmountToHigh;<br /> </div></p>
+<p><strong>with</strong></p>
+<p><div class="code">
+<br /> ItShouldFailWithError AmountToLarge = e =&gt; e.ShouldBeOfType&amp;lt;ArgumentOutOfRangeException&amp;gt;();<br /> </div></p>
+<p><strong>which is closer to the domain expert&#8217;s language then the developer&#8217;s.</strong></p>
+<p>Now, I do not know what You think, but in my opinion this is a lot more readable then the MSpec version.</p>
+<p>While the code currently compiles, the testing itself is not implemented yet, but this should not be such a big hurdle. The automatic catching of the exception should only happen in the &#8220;When&#8221;-phase afaik, other exceptions should ALWAYS return a fail.</p>
+<p>&nbsp;</p>
+<h3>Conclusion</h3>
+<p>In my quest for the holy grail I have met a lot of hurdles but I do think I am getting closer to my target. I hope/think that a domain expert should be able to read the code I present in the specifications; In my opinion this should be a viable DSL-like human-readable text. While the current representation still has some constraints due to it&#8217;s implementation language, most of the disturbing stuff has been left out.</p>
+<p>Up next is the implementation of the testrunner, but I will have to take a look at my schedule when I will be able to complete this, since I sometimes have to do some work that pays the bills as well ;) &#8230;</p>
+<p>If you have any suggestions or remarks please do let me know in the comment section !!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

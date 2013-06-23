@@ -1,0 +1,820 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="May 18th, 2012 Comments Y U Build Your Own Build Server for Paycento Introduction
+As you might now I started working quite recently for the startup &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/page/4/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-18T00:00:00+02:00" data-updated="true" itemprop="datePublished">May 18<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/05/18/y-u-build-your-own-build-server-for-paycento/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/05/18/y-u-build-your-own-build-server-for-paycento/" itemprop="url">Y U Build Your Own Build Server for Paycento</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction</h3>
+<p>As you might now <a href="http://www.corebvba.be/blog/post/It-is-official-on-the-second-of-May-I-will-join-the-start-up-Paycento.aspx">I started working quite recently for the startup Paycento</a>. One of the things I am currently doing is setting up a system that allows us to do continuous integration and deployment everywhere and anywhere&#8230;</p>
+<blockquote class="twitter-tweet">
+<p>@<a href="https://twitter.com/ToJans">ToJans</a> Why write &amp; maintain it if someone already solved the problem? (assuming something solves it). Spend time on competitive adv :)</p>
+&mdash; Simon Guindon (@simongui) <a href="https://twitter.com/simongui/status/203554104138670080">May 18, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>As I got into an interesting discussion with Simon Guindon on twitter about the choice between a custom tool and an existing one like <a href="http://www.cruisecontrolnet.org/" target="_blank">CruiseControl.Net</a> for example, he suggested me to write a blog post about it. So here it is&#8230;</p>
+<h3>You are suffering from the NIH (Not-Invented-Here) - syndrome!!</h3>
+<p>So what! I get paid to write code, so I should not care what I write&#8230; or not ?</p>
+<p>As a startup we have to make sure that everything we do provides business value, so why would one go to all this trouble to write his own CI/deployment system, if there are existing things available ?</p>
+<p></p>
+<p>Well, my friend, the argument is simple: as a startup, we have limited resources, and those do not include somebody who has either the time and the expertise to setup a full blown CI configuration. We tend to provide our time to features that actually provide value to the business.</p>
+<p>By setting up a rudimentary c# app that pulls code from source control, copies some external dependencies and compiles the whole thing using simple MSBuild invokes, we have setup our very own CI server in just about an hour. (Removing and realigning all the dependencies so they matched all the required conventions took me a lot more time, but that is not really the point of discussion here)&#8230;</p>
+<h3>Well, so you have now got a hard-coded build-package ? What happens if you need to change something ? You need to recompile it ??&nbsp;</h3>
+<p>That, my friend, is exactly the idea. The people who will be deploying the app, will be the ones who write the code, so why add another extra layer/language if the target audience are devs anyway ? If deployment needs to be changed, this will have to be done by a coder, as I think the best way to feel responsibility for your changes is by making you the owner&#8230;</p>
+<p>Will you be carefull when there is no extra layer of security between you and the world; would you be more motivated to add just that extra integration test on a feature you are not a 100% sure about? I am assuming you are, because when you deploy it, it is your responsibility if something goes wrong&#8230;.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f5%2fpower.jpg" alt="" /></p>
+<p>This is not a blog post about the why when and how of continuous integration/deployment, but I am assuming you get the picture here&#8230;</p>
+<h3>What do you think a coder will say when you ask him to change this code ?</h3>
+<p>
+<script src="https://gist.github.com/2727037.js?file=cruise.xml"></script>
+</p>
+<p>For the record: <a href="https://github.com/ccnet/CruiseControl.NET/blob/master/ccnet.build" target="_blank">this is the actual source from cruisecontrol.net</a>.</p>
+<h3>Here is what the deployment looks like (for now) in our Heracles tool:</h3>
+<p>
+<script src="https://gist.github.com/2727037.js?file=Program.cs"></script>
+</p>
+<p>I know which one I would pick&#8230;</p>
+<h3>Conclusion</h3>
+<p>Sometimes it is good to take an existing tool and use it, but when you consider the long-term impact and dependency on such a tool, it might be better to consider your options very carefully before indulging in the next <a href="http://en.wikipedia.org/wiki/No_Silver_Bullet" target="_blank">Silver Bullet</a>. In the end both Simon and I did agree that it is all about balance; the only thing I wanted to point out with this post is that one sometimes has to think before going down that familiar road.</p>
+<h3>P.S. 3 extra reasons</h3>
+<p>This approach also gives us the possibility that our CI can run anywhere (local/server/cloud), as long as MSBuild and .Net 4.0 are available. Heck, one might even support a *nix tool and support CI over amazon, but I am not going to spend my time right now in finding this out&#8230;&nbsp;We simply need to copy the exe and the dependencies, start it up and the rest works by itself&#8230; No need to walk through xxx install steps to setup a CI server here&#8230;</p>
+<p>Another reason is actually even more important: having your integration &amp; deployment tool and configuration under source control really gives you a FULL view of your project&#8217;s history, especially in cloud-like environments this might be a big plus.</p>
+<p>Finally, the last reason is the ease of setup for a new dev; whenever a new dev comes in, he just has to run the Heracles app, and he has all the right files in all the right places&#8230; fresh from the repository&#8230; and they build&#8230;</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-17T00:00:00+02:00" data-updated="true" itemprop="datePublished">Apr 17<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/04/17/it-is-official-on-the-second-of-may-i-will-join-the-start-up-paycento/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/04/17/it-is-official-on-the-second-of-may-i-will-join-the-start-up-paycento/" itemprop="url">It Is Official: On the Second of May I Will Join the Start-up Paycento</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Finally !!</h3>
+<p>It has been a while since I blogged about my <a href="http://www.corebvba.be/blog/post/Project-Startup10-Learning-to-build-your-own-business.aspx">project #startup10</a>, and there has been a reason for that&#8230; In the past months I have been talking quite a lot with a former colleague of mine, who co-founded a start-up, but on a whole different scale/level as <a href="http://blommekes.be/" target="_blank">my 2 utterly</a>&nbsp;<a href="http://dampen.be/" target="_blank">simple experiments</a>.</p>
+<p>After having to keep my mouth shut for over a month - which was, as for those of you who know me, quite hard -, I am finally allowed to tell the world I am joining the start-up&nbsp;<a href="http://paycento.com/" target="_blank">www.paycento.com</a>&nbsp;.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f4%2fpaycento.png" alt="" /></p>
+<h3>Paycento ? WHUT ? What&#8217;s that ?</h3>
+<p>As it has been covered by international press, I will not try to write up my own version of the story, so I will refer you to some of the online press coverage:</p>
+<ul>
+<li><a href="http://www.nytimes.com/reuters/2012/04/02/technology/02reuters-paycento-internet.html?_r=2&amp;ref=technology" target="_blank">New York Times - &#8220;Web Surfers to Pay Online Using Facebook, Twitter&#8221;</a></li>
+<li><a href="http://www.nytimes.com/reuters/2012/04/02/technology/02reuters-paycento-internet.html?_r=2&amp;ref=technology" target="_blank">Wall Street Journal - &#8220;Belgian Company Trials Facebook, Twitter-Based Payment System&#8221;</a></li>
+<li><a href="http://geeko.lesoir.be/2012/03/26/exclusif-paycento-une-startup-belge-lance-le-paiement-par-facebook/" target="_blank">Le Soir - &#8220;Exclusif : une startup belge lance le paiement par Facebook&#8221;</a></li>
+<li><a href="http://tweakers.net/nieuws/81102/belgische-start-up-laat-gebruikers-betalen-via-twitter-of-facebook.html" target="_blank">Tweakers.Net - &#8220;Belgische startup laat gebruikers betalen via Twitter of Facebook&lrm;&#8221;</a></li>
+<li><a href="https://www.google.com/search?hl=nl&amp;gl=be&amp;tbm=nws&amp;q=paycento&amp;oq=paycento" target="_blank">And so much more&#8230;</a></li>
+</ul>
+<div><br /></div>
+<div>As you can see Paycento got a lot of global coverage, and as you might notice, we received some nice and utterly positive feedback&#8230;</div>
+<div><br /></div>
+<div><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f4%2fPieterPitchingPaycento.jpg" alt="" /></div>
+<div>[Our founder pitching Paycento for <a href="http://www.ban.be/Home/1731/BanVlaanderen" target="_blank">BAN Vlaanderen</a>]</div>
+<h3><br /></h3>
+<h3>What is your role there ?</h3>
+<p>Simply put: all things software that are not front-end.&nbsp;Things will shape up as we progress, but as&nbsp;Paycento believes in the value of sharing knowledge, you can expect at least some blog posts about our experiences and findings.&nbsp;</p>
+<p>I am aware that this assignment will be a huge challenge, but I am looking forward to it.</p>
+<p>&nbsp;</p>
+<h3>What does that imply for your project #Startup10 ?</h3>
+<p>Since about a month ago project #startup10 has been put on temporary hold. I will still deliver the promised blog posts, but new startups will have to wait until a later/undetermined date. We are looking forward to sharing the Paycento experience with you !</p>
+<p>Signing off,</p>
+<p>Tom</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-19T00:00:00+01:00" data-updated="true" itemprop="datePublished">Mar 19<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/03/19/project-yakshayqrs-another-cqrs-evolution/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/03/19/project-yakshayqrs-another-cqrs-evolution/" itemprop="url">Project YakShayQRS : Another CQRS Evolution</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction</h3>
+<p>TL;DR: I managed to minimize the CQRS overhead even further.</p>
+<p>Over the years, I have been trying to minimize <a href="http://www.corebvba.be/blog/?tag=/CQRS">CQRS in several iterations</a>, even releasing a framework and a lib in doing so. Yet, I have still not been satisfied by the approach I reached. This time I once again am pretty satisfied with the way things turned out, and they actually seem to require even way less overhead&#8230;</p>
+<h3><br /></h3>
+<h3>How it works</h3>
+<p>The concept is quite simple: I use a generic message class to implement messaging. Next to this I use the virtual keyword:</p>
+<p>&nbsp;</p>
+<ul>
+<li>A class can contain virtual properties; these properties define the unique key of the instance. (f.e. an &#8220;Account&#8221; class has a &#8220;protected virtual string AccountId {get;set;}&#8221;).</li>
+<li>When invoking a message on a class type, an instance is loaded where the unique key is loaded based on the match between the message parameters and the classes&#8217; virtual properties. A message only gets invoked if it contains all the virtual properties from the class.</li>
+<li>In order to alter state, one should use a virtual method.</li>
+<li>One can only send messages targetting non-virtual methods to a class instance.</li>
+<li>Non-virtual methods should never alter state, but instead call a virtual method that alters the state&#8230;</li>
+<li>When rebuilding state based on past events, only the messages targetting the virtual methods are invoked to rebuild the state; no messages are emitted.</li>
+</ul>
+<div>The advantage: all the wiring is convention-based; and once you get it it is quite easy: altering state should only happen through virtual methods, but these virtual methods should never contain any logic and just alter state or do nothing. The intercepted call to the virtual method gets emitted and gets processed by any non-virtual methods in other classes (if the message matches the classes&#8217; key).</div>
+<div><br /></div>
+<div></div>
+<h3>Maybe an example can make it more clear</h3>
+<p>&nbsp;</p>
+<p>
+<script src="https://gist.github.com/2126696.js"></script>
+</p>
+<p>As usual, the full source can be found <a href="https://github.com/ToJans/YakShayQRS/tree/RinatMode" target="_blank">over at github</a>.</p>
+<h3>Conclusion</h3>
+<p>This is yet another evolutionary approach to CQRS, and it feels pretty neat (event though the same things applied to the previous versions. Let me know what you think !</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-29T00:00:00+01:00" data-updated="true" itemprop="datePublished">Feb 29<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/02/29/project-%23startup10-you-pay-peanuts-you-get-the-monkeys/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/02/29/project-%23startup10-you-pay-peanuts-you-get-the-monkeys/" itemprop="url">Project #Startup10: You Pay Peanuts, You Get the Monkeys</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Note: this is a post from&nbsp;<a href="http://www.corebvba.be/blog/post/Project-Startup10-Learning-to-build-your-own-business.aspx">a blog post series about starting up 10 businesses in a year</a>.</p>
+<p>&nbsp;</p>
+<h3>Introduction</h3>
+<p>I love <a href="https://appharbor.com/" target="_blank">appharbour</a>, in fact, I have 8 apps running over there at this moment. A little while ago, appharbour <a href="http://blog.appharbor.com/2012/02/02/announcing-pricing" target="_blank">announced that they now have to start making some money</a>, so that they were going to charge for custom hostnames&#8230;<br />I got a little dissapointed, since custom hostnames are an artificial limit, they do not add a lot of overhead to the system AFAIK, so why the hell would they charge for something like that??? I even was thinking about migrating my app to <a href="https://github.com/mauricemach/zappa" target="_blank">NodeJS, CoffeeScript and Zappa</a> and switching to <a href="http://www.heroku.com/" target="_blank">Heroku </a>so I could have a free hostname, I even<a href="http://notanotherone.herokuapp.com/" target="_blank"> set up a poc to check the feasibility</a>&#8230;.</p>
+<p>&nbsp;</p>
+<h3>So I would have to pay 10&euro;/month/site , and I do not have any profit yet&#8230;</h3>
+<p>And I want to build <a href="http://www.corebvba.be/blog/post/Project-Startup10-Learning-to-build-your-own-business.aspx" target="_blank">10 different sites this year</a>, so I would have to pay 100&euro;/month just for custom hostnames, that is 1.2K&euro;/year; for that price I can get a lot of hosting&#8230; So I posted them this message, and they replied that I could find other hosting for this price, but the service would be different&#8230;</p>
+<p>I could use options like<a href="http://en.wikipedia.org/wiki/URL_forwarding" target="_blank"> web forwarding</a> or <a href="http://en.wikipedia.org/wiki/Cloaking" target="_blank">cloaking</a>, but this looks highly unprofessional&#8230; Maybe there are other alternatives ???</p>
+<p>I decided to let this issue rest for a few weeks and progressed with my first two startups (<a href="http://blommekes.be/" target="_blank">blommekes.be</a> and <a href="http://dampen.be/" target="_blank">dampen.be</a>), updating them about umphteen times/day using a simple &#8220;git push apphb&#8221;&#8230; I could push fearlessly as I could just as easily revert to the previous version by the click of a mouse button&#8230; That is exactly one of the reasons I love it; they offer such a fine infrastructure&#8230; I even setup a simple staging environment by adding another apphb instance and a git remote&#8230;</p>
+<p>&nbsp;</p>
+<h3>Then I started thinking even more&#8230;</h3>
+<p></p>
+<p>After messing up 35&euro; and a lot of hours for MF*** Alertpay (which I&#8217;ll never ever use again for sure), I paid 300&euro; to activate an <a href="http://www.ogone.be/" target="_blank">Ogone</a> account. I now also pay a monthly fee of 65&euro; for their service&#8230; Next to this I pay 4% for all transactions over mastercard/amex/maestro credit cards&#8230; I ordered 100 cardboard boxes for blommekes.be at 2.36&euro; a piece&#8230; Why the hell was I making a fuss about 10&euro;/Month for a custom hostname&#8230;.</p>
+<p>&nbsp;</p>
+<h3>Here&#8217;s the thing&#8230;.</h3>
+<p>With my startups I would like to make money; the more the merrier&#8230; I assume the folks over at appharbour have the same goal. What was I making all this fuss about ? I presume I was expecting them to carry my investement on the web part, which is a bit unfair to be honest&#8230;</p>
+<p><img style="border-style: initial; border-color: initial;" src="http://www.corebvba.be/blog/image.axd?picture=2012%2f2%2fapphb.png" alt="" /></p>
+<p>Their service is great, their product is great; for me, this service has been awesome&#8230; So I decided to put my money where my mouth is, and just pay the damn hostname forwarding&#8230; After all, what is 10 &euro;/month for their service; if I can not make 10&euro;/month profit for a website, I should probably shut it down anyway&#8230; Yes, I could do hosting for a cheaper amount, but that would mean I can not use all their infrastructure, and would probably have to manage the server myself etc&#8230;</p>
+<p>As I was writing this article, I managed to fubar the <a href="http://blommekes.be" target="_blank">blommekes.be</a> instance, but <a href="https://twitter.com/#!/troethom/status/174877146613956608" target="_blank">they replied over twitter within a few minutes; great support !!</a></p>
+<h3>Conclusion</h3>
+<p>Free is great, but sometimes one has to realize that not all things can be free; everybody has to make a living, so it is quite natural people charge you for what they do&#8230;.. Sometimes one has to step back and pay for the service&#8230; If every apphb member is a freeloader, their service would probably not last long. I now happily pay the 10&euro;/month per site, and hope others will do to, so their product will stay available as their service offers great value to me&#8230;.</p>
+<p>I would like to end with a favorite quote from one of my friends:</p>
+<blockquote><em><span style="font-size: larger;">You pay peanuts, you get the monkeys !!!</span></em></blockquote>
+<p>Laters !</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-28T00:00:00+01:00" data-updated="true" itemprop="datePublished">Feb 28<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/02/28/project-%23startup10-learning-to-build-your-own-business/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/02/28/project-%23startup10-learning-to-build-your-own-business/" itemprop="url">Project #Startup10 : Learning to Build Your Own Business</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Note: this is the first post in the series &#8220;Project #Startup10&#8221; :&nbsp;a blog post series about starting up 10 businesses in a single year. Here is a list of all the relevant articles:</p>
+<ul>
+<li>Introduction (this post)</li>
+<li><a href="http://www.corebvba.be/blog/post/Project-Startup10-You-pay-peanuts-you-get-the-monkeys.aspx">You pay peanuts, you get the monkeys</a></li>
+<li><a href="http://www.corebvba.be/blog/post/Project-Startup10-Blommekesbe.aspx">#1: Blommekes.be</a>&nbsp;</li>
+<li>E-Payment and logistics</li>
+<li>#2: Dampen.be -</li>
+<li><span style="text-decoration: underline;"><span style="text-decoration: line-through;"><strong><a href="http://www.corebvba.be/blog/post/It-is-official-on-the-second-of-May-I-will-join-the-start-up-Paycento.aspx">[This project has been put on hold]</a></strong>&#8230;</span></span></li>
+<li><a href="http://www.corebvba.be/blog/post/Project-Startup10-Working-title-BIG.aspx">#3: Working title: BIG</a></li>
+<li>TBD</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Introduction</h3>
+<p>I love reading about startups, lean product development, software practices etc&#8230; After spending over a decade studying a plaethora of subjects, I decided to finally put my money where my mouth is: this year I am going to put the theory in practice, and start up 10 new (or not so new, but different) business ideas, hence the tag #Startup10.</p>
+<p>In the first post of this series I will give you a primer on my background, and also a few pointers to the things that inspire and motivate me; I hope they might inspire you too&#8230;</p>
+<h3>The&nbsp;**drumroll** &#8220;Big Idea&#8221; about a decade ago</h3>
+<p>The first thing I decided to build when I decided to quit my day job about a decade ago, was a single software product that would allow me to apply it to all kind of different problem domains, it required me to setup the database, and do little or no&nbsp;extra&nbsp;custom development. Little did I know that the software part was the least important of all&#8230;</p>
+<p>Even though I did manage to sell a few user licenses at 1.5K, <a href="http://www.corebvba.be/blog/post/Cudi-Core-universal-database-interface.aspx">the product</a> never really hit the market bigtime; here is why: I did not have a clue who my target audience was, so I had no idea how to market the product.</p>
+<p>While the product in itself was not that bad, it was obvious that it was not going to allow me to make a living out of it, so I opted for the path most ICT-people opt: &nbsp;<a href="http://www.linkedin.com/in/tomjanssens" target="_blank">freelance consultancy</a>&#8230;</p>
+<p>So one could say that this was actually my first startup attempt&#8230;.</p>
+<h3>Enter 10 years later&#8230;. Project #Startup10</h3>
+<p></p>
+<p>Over the years and multiple consultancy jobs later, my understanding evolved (even after building my first product, check <a href="http://www.corebvba.be/blog/post/CROAM-objective-analysis.aspx" target="_blank">this post from 2004</a>), and I found out that <a href="http://www.corebvba.be/blog/?tag=/BDD" target="_blank">modelling software around behavior instead of data</a> usually results in way better software.</p>
+<p>However, this fact is not as important as one would think&#8230; My biggest failure at the time, was building a product without even knowing what my target audience was and how I would market it &#8230;</p>
+<p>After 10 years of reading about startups and business, I decided to verify whether all my newly acquired knowledge made any sense, so two months ago (Januari 2012) I decided to take a few months off before getting back to consultancy, get a few startups up and running, and continuing on the next ones while doing some freelance consultancy on the side<a href="http://www.linkedin.com/in/tomjanssens" target="_blank">(I am for rent by the way)</a>&#8230;.</p>
+<p>I am now two months in, the two sites are up and fully functional, and we are ready to launch the first two onto the Belgian market (more in later posts):</p>
+<ul>
+<li><a href="http://Blommekes.be" target="_blank">http://Blommekes.be</a> : Order flowers online in a few clicks and make your mrs. happy (after you blew some of your points).</li>
+<li><a href="http://Dampen.be" target="_blank">http://Dampen.be</a> : Smoking without tar and nicotine</li>
+</ul>
+<div>I will discuss these two in detail in later posts in these series, but for now I can tell that I really hated and enjoyed setting them up. I know the description of both might sound a little bland, but I honestly think we might actually have a chance here&#8230;</div>
+<div><br /></div>
+<div>In case you want to place an order; please do. The only thing that&#8217;s on our todo list now, is marketing the sites and generating some volume, which I will blog about later on.</div>
+<div><br /></div>
+<h3>This blog post was going to mention something about inspiration and motivation ?</h3>
+<p>Actually, there are a few relevant posts that inspired me for Project #Startup10; without further ado, here are some of my favorite articles/posts:</p>
+<h4><a href="http://sethgodin.typepad.com/seths_blog/2011/12/the-difference-between-a-failure-and-a-mistake.html" target="_blank">The difference between a failure and a mistake - Seth Godin</a></h4>
+<p>This was the short blurb that actually triggered me to get started with the project #StartUp10. Seth is stating in this post that one can try and do stuff, and as long as you are learning from it the outcome is not all that important. The most important thing, is that you learn from your failure and avoid making a mistake&#8230;</p>
+<p>Failure is part of the learning process iteration: have an idea, implement the absolute minimum, measure and evolve from there&#8230; Do not be afraid of failure !!</p>
+<p>That is why I set up #Startup10: instead of putting all my money in one basket, I assume most (if not all) my startup attempts will fail, but I hope I will learn something during the process.</p>
+<h4><a href="http://ma.tt/2010/11/one-point-oh/" target="_blank"><strong>1.0 is the loneliest number - Matt Mullenweg</strong></a></h4>
+<p>This is an essay where Matt describes what it is like when you build a product; there is one absolutely fabulous quote in there that I mention to everyone:</p>
+<blockquote><em>if you&rsquo;re not embarrassed when you ship your first version you waited too long.</em></blockquote>
+<p>This makes a lot of sense, but is hard to follow; most people have big plans, but as long as you do not have paying customers your project is worthless; get money out of it ASAP. Most of my ambitious projects die of feature creep&#8230; So now I start small&#8230;</p>
+<h4><a href="http://www.andrewfashion.com/2009/12/05/how-i-made-2-5-million/" target="_blank">Young &amp; stupid: How I Made 2.5 Million - Andrew Fashion</a></h4>
+<p>Another great post, this time by someone who has been &#8220;entrepreneur&#8221;- ing ever since the 6th grade&#8230; I would like to suggest you to read the whole Young &amp; Stupid series, as they are a really interesting read&#8230; Somehow this blog post series was one of the first ones that actually convinced me great things can be achieved when you put your mind to it, but it also clarified that one should take nothing for granted, i.e. easy come = easy go&#8230;</p>
+<h4><a href="http://www.uie.com/articles/three_hund_million_button/" target="_blank">The $300 Million Button - UIE.COM - Jared M. Spool</a></h4>
+<p>This is one great article about how there might be a lot of opportunity by *really* thinking things through. By making the login process optional when ordering a basket - &#8220;I am not here to build a relationship&#8221; -, the sales increased by $3,000,000 / year.</p>
+<p>That is actually one of the reasons we started with <a href="http://Blommekes.be" target="_blank">http://Blommekes.be</a> : people are not here to browse all different kind of flowers and configure a pleathora of options, they just want to order some to make the Mrs. happy, so we made this as convenient as we possibly could: pick your flower, type the message for the attached card and the adress, and just pay; nothing more, nothing less. (We applied the same principle to <a href="http://dampen.be" target="_blank">http://dampen.be</a> as well).</p>
+<h4><a href="http://gettingreal.37signals.com/" target="_blank">Getting Real - 37 Signals</a></h4>
+<p>This is a full E-book (also availble as a paperback) that describes exactly how the lean approach might work in software. It is a great read, and it is incredible this is a free book. Read it and learn; there is a tremendous amount of value in there&#8230;</p>
+<p>&nbsp;</p>
+<h3>Conclusion</h3>
+<p>These links are only an excerpt, but they should get you started&#8230; As time progresses I might add some extra links, but for now this will have to suffice&#8230;</p>
+<p>In the next post, I will talk about how one gets ideas for a startup. Please note that the #Startup10 Project is a work in progress, so I might actually fall flat on my face and fail miserably. But hey, at least I will have these posts to fall back to, so I can avoid making mistakes&#8230;</p>
+<p>If you are active in a startup, or this article somehow inspires you, let me know in the comments.</p>
+<p>Tom</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-23T00:00:00+01:00" data-updated="true" itemprop="datePublished">Feb 23<span>rd</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/02/23/haxxors-use-sql-server-as-a-nosql-db/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/02/23/haxxors-use-sql-server-as-a-nosql-db/" itemprop="url">HAxxors: Use SQL Server as a NOSql DB</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction</h3>
+<p>I was in an environment where I only had SQL Server available, but I really wanted a key-value store, so what did I do:</p>
+<h3>Use SQL Server as a Key-Value store - Major Haxxors</h3>
+<p>In order to be a proper key-valuestore, one would need to add the ability to do searching etc, but as this was only a quick hack where I did not require the search, I did not implement it.</p>
+<p>In case I would have implemented a search, I probably would have used something like <a href="https://github.com/elasticsearch/elasticsearch" target="_blank">Elastic Search</a>.</p>
+<p></p>
+<p>
+<script src="https://gist.github.com/1892554.js?file=KeyValueStore.cs"></script>
+</p>
+<h3>Conclusion</h3>
+<p>While this approach is probably not advisable, it helped my to resolve my issue in a very short time. The biggest effort was in getting the upsert command correct. Do not hold me responsible if you use this in a production environment and it blows up on you!!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-22T00:00:00+01:00" data-updated="true" itemprop="datePublished">Feb 22<span>nd</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/02/22/presentation-cqrs-101-all-your-base-belong-to-us-on-march-6th-for-visug.be/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/02/22/presentation-cqrs-101-all-your-base-belong-to-us-on-march-6th-for-visug.be/" itemprop="url">Presentation: CQRS 101 - All Your BASE Belong to Us - on March 6th for visug.be</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I <a href="http://www.visug.be/Eventdetails/tabid/95/EventId/54/Default.aspx" target="_blank">am presenting for Visug on the 6th of march</a>; it is a session about CQRS; here is the abstract:</p>
+<hr />
+<h3>CQRS 101 - All Your BASE Belong To Us</h3>
+<p>CQRS is a relatively new approach to software development in complex, distributed and/or asynchronous problem domains.</p>
+<p>In the first part of this session, you will get a brief but pragmatic overview on the what, why and when using some examples. You will see how CQRS leverages BASE in CAP-theorem, and how this translates to the cloud. We will also touch some of the major advantages and disadvantages of this pattern, including applicability to TDD/BDD and NoSQL-like environments.</p>
+<p>In the second part we will get our hands dirty by implementing some sample domain behavior, using one of the many possible CQRS approaches. You will see how CQRS really separates business logic from infrastructure, and that infrastructure in itself is practically interchangeable. Next to this you will also see how the combination with eventsourcing allows you to completely remodel historic data without a lot of effort.</p>
+<p>Before the Q&amp;A starts we will end with a small overview of the session, together with some practical tips on how you might use this approach today.</p>
+<hr />
+<p>Unfortunately the session is sold out, but hey, if it is a success, I am confident more of them will follow&#8230;</p>
+<p>&nbsp;</p>
+<h3>Update</h3>
+<p>The presentation is over; 45 people; a great crowd and lots of interaction&#8230;.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f3%2fvisug.jpg" alt="" /></p>
+<p>While I covered quite a lot of ground, I think the biggest remark was to show more concrete examples; you can find the slides <a href="https://docs.google.com/presentation/pub?id=157NwGxUZY_PKW0H_R_jjA3zLZkYiheuQfyh60IU0PrE&amp;start=false&amp;loop=false&amp;delayms=3000" target="_blank">here</a></p>
+<p>I <a href="https://github.com/ToJans/CQRS-101-code" target="_blank">published the (cleaned up and bugfixed) example sourcecode on github</a>.</p>
+<p>Feedback/tips/Remarks ? Please let me know your opinions in the comments, so I can improve it!</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-18T00:00:00+01:00" data-updated="true" itemprop="datePublished">Jan 18<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/01/18/the-seven-habits-of-possibly-spectacularly-successful-executives/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/01/18/the-seven-habits-of-possibly-spectacularly-successful-executives/" itemprop="url">The Seven Habits of Possibly Spectacularly Successful Executives</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p><img src="http://farm5.staticflickr.com/4115/4823995521_8173b42c81.jpg" alt="Executives at work" /></p>
+<h3>Introduction</h3>
+<p>Over at a <a href="http://www.linkedin.com/groups?about=&amp;gid=95341" target="_blank">private LinkedIn newsgroup for ENTP personality types</a>, somebody posted a link to <a href="http://www.forbes.com/sites/ericjackson/2012/01/02/the-seven-habits-of-spectacularly-unsuccessful-executives/" target="_blank">&#8220;The Seven Habits of Spectacularly unsuccessful Executives&#8221;</a>. This is a great article, but not a lot of help IMO, instead of telling what not to do, one might be reversing the reasoning, and try to figure out what to do.</p>
+<p>I posted this blurb in a comment on the newsgroup, and I figured I might as well post it on the blog as well&#8230;</p>
+<p>Here we go:</p>
+<p>&nbsp;</p>
+<h3>The Seven Habits of Possibly Spectacularly Successful Executives</h3>
+<p></p>
+<p>&nbsp;</p>
+<p>#1: Look and interpret the market, you do not control the market, but have to follow it and adapt.&nbsp;</p>
+<p>#2: The project is not an extension of yourself; take some distance and try to be objective. Do not spam your personal peers&#8230;</p>
+<p>#3: Learn all the time: observe, measure, adjust &amp; iterate&nbsp;</p>
+<p>#4: Positive reviews are great, but it&#8217;s the negative reviews that enable you to become better&nbsp;</p>
+<p>#5: Image is important, but your business is even more important; do not spend all your time on PR, but ship instead&nbsp;</p>
+<p>#6: Admit it when you are wrong&nbsp;</p>
+<p>#7: What worked in the past might not work in the future&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Conclusion</h3>
+<p>Looking back at these rules it is obvious:<a href="http://en.wikipedia.org/wiki/Marketing_mix" target="_blank"> the four marketing P&#8217;s (Product, Price, Placement, Promotion)</a> have to iterate a lot faster. A product is no longer in a solid state, but in a coninuous process of improvement.</p>
+<p>To some of you who know <a href="http://en.wikipedia.org/wiki/Lean_Startup" target="_blank">the lean startup approach</a> these habits might sound obvious, but for others it might sound new: the idea is to market your product as soon as possible (even sometimes before you have an actual product), measure the customer&#8217;s reaction, re-evaluate and iterate&#8230; The iteration process has to be very short and agile, so you work in small incremental steps (opposed to the usual <a href="http://en.wikipedia.org/wiki/Big_Design_Up_Front" target="_blank">BDUF </a>approach)</p>
+<p>I think this might be one of the biggest paradigm shifts of the century: the speed by which a product evolves&#8230;</p>
+<p>If you are interested in the lean approach, I might suggest you to subscribe for the free online course <a href="http://www.launchpad-class.org/" target="_blank">&#8220;The Lean Launchpad&#8221;</a>&nbsp;that starts in februari over at Stanford University, I know I did.</p>
+<p>&nbsp;</p>
+<p>Signing off,</p>
+<p>&nbsp;</p>
+<p>Tom</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-15T00:00:00+01:00" data-updated="true" itemprop="datePublished">Jan 15<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/01/15/cqrs-for-the-lazy-ss/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/01/15/cqrs-for-the-lazy-ss/" itemprop="url">CQRS for the Lazy -ss</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h2>Introduction</h2>
+<p>In one of my numerous attempts to create a neat approach to CQRS, this is yet another attempt to remove all the protocol that CQRS requires. I love bootstrapping new projects and experimenting with new approaches, and this is another step that improves efficiency. It is a natural evolution to one of my other CQRS playgrounds: <a href="https://github.com/ToJans/Scritchy" target="_blank">Scritchy</a>.</p>
+<p>The conventional CQRS approach requires you to write&nbsp;command - and event classes, to wire up your commands and event handlers to the relevant AR&#8217;s, saga&#8217;s and viewmodel builders.<br />I removed some of the clutter in that process with Scritchy. <a href="https://github.com/ToJans/Scritchy/wiki/auto-wiring" target="_blank">Scritchy uses conventions to wire up the commands and events to the relevant components</a>. This makes CQRS a lot less verbose while still offers the same advantages.</p>
+<h2>Scritchy v2 ?</h2>
+<p>While this is a good attempt, it still requires you to write the dreaded event - and command classes.<a href="http://www.linkedin.com/profile/view?id=2995972&amp;trk=tab_pro#recommendations" target="_blank"> Having pushed some best practices/usages/libs to some enterprise teams in the past</a>, I noticed the following: any change that adds extra steps/work to the process makes acceptance harder by devs, as most people are usually trapped in a certain approach, and they do not see an advantage in having to write more code to do the same thing. If they do not need to write all the &#8220;protocol&#8221;/extra classes, you have removed yet another step that might slow down acceptance of the practice.</p>
+<p>&nbsp;</p>
+<p>The new approach I am about to tell you about in this blog post completely hides the messages from the dev, i.e. the dev can just use a conventional method call, and messages are created underneath.</p>
+<p>&nbsp;</p>
+<h2>Disclaimer</h2>
+<p>This is a possible approach to the problem, but I tend to think that the majority of the CQRS evangelists and practitioners value explicitness over pragmatism. I love the explicitness and clarity of their examples and implementations, but in the real world most people start to think: &#8220;Wow, that is a lot of code to simply add an item to the stock; are they nuts ?&#8221;.</p>
+<p>Having experienced the fallacy of the explicitness in a startup attempt, my brain got tickled to find fast and neat approaches to a pretty established conventional path. I think this one is pretty close.</p>
+<p>The full source is available over at <a href="https://github.com/ToJans/MinimalisticCQRS">GitHub</a>, and the demo app can be seen/tested<a href="http://minimalisticcqrs.apphb.com/"> over at appharbor</a>.</p>
+<h2>Example</h2>
+<p>So without further ado, here I will show you ALL THE CODE required to implement a complete CQRS app:</p>
+<p></p>
+<h3>The domain: Bank account</h3>
+<p>Let us first start with some sequence diagrams to introduce you to the problem domain:</p>
+<p><img style="width: 322px; height: 213px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBSZWdpc3RlciBhbiBhY2NvdW50CmVuZCBub3RlCkdVSS0-QQAQBlVuaXF1ZW5lc3NWYWxpZGF0b3I6ADUIABwHID8KAF4Fb3ZlciAAHRoKIAAVCE51bWJlciB1AFYFID8AcAkgCm9wdCAAbAYKICAAeww6AIEpCQCBEQcKICBvcHQgQWxsb3dlZAogIABVCS0AKgsAgT4HAIFmCAAkBWVuZAplbmQKCg&amp;s=earth" alt="" /></p>
+<p><img style="width: 172px; height: 152px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBEZXBvc2l0IHNvbWUgY2FzaAplbmQgbm90ZQpHVUktPkFjY291bnQ6ACEIQ2FzaApvcHQgQWxsb3dlZAogIAAcBy0AIgtBbW91bnQAVQdlZAplbmQKCg&amp;s=earth" alt="" /></p>
+<p><img style="width: 180px; height: 152px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBXaXRoZHJhdyBzb21lIGNhc2gKZW5kIG5vdGUKR1VJLT5BY2NvdW50OgAhCUNhc2gKb3B0IEFsbG93ZWQKICAAHQctACMLQW1vdW50AFYIbgplbmQKCg&amp;s=earth" alt="" /></p>
+<p><img style="width: 437px; height: 324px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBUcmFuc2ZlciBhbiBhbW91bnQgZnJvbSBBIHRvIEIKZW5kIG5vdGUKR1VJLT5BY2MAHQVBOgAvCEEALgUKb3B0IFZhbGlkIGZvciBzb3VyY2UKICAAJwktADAMIAAvBldpdGhkcmF3bgATFgCBEQhTYWdhOgCBHglQcm9jZXNzZWRPblMAVw8AJQwAgSEKQjogAC0HAIFiCE9uVGFyZ2V0CiAgAIEpDnQADwgAgS8KQgCBLgtCAIExCERlcG9zaXRlZAAaEUdVSQCBIQpDb21wbGUAIQZlbHNlAIJhCmludgBmDyAAXhgAgXAWRmFpbGVkAIE-CwCBZh9BOiBDYW5jZWwAg2YIAIFYDQCDCRUAgU8WQQCBVBEAUgUAgV4GbmQKZW5kCg&amp;s=earth" alt="" /></p>
+<h3>Domain:Account</h3>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Domain%5CAccount.cs"></script>
+</p>
+<p>Nothing spectacular here; yes, I do realize it is a boring sample, but we need a well-known domain to explain it IMO; suggestions for an alternative domain are welcome!</p>
+<h3>Domain:AccountTransferSaga</h3>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Domain%5CAccountTransferSaga.cs"></script>
+</p>
+<p>Orchestrates the transfer between 2 accounts</p>
+<h3>Domain:AccountUniquenessSaga</h3>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Domain%5CAccountUniquenessSaga.cs"></script>
+</p>
+<p>Verifies uniqueness of the account; I do realize on rare cases there might be an error here (when using async processing one might have eventual consistency), but I consider the effort in fixing the error by hand less then the cost to implement it on the domain.</p>
+<p>The code above is all that is needed for the domain, i.e. no events or commands etc&#8230; isn&#8217;t that neat ?</p>
+<h3>Hubs</h3>
+<p>In order to show you what else is needed, I added all the server-side code as well, so you have an idea how much code you need to implement a complete app</p>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Hubs%5CCommandHub.cs"></script>
+<script src="https://gist.github.com/1615489.js?file=Hubs%5CQueryHub.cs"></script>
+</p>
+<h2>Conclusion</h2>
+<p>This is an approach to CQRS that removes the need to write message classes; it uses a combination of serializing method invocation on a dynamic together with conventions to build a system where messages are completely hidden from the user. Talk about removing infrastructure from the code!&nbsp;</p>
+<p>I assume there will be a lot of opponents to this approach, as this gives room for typos etc. However, I do believe that this approach combined with TDD/BDD could be for CQRS what rails was for MVC : a pragmatic approach that allows you to just write code at blistering speed without a lot of added protocol.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-27T00:00:00+01:00" data-updated="true" itemprop="datePublished">Dec 27<span>th</span>, 2011</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2011/12/27/2010-2011-a-retrospective/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2011/12/27/2010-2011-a-retrospective/" itemprop="url">2010 - 2011: A Retrospective</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3><img style="border-style: initial; border-color: initial; font-size: 10px; font-weight: normal;" src="http://www.corebvba.be/blog/image.axd?picture=2011%2f12%2fmatisse.jpg" alt="" /></h3>
+<p style="text-align: left;"><strong><em>One of my main motivators, my youngest son Matisse #PrideAndJoy</em></strong></p>
+<h3><br /></h3>
+<h3>Introduction</h3>
+<p>I like the concept of retrospectives; it makes you self-reflect and think about the paths you followed and want to follow in the future. As it<a href="http://www.corebvba.be/blog/post/2009-an-aspnet-mvc-developers-retrospective.aspx"> has been 2 years ago since my latest retrospective</a>, I think doing a post on it right now might be a good idea.</p>
+<p></p>
+<h3>The initial plan in 2010, a.k.a. &#8220;Man I feel stupid now&#8221; - a few smells</h3>
+<p>As you might have read<a href="http://www.corebvba.be/blog/post/2009-an-aspnet-mvc-developers-retrospective.aspx"> in the previous retrospective</a>, in 2010 I started working for a startup which had quite some customers and a lot of work. I got involved in the startup and was promised that within a few months/up to a year I would acquire part of the company, based on the condition that I would take a paycut in the beginning. As this was a person I worked with in the past, I decided to do it; based on the promise of big bucks I accepted the offer of working for a fixed price for about half of my usual rate. That was the first smell.</p>
+<p>After a few months I started doing more and more hours, until eventually I probably worked at about one third of my usual hourly rate. When I mentioned this, he convinced me to get started on a side-project which would offer me some recurrent income in the mean time.&nbsp;So I started investing some time in this side-product as well; I built it in about 40 mandays, and it was ready to launch. Every single time I suggested to launch it, there was an excuse not to launch it due to some other priority. That was the second smell.</p>
+<p>Since I was not working fulltime for them, he also provided me a lead to a neat sideproject for a client, which was a lot of fun, even though it was rather small (3K-ish). I agreed to pay a commission to him on the projects he provided me.&nbsp;At the&nbsp;same time I provided him a project (in fact it was a sell because the client based his trust on the fact that I worked with them), which he failed to deliver in time, and even then he billed them more then initially planned (10K+). My contact was not amused.</p>
+<p>When he asked for the commission on the project I did for him, I suggested him to take in to account the lead I provided him. His reply was: let us just drop both the commissions alltogether. Smell number three.</p>
+<p>Finally smell number four. One of the shareholders was doing the payments. In fact, this was someone who I did not trust from the beginning, and unfortunately I was right. It happened twice that he simply refused to pay my work from two months ago based on the fact that they wanted yet another feature implemented in an impossible timeframe. As I was working at about one third of my usual rate I really needed the money. I was not amused, and the second time I just refused to do any further work until they paid it. As he refused to pay, this was a blocking issue.</p>
+<p>My initial contact finally offered me to settle, if I dropped 3.5K, otherwise we would have to go to court. Since I had been to court before, and had to wait for 2 years for my money, and invest a couple of K to pay the laywer etc, I decided to cut my losses and take the offer.</p>
+<p>There were some other issues here as well (f.e. a side project where they requested some things to be configurable, but they forgot to add that the project was intended to be multi-tennant and configurable &#8220;by the client&#8221;, and demanded I provided those features for the same budget).</p>
+<p><img style="border-style: initial; border-color: initial;" src="http://www.corebvba.be/blog/image.axd?picture=2011%2f12%2fquinten_.jpg" alt="" /></p>
+<p><strong style="text-align: left;"><em>Another one of my main motivators, m</em></strong><strong><em>y oldest son, Quinten&nbsp;</em></strong><strong style="text-align: left;"><em>#PrideAndJoy</em></strong></p>
+<p><strong><em><br /></em></strong></p>
+<h3>Lessons learned</h3>
+<p>In hindsight, I learned a really important lesson: either a startup is partly yours and you are willing to invest a lot of time, since you will harvest what you invest, or it is not yours, and you simply bill your usual hourly/daily/monthly rate, no exceptions.</p>
+<p>Another lesson is that I need to learn to listen to external signals; several people from my neighbourhood warned me about cooperating with that person, from different sources, so I should have at least been a bit more cautious.</p>
+<p>The next lesson is: do not ignore your intuition: I did not trust one of the shareholders from the beginning. My intuition proved to be correct, as he was always trying to blame others when he made a mistake (I prefer to look for a way to avoid the mistakes instead of looking for someone to blame, but that might be the subject of another blog post). As he was the one who refused to pay, I should have followed my intuition from the beginning.</p>
+<p>Finally, the last lesson on this part: never, ever believe anyone who promises you lots of things but fails to offer hard cash or a contract within a reasonable timeframe. I asked for a contract from the beginning but never received one. Now I know why.</p>
+<p>&nbsp;</p>
+<h3>It is not all bad</h3>
+<p>As there were some other people there working for his other company, it was a joy to talk and chat with these fun collegues. I appreciated the time I spent with them, and we had some fun times and discussions non-work related as well. It is always a joy to expand your personal network.</p>
+<p>Working part-time offered me the opportunity to invest quite a lot of time in studying <a href="http://www.dddcqrs.com" target="_blank">new concepts</a> and <a href="http://www.nancyfx.org" target="_blank">OSS</a> <a href="https://github.com/markrendle/Simple.Data#readme" target="_blank">software</a>, writing some blog posts and building my <a href="https://twitter.com/#!/ToJans" target="_blank">internet </a><a href="http://www.linkedin.com/in/tomjanssens" target="_blank">presence</a>, <a href="https://github.com/ToJans" target="_blank">publishing some new stuff on github</a>, paticipating in <a href="https://groups.google.com/forum/#!forum/dddcqrs" target="_blank">newsgroups</a> quite a lot, and learning to know <a href="https://twitter.com/#!/following" target="_blank">quite a few interesting persons</a>, both in real life as online.</p>
+<p>In fact, the person I work for right now got connected to me via my internet presence as he lives in the USA. My contact is quite a brittle mind with a pragmatic and lean approach, &nbsp;and I am both delighted and gratefull to work with somebody like him. Once again, we are working without a contract, but as we are working with weekly payments the risk is practically diminished to a few K, which is acceptable to me.</p>
+<p>I also got quite a few other leads out of my internet presence, some materialized, others did not. I am currently just starting to grasp the incredible power of online presence and image building, but it seems to me like there is a whole new ballpark out there.</p>
+<p><img style="border-style: initial; border-color: initial;" src="http://www.corebvba.be/blog/image.axd?picture=2011%2f12%2fkamp.jpg" alt="" /></p>
+<p><strong><em>My sons and me exploring some &#8220;architectural techniques&#8221; on the beach ;)</em></strong></p>
+<p>&nbsp;</p>
+<h3>On the technical part</h3>
+<p>This has been a real (r)evolution: in my previous retrospective, you could see that my focus was on software architecture, where <a href="http://www.corebvba.be/blog/post/Building-an-MVVM-framework-for-both-Net-and-Net-CF.aspx">I would favor a layered approach</a>. My understanding now has evolved quite a bit, and more recently my client has been pointing me out that I sometimes overarchitect things to much. In hindsight, I have to say that this is true.</p>
+<p>I now<a href="http://www.corebvba.be/blog/post/Essay-the-duality-of-knowledge.aspx"> try to focus more on business value</a> and make sure to get the highest efficiency possible.</p>
+<p>Past year I also invested quite some time on the whole startup thingy, and <a href="http://www.corebvba.be/blog/post/Essay-the-duality-of-knowledge.aspx">got my fingers wet in shipping asap/building a minimum viable product as well</a>, without complicating things to much. While I feel I am just beginning to explore this aspect, this is offering me a lot of insights already, you grasp the biggest <a href="http://ma.tt/2010/11/one-point-oh/" target="_blank">insights </a>in the beginning, but mastering the details will take me quite a lot of time&#8230;</p>
+<p>Here are a few blurbs that have been keeping my busy the last two years:</p>
+<ul>
+<li>Strategic ICT/ <a href="http://www.corebvba.be/blog/post/Continuous-thinking-The-future-of-software.aspx" target="_blank">the future of ICT</a> / the business of ICT</li>
+<li>Lean approach to management/product development</li>
+<li>Tech startups</li>
+<li><a href="http://www.corebvba.be/blog/post/Continuous-thinking-How-your-MBTI-type-can-help-you.aspx">MBTI personality type</a> (I am an ENTP by the way)</li>
+<li><a href="http://www.corebvba.be/blog/post/Continuous-thinking-Essential-business-books-shortlist-3-business-books-everyone-should-have-read.aspx">NLP</a></li>
+<li>Meta-cognition</li>
+<li><a href="http://www.corebvba.be/blog/post/Continuous-thinking-Essay-The-secret-sauce-of-great-leadership-IMO-B)-.aspx">Group dynamics</a></li>
+<li><a href="http://www.corebvba.be/blog/?tag=/CQRS">CQRS</a></li>
+<li><a href="http://www.corebvba.be/blog/?tag=/bdd">BDD</a></li>
+<li>Micro-frameworks (<a href="https://github.com/markrendle/Simple.Data" target="_blank"> Simple.Data</a> and <a href="http://nancyfx.org/" target="_blank">NancyFx</a>&nbsp;for example)</li>
+<li>Personal branding</li>
+</ul>
+<div><br /></div>
+<h3>Just do it - What&#8217;s up next ?</h3>
+<p>Getting deeper on the psychological path, studying my personality type helped me to focus on my core competences. I learned that I am at my best in new, unexplored hostile environments, and that I need to be more persistent when doing not-so-challenging things. Due to my personality type, I tend to lose interest when things start to get familiar and easy or boring, so I usually run away from situations where others spend there whole life searching for something similar. By accepting this fact, I can now work on self-improvement on this part.</p>
+<p>This insight also provided me with another conclusion: maybe software architecture is only a side track, and maybe I should focus more on other things.</p>
+<p>In the past, I was at my best when the environment I worked in was extremely hostile and/or unknown. I was at my best/got the most compliments when I got into an environment where there were unfixable things that needed to be fixed, especially with people conflicts. Due to my personality type, the words &#8220;hard&#8221; or &#8220;impossible&#8221; actually motivate me to do it. In case you have problems you consider impossible to solve, I am your man!</p>
+<p>&nbsp;</p>
+<h3>On a personal level</h3>
+<p>Our 2 sons grew older. This is both a challenge and a joy. I think the best graph explaining parenting was<a href="http://www.codinghorror.com/blog/2011/10/on-parenthood.html"> the one by CodingHorror/Jeff Atwood I read here</a>:</p>
+<p><img src="http://www.codinghorror.com/.a/6a0120a85dcdae970b0153928b12db970b-800wi" alt="" /></p>
+<p>My oldest son joined a soccer team, which provided us with a whole new group of friends and we sure had a lot of fun in the past year. Once again change is improving our life.</p>
+<p>Next to this we finally completed the structural part of the renovation to our house. The only thing to do now is replacing the front door, some windows and then we are in the finishing stage. We spent about five years making our house a home, but we made it. Most people who have seen it from the beginning find it hard to believe it is the same house. Once again a vision and persistence seem to be of utmost importance.</p>
+<p>Finally a word for my wonderfull wife: after all those years she still seizes to amaze me, and I love the fact that she now found a job where she can fully develop her self and her work is being both respected and appreciated in every way possible.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2011%2f12%2fliesbeth.jpg" alt="" /></p>
+<p><strong><em>My one and only, Liesbeth, 10 years ago when we were getting married</em></strong></p>
+<p>Unfortunately I did not get my saxophone this year, but luckily my guitar playing has improved a little bit due to rehearsing once every week together with two other musicians, where one of them was a former professional musician. We even accompanied a choir with some guitar/banjo/piano and raised a few K for a fund used to cure child cancer doing this. #Win&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Conclusion</h3>
+<p>Another two years have passed, and once again they were pretty turbulent, but hey, that is the way I like it. In retrospect, I have done quite a few stupid things, but I learned some valuable lessons from it. Next to this, as I am aging, I notice my focus has changed a bit, and that the essence can be found in the smaller everyday things of life. I am gratefull that we are all in good health, have fun with family, friends and acquintances, and that our life is slowly starting to take shape&#8230;</p>
+<p>In fact, looking back at all this stuff, I do not think I could wish for a better life at this moment (Oh boy, I did not intend to get this mellow, I assume it is due to the fact that I am getting older ;) ).</p>
+<p>Best wishes to all of you!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+</div>
+<nav id="pagenavi">
+    
+        <a href="/blog/page/3/" class="prev">Prev</a>
+    
+    
+        <a href="/blog/page/5/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>A new BDD framework in .Net : Aubergine - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="A New BDD Framework in .Net : Aubergine REMARK : An executable testrunner and some sample code is available
+Here : http://www.corebvba.be/blog/post/ &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2009/11/04/a-new-bdd-framework-in-.net-aubergine/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">A New BDD Framework in .Net : Aubergine</h1>
+	<div class="entry-content" itemprop="articleBody"><h3>REMARK : An executable testrunner and some sample code is available</h3>
+<p>Here : <a href="http://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx">http://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx</a></p>
+<h3>REMARK : Skip to &#8220;Edit 2&#8221; to see the current syntax</h3>
+<p>&nbsp;</p>
+<p>Just a quick update !!</p>
+<p>After thinking a bit more about the problems mentioned by Aaron <a href="http://www.corebvba.be/blog/post/A-new-BDD-framework-in-Net-NetSpec.aspx">in my previous post</a>, and taking a look at <a href="http://cukes.info/" target="_blank">Cucumber (in ruby)</a>, I decided to give it another go. Since I have to be in the shop within<span style="text-decoration: line-through;"> half an hour</span> 20 mins I can only give you a sample of what the current spec looks like; explanations will come in later posts..</p>
+<p>I&#8217;m also considering a rename, since <a href="http://gitorious.org/netspec" target="_blank">netspec already seems to exist</a> as a .Net spec platform&#8230; Since Cucumber was my inspiration, I&#8217;m currently thinking about <a href="http://simple.wikipedia.org/wiki/Aubergine" target="_blank">Aubergine/Eggplant</a>. Suggestions are welcome</p>
+<p>I&#8217;m not really fond of the implementation yet, but I&#8217;ll have to think about that a little bit more&#8230; As you might notice there has been a slight shift towards the Cucumber method of doing things.</p>
+<p>Here we go :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> TransferFundsBetweenAccounts : Story<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AsAn AccountUser;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IWant ToTransferMoneyBetweenAccounts;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SoThat ICanHaveRealUseForMyMoney;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer1MBetweenTwoAccounts : Scenario&amp;lt;Context&amp;gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountAHas1M;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountBHas1M;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When Transfering1MFromAccountAToAccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then ShouldHave0MOnAccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then ShouldHave2MOnAccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> TransferTooMuch : Scenario&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountAHas1M;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountBHas1M;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When Transfering3MFromAccountAToAccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then ShouldHave1MOnAccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then ShouldHave1MOnAccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then ShouldFailWithError;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Context<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountA = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountB = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Contextimpl : ContextImplementation&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">bool</span> Get(<span class="kwrd">string</span> name,Context ctx)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implement(<span class="str">@&#8221;(Account[AB])Has(\d+)M&#8221;</span>, (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.ByName&amp;lt;Account&amp;gt;(0,c).Balance = e.Get&amp;lt;<span class="kwrd">int</span>&amp;gt;(1) * 1m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }).Run(name, ctx) &amp;&amp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implement(<span class="str">@&#8221;ShouldHave(\d+)MOn(Account[AB])&#8221;</span>, (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.ByName&amp;lt;Account&amp;gt;(1,c).Balance.ShouldEqual(e.Get&amp;lt;<span class="kwrd">int</span>&amp;gt;(0) * 1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }).Run(name, ctx) &amp;&amp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implement(<span class="str">@&#8221;Transfering(\d+)MFrom(Account[AB])To(Account[AB])&#8221;</span>, (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.ByName&amp;lt;Account&amp;gt;(1,c).Transfer(e.Get&amp;lt;<span class="kwrd">decimal</span>&amp;gt;(0) * 1m, e.ByName&amp;lt;Account&amp;gt;(2,c));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }).Run(name, ctx);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>As you might notice the biggest advantage is that multiple test scenarios can now be implemented since we have created some kind of a context-specific DSL&#8230; I&#8217;m not very fond of the way you Specify the DSL however; I&#8217;ll probably need to rethink it.</p>
+<p>As always I&#8217;ll keep you posted on any progress I make.</p>
+<p>&nbsp;</p>
+<h3>Edit</h3>
+<p>After having dinner and thinking a bit about this, i got another eureka moment; this is what the code now looks like (Yes Aaron, you were also right about the box_case/PascalCase thingy ;-) ):</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_money_between_accounts : Story<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As_a user;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I_want to_transfer_money_between_accounts;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So_that I_can_have_real_use_for_my_money;<br /><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given&amp;lt;Context&amp;gt; AccountA_has_1m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given&amp;lt;Context&amp;gt; AccountB_has_1m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_1m_between_2_accounts : Scenario&amp;lt;Context&amp;gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_1m_from_AccountA_to_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_0m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_2m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_too_much : Scenario&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_2m_from_AccountA_to_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_1m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_1m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_fail_with_error;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Not_authorized_for_transfer : Scenario&amp;lt;Context&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_1m_from_AccountB_to_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_1m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_1m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_fail_with_error;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Context<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountA = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountB = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Dsl_for&amp;lt;Context&amp;gt; Dsl_for_Context = <span class="kwrd">new</span> Dsl_for&amp;lt;Context&amp;gt;();<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Transfer_money_between_accounts() <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dsl_for_Context[<span class="str">@&#8221;(Account[AB])_has_(\d+)m&#8221;</span>] = (c, e) =&amp;gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.Get&amp;lt;Account&amp;gt;(e[0]).Balance = e[1].As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;() * 1m;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dsl_for_Context[<span class="str">@&#8221;should_have_(\d+)m_on_(Account[AB])&#8221;</span>] = (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.Get&amp;lt;Account&amp;gt;(e[1]).Balance.ShouldEqual(e[0].As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;() * 1m);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dsl_for_Context[<span class="str">@&#8221;transfering_(\d+)m_from_(Account[AB])_to_(Account[AB])&#8221;</span>] = (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.Get&amp;lt;Account&amp;gt;(e[1]).Transfer(e[0].As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;() * 1m, c.Get&amp;lt;Account&amp;gt;(e[2]));<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dsl_for_Context[<span class="str">@&#8221;the_current_user_is_authenticated_for_(Account[AB])&#8221;</span>] = (c, e) =&amp;gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.Get&amp;lt;Account&amp;gt;(e[0]).IsAuthenticated = <span class="kwrd">true</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>I have extended the story a bit in order to show that you can use story-wide givens as well.<br />Please do note that one can still assign the delegates as in MSpec, i.e. adding your code inline to the scenarios.<br />The DSL definition syntax looks a bit quirky, but it works like this :</p>
+<ul>
+<li>&#8220;c&#8221; is an instance of the contextobject</li>
+<li>&#8220;e&#8221; is an array of strings containing the regex matched subgroups <br />An example : &#8220;e[1]&#8221; would return &#8220;AccountA&#8221; or &#8220;AccountB&#8221; in the case of &#8220;should_have_(\d+)m_on_(Account[AB])&#8221; </li>
+<li>&#8220;c.Get&amp;lt;Account&amp;gt;(e[1])&#8221; gets the field- or propertyvalue from the context object &#8220;c&#8221; with the name found in e[1] and casts it to an &#8220;Account&#8221;</li>
+</ul>
+<p>Also note that this is starting to look a lot like cucumber (which is a good thing, i think).</p>
+<p>Again, another step closer to our destination and still going&#8230; Any reflections on this representation are welcome !!</p>
+<h3>Edit 2</h3>
+<p>Again, I have taken it a step further; I must say it is looking pretty acceptable now. The spec class is now separated from the contextclass, and the dsl is implemented in the contextclass.</p>
+<p>First we have the Story in itself:</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_money_between_accounts : Story&amp;lt;AccountContext&amp;gt;<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As_a user;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I_want to_transfer_money_between_accounts;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So_that I_can_have_real_use_for_my_money;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountA_has_3_m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountB_has_2_m;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Cols(<span class="str">&#8220;xx&#8221;</span>,<span class="str">&#8220;yy&#8221;</span>,<span class="str">&#8220;zz&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(0, 3, 2)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(1, 2, 3)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(2, 1, 4)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(3, 0, 5)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_xx_m_between_2_accounts : Scenario<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_xx_m_from_AccountA_to_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_yy_m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_zz_m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_too_much : Scenario<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_4_m_from_AccountA_to_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_3_m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_2_m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_fail_with_error;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Not_authorized_for_transfer : Scenario<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_1_m_from_AccountB_to_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_2_m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_have_3_m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then should_fail_with_error;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>Which is perfectly understandable and should be maintainable by a domain expert.</p>
+<p>Next we have the DSL/Context implementation which looks like this (Thank you cucumber) :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> AccountContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountA = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountB = <span class="kwrd">new</span> Account();<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;(Account[AB])_has_(\d+)_m&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> accountX_has_Ym(<span class="kwrd">string</span> x, <span class="kwrd">string</span> y)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.Get&amp;lt;Account&amp;gt;(x).Balance = y.As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;()*1m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;should_have_(\d+)_m_on_(Account[AB])&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> should_have_Xm_on_AccountY(<span class="kwrd">string</span> x, <span class="kwrd">string</span> y)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.Get&amp;lt;Account&amp;gt;(y).Balance.ShouldEqual(x.As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;() * 1m);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;transfering_(\d+)_m_from_(Account[AB])_to_(Account[AB])&#8221;</span>)] <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> transfering_xm_from_a_to_b(<span class="kwrd">string</span> x,<span class="kwrd">string</span> a,<span class="kwrd">string</span> b)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.Get&amp;lt;Account&amp;gt;(a).Transfer(x.As&amp;lt;<span class="kwrd">decimal</span>&amp;gt;() * 1m, <span class="kwrd">this</span>.Get&amp;lt;Account&amp;gt;(b));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;the_current_user_is_authenticated_for_(Account[AB])&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> authenticate_for_account_x(<span class="kwrd">string</span> x)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.Get&amp;lt;Account&amp;gt;(x).IsAuthenticated = <span class="kwrd">true</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> should_fail_with_error()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //TODO<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>I think that with this approach we might be getting close to the best possible BDD syntax in .Net. <br />We have the story for the domain expert, and the implementation of the context class can be left to the programmer.<br /><br />Please let me know what you think.</p>
+<h3><br /></h3>
+<h3>Edit #3</h3>
+<p>I also added support for Example/Tables so that one can test the same scenario with different values.</p>
+<h3><br /></h3>
+<h3>Edit #4</h3>
+<p>It just occured to me: another advantage of the Example extension is that one can include special characters in the test_data. An example :</p>
+<p>&nbsp;</p>
+<p><div class="code">
+<br /><span class="kwrd">class</span> Make_sure_my_website_gets_enough_visibility: Story&amp;lt;BrowserContext&amp;gt<br />{<br />&nbsp;&nbsp;&nbsp; As_a website_owner;<br />&nbsp;&nbsp;&nbsp; I_want to_make_sure_that_I_get_enough_visibility;<br />&nbsp;&nbsp;&nbsp; So_that I_can_get_enough_traffic;<br /><br />&nbsp;&nbsp;&nbsp; [Cols(<span class="str">&#8220;searchengine&#8221;</span>,<span class="str">&#8220;search_url&#8221;</span>,<span class="str">&#8220;keywords&#8221;</span>,<span class="str">&#8220;my_url&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">&#8220;google&#8221;</span>,<span class="str">&#8220;http://www.google.be/search?q=&#8221;</span>,<span class="str">&#8220;core bvba tom janssens&#8221;</span>,<span class="str">&#8220;www.corebvba.be&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">&#8220;google&#8221;</span>,<span class="str">&#8220;http://www.google.be/search?q=&#8221;</span>,<span class="str">&#8220;BDD .Net&#8221;</span>,<span class="str">&#8220;www.corebvba.be&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">&#8220;bing&#8221;</span>,<span class="str">&#8220;http://www.bing.com/search?q=&#8221;</span>,<span class="str">&#8220;core bvba tom janssens&#8221;</span>,<span class="str">&#8220;www.corebvba.be&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Search_results_for_keywords_on_searchengine_should_contain_my_url : Scenario<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Given current_url_is_search_url;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; When searching_for_keywords;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Then result_should_contain_my_url;<br />&nbsp;&nbsp;&nbsp; }<br />}<br /></div></p>
+<p>&nbsp;</p>
+<p>Which makes your testing scenarios even better. After running these tests you should get an output like this :</p>
+<pre><br />Make sure my website gets enough visibility =&gt; NOK<br />&nbsp;&nbsp; As a website owner<br />&nbsp;&nbsp; I want to make sure that I get enough visibility<br />&nbsp;&nbsp; So that I can get enough traffic<br /><br />&nbsp;&nbsp; Search results for "core bvba tom janssens" on "google" should contain "www.corebvba.be" =&gt; OK<br />&nbsp;&nbsp; &nbsp;&nbsp; Given current url is "http://www.google.be/search?q="<br />&nbsp;&nbsp; &nbsp;&nbsp; When searching for "core bvba tom janssens"<br />&nbsp;&nbsp; &nbsp;&nbsp; Then result should contain "www.corebvba.be"<br /><br />&nbsp;&nbsp; Search results for "BDD .net" on "google" should contain "www.corebvba.be" =&gt; NOK<br />&nbsp;&nbsp; &nbsp;&nbsp; Given current url is "http://www.google.be/search?q="<br />&nbsp;&nbsp; &nbsp;&nbsp; When searching for "BDD .Net"<br />&nbsp;&nbsp; &nbsp;&nbsp; Then result should contain "www.corebvba.be"<br /><br />&nbsp;&nbsp; Search results for "core bvba tom janssens" on "bing" should contain "www.corebvba.be" =&gt; OK<br />&nbsp;&nbsp;  &nbsp; Given current url is "http://www.bing.com/search?q="&nbsp; <br />&nbsp;&nbsp;  &nbsp; When searching for "core bvba tom janssens"<br />&nbsp;&nbsp;  &nbsp; Then result should contain "www.corebvba.be"</pre>
+<p>&nbsp;</p>
+<p>Which is pretty neat I think !!!<br /><br />Finally, this is the implementation of the BrowserContext class :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> BrowserContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Url { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Result { get; set; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">private</span> WebClient wc = <span class="kwrd">new</span> WebClient();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;current_url_is_(.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SetUrl(<span class="kwrd">string</span> url)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Url = url;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;searching_for_(.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SearchForKeyWords(<span class="kwrd">string</span> keywords)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result = wc.DownloadString(Url + HttpUtility.UrlEncode(keywords));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;result_should_contain_(.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> ResultShouldContain(<span class="kwrd">string</span> myurl)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result.Contains(myurl).ShouldEqual(<span class="kwrd">true</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

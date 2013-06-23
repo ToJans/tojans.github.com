@@ -1,0 +1,212 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CQRS for the lazy -ss - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="CQRS for the Lazy -ss Introduction
+In one of my numerous attempts to create a neat approach to CQRS, this is yet another attempt to remove all the &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2012/01/15/cqrs-for-the-lazy-ss/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">CQRS for the Lazy -ss</h1>
+	<div class="entry-content" itemprop="articleBody"><h2>Introduction</h2>
+<p>In one of my numerous attempts to create a neat approach to CQRS, this is yet another attempt to remove all the protocol that CQRS requires. I love bootstrapping new projects and experimenting with new approaches, and this is another step that improves efficiency. It is a natural evolution to one of my other CQRS playgrounds: <a href="https://github.com/ToJans/Scritchy" target="_blank">Scritchy</a>.</p>
+<p>The conventional CQRS approach requires you to write&nbsp;command - and event classes, to wire up your commands and event handlers to the relevant AR&#8217;s, saga&#8217;s and viewmodel builders.<br />I removed some of the clutter in that process with Scritchy. <a href="https://github.com/ToJans/Scritchy/wiki/auto-wiring" target="_blank">Scritchy uses conventions to wire up the commands and events to the relevant components</a>. This makes CQRS a lot less verbose while still offers the same advantages.</p>
+<h2>Scritchy v2 ?</h2>
+<p>While this is a good attempt, it still requires you to write the dreaded event - and command classes.<a href="http://www.linkedin.com/profile/view?id=2995972&amp;trk=tab_pro#recommendations" target="_blank"> Having pushed some best practices/usages/libs to some enterprise teams in the past</a>, I noticed the following: any change that adds extra steps/work to the process makes acceptance harder by devs, as most people are usually trapped in a certain approach, and they do not see an advantage in having to write more code to do the same thing. If they do not need to write all the &#8220;protocol&#8221;/extra classes, you have removed yet another step that might slow down acceptance of the practice.</p>
+<p>&nbsp;</p>
+<p>The new approach I am about to tell you about in this blog post completely hides the messages from the dev, i.e. the dev can just use a conventional method call, and messages are created underneath.</p>
+<p>&nbsp;</p>
+<h2>Disclaimer</h2>
+<p>This is a possible approach to the problem, but I tend to think that the majority of the CQRS evangelists and practitioners value explicitness over pragmatism. I love the explicitness and clarity of their examples and implementations, but in the real world most people start to think: &#8220;Wow, that is a lot of code to simply add an item to the stock; are they nuts ?&#8221;.</p>
+<p>Having experienced the fallacy of the explicitness in a startup attempt, my brain got tickled to find fast and neat approaches to a pretty established conventional path. I think this one is pretty close.</p>
+<p>The full source is available over at <a href="https://github.com/ToJans/MinimalisticCQRS">GitHub</a>, and the demo app can be seen/tested<a href="http://minimalisticcqrs.apphb.com/"> over at appharbor</a>.</p>
+<h2>Example</h2>
+<p>So without further ado, here I will show you ALL THE CODE required to implement a complete CQRS app:</p>
+<p></p>
+<h3>The domain: Bank account</h3>
+<p>Let us first start with some sequence diagrams to introduce you to the problem domain:</p>
+<p><img style="width: 322px; height: 213px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBSZWdpc3RlciBhbiBhY2NvdW50CmVuZCBub3RlCkdVSS0-QQAQBlVuaXF1ZW5lc3NWYWxpZGF0b3I6ADUIABwHID8KAF4Fb3ZlciAAHRoKIAAVCE51bWJlciB1AFYFID8AcAkgCm9wdCAAbAYKICAAeww6AIEpCQCBEQcKICBvcHQgQWxsb3dlZAogIABVCS0AKgsAgT4HAIFmCAAkBWVuZAplbmQKCg&amp;s=earth" alt="" /></p>
+<p><img style="width: 172px; height: 152px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBEZXBvc2l0IHNvbWUgY2FzaAplbmQgbm90ZQpHVUktPkFjY291bnQ6ACEIQ2FzaApvcHQgQWxsb3dlZAogIAAcBy0AIgtBbW91bnQAVQdlZAplbmQKCg&amp;s=earth" alt="" /></p>
+<p><img style="width: 180px; height: 152px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBXaXRoZHJhdyBzb21lIGNhc2gKZW5kIG5vdGUKR1VJLT5BY2NvdW50OgAhCUNhc2gKb3B0IEFsbG93ZWQKICAAHQctACMLQW1vdW50AFYIbgplbmQKCg&amp;s=earth" alt="" /></p>
+<p><img style="width: 437px; height: 324px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBUcmFuc2ZlciBhbiBhbW91bnQgZnJvbSBBIHRvIEIKZW5kIG5vdGUKR1VJLT5BY2MAHQVBOgAvCEEALgUKb3B0IFZhbGlkIGZvciBzb3VyY2UKICAAJwktADAMIAAvBldpdGhkcmF3bgATFgCBEQhTYWdhOgCBHglQcm9jZXNzZWRPblMAVw8AJQwAgSEKQjogAC0HAIFiCE9uVGFyZ2V0CiAgAIEpDnQADwgAgS8KQgCBLgtCAIExCERlcG9zaXRlZAAaEUdVSQCBIQpDb21wbGUAIQZlbHNlAIJhCmludgBmDyAAXhgAgXAWRmFpbGVkAIE-CwCBZh9BOiBDYW5jZWwAg2YIAIFYDQCDCRUAgU8WQQCBVBEAUgUAgV4GbmQKZW5kCg&amp;s=earth" alt="" /></p>
+<h3>Domain:Account</h3>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Domain%5CAccount.cs"></script>
+</p>
+<p>Nothing spectacular here; yes, I do realize it is a boring sample, but we need a well-known domain to explain it IMO; suggestions for an alternative domain are welcome!</p>
+<h3>Domain:AccountTransferSaga</h3>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Domain%5CAccountTransferSaga.cs"></script>
+</p>
+<p>Orchestrates the transfer between 2 accounts</p>
+<h3>Domain:AccountUniquenessSaga</h3>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Domain%5CAccountUniquenessSaga.cs"></script>
+</p>
+<p>Verifies uniqueness of the account; I do realize on rare cases there might be an error here (when using async processing one might have eventual consistency), but I consider the effort in fixing the error by hand less then the cost to implement it on the domain.</p>
+<p>The code above is all that is needed for the domain, i.e. no events or commands etc&#8230; isn&#8217;t that neat ?</p>
+<h3>Hubs</h3>
+<p>In order to show you what else is needed, I added all the server-side code as well, so you have an idea how much code you need to implement a complete app</p>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Hubs%5CCommandHub.cs"></script>
+<script src="https://gist.github.com/1615489.js?file=Hubs%5CQueryHub.cs"></script>
+</p>
+<h2>Conclusion</h2>
+<p>This is an approach to CQRS that removes the need to write message classes; it uses a combination of serializing method invocation on a dynamic together with conventions to build a system where messages are completely hidden from the user. Talk about removing infrastructure from the code!&nbsp;</p>
+<p>I assume there will be a lot of opponents to this approach, as this gives room for typos etc. However, I do believe that this approach combined with TDD/BDD could be for CQRS what rails was for MVC : a pragmatic approach that allows you to just write code at blistering speed without a lot of added protocol.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

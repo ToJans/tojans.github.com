@@ -1,0 +1,199 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Fixing corrupt downloads with your ISP - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="Fixing Corrupt Downloads With Your ISP About 3 days ago my internet connection with telenet started being really slow, and gave me corrupted &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2013/03/17/fixing-corrupt-downloads-with-your-isp/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Fixing Corrupt Downloads With Your ISP</h1>
+	<div class="entry-content" itemprop="articleBody"><p>About 3 days ago my internet connection with telenet started being really slow, and gave me corrupted downloads if files were larger then a few megabytes. Every file I tried to download gave me corrupt files.</p>
+<p>As this problem appeared on 4 different PC&#8217;s simultaneously, I knew the problem was not related to a specific PC configuration.</p>
+<p>As one of my PC&#8217;s was wired (through a router), and that one was not working either, I decided to shortcut the router, and connect directly to the telenet router (without my own router), and that seemed to work.</p>
+<p>So the problem had to be located within my router. After checking the logs and upgrading the firmware, the issue still remained, so I started looking around on the net.</p>
+<p>After some browsing I found the cause of my connection problems; apparently <span style="text-decoration: line-through;">telenet lowered the MTU</span>? <strong>UPDATE:</strong> lowering my MTU might work&#8230;</p>
+<h3>What&#8217;s MTU?</h3>
+<p>This would bring us down to networking, and layer 2, the data layer, but I assume wikipedia can explain it way better (<a href="http://en.wikipedia.org/wiki/MTU" target="_blank">here</a>).</p>
+<p>What it comes down to is that large packages on the network fail, so you need to find out how large your packages can be when you send them over the network.</p>
+<h3>How can you do this?</h3>
+<p>First of all you have to find out your MTU setting of your router; it&#8217;s probably at 1500 for cable or 1492 for DSL. Next you have to find the size that works with your provider. For now I settled on a size of 1200.</p>
+<p>You can find out this size by doing the following (min is at 500-something AFAIK):</p>
+<p>start a command window and start pinging with a packet that can not be separated (IPv4 only, BTW):</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f3%2fSchermafbeelding+(2).png" alt="" /></p>
+<p>You get the picture I presume.</p>
+<p>After finding the matching packet size, you should set the MTU in your router to your value; problem solved&#8230;</p>
+<h3>Update:&nbsp;</h3>
+<p>While my big downloads now are fixed, @dvaneven mentioned his internet with the same provider still worked on MTU 1500, so I think I probably might need to replace my router.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/tojans">tojans</a> @<a href="https://twitter.com/telenet">telenet</a> Why would they lower the MTU?</p>
+&mdash; Dave Van Even (@dvaneven) <a href="https://twitter.com/dvaneven/status/313271752220356608">17 maart 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>For now my workaround works, but I will buy another router ASAP.</p>
+<h3>Update 2:</h3>
+<p>I installed another router&#8230; problem solved !!</p></div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tojans.github.io/blog/2013/03/17/fixing-corrupt-downloads-with-your-isp/';
+        var disqus_url = 'http://tojans.github.io/blog/2013/03/17/fixing-corrupt-downloads-with-your-isp/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

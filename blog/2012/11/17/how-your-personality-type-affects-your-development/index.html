@@ -1,0 +1,255 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>How your personality type affects your development - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="How Your Personality Type Affects Your Development Introduction
+During one of my more recent interviews I got an assesment from two different &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2012/11/17/how-your-personality-type-affects-your-development/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">How Your Personality Type Affects Your Development</h1>
+	<div class="entry-content" itemprop="articleBody"><h2>Introduction</h2>
+<p>During one of my more recent interviews I got an assesment from two different persons. While I still have no idea about the definitive outcome, the different types of questions they both asked triggered me to think about what kind of personality type they would be, so I started wondering how personality types are related to development&#8230;.</p>
+<h2>First things first: MBTI</h2>
+<p>Before we can determine the effect of your personality on your development, we will start by defining MBTI, so let us begin with <a href="http://en.wikipedia.org/wiki/Myers-Briggs_Type_Indicator">the wikipedia definition</a>:</p>
+<blockquote>
+<p><em>The Myers-Briggs Type Indicator (MBTI) assessment is a psychometric questionnaire designed to measure psychological preferences in how people perceive the world and make decisions.</em></p>
+</blockquote>
+<p>They do this by categorizing your personality in four dimensions; your gradation in every dimension is not a boolean, but rather a range (i.e. -1 to +1).</p>
+<p>I will describe each of the four dimensions in detail, and explain how they impact your development:</p>
+<h2>#1 Attitude: &#8220;Extraversion&#8221; versus &#8220;Intraversion&#8221; (E vs I)</h2>
+<p>Attitude is about the way evolve an idea and get inspired: some get inspired by doing and experimenting, while others get inspired by thinking about things.</p>
+<ul>
+<li>Development by people with high &#8220;Extraversion&#8221; is driven by    
+<ul>
+<li>experimenting with code</li>
+<li>evolving ideas in small incremental steps by talking with other people</li>
+<li>doing things right</li>
+</ul>
+</li>
+<li>Development by people with high &#8220;Intraversion&#8221; is driven by    
+<ul>
+<li>an internal thought process</li>
+<li>thinking ideas through before talking about it with other people</li>
+<li>doing the right thing</li>
+</ul>
+</li>
+</ul>
+<p>On a sidenote, &#8220;extraversion&#8221; is not a typo; it is the way you spell this word in MBTI terms.</p>
+<p></p>
+<h2>#2 Percieving: &#8220;Sensing&#8221; versus &#8220;iNtuition&#8221; (S vs N)</h2>
+<p>The second dimension is about how we percieve things&#8230; Some need to see the details (sensing), other  just have a general sense (i.e. intuition) of what it is supposed to do. This has obviously a rather big impact in the way that we write code&#8230;</p>
+<ul>
+<li>Development by people with high sensing is usually explicit    
+<ul>
+<li>&#8220;Hmmz I need to know all the ins and outs before I use this, how does this tiny bit work?&#8221;</li>
+<li>&#8220;Always use explicit typing everywhere, no exceptions!!&#8221;</li>
+<li>&#8220;This looks dirty, I need to change this&#8221;</li>
+<li>&#8220;Coding without conventions? Always use the &#8216;private&#8217; keyword, even though it is implicit&#8221;</li>
+</ul>
+</li>
+<li>Development by people with high iNtuition is usually implicit    
+<ul>
+<li>&#8220;I don&#8217;t care how it works, when it is important to know I will find it out&#8221;</li>
+<li>&#8220;dynamic and var are my friends&#8221;</li>
+<li>&#8220;I will refactor it when it hurts&#8221;</li>
+<li>&#8220;Ok, I will follow the coding conventions if you really force me&#8221;</li>
+</ul>
+</li>
+</ul>
+<h2>#3 Judging: &#8220;Thinking&#8221; versus &#8220;Feeling&#8221; (T vs F)</h2>
+<p>I quite honestly have not met a single developer who was a &#8220;feeling&#8221; type; every single one I met was a rational type (which is kind of a logical thing - pun intended).</p>
+<p>A lot of recruiters on the other hand, are usually a &#8220;feeling&#8221; type, hence this is probably a part of the problem I stated in <a href="http://www.corebvba.be/blog/post/Fallacies-of-the-tech-recruitment-process.aspx">one of my previous blog posts</a>.</p>
+<h2>#4 Lifestyle: &#8220;judging&#8221; versus &#8220;perceiving&#8221; (J vs P)</h2>
+<p>The final one is about which one of #2 and #3 you use the most to interact with the world: your &#8220;judging&#8221; or your &#8220;percieving part&#8221;.</p>
+<ul>
+<li>Development by a &#8220;judging&#8221; developer    
+<ul>
+<li>usually driven by a detailed plan</li>
+<li>not deadline-driven </li>
+<li>tends to be quite rigid when executing something, sometimes to rigid</li>
+<li>works first, plays later</li>
+</ul>
+</li>
+<li>Development by a &#8220;perceiving&#8221; developer    
+<ul>
+<li>driven by external impulses (Sensing or iNtuition)</li>
+<li>deadline-driven</li>
+<li>likes to keep his/her options open, sometimes indecisive</li>
+<li>works in bursts</li>
+</ul>
+</li>
+</ul>
+<h2>So how is this related to the assesment ?</h2>
+<p>When having an interview, it usually helps if the interviewer&#8217;s personality matches the interviewee&#8217;s as much as possible&#8230; There are compatibility matrices available for MBTI types which also mention opposites (f.e. my wife is my MBTI opposite), but I think this is not an advantage when doing an interview.</p>
+<p>As an ENTP myself, I met two interviewers, and based on their questions I would guess that the first interviewer was an ISTP and the second one an INTP. (Not sure about the first letter, as interviewers tend to be intraverted during an interview.)</p>
+<p>It does not take a genious to find out in which interview I performed best&#8230;</p>
+<p><strong>Update: I got pinged by both an INFP and an INFJ, so apparently the F part is still there for some developers. Next to this I misjudged my interviewers; they are ISTJ and ESTJ.. My bad!!! (but in my defense, the second one still matches my profile better then the first one&#8230;.)</strong></p>
+<p><strong>I also received some food for thought from Rob Ashton:</strong></p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/tojans">tojans</a> don&#8217;t think I agree with I/E - I think N/S is the biggest factor for dev, followed by J/P and I/E is about how you interact</p>
+&mdash; &#8216;Hurricane Rob&#8217; (@RobAshton) <a href="https://twitter.com/RobAshton/status/269714326934396928">november 17, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>&nbsp;</p>
+<h2>Finally</h2>
+<p>If you are a developer, this should give you a general idea of the MBTI type you are exactly. If you really want to find out, there is a short free questionaire online to determine your MBTI type <a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp">here</a>.</p>
+<p>On a sidenote, it would be great if the interviewers would be willing to send me a message whether I am correct or not with my guesstimate&#8230;</p>
+<p>Signing off,</p>
+<p>Tom</p></div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

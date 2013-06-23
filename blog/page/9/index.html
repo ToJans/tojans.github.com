@@ -1,0 +1,670 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="Dec 4th, 2009 Comments The Quest for the Perfect ASP.Net MVC Code : Let the Games Begin Edit:
+Please note that the source has changed a lot lately, &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/page/9/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-04T00:00:00+01:00" data-updated="true" itemprop="datePublished">Dec 4<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/12/04/the-quest-for-the-perfect-asp.net-mvc-code-let-the-games-begin/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/12/04/the-quest-for-the-perfect-asp.net-mvc-code-let-the-games-begin/" itemprop="url">The Quest for the Perfect ASP.Net MVC Code : Let the Games Begin</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Edit:</h3>
+<p>Please note that the source has changed a lot lately, and that I now use a proper viewmodel instead of domain objects, so all hardlinked references to the domain objects &amp; controllers in the MVC project have disappeared. This also automaticly made my ugly domain object extension methods to get the controller action links completely redundant.</p>
+<p>You can see the latest version on <a href="http://github.com/ToJans/MVCExtensions/tree/master/src/" target="_blank">github</a>.</p>
+<p>The next thing to do is split up the mapping bit using a proper mapping tool (f.e. <a href="http://www.codeplex.com/AutoMapper" target="_blank">AutoMapper</a>).</p>
+<h3>Edit 2:</h3>
+<p>New article here : <a class="taggedlink" href="http://www.corebvba.be/blog/post/The-Quest-for-the-perfect-ASPNet-MVC-code-v03.aspx">The Quest for the perfect ASP.Net MVC code : v0.3</a></p>
+<p><div class="code">
+</p>
+<p>// For a <span class="kwrd">while</span> I have been looking <span class="kwrd">for</span> the perfect ASP.Net MVC code.<br />// This <span class="kwrd">is</span> the cleanest code I have been able to write.<br />// I would like to challenge everyone to <span class="kwrd">do</span> better !!!<br />//<br />// By <span class="kwrd">this</span> I mean creating a better controller/views <span class="kwrd">if</span> possible codewise.<br />// The focus <span class="kwrd">is</span> not on the layout stuff, but having it might be a plus.<br />//<br />// The scope : a very rudimentary Task list (KISS)<br />//<br />// Some more info about my approach :<br />// It uses view models which contain both data and ActionLink references<br />// (like ICommand <span class="kwrd">in</span> WPF M-V-VM )<br />//<br />// You can download the full source here : <br />//&nbsp;&nbsp;&nbsp;&nbsp; http://github.com/ToJans/MVCExtensions/tree/master/src/<br />//<br />// You will see it <span class="kwrd">is</span> very easy to alter, just download it and press F5<br />//<br />// Please <span class="kwrd">do</span> let me know what you think about my approach <span class="kwrd">as</span> well,<br />// and whether you could <span class="kwrd">do</span> better: ToJans@twitter<br />// Send <span class="kwrd">this</span> link to <span class="kwrd">as</span> much fellow coders <span class="kwrd">as</span> possible, so we can see lots of alternatives<br />//<br />// PS: you can also leave a comment @ my website (look at my twitter account)<br />//<br /><br />// &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />// Controller :<br />// &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br /><span class="kwrd">namespace</span> Tasks.Core.Controllers<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> TaskController : Controller<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <span class="kwrd">for</span> the sake of the demo we <span class="kwrd">do</span> not use DI <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // but just a <span class="kwrd">static</span> <span class="kwrd">class</span> instance here with a fake repo<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">static</span> IRepository&lt;Task&gt; rTask = rTask ?? <span class="kwrd">new</span> FakeRepository&lt;Task&gt;(<span class="kwrd">null</span>);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult Index()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> View(<span class="kwrd">new</span> VMIndex()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AllTasks = rTask.Find.OrderBy(o =&gt; o.Name),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AL_AddTask = <span class="kwrd">this</span>.ActionLink(<span class="str">&#8220;Add new task&#8221;</span>,c=&gt;c.AddNewTask(<span class="kwrd">null</span>,<span class="kwrd">null</span>))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult AddNewTask(<span class="kwrd">string</span> name,<span class="kwrd">string</span> description)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var t = <span class="kwrd">new</span> Task() { Description = description, Name = name };<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rTask.SaveOrUpdate(t);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">this</span>.RedirectToAction(c =&gt; c.Index());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult Done(<span class="kwrd">int</span> id)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var t = rTask.GetById(id);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.Done = !t.Done;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rTask.SaveOrUpdate(t);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">this</span>.RedirectToAction(c=&gt;c.Index());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult Edit(<span class="kwrd">int</span> id)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var t = rTask.GetById(id);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> View(<span class="kwrd">new</span> VMEdit()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name = t.Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Description = t.Description,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AL_PostEdit = <span class="kwrd">this</span>.ActionLink(<span class="str">&#8220;Save changes&#8221;</span>,c=&gt;c.PostEdit(t.Id,<span class="kwrd">null</span>,<span class="kwrd">null</span>)),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AL_CancelEdit = <span class="kwrd">this</span>.ActionLink(<span class="str">&#8220;Cancel changes&#8221;</span>,c=&gt;c.Index())<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult PostEdit(<span class="kwrd">int</span> id,<span class="kwrd">string</span> name,<span class="kwrd">string</span> description)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var t = rTask.GetById(id);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.Name = name;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.Description = description;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rTask.SaveOrUpdate(t);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">this</span>.RedirectToAction(c =&gt; c.Index());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult Delete(<span class="kwrd">int</span> id)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rTask.Delete(rTask.GetById(id));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">this</span>.RedirectToAction(c =&gt; c.Index());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br /><br />// &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />// Index.Spark<br />// &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />&lt;viewdata model=<span class="str">&#8220;Tasks.Core.ViewModel.Tasks.VMIndex&#8221;</span> /&gt;<br />&lt;content name=<span class="str">&#8220;Title&#8221;</span>&gt;<br />&nbsp;&nbsp;&nbsp; Index<br />&lt;/content&gt;<br /><br />&lt;content name=<span class="str">&#8220;Main&#8221;</span>&gt;<br />&lt;h1&gt;Task list&lt;/h1&gt;<br />&lt;<span class="kwrd">if</span> condition=<span class="str">&#8220;Model.AllTasks.Count()==0&#8221;</span>&gt;<br />&nbsp;&nbsp;&nbsp; No tasks yet.<br />&lt;/<span class="kwrd">if</span>&gt;<br />&lt;<span class="kwrd">else</span>&gt;<br />&nbsp; &lt;table&gt;<br />&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Name&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Name&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Status&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Edit&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Delete&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br />&nbsp;&nbsp;&nbsp; &lt;tr each=<span class="str">&#8220;var t in Model.AllTasks&#8221;</span>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;${t.Name}&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;${t.Description}&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;&lt;alink a=<span class="str">&#8220;t.AL_Status()&#8221;</span> /&gt;&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;&lt;alink a=<span class="str">&#8220;t.AL_Edit()&#8221;</span> /&gt; &lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;&lt;alink a=<span class="str">&#8220;t.AL_Delete()&#8221;</span> /&gt; &lt;/td&gt;<br />&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br />&nbsp; &lt;/table&gt;<br />&lt;/<span class="kwrd">else</span>&gt;<br />&lt;hr /&gt;<br />&lt;h3&gt;Add a <span class="kwrd">new</span> task&lt;/h3&gt;<br />&nbsp;&nbsp;&nbsp; &lt;aform a=<span class="str">&#8220;Model.AL_AddTask&#8221;</span>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label <span class="kwrd">for</span>=<span class="str">&#8220;Name&#8221;</span>&gt;Name :&lt;/label&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type=<span class="str">&#8220;text&#8221;</span> name=<span class="str">&#8220;Name&#8221;</span> /&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label <span class="kwrd">for</span>=<span class="str">&#8220;Description&#8221;</span>&gt;Description:&lt;/label&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;textarea cols=<span class="str">&#8220;20&#8221;</span> rows=<span class="str">&#8220;2&#8221;</span> name=<span class="str">&#8220;Description&#8221;</span> &gt;&lt;/textarea&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp; &lt;/aform&gt;<br />&lt;/content&gt;<br /><br />// &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />// Edit.Spark<br />// &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />&lt;viewdata model=<span class="str">&#8220;Tasks.Core.ViewModel.Tasks.VMEdit&#8221;</span> /&gt;<br /><br />&lt;content name=<span class="str">&#8220;Title&#8221;</span>&gt;<br />&nbsp;&nbsp;&nbsp; Edit<br />&lt;/content&gt;<br />&lt;content name=<span class="str">&#8220;Main&#8221;</span>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;Edit <span class="kwrd">this</span> task&lt;/h3&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;aform a=<span class="str">&#8220;Model.AL_PostEdit&#8221;</span>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label <span class="kwrd">for</span>=<span class="str">&#8220;Name&#8221;</span>&gt;Name :&lt;/label&gt;&lt;br/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type=<span class="str">&#8220;text&#8221;</span> <span class="kwrd">value</span>=<span class="str">&#8221;${Model.Name}&#8221;</span> name=<span class="str">&#8220;Name&#8221;</span> /&gt;&lt;br/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label <span class="kwrd">for</span>=<span class="str">&#8220;Description&#8221;</span>&gt;Description:&lt;/label&gt;&lt;br/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;textarea cols=<span class="str">&#8220;20&#8221;</span> rows=<span class="str">&#8220;2&#8221;</span> name=<span class="str">&#8220;Description&#8221;</span> &gt;${Model.Description}&lt;/textarea&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/aform&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;alink a=<span class="str">&#8220;Model.AL_CancelEdit&#8221;</span> /&gt;<br />&lt;/content&gt;<br /></div></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-02T00:00:00+01:00" data-updated="true" itemprop="datePublished">Dec 2<span>nd</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/12/02/rant-your-abomination-is-my-clever-hack/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/12/02/rant-your-abomination-is-my-clever-hack/" itemprop="url">Rant : Your Abomination Is My Clever Hack</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>When I read the <a href="http://odetocode.com/Blogs/scott/archive/2009/11/30/your-abomination-is-my-clever-hack.aspx" target="_blank">article from OdeToCode about the abuse of a programming language to create shortcuts</a>, I felt the need to respond.</p>
+<h3>What is it about ?</h3>
+<p>Simply stated, it is about using some clever tricks to make it easier for the developer to reach his goal. The example was a stackoverflow post : <a href="http://stackoverflow.com/questions/1718037/abuse-of-c-lambda-expressions-or-syntax-brilliance">Abuse of C# lambda expressions or Syntax brilliance? </a></p>
+<p>Which discusses code that looks like this :</p>
+<p><div class="code">
+</p>
+<p>.Attributes(style =&gt; <span class="str">&#8220;width:100%&#8221;</span>)</p>
+<p></div></p>
+<h3>What is the issue here ?</h3>
+<p>The issue was that the reaction of the c# language designers. They said it was unacceptable to use such a shortcut, since it was not originally intended in the language design. According to them, one should never use such a construct. I firmly disagree&#8230;</p>
+<h3>Why should one be allowed to abuse a development language ?<br /></h3>
+<p>Simply stated : because you can. Every single thing that can help a developer to make cleaner/safer/better code (in his/her opinion) should be allowed. Why do we develop most of our applications in c#/java/ruby/PHP and not in assembly ? Because using these languages is considered cleaner/safer/better then using assembly. So while the original language designers might not like the idea, the hacks provide an extra cleaner/safer/better way to address a certain implementation subdomain. After all, the language is there as an intermediate between the developer and the hardware, and anything that allows better communication between the developer and the hardware, should be considered a plus&#8230; Which brings us to our next point of attention.</p>
+<h3>Who is saying that the approach you use here is cleaner/safer/better ?<br /></h3>
+<p>Actually : nobody. That is something that you need to find out yourself. While some people might like to use the shown constuct, others might like the more verbose way of expressing things. Most of the time, these shortcuts are there as an alternative to the &#8220;common&#8221; way to do something. In most cases, the fact whether you like or dislike something is based on your background/knowledge/reference frame . <br />The fact that the alternative was built means that somebody had the intention of providing a better/safer/cleaner way of doing something. Whether you agree or disagree with this person is completely up to you&#8230; (Although I must admit that I certainly agree with this person). If you look at the dynamicobject feature (another heavy point of discussion), then you might see that this actually does something simular as the shortcut used here, so the language development team is actually doing the same.</p>
+<p>Please note that it does not stop here; some people found the original c#/vb.net language to constraining, so they <a href="http://boo.codehaus.org/" target="_blank">developed their own</a>, including <a href="http://boo.codehaus.org/BooManifesto.pdf" target="_blank">a manifest</a>.</p>
+<p>So, to conclude, if you think you can make your own life easier by using certain &#8216;abusive&#8217; constructs : please do !!!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-30T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 30<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/11/30/m-v-vm-in-asp.net-mvc-removing-dependencies-between-asp.net-views-and-controller-actions/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/11/30/m-v-vm-in-asp.net-mvc-removing-dependencies-between-asp.net-views-and-controller-actions/" itemprop="url">M-V-VM in Asp.Net MVC : Removing Dependencies Between asp.Net Views and Controller Actions</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Since the early days I have always been a fan of the ASP.net MVC framework, although I had one really big issue with it : the coupling of the controller actions in the view pages. This part was a real annoyance, since all the flow and logic was included in the controller, and none of it in the views, _except_ the action flow; this was included in the views by using Html.ActionLink.</p>
+<p>This has always been a nuisance for me, so last week, as I was working on a project, I decided to fix this issue&#8230;</p>
+<p>IMHO the possible proceeding controller <strong>actions in the program flow should be defined in the controller</strong> action, <strong>and not in the view</strong>. So how could we do this, while still making it maintainable and easy to follow ?</p>
+<p>After considering a few alternative routes, and thinking about it event more, it suddenly hit me; why not represent the possible routes as data.</p>
+<p>A few development cycles later I had the following code in the controller:</p>
+<p><div class="code">
+<br /><span class="kwrd">public</span> ActionResult Index()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; ViewData.Model = <span class="kwrd">new</span> VMIndex()<br />&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; AllTasks = rTask.Find.OrderBy(o =&gt; o.Name),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AL_AddTask = <span class="kwrd">this</span>.ActionLink(<span class="str">&#8220;Add new task&#8221;</span>,c=&gt;c.AddNewTask(<span class="kwrd">null</span>,<span class="kwrd">null</span>))<br />&nbsp;&nbsp;&nbsp;&nbsp; };<br />&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> View();<br />}<br /></div></p>
+<p>And this code in the view :</p>
+<p><div class="code">
+<br />&lt;h1&gt;Task list&lt;/h1&gt;<br />&lt;%= Html.Grid(Model.AllTasks)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Columns(c=&gt; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.For(t =&gt; t.Name);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.For(t =&gt; t.Description);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.For(t =&gt; Html.ActionLink(t.AL_Status())).Named(<span class="str">&#8220;Status&#8221;</span>).DoNotEncode();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.For(t =&gt; Html.ActionLink(t.AL_Edit())).Named(<span class="str">&#8220;Edit&#8221;</span>).DoNotEncode();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c.For(t =&gt; Html.ActionLink(t.AL_Delete())).Named(<span class="str">&#8220;Delete&#8221;</span>).DoNotEncode();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }).Empty(<span class="str">&#8220;No tasks yet&#8221;</span>) <br />%&gt;<br />&lt;hr /&gt;<br />&lt;h3&gt;Add a <span class="kwrd">new</span> task&lt;/h3&gt;<br />&lt;% <span class="kwrd">using</span> (Html.BeginForm(Model.AL_AddTask)) { %&gt;<br />&nbsp;&nbsp;&nbsp; Name&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp; &lt;%=Html.TextBox(<span class="str">&#8220;Name&#8221;</span>) %&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp; Description&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp; &lt;%=Html.TextArea(<span class="str">&#8220;Description&#8221;</span>) %&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp; &lt;%=Html.SubmitButton(Model.AL_AddTask) %&gt;&lt;br /&gt;<br />&lt;% }%&gt; <br /></div></p>
+<p>Which looks rather nice in my opinion. Since I do not know whether I am the first person who thinks about this or not, I decided to publish the sourcecode together with an example on <a href="http://github.com/ToJans/MVCExtensions" target="_blank">github</a>.</p>
+<p>The technical implementation is actually quite simple; I implement the <a href="http://msdn.microsoft.com/en-us/magazine/dd419663.aspx" target="_blank">Model-View-Viewmodel</a> pattern, which is used in WPF, using a simple wrapper class for the action links (i.e. commands in MVVM). Once I made that link, the rest was childs play.</p>
+<p>Next to this I also created some helper extensions, to make the code a little easier on the eyes.</p>
+<p>I also think that by using this pattern we should be able to implement a winforms/WPF app using the same controller. Anybody who is willing to send me a git patch of a WPF application using this controller: please do !!!</p>
+<p>PS: This also makes the actionlinks testable in an easy way; another responsibility that has been taken away from the view !!!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-20T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 20<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/11/20/aubergine-%28bdd-for-.net%29-source-code-available-on-github/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/11/20/aubergine-%28bdd-for-.net%29-source-code-available-on-github/" itemprop="url">Aubergine (BDD for .Net) Source Code Available on Github</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Hi there&#8230;.</p>
+<p>After a few weeks of working on Aubergine (BDD for .Net) I have decided to release the sourcecode for this tool out in the open.</p>
+<p>Please do give me some time as I am quite new to this whole community thing. Hints are welcome !</p>
+<p>You can find the source on github : <a href="http://github.com/ToJans/Aubergine" target="_blank">http://github.com/ToJans/Aubergine</a></p>
+<p>And the download here: <a href="http://github.com/ToJans/Aubergine/downloads" target="_blank">http://github.com/ToJans/Aubergine/downloads</a></p>
+<p>Enjoy !!!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-13T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 13<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/11/13/new-essay-on-bdd-given-i-did-to-support-flow-in-user-stories/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/11/13/new-essay-on-bdd-given-i-did-to-support-flow-in-user-stories/" itemprop="url">New Essay on BDD - Given-I-did to Support Flow in User Stories</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Just a quick link to my new essay on BDD:</p>
+<p id="ctl00_cphBody_h1Title"><a href="http://www.corebvba.be/blog/page/BDD-Given-I-Did-to-support-flow-in-user-stories.aspx">Essay : Extending BDD stories ; the &#8220;Given I did&#8221; clause - including flow in user stories</a></p>
+<p>I hope this is a good contribution to the BDD community</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-13T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 13<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/11/13/aubergine-%28bdd-for-.net%29-v0.07-support-for-given-i-did-clause/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/11/13/aubergine-%28bdd-for-.net%29-v0.07-support-for-given-i-did-clause/" itemprop="url">Aubergine (BDD for .net) v0.07 : Support for Given-I-did-clause</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Hi there,</p>
+<p>V0.07 is here :</p>
+<p><a href="http://www.corebvba.be/blog/file.axd?file=2009%2f11%2fAuberginev0.07.zip">Auberginev0.07.zip (28,61 kb)</a></p>
+<h3>Changes:</h3>
+<p>* Support for &#8220;Given I did&#8221; clause (more info in<a href="http://www.corebvba.be/blog/page/BDD-Given-I-Did-to-support-flow-in-user-stories.aspx"> this essay</a> )<br />* Complete refactoring of the Account example after extending the account story (my usual Model/Service layout, although the interfaces are missing here)</p>
+<p>Here is the current example of the account story (copied from the essay):</p>
+<p>&nbsp;</p>
+<p></p>
+<h3>Appendix A : a working example story :</h3>
+<p><br /><div class="code">
+<br />Context&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Be.Corebvba.Aubergine.Examples.Accounts.Contexts.AccountContext<br />ContextDLL&nbsp;&nbsp; Be.Corebvba.Aubergine.Examples.DLL<br /><br />Story Transfer money between accounts <br /><br />&nbsp;&nbsp;&nbsp; As a user<br />&nbsp;&nbsp;&nbsp; I want to transfer money between accounts<br />&nbsp;&nbsp;&nbsp; So that I can have real use <span class="kwrd">for</span> my money<br /><br />&nbsp;&nbsp;&nbsp; Given the balance of AccountA <span class="kwrd">is</span> 3m<br />&nbsp;&nbsp;&nbsp; Given the balance of AccountB <span class="kwrd">is</span> 2m<br />&nbsp;&nbsp;&nbsp; Given the owner of AccountA <span class="kwrd">is</span> the current user<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; Scenario Authenticate the current user <span class="kwrd">as</span> a <span class="str">&#8216;valid or invalid&#8217;</span> user<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Given the name of the current user <span class="kwrd">is</span> <span class="str">&#8216;username&#8217;</span><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; And the password of the current user <span class="kwrd">is</span> <span class="str">&#8216;password&#8217;</span><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; When I request authentication <span class="kwrd">for</span> the current user <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Then the process should <span class="str">&#8216;fail or succeed&#8217;</span><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Example<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | <span class="str">&#8216;valid or invalid&#8217;</span> | <span class="str">&#8216;username&#8217;</span> | <span class="str">&#8216;password&#8217;</span> | <span class="str">&#8216;fail or succeed&#8217;</span>|<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | valid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Neo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Red pill&nbsp;&nbsp; | succeed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | invalid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Neo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Blue pill&nbsp; | fail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; Scenario Authenticate the current user <span class="kwrd">for</span> <span class="str">&#8216;an account&#8217;</span><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Given I did authenticate the current user <span class="kwrd">as</span> a valid user<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; When I request authentication <span class="kwrd">for</span> <span class="str">&#8216;an account&#8217;</span> with the current user<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Then the process should <span class="str">&#8216;fail or succeed&#8217;</span><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Example accounts :<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | <span class="str">&#8216;an account&#8217;</span> | <span class="str">&#8216;fail or succeed&#8217;</span> |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; |&nbsp; AccountA&nbsp;&nbsp;&nbsp; | succeed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; |&nbsp; AccountB&nbsp;&nbsp;&nbsp; | fail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br /><br />&nbsp;&nbsp;&nbsp; Scenario Transfer AAm between 2 accounts <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Given I did authenticate the current user <span class="kwrd">for</span> AccountA<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; When I transfer AAm from AccountA to AccountB with the current user<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Then the balance of AccountA should be BBm&nbsp; <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Then the balance of AccountB should be CCm&nbsp; <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Then the process should <span class="str">&#8216;fail or succeed&#8217;</span><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Example <span class="kwrd">for</span> the transfer<br /><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;-+&#8212;-+&#8212;-+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | AA | BB | CC | <span class="str">&#8216;fail or succeed&#8217;</span> |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;-+&#8212;-+&#8212;-+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; |&nbsp; 1 |&nbsp; 2 |&nbsp; 3 | succeed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; |&nbsp; 2 |&nbsp; 1 |&nbsp; 4 | succeed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; |&nbsp; 3 |&nbsp; 0 |&nbsp; 5 | succeed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; |&nbsp; 4 |&nbsp; 3 |&nbsp; 2 | fail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;-+&#8212;-+&#8212;-+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+<br /></div></p>
+<h3>Appendix B : the resulting output of my runner:</h3>
+<p>Aubergine Console Runner - Core bvba - Tom Janssens 2009<br /><br />Processing file(s) : accounts\stories\*.txt<br />&nbsp; Processing file : C:\Projecten\Be.Corebvba.Aubergine\Be.Corebvba.Aubergine.ConsoleRunner\bin\Debug\accounts\stories\Transfer_money_between_accounts.txt<br /><br />&nbsp;&nbsp;&nbsp; Story Transfer money between accounts =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the balance of AccountA is 3m =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the balance of AccountB is 2m =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the owner of AccountA is the current user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scenario Authenticate the current user as a valid user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the name of the current user is Neo =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the password of the current user is Red pill =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When I request authentication for the current user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the process should succeed =&gt;OK<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scenario Authenticate the current user as a invalid user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the name of the current user is Neo =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the password of the current user is Blue pill =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When I request authentication for the current user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the process should fail =&gt;OK<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scenario Authenticate the current user for AccountA =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given I did authenticate the current user as a valid user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When I request authentication for AccountA with the current user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the process should succeed =&gt;OK<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scenario Authenticate the current user for AccountB =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given I did authenticate the current user as a valid user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When I request authentication for AccountB with the current user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the process should fail =&gt;OK<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scenario Transfer 1m between 2 accounts =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given I did authenticate the current user for AccountA =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When I transfer 1m from AccountA to AccountB with the current user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the balance of AccountA should be 2m =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the balance of AccountB should be 3m =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the process should succeed =&gt;OK<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scenario Transfer 2m between 2 accounts =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given I did authenticate the current user for AccountA =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When I transfer 2m from AccountA to AccountB with the current user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the balance of AccountA should be 1m =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the balance of AccountB should be 4m =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the process should succeed =&gt;OK<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scenario Transfer 3m between 2 accounts =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given I did authenticate the current user for AccountA =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When I transfer 3m from AccountA to AccountB with the current user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the balance of AccountA should be 0m =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the balance of AccountB should be 5m =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the process should succeed =&gt;OK<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scenario Transfer 4m between 2 accounts =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given I did authenticate the current user for AccountA =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When I transfer 4m from AccountA to AccountB with the current user =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the balance of AccountA should be 3m =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the balance of AccountB should be 2m =&gt;OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the process should fail =&gt;OK</p>
+<p>&nbsp;</p>
+<h3>Appendix C : The context + DSL</h3>
+<p><div class="code">
+&nbsp;&nbsp;&nbsp; <span class="kwrd">internal</span> <span class="kwrd">class</span> AccountContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> User currentUser = <span class="kwrd">new</span> User();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountA = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountB = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> AccountService AccountService = <span class="kwrd">new</span> AccountService();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ProcessStatus LastStatus;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;the (?&lt;member&gt;.+) of (?&lt;instance&gt;.+) is (?&lt;value&gt;.+)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> assignfield(<span class="kwrd">object</span> instance,<span class="kwrd">string</span> member,<span class="kwrd">object</span> <span class="kwrd">value</span>)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; instance.Set(member, <span class="kwrd">value</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;the (?&lt;member&gt;.+) of (?&lt;instance&gt;.+) should be (?&lt;value&gt;.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">bool</span> shouldbefield(<span class="kwrd">object</span> instance, <span class="kwrd">string</span> member, <span class="kwrd">object</span> <span class="kwrd">value</span>)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var obj = instance.Get&lt;<span class="kwrd">object</span>&gt;(member);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> Convert.ChangeType(<span class="kwrd">value</span>, obj.GetType()).Equals(obj);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;I request authentication for (?&lt;user&gt;.+)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> authenticate_for_account_x(User user)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LastStatus = AccountService.AuthenticateUser(user);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;I request authentication for (?&lt;account&gt;.+) with (?&lt;user&gt;.+)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> authenticate_for_account_x(User user, Account account)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LastStatus =&nbsp; AccountService.AuthenticateUserForAccount(account,user);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;I transfer (?&lt;amount&gt;.+) from (?&lt;from&gt;.+) to (?&lt;to&gt;.+) with (?&lt;user&gt;.+)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> transfering_xm_from_a_to_b(<span class="kwrd">decimal</span> amount, Account from, Account to,User user)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LastStatus = AccountService.Transfer(user,amount, from,to);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">bool</span> The_process_should_fail()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> LastStatus.Success == <span class="kwrd">false</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">bool</span> The_process_should_succeed()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> LastStatus.Success == <span class="kwrd">true</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8221;(?&lt;name&gt;Account[AB])&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Account getaccountAB(<span class="kwrd">string</span> name)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">this</span>.Get&lt;Account&gt;(name);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;(?&lt;amount&gt;\d+)(?&lt;ismillion&gt;m?)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">decimal</span> getmillion(<span class="kwrd">decimal</span> amount,<span class="kwrd">string</span>&nbsp; ismillon)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> amount*(ismillon==<span class="str">&#8220;m&#8221;</span>?1m:1);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User the_current_user()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> currentUser;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-12T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 12<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/11/12/aubergine-%28bdd-for-.net%29-v0.06-support-for-parameter-tables-in-given-when-then/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/11/12/aubergine-%28bdd-for-.net%29-v0.06-support-for-parameter-tables-in-given-when-then/" itemprop="url">Aubergine (BDD for .net) v0.06 : Support for Parameter Tables in Given/when/then</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Ok, we keep on going; now we support parameter tables for given/when/then, which are parsed as array members.</p>
+<p>I am now getting very close to full cucumber-like support !!! Oh, I forgot to mention that the &#8220;And&#8221; keyword is also supported now !!</p>
+<p>An example of the new syntax:</p>
+<p><div class="code">
+<br />Context&nbsp;&nbsp;&nbsp; Be.Corebvba.Aubergine.Examples.Website.Contexts.BrowserContext<br />ContextDLL Be.Corebvba.Aubergine.Examples.DLL<br /><br />Story Make sure my website gets enough visibility<br />&nbsp;&nbsp;&nbsp; As a website owner<br />&nbsp;&nbsp;&nbsp; I want to make sure that I get enough visibility<br />&nbsp;&nbsp;&nbsp; So that I can get enough traffic<br /><br />&nbsp;&nbsp;&nbsp; Scenario Search results <span class="kwrd">for</span> <span class="str">&#8216;keywords&#8217;</span> on searchengine should contain <span class="str">&#8216;www.corebvba.be&#8217;</span> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the current url <span class="kwrd">is</span> <span class="str">&#8216;search url&#8217;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When searching <span class="kwrd">for</span> <span class="str">&#8216;keywords&#8217;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the result should contain <span class="str">&#8216;www.corebvba.be&#8217;</span><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Example<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | searchengine | search url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | keywords&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | google&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | http:<span class="rem">//www.google.be/search?q= | BDD .Net&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | bing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | http://www.bing.com/search?q=&nbsp; | core bvba tom&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | bing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | http://www.bing.com/search?q=&nbsp; | Quantum physics&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | faulty link&nbsp; | http://www.googleaaa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | core bvba tom&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+</p></span>
+<p><br />&nbsp;&nbsp;&nbsp; Scenario Search results on google <span class="kwrd">for</span> keywords should contain <span class="str">&#8216;www.corebvba.be&#8217;</span> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the current url <span class="kwrd">is</span> <span class="str">&#8216;http://www.google.be/search?q=&#8217;</span> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When searching <span class="kwrd">for</span> the following keywords<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8211;+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | keywords&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8211;+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | Aubergine |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | BDD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8211;+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the result should contain <span class="str">&#8216;www.corebvba.be&#8217;</span> and the following markup elements<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | type | inner&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | em&nbsp;&nbsp; | BDD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; | em&nbsp;&nbsp; | Aubergine |<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+<br /></div></p>
+<p>And the context :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> BrowserContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Url { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Result { get; set; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">private</span> WebClient wc = <span class="kwrd">new</span> WebClient();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;the current url is &#8216;(?&amp;lt;url&amp;gt;.*)&#8217;&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SetUrl(<span class="kwrd">string</span> url)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Url = url;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;searching for &#8216;(?&amp;lt;keywords&amp;gt;.*)&#8217;&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SearchForKeyWords(<span class="kwrd">string</span> keywords)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result = wc.DownloadString(Url + HttpUtility.UrlEncode(keywords));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;searching for the following keywords&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SearchForKeyWords(<span class="kwrd">string</span>[] keywords)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result = wc.DownloadString(Url + HttpUtility.UrlEncode(<span class="kwrd">string</span>.Join(<span class="str">&#8221; &#8221;</span>,keywords)));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;the result should contain &#8216;(?&amp;lt;myurl&amp;gt;.*)&#8217;&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">bool</span> ResultShouldContain(<span class="kwrd">string</span> myurl)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> (Result??<span class="str">&#8221;&#8221;</span>).Contains(myurl);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;the result should contain &#8216;(?&amp;lt;avalue&amp;gt;.+)&#8217; and the following markup elements&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">bool</span> ResultShouldContain(<span class="kwrd">string</span> avalue,<span class="kwrd">string</span>[] type,<span class="kwrd">string</span>[]inner)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (<span class="kwrd">string</span>.IsNullOrEmpty(Result) ||type.Length==0) <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">false</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (!Result.Contains(avalue)) <span class="kwrd">return</span> <span class="kwrd">false</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">for</span> (var i = 0;i &amp;lt; type.Length ; i++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var searchstring = <span class="kwrd">string</span>.Format(<span class="str">&#8220;&amp;lt;{0}&amp;gt;{1}&amp;lt;/{0}&amp;gt;&#8221;</span>, type[i], inner[i]);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (!Result.Contains(searchstring))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">false</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">true</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>It looks a bit messy, but thats because it is a stupid example. A good example would be loading a repository with some products.</p>
+<p>Download it here !!</p>
+<p><a href="http://www.corebvba.be/blog/file.axd?file=2009%2f11%2fAuberginev0.06.zip">Auberginev0.06.zip (41,70 kb)</a></p>
+<p>Enjoy !!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-12T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 12<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/11/12/aubergine-%28bdd-for-.net%29-v0.05-text-stories-html-custom-output-cmdline-parser/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/11/12/aubergine-%28bdd-for-.net%29-v0.05-text-stories-html-custom-output-cmdline-parser/" itemprop="url">Aubergine (BDD for .net) v0.05 : Text Stories/html & Custom Output/cmdline Parser</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Again a new release !!</p>
+<p>* The stories are now written in text-format; unrecognized beginning of lines are skipped/not processes; example data should begin with/be seperated by &#8220;|&#8221;.<br />* Commandline parser implemented with help</p>
+<h2>Edit 3 : v0.06 arrived</h2>
+<p><a href="http://www.corebvba.be/blog/post/Aubergine-%28BDD-for-net%29-v006-support-for-parameter-tables-in-givenwhenthen.aspx">More info here !!</a></p>
+<p>&nbsp;</p>
+<pre>C:\Projecten\Be.Corebvba.Aubergine\Be.Corebvba.Aubergine.Examples\Lib&amp;gt;ConsoleRunner.exe /h<br />Aubergine Console Runner - Core bvba - Tom Janssens 2009<br /><br />Usage :<br /><br />        ConsoleRunner [wildcard or filename for story file][...] [parameters]<br /><br />Where parameters can be one of the following :<br /><br />         -html<br />                Output to html unordered lists<br /><br />         -fmthdr,-formatheader  XXXX<br />                Header to put before starting the children output; example "&amp;lt;ul&amp;gt;"<br /><br />         -fmt,-formatter  XXXX<br />                Named storyformatter; example "&amp;lt;li&amp;gt;{Type} {Description} &amp;lt;a href='#' title='{StatusInfo}'&amp;gt;{StatusText}&amp;lt;/a<br />&amp;gt;&amp;lt;/li&amp;gt;"<br /><br />         -fmtftr,-formatfooter  XXXX<br />                Footer to put after ending the children output; example "&amp;lt;/ul&amp;gt;"<br /><br />         -h,-?,-help<br />                Show the syntax of the commandline parameters<br /></pre>
+<p>An example story :</p>
+<p><div class="code">
+<br />Context&nbsp;&nbsp;&nbsp; Be.Corebvba.Aubergine.Examples.Website.Contexts.BrowserContext<br />ContextDLL Be.Corebvba.Aubergine.Examples.DLL<br /><br />Story Make sure my website gets enough visibility<br />&nbsp;&nbsp;&nbsp; As a website owner<br />&nbsp;&nbsp;&nbsp; I want to make sure that I get enough visibility<br />&nbsp;&nbsp;&nbsp; So that I can get enough traffic<br /><br />&nbsp;&nbsp;&nbsp; Scenario Search results <span class="kwrd">for</span> keywords on searchengine should contain my url<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the current url <span class="kwrd">is</span> search url<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When searching <span class="kwrd">for</span> keywords<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then the result should contain my url<br />&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | searchengine | search url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | keywords&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | my url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | google&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | http://www.google.be/search?q= | BDD .Net&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | www.corebvba.be |<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | bing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | http://www.bing.com/search?q=&nbsp; | core bvba tom&nbsp;&nbsp;&nbsp; | www.corebvba.be |<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | bing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | http://www.bing.com/search?q=&nbsp; | Quantum physics&nbsp; | www.corebvba.be |<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | faulty link&nbsp; | http://www.googleaaa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | core bvba tom&nbsp;&nbsp;&nbsp; | www.corebvba.be |<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+<br /></div></p>
+<p>The code is still the same :</p>
+<p><div class="code">
+<br /><span class="kwrd">using</span> System;<br /><span class="kwrd">using</span> System.Collections.Generic;<br /><span class="kwrd">using</span> System.Linq;<br /><span class="kwrd">using</span> System.Text;<br /><span class="kwrd">using</span> System.Net;<br /><span class="kwrd">using</span> System.Web;<br /><span class="kwrd">using</span> Be.Corebvba.Aubergine.Model;<br /><br /><span class="kwrd">namespace</span> Be.Corebvba.Aubergine.Examples.Website.Contexts<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> BrowserContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Url { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Result { get; set; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">private</span> WebClient wc = <span class="kwrd">new</span> WebClient();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;the current url is (?&amp;lt;url&amp;gt;.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SetUrl(<span class="kwrd">string</span> url)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Url = url;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;searching for (?&amp;lt;keywords&amp;gt;.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SearchForKeyWords(<span class="kwrd">string</span> keywords)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result = wc.DownloadString(Url + HttpUtility.UrlEncode(keywords));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8220;the result should contain (?&amp;lt;myurl&amp;gt;.*)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">bool</span> ResultShouldContain(<span class="kwrd">string</span> myurl)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> (Result??<span class="str">&#8221;&#8221;</span>).Contains(myurl);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br /></div></p>
+<p>And this is the resulting output (please try to hover over the implementation error of the &#8220;When&#8221; step with your mouse !!</p>
+<h3>Edit : apparently my blog engine team messes up the list layout !!! It are nested list items (although you can not see it here).<br /></h3>
+<p>Processing file(s) : Website\Stories\*.txt</p>
+<ul>
+<li>&nbsp;      
+<ul>
+<li>&nbsp;      
+<ul>
+<li>Story Make sure my website gets enough visibility <a href="#">IMPLEMENTATION ERROR</a> 
+<ul>
+<li>Scenario Search results for BDD .Net on google should contain  www.corebvba.be <a href="#">OK</a> 
+<ul>
+<li>Given the current url is http://www.google.be/search?q= <a href="#">OK</a> </li>
+<li>When searching for BDD .Net <a href="#">OK</a> </li>
+<li>Then the result should contain www.corebvba.be <a href="#">OK</a> </li>
+</ul>
+</li>
+<li>Scenario Search results for core bvba tom on bing should contain  www.corebvba.be <a href="#">OK</a> 
+<ul>
+<li>Given the current url is http://www.bing.com/search?q= <a href="#">OK</a> </li>
+<li>When searching for core bvba tom <a href="#">OK</a> </li>
+<li>Then the result should contain www.corebvba.be <a href="#">OK</a> </li>
+</ul>
+</li>
+<li>Scenario Search results for Quantum physics on bing should contain  www.corebvba.be <a href="#">NOK</a> 
+<ul>
+<li>Given the current url is http://www.bing.com/search?q= <a href="#">OK</a> </li>
+<li>When searching for Quantum physics <a href="#">OK</a> </li>
+<li>Then the result should contain www.corebvba.be <a href="#">NOK</a> </li>
+</ul>
+</li>
+<li>Scenario Search results for core bvba tom on faulty link should contain  www.corebvba.be <a href="#">IMPLEMENTATION ERROR</a> 
+<ul>
+<li>Given the current url is http://www.googleaaa <a href="#">OK</a> </li>
+<li>When searching for core bvba tom <a title="ArgumentException:URI formats are not supported." href="#">IMPLEMENTATION  ERROR</a> </li>
+<li>Then the result should contain www.corebvba.be <a href="#">NOK</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+Processing file :  C:\Projecten\Be.Corebvba.Aubergine\Be.Corebvba.Aubergine.Examples\bin\Release\Website\Stories\Make_sure_my_Website_gets_enough_traffic.txt 
+</ul>
+<p>This is the postbuildstep now :</p>
+<p><div class="code">
+<br /><span class="str">&#8221;$(ProjectDir)\lib\ConsoleRunner.exe&#8221;</span> Accounts\Stories\*.txt Website\Stories\*.txt -html &gt; <span class="str">&#8221;$(TargetDir)output.html&#8221;</span><br /><span class="str">&#8221;$(TargetDir)output.html&#8221;</span><br />exit 0<br /></div></p>
+<p>Include all the stories/txt-file in your project with the option of &#8220;copy to output directory&#8221; = &#8220;always&#8221; on each file&#8230;</p>
+<p>More details/a codeproject article update will follow later&#8230;</p>
+<p><a href="http://www.corebvba.be/blog/file.axd?file=2009%2f11%2fAuberginev0.05.zip">Auberginev0.05.zip (24,86 kb)</a></p>
+<h3>Edit 2 : Apparently the reference is wrong (rereference Be.corebvba.aubergine.dll under the lib folder)<br /></h3>
+<p>&nbsp;</p>
+<p>Enjoy !!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-09T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 9<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/11/09/published-a-new-article-on-codeproject-getting-started-with-bdd-%2B-new-version-of-aubergine/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/11/09/published-a-new-article-on-codeproject-getting-started-with-bdd-%2B-new-version-of-aubergine/" itemprop="url">Published a New Article on CodeProject : Getting Started With BDD + New Version of Aubergine</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Hi again,</p>
+<p>I just published a brand <a href="http://www.codeproject.com/KB/library/GettingStartedWithBDD.aspx">new article on CodeProject : Getting started with BDD</a>.</p>
+<p>I also modified my Aubergine Framework a bit by adding a new feature : automatic case-insensitive DSL enum conversion.</p>
+<p>You can download the latest version here (it also contains&nbsp; the example for codeproject )</p>
+<p>&nbsp;</p>
+<p><a href="http://www.corebvba.be/blog/file.axd?file=2009%2f11%2fAubergine_v0.04.zip">Aubergine_v0.04.zip (18,72 kb)</a></p>
+<p>Enjoy !!</p>
+<h2>Edit</h2>
+<p>Since the article state on CodeProject is still &#8220;Pending&#8221;, I simply posted it in the pages section of this blog; you <a href="http://www.corebvba.be/blog/page/Getting-started-with-BDD-%28behavior-driven-development%29-in-Net.aspx">can read it here</a>.</p>
+<h2>Edit #2</h2>
+<p><a href="http://www.corebvba.be/blog/post/Aubergine-%28BDD-for-net%29-v005-text-storieshtml-custom-outputcmdline-parser.aspx">v0.05 is released !!</a></p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-07T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 7<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/11/07/aubergine-.net-bdd-support-for-named-typed-parameters-%2B-recursive-dsl-%2B-bugfix-%2B-no-more-assertions/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/11/07/aubergine-.net-bdd-support-for-named-typed-parameters-%2B-recursive-dsl-%2B-bugfix-%2B-no-more-assertions/" itemprop="url">Aubergine .Net BDD : Support for Named/typed Parameters + RECURSIVE DSL + Bugfix + No More Assertions</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Ok, I had some ideas this morning when I woke up, so I quickly implemented them.</p>
+<h3><br /></h3>
+<h3>Changes (v0.02)<br /></h3>
+<p>Here is the change_log for the new version :</p>
+<p><br />&nbsp;&nbsp;&nbsp; * Bugfix given a DSL attribute without a parameter is called<br />&nbsp;&nbsp;&nbsp; * DSL definition changed to named parameters/typeconverters</p>
+<p><a href="http://www.corebvba.be/blog/file.axd?file=2009%2f11%2fBe.Corebvba.Aubergine.Examples_v0.02.zip">Be.Corebvba.Aubergine.Examples_v0.02.zip (16,62 kb)</a></p>
+<p>&nbsp;</p>
+<h3>Edit : v0.03<br /></h3>
+<p>Still going; next changelog :</p>
+<p>&nbsp;&nbsp;&nbsp; * Test Status changed from bool to bool? =&gt; null = test implementation error<br />&nbsp;&nbsp;&nbsp; * No more need for debug.assert; just use &#8220;bool It_should_have(amount x) { return amount==x;}</p>
+<p>So : no more assertions (ASSERTIONS ARE EVIL &gt;:) ), and if a test fails because there is an implementation error, the status will now return a null value instead of false.</p>
+<p><a href="http://www.corebvba.be/blog/file.axd?file=2009%2f11%2fBe.Corebvba.Aubergine.Examplesv0.03.zip">Be.Corebvba.Aubergine.Examplesv0.03.zip (16,87 kb)</a></p>
+<p>&nbsp;</p>
+<h3>Edit : v0.04</h3>
+<p><a href="http://www.corebvba.be/blog/post/Published-a-new-Article-on-CodeProject-Getting-started-with-BDD-2b-new-version-of-aubergine.aspx">look here</a></p>
+<p>&nbsp;</p>
+<h3>Example<br /></h3>
+<p>This has simplified the more complicated DSL definitions a LOT ; check out the new defintion for the AccountContext :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">internal</span> <span class="kwrd">class</span> AccountContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountA = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Account AccountB = <span class="kwrd">new</span> Account();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Exception WhenException;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="preproc">#region</span> Given<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;(?&amp;lt;account&amp;gt;Account[AB])_has_(?&amp;lt;amount&amp;gt;\d+)_m&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> accountX_has_Ym(Account account, <span class="kwrd">decimal</span> amount)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; account.Balance = amount * 1m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;the_current_user_is_authenticated_for_(?&amp;lt;account&amp;gt;Account[AB])&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> authenticate_for_account_x(Account account)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; account.IsAuthenticated = <span class="kwrd">true</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #endregion<br /><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="preproc">#region</span> When<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;transfering_(?&amp;lt;amount&amp;gt;\d+)_m_from_(?&amp;lt;from&amp;gt;Account[AB])_to_(?&amp;lt;to&amp;gt;Account[AB])&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> transfering_xm_from_a_to_b(<span class="kwrd">decimal</span> amount, Account from, Account to)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from.Transfer(amount * 1m, to);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #endregion<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="preproc">#region</span> Then<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">@&#8221;it_should_have_(?&amp;lt;amount&amp;gt;\d+)_m_on_(?&amp;lt;account&amp;gt;Account[AB])&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">bool</span> should_have_Xm_on_AccountY(Account account, <span class="kwrd">decimal</span> amount)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> account.Balance == amount * 1m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">bool</span> it_should_fail_with_error()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> WhenException != <span class="kwrd">null</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #endregion<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="preproc">#region</span> Recursive DSL<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">&#8221;(?&amp;lt;name&amp;gt;Account[AB])&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Account getaccountAB(<span class="kwrd">string</span> name)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">this</span>.Get&amp;lt;Account&amp;gt;(name);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #endregion<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>Note the support for typed parameters and also DSL type converters. Due to the implication the expressiveness has changed a lot : <strong>you can now do recursive dsl definitions</strong> !!! I&#8217;ll get in to this when I have more time, but really short : when you call a DSL function, the input string is pushed again to the interpreter. In theory you could define a complete language like this !!!</p>
+<p>In the example above, [DSL(@&#8221;the_current_user_is_authenticated_for_(?&lt;account&gt;Account[AB])&#8221;)] is called, and the result for the group &amp;lt;account&amp;gt; is agina pushed into the DSL engine; if a match is found, it is called, and the result of the function is returned; if not, it tries to do a Convert.ChangeyType(xxx,destintationtype);</p>
+<p>finally for reference the Story as well as the output test results :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_money_between_accounts : Story&lt;AccountContext&gt;<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As_a user;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I_want to_transfer_money_between_accounts;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So_that I_can_have_real_use_for_my_money;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountA_has_3_m;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountB_has_2_m;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Cols(<span class="str">&#8220;xx&#8221;</span>, <span class="str">&#8220;yy&#8221;</span>, <span class="str">&#8220;zz&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(1, 2, 3)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(2, 1, 4)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Data(3, 0, 5)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_xx_m_between_2_accounts : Scenario<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_xx_m_from_AccountA_to_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_yy_m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_zz_m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Transfer_too_much : Scenario<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_4_m_from_AccountA_to_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_3_m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_2_m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_fail_with_error;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Not_authorized_for_transfer : Scenario<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_1_m_from_AccountB_to_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_3_m_on_AccountA;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_2_m_on_AccountB;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_fail_with_error;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>output :</p>
+<p>==STORY================================================================<br />Transfer_money_between_accounts =&gt; OK<br />========================================================================<br />&nbsp;&nbsp; Transfer_1_m_between_2_accounts =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountA_has_3_m =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountB_has_2_m =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_1_m_from_AccountA_to_AccountB =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_2_m_on_AccountA =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_3_m_on_AccountB =&gt; OK<br />&nbsp;&nbsp; Transfer_2_m_between_2_accounts =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountA_has_3_m =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountB_has_2_m =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_2_m_from_AccountA_to_AccountB =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_1_m_on_AccountA =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_4_m_on_AccountB =&gt; OK<br />&nbsp;&nbsp; Transfer_3_m_between_2_accounts =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountA_has_3_m =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountB_has_2_m =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_3_m_from_AccountA_to_AccountB =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_0_m_on_AccountA =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_5_m_on_AccountB =&gt; OK<br />&nbsp;&nbsp; Transfer_too_much =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountA_has_3_m =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountB_has_2_m =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given the_current_user_is_authenticated_for_AccountA =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_4_m_from_AccountA_to_AccountB =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_3_m_on_AccountA =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_2_m_on_AccountB =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_fail_with_error =&gt; OK<br />&nbsp;&nbsp; Not_authorized_for_transfer =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountA_has_3_m =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Given AccountB_has_2_m =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When transfering_1_m_from_AccountB_to_AccountA =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_3_m_on_AccountA =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_have_2_m_on_AccountB =&gt; OK<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then it_should_fail_with_error =&gt; OK</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+</div>
+<nav id="pagenavi">
+    
+        <a href="/blog/page/8/" class="prev">Prev</a>
+    
+    
+        <a href="/blog/page/10/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

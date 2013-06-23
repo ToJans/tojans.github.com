@@ -1,0 +1,980 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="May 6th, 2009 Comments To Git or Not to Git - Source Control Done Right / Intro and Quick Tutorial Introduction&nbsp; Source control has always been &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/page/11/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-06T00:00:00+02:00" data-updated="true" itemprop="datePublished">May 6<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/05/06/to-git-or-not-to-git-source-control-done-right-intro-and-quick-tutorial/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/05/06/to-git-or-not-to-git-source-control-done-right-intro-and-quick-tutorial/" itemprop="url">To Git or Not to Git - Source Control Done Right / Intro and Quick Tutorial</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h4>Introduction&nbsp;</h4>
+<p>
+<a href="http://en.wikipedia.org/wiki/Revision_control" target="_blank">Source control</a> has always been a really annoying issue for me, since it was either : 
+</p>
+<ul>
+	<li>
+	<div>
+	Too complicated too manage 
+	</div>
+	</li>
+	<li>
+	<div>
+	Too restricted 
+	</div>
+	</li>
+	<li>
+	<div>
+	Too slow 
+	</div>
+	</li>
+	<li>
+	<div>
+	Too much a hassle to setup 
+	</div>
+	</li>
+	<li>
+	<div>
+	Badly integrated 
+	</div>
+	</li>
+	<li>
+	<div>
+	One or more of the above 
+	</div>
+	</li>
+</ul>
+<p>
+I have been working with <a href="http://subversion.tigris.org/" target="_blank">Subversion</a>/<a href="http://tortoisesvn.tigris.org/" target="_blank">TortoiseSVN </a>for a little while, but I was noticing that I really had to force myself into using the source control repository. A few times in the last month I noticed that I did not do enough commits, forcing me into re-implementing stuff again. I was also lacking a very good <a href="http://en.wikipedia.org/wiki/Diff" target="_blank">diff tool </a>to compare different versions 
+</p>
+<p>
+I have been looking for different alternatives every now and then, but without much success, until recently&#8230; 
+</p>
+<h4>The holy grail : git</h4>
+<p>
+I found <a href="http://git-scm.com/" target="_blank">git</a>.<br />
+Getting started with&nbsp;git has been a real pleasure. Setup/Commits/history checking is all really easy with git. As a proof of concept&nbsp;I will&nbsp;show you a small walkthrough in a Windows environment. 
+</p>
+<h5>1. Download (g)it</h5>
+<p>
+Download the windows version from here : <a href="http://code.google.com/p/msysgit/downloads/list">http://code.google.com/p/msysgit/downloads/list</a><br />
+(I downloaded <a href="http://msysgit.googlecode.com/files/Git-1.6.2.2-preview20090408.exe" target="_blank">the latest preview</a>.)<br />
+Use the default install. 
+</p>
+<h5>2. Create git repository</h5>
+<p>
+Start windows explorer; right click on the source folder and choose &quot;Git Bash here&quot;.<br />
+You will then get a unix-like prompt. Now type 
+</p>
+<pre>
+$ git init
+$ git add .
+$ git commit -m &quot;Initial checkin&quot;
+$ exit
+</pre>
+<p>
+That&#39;s it. You can now start modifying your code as you wish. 
+</p>
+<h5>3. Save/check in&nbsp;changes, a.k.a. commit&nbsp;</h5>
+<p>
+Start windows explorer; right click on the source folder and choose &quot;Git GUI here&quot;. A new app will start. 
+</p>
+<p>
+On the left side you will see what changes are available : staged and unstaged changes. If you do not see any files here this means that you have not changed anything since the last commit. Go ahead and change something.<br />
+You can leave this window open, and just press the &quot;Rescan&quot; button to refresh in order to look for changed files. 
+</p>
+<p>
+You can click on any of the listed changes to see the details. If a change is sourcecode that has been changed you will see the lines that are removed in red, and the lines that are added in green. 
+</p>
+<p>
+Only files that are listed in the &quot;Staged changes&quot; box will be commited on pressing commit.<br />
+You can stage a file (make it committable) by clicking on it, and pressing CTRL-T (or commit/stage in the menu). 
+</p>
+<p>
+If you have all your files that you want to commit in the&nbsp;&quot;Staged changes&quot; box, you just need to enter a short description i.e. &quot;* fixed bug abc&quot;, and press the &quot;Commit&quot; button. That&#39;s it, your changes are checked in. 
+</p>
+<p>
+A small remark :<br />
+I personally use the following description convention:<br />
+- &quot;+&quot; if I add something (feature)<br />
+- &quot;*&quot; if I change something (bugfix etc) <br />
+- &quot;-&quot; if I remove something (redundant code) 
+</p>
+<p>
+So&nbsp;the history&nbsp;will basicly look like this after three commits : 
+</p>
+<pre>
++ Webdav support implemented
+* illegal exception when deleting a non-empty folder
+- Removed Log4Net
+</pre>
+<h5>4. View commit log</h5>
+<p>
+If you want to view&nbsp;the commit log, you can do it like this : 
+</p>
+<p>
+Start windows explorer; right click on the source folder and choose &quot;Git Bash here&quot;. Then type : 
+</p>
+<p>
+$ git log 
+</p>
+<p>
+You will get a long alphanumeric key and the description. An example : 
+</p>
+<pre>
+commit 4f62ca99c026e0c7ee2bd2beb8f39f232c0d6072
+Author: Tom Janssens &lt;Tom@xx&gt;Date:&nbsp;&nbsp; Wed May 6 11:04:55 2009 +0200
+</pre>
+<pre>
+&nbsp;&nbsp;&nbsp; Installer fix
+</pre>
+<pre>
+commit 6f8a7888b223d9aee7adbef105aca9a0adc8eb11
+Author: Tom Janssens &lt;Tom@xx&gt;Date:&nbsp;&nbsp; Wed May 6 10:53:32 2009 +0200
+</pre>
+<pre>
+&nbsp;&nbsp;&nbsp; Make sure necessary DLL&#39;s are deployed to the build folder
+</pre>
+<pre>
+commit a289f8a70b961f83110c96a91e9ed97edb900909
+Author: Tom Janssens &lt;Tom@xx&gt;Date:&nbsp;&nbsp; Wed May 6 10:28:53 2009 +0200
+</pre>
+<pre>
+&nbsp;&nbsp;&nbsp; Inital checkin from http://xx.unfuddle.com/svn/xx_htm/tags/v1.3.0.3404/
+</pre>
+<p>
+&nbsp;
+</p>
+<h5>5. Check out a version</h5>
+<p>
+If you want to check out a certain version, you you must know the commit code from the log (step 4). You can then check out a version by typing 
+</p>
+<p>
+$ git&nbsp;checkout XXXXXXX 
+</p>
+<p>
+Where &quot;XXXXXXX&quot; is the first few characters of the commit code in the log. Since this is not very user friendly, we can fix this by tagging : 
+</p>
+<h5>6. Tag a version</h5>
+<p>
+If you have a version that is to be publicly released you can tag it. Later on you can reference to this version with this tag. You can create a tag like this : 
+</p>
+<p>
+Start windows explorer; right click on the source folder and choose &quot;Git Bash here&quot;. Then type : 
+</p>
+<p>
+&#8212;&nbsp;create a tag : <br />
+$ git tag v1.2.3.4&nbsp;<br />
+&#8212; delete a tag : <br />
+$ git tag -r v1.2.3.4<br />
+&#8212; show differences between the current version and a tagged version (type &quot;:q&quot; to quit): <br />
+$ git diff v1.2.3.4<br />
+&#8212; check out the tagged version (do not forget to commit your current changes first) : <br />
+$ git checkout v1.2.3.4 .<br />
+&#8212; check out the last version<br />
+$ git checkout .<br />
+$ exit 
+</p>
+<h5>7.&nbsp;Branching and merging(advanced)</h5>
+<p>
+Basicly branching allows you to have different versions of the source simultaneously (for example specific code for a client).<br />
+By default you start in a branch called &quot;master&quot;. 
+</p>
+<p>
+To create a new branch called &quot;experimental&quot; we type the follwing in the git console: 
+</p>
+<p>
+$ git&nbsp;branch experimental 
+</p>
+<p>
+You can checkout code from different branches like this : 
+</p>
+<p>
+$ git&nbsp;checkout experimental<br />
+$ git&nbsp;checkout master 
+</p>
+<p>
+If you want to merge you current branch (master) with code from another branch (experimental) you can do it like this:<br />
+$ git&nbsp;checkout master<br />
+$ git merge experimental 
+</p>
+<p>
+If you want to&nbsp;undo this:<br />
+$ git reset 
+</p>
+<h5>Update :</h5>
+<p>
+Appearantly it is not advised to do any work on the master branch, so you should always create a branch for everything you do. There is however a very helpfull command : &quot;stash&quot;.<br />
+Suppose you are working on a branch, but would like to switch to another branch without commiting your changes, and getting back later to the original branch :<br />
+$ git&nbsp;checkout experminental<br />
+&#8211; some changes, until someone wants you to adjust something on the master branch<br />
+$ git stash<br />
+$ git checkout master<br />
+&#8211; do your stuff<br />
+$ git commit -m &quot;some stuff&quot;<br />
+&#8211; go back to the last state of the experimental branch, including non-commited files <br />
+$ git&nbsp;checkout experminental<br />
+&#8211; apply the master changes to the experimental branch :<br />
+$ git pull master<br />
+<br />
+</p>
+<p>
+There is a lot more to this, but this should get you started. 
+</p>
+<h5>8. Other tools</h5>
+<p>
+There are a lot of ins and outs in git that I do not know about, but these should cover the basics. To get help just type the following in the git console : 
+</p>
+<p>
+$ git&nbsp;help 
+</p>
+<h4>In conclusion</h4>
+<p>
+While this was meant to be a really short introduction to git, it seems to be longer then intially planned. However, I am hoping that this article is helping people considering to switch to git, or looking for a simple source control system. 
+</p>
+<p>
+For me, the answer to &quot;To git or not to git&quot;, is definately &quot;to git&quot; 
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-14T00:00:00+02:00" data-updated="true" itemprop="datePublished">Apr 14<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/04/14/bug-fix-jquery-uploadify-internet-explorer-flash-undefined-error/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/04/14/bug-fix-jquery-uploadify-internet-explorer-flash-undefined-error/" itemprop="url">Bug Fix : JQuery Uploadify / Internet Explorer / Flash Undefined Error</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>
+I had the problem that the <a href="http://www.corebvba.be/blog/admin/Pages/www.uploadify.com">upload component</a> did not work with a client of mine on different versions of IE . 
+</p>
+<p>
+This is appearantly due to the way flash works with dynamic flash components located within form tags in internet explorer.<br />
+The fix is really easy, but it was really nasty to find the cause&#8230; 
+</p>
+<p>
+If your code looks like this : 
+</p>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>$(&quot;#FileToUpload&quot;).fileUpload({&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp; });&nbsp;</code>
+</p>
+<p>
+<code></code><code>&nbsp;&lt;form&gt;&nbsp; &lt;input type=&quot;file&quot; id=&quot;FileToUpload&quot;/&gt;&lt;/form&gt; <br />
+<br />
+</code>just add a new line after &#39;uploadifying&#39; the element : <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+<br />
+FileToUploadUploader=document.getElementById(&quot;FileToUploadUploader&quot;); <br />
+<br />
+</code>So you define a javascript global var with the name of your element+&quot;Uploader&quot;, and assign the element to it&#8230;. 
+</p>
+<p>
+That&#39;s all there is to it&#8230; 
+</p>
+<p>
+&nbsp;
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-07T00:00:00+02:00" data-updated="true" itemprop="datePublished">Apr 7<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/04/07/why-choose-asp.net-mvc-as-a-web-development-platform/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/04/07/why-choose-asp.net-mvc-as-a-web-development-platform/" itemprop="url">Why Choose ASP.NET MVC as a Web Development Platform</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Microsoft has recently released their <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=53289097-73ce-43bf-b6a6-35e00103cb4b&amp;displaylang=en" target="_blank">final version of ASP.NET MVC</a>.</p>
+<p>A few months ago I investigated some time in studying this new framework (while it was in beta 3).<br /> After studying it, Core decided to migrate all current webdevelopment to this new framework, and all future web-based projects will be written in this technology as well.</p>
+<p>Since most people do not know what ASP.NET MVC is and why it should be used in favor of regular ASP.NET,I would like to clarify this choice a little bit.</p>
+<p>For the technical people, I am posting a link to an in-depth introduction about ASP.NET MVC, which will let you decide for yourself :<br /> <a href="http://channel9.msdn.com/pdc2008/PC21/" target="_blank">An in-depth introduction to ASP.Net MVC bij Phil Haacked (PM for ASP.NET MVC)</a></p>
+<p>For the less-technical people, I can only give you a few pointers, since it is a technical framework :<br /> ASP.Net MVC is a new <a href="http://haacked.com/archive/2009/04/01/aspnetmvc-open-source.aspx" target="_blank">community-driven open framework</a> by Microsoft that leverages ASP.NET to a very &#8221;<a href="http://en.wikipedia.org/wiki/Web_2.0" target="_blank">WEB 2.0</a>&#8220;-friendly,&#8221;<a href="http://rubyonrails.org/" target="_blank">ruby on rails</a>&#8220;-like toolkit.<br /> The biggest assets are :<br /> - <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a> (Mode-View-Controller) paradigm : makes sure that your sourcecode is very-well structured, and usually almost the same for each ASP.NET MVC project. In other words, if a developper knows ASP.NET MVC, the project will look familiar to him/her&#8230;<br /> - Modularity : makes sure you can exchange components for other ones without many hassle. (I.e. to extend functionality/fix bugs/improve performance.)<br /> - The layout/business logic/back-end etc can be developed in parallel with each other without much inteference.<br /> <br /> While it is still possible to make a mess of your code, in ASP.Net MVC it is less likely to happen.<br /> Please note that <strong>this framework does not replace a development framework or the need for a decent software architecture</strong>; here at Core, for example, we still develop our business-layers in a separate project (using IOC/Castle windsor and IRepository&lt;T&gt;/Fluent-NHibernate/Linq to name a few buzzwords).</p>
+<p>I do hope this clarifies the choice for ASP.NET MVC a little bit.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-26T00:00:00+01:00" data-updated="true" itemprop="datePublished">Jan 26<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/01/26/migration-from-dasblog-to-blogengine.net/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/01/26/migration-from-dasblog-to-blogengine.net/" itemprop="url">Migration From Dasblog to BlogEngine.NET</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>
+After a few years, I changed my blogging engine&#8230;. now I &#39;ll have to setup a few things again (i.e. themes etc&#8230;) but I hope it is worth the effort&#8230; 
+</p>
+<p>
+There is still a lot todo (i.e. layout etc), but it&#39;ll have to do for now&#8230;
+</p>
+<p>
+More on this later&#8230;
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-26T00:00:00+01:00" data-updated="true" itemprop="datePublished">Jan 26<span>th</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/01/26/asp.net-mvc-imagehandler-for-thumbnails/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/01/26/asp.net-mvc-imagehandler-for-thumbnails/" itemprop="url">ASP.NET MVC ImageHandler for Thumbnails</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<span style="font-size: 10pt; color: #003300; font-family: Verdana">As some of you might know, I am a really big fan of community-driven technologies. I also like to contribute myself in order to exchange new ideas and meet new people with common interests.</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">Since I am quite new to ASP.NET MVC, I was thinking I would submit my first contribution : handling all your images through a custom actionresult/controller.<br />
+This allows me to do several things : </span>
+<ul>
+	<li>uniform access to images</li>
+	<li>possibility for custom types (this example ALWAYs renders as PNG)</li>
+	<li>generation of thumbnails.</li>
+</ul>
+<p>
+<span style="font-size: 10pt; color: #003300; font-family: Verdana">Let&#39;s start with the code for the ActionResult (initially inspired by/copy-pasted&nbsp;from <a href="http://blog.maartenballiauw.be/post/2008/05/ASPNET-MVC-custom-ActionResult.aspx"><font color="#800080">this</font></a>&nbsp;, but since the new RC it is my own code):</span> 
+</p>
+<span style="font-size: 10pt; color: #003300; font-family: Verdana"><font size="2" color="#0000ff"><font size="2" color="#0000ff"></font></font></span><span style="font-size: 10pt; color: #003300; font-family: Verdana"><font size="2" color="#0000ff"><font size="2" color="#0000ff"><font size="2" color="#0000ff"><font size="2" color="#0000ff">
+<p>
+using<font size="2"><font color="#000000"> System.IO;<br />
+</font></font>using<font size="2"><font color="#000000"> System.Web.Mvc;<br />
+</font></font><font size="2" color="#0000ff"><font size="2" color="#0000ff">using</font></font><font size="2"><font color="#000000"> System.Drawing;<br />
+<font size="2" color="#0000ff"><font size="2" color="#0000ff">using</font></font><font size="2"> System.Drawing.Imaging;</font><br />
+<br />
+</font></font><font size="2" color="#0000ff"><font size="2" color="#0000ff">namespace</font></font><font size="2"><font color="#000000"> Be.Corebvba.MVC<br />
+</font>{<br />
+&nbsp; </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">public</font></font><font size="2"> </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">class</font></font><font size="2"> </font><font size="2" color="#2b91af"><font size="2" color="#2b91af">ImageResult</font></font><font size="2"> : </font><font size="2" color="#2b91af"><font size="2" color="#2b91af">FileStreamResult</font></font><font size="2"> <br />
+&nbsp; {</font> <br />
+&nbsp;&nbsp;&nbsp; <font size="2" color="#0000ff"><font size="2" color="#0000ff">public</font></font><font size="2"> ImageResult(</font><font size="2" color="#2b91af"><font size="2" color="#2b91af">Image</font></font><font size="2"> input):</font><font size="2" color="#0000ff"><font size="2" color="#0000ff">this</font></font><font size="2">(input,input.Width,input.Height)</font><font size="2"> { } </font>
+</p>
+</font></font></font></font><font size="2" color="#0000ff"><font size="2" color="#0000ff">&nbsp;&nbsp;&nbsp; public</font></font><font size="2"> ImageResult(</font><font size="2" color="#2b91af"><font size="2" color="#2b91af">Image</font></font><font size="2"> input, </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">int</font></font><font size="2"> width,</font><font size="2" color="#0000ff"><font size="2" color="#0000ff">int</font></font><font size="2"> height) : <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2"></font><font size="2" color="#0000ff"><font size="2" color="#0000ff">base</font></font><font size="2">(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GetMemoryStream(input,width,height,</font><font size="2" color="#2b91af"><font size="2" color="#2b91af">ImageFormat</font></font><font size="2">.Png),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2" color="#a31515"><font size="2" color="#a31515">&quot;image/png&quot;</font></font><font size="2">)</font><font size="2">&nbsp;<br />
+&nbsp;&nbsp;&nbsp;{ } <br />
+<br />
+&nbsp;&nbsp;&nbsp; </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">static</font></font><font size="2"> </font><font size="2" color="#2b91af"><font size="2" color="#2b91af">MemoryStream</font></font><font size="2"> GetMemoryStream(</font><font size="2" color="#2b91af"><font size="2" color="#2b91af">Image</font></font><font size="2"> input,</font><font size="2" color="#0000ff"><font size="2" color="#0000ff">int</font></font><font size="2"> width,</font><font size="2" color="#0000ff"><font size="2" color="#0000ff">int</font></font><font size="2"> height,</font><font size="2" color="#2b91af"><font size="2" color="#2b91af">ImageFormat</font></font><font size="2"> fmt)</font><font size="2"> <br />
+&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="2" color="#008000"><font size="2" color="#008000">// maintain aspect ratio</font></font> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2"></font><font size="2" color="#0000ff"><font size="2" color="#0000ff">if</font></font><font size="2"> (input.Width &gt; input.Height)</font><font size="2"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; height = input.Height * width / input.Width;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#0000ff"><font size="2" color="#0000ff">else</font></font> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2">width = input.Width * height / input.Height; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">var</font></font><font size="2"> bmp = </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">new</font></font><font size="2"> </font><font size="2" color="#2b91af"><font size="2" color="#2b91af">Bitmap</font></font><font size="2">(input, width, height);</font><font size="2"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="2" color="#0000ff"><font size="2" color="#0000ff">var</font></font><font size="2"> ms = </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">new</font></font><font size="2"> </font><font size="2" color="#2b91af"><font size="2" color="#2b91af">MemoryStream</font></font><font size="2">();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bmp.Save(ms, </font></font><font size="2" color="#2b91af"><font size="2" color="#2b91af">ImageFormat</font></font><font size="2">.Png);</font><font size="2"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ms.Position = 0; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">return</font></font><font size="2"> ms;</font><font size="2"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp; } <br />
+} 
+<p>
+<span style="font-size: 10pt; color: #003300; font-family: Verdana"></span>
+</p>
+</font></span><span style="font-size: 10pt; color: #003300; font-family: Verdana">The code&nbsp;for the controller is pretty straighforward as well :<br />
+<br />
+</span><span style="font-size: 10pt; color: blue; font-family: Verdana">public</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">ActionResult</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> ThumbImage(</span><span style="font-size: 10pt; color: blue; font-family: Verdana">int</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> id,</span><span style="font-size: 10pt; color: blue; font-family: Verdana">int</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> width,</span><span style="font-size: 10pt; color: blue; font-family: Verdana">int</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> height)<br />
+{<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">var</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> d = _rDocument.GetById(id);<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">Image</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> i=</span><span style="font-size: 10pt; color: blue; font-family: Verdana">null</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">;<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">try<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: #003300; font-family: Verdana">{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i = </span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">Image</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">.FromFile(d.PhysicalFilename);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">return</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: blue; font-family: Verdana">new</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> Be.Corebvba.MVC.</span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">ImageResult</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">(i, width, height);<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">catch</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> (</span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">Exception</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> ex)<br />
+&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i = </span><span style="font-size: 10pt; color: blue; font-family: Verdana">new</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">Bitmap</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">(1, 1);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">return</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: blue; font-family: Verdana">new</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> Be.Corebvba.MVC.</span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">ImageResult</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">(i,1,1);<br />
+&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">finally<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: #003300; font-family: Verdana">{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">if</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> (i != </span><span style="font-size: 10pt; color: blue; font-family: Verdana">null</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">) i.Dispose();<br />
+&nbsp;&nbsp; }<br />
+}<br />
+<br />
+</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">This does need some better errorhandling, but I suppose you get the idea&#8230; (The _rDocument is a pointer to a Document repository which stores physical files. If you access your images from a database, you could simply use Image.FromStream instead of an Image.FromFile .</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">In my document i reference the image as follows, et voila, automatic thumbnails&nbsp;:<br />
+<br />
+</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">&lt;% </span><span style="font-size: 10pt; color: blue; font-family: Verdana">var</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> imgurl = Url.Action(</span><span style="font-size: 10pt; color: #a31515; font-family: Verdana">&quot;ThumbImage&quot;</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">, </span><span style="font-size: 10pt; color: #a31515; font-family: Verdana">&quot;Documents&quot;</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">, </span><span style="font-size: 10pt; color: blue; font-family: Verdana">new</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> { id = d.ID,width=100,height=100 }); %&gt;<br />
+</span><span style="font-size: 10pt; color: blue; font-family: Verdana">&lt;</span><span style="font-size: 10pt; color: #a31515; font-family: Verdana">img</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: red; font-family: Verdana">src</span><span style="font-size: 10pt; color: blue; font-family: Verdana">=&quot;</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">&lt;%=imgurl %&gt;</span><span style="font-size: 10pt; color: blue; font-family: Verdana">&quot;</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: red; font-family: Verdana">style</span><span style="font-size: 10pt; color: blue; font-family: Verdana">=&quot;</span><span style="font-size: 10pt; color: red; font-family: Verdana">float</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">:</span><span style="font-size: 10pt; color: blue; font-family: Verdana">left&quot;/&gt;</span><font face="Times New Roman" size="3">&nbsp;</font> 
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-29T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 29<span>th</span>, 2008</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2008/11/29/core-past-current-future-%3B-exit-freelance-consultancy-enter-project-business-development/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2008/11/29/core-past-current-future-%3B-exit-freelance-consultancy-enter-project-business-development/" itemprop="url">Core - Past, Current & Future ; Exit Freelance Consultancy, Enter Project & Business Development</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Believe it or not : exit consultancy, enter projects &amp; business development !!</h3>
+<p>
+After doing some consultancy I have decided to stop doing freelance consultancy, and start focussing on doing projects and business development&nbsp;again. Here is a little motivation :
+</p>
+<h3>The past &amp; current: freelance&nbsp;consultancy </h3>
+<p>
+I have enjoyed working&nbsp;for these companies, and met a lot of new collegues and friends while doing freelance consultancy. I also learned a lot during past experiences.<br />
+<br />
+But,&nbsp;from all these experiences,&nbsp;I especially learned that I am more&nbsp;suitable as a project/business developer; i.e. we develop a new product, or you tell me what your problem is, and&nbsp;we will implement a software solution for this.
+</p>
+<h3>The future: project and business development</h3>
+<p>
+Since I have recieved a few project requests from my business and friends network, and my contracted&nbsp;period finished&nbsp;at the end of this year, I decided not to sign for another year (my apologies to all my collegues @ EBL, I enjoyed working with you all).
+</p>
+<p>
+My current prospects and customers are all part of my business and personal network, and for all currently planned projects our cooperation is based on past experiences, trust as well as commitment, which was all built up step by step in the past.<br />
+<br />
+If you think we might create some added value together one way or another, do not hesitate to contact me.
+</p>
+<p>
+I have also met a few people in my consultancy years with whom I would almost certainly like to &#39;do something&#39; with in the (near) future. Some very early brainstorms allready led to some potentially great ideas, but a great idea is useless if you do not do anything with it. Probably more on this later on.
+</p>
+<p>
+Also, based on my current workload, I am very interested in meeting people who would like to do some freelance .net software development for potential software projects. Please do note that I work on a task basis, i.e. &quot;this is what I need, and this is what will pay for it&quot;. Some people might have problems with this, while others love to work like this.
+</p>
+<p>
+<img src="http://users.pandora.be/bull/got/hk/carport-na.jpg" alt="My future office ;)" title="This is my future office ;)" width="410" height="331" />
+</p>
+<p>
+&nbsp;
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-06T00:00:00+01:00" data-updated="true" itemprop="datePublished">Jan 6<span>th</span>, 2008</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2008/01/06/base-data-comfort-and-lg-viewty-%28ku990%29-i-am-a-follower/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2008/01/06/base-data-comfort-and-lg-viewty-%28ku990%29-i-am-a-follower/" itemprop="url">Base Data Comfort and LG Viewty (KU990) : I Am a Follower</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>
+After having some&nbsp;bad experiences&nbsp;with my previous mobile provider -the biggest one on the Belgian market, you all know who- I decided to move over my mobile services to the same provider as my telephone and Internet : <a href="http://www.telenet.be">telenet;</a> they have the advantage that one does not need to pay any extra membership fees for mobile services ; the cost was on a pay-per-use basis. 
+</p>
+<p>
+While the <a href="http://telenet.be/314/0/1/en/residential/mobile-telephony/telenet-mobile.html">telenet mobile service</a> was actually pretty good value-for-money (as far as I recall they are a reseller for <a href="http://www.mobistar.be">mobistar</a>), they had one big disadvantage : this was only a speech and texting service, and no mobile surfing at all. 
+</p>
+<p>
+<img style="float: left; width: 260px; height: 204px" src="/blog/content/binary/lg-2dviewty.jpg" border="0" alt="" width="260" height="204" />Since I recently bought an <a href="http://en.wikipedia.org/wiki/Viewty">LG Viewty (KU990) mobile</a>, and am an avid user and fan of it, I decided to look for a new provider that offered some kind of data service at an acceptable price, so I could use the phone at it&#39;s full potential (web surfing and email). 
+</p>
+<p>
+For a while, it looked like this would be like finding a needle in a haystack; most of the services were either cheap but to limited (i.e. 10MB/month for 5/10 &euro;) or to expensive for my occasional usage (25/50&euro;/month). 
+</p>
+<p>
+Luckily, while I was looking around, Base launched the perfect solution : <a href="http://www.base.be/BASE/en/Home/Private/BASE_Data_Services/BASE_Data/Tariffs/page.aspx/3184">Base Data Comfort.</a> 
+</p>
+<p>
+With this service, they <strong>offer 200MB download and upload/month at </strong><a href="http://en.wikipedia.org/wiki/Enhanced_Data_Rates_for_GSM_Evolution"><strong>EDGE</strong></a><strong> speeds, at a single cost of 10&euro;/month.</strong> 
+</p>
+<p>
+This is actually a first in Belgium, and is so new that even in the Base shop I&nbsp;registered, they never heard about it. Base does not seem to make a lot of noise about this, but I personally think this might be one of the key selling points to become a Base member; for me this was the key factor. 
+</p>
+<p>
+At this moment I am really happy with this solution, but of course it is a little bit too early to&nbsp;build&nbsp;a final verdict. 
+</p>
+<p>
+There are only two disadvantages right now :<br />
+-&nbsp;Base does not offer <a href="http://en.wikipedia.org/wiki/UMTS">UMTS</a> or&nbsp;<a href="http://en.wikipedia.org/wiki/High-Speed_Downlink_Packet_Access">HSDPA</a>. However,&nbsp;browsing seems to work at an acceptable speed, and :<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a) the chance that HSDPA is available within my region is probably non-existent.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b) the difference between UMTS and EDGE is minimal as far as i can tell.<br />
+- The&nbsp;other disadvantage at this moment was that I needed to sign a contract for at least 24 months.&nbsp;But, even if I might decide to break up my contract, the fee I will need to pay will be less than the one I needed to pay to <a href="http://www.proximus.be">Proximus</a>&nbsp;when I cancelled my contract. 
+</p>
+<p>
+&nbsp;
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-07T00:00:00+01:00" data-updated="true" itemprop="datePublished">Dec 7<span>th</span>, 2007</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2007/12/07/using-aop-postsharp-to-implement-a-function-cache/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2007/12/07/using-aop-postsharp-to-implement-a-function-cache/" itemprop="url">Using AOP / PostSharp to Implement a Function Cache</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>
+I&nbsp;just posted <a href="http://www.codeproject.com/KB/cs/ps-custom-attributes-2.aspx?msg=2349925#xx2349925xx">this comment</a> on codeproject : 
+</p>
+<p>
+I just discovered this a few hours ago, and I allready wrote a small but very helpfull attribute : a attribute to cache constant but timeconsuming function calls.<br />
+If you have a function that takes a lot of time to generate, but the result set is actually the same each time for a certain parameter set, you simply need to define it as follows :<br />
+(code is written in VB since we&#39;re using vb @ work here)<br />
+<code><br />
+Module Module1<br />
+&nbsp;&nbsp;Sub Main()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(&quot;calling Div2 for i = 1&quot;, DoDiv2(1))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(&quot;calling Div2 for i = 2&quot;, DoDiv2(2))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(&quot;calling Div2 for i = 1&quot;, DoDiv2(1))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Console.ReadLine()<br />
+&nbsp;&nbsp; End Sub<br />
+<br />
+<br />
+&nbsp;&nbsp;&lt;Cacheable()&gt; _<br />
+&nbsp;&nbsp;Function DoDiv2(ByVal i As Integer) As Double<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(&quot;running Dodiv2 for &quot; + i.ToString())<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Return i / 2<br />
+&nbsp;&nbsp;End Function<br />
+End Module<br />
+</code><br />
+<br />
+If you run this code, you will see that the function only gets executed once for parameter value 1; the second time it just searches the cached dictionary. This avoids having the same code all over the project caching calculated values !!! It is a huge timesaver and makes you code much more maintainable&#8230;<br />
+<br />
+The attribute itself was written like this :<br />
+<code>Imports ps = PostSharp.Laos<br />
+<br />
+&lt;Serializable()&gt; _<br />
+&lt;System.AttributeUsage(AttributeTargets.Method, Inherited:=True, AllowMultiple:=False)&gt; _<br />
+Public Class CacheableAttribute<br />
+&nbsp;&nbsp;Inherits ps.OnMethodInvocationAspect<br />
+<br />
+&nbsp;&nbsp;Shared x As New Hashtable<br />
+<br />
+&nbsp;&nbsp;Public Overrides Sub OnInvocation(ByVal pEventArgs As PostSharp.Laos.MethodInvocationEventArgs)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Dim o() As Object = pEventArgs.GetArguments()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Dim i As Integer = 0, obj As Object<br />
+&nbsp;&nbsp;&nbsp;&nbsp;For Each obj In o<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i += obj.GetHashCode()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Next<br />
+&nbsp;&nbsp;&nbsp;&nbsp;If Not x.Contains(i) Then<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x(i) = pEventArgs.Delegate.DynamicInvoke(o)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;End If<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pEventArgs.ReturnValue = x(i)<br />
+&nbsp;&nbsp;End Sub<br />
+End Class</code><br />
+<br />
+And this in such a short time period. Thanks a lot !!! <br />
+BTW(Youve got my 5 on both articles) 
+</p>
+<p>
+&nbsp;
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-21T00:00:00+02:00" data-updated="true" itemprop="datePublished">Aug 21<span>st</span>, 2007</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2007/08/21/video-rally-pittoresque/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2007/08/21/video-rally-pittoresque/" itemprop="url">Video : Rally Pittoresque</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<P><IMG src="http://users.pandora.be/bull/rp/rp.jpg"></P>
+<P>Last weekend I participated for the first time with <A href="http://www.rallypittoresque.be">Rally Pittoresque</A>, an old timer rally. There were some pretty exclusive and nice cars there, a nice atmosphere, and it was great fun, so I posted a small video impression.</P>
+<P>I joined the rally with&nbsp;the first European&nbsp;Delorean prototype (built in 1981) from one of my customers, and my copilot was my brother in law Simon.</P>
+<P>You can find <A href="http://en.wikipedia.org/wiki/De_Lorean_DMC-12">more info on the delorean here</A>.</P>
+<P>Anyway, nice event, enjoy the video, and I really hope we can join&nbsp;the event&nbsp;again next year&#8230; and maybe even finish it&#8230;</P>
+<SCRIPT language=javascript1.1> 
+document.write(&#8221;<OBJECT ID='MediaPlayer' width=320 height=310 classid='CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95' codebase=' http://activex.microsoft.com/activex/controls/ mplayer/en/nsmp2inf.cab#Version=5,1,52,701' standby= 'Loading Media Player' type='application/x-oleobject'>&#8221;) 
+document.write(&#8221;<PARAM NAME='FileName' VALUE='http://users.pandora.be/bull/rp/RP2007.WMV'>&#8221;) 
+document.write(&#8221;<PARAM NAME='AutoStart' Value=0>&#8221;) 
+document.write(&#8221;<param name='ShowTracker' value=1>&#8221;) 
+document.write(&#8221;<PARAM NAME='ShowControls' VALUE=1>&#8221;) 
+document.write(&#8221;<PARAM NAME='ShowStatusBar' VALUE=1") 
+document.write("<EMBED type='application/x-mplayer2' pluginspage='http://www.microsoft.com/Windows/MediaPlayer/' SRC='http://users.pandora.be/bull/rp/RP2007.WMV' width=320 height=310 name='MediaPlayer' autostart=0 ShowStatusBar=1 ShowControls=1 ShowTracker=1 >&#8221;) 
+document.write(&#8221;</EMBED>&#8221;) 
+document.write(&#8221;</OBJECT>&#8221;) 
+</SCRIPT>
+<BR><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-20T00:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 20<span>th</span>, 2007</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2007/07/20/iphone-keyboard-on-windows-mobile-5-6-download-update-available/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2007/07/20/iphone-keyboard-on-windows-mobile-5-6-download-update-available/" itemprop="url">iPhone Keyboard on Windows Mobile 5/6 : Download Update Available</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>
+After a little chat with Tene from xda-developers.net, I suddenly realised that the performance problems could be easily solved my making the keyboard a little bit less tolerant to errors. 
+</p>
+<p>
+So I adjusted a single variable, compiled the version, and &#8230; Now it even runs smooth on my emulator&#8230; 
+</p>
+<p>
+You can download the version here : 
+</p>
+<p>
+<a href="http://www.corebvba.be/blog/content/binary/coreInput12.zip">coreInput12.zip (67,25 KB)</a> 
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+</div>
+<nav id="pagenavi">
+    
+        <a href="/blog/page/10/" class="prev">Prev</a>
+    
+    
+        <a href="/blog/page/12/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

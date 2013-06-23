@@ -1,0 +1,860 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="Sep 28th, 2010 Comments My #CQRS Cookbook Here is my personal take on how I interpret all things CQRS&#8230;
+Commercial impact: why use CQRS ?
+CQRS &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/page/7/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-28T00:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 28<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/09/28/my-%23cqrs-cookbook/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/09/28/my-%23cqrs-cookbook/" itemprop="url">My #CQRS Cookbook</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Here is my personal take on how I interpret all things CQRS&#8230;</p>
+<h2>Commercial impact: why use CQRS ?<br /></h2>
+<p>CQRS enforces you to apply strict boundaries to your app in a consistent way. <br />These boundaries convert your single application into 3 separate parts, only coupled by commands, events and queries.<br />By using CQRS you convert your single app into 3 apps who can be built in parallel.</p>
+<p>So basically, when you do have enough resources, the approach can decrease your time to implement something by a factor of 2.5 (estimate, 3 times - 0.5 for the common interfaces - commands, events and queries).</p>
+<p>Since all the parts require a different kind of development knowledge, it is easier to assign parts to developers based on their expertise/domain knowlege etc.</p>
+<p>It also implies that your app is composed of smaller - and thus more maintainable- units.</p>
+<p>CQRS also enables distributed applications as well (i.e. higly scalable cloud apps)</p>
+<p>For a software shop, CQRS can be a huge commercial advantage&#8230;</p>
+<p>(On a technical side note CQRS also makes integration testing super simple, due to it&#8217;s boundaries)</p>
+<p>&nbsp;</p>
+<h2>Explaining CQRS and MVC: the simplest explanation possible (AFAIK)<br /></h2>
+<p>(For reasons of simplicity, sagas are not mentioned here)</p>
+<p>This is how MVC works with CQRS</p>
+<ul>
+<li>UI invokes a function on the controller</li>
+<li>A  controller function can either:          
+<ul>
+<li>Query a viewmodel and send it to the UI</li>
+<li>Run a command using the following sequence<br /> 
+<ul>
+<li>Build a command</li>
+<li>Push the command to the bus and verify whether it was a valid command</li>
+<li>Redirect to another controller function (which is chosen based on the validity of the command)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>This is how the bus works</p>
+<ul>
+<li>The bus receives and validates a command before accepting it</li>
+<li>The bus delegates a valid command to a command handler</li>
+<li>The command handler converts the valid command in to a function call on an aggregate root</li>
+<li>The function call on the aggregate root can send events (state changes in the domain)</li>
+<li>The aggregate roots consume the published events (i.e. changes are applied to the respective domain entities)</li>
+<li>The event handlers consume the published events (i.e. changes are applied to the respective viewmodels)</li>
+</ul>
+<p></p>
+<h2>Definitions<br /></h2>
+<h3>Command</h3>
+<p>A Command represents a request to change the domain state.</p>
+<p>A Command is consumed once by a Command Handler.</p>
+<p>Command names should always be in the imperative (i.e. CancelOrder )</p>
+<h3>(Domain) event</h3>
+<p>An event represents a state change in the domain.</p>
+<p>Events are handled by AR&#8217;s, Sagas and Event Handlers</p>
+<p>Event names should always be in the past tense (i.e. OrderCanceled )</p>
+<h3>Aggregate root (AR)<br /></h3>
+<p>DDD definition +</p>
+<p>An AR contains public functions which can publish Events. (these events happen in a single transactional boundary - think unit of work)</p>
+<p>An AR can also consume Events which are about itself.</p>
+<h3>Saga</h3>
+<p>A saga consolidates Event information accross AR boundaries.</p>
+<p>A saga can raise Commands based on the consolidated events or a time event.</p>
+<p>A saga is considered a temporal object (i.e. limited lifetime)</p>
+<h3>Command Handler</h3>
+<p>A command handler converts a command into a function call on an AR by:</p>
+<ul>
+<li> Converting the command&#8217;s parameters into the target function&#8217;s parameters, sometimes using the viewmodel to convert and/or extend the command parameters into parameters understandable by the AR.</li>
+<li>Calling the function on the AR.</li>
+<li>The function will emit zero or more events</li>
+</ul>
+<h3>Event handler</h3>
+<p>An event handler applies the state changes to it&#8217;s respective target (i.e. a viewmodel or an AR)</p>
+<h3>Viewmodel<br /></h3>
+<p>A view model is a representation of the UI data using a first normal form datamodel</p>
+<h1>How to handle business logic which crosses multiple AR boundaries ?<br /></h1>
+<p>If you need to process some logic which crosses multiple AR boundaries, you can either create a new AR which references those AR&#8217;s, or create a Saga which consolidates events about these ARs.</p>
+<p>To know which one to create, you need to know your domain expert&#8217;s opinion on the transition process. If the domain expert only cares about the endresult, you should use a saga. If your domain expert needs to be exposed to the transformation process in itself, then you should use an AR.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-26T00:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 26<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/09/26/started-on-an-%23nunit-addin-for-%23aubergine-%23bdd-and-got-the-testsuitebuilder-up-and-running.-up-next-engine-refactoring/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/09/26/started-on-an-%23nunit-addin-for-%23aubergine-%23bdd-and-got-the-testsuitebuilder-up-and-running.-up-next-engine-refactoring/" itemprop="url">Started on an #NUnit Addin for #Aubergine #BDD and Got the Testsuitebuilder Up and Running. Up Next: Engine Refactoring</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<div class='posterous_autopost'><p><a href='http://posterous.com/getfile/files.posterous.com/temp-2010-09-26/AxqsgJwakxyoDvBrnIoqIawDclvtdyxJIxapdxrjGznbnfCtzFJvBCxEcogE/auberginenunit.PNG.scaled1000.png'><img src="http://posterous.com/getfile/files.posterous.com/temp-2010-09-26/AxqsgJwakxyoDvBrnIoqIawDclvtdyxJIxapdxrjGznbnfCtzFJvBCxEcogE/auberginenunit.PNG.scaled500.png" width="500" height="303"/></a> </p>      <p style="font-size: 10px;">  <a href="http://posterous.com">Posted via email</a>   from <a href="http://tojans.posterous.com/started-on-an-nunit-addin-for-aubergine-bdd-a">tojans&#8217;s posterous</a>  </p>  </div><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-06T00:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 6<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/09/06/waarom-nva-deze-match-verloren-heeft-een-handanalyse/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/09/06/waarom-nva-deze-match-verloren-heeft-een-handanalyse/" itemprop="url">Waarom NVA Deze Match Verloren Heeft - Een Handanalyse</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introductie</h3>
+<p>Gezien de huidige situatie in ons Belgenlandje vroeg ik me af wat nu het verdere verloop zal zijn van onze politieke impasse&#8230;</p>
+<p>Omdat ik meer verstand heb van poker dan van politiek (ook al hab ik niet veel verstand van poker :-) ), heb ik het even als een pokertoernooi proberen bekijken; dit is het resultaat :</p>
+<h3>Verloop van het toernooi<br /></h3>
+<p>We zijn een pokertoernooi aan het spelen&#8230; CD&amp;V, OpenVLD, N-VA,MR-FDF en PS zitten nog aan de tafel&#8230; Dit was de historiek:</p>
+<ul>
+<li>NVA was shortstack</li>
+<li>OpenVld speelde met zijn chiplead veel te aggressief, waardoor die de average stack CD&amp;V een keer verdubbeld heeft.</li>
+<li>CD&amp;V was toen chipleader, maar heeft&nbsp; veel te loose gecalled , en bijgevolg een paar keer NVA verdubbeld ipv ze uit te schakelen.</li>
+<li>MR-FDF heeft nog niet veel handen gespeeld; deze speelt enkel als hij de nuts heeft &#8230; Deze gaat wel direct all-in, dus is het moeilijk te verifieren of hij al een keer gebluft heeft</li>
+<li>De PS heeft goed gespeeld, maar een paar keer lucky hits gehad (bv. AA tegen 76s met een flushdraw voor PS, en er valt een flush op de river, nadat alle raises gecalled zijn)&#8230; Ze nemen soms onnodig veel risicos, maar hebben tot nu altijd geluk gehad.</li>
+</ul>
+<h3>Wat is de huidige situatie ?</h3>
+<ul>
+<li>NVA is bigstack(25BB), gevolgd door PS (21 BB)</li>
+<li>De andere partijen hebben &gt;&nbsp; 10BB</li>
+<li>PS raises preflop 3BB - Di Rupo als formateur</li>
+<li>NVA calls 3BB - De Wever laat niet in zijn kaarten kijken</li>
+<li>PS checks the flop (Rainbow lowcards) - Di Rupo doet een laatste poging</li>
+<li>NVA bets the pot (6BB) - NVA weigert</li>
+<li>PS reraises (12 BB) - L&#8217;Onckelinx dreigt met de scheiding van Belgi&euml;</li>
+</ul>
+<h3>Optie 1: NVA callt&nbsp; ( zoekt naar een compromis )<br /></h3>
+<p>Als NVA callt, en ze verliezen deze hand dan zullen ze waarschijnlijk ook het toernooi te verliezen en de chipleader een enorme voorsprong geven&#8230;&nbsp; <br />Als ze dit callen, en ze winnen, dan hebben ze verhoudingsgewijs wel redelijk wat chips bij, maar zoals de meeste toernooispelers wel weten, zijn de chips die je hebt altijd meer waard dan de chips die je kan verliezen, dus nooit callen !!</p>
+<p>Dit is dus geen goeie optie</p>
+<h3>Optie 2: NVA Reraises all-in&nbsp; (weigert)<br /></h3>
+<p>Aan de andere kant, als NVA zelf een tightere range heeft (moeilijk te bepalen, gezien het kleine aantal gespeelde handen), dan zou die misschien best reraisen, want zo schakelt hij zijn meest geduchte tegenstander uit&#8230;</p>
+<p>(in het verleden heeft PS al laten zien dat ze all-in durven gaan met 77 in een 1-vs-1&#8230; ) Natuurlijk blijft het een risico om all-in te gaan, zeker gezien hij momenteel nog altijd op tweede positie staat, ook na het folden&#8230;</p>
+<p>Ze weten beiden dat bij de kleinste kans de spelers met een lagere stack (10BB) bij het minste all-in zullen gaan, en dat ze zo de leiding zullen kunnen verliezen&#8230;</p>
+<p>De kans dat de PS zal folden bij een all-in van de NVA wordt zeeer klein geacht.</p>
+<h3>Optie 3: NVA foldt ? (gaat akkoord)<br /></h3>
+<p>Als de NVA foldt, komt de PS wel aan de leiding, maar dan is het verschil niet onoverkomelijk; de NVA maakt dan nog steeds kans om het toernooi uiteindelijk wel te winnen&#8230; Het zal dus nu even moeten inbinden, maar maakt uiteindelijk nog wel kans om te winnen&#8230;.</p>
+<h3>Wat is dus bijgevolg mijn voorspelling ?<br /></h3>
+<p>NVA zal nu folden (=akkoord gaan), om later zijn kans te grijpen&#8230;.</p>
+<p>Akkoord of niet ? Laat het me maar weten !!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-01T00:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 1<span>st</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/09/01/winning-the-game-with-cqrs-event-sourcing-and-bdd/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/09/01/winning-the-game-with-cqrs-event-sourcing-and-bdd/" itemprop="url">Winning the Game With CQRS/event Sourcing and BDD</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h1>Yes !! I did it !!!<br /></h1>
+<p>I have been making a few attempts to combine BDD with CQRS/event sourcing, since they seem to make a perfect fit.</p>
+<p>After mailing to the DDD/CQRS newsgroup for a few times, I finally managed to make something presentable&#8230; this is the BDD part for the domain :</p>
+<p>
+<script src="http://gist.github.com/560498.js?file=Integration.txt"></script>
+</p>
+<p>And this is the resulting output after running the console runner</p>
+<p>
+<script src="http://gist.github.com/560498.js?file=output.txt"></script>
+</p>
+<p></p>
+<p>This is the context, notice how setting up the interpreter usually only takes a single line (i.e. register an event, execute a command, or check something)</p>
+<p>
+<script src="http://gist.github.com/560498.js?file=BDDAppContext.cs"></script>
+</p>
+<p>And this is the implementation of the domain class</p>
+<p>
+<script src="http://gist.github.com/560498.js?file=PositiveNumber.cs"></script>
+</p>
+<p>And it&#8217;s domain handler</p>
+<p>
+<script src="http://gist.github.com/560498.js?file=PositiveNumberHandler.cs"></script>
+</p>
+<p>As wel as a view updater (in reality this view store would be queried be a winform or webform directly)</p>
+<p>
+<script src="http://gist.github.com/560498.js?file=SomeReadModelUpdater.cs"></script>
+</p>
+<p>Please do note that the current Event Store and Aggregate store are not persisted; IRL you would have to persist the event store (forward write-only), and probably some snapshots from your aggregate root as well (maybe using a bigtable); this should be easy to add, I might do this in a later phase&#8230;.</p>
+<p>You can find the full sourcecode in this zip:</p>
+<p><a href="http://www.corebvba.be/blog/file.axd?file=2010%2f9%2fSimpleCQRS2.zip">SimpleCQRS2.zip (76,94 kb)</a></p>
+<h3>Update !!</h3>
+<p>I uploaded the sourcecode to github : <a href="http://github.com/ToJans/CQRSNode" target="_blank">http://github.com/ToJans/CQRSNode</a></p>
+<p>I also added (currently synchronous) a node.js -like implementation&#8230;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-24T00:00:00+02:00" data-updated="true" itemprop="datePublished">Aug 24<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/08/24/beating-the-odds-development-of-a-leak-finder-app-for-multitable-sitngo-poker/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/08/24/beating-the-odds-development-of-a-leak-finder-app-for-multitable-sitngo-poker/" itemprop="url">Beating the Odds - Development of a Leak Finder App for Multitable SitNGo Poker</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h1>Introduction</h1>
+<p>I have been playing poker for quite some time, most of the time just for fun and a few eurocents&#8230; I especially love playing MultiTable SitNGo&#8217;s (i.e. small tournaments which start when a certain amount of players has registered).<br />I am quite successfull playing this kind of games at lowstakes, at least I usually manage to get into the top 5% around halfway the tournament. But then the following usually happens (fictiuous situation):</p>
+<p>- I get a premium hand (AKs for example) and raise 2-3 BB&#8230;<br />- I get called by a bigstack on the (BB)<br />- Flop, low card rainbow<br />- Bigstack checks<br />- I raise 2/3 pot<br />- Bigstack calls<br />- Turn: K<br />- Bigstack checks<br />- I raise POT<br />- Bigstack calls<br />- Some lowcard falls<br />- Bigstack goes all-in<br />- I call (I know I shouldn&#8217;t, but I&#8217;m pot-commited)<br />- bigstack show something like 2-7os, but hits a double pair, where he hit the 2 on the flop, and the 7 on the river.<br />- I get busted out of the tournament (usually just before the bubble)</p>
+<h1>It&#8217;s a leak !!!</h1>
+<p>Yes, now that I am reading it, I know what I should do: fold after the all-in.<br />I also should not have raised after the flop, maybe just a check-call if the investment is not to big.<br />I know I can&#8217;t go all-in directly, since it&#8217;s a bigstack that calls anything with rags (i.e. donk). He usually only folds on the river if he hits nothing at all (and maybe after value betting first)&#8230;.<br /><br />In the long term/purely based on statistics, I would probably beat him with AK. The problem is that in this phase of the tourney, in a comfortable position, I should play a whole other post-flop game, since staying in the tournament is simply more valuable then gaining a few chips<br />However, most of the time this happens just before the bubble, and I played a whole game just to get busted before the bubble&#8230;</p>
+<p>And this happens to me a lot !!</p>
+<p>So what should I do ?? Fold if the bigstack plays ?? Maybe I should, maybe I shouldn&#8217;t&#8230;. but this got me thinking&#8230;.</p>
+<h1>Fix the leak !!!<br /></h1>
+<p>What if I could write an app that analyses these things, and gives me (based on statistics) the best possible solution for this situation..</p>
+<p>I know these allready do exist, but since I am a developer and I love playing poker (even though I am really bad at it), I am going to write my own app for this&#8230; And while doing so, I will also blog about it, in order to get the discussion going and find the best possible solution for the problem.</p>
+<p></p>
+<h1>Where to start ?</h1>
+<p>Since this is a whole new ballgame for me, I will probably need to delve deeply into statistics, fuzzy logic, some neural networking, and probably some datamining tools as well&#8230;<br />I will blog about this every now and then, and also add a link to my task list:</p>
+<h1>Tasklist</h1>
+<ul>
+<li>Write the initial specs for the app</li>
+<li>Get a huge MTT SNG hand history for training purposes</li>
+<li>Find out how the winners got ITM</li>
+<li>Build some kind of system which matches the ITM players as much as possible using genetics</li>
+<li>Refine, refine, refine&#8230;</li>
+<li>Can I create a marketable product out of it ? How about open sourcing it ?? Which platform should I target (i.e. mobile, web, PC, &#8230;)</li>
+<li>Do something which will result in &#8220;World Piece&trade;&#8221;</li>
+</ul>
+<h1>Finally</h1>
+<p>This is supposed to be the first post of a long series, and since it is a hobby project, I have no idea whether and when I will finish it&#8230;</p>
+<p>I hope you enjoy it while it lasts !!!</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-11T00:00:00+02:00" data-updated="true" itemprop="datePublished">Aug 11<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/08/11/getting-started-quickly-with-bdd-in-.net/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/08/11/getting-started-quickly-with-bdd-in-.net/" itemprop="url">Getting Started Quickly With BDD in .Net</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction</h3>
+<p>This article will give you a brief introduction on how to get started with BDD (Behaviour driven development). It is <a href="http://www.corebvba.be/blog/page/Getting-started-with-BDD-%28behavior-driven-development%29-in-Net.aspx">my second attempt</a> for such an article.</p>
+<p>I will show you the complete workflow on how to write an app using BDD in .Net.</p>
+<h3>Background</h3>
+<p>Small note: if you want to know why you should use BDD, I would like to refer you to another one of my articles: <a href="http://www.corebvba.be/blog/post/The-advantage-of-using-BDD-over-TDD.aspx">The advantage of using BDD over TDD</a></p>
+<p>Today I finally managed to upgrade my Aubergine BDD framework to v0.1.</p>
+<p>This is now starting to get really usable (I&#8217;ve been dogfooding it for a while now).</p>
+<p>This release contains the following changes:</p>
+<ul>
+<li>Very basic support for NUnit</li>
+<li>Build script using JeremySkinner&#8217;s Phantom build engine</li>
+<li>Properly named namespaces/dll&#8217;s (i.e. no more Be.Corebvba.*)</li>
+</ul>
+<p>In this spirit I decided to write a small tutorial on how to do BDD development in .Net, so maybe some people might find some use for this !!</p>
+<p></p>
+<h3>Requirements</h3>
+<p>In the spirit of OSS development, I am going to show you how to develop an application using BDD together with SharpDevelop, an OSS IDE for .Net. You are offcourse free tu use any other IDE (i.e. Visual Studio, Monodevelop, &#8230;)</p>
+<h4>Sharpdevelop <br /></h4>
+<p>If you want to continue this tutorial using SharpDevelop, you can download it here (I used 3.2):</p>
+<p><a href="http://www.icsharpcode.net/opensource/sd/download/#SharpDevelop3x" target="_blank">http://www.icsharpcode.net/opensource/sd/download/#SharpDevelop3x</a></p>
+<p>In other IDE&#8217;s the steps will probably be more or less the same, except that your screenshots will probably not match.</p>
+<h4>Aubergine<br /></h4>
+<p>Next to this you also need my Aubergine BDD framework. You can download it here:</p>
+<p><a href="http://github.com/ToJans/Aubergine/zipball/master" target="_blank">http://github.com/ToJans/Aubergine/zipball/master</a></p>
+<p>If you want to, you can also take a quick peek at the source here:</p>
+<p><a href="http://github.com/ToJans/Aubergine" target="_blank">http://github.com/ToJans/Aubergine</a></p>
+<p>&nbsp;</p>
+<h3>Getting started</h3>
+<p>Create a new empty solution in sharpdevelop, name it MyFirstBDD</p>
+<p>&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f1.GIF" alt="" /></p>
+<p>Right click on the solution, and add a new project</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f2.GIF" alt="" /></p>
+<p>Choose class library, and name it MyFirstBDD.Tests</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f3.GIF" alt="" /></p>
+<h3>Define your specs</h3>
+<p>This is a very simple example, but IRL you will have multiple txt-files with multiple stories and scenarios describing as much functionality as possible</p>
+<p>Right-Click on the MyFirstBDD.Tests, and choose add a new file. For the file-type, select empty file, but name it specs.txt, and add the following content:</p>
+<p><div class="code">
+</p>
+<p>Define my own library<br />&nbsp;<span class="kwrd">using</span> MyFirstBDD.Tests.MyOwnLibrary<br />&nbsp; from MyFirstBDD.Tests.DLL<br /><br />Story Manage my books<br />&nbsp;Is about my own library<br />&nbsp;<br />As an owner of books<br />I want be able to search <span class="kwrd">for</span> a keyword or part of the author/name of the book <span class="kwrd">in</span> my current books<br />So that I can avoid buying the same book multiple times.<br /><br />Given I have the following books<br />+&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+<br />| Nr| Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Keywords&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />+&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+<br />| 1 | Einsteins Schleier&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Anton Zeilinger&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Quantum physics&nbsp;&nbsp;&nbsp; |<br />| 2 | De kunst van het overtuigen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Hans Christian Altmann | Business,NLP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />| 3 | Harry Potter and the <span class="kwrd">return</span> of Peewee | Joske Vermeulen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Fun, Eglantier&nbsp;&nbsp;&nbsp;&nbsp; |<br />| 4 | Teititatutei&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Joske Vermeulen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Geen fun, Eglantier|<br />| 5 | Een twee drie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Joske Vermeulen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | fun, Eglantier&nbsp;&nbsp;&nbsp;&nbsp; |<br />+&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+<br />&nbsp; <br />Scenario search <span class="kwrd">for</span> a single matching word <br />&nbsp; When I search <span class="kwrd">for</span> <span class="str">&#8220;een&#8221;</span><br />&nbsp; Then it should show 1 book<br />&nbsp; And it should not <span class="kwrd">return</span> book nr 4<br /><br />Scenario search <span class="kwrd">for</span> a single matching word with a wildcard<br />&nbsp; When I search <span class="kwrd">for</span> <span class="str">&#8220;*een&#8221;</span><br />&nbsp; Then it should <span class="kwrd">return</span> 2 books<br />&nbsp; And it should <span class="kwrd">return</span> a book with the title <span class="str">&#8220;Teititatutei&#8221;</span><br /></div></p>
+<p>This defines what we want our app to do.</p>
+<h3>Define your BDD context<br /></h3>
+<p>Now the we know what we want, we will&nbsp; write our spec executors. These are simple implementations which will not compile yet (since we do not have a program yet).</p>
+<p>These will help you to think about your interfaces you will expose from your program.</p>
+<p>We identify all possible Given/When/Then steps, and make sure we gave some code for it, and also define the necessary interfaces:</p>
+<p><div class="code">
+<br /><span class="kwrd">using</span> System;<br /><span class="kwrd">using</span> System.Collections.Generic;<br /><span class="kwrd">using</span> Aubergine.Model;<br /><span class="kwrd">using</span> System.Linq;<br /><br /><span class="kwrd">namespace</span> MyFirstBDD.Tests<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> Book<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">int</span> Id {get;set;}<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Title {get;set;}<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Author {get;set;}<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> IEnumerable&lt;<span class="kwrd">string</span>&gt; Keywords {get;set;}<br />&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">interface</span> ILibrary<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; IEnumerable&lt;Book&gt; AllBooks {set;}<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; IEnumerable&lt;Book&gt; Search(<span class="kwrd">string</span> searchstring);<br />&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> MyOwnLibrary<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ILibrary Lib=<span class="kwrd">null</span>;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; IEnumerable&lt;Book&gt; FoundBooks=<span class="kwrd">null</span>;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;[DSL]<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<span class="kwrd">void</span> i_have_the_following_books(<span class="kwrd">int</span>[] nr,<span class="kwrd">string</span>[] title,<span class="kwrd">string</span>[] author,<span class="kwrd">string</span>[] keywords)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;IList&lt;Book&gt; l = <span class="kwrd">new</span> List&lt;Book&gt;();<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span class="kwrd">for</span> (<span class="kwrd">int</span> i=0;i&lt;nr.Length;i++)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;l.Add(<span class="kwrd">new</span> Book() { <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Id=nr[i],<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Title = title[i],<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Author = author[i],<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Keywords = keywords[i].Split(<span class="str">&#8217;,&#8217;</span>)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Lib.AllBooks = l;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;}<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;[DSL(<span class="str">&#8220;I search for &#34;(?&lt;what&gt;.+)&#34;&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<span class="kwrd">void</span> Search(<span class="kwrd">string</span> what)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;FoundBooks = Lib.Search(what).ToArray();<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;}<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;[DSL(<span class="str">&#8220;it should (?&lt;not&gt;not )?(return|show) (?&lt;amount&gt;&#92;d+) book(s?)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<span class="kwrd">bool</span> Returnamount(<span class="kwrd">string</span> not,<span class="kwrd">int</span> amount)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span class="kwrd">return</span> (FoundBooks.Count() == amount) ^ !<span class="kwrd">string</span>.IsNullOrEmpty(not);<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;}<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;[DSL(<span class="str">&#8220;it should (?&lt;not&gt;not )?(return|show) a book with the title &#34;(?&lt;title&gt;.+)&#34;&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<span class="kwrd">bool</span> ShouldReturnBook(<span class="kwrd">string</span> not,<span class="kwrd">string</span> title)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span class="kwrd">return</span> FoundBooks.Any(x=&gt;x.Title == title)&nbsp; ^ !<span class="kwrd">string</span>.IsNullOrEmpty(not);<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;}<br /><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;[DSL(<span class="str">&#8220;it should (?&lt;not&gt;not )?(return|show) book nr (?&lt;nr&gt;&#92;d+)&#8221;</span>)]<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<span class="kwrd">bool</span> ShouldReturnBook(<span class="kwrd">string</span> not,<span class="kwrd">int</span> nr)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;{<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span class="kwrd">return</span> FoundBooks.Any(x=&gt;x.Id == nr) ^ !<span class="kwrd">string</span>.IsNullOrEmpty(not);<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; }<br />}<br /></div></p>
+<p>Once finished, extract the book class, and move it to the main project (MyFirstBDD), under the model namespace. After doing this, you also extract and move the ILibrary interface to it&#8217;s proper location (i.e. project MyFirstBDD, namespace Service)</p>
+<h3>Unit testing</h3>
+<p>Once you have done this, we need to setup unit testing; this is currently some kind of a hack, and it works as follows:</p>
+<p>Add a class named Fixture to your test project and use the following code:</p>
+<p><div class="code">
+<br /><span class="kwrd">using</span> System;<br /><span class="kwrd">using</span> System.Collections.Generic;<br /><span class="kwrd">using</span> System.IO;<br /><span class="kwrd">using</span> NUnit.Framework;<br /><br /><span class="kwrd">namespace</span> MyFirstBDD.Tests<br />{<br />&nbsp;&nbsp;&nbsp; [TestFixture]<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> Fixture : Aubergine.NUnitBDD.Fixture <br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">override</span> IEnumerable&lt;<span class="kwrd">string</span>&gt; SpecFiles<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; get {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">yield</span> <span class="kwrd">return</span> Path.Combine(Directory.GetCurrentDirectory(),<span class="str">&#8220;specs.txt&#8221;</span>);<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Fixture()<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br /></div></p>
+<p>Also make sure you change the properties to copy &#8220;always&#8221; and build action &#8220;content&#8221;. Also add a reference to the needed libs (both aubergine and project references)</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f4.GIF" alt="" /></p>
+<p>Change your project type for myFirstBDD from &#8220;console project&#8221; to &#8220;Class library&#8221; in the properties and everything should compile !!</p>
+<p>Right click on the fixture class definition in the source code, and you should see the context option &#8220;Unit test&#8221; available</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f5.GIF" alt="" /></p>
+<p>&nbsp;</p>
+<p>If you do run the tests, it will say no tests are ran yet, but we&#8217;ll fix that soon&#8230;</p>
+<h3>Implement the application</h3>
+<p>Up next is the implementation of the application; since this is only an example, I will simply implement the necessary stuff as simple as possible:</p>
+<p><div class="code">
+<br /><span class="kwrd">using</span> System;<br /><span class="kwrd">using</span> System.Collections.Generic;<br /><span class="kwrd">using</span> System.Linq;<br /><span class="kwrd">using</span> MyFirstBDD.Model;<br /><span class="kwrd">using</span> System.Text.RegularExpressions;<br /><br /><span class="kwrd">namespace</span> MyFirstBDD.Service.Impl<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> Library : ILibrary<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Library()<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> IEnumerable&lt;Book&gt; AllBooks { set; <span class="kwrd">protected</span> get;}<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> IEnumerable&lt;Book&gt; Search(<span class="kwrd">string</span> searchstring)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; var re = <span class="kwrd">new</span> Regex(<span class="str">@&#8221;\s&#8221;</span>+Regex<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Escape(searchstring)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Replace(Regex.Escape(<span class="str">&#8221;*&#8221;</span>),<span class="str">&#8221;(.*)&#8221;</span>)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Replace(Regex.Escape(<span class="str">&#8221;?&#8221;</span>),<span class="str">&#8221;.&#8221;</span>)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +<span class="str">@&#8221;\s&#8221;</span>);<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">foreach</span>(var b <span class="kwrd">in</span> AllBooks)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; var kw = <span class="kwrd">string</span>.Join(<span class="str">&#8221; &#8221;</span>,b.Keywords.ToArray());<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; var arr = <span class="str">&#8221; &#8221;</span>+b.Author+<span class="str">&#8221; &#8221;</span>+kw+<span class="str">&#8221; &#8221;</span> + b.Title+<span class="str">&#8221; &#8221;</span>;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (re.IsMatch(arr))<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">yield</span> <span class="kwrd">return</span> b;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br /><br /></div></p>
+<h3>Now setup your test fixture</h3>
+<p>Make sure your test code now uses this code. In this case we only have a single dependency, and we use it directly. a typical real-life example would have multiple dependencies, and use probably some mocks/stubs instead of the real service, in order to test only the part you are interested in&#8230;</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> MyOwnLibrary<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> MyOwnLibrary()<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br /><strong>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ILibrary Lib=<span class="kwrd">new</span> Service.Impl.Library();</strong><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; IEnumerable&lt;Book&gt; FoundBooks=<span class="kwrd">null</span>;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [DSL]<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> i_have_the_following_books(<span class="kwrd">int</span>[] nr,<span class="kwrd">string</span>[] title,<span class="kwrd">string</span>[] author,<span class="kwrd">string</span>[] keywords)<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &#8230;<br /></div></p>
+<h3>And execute your testcode (with coverage percentage if you want too)</h3>
+<p>Right click on the fixture class definition, unit test, unit test with coverage&#8230;</p>
+<p>If everything went well, you should see the following (similar) output:</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f6.GIF" alt="" /></p>
+<p>&nbsp;</p>
+<p>So you can see everything passed, and we have got a whopping 100% code coverage !!! (not hard in this case, but hey :-) )</p>
+<p>We can now start on our UI, but that is a whole different story (Weak event messagebroker comes to mind for example)</p>
+<h3>In conclusion</h3>
+<p>While this is by no means a complete guide on BDD development, this should be enough to get you started.</p>
+<p>If you like this, or have some remarks, please do let me know !!!</p>
+<p>For any other articles on BDD on this blog, you can follow this link: <a href="http://www.corebvba.be/blog/?tag=/bdd">corebvba - BDD</a></p>
+<p>&nbsp;</p>
+<h3>Wait, what about a ready-built solution ?</h3>
+<p>Here you go:</p>
+<p><a href="http://www.corebvba.be/blog/file.axd?file=2010%2f8%2fMyFirstBDD.zip">MyFirstBDD.zip (72,79 kb)</a></p>
+<p>Enjoy !</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-05-20T00:00:00+02:00" data-updated="true" itemprop="datePublished">May 20<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/05/20/building-an-mvvm-framework-for-both-.net-and-.net-cf/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/05/20/building-an-mvvm-framework-for-both-.net-and-.net-cf/" itemprop="url">Building an MVVM Framework for Both .Net and .Net CF</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction</h3>
+<p>As you might allready know, I am maintaining a .Net CF application for one of my customers. Unfortunately, the design of the app is a total disaster, and maintaining it is actually a living hell. Fortunately however, my client decided to order a complete rewrite, which I started today. This post will not contain the sourcecode (as it is a proprietary app), but rather explain the guts of the underlying architecture and some info about the design decisions used.</p>
+<p>Maybe I will release some of the reusable components in the future under open source, but I am not quite sure yet&#8230;</p>
+<p>&nbsp;</p>
+<h3>Yet another framework ?</h3>
+<p>Actually, yes !! My main concern about this app framework is keeping it lightweight, flexible, ultraportable and easy to use. By ultraportable I mean that the app should both run on the default .Net, as well as on the Compact Framework, <strong>without recompilation</strong>.</p>
+<p>Since no framework known to me meets my criteria, I decided to get started on yet another framework.</p>
+<p>The main design decisions are heavily based on my previous experiences with <a href="http://github.com/tojans/mvcextensions" target="_blank">MvcExtensions</a>, my other framework, as well as a very inspiring and well-know lecture by <a href="http://devlicio.us/blogs/rob_eisenberg/default.aspx" target="_blank">Rob Eisenberg</a>: <a href="http://live.visitmix.com/MIX10/Sessions/EX15" target="_blank">&#8220;Build your own MVVM framework&#8221;</a>.</p>
+<p></p>
+<h3>Service tools<br /></h3>
+<p>I have written and implemented the following interfaces which help me in developping the app.</p>
+<p>A simple IOC container interface that looks like this</p>
+<p><div class="code">
+<br /><span class="kwrd">public</span> <span class="kwrd">interface</span> IIOC<br />{<br />&nbsp; T Resolve&lt;T&gt;();<br />&nbsp; T Resolve&lt;T&gt;(<span class="kwrd">string</span> name);<br />&nbsp; <span class="kwrd">object</span> ResolveObject(<span class="kwrd">string</span> TypeName);<br /> &nbsp; <span class="kwrd">object</span> ResolveObject(<span class="kwrd">string</span> name,<span class="kwrd">string</span> TypeName);<br /> }<br /></div><br /><br />And to register something into the container I have the following methods:</p>
+<p><div class="code">
+<br /> &nbsp; T Register&lt;T&gt;(T instance);<br /> &nbsp; T Register&lt;T&gt;(<span class="kwrd">string</span> name,T instance);<br />&nbsp; T Register&lt;T&gt;(Func&lt;IIOC,T&gt; factory);<br /> &nbsp; T Register&lt;T&gt;(<span class="kwrd">string</span> name,Func&lt;IIOC,T&gt; factory);<br /> </div></p>
+<p>Next to this I also implemented a lightweight AutoMapper, which I use for just about everything:</p>
+<p><div class="code">
+<br /><span class="kwrd">public</span> <span class="kwrd">interface</span> IMapper<br />{<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">void</span> Map(<span class="kwrd">object</span> source,<span class="kwrd">object</span> destination);<br />}<br /></div><br /><br />And again, the implementation allows me to register some mappings using the following function:<br /><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> Register&lt;TSource,TDestination&gt;(Action&lt;TSource,TDestination,IMapper&gt; map);<br /></div></p>
+<p>Next to this I also created a class called ActionResult (looks familiar, doesn&#8217;t it ;) ).</p>
+<p><div class="code">
+<br />{<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">object</span> Viewmodel {get;set;}<br />&nbsp; <span class="kwrd">public</span> ActionLink Redirect {get;set;}<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">bool</span> Terminate {get;set;}<br />}<br /><br /></div></p>
+<p>Allthough I have to say that I still have to implement the ActionLink class.</p>
+<h3>Glueing everything together</h3>
+<p>Everything you have read so far might seem awfully familiar to some people, which is a good thing imho. But having these tools available is still not the same as having an app framework, or is it ?</p>
+<p>Actually, it is almost; my main focus is in the convention-based Model-View-ViewModel approach, which allows me to have controller actions like this:</p>
+<p><div class="code">
+<br /><span class="kwrd">public</span> <span class="kwrd">class</span> MainController<br />{<br /><br />&nbsp;&nbsp; IMapper sMap;<br />&nbsp;&nbsp; IOrderService sOrder;<br />&nbsp;&nbsp; IViewModelResolver sVMResolver<br /><br />&nbsp;&nbsp; <span class="kwrd">public</span> MainController(IMapper sMap, IOrderService sOrder,IViewModelResolver sVMResolver)<br />&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.sMap = sMap;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.sOrder = sOrder:<br />&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult Index()<br />&nbsp;&nbsp; {<br />&nbsp; &nbsp; &nbsp; var vm = sVMResolver.Resolve&lt;VMIndex&gt;();<br />&nbsp; &nbsp; &nbsp; sMap.Map(sOrder.GetOrders(),vm);<br />&nbsp; &nbsp; &nbsp; <span class="kwrd">return</span> <span class="kwrd">new</span> ActionResult() { Viewmodel=vm }; &nbsp;&nbsp; <br />&nbsp;&nbsp; }<br />}<br /></div></p>
+<p>Which should also look very familiar !!!</p>
+<h3>&#8230;. in a single form</h3>
+<p>Now, we have an ActionResult which contains a model, how do we know which form to show ??? It is quite simple : I use a convention. All my Viewmodels start with the letters &#8220;VM&#8221;, and all my views (winforms usercontrols) end with the word &#8220;View&#8221;.</p>
+<p>I use a veiwmodel-first approach, i.e. based on my viewmodel, I choose which view to show. This looks like the best approach to me&#8230;</p>
+<p>I have one Form named MainForm, which contains the following property:</p>
+<p><div class="code">
+<br /><span class="kwrd">object</span> _Viewmodel;<br /><br /><span class="kwrd">public</span> <span class="kwrd">object</span> Viewmodel<br />{<br />&nbsp; get<br />&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> _Viewmodel;<br />&nbsp; }<br />&nbsp; set<br /> &nbsp; {<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (_Viewmodel == <span class="kwrd">value</span>)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span>;<br />&nbsp; &nbsp;&nbsp; _Viewmodel = <span class="kwrd">value</span>;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; var t = <span class="kwrd">this</span>.Namespace+<span class="str">&#8221;.&#8221;</span>+_Viewmodel.GetType().Name.Substring(3)+<span class="str">&#8220;View&#8221;</span>;<br />&nbsp;&nbsp;&nbsp; var vw = IOC.ResolveObject(t) <span class="kwrd">as</span> UserControl;&nbsp; <br />&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.SuspendLayout();<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.Controls.Clear();<br />&nbsp;&nbsp;&nbsp; sMapper.Map(_Viewmodel,vw);<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.Controls.Add(vw);<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">foreach</span> (var prop <span class="kwrd">in</span> _Viewmodel.GetType().GetProperties())<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var ctrl = vw.Controls.Where(x=&gt;x.Name==prop.Name).FirstOrDefault();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (ctrl==<span class="kwrd">null</span>) <span class="kwrd">continue</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sMapper.Map(prop.GetValue(_Viewmodel,<span class="kwrd">null</span>),ctrl));<br />&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">foreach</span> (var meth <span class="kwrd">in</span> _Viewmodel.GetType().GetMethods().Where(x=&gt;x.Name.StartsWith(<span class="str">&#8220;On&#8221;</span>))<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <span class="kwrd">do</span> something similar <span class="kwrd">for</span> the methods; bind them to the corresponding actionlinks<br />&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">this</span>.ResumeLayout();<br />&nbsp; }<br /> }<br /></div></p>
+<p>And then my main loop will look something like this (not implemented yet):</p>
+<p><div class="code">
+<br /><span class="kwrd">void</span> Run()<br />{<br />&nbsp;&nbsp;&nbsp; var frm = <span class="kwrd">new</span> MainForm();<br />&nbsp;&nbsp;&nbsp; var ar = <span class="kwrd">new</span> ActionResult() {Redirect=<span class="kwrd">new</span> Redirect&lt;MainController&gt;(x=&gt;x.Index())};<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">while</span> (!ar.Terminate)<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (ar.Redirect!=<span class="kwrd">null</span>)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ar = InvokeActionLink(ar.Redirect);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">else</span>&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; frm.Model = ar.Model;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ar = WaitForActionResult(frm);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br /></div></p>
+<h3>Conclusion</h3>
+<p>While the framework is not yet complete, this is the way I am going to implement the whole thing&#8230; If you have any suggestions or comments please do let me know what you think !!!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-20T00:00:00+02:00" data-updated="true" itemprop="datePublished">Apr 20<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/04/20/override-interface-mappings-and-creata-a-generic-entity-version-filter/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/04/20/override-interface-mappings-and-creata-a-generic-entity-version-filter/" itemprop="url">Override Interface Mappings and Creata a Generic Entity Version Filter</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction</h3>
+<p>For one of my customers I needed to have some kind of versioning for a whole bunch of entities on my database. Since I use my very own <a href="http://github.com/tojans/mvcextensions" target="_blank">MvcExtensions framework</a>, I wanted to include a functionality which would automatically filter all entities based on this interface :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">interface</span> IVersionAware<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">string</span> Version { get; set; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>In short, I only want to get the entities of the current version through my repository. This interface would then automaticly imply that all data could be filtered by setting a version filter.</p>
+<p>I took me quite some time, but spending a weekend at the Dutch coast cleared my mind a bit, and after the weekend I managed to get it working&#8230;</p>
+<p><img style="vertical-align: middle;" src="http://www.corebvba.be/blog/image.axd?picture=2010%2f4%2fZeeDenHaag.jpg" alt="The void (tm)" /></p>
+<p></p>
+<h3>Hit the road, Jack !!<br /></h3>
+<p>Ok, so how can we do this ?</p>
+<p>In MvcExtensions I map my domain classes to my database in the following way :</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> MyDomainDefinition: IDomainDefinition <br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> MyDomainDefinition() { }<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; <span class="kwrd">public</span> Assembly DomainAssembly<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get { <span class="kwrd">return</span> <span class="kwrd">typeof</span>(Model.Kit).Assembly; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> DomainType GetDomainType(Type t)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (t.Namespace==<span class="kwrd">typeof</span>(Model.Kit).Namespace)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> DomainType.Class;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">else</span> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> DomainType.None;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //<span class="kwrd">if</span> !=<span class="kwrd">null</span> write mapping files to disk<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> WriteHbmFilesToPath <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //get { <span class="kwrd">return</span> <span class="str">@&#8221;c:\tmp&#8221;</span>; } <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get { <span class="kwrd">return</span> <span class="kwrd">null</span>; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>This might look quite simple, but it is an extensive abstraction layer over fluent nhibernate which takes away most of the complexity, and adds a lot of functionality (bitmap storage, multilingual fields to name a few).<br />After looking around for <a href="http://nhforge.org/wikis/howtonh/contextual-data-using-nhibernate-filters.aspx" target="_blank">some info on the net about filtering using fluent nhbernate</a>, I found a solution: one could define a system-wide filter using the following Filterdefinition and mapping.ApplyFilter :<br /><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> VersionFilter : FilterDefinition<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">static</span> <span class="kwrd">readonly</span> <span class="kwrd">string</span> FILTERNAME = <span class="str">&#8220;MyVersionFilter&#8221;</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">static</span> <span class="kwrd">readonly</span> <span class="kwrd">string</span> COLUMNNAME = <span class="str">&#8220;Version&#8221;</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">static</span> <span class="kwrd">readonly</span> <span class="kwrd">string</span> CONDITION = COLUMNNAME + <span class="str">&#8221; = :&#8221;</span> + COLUMNNAME;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> VersionFilter()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WithName(FILTERNAME)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .WithCondition(CONDITION)<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .AddParameter(COLUMNNAME, NHibernateUtil.String);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">static</span> <span class="kwrd">void</span> Enable(NHibernate.ISession session, <span class="kwrd">string</span> version)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; session.EnableFilter(FILTERNAME).SetParameter(COLUMNNAME, version);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">static</span> <span class="kwrd">void</span> Disable(NHibernate.ISession session)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; session.DisableFilter(FILTERNAME);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>And this would be the code to map it for some class.</p>
+<p><div class="code">
+<br />automapping.Override&lt;SomeClassImplementingIVersionAware&gt;(<br />&nbsp; mapping=&gt; <br />&nbsp; {<br />&nbsp;&nbsp;&nbsp; mapping.Id(x=&gt;x.Id);<br />&nbsp;&nbsp;&nbsp; mapping.Map(x=&gt;x.Version).Column(VersionFilter.COLUMNAME);<br />&nbsp;&nbsp;&nbsp; mapping.ApplyFilter&lt;VersionFilter&gt;();<br />&nbsp; }<br /></div></p>
+<p>Since I do not want to call this override for each class implementing IVersionAware, I decided to create a workaround. I spent quite some time in trying to implement this, until I noticed why my workaround was not working: there was a (small bug) in the fluentnhibernate framework.<br />So I forked fluentnhibernate,<a href="http://github.com/ToJans/fluent-nhibernate/commit/29058de9b2bc3af85bc433aa6f71549f7b5d8e04" target="_blank"> fixed the bug</a>, and sent a pull request to the fluentnhibernate guys, and <a href="http://twitter.com/paulbatum/status/12511429552" target="_blank">Paul Batum reported to me that my bugfix will be integrated into the next merge, together with some unit tests</a>. For now, you can get the fixed sourcecode <a href="http://github.com/ToJans/fluent-nhibernate" target="_blank">from my github version</a>.</p>
+<h3>&#8230; And don&#8217;t you come back no more&#8230;.</h3>
+<p>So, after fixing this, I could get to work again. Since I first tried using IAlterations and Overrides for fluent nhibernate, but all were failing due to the bug, I finally got to this code (which worked after I fixed the bug in fluent nhibernate):</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">static</span> <span class="kwrd">class</span> AutoPersistenceModelExtensions<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">static</span> AutoPersistenceModel OverrideInterface&lt;I,C&gt;(<span class="kwrd">this</span> AutoPersistenceModel model<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; , IEnumerable&lt;Type&gt; MyTypes)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">where</span> C:IInterfaceMap&lt;I&gt;,<span class="kwrd">new</span>()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var modeloverride = model.GetType().GetMethod(<span class="str">&#8220;Override&#8221;</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var interfacemap = <span class="kwrd">new</span> C();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var cm = <span class="kwrd">typeof</span>(C).GetMethod(<span class="str">&#8220;Map&#8221;</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">foreach</span> (var t <span class="kwrd">in</span> MyTypes.Where(x =&gt; <span class="kwrd">typeof</span>(I).IsAssignableFrom(x)))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var act = cm.MakeGenericMethod(t).Invoke(interfacemap,<span class="kwrd">null</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; modeloverride.MakeGenericMethod(t).Invoke(model, <span class="kwrd">new</span> <span class="kwrd">object</span>[] { act });<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> model;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">interface</span> IInterfaceMap&lt;I&gt;<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action&lt;AutoMapping&lt;T&gt;&gt; Map&lt;T&gt;() <span class="kwrd">where</span> T:I;<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>This extension method allows you to override the mappings for interface fields in a very simple way; here is the example for the IVersionAware interface:</p>
+<p><div class="code">
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> VersionAwareInterfaceMap : IInterfaceMap&lt;IVersionAware&gt;<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Action&lt;AutoMapping&lt;T&gt;&gt; Map&lt;T&gt;() <span class="kwrd">where</span> T : IVersionAware<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> mapping =&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mapping.Map(x =&gt; x.Version).Column(VersionFilter.COLUMNNAME);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mapping.ApplyFilter&lt;VersionFilter&gt;();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<p>And in the MvcExtensions database bootstrapper, I would call this :<br /><div class="code">
+<br />&nbsp; &nbsp; &nbsp; &nbsp; <span class="kwrd">protected</span> Database(IPersistenceConfigurer pcfg, IDomainDefinition mappings)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // some stuff deleted because it <span class="kwrd">is</span> not relevant  here<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var cfg = Fluently.Configure()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Database(pcfg)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Mappings(m =&gt; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var am1 = AutoMap.Assembly(mappings.DomainAssembly)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Where(t =&gt; clsmaps.Contains(mappings.GetDomainType(t)))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // some stuff deleted because it <span class="kwrd">is</span> not relevant here<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var types = mappings.DomainAssembly.GetTypes().Where(x =&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">typeof</span>(IVersionAware).IsAssignableFrom(x) &amp;&amp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mappings.GetDomainType(x) != DomainType.None);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (types.Count()&gt;0)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; am1.OverrideInterface&lt;IVersionAware,VersionAwareInterfaceMap&gt;(types);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; am1.Add(<span class="kwrd">new</span> VersionFilter());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // some stuff deleted because it <span class="kwrd">is</span> not relevant  here<br /> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; })<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .BuildConfiguration();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // some stuff deleted because it <span class="kwrd">is</span> not relevant  here<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /></div></p>
+<h3>&#8230; No more &#8230;.<br /></h3>
+<p>In order to filter my data I would call this :</p>
+<p><div class="code">
+<br />VersionFilter.Enable(sUnitOfWork.Session,<span class="str">&#8220;v1.3.2&#8221;</span>);<br /></div></p>
+<p>And disabling it again goes like this :</p>
+<p><div class="code">
+<br /> VersionFilter.Disable(sUnitOfWork.Session);<br /> </div></p>
+<p>That&#8217;s all there is to it; all entities implementing the IVersionAware interface will be automatically filtered if you do set the filter&#8230;.</p>
+<p>For a full version you can check out the <a href="http://github.com/ToJans/MVCExtensions/blob/master/src/MvcExtensions/Services/Impl/FluentNHibernate/VersionFilterOverride.cs">sourceode over at github</a>.</p>
+<p>If you have any questions or remarks, do not hesitate to post them&#8230;</p>
+<p>Enjoy</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-12T00:00:00+02:00" data-updated="true" itemprop="datePublished">Apr 12<span>th</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/04/12/major-update-for-mvcextensions/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/04/12/major-update-for-mvcextensions/" itemprop="url">Major Update for MvcExtensions</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>It has been a while, but I finally managed to push a major upgrade to MvcExtensions; this is the change list:</p>
+<p>&nbsp;&nbsp;&nbsp; * Upgraded spark for MVC RC2<br />&nbsp;&nbsp;&nbsp; + Extra string operators for MyText<br />&nbsp;&nbsp;&nbsp; + Added abstract model for Joe Celko&#8217;s NestedSet<br />&nbsp;&nbsp;&nbsp; + Added Dynamic SQL (text sorts etc)<br />&nbsp;&nbsp;&nbsp; + Added HttpContextBoundObject<br />&nbsp;&nbsp;&nbsp; * Improved &amp; extended FluentNhibernate/Database<br />&nbsp;&nbsp;&nbsp; + Added Fluentnhibernate TextAlteration for mytext field length in db<br />&nbsp;&nbsp;&nbsp; * Improved SetCultureLanguageAttribute<br />&nbsp;&nbsp;&nbsp; + Added a class SetCultureHelper for temporary changing language<br />&nbsp;&nbsp;&nbsp; + Added IEnumerableHelper extensions for Page &amp; Paging<br />&nbsp;&nbsp;&nbsp; + Added helper for building jQuery jqGrid models<br />&nbsp;&nbsp;&nbsp; * Bugfixed MyTextModelBinder<br />&nbsp;&nbsp;&nbsp; * Improved MvcExtensionsModule</p>
+<p>This application framework has allready been used for 2 custom customer applications, and I have to say that it made my development quite successfull.</p>
+<p>I have to admit that the documentation is still lacking a lot, but there is a sample project included.</p>
+<p>As always, you can download the code here :</p>
+<p><a href="http://github.com/ToJans/MVCExtensions" target="_blank">http://github.com/ToJans/MVCExtensions</a></p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-31T00:00:00+02:00" data-updated="true" itemprop="datePublished">Mar 31<span>st</span>, 2010</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2010/03/31/var-keyword-is-for-javascript-about-using-the-var-keyword-other-coding-guidelines/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2010/03/31/var-keyword-is-for-javascript-about-using-the-var-keyword-other-coding-guidelines/" itemprop="url">Var Keyword Is for JavaScript - About Using the Var Keyword & Other Coding Guidelines</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction<br /></h3>
+<p>Today I was reading an <a href="http://www.codeproject.com/KB/library/simpleservicelocator.aspx" target="_blank">article on Codeproject</a>, and I was really astounded by the way some people rate articles and give comments&#8230;</p>
+<p>It was an article about someone who had implemented a simple service locator which contained the following code sample :</p>
+<p><div class="code">
+<br /><span class="kwrd">using</span> System; <br /><span class="kwrd">using</span> CuttingEdge.ServiceLocation; <br /><span class="kwrd">using</span> Microsoft.Practices.ServiceLocation;  <br /><br /><span class="kwrd">public</span> <span class="kwrd">class</span> Global : System.Web.HttpApplication <br />{<br />&nbsp; <span class="kwrd">protected</span> <span class="kwrd">void</span> Application_Start(<span class="kwrd">object</span> sender, EventArgs e)     <br />&nbsp; {         <br />&nbsp;&nbsp;&nbsp;&nbsp; // 1. Create a <span class="kwrd">new</span> Simple Service Locator container         <br />&nbsp;&nbsp;&nbsp;&nbsp; var container = <span class="kwrd">new</span> SimpleServiceLocator();                  <br /><br />&nbsp;&nbsp;&nbsp;&nbsp; // 2. Configure the container                  <br /><br />&nbsp;&nbsp;&nbsp;&nbsp; // Register a <span class="kwrd">delegate</span> that will create a <span class="kwrd">new</span>         <br />&nbsp;&nbsp;&nbsp;&nbsp; // instance on each call to GetInstance.         <br />&nbsp;&nbsp;&nbsp;&nbsp; container.Register&lt;ISamurai(() =&gt;          <br />&nbsp;&nbsp;&nbsp;&nbsp; {             <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var weapon = ServiceLocator.Current                 .GetInstance();             <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">new</span> Samurai(weapon);         <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });              <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Register a single <span class="kwrd">object</span> instance that always         <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // be returned (must be thread-safe).         <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; container.RegisterSingle(<span class="kwrd">new</span> Katana());              <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 3. Register the container to the Common Locator         <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ServiceLocator.SetLocatorProvider(() =&gt; container);     <br />&nbsp;&nbsp;&nbsp; } <br />}<br /></div></p>
+<p>Which seems quite obvious to me. Since I noticed a <a href="http://www.codeproject.com/KB/library/simpleservicelocator.aspx?msg=3420815#xx3420815xx" target="_blank">comment titled &#8216;my vote of 2&#8217;</a>, I was curious why this article would be voted such a low score (2 out of 5). I checked the comment and I was astounded:</p>
+<p style="padding-left: 30px;"><em>Please note: the keyword &#8220;var&#8221; is supposed to be used with anonymous types. You should not use it for anything else. Otherweise please start <br />programming java script</em></p>
+<p></p>
+<h3>Who cares ?<br /></h3>
+<p>Actually, I do.</p>
+<p>Since I could not resist I posted the following comment:</p>
+<p style="padding-left: 30px;"><em>Ahum&#8230; there have been numerous issues about this, but in general it should not pose a problem, because it is quite clear what it&#8217;s intentions are at the beginning; i.e. :<br /><br /><div class="code">
+var sl = <span class="kwrd">new</span> SimpleServiceLocator();</div><br /><br /><br />Is not really more obvious then :<br /><br /><div class="code">
+SimpleServiceLocator sl = <span class="kwrd">new</span> SimpleServiceLocator();</div><br /><br /><br />In fact, the information in there is the same, but the second one is more verbose, so every person in his right mind would opt for the first alternative.<br />This might be different if you use a function which does not directly expose the return type in the function name; i.e. :<br /><br /><div class="code">
+var x = SomeFunction(y,z); </div><br /><br /><br />This is considered bad practice by most.<br /><br />This one is not :<br /><br /><div class="code">
+var myservice = sl.Resolve&lt;IMyService&gt;();</div><br /><br /><br />Because the initialization contains enough obvious info to give pointers to the var&#8217;s type.<br /><br />So, if this is the only reason why you are giving a 2 (the author has obviously invested quite some time in this article), then you might need to start doing some JavaScript yourself </em></p>
+<p style="padding-left: 30px;">&nbsp;</p>
+<p>After tweeting about this, I had an interesting conversation with <a href="http://twitter.com/JacoPretorius" target="_blank">@JacoPretorious</a> about this, who says he uses var everywhere, but pays more attention to variable names.</p>
+<p>While I understand what he means, IMHO variable names should not infer the type, only the meaning of the content if necessary.</p>
+<p>I personally think there is nothing wrong with using single letters as variable names, as long as the intent is obvious. This is an example that is perfectly valid imho :</p>
+<p><div class="code">
+<br /><span class="kwrd">public</span> <span class="kwrd">bool</span> InvalidateCustomer(<span class="kwrd">int</span> CustomerId)<br />{<br />&nbsp; var c = sRepo.GetById&lt;Customer&gt;(CustomerId);<br />&nbsp; <span class="kwrd">if</span> ( c.Orders.Where(o=&gt;o.PaymentReceivedOn==<span class="kwrd">null</span>).Any()) <br />&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">false</span>;<br />&nbsp; c.Valid=<span class="kwrd">false</span>;<br />&nbsp; sRepo.SaveOrUpdate(c);<br />&nbsp; sUOW.Commit();<br />&nbsp; <span class="kwrd">return</span> <span class="kwrd">true</span>;<br />}<br /></div></p>
+<p>This one is not IMO :</p>
+<p><div class="code">
+<br /><span class="kwrd">public</span> <span class="kwrd">class</span> MyProcessQueue<br />{<br />&nbsp; <span class="kwrd">public</span> <span class="kwrd">void</span> ProcessQueue()<br />&nbsp; {</p>
+<p>&nbsp; &nbsp; <span class="kwrd">for</span>(;;)<br />&nbsp; &nbsp; {<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; var p = Queue.Next();<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (p==<span class="kwrd">null</span>) <br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">break</span>;<br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sProcessor.Process(p);<br />&nbsp; &nbsp; }<br />&nbsp; }<br />}<br /></div></p>
+<p>Since you can not infer the type from <strong>Queue</strong>, you should make the type explicit :</p>
+<p><div class="code">
+<br /> <span class="kwrd">public</span> <span class="kwrd">class</span> MyProcessQueue<br /> {</p>
+<p>&nbsp; <span class="kwrd">public</span> <span class="kwrd">void</span> ProcessQueue()<br /> &nbsp; {</p>
+<p>&nbsp; &nbsp; <span class="kwrd">for</span>(;;)<br /> &nbsp; &nbsp; {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Order o = Queue.Next();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (o==<span class="kwrd">null</span>) <br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">break</span>;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sProcessor.Process(o);<br /> &nbsp; &nbsp; }<br /> &nbsp; }<br /> }<br /> </div></p>
+<p><br />This would change if the <strong>MyProcessQueue</strong> would be a generic class :</p>
+<p><div class="code">
+<br /> <span class="kwrd">public</span> <span class="kwrd">class</span> MyProcessQueue&lt;T&gt; <span class="kwrd">where</span> T:ISomeInterface<br /> {<br /> &nbsp; <span class="kwrd">public</span> <span class="kwrd">void</span> ProcessQueue()<br /> &nbsp; {</p>
+<p>&nbsp; &nbsp; <span class="kwrd">for</span>(;;)<br /> &nbsp; &nbsp; {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; var p = Queue.Next();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (p==<span class="kwrd">null</span>) <br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">break</span>;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sService.Process(p);<br /> &nbsp; &nbsp; }<br /> &nbsp; }<br /> }<br /> </div><br /><br />In this case, I think you have enough information available to know that the type should be about the generic class. Using more explicit names for the variables does not add a lot info for me; I do not find the following (exagerated) example more abvious than the previous one; in fact, it takes more time to get the intent here, because your mind needs to process more information (also note the comments, which do not provide any extra info to me) :</p>
+<p><div class="code">
+<br /><span class="kwrd">public</span> <span class="kwrd">class</span> MyProcessQueue&lt;T&gt;<br /> &nbsp; <span class="kwrd">where</span> T:ISomeInterface<br />{&nbsp; <br />&nbsp; <span class="rem">// Process all jobs in the queue, until there is nothing left&nbsp;&nbsp; <br />&nbsp; public void ProcessAllISomeInterfacesInTheQueue()<br />&nbsp; { <br />&nbsp;&nbsp;&nbsp; // loop forever <br />&nbsp; &nbsp; for(;;)<br />&nbsp; &nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // get the next instance to process from the queue;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // if it returns null there are no more processes left on the queue&nbsp; <br />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ISomeInterface TheNextISomeInterfaceInstanceToProcess = Queue.Next();</p></span>
+<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">if</span> (TheNextISomeInterfaceInstanceToProcess==<span class="kwrd">null</span>)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //exit the infinite loop&nbsp; <br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">break</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // process it&nbsp; <br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sServiceThatProcessesSomeInterfaceInstance<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Process(TheNextISomeInterfaceInstanceToProcess);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // go to the next one<br /> &nbsp; &nbsp; }<br />&nbsp;&nbsp; // <span class="kwrd">return</span>&nbsp; <br /> &nbsp; }<br /> }<br /> </div></p>
+<p>There is way too much info here which can all be easily derived from the code, and if you change the code and forget the comments, this might actually do the opposite: cause confusion.</p>
+<h3>In conclusion</h3>
+<p>While this is all about preference and highly dependent on you point of view and background, I do think that the approach I am personnaly using is one of the better ones. They offer all the amount of information that you could need with the minimum amount of code.</p>
+<p>If you do have another opinion, do not hesitate to let me know&#8230;</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+</div>
+<nav id="pagenavi">
+    
+        <a href="/blog/page/6/" class="prev">Prev</a>
+    
+    
+        <a href="/blog/page/8/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

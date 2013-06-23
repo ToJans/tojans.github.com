@@ -1,0 +1,994 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="Sep 14th, 2012 Comments Getting Started With Erlang and Nitrogen on Windows (in a Single Tweet) All things are difficult before they are easy - &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/page/3/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-14T00:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 14<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/09/14/getting-started-with-erlang-and-nitrogen-on-windows-%28in-a-single-tweet%29/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/14/getting-started-with-erlang-and-nitrogen-on-windows-%28in-a-single-tweet%29/" itemprop="url">Getting Started With Erlang and Nitrogen on Windows (in a Single Tweet)</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>All things are difficult before they are easy - Thomas Fuller</h3>
+<p>After spending <a href="http://www.corebvba.be/blog/post/Live-Blogging-getting-started-with-Erlang-and-Nitrogen.aspx">quite some time trying to get an erlang/nitrogen instance running in windows</a>, I finally managed to do it, and it turns out to be really simple once you know how to do it.</p>
+<p>In fact, it is so simple, one can explain it in a single tweet:</p>
+<blockquote class="twitter-tweet">
+<p>Windows Erlang/Nitrogen in a tweet: install <a title="http://www.erlang.org/download/otp_win32_R13B04.exe" href="http://t.co/hCoe0uZR">erlang.org/download/otp_w&hellip;</a> in &#8220;c:\program files\erl7.5.7&#8221;, unzip <a title="http://files.nitrogenproject.com.s3.amazonaws.com/win/nitrogen-2.0.3-inets.zip" href="http://t.co/4ZfdbvNu">&hellip;.nitrogenproject.com.s3.amazonaws.com/win/nitrogen-2&hellip;</a> &amp; run start.cmd</p>
+&mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/246623563224846339">September 14, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<h3>Conclusion</h3>
+<p>When considering how simple it is, and looking back <a href="http://www.corebvba.be/blog/post/Live-Blogging-getting-started-with-Erlang-and-Nitrogen.aspx">at my live blog post</a>, my actions look a bit ridiculous, but not all is lost, as my discovery process somewhat helped me to get more acquainted with the whole Erlang story&#8230;</p>
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-13T00:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 13<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/09/13/live-blogging-getting-started-with-erlang-and-nitrogen/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/13/live-blogging-getting-started-with-erlang-and-nitrogen/" itemprop="url">Live Blogging: Getting Started With Erlang and Nitrogen</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Note</h3>
+<p>This is an experiment where I try &#8220;live blogging&#8221;: I blog as I get along further in the process&#8230; Feel free to comment/tweet during the process&#8230;</p>
+<blockquote class="twitter-tweet">
+<p>Trying a new concept: &#8220;Live blogging: getting started with Erlang and Nitrogen&#8221; - feel free to comment during the post <a title="http://www.corebvba.be/blog/post/Live-Blogging-getting-started-with-Erlang-and-Nitrogen.aspx" href="http://t.co/VlzLeMqt">corebvba.be/blog/post/Live&hellip;</a></p>
+&mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/246174492982902784">September 13, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>&nbsp;</p>
+<h3>Introduction</h3>
+<p>As I had yet another idea for a startup, I fired up Visual Studio and started implementing a small demo&#8230;</p>
+<blockquote class="twitter-tweet">
+<p>Flexing my idea muscle; trying to build a POC for another startup idea <a href="https://twitter.com/search/%23startup10">#startup10</a> <a href="https://twitter.com/search/%23ElliottWave">#ElliottWave</a> <a title="http://twitter.com/ToJans/status/243754758123446272/photo/1" href="http://t.co/T6BNnaBY">twitter.com/ToJans/status/&hellip;</a></p>
+&mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/243754758123446272">September 6, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>However, the main feature that would elevate my example requires a lot of interaction, and quite frankly, interaction is a pain in web apps IMO, as there is still a mental shift between frontend and backend. For this particular thing I needed the distance to be as small as possible, so I started searching and found Erlang&#8230;</p>
+<blockquote class="twitter-tweet">
+<p>One more last video before I go to bed <a title="http://vimeo.com/8258045" href="http://t.co/PqJ0zUOF">vimeo.com/8258045</a> <a href="https://twitter.com/search/%23erlang">#erlang</a> <a href="https://twitter.com/search/%23nitrogen">#nitrogen</a> <a href="https://twitter.com/search/%23riak">#riak</a></p>
+&mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/246020043907944448">September 12, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>I will not go into the details why this looks like a perfect match, because I would like to build an MVP first, but I can tell you that it resembles the bee&#8217;s knees at this current moment to me&#8230; So how do I get started? This is a walkthrough where I will post my progress&#8230; This post will evolve as I manage to get further&#8230;.</p>
+<p></p>
+<h3>Installation</h3>
+<p>Well, I still work on windows, so I downloaded the binary erlang package from here:&nbsp;<a href="https://www.erlang-solutions.com/downloads/download-erlang-otp">https://www.erlang-solutions.com/downloads/download-erlang-otp</a></p>
+<p>I downloaded the win x64 binary and ran it, as simple as that; mission #1 accomplished; a few more to go.</p>
+<p></p>
+<h3>The web framework</h3>
+<p>Well, I decided to go for nitrogen, as it looks pretty neat IMO, so I created a nitrogen folder and downloaded the windows package from&nbsp;<a href="http://nitrogenproject.com/downloads">http://nitrogenproject.com/downloads</a>&nbsp;and unzipped it.</p>
+<p>#2 accomplished</p>
+<h3>Hello world</h3>
+<p>I copied the whole nitrogen package to a new folder called HelloWorld - how original - opened a cmd window in the folder, and this is what I typed and the result..</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2ferlang-error.png" alt="" /></p>
+<p>So I opened up Windows explorer and checked&#8230; Aha!</p>
+<p>&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2ferlang-folder.png" alt="" /></p>
+<p>I copied the bin path, went back to my hello-world folder, right-clicked start.cmd and chose for edit, and assumed replacing 5.7.5 (the Erlang version in the nitrogen package) with 5.9.2 would be enough, but then I noticed: there is also and erts-5.7.5 subfolderfolder in the hello world project, which looks like it contains the whole erlang version&#8230;</p>
+<p>So I decided to look a bit closer&#8230;</p>
+<p>When running the commands from the batch file manually with the installed erlang&nbsp; (i.e. the one from c:\program files)&nbsp;I get a crash on the execution of the last line, so it compiles, but refuses to run. So I decide to uninstall erlang, as I assume it is some kind of a version conflict, and I probably do not need the installation anyway.</p>
+<p>So I removed the installed Erlang, and also found out I had another (32-bit) version installed, so I removed that one as well&#8230;</p>
+<p>However, when I try to compile using the following statement I still get an error:</p>
+<p>&nbsp;</p>
+<pre>C:\blah\nitrogen\helloworld&gt;"erts-5.7.5\bin\erl.exe" -pa %PA% -make<br />Could not load module C:\Program Files\erl5.7.5\erts-5.7.5\bin\erlexec.dll.</pre>
+<p>So I decided to go looking for erlang 5.7.5 for windows&#8230;. But then it hit me; google to the rescue:&nbsp;<a href="https://groups.google.com/forum/?fromgroups=#!topic/nitrogenweb/0vXvXwLvBOM">https://groups.google.com/forum/?fromgroups=#!topic/nitrogenweb/0vXvXwLvBOM</a></p>
+<p>So I should probably reinstall the Erlang binaries I first installed and try to build nitrogen myself&#8230;</p>
+<p>Let&#8217;s try again&#8230;.</p>
+<p>Ok, installed the initial erlang version again (had to kill an apparently still running erlang proces).</p>
+<p>Now I went looking into a nitrogen tutorial (<a href="http://nitrogenproject.com/doc/tutorial.html">http://nitrogenproject.com/doc/tutorial.html</a>) and pulled in the <a href="https://github.com/nitrogen/nitrogen/zipball/master">nitrogen source code</a> from <a href="https://github.com/nitrogen/nitrogen" target="_blank">github</a>.</p>
+<p>I browsed a bit further in the git project, and found <a href="https://github.com/nitrogen/nitrogen/blob/master/rel/overlay/win/README.md" target="_blank">this document</a> mentioned on the readme: &#8220;Compiling Nitrogen on Windows&#8221;&#8230; There they advise to install Erlang for win R15B02 for windows and install it in the folder &#8221;<span style="background-color: #f8f8f8; color: #333333; font-family: Consolas, 'Liberation Mono', Courier, monospace; font-size: 12px; line-height: 19px; white-space: nowrap;">c:\erl5.9</span>&#8221;, so I installed yet another erlang (5.9.2), but now in the recommended folder, and tried running nitrogen again; here&#8217;s what happened:</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2ferlang-error2.png" alt="" /></p>
+<p>As it still does not work, I assume it is time to try and compile the thing&#8230;</p>
+<p>So I add&nbsp;<span style="background-color: #f8f8f8; color: #333333; font-family: Consolas, 'Liberation Mono', Courier, monospace; font-size: 12px; line-height: 19px; white-space: nowrap;">c:\erl5.9\bin</span> to the path in my environment settings.</p>
+<p>Now I install<a href="http://code.google.com/p/msysgit/downloads/list?q=netinstall" target="_blank"> msysgit using the netinstaller</a>, <strong>not the regular one</strong>, and install into the default&nbsp;<span style="background-color: #f8f8f8; color: #333333; font-family: Consolas, 'Liberation Mono', Courier, monospace; font-size: 12px; line-height: 19px; white-space: nowrap;">c:\msysgit</span></p>
+<p>You need to use this version, as this downloads the source for git and enables you with a complete mingw build environment, which allows you to build the nitrogen source code as well&#8230;</p>
+<p>Building git apparently seems to take a few minutes&#8230;</p>
+<p>&#8230; And some more&#8230;</p>
+<p>And we&#8217;re finally there!!!&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fgit-finally.png" alt="" /></p>
+<p>Now time to clean up the folders and pull in the sourcecode and build it&#8230;</p>
+<p>&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fnitro-pull.png" alt="" /></p>
+<p>And we fail again&#8230;&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fnitro-fail.png" alt="" /></p>
+<p>So I am now digging into the rebar mailing lists:&nbsp;<a href="http://lists.basho.com/pipermail/rebar_lists.basho.com/2011-September/001074.html">http://lists.basho.com/pipermail/rebar_lists.basho.com/2011-September/001074.html</a></p>
+<p>&nbsp;</p>
+<p>Aha, found it; I simply have to make sure c:\msysgit\bin is contained in the PATH environment variable; it now fetches all dependencies&#8230;.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fnitro-rebar-ok.png" alt="" /></p>
+<p>Crap&#8230; Now I get a compile error in nitrogen itself&#8230;</p>
+<p>&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fnitro-compilation-fail.png" alt="" /></p>
+<p>So I checked to see if there was any Erlang feedback available on twitter&#8230;</p>
+<blockquote class="twitter-tweet">
+<p>Well, the live blogging experiment is certainly a challenge: still not able to run nitrogen on windows <a href="https://twitter.com/search/%23erlang">#erlang</a> <a href="https://twitter.com/search/%23help">#help</a> <a title="http://www.corebvba.be/blog/post/Live-Blogging-getting-started-with-Erlang-and-Nitrogen.aspx" href="http://t.co/VlzLeMqt">corebvba.be/blog/post/Live&hellip;</a></p>
+&mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/246196814615826434">September 13, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>In the mean time I&#8217;ll start looking at the source over at github; maybe I have a stable branch or similar&#8230;</p>
+<p>&nbsp;</p>
+<p>Aha, I found an open issue regarding the mimetypes library on github, but apparently there&#8217;s not a lot of response there&#8230;.&nbsp;<a href="https://github.com/spawngrid/mimetypes/issues/10">https://github.com/spawngrid/mimetypes/issues/10</a></p>
+<p>Currently in the process of digging in the source code of the mimetypes lib, and I also received a good tip from Neil:</p>
+<blockquote class="twitter-tweet">
+<p>@<a href="https://twitter.com/tojans">tojans</a> top tip - buy a mac :)</p>
+&mdash; Neil Robbins (@NeilRobbins) <a href="https://twitter.com/NeilRobbins/status/246199358171783168">September 13, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Ok; I took a small break; looks like the problem is actually in the post_compile script for the mimetypes; currently debugging erlang script!!!&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fdebugging-escript.png" alt="" /></p>
+<p>My understanding of erlang is growing slowly&nbsp;<img title="Cool" src="http://www.corebvba.be/blog/editors/tiny_mce3/plugins/emotions/img/smiley-cool.gif" border="0" alt="Cool" />&#8230; Looks like this file just extracts all method definitions, since these have not changed, there is no need to change it, so I just commented the whole enchilada (gist here:&nbsp;<a href="https://gist.github.com/3714046">https://gist.github.com/3714046</a>) et voila, it compiles!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fnitro-compiles.png" alt="" /></p>
+<h3>AAAAAAAAAAAAAAAAAAAAARGH !&nbsp;</h3>
+<p>Still no go; I&#8217;ll call it a day for today, as I have some other stuff to do as well, and this took way longer then I hoped&#8230;. Laters!</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fnitro-compiles-or-not.png" alt="" /></p>
+<blockquote class="twitter-tweet">
+<p>Put the Live Blog on hold, as it took to much of my time already&#8230; To be continued <a href="https://twitter.com/search/%23erlang">#erlang</a> <a href="https://twitter.com/search/%23nitrogen">#nitrogen</a> <a title="http://www.corebvba.be/blog/post/Live-Blogging-getting-started-with-Erlang-and-Nitrogen.aspx" href="http://t.co/VlzLeMqt">corebvba.be/blog/post/Live&hellip;</a></p>
+&mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/246229805404672000">September 13, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<h3>I&#8217;m back</h3>
+<p>&#8230; with a vengeance, I hope&#8230;</p>
+<blockquote class="twitter-tweet">
+<p>Time to resume my Live Blogging: getting started with Erlang and Nitrogen <a title="http://www.corebvba.be/blog/post/Live-Blogging-getting-started-with-Erlang-and-Nitrogen.aspx" href="http://t.co/VlzLeMqt">corebvba.be/blog/post/Live&hellip;</a></p>
+&mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/246552005630361600">September 14, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>A new day, new ideas, so I started looking at the google groups, and apparently I&#8217;m not the first one having this problem:&nbsp;<a href="http://groups.google.com/d/msg/nitrogenweb/KoBJCXr5SEI/UhgkWWTp09wJ" target="_blank">http://groups.google.com/d/msg/nitrogenweb/KoBJCXr5SEI/UhgkWWTp09wJ</a> .</p>
+<p>So let us try that&#8230;.</p>
+<p>Uninstalled all erlang..</p>
+<p>Removed original folder</p>
+<p>Now downloading and installing windows release from&nbsp;<a href="http://www.erlang.org/download_release/6">http://www.erlang.org/download_release/6</a>&nbsp;in &#8220;C:\Program Files\erl5.7.5&#8221;, not the (x86) folder.</p>
+<p>Double click start.cmd in the nitrogen folder, it should open up the erlang console. surf to http://localhost:8000 et voila !!! FINALLY !!!</p>
+<p>&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2ffinally.png" alt="" /></p>
+<h3>Finally</h3>
+<p>I wrote a small<a href="http://www.corebvba.be/blog/post/Getting-started-with-Erlang-and-Nitrogen-(in-a-single-tweet).aspx"> follow-up post</a>.</p>
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-12T00:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 12<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/09/12/tweet-my-opinion-on-new-theoretic-development-approaches/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/12/tweet-my-opinion-on-new-theoretic-development-approaches/" itemprop="url">Tweet: My Opinion on New Theoretic Development Approaches</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<blockquote class="twitter-tweet">
+<p>Every theoretic development approach is a &#8220;Pseudo-Illuminate Legacy Enhancement of Subordinate Hierarchical Implementation Theories&#8221; <a href="https://twitter.com/search/%23IMHO">#IMHO</a></p>
+&mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/245905006178467840">September 12, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-11T00:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 11<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/09/11/de-voedselzandloper-zin-en-onzin/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/11/de-voedselzandloper-zin-en-onzin/" itemprop="url">De Voedselzandloper: Zin en Onzin</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introductie</h3>
+<p><a href="http://www.voedselzandloper.com/" target="_blank">De voedselzandloper</a> is vandaag <a href="http://www.standaard.be/artikel/detail.aspx?artikelid=DMF20120816_00260661" target="_blank">een paar</a> <a href="http://www.knack.be/nieuws/gezondheid/de-voedselzandloper-is-een-gevaarlijk-boek/article-4000175801757.htm" target="_blank">keer </a>in het nieuws vermeld, als zijnde een onconventioneel, en zelfs gevaarlijk dieet/voedingspatroon. In deze blog post probeer ik uit te leggen wat mijn persoonlijke ervaringen zijn op dit gebied; ik heb namelijk een jaar geleden een gelijkaardig (doch niet echt identiek) voedingsplan gevolgd.</p>
+<h3>Disclaimer &amp; statistische relevantie</h3>
+<p>Ik ben geen voedingsdeskundige. Mijn ervaringen zijn exact dit: mijn persoonlijke ervaringen, of voor de statistici: een steekproef waarbij N=1; ik ben me er dan ook bewust van dat mijn ervaringen niet noodzakelijk voor anderen gelden, en hoop dat u dit ook beseft. Stel me dus niet aansprakelijk voor zaken die je zelf beslist te doen op basis van iets dat je op het internet gelezen hebt.</p>
+<p></p>
+<p>&nbsp;</p>
+<p><img style="float: left; margin: 5px;" src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fvoedselzandloper.jpg" alt="" /></p>
+<h3>De voedselzandloper: het boek en de theorie</h3>
+<p>&nbsp;</p>
+<p>De voedselzandloper is een bestseller die beschrijft hoe je door gezonder te eten langer zou kunnen leven en ondertussen ook vermageren indien je overgewicht hebt.</p>
+<p>Zelf heb ik dit boek niet gelezen, maar uit een aantal reviews die ik online gelezen heb (o.a. <a href="http://chivo.nl/content/boekrecensie-de-voedselzandloper" target="_blank">deze</a>), blijkt dat er verschillende overeenkomsten zijn met een voedingspatroon dat ik een jaar geleden met heel veel succes gevolgd heb, maar later meer daarover.</p>
+<p>Links zie je de cover van het boek, en dit is tegelijk ook de essentie van het hele verhaal: de &#8220;zandloper&#8221; bestaat uit twee gespiegelde piramides, waarvan alles wat zich in de bovenste piramide bevindt afbraak doet aan uw gezondheid, en alles wat in de onderste piramide zit bevorderlijk is voor de gezondheid.</p>
+<p>In essentie komt het er op neer dat je o.a. koolhydraten, suikers, rood vlees en bewerkte produkten moet vermijden&#8230; (tenminste, dat is wat ik begrepen heb uit de reviews)&#8230;</p>
+<p>Dit is voor de meeste mensen wereldschokkend nieuws: &#8220;Suikers vermijden, ok, maar geen melk, brood en pasta? En vet mag dan weer wel?&#8221;</p>
+<p>Eens je de platgetreden paden verlaat krijg je allerlei zaken naar je hoofd geslingerd, en misschien wel volledig terecht, want de meerderheid heeft altijd gelijk - of niet soms? -.</p>
+<h3>Waarom de hetze &nbsp;?</h3>
+<p>Laat ons eens kijken naaar de conventionele driehoek zoals die ons altijd aangeleerd is -tjah, door wie eigenlijk - ?</p>
+<p>De driehoek van 1992 aanbevolen door de USA ziet er als volgt uit:</p>
+<p>&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fUSDA_Food_Pyramid_92.gif" alt="" /></p>
+<p>Bij die van 2005 hebben ze blijkbaar hun mening al herzien, en gaan ze op zoek naar een evenwichtigere verdeling&#8230;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2f500px-MyPyramidFood.svg.png" alt="" /></p>
+<p>Dit representeert een gezonde, evenwichtige voeding&#8230; Of toch niet? En wat heeft dat met you te maken?</p>
+<p>Wel, tot een paar jaar geleden interesseerde dit me eerlijkgezegd geen bal, tot ik mijn revelatie ontdekte:</p>
+<p>
+<object width="640" height="360">
+<param name="movie" value="http://www.youtube.com/v/v8WA5wcaHp4?version=3&amp;hl=nl_NL" />
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="640" height="360" src="http://www.youtube.com/v/v8WA5wcaHp4?version=3&amp;hl=nl_NL" allowfullscreen="true" allowscriptaccess="always"></embed>
+</object>
+</p>
+<p>Om het met een quote te zeggen:</p>
+<p style="padding-left: 30px;"><strong><em>&#8220;There are three kinds of lies: lies, damned lies and statistics.&#8221;</em></strong></p>
+<p style="padding-left: 30px;"><strong><em>- Mark Twain</em></strong></p>
+<p><a href="http://xkcd.com/552/" target="_blank"><img src="http://imgs.xkcd.com/comics/correlation.png" alt="XKCD correlation" /></a></p>
+<p>&nbsp;</p>
+<p>Toen ben ik verder gaan zoeken, en heb ik paleo ontdekt, op sites zoals <a href="http://www.marksdailyapple.com" target="_blank">die van Mark Sisson</a>.</p>
+<h3>Hunter-Gatherer/Paleo/Primal/Whole food/PaNu-style</h3>
+<p>Wat is dat nu weer&#8230; Wel, de essentie is simpel: eet alleen wat je zou kunnen verzamelen of door jacht kunnen vangen (en dus geen geteelde/verwerkte produkten of afgeleiden ervan).</p>
+<p>Ik zou hier heel wat uitleg kunnen over proberen geven, maar deze infographic legt het volgens mij perfect uit:</p>
+<p><a href="http://PaleolithicDiet.com"><img title="Paleolithic Diet Explained" src="http://bit.ly/knY3lY" alt="Paleolithic Diet Explained" /></a><br />Learn more about the <a href="http://paleolithicdiet.com">Paleo Diet</a>.</p>
+<p>Kort gezegd: eet vlees, vis, groenten, fruit en gezonde vetten (omega-3 vs omega-6), en probeer ook je levensstijl wat meer onder controle te krijgen.&nbsp;</p>
+<h3>Allemaal mooi in theorie, maar ik wil bewijzen!</h3>
+<p>Jaja, dat dacht ik ook toen ik een jaar geleden begon&#8230; Dit was het resultaat na 17 dagen - ja, u leest het goed: 17 dagen&#8230;.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fpaleo_17_days.jpg" alt="" /></p>
+<p>Daarnaast voelde ik me ook 100 keer energieker en nog vele andere zaken&#8230; Voor meer info: ik heb een <a href="http://paleohacks.com/questions/7058/share-your-paleo-before-and-after/59898#59898" target="_blank">getuigenis gepost op paleohacks met wat meer info omtrent mijn ervaring</a>&#8230;&nbsp;</p>
+<p>Langzamerhand ben ik beginnen afwijken, met als resultaat dat ik terug verlang naar het gevoel van een jaar geleden, dus ben ik nu terug op de paleo-wagen gesprongen om me terug energieker te voelen etc&#8230; Punt is dat dit een levensstijl is, geen dieet, en dat dit - in tegenstelling tot wat veel mensen denken - heel gemakkelijk sustainable is.</p>
+<p>Het grootste en wel meest opvallende punt in mijn persoonlijke belevenis was het ongeloof en onbegrip van de meeste mensen; ze waren als het ware geshockeerd door mijn eetgewoonten: ettelijke hoeveelheden vlees en boter icm groenten, dat is toch een &#8220;recipe for a heart-attack&#8221; ?</p>
+<blockquote class="twitter-tweet">
+<p>Back on the <a href="https://twitter.com/search/%23paleo">#paleo</a> wagon:Eitje met rauwe hesp en groene pepers <a href="https://twitter.com/search/%23omnomnom">#omnomnom</a> <a title="http://twitter.com/ToJans/status/241090121791840256/photo/1" href="http://t.co/eOAXnFLC">twitter.com/ToJans/status/&hellip;</a></p>
+&mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/241090121791840256">August 30, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<blockquote class="twitter-tweet">
+<p>@<a href="https://twitter.com/tojans">tojans</a> @<a href="https://twitter.com/jefclaes">jefclaes</a> Thought it was the recipe for I want to have a near fatal heart attack that will paralyze the left side of my body at 45.</p>
+&mdash; Christophe Geers (@cgeers) <a href="https://twitter.com/cgeers/status/241092695358050305">August 30, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<h3>Wat heeft dit nu te maken met de voedselzandloper?</h3>
+<p>Alhoewel het niet zo lijkt op het eerste zicht, zijn er wel degelijk heel wat gelijkenissen tussen de voedselzandloper en het paleo-dieet; vooral de focus op granen en suikers springt in het oog. Wat betreft rood vlees: in paleo raadt men aan alleen grass-fed rood vlees te eten, omdat deze wel de correcte balans tussen omega-3 en omega-6 vetten zouden hebben, en blijkbaar zou er omtrent het eten van rood vlees een discrepantie bestaan indien het al dan niet om bewerkt of onbewerkt vlees zou gaan&#8230; Dus zijn er heel wat overeenkomsten op dit gebied.</p>
+<p>Ik voelde me schitterend met +/- 80% paleo: af en toe een avondje stappen met wat vrienden met een pintje erbij, op restaurant vroeg ik gewoon een beetje extra groenten in plaats van frieten, en als er alleen maar pasta/brood was, dan at ik niet/een beetje/gewoon, afhankelijk van hoe ik me voelde en de omstandigheden.</p>
+<p>Ik kan me voorstellen dat de voedselzandloper je min of meer hetzelfde resultaat zou kunnen geven&#8230;</p>
+<h3>Wat als?</h3>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fWatAls1-2beNB.jpg.h380.jpg.568.jpg" alt="" /></p>
+<p>Wat als het verhaal van paleo nu eens zou kloppen, of dat van de voedselzandloper? Zou dit de exodus tot gevolg hebben? Waarschijnlijk niet; al zou het wel voor aanzienlijk minder gezondsheidskosten kunnen meebrengen voor de overheid, als het klopt. Een ander groot probleem zou zich stellen in de economie&#8230; Wat gebeurt er met de bakkers/voedsellobby wanneer de aan te raden hoeveelheid koolhydraten inees zaakt naar ergens rond de 150gr/dag, een fractie van wat ze nu is? Faillissementen? Chaos? Wie zal het zeggen&#8230; Ik kan alleen maar zeggen dat vanuit mijn persoonlijk standpunt het hele verhaal wel logisch overkomt.</p>
+<p>Daarnaast zou het ook een revelatie zijn als we nu eindelijk ziektes kunnen voorkomen in plaats van ze te moeten genezen, of slechter nog, gewoon de symptomen bestrijden&#8230; Kortom, er ligt nog een hele wereld open.</p>
+<p>Daarnaast zou ook de hele wetenschappelijke wereld op zijn kop draaien; het zou net zijn alsof men ontdekt heeft dat de aarde niet plat is, maar rond.</p>
+<h3>Tot slot</h3>
+<p>Alhoewel ik het boek niet gelezen heb, denk ik dat de auteur absoluut wel eens een punt zou kunnen hebben. Om dit zomaar als ketterij voor te stellen, dat lijkt me persoonlijk wel heel arrogant.</p>
+<blockquote class="twitter-tweet">
+<p>Enjoyed a great day at <a href="https://twitter.com/search/%23fibo">#fibo</a>; I assume I have the same weight as most guys, but different ratios :p <a title="http://twitter.com/ToJans/status/193112117694562304/photo/1" href="http://t.co/NY2Yg4Jp">twitter.com/ToJans/status/&hellip;</a></p>
+&mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/193112117694562304">April 19, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Zo heb ik bv. tijdens een weekje <a href="http://www.fibo.de/" target="_blank">Fibo </a>eens een avond met een Portugees researcher omtrent voeding etc aan tafel gezeten (sector: sportvoeding en -supplementen), en wat bleek: deze persoon (die hele dagen niks anders doet dan papers scannen etc), was zo overtuigd van paleo, dat hij het zelfs als laatste redmiddel aangeraden had aan een vriend met een autistisch kind, met als resultaat dat dit kind van verschillende jaren oud voor de eerste keer na 3 maanden paleo te eten &nbsp;&#8220;Papa&#8221; gezegd had.</p>
+<p>Kwakzalverij of niet, ik ben dus blijkbaar niet alleen, en heb op nog verschillende plaatsen bevestiging van mijn vermoedens gekregen&#8230;</p>
+<p>Er is nog veel meer te vertellen omtrent het hele verhaal van vet/suikers/insuline/leptine/ghrelin/lactose - en gluten-intolerantie etc, maar dan zou deze post te lang worden; misschien is dit wel voor een andere post&#8230;</p>
+<p>Of het verhaal van de voedselzandloper klopt of niet, daar kan ik niet over oordelen. Waar ik wel kan over oordelen, is over <a href="http://www.standaard.be/artikel/detail.aspx?artikelid=DMF20120911_035" target="_blank">dit fragment dat ik in de krant gelezen heb</a>:</p>
+<p style="padding-left: 30px;"><em><strong>&#8216;Het is niet alleen een slecht boek, het is ook gevaarlijk voor de publieke opinie&#8217;, oordeelt professor en voedingsdeskundige Luc Van Gaal van de UA op Radio 1.&nbsp;</strong></em></p>
+<p>Wel, beste Luc - ik mag toch Luc zeggen he -, op zo&#8217;n statement waarbij je de auteur als ketter verklaart, kan ik maar 1 antwoord geven, en dat is een quote van 1 van mijn persoonlijke eeuwige inspiratiebronnen:</p>
+<p style="padding-left: 30px;"><em><strong>&ldquo;Whoever undertakes to set himself up as a judge of Truth and Knowledge is shipwrecked by the laughter of the gods.&rdquo;</strong></em></p>
+<p style="padding-left: 30px;"><em><strong></strong></em><em><strong>Albert Einstein</strong></em></p>
+<h3><br /></h3><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-05T00:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 5<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/09/05/trading-the-elliott-wave-silver-05-09-2012/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/05/trading-the-elliott-wave-silver-05-09-2012/" itemprop="url">Trading the Elliott Wave - Silver 05/09/2012</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>&nbsp;</p>
+<h3 style="font-size: 11px; margin-bottom: -10px; padding: 0px; color: #444444; font-family: Verdana; line-height: 17px;">Introduction</h3>
+<p style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px;">This is a follow-up for an attempt to read the current trend in Silver, using mostly Elliott waves, Fibonacci retracements and RSI/MACD divergence. Feel free to state your opinion on my interpretation, and be aware that I am a complete newbie concerning this subject. The first post can be found <a href="http://www.corebvba.be/blog/post/Elliot-Wave-An-attempt-for-silver.aspx">here</a>&#8230;</p>
+<p style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px;">&nbsp;</p>
+<p style="color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; line-height: normal;"></p>
+<p>&nbsp;</p>
+<h3 style="font-size: 11px; margin-bottom: -10px; padding: 0px;">Disclaimer</h3>
+<p>This is just an interpetation that tries to predict the future and it might be completely wrong. I can not be held liable for any losses you make when following this advice.</p>
+<h3><span style="font-size: 11px;">Silver Daily</span></h3>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fsilver+20120905+daily.png" alt="" /></p>
+<p>After reading up on the Elliott wave, I have to re-evaluate my previous post a bit; the whole movement from 2012/02 to 2012/08 is definately a bearish impulsive wave, ending in an ending diagonal in the fifth wave. This would imply that the following wave would probably be an ABC-wave. If the current level stays below the current top, then I would still assume a fallback to 30 before going to higher levels. The odd thing is, the pattern does not look like a corrective pattern to me, so this might not be an corrective wave, but an impulsive wave, which would also mean silver could drop to the 30-level and then explode exponentionally&#8230; I still have to read up a bit on Elliott waves since this looks like a problem.</p>
+<p>If the top is not in yet but grows even higher to the 34.5 level, then I would expect a fallback to the level between 31.6 and 31.3.</p>
+<p>&nbsp;</p>
+<h3>Update on the daily after reading up a bit&nbsp;</h3>
+<p>after looking for possible wave forms, this might actually be a flat or an extended flat as well, as the trend seems pretty strong here&#8230; This would imply that one should expect prices of 28 or even lower (in case of an extended flat).</p>
+<p>&nbsp;</p>
+<h3>Hourly &amp; 5 min chart</h3>
+<p>I decided not to look at these as I am currently waiting for the right moment (i.e. the 30 level) before I try to find an entry point&#8230;.</p>
+<p>&nbsp;</p>
+<h3>Conclusion</h3>
+<p>If the current top stays I would suggest to look around for a strong reversal up at the 30&#8217;s mark somewhere&#8230; It should al go up from there&#8230;</p>
+<p>If there is no strong reversal around the 30&#8217;s mark, then is should probably drop to 28 or even lower in a typical flat (or expanded flat), and one should wait for the first reversal above the 32 level again&#8230;</p>
+<p>It might be probable I miss the bottom, but for now (due to the MACD and RSI divergence) I stay with my initial target and reading of the first wave.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-28T00:00:00+02:00" data-updated="true" itemprop="datePublished">Aug 28<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/08/28/trading-the-elliot-wave-silver-28-8-2012/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/08/28/trading-the-elliot-wave-silver-28-8-2012/" itemprop="url">Trading the Elliot Wave - Silver 28/8/2012</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction</h3>
+<p>This is my first attempt to read the current trend in Silver, using mostly Elliot waves, Fibonacci retracements and RSI/MACD divergence. Feel free to state your opinion on my interpretation, and be aware that I am a complete newbie concerning this subject.</p>
+<p></p>
+<p>&nbsp;</p>
+<h3>Disclaimer</h3>
+<p>This is just an interpetation that tries to predict the future and it might be completely wrong. I can not be held liable for any losses you make when following this advice.</p>
+<p>&nbsp;</p>
+<h3>Silver Daily</h3>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f8%2fSilver(Daily)20120828111738.png" alt="" /></p>
+<p>To me this looks like a bearish pattern which is about to turn bullish due to both MACD and RSI divergence; I assume we are currently in the 2nd wave of the bullish pattern. The two shortest dotted lines mark wave 1 and 3 of an impulsive wave; the longest line marks the complete wave&#8230;&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Silver Hourly</h3>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f8%2fSilver(Hourly)20120828105956.png" alt="" /></p>
+<p>This trend also looks like it is about to convert; maybe this is the end of the first wave ? Although there is some resistance at the 30.66 level from the daily, I am expecting it to even fall lower to 30.0ish (38.2ext)&#8230; In case it does break through 31.27, this means the first wave is not in yet (even though I expect it to be, since it looks more like a corrective then an impulsive pattern&#8230; The short dotted line points to a possible impulsive wave, but I expect the long one to be a longer-term wave 1.</p>
+<p>&nbsp;</p>
+<h3>Silver 5 mins</h3>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f8%2fSilver(5+Minutes)20120828110318.png" alt="" /></p>
+<p>The marked wave looks like a bearish impulsive pattern to me, and the MACD seems to have convergence&#8230; so I presume the bullish trend is not yet complete&#8230;. The RSI might be a bit cumbersome, so I am not quite sure what to make of this&#8230;.</p>
+<h3>Conclusion</h3>
+<p>While I can not guarantee anything, I would expect the silver to drop to the 30 or 29.6 level and bounce back into a wave 3; this would be a sign to go long. However, if it falls below 29.20 level, I would have to re-evaluate my possibilities.</p>
+<p>In case it is a long, the third wave should go at least to the 35.25 level&#8230;</p>
+<h3><br /></h3><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-09T00:00:00+02:00" data-updated="true" itemprop="datePublished">Aug 9<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/08/09/project-%23startup10-working-title-big/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/08/09/project-%23startup10-working-title-big/" itemprop="url">Project #Startup10: Working Title - BIG</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>note: The source for this project is on <a href="https://github.com/ToJans/Big" target="_blank">Github</a>; the following text is a copy of the file <a href="https://github.com/ToJans/Big/blob/master/readme.md" target="_blank">Readme.md</a>.</p>
+<h1 style="margin: 0px 0px 10px; padding: 0px; border: 0px; -webkit-font-smoothing: antialiased; cursor: text; position: relative; font-size: 28px; font-family: Helvetica, arial, freesans, clean, sans-serif;">
+<p>Project #Startup10 - Startup #3 : Project Big</p>
+</h1>
+<p style="margin: 0px 0px 15px; padding: 0px; border: 0px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">This is one of the projects of a bigger one:&nbsp;<a style="margin: 0px; padding: 0px; border: 0px; color: #4183c4; text-decoration: none;" href="http://www.corebvba.be/blog/post/Project-Startup10-Learning-to-build-your-own-business.aspx">Project #StartUp10: Creating 10 Startups in one year</a>.</p>
+<p style="margin: 15px 0px; padding: 0px; border: 0px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">The idea of project #3 was to create a platform to implement some really quick solutions for small problems. I would come to a customer, anayze the small issue in about 2-4 hours; implement it in the same timeframe, and by the end of the day the customer should have a working solution.</p>
+<p style="margin: 15px 0px; padding: 0px; border: 0px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">The solution implementation would have been lowcost, but there would be a small recurring fixed amount/month/user fee.</p>
+<h2 style="margin: 20px 0px 10px; padding: 0px; border-width: 0px 0px 1px; border-bottom-style: solid; border-bottom-color: #cccccc; -webkit-font-smoothing: antialiased; cursor: text; position: relative; font-size: 24px; font-family: Helvetica, arial, freesans, clean, sans-serif;"><a class="anchor" style="margin: 0px 0px 0px -30px; padding: 0px 0px 0px 30px; border: 0px; color: #4183c4; text-decoration: none; display: block; cursor: pointer; position: absolute; top: 0px; left: 0px; bottom: 0px;" name="architecture" href="https://github.com/ToJans/Big/blob/master/readme.md#architecture"></a>Architecture</h2>
+<p style="margin: 0px 0px 15px; padding: 0px; border: 0px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">It is currently still completely running clientside, and is just a very simple concept</p>
+<ul style="margin: 15px 0px; padding: 0px 0px 0px 30px; border: 0px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">
+<li style="margin: 0px; padding: 0px; border: 0px;">you have assets or code with a mime-type</li>
+<li style="margin: 0px; padding: 0px; border: 0px;">interaction between code happens using events</li>
+</ul>
+<p style="margin: 15px 0px; padding: 0px; border: 0px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">The idea was to distribute these events to other clients and the server using signalr or something similar</p>
+<h2 style="margin: 20px 0px 10px; padding: 0px; border-width: 0px 0px 1px; border-bottom-style: solid; border-bottom-color: #cccccc; -webkit-font-smoothing: antialiased; cursor: text; position: relative; font-size: 24px; font-family: Helvetica, arial, freesans, clean, sans-serif;"><a class="anchor" style="margin: 0px 0px 0px -30px; padding: 0px 0px 0px 30px; border: 0px; color: #4183c4; text-decoration: none; display: block; cursor: pointer; position: absolute; top: 0px; left: 0px; bottom: 0px;" name="example" href="https://github.com/ToJans/Big/blob/master/readme.md#example"></a>Example</h2>
+<p style="margin: 0px 0px 15px; padding: 0px; border: 0px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">Here is a simple example to prove the concept</p>
+<h3 style="margin: 20px 0px 10px; padding: 0px; border: 0px; font-size: 18px; -webkit-font-smoothing: antialiased; cursor: text; position: relative; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif;"><a class="anchor" style="margin: 0px 0px 0px -30px; padding: 0px 0px 0px 30px; border: 0px; color: #4183c4; text-decoration: none; display: block; cursor: pointer; position: absolute; top: 0px; left: 0px; bottom: 0px;" name="codedomainalerter---textx-coffeescript" href="https://github.com/ToJans/Big/blob/master/readme.md#codedomainalerter---textx-coffeescript"></a>code://Domain.Alerter - text/x-coffeescript</h3>
+<div class="highlight" style="margin: 0px; padding: 0px; border: none; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">
+<pre style="margin: 15px 0px; padding: 6px 10px; border: 1px solid #cccccc; font-size: 13px; font-family: Consolas, 'Liberation Mono', Courier, monospace; background-color: #f8f8f8; line-height: 19px; overflow: auto; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;"><span class="k" style="margin: 0px; padding: 0px; border: 0px; font-weight: bold;">class</span> <span class="nx" style="margin: 0px; padding: 0px; border: 0px;">Alerter</span>
+
+  <span class="nv" style="margin: 0px; padding: 0px; border: 0px; color: #008080;">alertcount: </span><span class="mi" style="margin: 0px; padding: 0px; border: 0px; color: #009999;">0</span>
+
+  <span class="nv" style="margin: 0px; padding: 0px; border: 0px; color: #008080;">alert: </span><span class="nf" style="margin: 0px; padding: 0px; border: 0px; color: #990000; font-weight: bold;">(message) -&gt;</span>
+    <span class="k" style="margin: 0px; padding: 0px; border: 0px; font-weight: bold;">if</span> <span class="p" style="margin: 0px; padding: 0px; border: 0px;">(</span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">@alertcount</span> <span class="o" style="margin: 0px; padding: 0px; border: 0px; font-weight: bold;">&lt;</span> <span class="mi" style="margin: 0px; padding: 0px; border: 0px; color: #009999;">5</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">)</span>
+      <span class="nx" style="margin: 0px; padding: 0px; border: 0px;">emit</span> <span class="s" style="margin: 0px; padding: 0px; border: 0px; color: #dd1144;">'alerted'</span>
+        <span class="nv" style="margin: 0px; padding: 0px; border: 0px; color: #008080;">message: </span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">message</span>
+
+  <span class="nx" style="margin: 0px; padding: 0px; border: 0px;">handle</span> <span class="s" style="margin: 0px; padding: 0px; border: 0px; color: #dd1144;">'alerted'</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">,</span> <span class="nf" style="margin: 0px; padding: 0px; border: 0px; color: #990000; font-weight: bold;">(e) -&gt;</span>
+    <span class="nx" style="margin: 0px; padding: 0px; border: 0px;">@alertcount</span><span class="o" style="margin: 0px; padding: 0px; border: 0px; font-weight: bold;">+=</span><span class="mi" style="margin: 0px; padding: 0px; border: 0px; color: #009999;">1</span>
+</pre>
+</div>
+<h3 style="margin: 20px 0px 10px; padding: 0px; border: 0px; font-size: 18px; -webkit-font-smoothing: antialiased; cursor: text; position: relative; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif;"><a class="anchor" style="margin: 0px 0px 0px -30px; padding: 0px 0px 0px 30px; border: 0px; color: #4183c4; text-decoration: none; display: block; cursor: pointer; position: absolute; top: 0px; left: 0px; bottom: 0px;" name="codedenormalizerinvoice---textx-coffeescript" href="https://github.com/ToJans/Big/blob/master/readme.md#codedenormalizerinvoice---textx-coffeescript"></a>code://Denormalizer.Invoice - text/x-coffeescript</h3>
+<div class="highlight" style="margin: 0px; padding: 0px; border: none; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">
+<pre style="margin: 15px 0px; padding: 6px 10px; border: 1px solid #cccccc; font-size: 13px; font-family: Consolas, 'Liberation Mono', Courier, monospace; background-color: #f8f8f8; line-height: 19px; overflow: auto; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;"><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">handle</span> <span class="s" style="margin: 0px; padding: 0px; border: 0px; color: #dd1144;">'alerted'</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">,</span> <span class="nf" style="margin: 0px; padding: 0px; border: 0px; color: #990000; font-weight: bold;">(e) -&gt;</span>
+  <span class="nx" style="margin: 0px; padding: 0px; border: 0px;">loader</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">.</span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">modifyTable</span> <span class="s" style="margin: 0px; padding: 0px; border: 0px; color: #dd1144;">'table://invoice/123'</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">,</span> <span class="o" style="margin: 0px; padding: 0px; border: 0px; font-weight: bold;">-&gt;</span>
+    <span class="nx" style="margin: 0px; padding: 0px; border: 0px;">@A5</span> <span class="o" style="margin: 0px; padding: 0px; border: 0px; font-weight: bold;">+=</span> <span class="mi" style="margin: 0px; padding: 0px; border: 0px; color: #009999;">1</span>
+    <span class="vi" style="margin: 0px; padding: 0px; border: 0px; color: #008080;">@B5 = </span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">e</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">.</span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">message</span>
+  <span class="nx" style="margin: 0px; padding: 0px; border: 0px;">alert</span> <span class="p" style="margin: 0px; padding: 0px; border: 0px;">(</span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">e</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">.</span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">message</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">)</span>
+</pre>
+</div>
+<h3 style="margin: 20px 0px 10px; padding: 0px; border: 0px; font-size: 18px; -webkit-font-smoothing: antialiased; cursor: text; position: relative; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif;"><a class="anchor" style="margin: 0px 0px 0px -30px; padding: 0px 0px 0px 30px; border: 0px; color: #4183c4; text-decoration: none; display: block; cursor: pointer; position: absolute; top: 0px; left: 0px; bottom: 0px;" name="codeexample---textx-coffeescript" href="https://github.com/ToJans/Big/blob/master/readme.md#codeexample---textx-coffeescript"></a>code://Example - text/x-coffeescript</h3>
+<div class="highlight" style="margin: 0px; padding: 0px; border: none; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">
+<pre style="margin: 15px 0px; padding: 6px 10px; border: 1px solid #cccccc; font-size: 13px; font-family: Consolas, 'Liberation Mono', Courier, monospace; background-color: #f8f8f8; line-height: 19px; overflow: auto; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;"><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">code</span><span class="o" style="margin: 0px; padding: 0px; border: 0px; font-weight: bold;">://</span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">Domain</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">.</span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">Alerter</span>
+<span class="nx" style="margin: 0px; padding: 0px; border: 0px;">code</span><span class="o" style="margin: 0px; padding: 0px; border: 0px; font-weight: bold;">://</span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">Denormalizer</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">.</span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">Invoice</span>
+
+<span class="nv" style="margin: 0px; padding: 0px; border: 0px; color: #008080;">SUT = </span><span class="k" style="margin: 0px; padding: 0px; border: 0px; font-weight: bold;">new</span> <span class="nx" style="margin: 0px; padding: 0px; border: 0px;">Alerter</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">()</span>
+<span class="k" style="margin: 0px; padding: 0px; border: 0px; font-weight: bold;">for</span> <span class="nx" style="margin: 0px; padding: 0px; border: 0px;">i</span> <span class="k" style="margin: 0px; padding: 0px; border: 0px; font-weight: bold;">in</span> <span class="p" style="margin: 0px; padding: 0px; border: 0px;">[</span><span class="mi" style="margin: 0px; padding: 0px; border: 0px; color: #009999;">1</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">..</span><span class="mi" style="margin: 0px; padding: 0px; border: 0px; color: #009999;">10</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">]</span>
+  <span class="nx" style="margin: 0px; padding: 0px; border: 0px;">SUT</span><span class="p" style="margin: 0px; padding: 0px; border: 0px;">.</span><span class="nx" style="margin: 0px; padding: 0px; border: 0px;">alert</span> <span class="s" style="margin: 0px; padding: 0px; border: 0px; color: #dd1144;">"Woohoo #{i}"</span>
+
+<span class="nx" style="margin: 0px; padding: 0px; border: 0px;">report</span> <span class="s" style="margin: 0px; padding: 0px; border: 0px; color: #dd1144;">"&lt;h1&gt;Done&lt;/h1&gt;"</span>
+</pre>
+</div>
+<h3 style="margin: 20px 0px 10px; padding: 0px; border: 0px; font-size: 18px; -webkit-font-smoothing: antialiased; cursor: text; position: relative; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif;"><a class="anchor" style="margin: 0px 0px 0px -30px; padding: 0px 0px 0px 30px; border: 0px; color: #4183c4; text-decoration: none; display: block; cursor: pointer; position: absolute; top: 0px; left: 0px; bottom: 0px;" name="how-does-it-work-" href="https://github.com/ToJans/Big/blob/master/readme.md#how-does-it-work-"></a>How does it work ?</h3>
+<p style="margin: 0px 0px 15px; padding: 0px; border: 0px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">First you need to add the code resources mentioned on top as well as a &#8220;Data resource&#8221; named &#8220;invoice/123&#8221;</p>
+<p style="margin: 15px 0px; padding: 0px; border: 0px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">Then you press &#8220;Run&#8221; on the example, et voila, everything should work/compile, and you should see the updates in the excel-like grid in green, and a &#8220;report&#8221; saying &#8220;Done&#8221;</p>
+<h2 style="margin: 20px 0px 10px; padding: 0px; border-width: 0px 0px 1px; border-bottom-style: solid; border-bottom-color: #cccccc; -webkit-font-smoothing: antialiased; cursor: text; position: relative; font-size: 24px; font-family: Helvetica, arial, freesans, clean, sans-serif;"><a class="anchor" style="margin: 0px 0px 0px -30px; padding: 0px 0px 0px 30px; border: 0px; color: #4183c4; text-decoration: none; display: block; cursor: pointer; position: absolute; top: 0px; left: 0px; bottom: 0px;" name="demo" href="https://github.com/ToJans/Big/blob/master/readme.md#demo"></a>Demo</h2>
+<p style="margin: 0px 0px 15px; padding: 0px; border: 0px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">As usual, you can find the demo over at Appharbor:&nbsp;<a style="margin: 0px; padding: 0px; border: 0px; color: #4183c4; text-decoration: none;" href="http://big.apphb.com/editor/">here</a>.</p>
+<h2 style="margin: 20px 0px 10px; padding: 0px; border-width: 0px 0px 1px; border-bottom-style: solid; border-bottom-color: #cccccc; -webkit-font-smoothing: antialiased; cursor: text; position: relative; font-size: 24px; font-family: Helvetica, arial, freesans, clean, sans-serif;"><a class="anchor" style="margin: 0px 0px 0px -30px; padding: 0px 0px 0px 30px; border: 0px; color: #4183c4; text-decoration: none; display: block; cursor: pointer; position: absolute; top: 0px; left: 0px; bottom: 0px;" name="why-are-you-not-persueing-with-this-projectstartup-" href="https://github.com/ToJans/Big/blob/master/readme.md#why-are-you-not-persueing-with-this-projectstartup-"></a>Why are you not persueing with this project/Startup ?</h2>
+<p style="margin: 0px 0px 15px; padding: 0px; border: 0px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 14px; line-height: 22px;">Every single person I mention this to does not &#8220;get it&#8221;, so I consider this not the way to go&#8230; For now at least. Maybe I will continue with this later on, but for now, I consider this a failure.</p>
+<h1 style="margin-top: 20px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; padding: 0px; border: 0px; -webkit-font-smoothing: antialiased; cursor: text; position: relative; font-size: 28px; font-family: Helvetica, arial, freesans, clean, sans-serif;"><a class="anchor" style="margin: 0px 0px 0px -30px; padding: 0px 0px 0px 30px; border: 0px; color: #4183c4; text-decoration: none; display: block; cursor: pointer; position: absolute; top: 0px; left: 0px; bottom: 0px;" name="ciao" href="https://github.com/ToJans/Big/blob/master/readme.md#ciao"></a>CIAO</h1>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-13T00:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 13<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/07/13/epilogue-one-night-in-paris-%23cqrs-beers-and-life-in-general/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/07/13/epilogue-one-night-in-paris-%23cqrs-beers-and-life-in-general/" itemprop="url">Epilogue: One Night in Paris - #CQRS, Beers and Life in General</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<blockquote class="twitter-tweet">
+<p>Ce soir <a href="https://twitter.com/search/%2523cqrsbeer">#cqrsbeer</a> chez Justine avec @<a href="https://twitter.com/abdullin">abdullin</a> @<a href="https://twitter.com/thinkb4coding">thinkb4coding</a> @<a href="https://twitter.com/ToJans">ToJans</a> <a title="https://groups.google.com/forum/?fromgroups#!topic/parisaltnet/0A2ap2PJdvw" href="https://t.co/7tN6nNoa">groups.google.com/forum/?fromgro&hellip;</a> <a href="https://twitter.com/search/%2523cqrs">#cqrs</a></p>
+&mdash; ALT.Net FR (@altnetfr) <a href="https://twitter.com/altnetfr/status/223353787635609600">July 12, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<h3>Introduction</h3>
+<p>When I told people I was going to drive to Paris (350KM, a 3 hour drive, traffic jams not included) to have a discussion with a few persons I know from the internet, most of my friends were questioning my sanity.</p>
+<p>They know that I am not really following the path most people follow in life and career, but apparently to a lot of people really considered this to be one of my more exotic quircks, hence this blog post explaining my ideas.</p>
+<h3>Cost &amp; Time</h3>
+<p>Why do you want to go this far to have a chat of a few hours with some people you have never seen before to talk about your work, and all in your free time. Have you considered the cost of doing this? Could you not find a better way to spend your money and time (on your startups for example) ?</p>
+<p>Let&#8217;s see:</p>
+<ul>
+<li>Time: +/- 8 hours of driving; we probably talked about 4 to 6 hours&#8230;, and I had to spend the night in Paris - basically a 24h time-frame</li>
+<li>Cost: 120&euro; for the hotel room, and add about the same amount for expenses/gas/&#8221;payage&#8221; etc</li>
+<li>Unknowns: true: I had never seen them before in real life (even though I did read a lot of their articles and tweets, so I did have a general idea who to expect).</li>
+</ul>
+<div>Hmmz, that seems like a lot, or not?</div>
+<div></div>
+<h3>Motivation</h3>
+<p>In my area of expertise; the people who are doing things similar to me are not exactly low-hanging fruit. I would estimate the amount of people in Belgium who are indulged with CQRS to be somewhere around 10 to 20 (I have met only a few of them, so this is really just a guesstimate). Next to this, there is also a lean startup scene in Belgium, which I consider to be a lot larger (my guesstimate would be one to a several hundred for this). However: I only know a single person who is involved in both of them at the same time (in Belgium, that is): <a href="https://twitter.com/MichaelDevenijn" target="_blank">Michael Devenijn</a> with his startup <a href="http://www.autralis.com/" target="_blank">Autralis</a>.</p>
+<p>We once had a night out with some of the people interested in CQRS in Ghent (to eat some spare ribs at the Amadeus - for those of you who know Ghent), and in my experience the amount of learning when you put together a group of genuinely interested people together is overwhelming. I came back A LOT wiser from that experience!</p>
+<p>When I heard <a href="http://abdullin.com/" target="_blank">Rinat </a>was coming to Paris/France (a person both active in CQRS and lean startup: <a href="http://www.lokad.com/" target="_blank">Lokad</a>) and doing a CQRS beers&nbsp;once again&nbsp;- we missed the previous attempt of meeting up-, I decided to go for it. I have read a lot of articles and tweets from Rinat that somehow gave me the impression that we would have similar ideas about software architecture, lean startups, and some opinions on life in general.</p>
+<p>Next to this I also knew <a href="http://thinkbeforecoding.com/" target="_blank">Jeremy </a>was coming over (if you have booked a hotel in France, there is a big chance your payment went through his software), which motivated me even more, because he published a really nice<a href="https://github.com/thinkbeforecoding/m-r" target="_blank"> SimpleCQRS implementation in F#</a>.</p>
+<p>Next tot his I am always eager to meeting new people and extending my horizon; that is about it.</p>
+<h3>The outcome</h3>
+<p>Due to not being able to leave home on time, I knew I was about to get stuck in traffic, because I would arrive around 4PM in Paris (which is one of the worst hours as far as I know). I was correct; this is what it looked like:</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f7%2f289961_4367556274189_2095702751_o.jpg" alt="" /></p>
+<p>Nevertheless, I managed to arrive just on time at Rinat&#8217;s work so we could take the subway to &#8220;Chez Justine&#8221;, the pub where #CQRSBeersParis is usually held.&nbsp;</p>
+<p>During the dinner, we got to talk about a lot of things - usually software related -, and I met some some really interesting people. Unfortunately I first had to checkin to the hotel, and once again I managed to get lost, even though the hotel and the pub were only about 170 meters apart. By the time I got back (checked in, refreshed myself a bit, answered some emails and got lost), only Rinat and Jermey were there&#8230; So we had a hamburger while we watched Jermey implementing Simple.Testing in F# in a few lines of code&#8230;</p>
+<p>&nbsp;</p>
+<blockquote class="twitter-tweet">
+<p>Cool <a href="https://twitter.com/search/%2523cqrsbeer">#cqrsbeer</a> yesterday with @<a href="https://twitter.com/abdullin">abdullin</a> @<a href="https://twitter.com/ToJans">ToJans</a> and @<a href="https://twitter.com/julienlavigne">julienlavigne</a>, with live coding of FsSimple.Testing in <a href="https://twitter.com/search/%2523fsharp">#fsharp</a></p>
+&mdash; J&eacute;r&eacute;mie Chassaing (@thinkb4coding) <a href="https://twitter.com/thinkb4coding/status/223685830886166529">July 13, 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>&nbsp;</p>
+<p>At around midnight, we decided to call it a day, and said goodbye. Rinat proposed me to have a coffee in the morning, because my car was near his work anyway, I did not know yet what I would feel like in the morning so I told him I would text him the next day.</p>
+<h3>The Day after</h3>
+<p>While it was a good hotel, the area was a bit noisy, so I woke up around 7.15AM. As this was to soon to leave - I would be stuck in rush hour -, I decided to text Rinat and ask him if he was still up for a coffee, and he was.</p>
+<p>After checking out and finding my way through the subway, we finally met up again close to his work and went for a coffee.</p>
+<p>This was - on my part - &nbsp;a really interesting talk we had; not only about development or startups, but also more about life in general. While we do have lots of different opinions, we seemed to agree on lots of others. We started talking about life/work/opportunities/changes etc, and I was glad to meet somebody who somewhat shares that opinion. After about an hour or 2 we called it a day, Rinat went back to work and I went back to traffic - fortunately without the traffic jams this time -.</p>
+<h3>Conclusion</h3>
+<p>While this might sound like an over-the-top idea to do, it was actually a really interesting trip for me. Once again, it has shown me that knowledge can be leveraged by sharing it. I also met quite some interesting people, and we also had some non-CQRS related talks as well, where we had the same opinion. It is always great to find out you have similar peers.</p>
+<p>Was it worth it? To me it was; thank you all for the great experience, and who knows, maybe I will see you around later&#8230;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-05T00:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 5<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/07/05/project-%23startup10-lessons-learned-with-blommekes.be/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/07/05/project-%23startup10-lessons-learned-with-blommekes.be/" itemprop="url">Project #Startup10: Lessons Learned With Blommekes.be</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">Note: this is a post from&nbsp;</span><a style="text-decoration: none; color: #5c80b1; background-image: url(http://www.corebvba.be/blog/pics/remote.gif); padding-right: 10px; white-space: nowrap; font-family: Verdana; font-size: 11px; line-height: 17px; background-position: 100% 0%; background-repeat: no-repeat no-repeat; " href="http://www.corebvba.be/blog/post/Project-Startup10-Learning-to-build-your-own-business.aspx">a blog post series about starting up 10 businesses in a year</a><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">.</span></p>
+<h1><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">#1:&nbsp;<a href="http://blommekes.be/" target="_blank">http://Blommekes.Be</a>&nbsp;- koopt een blommeke voor u vrouw en het zal wa beter gaan </span></h1>
+<h3><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">Introduction</span></h3>
+<p><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">The biggest problem in getting started with startups, is finding your inspiration, and deriving a business plan; in this post I will describe how blommekes.be was conceived, and also mistakes, lessons learned during the process.</span></p>
+<h3><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">Inspiration</span></h3>
+<p><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">After the idea of <a href="http://www.corebvba.be/blog/post/Project-Startup10-Learning-to-build-your-own-business.aspx">starting 10 startups in a year</a> was conceived, this was the first startup that I conceived together with Pieter from <a href="http://www.vertaalbureau-taalvirtuozen.be/" target="_blank">Taalvirtuozen</a>. </span></p>
+<p><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">We brainstormed for for about 3 nights straight to find a good idea. The brainstorming process was pretty straightforward: we shared a powerpoint file in google docs, and started adding ideas at random (one per page) while babbling over Skype together. We found our inspiration by surfing the net, (i.e. news sites etc), thinking about where we could find new markets and/or opportunities.</span></p>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">After these 3 nights, we decided to pick an idea and go for it. The odd thing was that we conceived the idea of blommekes.be during that night; the minute we imagined it, we assumed that this would be a perfect match for our first startup: <a href="http://blommekes.be" target="_blank">blommekes.be</a>.</span></span></p>
+<p><a href="http://blommekes.be" target="_blank"><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f7%2fblommekes-site.png" alt="" /></a></p>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"></span></span></p>
+<h3><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">Unique selling points</span></span></h3>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">We checked most of the online webshops for flowers, and while there is a stiff competition there, we decided to approach the market from a different point of view. As a man, I have no idea what the current trends are, and I hate having to check in/register and configure umptheen options before getting my final order. We decided to drive blommekes.be by making it utterly simple to order something and target it at people who were just there to order flowers and get it done.</span></span></p>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">As we were targetting men only, we decided to approach it with a funny, tongue-in-cheeck, &#8220;us against the women&#8221;- kind of style.</span></span></p>
+<h3><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">So it began</span></span></h3>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">Having read through all startup material, we decided to dive in head first, and applying the lean startup mantra &#8220;measuring is knowing&#8221;, so we both launched a tweet and a facebook post after we set up an initial page where one could order some flowers; once you clicked on the order button, you got to a page where you got the reply: &#8220;You can not order at this time, please come back later.&#8221;</span></span></p>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">This was picked up by a huge number of enthousiasts, and got retweeted multiple times. so we assumed we were on to something here&#8230; (f.e. in the first hour after our 2 tweets and facebook posts we had 100 visitors and some retweets), so we decided we were probably on to something good here.</span></span></p>
+<h3><br /></h3>
+<p><em style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px;"><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f7%2fblommekes-stats-day1.png" alt="" /></em></p>
+<p style="padding-left: 30px;"><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"><strong><em>We made our first mistakes here</em></strong></span></span></p>
+<ul>
+<li><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"><em>Visitors are not buyers; just because you are able to attract visitors does not mean you can get them to buy antyhing&#8230; Only about 10% clicked on the order button, and none of them on the pay button</em></span></span></li>
+<li><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"><em>As I had a history in sales, I somehow presumed we could use the slightly adjusted 1 to 18 ratio for conversion, so I assumed about 1 in 400 visitors would place an order (i.e. 1 in 20&sup2;); as we did not manage to get this conversion ratio, I presume we are lacking some things on our site, but more on that later&#8230;</em></span></span></li>
+<li><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"><em>We failed to collect data from those first time users; for example an email or something similar might have been a good idea.</em></span></span></li>
+<li><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"><em>Apparently once people had seen the site, they were not really keen to get back to it, because they knew what it was all about.&nbsp;</em></span></span></li>
+</ul>
+<h3>What was next</h3>
+<p>We needed to get the following things working:</p>
+<p>&nbsp;</p>
+<ul>
+<li>Find a flower shop willing to collaborate on this project</li>
+<li>Make sure we are able to arrange the transportation for the flowers (both the delivery and the packaging)</li>
+<li>Get the payment up and running</li>
+<li>Have some online marketing</li>
+<li>Try doing some offline marketing as well</li>
+</ul>
+<div>The first one was the easiest, as it was a win-win situation for both parties; no strings attached, so we found a local florist willing to help us really soon; I sold the idea on the first pitch.</div>
+<div><br /></div>
+<div>The second one proved to be quite hard, as this was a completely new world for me; in the end we decided to go for our national postal service, and we found some clever ways to package our flowers to make sure they would remain fresh and in a good state during the transportation. This step also required me to order a minimum quantity of 100 boxes at a a price of 2.36&euro;/box; which is a lot for the packaging alone, but I did not want to be stuck with a thousand boxes if the startup failed.</div>
+<div><br /></div>
+<div style="padding-left: 30px;"><strong><em>Yet another lesson</em></strong></div>
+<div style="padding-left: 30px;"><em>It is a whole different ballpark out there; for example ordering the boxes to late caused me to miss our first deadline by a day: Mother&#8217;s day&#8230;</em></div>
+<div><br /></div>
+<div>The payment was, quite frankly, a disaster. As we wanted to support a non-tech audience, we needed both VISA, MasterCard and direct bank payment support. After spending quite some time on getting A****Pay working, I tried the first real payment, and guess what happened:</div>
+<h3><br /></h3>
+<p><img src="https://twitpic.com/show/iphone/8h8t63" alt="" /></p>
+<p>&nbsp;</p>
+<p>After googling a bit for this, it turned out that this &#8220;temporary problem&#8221; was over 4 months old, and still was not fixed, so they basically fubarred me by not informing me.</p>
+<p>So I decided to cut my losses, invest a steep startup cost in a well known payment provider, pay their monthly fee and also accept a high transaction cost from VISA, after all, we lost a lot of time on this&#8230;</p>
+<p style="padding-left: 30px;"><strong><em>Next lesson</em></strong></p>
+<p style="padding-left: 30px;"><em>When you have some momentum going; do not lose it. Do not go for the cheapest possible solution, but opt for established (but maybe more costly) options. In the end, choosing for cheap usually ends up in costing you more money after all. Never loose momentum, as this will cost you potential customers.</em></p>
+<p>The online&nbsp;marketing was completely Pieter&#8217;s accomplishment, and I actually considered it to be quite good. However, it did not go viral, even though we wanted it to. Even though te reactions of the people were utterly positive, people did not share the link.</p>
+<p style="padding-left: 30px;"><strong><em>Another lesson</em></strong></p>
+<p style="padding-left: 30px;"><em>Consider your target audience; people who tend to make things go viral, need something extraordinary they never saw before. While a lot of the people we targetted considered this something they never saw before, it never occured to them that they could actually share it in order to help us. Going viral is hard, and I presume it requires some real expertise and a lot of effort before you are able to create something like that on demand, a.k.a. &#8220;Hello Captain Obvious&#8221;.</em></p>
+<p>
+<object width="640" height="360">
+<param name="movie" value="http://www.youtube.com/v/swgOU58ghxk?version=3&amp;hl=nl_NL" />
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="640" height="360" src="http://www.youtube.com/v/swgOU58ghxk?version=3&amp;hl=nl_NL" allowfullscreen="true" allowscriptaccess="always"></embed>
+</object>
+</p>
+<p>&nbsp;</p>
+<p>We also decided to give&nbsp;offline marketing a shot, so Pieter ordered a thousand business cards, which we put about everywhere we managed to put them (i.e. restaurants, pubs, family spread them, &#8230;). The white on orange text underneath is unreadable due to the crappy webcam, but the text in white says &#8220;Geven &amp; Nemen&#8221;, which is Dutch for &#8220;Give &amp; Take&#8221;, which is intentionally somewhat interpretable in different ways&#8230;</p>
+<p><img src="https://p.twimg.com/AnsgdVyCMAERCxS.png:large" alt="" /></p>
+<p style="padding-left: 30px;"><strong><em>Here is another lesson</em></strong></p>
+<p style="padding-left: 30px;"><em>While it might be worthwile for some, spreading business cards everywhere was apparently not really worthwile for our specific kind of branche. I assume online services need online marketing, and breaching that boundary probably ends up costing you more then you gain.</em></p>
+<h3>So we&nbsp;finally had everything in place</h3>
+<p>One could order and pay flowers, we could transport them; our test shipment had proven to be excellent (i.e. tested in the most extreme possible way), So we were ready to go&#8230;</p>
+<p>Unfortunately, nothing happened&#8230;</p>
+<p>Absolutely nothing ? Well no, we got an order here and there, but nothing spectacular, so for now, the financial result of this whole experience is not exactly what we hoped it to be ** COUGH ** understatement ** COUGH **.</p>
+<h3>Future evolution</h3>
+<p>Is this the end of <a href="http://blommekes.be/" target="_blank">blommekes.be</a>? No, certainly not&#8230; We will try to adjust and improve our process in every way we can, even though this might be in small, gradual and incremental steps. We have made the initial effort, and as this was the first true startup, it was one hell of a ride&#8230;</p>
+<p>As we are progressing with the other startups, we are learning valuable lessons, which we reapply to the previous startups as well.</p>
+<p style="padding-left: 30px;"><strong><em>Another lesson</em></strong></p>
+<p style="padding-left: 30px;"><em>Some things are obvious once they tell them to you, but can be missed quite easy, f.e. not showing the customer how they will be able to pay for their orders might actually hold them back completely.</em></p>
+<p style="padding-left: 30px;"><em>Another obvious one is you need to have recurring customers. While a lot of the people I talked to seemed to know the site &#8220;Blommekes.be&#8221;, and considered it a great idea; most of them never really bothered to visit it again once they had seen it. We tried fixing it by adding a jokes section yesterday, but I am assuming I should probably give the possibility for the visitors to subscribe for an email, so <strong>here is my question to you: would you subscribe to a weekly email that shows you the new flower arrangement and possibly some new jokes that have been added, or not?</strong></em></p>
+<h3>Conclusion</h3>
+<p>While this whole thing has not exaclty been &#8220;a ride in the park&#8221;, we did make some actual progress, and got our first lessons in lean startups. As initially stated, we never assumed we would get it right the first time, the whole spirit of the &#8220;Project #Startup10&#8221;, is learning how to do a startup, so even though we have not been able to turn this into anything profitable (yet), we are making progress&#8230;</p>
+<p>Whether or not blommekes.be will be a keeper, that is something&nbsp;only&nbsp;time will tell.</p>
+<p>The reason I am sharing this, is because I am willing to learn from both my experiences and yours, so if you do have any tips, pointers, or even a simple &#8220;me too&#8221;, please mention this in the comments, as this is one of the things that motivate me to write these kind of posts&#8230;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-14T00:00:00+02:00" data-updated="true" itemprop="datePublished">Jun 14<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/06/14/from-the-trenches-improving-scalability-in-.net-for-paycento/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/06/14/from-the-trenches-improving-scalability-in-.net-for-paycento/" itemprop="url">From the Trenches - Improving Scalability in .Net for Paycento</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction</h3>
+<p>As most of you might know, I am currently in the process of improving the scalability of the <a href="http://www.paycento.com/" target="_blank">Paycento </a>backend..</p>
+<p>As a real lean adept, the idea is to optimize where it hurts&#8230; As the creator of Node.js pointed out perfectly, the biggest pain is in the disk/network access etc.. Blocking threads hurt bigtime&#8230; So I started searching for easy low-cost optimizations that would not require to much effort&#8230;.</p>
+<p>
+<object width="640" height="360">
+<param name="movie" value="http://www.youtube.com/v/M-sc73Y-zQA?version=3&amp;hl=nl_NL" />
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="640" height="360" src="http://www.youtube.com/v/M-sc73Y-zQA?version=3&amp;hl=nl_NL" allowscriptaccess="always" allowfullscreen="true"></embed>
+</object>
+</p>
+<p>&nbsp;</p>
+<h3>Before we begin: Phase 0 - measuring=knowing; ask Heracles</h3>
+<p></p>
+<p>&nbsp;</p>
+<p>I spent a big part of last month coding a command line app called &#8220;Heracles&#8221;, which is some kind of a helper app. It supports the following commands:</p>
+<ul>
+<li>checkout : downloads source and all solutions from SVN and puts them in the folders following our convention</li>
+<li>build: builds all the source and publishes it to the publish &amp; publishweb folders</li>
+<li>db: we have a &#8220;db drop xxx&#8221; and a &#8220;db restore xxx&#8221;, which downloads a backup from our ref db from the web and restores it in SQL Express..</li>
+<li>install: this is a simple wrapper that invokes chocolatey or downloads installer packages from the web, so we all have the same dev environment. &#8220;Heracles install *&#8221; is all one needs to have all the required prerequisites</li>
+<li>performancetest: restores the db, fires up the api WCF service with this db, fires up memcached and then runs all integration tests that have the category &#8220;integration&#8221; and &#8220;speed&#8221;. (simple MStest invoke, capturing relevant output). We redirect trace output to the console and append performance output in logs, so we have a log that contains every single performance test we ran&#8230;.</li>
+</ul>
+<div style="text-align: left; ">This tool allows us to effectively measure our code adjustments in a few minutes, using two simple commands (&#8220;heracles build&#8221; and &#8220;heracles performancetest&#8221;).</div>
+<div>This implies we can measure if our effort is actually resulting in some real improvements&#8230;</div>
+<p>&nbsp;</p>
+<h3>First things first: Caching</h3>
+<p>The easiest way to speed up network/disk access, is simply avoiding it, so I started with caching the part that requires scalability&#8230;</p>
+<p>Caching is an essential part of scalable websites, and there is no need to reinvent the wheel here&#8230; I started of with a simple static in-memory dictionary to verify my hunches, and then I started considering established options&#8230;&nbsp;After some reading up between different caching solutions, I found it hard to decide which option to select, but luckily I found the wonderfull <a href="http://www.nuget.org/packages/Glav.CacheAdapter" target="_blank">CacheAdapter written and maintained by Paul Glavich</a>. It allows you to switch between different caching types by altering web/app.config. The current cache options are:</p>
+<ul>
+<li>No cache</li>
+<li>.Net 4.0 ObjectCache</li>
+<li>Asp.Net Cache</li>
+<li>Appfabric cache</li>
+<li>Memcached</li>
+</ul>
+<p>This improved performance bigtime wiithout a lot of effort.</p>
+<p>&nbsp;</p>
+<h3>Up next: blocking IO requests hurt bigtime</h3>
+<p>After considering the option to convert our WCF service into an async one (way to much effort for now), I discovered that one can easily improve performance of parallel requests by replacing simple calls with their async counterpart and just wait for them to complete&#8230;</p>
+<p>I wrote a simple benchmark to download my homepage 20 times using async &amp; sync approaches, and the results were unbelievable:</p>
+<p><strong><em>The async method was 28 times faster then the sync method&#8230;</em></strong></p>
+<p>How does it work ?</p>
+<p>It is actually quite simple; I wrote a little helper function in a static class called Wait.Async. Here is the complete sample code with the stats included, let us take a look first:</p>
+<p>
+<script src="https://gist.github.com/2929935.js?file=asynctest.cs"></script>
+</p>
+<p>So, the code is really simple; I simple wait for the ResetEvent to be set&#8230; As this is quite repetetive code I wrote a little helper for it&#8230;</p>
+<p>&nbsp;</p>
+<h3>Can we use it to optimize database access ? Even Linq2SQL ?</h3>
+<p>It is a little hackerisch for LinqToSQL and it has its limitations for the queries, but it is actually quite easy to do so&#8230; As we are a big fan of the community and like to give back, we offer you the code we use to improve LinqToSQL scalability.</p>
+<p>&nbsp;</p>
+<p>
+<script src="https://gist.github.com/2929935.js?file=Paycento.API.Tasks.cs"></script>
+</p>
+<p>Unfortunately non-selects are AFAIK (close to) impossible to make async, so we currently simply opt to update the cached values directly and process the SQL on a background thread&#8230;</p>
+<p>&nbsp;</p>
+<h3>What&#8217;s up next ?</h3>
+<p>For now, we have the tools and options in place to start optimizing the code&#8230; We applied the principles to 2 execution paths that require performance, and reached our initial performance goal. So now we need to optimize other paths as well. As my pseudo-fulltime consultancy period for Paycento is about to end next week, I can only assume it will be quite a busy week.. Fortunately, I will still be a member of the Paycento team, even though it will (for now) be more on an ad-hoc basis&#8230;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
+
+</div>
+<nav id="pagenavi">
+    
+        <a href="/blog/page/2/" class="prev">Prev</a>
+    
+    
+        <a href="/blog/page/4/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

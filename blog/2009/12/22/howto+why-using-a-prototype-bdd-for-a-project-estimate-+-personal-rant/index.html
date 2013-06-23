@@ -1,0 +1,233 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Howto+why using a prototype & bdd for a project estimate + personal rant - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="Howto+why Using a Prototype & Bdd for a Project Estimate + Personal Rant Introduction
+As you might or might not now, estimating the budget for a &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2009/12/22/howto%2Bwhy-using-a-prototype-bdd-for-a-project-estimate-%2B-personal-rant/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Howto+why Using a Prototype & Bdd for a Project Estimate + Personal Rant</h1>
+	<div class="entry-content" itemprop="articleBody"><h3>Introduction</h3>
+<p>As you might or might not now, estimating the budget for a project can be very hard sometimes. In order to get started on a project we first need a real estimate of what the client will need, and the client should know what I am going to deliver to him/her.<br />What I personally learned from the past is that one can never be fine-grained enough, since there will always be mismatches somewhere.</p>
+<p>We can however try to offer the client something that he/she can both understand and work with, next to a description of what everything should do (from a business point of view).</p>
+<p>How can we do this, while investing as little work as possible ?</p>
+<p>&nbsp;</p>
+<h3>Unfortunately one can not correctly estimate projects without doing some work</h3>
+<p>As straightforward as this might seem, most people do not seem to be able to grasp this ( do not be ashamed; I have been guilty as well ).</p>
+<p>In order to give a correct estimate, you have to INVEST a decent amount of TIME.</p>
+<p></p>
+<h3>How can we make sure that we have as little mismatches as possible ?</h3>
+<p>You can do this by making sure the estimate is complete; a short list of possible deliverables:</p>
+<ul>
+<li>User manual</li>
+<li>Technical reference manual</li>
+<li>Quickstart guide</li>
+<li>Sourcecode</li>
+<li>Educating the endusers</li>
+<li>A scope definition for the software</li>
+<li>A feature definition within the software scope</li>
+</ul>
+<p>Building this list is usually really easy, except for the last 2 parts:</p>
+<h3><br /></h3>
+<h3>Scope and feature definition for the software</h3>
+<p>This commonly known cartoon is unfortunately true in most cases (click to go the original one) :</p>
+<p><a href="http://www.projectcartoon.com/cartoon/3"><img src="http://www.projectcartoon.com/images/project.jpg" alt="Project planning cartoon" /></a></p>
+<p>Defining the scope of the software is usually hard work, and most of the time the expectations of the client do not match the planned implementations of the developer. How can we avoid this pitfall ???</p>
+<p>This is quite easy, but it does require some work: you build a prototype/wireframe of the application, and show this to the client, asking if everything he wants is in there. This requires quite some time, but usually your quote will be selected because they can see how much time you invested in it, and it shows just how professional you approach your work.</p>
+<p>Next to this you should start on some high level BDD stories describing the behaviour of the problem domain and the application. This means writing stories from a domain perspective (i.e. no computers involved) as well as from an app perspective if necessary.</p>
+<p>&nbsp;</p>
+<h3>But how do I do this technically ?</h3>
+<p>Well, that is completely up to yourself. In order to get you started I can show you how I do it :</p>
+<p>For the prototyping I currently use a combination of HTML/jQuery/jQuery UI and a jQuery plugin called polypage.</p>
+<p>You can see a screenshot here:</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2009%2f12%2fmarkomo_prototype.png" alt="" /></p>
+<p>I am using jQuery UI for <a href="http://docs.jquery.com/UI/Tabs" target="_blank">tabs</a> and an <a href="http://docs.jquery.com/UI/Accordion" target="_blank">accordion </a>to define different possible steps of a screen. Next to this I use <a href="http://code.new-bamboo.co.uk/polypage/" target="_blank">polypage </a>to switch different states (you can click on the &#8220;logged in&#8221; link on the left top in orde to switch between a user that is logged in, and one that is not logged in.)</p>
+<p>You can look at the sample here : <a href="http://www.corebvba.be/demos/prototype/index.html">http://www.corebvba.be/demos/prototype/index.html</a> . Please note that this is pure HTML/Javascript, so there is no serverside involved here&#8230; So if you save the html/css and script sources you have everything I have&#8230; It might also be interesting to know that there is only a single HTML file: index.html. All the necessary code is in there.</p>
+<p>Next to this I describe my domain features using BDD/the ubiquitous language. This will later be fed back into the program tests using BDD. For a good introduction on BDD I should redirect you to <a title="Introducing BDD" href="http://dannorth.net/introducing-bdd" target="_blank">Dan North</a>.</p>
+<p>Describing the domain functionality is needed in order to make sure that you can also estimate your resource usage for everything that happens behind the scenes (which will probably be the biggest part in enterprise projects).</p>
+<p>It goes without saying that I do use <a href="http://wiki.github.com/ToJans/Aubergine" target="_blank">my very own BDD framework</a> as a BDD implementation framework later on.</p>
+<p>&nbsp;</p>
+<h3>In conclusion</h3>
+<p>If you use both HTML wireframes/prototypes together with BDD to describe the problem domain, you usually can grasp wath the project is about, and you should be able to give some good estimates on the budget for a project. Another advantage of this technique is that your quote does show how much time you already invested in their project, and how professional you are about it. This will probabaly give you a commercial advantage over other quotes, since most of them will probably not be as detailed as this one.</p>
+<p>I do bill some of my work from this phase back to the client if I do get the project, but usually this is not a problem, since the client can see the value of doing this.</p>
+<p>&nbsp;</p>
+<h3>A warning/personal rant<br /></h3>
+<p>I also realize that this approach is not always possible, since some clients are not willing to invest enough time in order to give you enough information. Based on my previous experience with this kind of situation I can only advise you one thing: turn around and run away from it as fast as you can, especially in combination with fixed-price projects !! These kind of clients will never know what the final scope and features of the application will be, so you will have to do dozens of rewrites because they do not know the domain or scope themselves, and implement all kinds of extra functionalities that were never mentioned in the initial scope!!! It implies waterfall development, but in the worst possible way !!!</p>
+<p>A few typical taglines by which you can smell problems before beginning on the project:</p>
+<ul>
+<li>&#8220;Oh that is something we do not know yet, but it shouldn&#8217;t be that hard.&#8221;</li>
+<li>Stakeholders having discussions over domain problems</li>
+<li>&#8220;It should be something like site XXX&#8221;. FINAL STOP. (no further details provided)</li>
+<li>&#8220;We need to interface some external apps&#8230; we&#8217;ll see which ones later on&#8221;</li>
+<li>&#8220;How much data.. oh we do not know yet&#8221;</li>
+</ul>
+<p>A few typical lines by which you can notice you are in trouble while working on a project:</p>
+<ul>
+<li>&#8220;When I say I want to upload files in internet explorer, I do mean any file, even it is larger then 200MB&#8221;</li>
+<li>&#8220;What ? Your CSS layout does not support Internet explorer 4 ? Fix it asap&#8221;</li>
+<li>&#8220;Uploading the file repository is slow; I don&#8217;t care that I upload 2GB of data over a DSL line; it is slow, you should fix it&#8221;</li>
+<li>&#8220;Oh, but we do need both implicit and explicit fine-grained security, in such a way that we do not know yet ourselves. Just implement something, and we&#8217;ll let you know if it is ok&#8221;</li>
+<li>&#8220;Yes can you do this ? How much time does it take ? 10 days ?&#8221; =&gt; 20 days later: &#8220;Ok, we want it by next week&#8230;&#8221;</li>
+<li>&#8220;Oh, we decided to use the app for all our customers instead of just ourselves&#8230; Why doesn&#8217;t your app support the load of umphteen times the original amount of users/data ?&#8221;</li>
+<li>&#8220;BTW I forgot to tell you, we need custom theming for every customer group, and we should be able to do it ourselves&#8230; No, we do not want to edit aspx/css files, just make an editor, ok ?&#8221;</li>
+<li>And finally : &#8220;What do you mean, another invoice ? We are not paying since your original quote stated xxx&#8221; after investing y times the work estimated in the original quote&#8230; &#8220;Yeah, we&#8217;ll see you in court, which means you can wait another year for your money (if you are lucky)&#8221;</li>
+</ul>
+<p>As hilarious as this list may seem, these are all things that I have experienced in real life&#8230; So please take my advice and run away as fast as you can from such clients&#8230;</p>
+<p>PS: for really professional people not willing to invest too much time in a project quote, I can always advise <a href="http://estimategoat.com/" target="_blank">this site</a>.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

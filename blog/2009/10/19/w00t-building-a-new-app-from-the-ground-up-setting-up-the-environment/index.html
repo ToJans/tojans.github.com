@@ -1,0 +1,265 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>w00t : Building a new app from the ground up : setting up the environment - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="W00t : Building a New App From the Ground Up : Setting Up the Environment This is one of the articles in our series; the parts are: Methodology, &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2009/10/19/w00t-building-a-new-app-from-the-ground-up-setting-up-the-environment/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">W00t : Building a New App From the Ground Up : Setting Up the Environment</h1>
+	<div class="entry-content" itemprop="articleBody">This is one of the articles in our series; the parts are:<br />
+<ol>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-methodology-technology-tools-used.aspx">Methodology, technology &amp; tools used</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-setting-up-the-environment.aspx">Setting up the environment</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-First-specs-and-getting-started.aspx">First specs and getting started</a></li>
+	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-IOC-database-and-other-stuff3b-a-real-framework.aspx">IOC, database and other stuff; a real framework</a>&nbsp; <br />
+	</li>
+</ol>
+<p>
+&nbsp;Happy reading !<br />
+</p>
+<p>
+Ok, here are the steps to setup the development environment for my new project :
+</p>
+<h2>Prerequisites<br />
+</h2>
+<p>
+&nbsp;
+</p>
+<ul>
+	<li><a href="http://code.google.com/p/msysgit/" target="_blank">MSysGit</a></li>
+	<li>Visual Studio pro or express - <a href="http://www.microsoft.com/express/download/#webInstall" target="_blank">web developer &amp; c#</a>&nbsp;</li>
+	<li><a href="http://www.microsoft.com/downloads/details.aspx?familyid=D3F06BB9-5F5F-4F46-91E9-813B3FCE2DB1&amp;displaylang=en" target="_blank">Asp.net MVC 2 preview 2</a> <br />
+	</li>
+</ul>
+<h2>The steps</h2>
+<p>
+1. Create a project folder <br />
+2. Start Git bash on this folder (right click in windows explorer)<br />
+3. Get MSpec : type in git bash : 
+</p>
+<pre>
+git clone git://github.com/machine/machine.specifications.git
+</pre>
+<p>
+4. Get Subsonic : type in git bash :
+</p>
+<pre>
+git clone git://github.com/subsonic/SubSonic-3.0.git 
+</pre>
+<p>
+5. Search for Subsonic.Core.csproj and build it<br />
+6. Search for Machine.specifications.sln and build it<br />
+7. Make a folder Tools in the project folder<br />
+8. Make a folder Lib in the project folder<br />
+9. Make a folder Source in the project folder<br />
+10. In the folder Tools create a file named &quot;CopyDependenciesAndTools.cmd&quot; with the following content:
+</p>
+<pre>
+@echo off
+echo.
+echo&nbsp;&nbsp; Copying all tools &amp; dependencies
+echo.
+copy ..\machine.Specifications\Build\Release\*.dll
+copy ..\machine.Specifications\Build\Release\*.exe
+copy ..\machine.Specifications\Build\Release\*.dll ..\lib\*.*
+copy ..\machine.Specifications\Build\Release\*.dll ..\lib\*.*
+copy ..\subsonic-3.0\lib\*.dll ..\lib\*.*
+copy ..\subsonic-3.0\subsonic.core\bin\release\*.dll ..\lib\*.*
+pause
+</pre>
+<p>
+11. Execute this cmd-file<br />
+12. Make another cmd file in the tools-folder : &quot;CleanUp.cmd&quot; with the following content:
+</p>
+<pre>
+@Echo off
+echo.
+echo&nbsp;&nbsp; Cleaning up
+echo.
+dir /ad /b /s ..\bin &gt; folderstodelete.txt
+dir /ad /b /s ..\obj &gt;&gt; folderstodelete.txt
+dir /ad /b /s ..\build &gt;&gt; folderstodelete.txt
+for /f %%i in (folderstodelete.txt) do rd %%i /s /q
+pause
+</pre>
+<p>
+13. Execute it<br />
+14. Start up Visual studio and create a new ASP.NET MVC 2 application in the src folder (make sure the checkbox create directory for this solution is off)<br />
+15. Once the project is created choose File/New project / Windows/Class library, name it &quot;Specs&quot;, and make sure you choose the option &quot;Add to solution&quot;<br />
+16. Save and close visual studio<br />
+17. Execute &quot;Tools\CleanUp.Cmd&quot;
+</p>
+<pre>
+15. Go back to the Git Bash and type (line by line, do not copy and paste this in one block):
+</pre>
+<pre>
+git init
+</pre>
+<pre>
+git add .
+</pre>
+<pre>
+git commit -m &quot;+ Initial commit&quot;
+</pre>
+<p>
+<br />
+That&#39;s all there is to&nbsp; it; our initial setup. In the next post we&#39;ll get started writing specs !!
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

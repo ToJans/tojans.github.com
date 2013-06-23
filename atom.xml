@@ -1,0 +1,1448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tom's ramblings]]></title>
+  <link href="http://tojans.github.io/atom.xml" rel="self"/>
+  <link href="http://tojans.github.io/"/>
+  <updated>2013-06-23T12:26:40+02:00</updated>
+  <id>http://tojans.github.io/</id>
+  <author>
+    <name><![CDATA[Tom Janssens]]></name>
+    <email><![CDATA[tom@corebvba.be]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Blogging: less is more and my name is my brand]]></title>
+    <link href="http://tojans.github.io/blog/2013/06/23/blogging-less-is-more-and-my-name-is-my-brand/"/>
+    <updated>2013-06-23T10:50:00+02:00</updated>
+    <id>http://tojans.github.io/blog/2013/06/23/blogging-less-is-more-and-my-name-is-my-brand</id>
+    <content type="html"><![CDATA[<h3>Introduction</h3>
+
+<p>It has been about 10 years ago, since I opted for a blogging platform called <a href="http://www.dotnetblogengine.net/">BlogEngine.Net</a>, which was &ndash; at the that moment -<br/>
+one of the leading blogging platforms in .Net space.</p>
+
+<p>While this has served me quite well, I decided it was finally the time to migrate, because a lot of things have changed since that day. After some careful considerations
+I decided to migrate from BlogEngine.Net to a static site built with <a href="http://octopress.org/">OctoPress</a>(built on top of <a href="https://github.com/mojombo/jekyll">Jekyll</a>)
+ that is hosted on <a href="http://pages.github.com/">github pages</a> with a new domain name.</p>
+
+<p><img src="http://i.snag.gy/XTBMP.jpg" alt="A screenshot of my old blog" /></p>
+
+<h3>Motivation</h3>
+
+<p>My main reasons for migrating are these:</p>
+
+<ul>
+<li>Branding: People know me by name, and my name is my brand, not my company.</li>
+<li>Layout: Outdated, crowded, not drawing attention to the content.</li>
+<li>Hosting: Github offers limitless hosting capabilities for static pages</li>
+<li>Usability: overly complicated, too much features almost nobody used, mobile/tablet usage was a mess</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h3>Branding: People know me by name, and my name is my brand, not my company.</h3>
+
+<p>When I started my company about 10 years ago, the idea was to build a brand, so I spent over a week designing my own logo &ndash; yes, I do
+realize that was not the smartest thing to do &ndash; and invested quite a lot into this (i.e. sponsoring, adds, &hellip;).</p>
+
+<p>Fast forward to today: after 10 years of being in business, I now realize nobody cares about the brand, but they know me or my online representation &ldquo;ToJans&rdquo;.
+So after some careful consideration &ndash; it took over a month to make the decision, which is a long time for me &ndash;, I now no longer represent myself by my brand,
+but by my own name.</p>
+
+<p>I am still planning on creating some kind of a landing page for my company <a href="http://www.corebvba.be">Core</a>, but for now this is not a priority.</p>
+
+<h3>Layout: Outdated, crowded, not drawing attention to the content.</h3>
+
+<p>10 years ago, people assumed that the more links you have on a page, the longer people stay on your website, so I added things like tag clouds, popular posts,
+a search functionality, email subscriptions, twitter feeds and a lot of other stuff.</p>
+
+<p>It took me a decade to realize what google realized from the beginning: simplicity is king. There is no need to force-feed all this bait onto your visitors, as
+they will usually not bite anyway. If they are interested, they will go the extra mile, just make sure one can find all the content in a centralized place
+(i.e. <a href="http://tojans.me/blog/archives/">the archive</a>), and that should be enough.</p>
+
+<p>After all, most of my visitors on my old site used to visit about 1.4 pages on average, so why bother with all this extra overhead? People come to your site
+because they want to read an article, and in case they want to read more, they should be able to, but it should not be forced on them.</p>
+
+<h3>Hosting: Github offers limitless hosting capabilities for static pages</h3>
+
+<p>I still use my old hosting provider I started with a decade ago, and now probably pay way to much for things that I do not need. As my main functionality of my
+provider was hosting my blog, I am now planning on gradually migrating all content from there.</p>
+
+<p>I am considering a VPS or something similar in the future to run my
+<a href="http://tojans.me/blog/2013/05/17/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom/">Erlang</a>/
+<a href="http://tojans.me/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/">Elixir</a> experiments, or I might even drop that, and just opt for cloud-based solutions.</p>
+
+<h3>Usability: overly complicated, too much features almost nobody used, mobile/tablet usage was a mess</h3>
+
+<p>When taking a look at my site usage with google analytics, I noticed the link bait just does not work; there is a very tiny percentage that actually uses it, but
+most people do not bother, so why add it there&hellip; If you make sure the most essential info is there, people WILL use it (f.e. I noticed for the first time people
+actually used the archive page on my new blog).</p>
+
+<p>Also, the new breed of UI&rsquo;s and the arrival of limited-screen-estate devices, requires you to offer as much screen estate and focus as necessary to the content.</p>
+
+<p>Next to this, it also brings a new, more cleaner atmosphere to the visitor, which is nice, as my articles tend to be quite elaborate&hellip;</p>
+
+<h3>Conclusion</h3>
+
+<p>Well, the migration is not complete yet, as I still have to extract all references and content from old blog. The most important thing is get started, so let us end
+again with a motivational quote:</p>
+
+<blockquote><p>What saves a man is to take a step. Then another step. It is always the same step, but you have to take it.</p><footer><strong>Antoine De Saint-Exupery, Author of &#8220;Le petit prince&#8221;</strong> <cite><a href='http://en.wikipedia.org/wiki/Le_petit_prince'>en.wikipedia.org/wiki/&hellip;</a></cite></footer></blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Open brief aan de Belgische overheid: hoe los je de crisis op]]></title>
+    <link href="http://tojans.github.io/blog/2013/06/11/open-brief-aan-de-belgische-overheid-hoe-los-je-de-crisis-op/"/>
+    <updated>2013-06-11T00:00:00+02:00</updated>
+    <id>http://tojans.github.io/blog/2013/06/11/open-brief-aan-de-belgische-overheid-hoe-los-je-de-crisis-op</id>
+    <content type="html"><![CDATA[<h3>Introductie</h3>
+<p>Ik zag net een tweet verschijnen van <a href="http://www.unizo.be/blog_organisatie/" target="_blank">Karel Van Eetvelt</a> - de CEO van UNIZO -, dat het niet goed gaat met de Vlaamse werkgevers</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>Zware alarmkreet Vlaamse werkgevers en zelfstandigen. Economische crisis, belastingdrukverhoging en brutale controles tasten vertrouwen aan.</p>
+&mdash; Karel Van Eetvelt (@karelvaneetvelt) <a href="https://twitter.com/karelvaneetvelt/status/344357431364681730">11 juni 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Eerlijk gezegd is dit niet de eerste keer dat ik dit hoor, maar ik heb de indruk dat de crisis nu pas nog maar echt aan het beginnen is&#8230; Normaal gezien zou een overheid hier dan moeten ingrijpen in de mate van het mogelijke, maar jammer genoeg worden mijns inziens in Belgi&euml;/Vlaanderen steeds de verkeerde beslissingen genomen door de overheid.</p>
+<!-- more -->
+<h3>Wat is het probleem met de Belgische overheid?</h3>
+<p>De overheid is log, traag, en wordt steeds ingewikkelder en ondoorzichtiger. Tot de jaren 80 kon een bedrijf zich nog wel permiteren om zo te functioneren, maar vanaf de jaren 90 moesten bedrijven zich langzaam maar zeker flexibeler en transparanter opstellen, zodat ze sneller en beter op de markten konden inspelen. Voeg daar nu nog de snelheid en mondigheid aan toe die de laatste jaren opmars aan het maken is - denk maar aan social media -, en ik hoef het geen drie keer uit te leggen dat bedrijven alsmaar sneller op trends en evoluties moesten reageren.</p>
+<p>Wat heeft dit tot gevolg voor een bedrijf: overal waar zaken te traag of te onflexibel waren, heeft men dit probleem aangepakt, en is men de zaken stap voor stap gaan vereenvoudigen of optimaliseren, of om het met een quote te zeggen: &#8220;Optimize for happiness&#8221;: verwijder alle rompslomp en overbodige zaken, en automatiseer saaie zaken waar mogelijk.</p>
+<p></p>
+<p>Bedrijven die dit succesvol uitgevoerd hebben, hebben een veel grotere kans te kunnen inspelen op de evoluties van de markt.</p>
+<p>De Belgische overheid echter, die doet het omgekeerde; ik zal nu in een aantal tweets die ik aan Karel Van Eetvelt gericht had uitleggen waarom:</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/karelvaneetvelt">karelvaneetvelt</a> Verminder subsidies/&#8221;specialekes&#8221; en verlaag de algemene lasten; op die manier betaalt *iedereen* dezelfde bijdrages.</p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/344361795106004992">11 juni 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Het is heel eenvoudig: het systeem is zodanig ingewikkeld, dat het merendeel van de subsidies en lastenverlagingen speciale expertise vereist, waarvoor je als klein bedrijf de kennis niet in huis hebt, of de investering niet durft te doen. Grote bedrijven hebben wel de ruimte om alles uit te pluizen, gezien de grootte-orde van het resultaat</p>
+<p>Waarom wordt in Belgi&euml; belastingsondtuiking als een nationale sport aanzien? Omdat de belastingen zo hoog zijn tiens. Veronderstel dat we - kort door de bocht - alle subsidies en lastenverlagingen afschaffen, maar de BTW en vennootschapsbelasting beperken tot 6%. Denken jullie dan dat het merendeel van de mensen nog de moeite zal doen om belastingen te ontduiken? Ik eerlijk gezegd niet. Deze vereenvoudiging brengt ons bij het volgende voordeel:</p>
+<p>&nbsp;</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/karelvaneetvelt">karelvaneetvelt</a> minder subsidies &amp; specialekes = mogelijkheid tot decimeren van overheidsinstanties =&gt; terug besparingen.</p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/344362090800226304">11 juni 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Als alle subsidies en belastingsverminderingen wegvallen, kunnen we dan waarschijnlijk ook het aantal mensen dat voor de overheid werkt decimeren, en werken we bijgevolg ook al een groot deel van het &#8220;Griekse symptoom&#8221; weg.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/karelvaneetvelt">karelvaneetvelt</a> de overheidsinstanties zitten nog in de jaren 80, terwijl het bedrijfsleven alsmaar flexibeler &amp; efficienter is geworden.</p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/344362757065433088">11 juni 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Denk maar aan de vele sketches op televisie, zoals de schrijnend realistische: <a href="http://www.zideo.nl/playzideo/6c4957556e315a74" target="_blank">&#8220;wat als zelfstandigen ambtenaren waren&#8221;</a>.</p>
+<p>Dit kost geld; onnoemelijk veel geld, en is gewoon niet meer van deze tijd; fix it ASAP!</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/karelvaneetvelt">karelvaneetvelt</a> opteer niet alleen voor administratieve vereenvoudiging, bv: voor elke wet die er bij komt moeten er twee afgeschaft worden</p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/344362928314658816">11 juni 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Het systeem is gewoon v&eacute;&eacute;l te ingewikkeld; we hebben niet alleen administratieve vereenvoudiging nodig, maar ook fiscale vereenvoudiging, en dan zwijgen we nog over het feit dat we gewesten, provincies, en God weet nog hoeveel verschillende niet-communicerende en overhead-cre&euml;rende instanties hebben.</p>
+<h3>Tot slot</h3>
+<p>Ik besef dat dit als een platitude zal beschouwd worden door de meeste mensen, maar hoop dat dit tenminste toch even tot nadenken aanzet. Ik begrijp ook wel dat de oplossing niet zo eenvoudig is als ik ze hier voorstel, maar hoop dat sommige mensen zich tenminste eens de vraag stellen: waarom is dit niet zo eenvoudig? Kan het niet anders? Wat is de kleinste stap die we kunnen zetten om dichter bij ons doel te geraken?</p>
+<p>Ik ben niet echt een voorstander van een volledige Keynesiaanse aanpak, maar enige vooruitgang zou hier toch op zijn minst hoopvol moeten zijn.</p>
+<p>Hoogachtend,</p>
+<p>Tom Janssens</p>
+<p>Zaakvoerder</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Installing and compiling Elixir and the Dynamo web framework on Windows]]></title>
+    <link href="http://tojans.github.io/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/"/>
+    <updated>2013-06-09T00:00:00+02:00</updated>
+    <id>http://tojans.github.io/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows</id>
+    <content type="html"><![CDATA[<h3>Introduction</h3>
+<p>People following me on twitter noticed I got entangled in yet another new language for the Erlang/BEAM VM:&nbsp;</p>
+<h3><img style="font-size: 10px;" src="http://www.corebvba.be/blog/image.axd?picture=2013%2f6%2felixir-logo.png" alt="" /></h3>
+<p>Elixir could be easily described as &#8220;ruby for the BEAM/Erlang VM&#8221;. In previous posts, I mentioned <a href="http://www.corebvba.be/blog/post/Erlang-Camp-Amsterdam-why-you-should-follow-it-and-getting-started-with-Erlang-and-Axiom.aspx">why people should learn Erlang</a>, but in fact, I think most people might be better off when they skip Erlang and opt directly for Elixir. It has all the advantages of Erlang, but offers a Ruby-like syntax, macros, polymorphism and more.</p>
+<p>As <a href="http://benjamintanweihao.github.io/blog/2013/06/08/why-my-next-programming-language-is-elixir/" target="_blank">someone else made a perfect blog post on why you should learn Elixir</a>, I will not elaborate further on it in this post. Read his post; the info is all there.</p>
+<p>As usual, you can find more info about Elixir on <a href="http://en.wikipedia.org/wiki/Elixir_(programming_language)" target="_blank">Wikipedia</a>&nbsp;, or on the <a href="http://elixir-lang.org/" target="_blank">Elixir site</a>.</p>
+<p>In this post, I will show you how to get started with Elixir and generate a template website using the <a href="https://github.com/elixir-lang/dynamo" target="_blank">Dynamo web framework</a>.</p>
+<p>Installing Elixir is simple, but because one of the Dynamo web framework dependencies requires the make tool, you need to do some extra work. If anybody finds a better/simpler way to do this, please let me know in the comments.</p>
+<!--more-->
+<h3>Prerequisites</h3>
+<p>In order to get started with Elixir on windows, you need several apps installed:</p>
+<ul>
+<li>git: I use <a href="http://msysgit.github.io/" target="_blank">msysgit </a>(installed with <a href="http://chocolatey.org/" target="_blank">Chocolatey</a>: <a href="http://chocolatey.org/packages/git.install" target="_blank">cinst git.install</a>)</li>
+<li><a href="http://www.erlang.org/" target="_blank">erlang</a>: You need at least Erlang <a href="http://erlang.org/download/otp_win64_R16B.exe" target="_blank">R16B</a>, so you can not use chocolatey here.</li>
+<li>Elixir: you need a&nbsp;precompiled package that is not realeased yet, <a href="https://github.com/elixir-lang/elixir/issues/1203" target="_blank">0.9.1 crashes on windows, but Jos&eacute; Valim quickly built a hotfix &nbsp;- Thanks Jos&eacute; !-</a>. Older versions will not work on Windows. You can download it <a href="https://dl.dropboxusercontent.com/u/4934685/elixir/v0.9.2.dev.zip" target="_blank">here</a>; I unzipped it in &#8220;c:\program files\elixir&#8221;.</li>
+<li>Minimal system from Minimalist GNU for Windows (also installed with Chocolatey:<a href="http://chocolatey.org/packages/mingw" target="_blank"> cinst mingw </a>) - make sure you install the mingw developer toolkit - see screenshot:</li>
+</ul>
+<div><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f6%2fmingw.png" alt="" /></div>
+<div><br /></div>
+<p>Next you need to make sure that &#8220;erlang/bin&#8221;, &#8220;elixir/bin&#8221; and &#8220;MinGW\bin&#8221; are in your path, and we will verify that everything works; we will also need to copy the file &#8220;c:\mingw\bin\mingw32-make.exe&#8221; to &#8220;c:\mingw\bin\make.exe&#8221;. Next we can test whether everything works:</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f6%2fprerequisites.png" alt="" /></p>
+<h3>Getting and building the web framework for Elixir: Dynamo</h3>
+<p><a href="https://github.com/elixir-lang/dynamo" target="_blank">Dynamo</a> is a web framework tailored specificly to the Elixir language. As it is written on top of the Erlang Cowboy/Ranch stack, it uses proven technology to accelerate web development.</p>
+<p>It might be nice to know that <a href="https://twitter.com/josevalim" target="_blank">Jos&eacute; Valim</a> (the creator of the Elixir language and the Dynamo web framework) <a href="http://contributors.rubyonrails.org/contributors/jose-valim/commits" target="_blank">is one of the main contributors to the Ruby On Rails engine</a>, so you can assume he knows a thing or two about web frameworks.</p>
+<p>Anyway, enough background; let us get started with the installation&#8230;</p>
+<p>First we need to clone the dynamo repo(which is a web framework that has a workflow comparable to Ruby on Rails) &nbsp;and build it. You can get it using the following command: &#8220;git clone https://github.com/elixir-lang/dynamo.git&#8221;.</p>
+<p>Because building the dependency Cowboy requires the make.exe tool (the reason we needed to install MinGW MSys), we need to do this in an msys shell. You can find the msys shell under &#8220;c:\mingw\msys\1.0\msys.bat&#8221;.</p>
+<p>Open up the shell, clone the repo and get/build the dependencies from dynamo using the mix tool : &#8220;mix deps.get&#8221;.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f6%2fdyn-get-deps.png" alt="" /></p>
+<p>You will get an error in the end, but that is not really a problem; the compilation should be succesful. Now you need to compile the dynamo app: &#8220;mix compile&#8221;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f6%2fdyn-compile.png" alt="" /></p>
+<h3>Generate a web app with dynamo: blah</h3>
+<p>You can now test whether dynamo works. You can now use dynamo to generate a web app: &#8220;mix dynamo [path of app]&#8221;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f6%2fdynamo-works.png" alt="" /></p>
+<p>This has created a web-app in the blah folder. We go to the blah folder, and run once again &#8220;mix deps.get&#8221; and &#8220;mix compile&#8221;. Then we should be able to start the server by typing &#8220;mix server&#8221;.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f6%2fblah-works.png" alt="" /></p>
+<p>Open up a browser on <a href="http://localhost:4000/" target="_blank">http://localhost:4000</a> and you can see the labor of your work.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f6%2fblah-runs.png" alt="" /></p>
+<p>Now you can start working on your app, but that is the subject for another blog post. You can find more information about the dynamo web framework&nbsp;<a href="https://github.com/elixir-lang/dynamo#readme" target="_blank">here</a>.</p>
+<p>Happy Elixiring !</p>
+<p>Tom</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to hire a senior developer]]></title>
+    <link href="http://tojans.github.io/blog/2013/05/30/how-to-hire-a-senior-developer/"/>
+    <updated>2013-05-30T00:00:00+02:00</updated>
+    <id>http://tojans.github.io/blog/2013/05/30/how-to-hire-a-senior-developer</id>
+    <content type="html"><![CDATA[<h3>Introduction</h3>
+<p>A little while ago I wrote a post <a href="http://www.corebvba.be/blog/post/Fallacies-of-the-tech-recruitment-process.aspx">the fallacies of the tech recruitment process</a>. While it is nice to point out what is wrong, I never actually provided the proper way to find out if a senior developer might be experienced enough and the right fit for your company, so this time I decided to put my money where my mouth is, and tell you how to hire a senior developer.</p>
+<h3>Why hire a &#8220;senior developer&#8221; and what is a senior developer exactly</h3>
+<p>In my opinion, a senior developer is a developer who manages to think out of the box, and who does not stop reasoning about finding a solution at technical boundaries. A senior developer is somebody who tries to provide business value for every single step he makes, while a junior is more or less focussed on implementing the whole thing, a senior thinks about what he has to do and why he has to do it&#8230;</p>
+<!--more-->
+<p>A senior can be tens to hundreds of times more productive business-value wise then a junior.</p>
+<p>I have seen people getting the title &#8220;Senior developer&#8221;, while they only have been developing for 3 to 5 years. While this is possible, I am assuming that most of them are not senior developers, but actually expert beginners.</p>
+<p>Please allow me to clarify this with the<strong> </strong>Dreyfus model of skill acquisition (i.e. the different stages somebody goes through when acquiring a new skill). I will take the alternative interpretation of this model, because the original model is to abstract to make a point here. You have 5 distinct levels in this model. This section is blatantly copied <a href="http://en.wikipedia.org/wiki/Dreyfus_model_of_skill_acquisition" target="_blank">from wikipedia</a>:</p>
+<h4>1. Novice</h4>
+<ul>
+<li>&#8220;rigid adherence to taught rules or plans&#8221;</li>
+<li>no exercise of &#8220;discretionary judgment&#8221;</li>
+</ul>
+<h4>2. Advanced beginner</h4>
+<ul>
+<li>limited &#8220;situational perception&#8221;</li>
+<li>all aspects of work treated separately with equal importance</li>
+</ul>
+<h4>3. Competent</h4>
+<ul>
+<li>&#8220;coping with crowdedness&#8221; (multiple activities, accumulation of information)</li>
+<li>some perception of actions in relation to goals</li>
+<li>deliberate planning</li>
+<li>formulates routines</li>
+</ul>
+<h4>4. Proficient</h4>
+<ul>
+<li>holistic view of situation</li>
+<li>prioritizes importance of aspects</li>
+<li>&#8220;perceives deviations from the normal pattern&#8221;</li>
+<li>employs maxims for guidance, with meanings that adapt to the situation at hand</li>
+</ul>
+<h4>5. Expert</h4>
+<ul>
+<li>transcends reliance on rules, guidelines, and maxims</li>
+<li>&#8220;intuitive grasp of situations based on deep, tacit understanding&#8221;</li>
+<li>has &#8220;vision of what is possible&#8221;</li>
+<li>uses &#8220;analytical approaches&#8221; in new situations or in case of problems</li>
+</ul>
+<div>I tend to think that a lot of so-called-seniors are actually expert beginners: they know how to implement something technically, but they lack the experience to truely think about what they are doing, why they are doing it, and typically stop thinking at the technical level.</div>
+<div><br /></div>
+<div>Now on to the hiring process&#8230;</div>
+<div><br /></div>
+<h3>How to hire a &#8220;senior&#8221; guitar player ?</h3>
+<p>To explain the proper way to do this, let me explain it with another question: how would you hire an expert guitar player?</p>
+<p>First of all, I would not ask him about notes and intervals, but I would ask about performances, favorite music pieces, biggest mistakes and achievements, and find out whether he is passionate about his job and has any &#8220;war stories&#8221; to share</p>
+<p>Next, I would ask him to play a musical piece, but with a guitar that is out of tune, and I would hand him a piece of music that contains some oddities or errors somewhere.</p>
+<ol>
+<li>Beginner: you notice he does not pluck all the strings in a correct way, is unable to keep the tempo etc</li>
+<li>Beginner expert: he will try to play the piece at the best possible &#8220;technical&#8221; way.</li>
+<li>Competent: he will probably tune the guitar first upon noticing it is out of tune.</li>
+<li>Proficient: he will probably tune the guitar, notice the piece contains some errors and oddities, and play them, but talk about them afterwards.</li>
+<li>Expert: he will probably tune the guitar, flatten out the errors and oddities from the piece during play</li>
+</ol>
+<div>I think the point is quite clear here, is it not? While you might master something perfectly in a technical way, that does not make you an expert at all. Combine this with the fact that most people tend to think they are in the top 20 percentile when it comes to being smart, and you can start seeing parallels with a story called <a href="https://en.wikipedia.org/wiki/The_Emperor's_New_Clothes" target="_blank">&#8220;The emperor&#8217;s new clothes&#8221;</a>.</div>
+<div><br /></div>
+<h3>How to hire a &#8220;senior&#8221; developer?</h3>
+<p><span style="font-size: 10px;">Start by asking him about his career, find out what his passions and achievements are, and where he made the biggest failures (and learned from it, I might hope).</span></p>
+<div>Next, ask him for example, how he would handle a situation that is actually the wrong solution for the problem, let us give an example:</div>
+<div><br /></div>
+<div>You say you need a website which would allow you to upload files from the local network, so you need a way to create an in-browser explorer that allows you to browse the network.</div>
+<div><ol>
+<li>Beginner: will ask you how the screen should look, and then probably starts talking about the implementation</li>
+<li>Beginner expert: will ask you how the screen should look, start talking about how ajax might help here etc.</li>
+<li>Competent: might be talking about things like delegating security in browsers over netwerk drives is hard etc</li>
+<li>Proficient: will ask you why you exactly need all this functionality that it needs to be implemented in a certain way</li>
+<li>Expert: will question your authority and tell you to just use an upload button instead, as the business ROI will probably be way higher here</li>
+</ol>
+<div>This also makes my point on productivity. Typically, going higher up in levels, does not mean a linear increase in productivity, but an exponential one.</div>
+</div>
+<div><br /></div>
+<h3>Conclusion</h3>
+<p>There you have it: the proper way to hire a senior developer. So, let us hope that by the next time I have to do some kind interview for a senior developer, they will stop asking me about how the garbage collection works in detail, or what exactly a strategy pattern is, because:</p>
+<p style="padding-left: 30px;"><em>&#8220;Quite frankly, my dear, I don&#8217;t give a damn&#8221;</em>&nbsp;<em>Clark Gable - Gone with the wind</em></p>
+<div>While those might be interesting, you are focusing on implementation details, not on providing a solution. Technical things can be googled, but a higher level thinking is something only experience can give you.</div>
+<div><br /></div>
+<div>Signing off,</div>
+<div><br /></div>
+<div>Tom</div>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Erlang Camp Amsterdam: why you should follow it and getting started with Erlang and Axiom]]></title>
+    <link href="http://tojans.github.io/blog/2013/05/17/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom/"/>
+    <updated>2013-05-17T00:00:00+02:00</updated>
+    <id>http://tojans.github.io/blog/2013/05/17/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom</id>
+    <content type="html"><![CDATA[<h2>Introduction</h2>
+<p>The last two days of August there is a <a href="http://www.erlangcamp.com/amsterdam">2 day Erlang course in Amsterdam</a>. One of the most incredible things, is that there is a low cost offer sponsored by <a href="http://www.spilgames.com/">Spil games</a> that reduces the price to 55&euro; for both days; talk about a steal!!</p>
+<h2>First things first: why should you follow a camp on Erlang?</h2>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f5%2ferlcamp.png" alt="" /></p>
+<p>People who know me in person know that I am an avid fan of Erlang, even though I have only done some very small experiments with it.</p>
+<p>Even if you are not planning on developing something in Erlang, you should at least try to grasp the basic concepts!!</p>
+<p>You want to know why? Here is why:</p>
+<!--more-->
+<h3>Opinionated - but proven - architecture</h3>
+<p>Today&#8217;s world of always connected web-apps, is much more similar to the telecom world then the web-apps from a few decades ago. People are currently continuously connected, and they expect almost-immediate responses.</p>
+<p>As you can imagine, designing a proper software architecture for this takes a lot of time, but this is one of the parts where Erlang excels:</p>
+<p>All the time you spend on building infrastructure for a well-designed application can be simply skipped. Erlang offers a very opinionated but proven tech stack that implements this for you out of the box, including things like messaging, local and distributed persistent storage, supervisor processes, &#8230;</p>
+<p>Next to this it also does not care on which machine a process runs;there is no extra implementation cost to run your process on multiple machines. (cloud anyone?)</p>
+<h3>The actor model</h3>
+<p>Actors are the &#8220;mode du jour&#8221; when it comes down to development buzzwords, but they happen to work pretty good in distributed environments. The whole Erlang infrastructure is built around processes communicating to each other with mailboxes per process, and they to offer selective receives and timeouts in a pretty straightforward way.</p>
+<p>Because the VM is custom built for this platform, it has some extra things other VM&#8217;s do not have, like soft-realtime processing and per-process garbage collection. The VM is optimized for the actor model.</p>
+<h3>Productivity</h3>
+<p>Erlang has a bit of a quirky syntax due to it&#8217;s origins (Prolog), so it takes some getting used to the difference between ending a line with a semicolon, a comma or a dot. While this might seem odd, it comes naturally after a while, but it takes some persistence.</p>
+<p>Next to this, Erlang has pattern matching (a little bit comparable to polymorphism in OO languages, but it even goes way further then that).</p>
+<p>They even have something like generics using behavior.</p>
+<p></p>
+<p>Another odd thing for someone coming from an imperative programmer&#8217;s world is the advice of not using if statements. While this might sound really odd, it does offer a lot of advantages (i.e. the whole explicit vs implicit discussion).</p>
+<p>All these and other things might sound a bit odd, but they allow you to focus your code on business behavior, and infrastructure is just there to use it, without interfering with your code.</p>
+<p>Typical stories from multiple resources show that code is reduced to about a third when converting to Erlang.</p>
+<h3>Others</h3>
+<p>There are numerous other reasons why to opt for Erlang in certain cases, here are some resources:</p>
+<ul>
+<li><a href="http://www.erlang.org/download/armstrong_thesis_2003.pdf">Joe Armstrong&#8217;s original paper on Erlang from 2003</a></li>
+<li><a href="http://pragprog.com/articles/erlang">The pragmatic programmer&#8217;s page on Erlang</a></li>
+<li>Please post any other suggestions in the comments</li>
+</ul>
+<h2>Ok, you convinced me, but how do you get started on this?</h2>
+<p>Quite simple: unicorns &amp; fairydust. Or, if those are not available, there is another way (it took me a while to figure all of this out, but once you know it, it is quite simple):</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fstart.png" alt="" /></p>
+<h3>Install prerequisites</h3>
+<p>First we need some kind of a package manager. As this example is currently in Windows, I will start by installing a package manager: <a href="http://chocolatey.org">Chocolatey</a>.</p>
+<p>Open a command window as an administrator, and type the following (copied from the chocolatey website):</p>
+<pre><code><strong>@powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; SET PATH=%PATH%;%systemdrive%\chocolatey\bin
+</strong></code></pre>
+<p>Close the command window, and open it again, you will now be able to install applications using the command line; we will start by installing git and Erlang from the command line:</p>
+<pre><code><strong>cinst git.install
+cinst erlang
+</strong></code></pre>
+<p>You now should have both git and Erlang installed. If I am not mistaken git should be available from the command line right now</p>
+<p>But we also need to make the Erlang binaries available on the command line. You can do this by setting the path in the windows settings, or just for this one command window.</p>
+<p>As I am trying to keep this post short, I will just opt for the latter; in the command window you should type the following:</p>
+<pre><code><strong>set path=%path%;c:\Program Files\erl5.10.1\bin
+</strong></code></pre>
+<p>Where path should of course match your install path.</p>
+<h3>Get a package manager</h3>
+<p>As most languages, Erlang has a package manager; I currently opt for rebar.</p>
+<p>Go to a path where you want to put your code; type the following:</p>
+<pre><code><strong>git clone https://github.com/basho/rebar.git</strong>
+</code></pre>
+<p>This should provide you the source, but also the binaries to the rebar package manager.</p>
+<p>Tot test whether it works, just type <code>rebar -c</code> and it should show you the following output:</p>
+<pre><code>E:\Dev\erlang\rebar&gt;<strong>rebar -c</strong>
+
+clean                                Clean
+compile                              Compile sources
+
+escriptize                           Generate escript archive
+
+create      template= [var=foo,...]  Create skel based on template and vars
+create-app  [appid=myapp]            Create simple app skel
+create-node [nodeid=mynode]          Create simple node skel
+list-templates                       List available templates
+
+doc                                  Generate Erlang program documentation
+
+check-deps                           Display to be fetched dependencies
+get-deps                             Fetch dependencies
+update-deps                          Update fetched dependencies
+----&gt;&lt;8------- cut for brevity
+</code></pre>
+<h2>Let&#8217;s build a POC helloworld first</h2>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fHelloWorld.png" alt="" /></p>
+<p>Create the folder where you want your app to reside, and copy the file <code>rebar.</code> and <code>rebar.cmd</code> into this folder.</p>
+<p>First we are going to generate an app; this should create a subfolder <code>src</code> with 3 files in it.</p>
+<pre><code>E:\Dev\erlang\erlcdemo&gt;<strong>rebar create-app appid=helloworld</strong>
+==&gt; erlcdemo (create-app)
+Writing src/helloworld.app.src
+Writing src/helloworld_app.erl
+Writing src/helloworld_sup.erl
+</code></pre>
+<p>For now we will ignore the <code>*app</code> and <code>*sup</code> files, but create another file under the <code>src</code> folder, named <code>helloworld.erl</code>. This should be the content:</p>
+<pre><code><pre class="line-pre" style="font-size: 12px; line-height: 16px; font-family: Consolas, 'Liberation Mono', Courier, monospace; word-wrap: break-word; width: 744px; margin: 0px; padding: 0px;"><div id="file-014-erl-LC1" class="line"><span class="p">-</span><span class="ni" style="color: purple;">module</span><span class="p">(</span><span class="n" style="color: #333333;">helloworld</span><span class="p">).</span></div><div id="file-014-erl-LC2" class="line"><span class="p">-</span><span class="ni" style="color: purple;">compile</span><span class="p">(</span><span class="n" style="color: #333333;">export_all</span><span class="p">).</span></div><div id="file-014-erl-LC3" class="line">&nbsp;</div><div id="file-014-erl-LC4" class="line"><span class="nf" style="color: #990000; font-weight: bold;">hi</span><span class="p">()</span> <span class="o" style="font-weight: bold;">-&gt;</span></div><div id="file-014-erl-LC5" class="line">  <span class="n" style="color: #333333;">hi</span><span class="p">(</span><span class="s" style="color: #dd1144;">"stranger"</span><span class="p">).</span></div><div id="file-014-erl-LC6" class="line">&nbsp;</div><div id="file-014-erl-LC7" class="line"><span class="nf" style="color: #990000; font-weight: bold;">hi</span><span class="p">(</span><span class="s" style="color: #dd1144;">"Tom"</span><span class="p">)</span> <span class="o" style="font-weight: bold;">-&gt;</span></div><div id="file-014-erl-LC8" class="line">  <span class="n" style="color: #333333;">hi</span><span class="p">(</span><span class="s" style="color: #dd1144;">"silly sod"</span><span class="p">);</span></div><div id="file-014-erl-LC9" class="line">&nbsp;</div><div id="file-014-erl-LC10" class="line"><span class="nf" style="color: #990000; font-weight: bold;">hi</span><span class="p">(</span><span class="nv" style="color: teal;">Who</span><span class="p">)</span> <span class="o" style="font-weight: bold;">-&gt;</span></div><div id="file-014-erl-LC11" class="line">  <span class="nn" style="color: #555555;">io</span><span class="p">:</span><span class="nf" style="color: #990000; font-weight: bold;">format</span><span class="p">(</span><span class="s" style="color: #dd1144;">"Hello </span><span class="si" style="color: #dd1144;">~s</span><span class="s" style="color: #dd1144;">!</span><span class="si" style="color: #dd1144;">~n</span><span class="s" style="color: #dd1144;">"</span><span class="p">,[</span><span class="nv" style="color: teal;">Who</span><span class="p">]).</span></div></pre>
+</code></pre>
+<p>We will now open Erlang, compile the code and test it (without rebar). this is what it looks like:</p>
+<pre><code>E:\Dev\erlang\erlcdemo\src&gt;<strong>erl</strong>
+Eshell V5.10.1  (abort with ^G)
+1&gt; <strong>c(helloworld).</strong>
+{ok,helloworld}
+2&gt; <strong>helloworld:hi().</strong>
+Hello stranger!
+ok
+3&gt;<strong> helloworld:hi("Bart").</strong>
+Hello Bart!
+ok
+4&gt; <strong>helloworld:hi("Tom").</strong>
+Hello silly sod!
+ok
+5&gt;<strong> q().</strong>
+ok
+6&gt;
+E:\Dev\erlang\erlcdemo\src&gt;
+</code></pre>
+<p>Ok, so this works, but it is not very impressive, so &#8230;</p>
+<h2>Let&#8217;s convert the POC into a web app!</h2>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fHelloWorldWeb.png" alt="" /></p>
+<h3>Get a web framework</h3>
+<p>We will use rebar to download the <a href="https://github.com/tsujigiri/axiom">axiom framework</a>, which is a bit like Sinatra for Erlang.</p>
+<p>We create a file in the root folder of our solution called <code>rebar.config</code>:</p>
+<pre><code>E:\Dev\erlang\erlcdemo&gt;<strong>copy con rebar.config
+{lib_dirs, ["deps"]}.
+{deps, [
+    {'axiom', "0.1.0", {git, "git://github.com/tsujigiri/axiom.git", {tag, "v0.1.0"}}}
+]}.</strong>
+^Z
+        1 file(s) copied.
+</code></pre>
+<p>(You can also use notepad to create this file, but I wanted to show the path it was created in.)</p>
+<p>Next, load all the dependencies:</p>
+<pre><code>E:\Dev\erlang\erlcdemo&gt;<strong>rebar get-deps</strong>
+==&gt; erlcdemo (get-deps)
+Pulling axiom from {git,"git://github.com/tsujigiri/axiom.git",{tag,"v0.1.0"}}
+Cloning into 'axiom'...
+==&gt; axiom (get-deps)
+Pulling cowboy from {git,"git://github.com/extend/cowboy.git",{tag,"0.8.3"}}
+Cloning into 'cowboy'...
+Pulling erlydtl from {git,"git://github.com/evanmiller/erlydtl.git","dda4db0"}
+Cloning into 'erlydtl'...
+Pulling mimetypes from {git,"git://github.com/spawngrid/mimetypes.git",
+                            {tag,"1.0"}}
+Cloning into 'mimetypes'...
+==&gt; cowboy (get-deps)
+Pulling ranch from {git,"git://github.com/extend/ranch.git","0.8.0"}
+Cloning into 'ranch'...
+==&gt; ranch (get-deps)
+==&gt; erlydtl (get-deps)
+==&gt; mimetypes (get-deps)
+
+E:\Dev\erlang\erlcdemo&gt;
+</code></pre>
+<p>Now we have to convert our code into a web app: open the <code>src\helloworld.erl</code>-file, and change it to the following:</p>
+<pre><code><pre class="line-pre" style="font-size: 12px; line-height: 16px; font-family: Consolas, 'Liberation Mono', Courier, monospace; word-wrap: break-word; width: 744px; margin: 0px; padding: 0px;"><div id="file-020-erl-LC1" class="line"><span class="p">-</span><span class="ni" style="color: purple;">module</span><span class="p">(</span><span class="n" style="color: #333333;">helloworld</span><span class="p">).</span></div><div id="file-020-erl-LC2" class="line"><span class="p">-</span><span class="ni" style="color: purple;">compile</span><span class="p">(</span><span class="n" style="color: #333333;">export_all</span><span class="p">).</span></div><div id="file-020-erl-LC3" class="line">&nbsp;</div><div id="file-020-erl-LC4" class="line"><span class="nf" style="color: #990000; font-weight: bold;">start</span><span class="p">()</span> <span class="o" style="font-weight: bold;">-&gt;</span></div><div id="file-020-erl-LC5" class="line">  <span class="nn" style="color: #555555;">application</span><span class="p">:</span><span class="nf" style="color: #990000; font-weight: bold;">start</span><span class="p">(</span><span class="n" style="color: #333333;">crypto</span><span class="p">),</span></div><div id="file-020-erl-LC6" class="line">  <span class="nn" style="color: #555555;">application</span><span class="p">:</span><span class="nf" style="color: #990000; font-weight: bold;">start</span><span class="p">(</span><span class="n" style="color: #333333;">ranch</span><span class="p">),</span></div><div id="file-020-erl-LC7" class="line">  <span class="nn" style="color: #555555;">application</span><span class="p">:</span><span class="nf" style="color: #990000; font-weight: bold;">start</span><span class="p">(</span><span class="n" style="color: #333333;">cowboy</span><span class="p">),</span></div><div id="file-020-erl-LC8" class="line">  <span class="nn" style="color: #555555;">axiom</span><span class="p">:</span><span class="nf" style="color: #990000; font-weight: bold;">start</span><span class="p">(</span><span class="o" style="font-weight: bold;">?</span><span class="nv" style="color: teal;">MODULE</span><span class="p">).</span></div><div id="file-020-erl-LC9" class="line">&nbsp;</div><div id="file-020-erl-LC10" class="line"><span class="c" style="color: #999988; font-style: italic;">% Hi url without parameter</span></div><div id="file-020-erl-LC11" class="line"><span class="nf" style="color: #990000; font-weight: bold;">handle</span><span class="p">(</span><span class="o" style="font-weight: bold;">&lt;&lt;</span><span class="s" style="color: #dd1144;">"GET"</span><span class="o" style="font-weight: bold;">&gt;&gt;</span><span class="p">,</span> <span class="p">[</span><span class="o" style="font-weight: bold;">&lt;&lt;</span><span class="s" style="color: #dd1144;">"hi"</span><span class="o" style="font-weight: bold;">&gt;&gt;</span><span class="p">],</span> <span class="p">_</span><span class="nv" style="color: teal;">Req</span><span class="p">)</span> <span class="o" style="font-weight: bold;">-&gt;</span></div><div id="file-020-erl-LC12" class="line">    <span class="n" style="color: #333333;">hi</span><span class="p">();</span></div><div id="file-020-erl-LC13" class="line">&nbsp;</div><div id="file-020-erl-LC14" class="line"><span class="c" style="color: #999988; font-style: italic;">% Hi url with parameter</span></div><div id="file-020-erl-LC15" class="line"><span class="nf" style="color: #990000; font-weight: bold;">handle</span><span class="p">(</span><span class="o" style="font-weight: bold;">&lt;&lt;</span><span class="s" style="color: #dd1144;">"GET"</span><span class="o" style="font-weight: bold;">&gt;&gt;</span><span class="p">,</span> <span class="p">[</span><span class="o" style="font-weight: bold;">&lt;&lt;</span><span class="s" style="color: #dd1144;">"hi"</span><span class="o" style="font-weight: bold;">&gt;&gt;</span><span class="p">,</span> <span class="nv" style="color: teal;">Name</span><span class="p">],</span> <span class="p">_</span><span class="nv" style="color: teal;">Req</span><span class="p">)</span> <span class="o" style="font-weight: bold;">-&gt;</span></div><div id="file-020-erl-LC16" class="line">    <span class="n" style="color: #333333;">hi</span><span class="p">(</span><span class="nv" style="color: teal;">Name</span><span class="p">).</span></div><div id="file-020-erl-LC17" class="line">&nbsp;</div><div id="file-020-erl-LC18" class="line"><span class="nf" style="color: #990000; font-weight: bold;">hi</span><span class="p">()</span> <span class="o" style="font-weight: bold;">-&gt;</span></div><div id="file-020-erl-LC19" class="line">  <span class="n" style="color: #333333;">hi</span><span class="p">(</span><span class="s" style="color: #dd1144;">"stranger"</span><span class="p">).</span></div><div id="file-020-erl-LC20" class="line">&nbsp;</div><div id="file-020-erl-LC21" class="line"><span class="nf" style="color: #990000; font-weight: bold;">hi</span><span class="p">(</span><span class="o" style="font-weight: bold;">&lt;&lt;</span><span class="s" style="color: #dd1144;">"Tom"</span><span class="o" style="font-weight: bold;">&gt;&gt;</span><span class="p">)</span> <span class="o" style="font-weight: bold;">-&gt;</span></div><div id="file-020-erl-LC22" class="line">  <span class="n" style="color: #333333;">hi</span><span class="p">(</span><span class="s" style="color: #dd1144;">"silly sod"</span><span class="p">);</span></div><div id="file-020-erl-LC23" class="line">&nbsp;</div><div id="file-020-erl-LC24" class="line"><span class="nf" style="color: #990000; font-weight: bold;">hi</span><span class="p">(</span><span class="nv" style="color: teal;">Who</span><span class="p">)</span> <span class="o" style="font-weight: bold;">-&gt;</span></div><div id="file-020-erl-LC25" class="line">  <span class="nv" style="color: teal;">FormattedList</span> <span class="o" style="font-weight: bold;">=</span> <span class="nn" style="color: #555555;">io_lib</span><span class="p">:</span><span class="nf" style="color: #990000; font-weight: bold;">format</span><span class="p">(</span><span class="s" style="color: #dd1144;">"&lt;h1&gt;Hello </span><span class="si" style="color: #dd1144;">~s</span><span class="s" style="color: #dd1144;">!&lt;/h1&gt;</span><span class="si" style="color: #dd1144;">~n</span><span class="s" style="color: #dd1144;">"</span><span class="p">,[</span><span class="nv" style="color: teal;">Who</span><span class="p">]),</span></div><div id="file-020-erl-LC26" class="line">  <span class="nn" style="color: #555555;">erlang</span><span class="p">:</span><span class="nb" style="color: #0086b3;">iolist_to_binary</span><span class="p">(</span><span class="nv" style="color: teal;">FormattedList</span><span class="p">).</span></div></pre>
+</code></pre>
+<p>Then we can compile everything; go to the root folder of your solution, and do this:</p>
+<pre><code>E:\Dev\erlang\erlcdemo&gt;<strong>rebar compile</strong>
+==&gt; ranch (compile)
+Compiled src/ranch_protocol.erl
+Compiled src/ranch_transport.erl
+Compiled src/ranch_acceptor.erl
+Compiled src/ranch_acceptors_sup.erl
+Compiled src/ranch_app.erl
+Compiled src/ranch_listener_sup.erl
+Compiled src/ranch.erl
+Compiled src/ranch_conns_sup.erl
+Compiled src/ranch_sup.erl
+Compiled src/ranch_server.erl
+Compiled src/ranch_tcp.erl
+Compiled src/ranch_ssl.erl
+==&gt; cowboy (compile)
+Compiled src/cowboy_http_handler.erl
+Compiled src/cowboy_loop_handler.erl
+----&gt;&lt;8------- cut for brevity
+</code></pre>
+<p>If everything compiled well, we are good to go, let us run the web app:</p>
+<pre><code>E:\Dev\erlang\erlcdemo&gt;erl -pa ebin deps\crypto\ebin deps\ranch\ebin deps\cowboy\ebin deps\axiom\ebin deps\erlydtl\ebin
+Eshell V5.10.1  (abort with ^G)
+1&gt; helloworld:start().
+{ok,&lt;0.49.0&gt;}
+2&gt;
+</code></pre>
+<p>That&#8217;s it; now surf to <a href="http://localhost:7654/">http://localhost:7654/</a> and you should get a 404 / Not found.</p>
+<p>Next, surf to <a href="http://localhost:7654/hi">http://localhost:7654/hi</a> and you should get <code>Hello stranger!</code> as an answer.</p>
+<p>Next, try <a href="http://localhost:7654/hi/Bart">http://localhost:7654/hi/Bart</a> and <a href="http://localhost:7654/hi/Tom">http://localhost:7654/hi/Tom</a>, and they should all work&#8230;</p>
+<p>If you change the <code>helloworld.erl</code> file, there is no need to quit Erlang, just compile it from the shell, and code will hot-load:</p>
+<pre><code>E:\Dev\erlang\erlcdemo&gt;<strong>erl -pa ebin deps\crypto\ebin deps\ranch\ebin deps\cowboy\ebin deps\axiom\ebin deps\erlydtl\ebin</strong>
+Eshell V5.10.1  (abort with ^G)
+1&gt; <strong>helloworld:start().</strong>
+{ok,&lt;0.49.0&gt;}
+2&gt; <strong>c("src/helloworld").</strong>
+{ok,helloworld}
+3&gt;
+</code></pre>
+<p>Probably the next thing to do would be using proper OTP behaviour, but I assume this will make this post to big, so I will call it a day for now.</p>
+<h2>Conclusion</h2>
+<p>Well, we only touched the top of the iceberg here, but the main idea of this post is to get you interested in Erlang, and show you how easy it is to get started if you know how to do it.</p>
+<p>Erlang really shines in always available/connected/distributed systems.</p>
+<p>And, if your interest is triggered, might I suggest you to join me on the <a href="http://www.erlangcamp.com/amsterdam">Erlang Camp course in Amsterdam</a>, as this is true value for the buck.</p>
+<p>Laters!</p>
+<p>Tom</p>
+<p>&nbsp;</p>
+<p>PS: a big thank you goes out to <a href="https://twitter.com/helgerausch" target="_blank">@helgeraush</a>&nbsp;(the author of the axiom framework) for reviewing this post!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[IDDDtour 2013 Belgium - an immersive experience]]></title>
+    <link href="http://tojans.github.io/blog/2013/05/01/idddtour-2013-belgium-an-immersive-experience/"/>
+    <updated>2013-05-01T00:00:00+02:00</updated>
+    <id>http://tojans.github.io/blog/2013/05/01/idddtour-2013-belgium-an-immersive-experience</id>
+    <content type="html"><![CDATA[<h3>Introduction: what &amp; how?</h3>
+<p><a href="http://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577" target="_blank">&#8220;Implementing Domain Driven Design&#8221;</a> is a book written by <a href="http://vaughnvernon.co/" target="_blank">Vaughn Vernon</a>, and you can consider it a practical guide to <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215" target="_blank">the blue book</a> - a lot of people consider the blue book to be used as a reference, but it takes some persistence to read it -. Vaughn tried to solve exactly that problem with his book&#8230;</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>&#8220;implementing domain driven design&#8221; by @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a> has arrived <a href="https://twitter.com/search/%23YesYesYes">#YesYesYes</a> <a href="https://twitter.com/search/%23DDD">#DDD</a> <a href="https://twitter.com/search/%23IDDD">#IDDD</a> <a title="http://twitter.com/ToJans/status/301755160173105152/photo/1" href="http://t.co/IztEyMa5">twitter.com/ToJans/status/&hellip;</a></p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/301755160173105152">13 februari 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>A little while ago, Vaughn Vernon was tweeting about how had given a free course about his book &#8220;Implementing domain driven design&#8221; while visiting Bogota, Columbia. This course was given for free to help start-ups there.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>My free one-day <a href="https://twitter.com/search/%23IDDD">#IDDD</a> Tutorial will be held in <a href="https://twitter.com/search/%23Bogota">#Bogota</a> <a href="https://twitter.com/search/%23Colombia">#Colombia</a> from 8:30am-6pm Monday Oct 8 at @<a href="https://twitter.com/hubbog">hubbog</a> Calle 98 # 18-71 Second Floor.</p>
+&mdash; Vaughn Vernon (@VaughnVernon) <a href="https://twitter.com/VaughnVernon/status/254081465153880064">5 oktober 2012</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>In the next few hours after this tweet, an idea emerged on twitter about a concept called the IDDDtour, where Vaughn would be teaching his book to larger classes and doing a tour through Europe, but at a fraction of the cost. As I am somebody who is more of a head first kind of guy, I decided to take ownership and figure out a way to make this a real thing&#8230;</p>
+<!--more-->
+
+<h3>&#8230;So I created a discussion group on Google</h3>
+<p>Next, Vaughn tweeted about the group I created.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>Please RT the new <a href="https://twitter.com/search/%23IDDD">#IDDD</a> Google Group: <a title="https://groups.google.com/forum/?fromgroups#!forum/iddd" href="https://t.co/RIgwaU2R">groups.google.com/forum/?fromgro&hellip;</a></p>
+&mdash; Vaughn Vernon (@VaughnVernon) <a href="https://twitter.com/VaughnVernon/status/254296338433449985">5 oktober 2012</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>&#8230; And the response was quite big: <a href="https://groups.google.com/forum/?hl=nl&amp;fromgroups=#!topic/iddd/qQ9MIQ0p7FE" target="_blank">we had 68 messages in the first thread</a>, and people wanted to organize IDDD classes all over Europe. But reading through all these posts, I noticed that this whole &#8220;organizing using a discussion board&#8221; was not really working, and as most of the people interested in DDD would probably be experienced in using Github, I decided to set up a repository there, and use the wiki and issues from github instead. I setup<a href="https://github.com/ToJans/IDDD-Europe-tour-2013/wiki/Home/e0804db9804fb0e947b8f9da9782cc8b42ed9e5d" target="_blank"> an initial landing page with some guidelines</a>, posted <a href="https://groups.google.com/d/msg/iddd/chX0Wz_IkyQ/lhsTDjenMdoJ" target="_blank">a small message</a> and tweeted about it.</p>
+<p>&nbsp;</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>IDDD Europe 2013 tour: Let&#8217;s get organized !! <a title="https://github.com/ToJans/IDDD-Europe-tour-2013/wiki" href="https://t.co/YgQfmQwn">github.com/ToJans/IDDD-Eu&hellip;</a> /cc @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a> @<a href="https://twitter.com/abdullin">abdullin</a></p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/255233611115159552">8 oktober 2012</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>&nbsp;</p>
+<p>The wiki turned out to work pretty good, and after only two days, we had reached a consensus about 4 locations in Europe, all with a self-organizing team!!!</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>IDDD European tour April 2013 countries are finalized:Belgium / Poland / Hungary - <a title="https://groups.google.com/d/msg/iddd/3qA3rOA5DXE/aL-P_UXPOkwJ" href="https://t.co/NUZlQvld">groups.google.com/d/msg/iddd/3qA&hellip;</a> <a href="https://twitter.com/search/%23DDD">#DDD</a> /cc @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a> @<a href="https://twitter.com/abdullin">abdullin</a></p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/255952084686491648">10 oktober 2012</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p><a href="https://github.com/ToJans/IDDD-Europe-tour-2013/issues/2">I also opened up an issue on the github repo</a>, to find out whether somebody would be willing to sponsor the venue and food in Belgium in exchange for free attendance, and the miracle happened: shortly after opening the issue <a href="https://twitter.com/NordinHaouari" target="_blank">Nordin</a>&nbsp;from <a href="http://www.cegeka.be/" target="_blank">CeGeKa</a>&nbsp;replied that they would be willing to sponsor&#8230; I assumed opening an issue would not have worked, but as we all know: <em>in IT assumptions should not be considered valid or invalid before they are verified</em>.</p>
+<p><span style="font-size: 10px;">So now it was time to transfer the ownership to Vaughn , in order for him to be able to organize everything else. He setup <a href="http://idddtour.com/" target="_blank">a professional site</a>, and we were good to go&#8230;</span></p>
+<h3>Fast forward to six months later&#8230; Day 1 of the event</h3>
+<p>The moment was finally there&#8230; I took my backpack early in the morning, got in my car, and drove to &#8220;de Brabanthal&#8221; in Leuven&#8230;</p>
+<p>&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fBrabanthal.jpg" alt="" /></p>
+<p>I arrived late due to underestimating the traffic jams, but eventually got there. As I was welcomed by somebody at the front desk providing me a name tag, it took me a while to realize that this was actually Nicole, Vaughn&#8217;s wife, basically helping us out where necessary and also providing some interesting discussions during the next four days&#8230; Thanks Nicole!!!</p>
+<p>When I entered the room I was a bit flabbergasted: about 70 people were sitting there, and I was thinking &#8220;Yes, we did it!!!&#8221;</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>Full house at <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a>. Looking forward to a lot of discussions with so many passionate people over the next days. <a title="http://twitter.com/Heimeshoff/status/326258619794485248/photo/1" href="http://t.co/XLFkgJaWRK">twitter.com/Heimeshoff/sta&hellip;</a></p>
+&mdash; Marco Heimeshoff (@Heimeshoff) <a href="https://twitter.com/Heimeshoff/status/326258619794485248">22 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Still standing there, Vaughn interrupted the class, and asked whether I was Tom, as we had never met in real life before&#8230; So I replied that I was, apologized for being late in front of the whole class, so we could continue with the course. Well, that did have one advantage: everybody now knew who I was, even though arriving late for an event you co-organized is probably not the best first impression somebody can provide ;-) .</p>
+<p>What followed was a really interesting journey about context mapping, bounded contexts and other things mentioned in the book (Yes, buy the book, you should, really). Everybody was soaking up the stories, and all things considered, the first day of the course everybody was probably still getting used to the big group of students.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>At @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a>&#8217;s <a href="https://twitter.com/search/%23iddd">#iddd</a> workshop in Leuven. Day 1: strategic design <a title="http://twitter.com/JeroenSoeters/status/326230755086843904/photo/1" href="http://t.co/h0iBCbhTdT">twitter.com/JeroenSoeters/&hellip;</a></p>
+&mdash; Jeroen Soeters (@JeroenSoeters) <a href="https://twitter.com/JeroenSoeters/status/326230755086843904">22 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>What I consider a very good thing, is that a lot of interaction started to emerge: people were sharing stories and getting acquainted with each other during the breaks. There was a healthy buzz there, and people who know me in real life can probably understand why I was thrilled about that.</p>
+<p>We did not have any evening sessions in the first day, so we finished before dinner.</p>
+<p>Because of my experience with the traffic I decided not to commute, but booked a BnB on the first day for 3 nights, within a reasonable distance from where most of the others stayed. For the record, my airbnb host was a really great guy going by the unusual name of Idesbald, so, Idesbald, if you are reading this: thanks!</p>
+<p>We arranged to meet up at the bar in hotel that night, and find a place to enjoy dinner. About half of the people during the dinner meetup on a regular basis having <a href="https://twitter.com/search?q=%23cqrsbeers" target="_blank">#CQRSBeers</a> in Belgium, so the atmosphere was comparable: it is all about sharing and learning from each other in face to face conversations. I personally discovered a tremendous amount of new things picking my peers&#8217; brains.</p>
+<p>While we stayed up pretty late, I think I got back to the bnb on a reasonable time (about 1.00am&#8217;ish).</p>
+<h3>Day 2: Day of the rascals</h3>
+<p>Day 2 was a very interesting - but also exhausting - day; we were having really lively discussions and stepping up, even though questions/opinions were sometimes inapropriate and/or irrelevant (yes, me too, so I apologise). There were quite a lot of discussions going off-topic a bit to much (more about implementation details then about modeling), but it is great to see the crowd is engaged and people are passionate about their jobs. I can only imagine how hard it must have been for Vaughn to answer all these questions, still trying to be polite and keeping the class on track, but I assume everybody learned from it one way or another&#8230;</p>
+<p>People were starting to mingle with other groups more and more, and I think I personally met about half of the attendees by then in person&#8230;</p>
+<p>On the second day we had one presentation after dinner: <a href="https://twitter.com/yreynhout" target="_blank">Yves</a> sharing his experiences about exploring his domain, and it was a very interesting talk.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/yreynhout">yreynhout</a> doing a talk at <a href="https://twitter.com/search/%23idddtour">#idddtour</a> Belgium <a title="http://twitter.com/tjaskula/status/326758888030486528/photo/1" href="http://t.co/cJFmoIGtmT">twitter.com/tjaskula/statu&hellip;</a></p>
+&mdash; Thomas Jaskula (@tjaskula) <a href="https://twitter.com/tjaskula/status/326758888030486528">23 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>After the last presentation, we met up once again in the bar of the hotel, and we actually spent the whole night there&#8230; I think it was probably around 3.00am&#8217;ish here before I got back to the hotel, let&#8217;s hope this pattern does not interpolate in a linear fashion ;-) !</p>
+<h3>Day 3: Let&#8217;s keep on track folks !!!</h3>
+<p>Day 3 was one of my favorite days, as we could get our hands dirty and really start implementing code&#8230; People who know me in real life will probably confirm that I am more of hands-on kind of practitioner, so I started coding&#8230; As I am currently doing something that you could consider &#8220;a bottom-up strategic consulting/devops&#8221; kind of thing, I have not been doing a lot of code, lately. Implementing the code, and working on a case that <a href="https://github.com/ToJans/SaasOvation" target="_blank">I would be able to show during the CQRS presentation</a>, really reminded me how much I love writing code&#8230;</p>
+<p>I assumed Yves was going to talk about CQRS, so I decided to do a talk on something different for the evening session. But, as always, assumptions are never valid until verified. As he had decided not to talk about CQRS, I decided I had to. So, in the evening session, I was going to give my first presentation over a timespan of 20 minutes (I had show a preview to Tomasz and his Parisian friends in about 5 minutes, so 20 minutes should have been doable), and then <a href="http://www.corebvba.be/blog/post/Presentation-CQRS-101-All-your-BASE-belong-to-us-on-march-6th-for-visugbe.aspx">reuse my old talk I performed for the VISUG about a year ago</a>.</p>
+<p>However, as I started giving my presentation, I was noticing that there was a lot of feedback, people were really - and I mean really - engaged, and there was a lot of added value in the tips from the audience, so after a few minutes we decided to just have this talk, and postpone the CQRS talk.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/tojans">tojans</a> doing his thing <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> &#8230; Fantastic! <a title="http://twitter.com/yreynhout/status/327100138000613376/photo/1" href="http://t.co/SYOQs3sCOu">twitter.com/yreynhout/stat&hellip;</a></p>
+&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327100138000613376">24 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>I received a tremendous amount of tips from everyone during the talk, but there was one person who really popped in particular, and added a lot of practical tips and shared his experience: <a href="https://twitter.com/TimSchraepen" target="_blank">Tim Schraepen</a>. So, thanks Tim, for all the extra info !!!.</p>
+<p>Feedback after the talk was also great:&#8221;</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>. @<a href="https://twitter.com/tojans">tojans</a> is not afraid to show his failed experiments to the world, and it&#8217;sbeautiful. #<a href="https://twitter.com/search/%23IDDDtour">#IDDDtour</a></p>
+&mdash; Mathias Verraes (@mathiasverraes) <a href="https://twitter.com/mathiasverraes/status/327117798662873088">24 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>Really enjoyable presentation by @<a href="https://twitter.com/tojans">tojans</a> :-) <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a></p>
+&mdash; ziobrando (@ziobrando) <a href="https://twitter.com/ziobrando/status/327117778060455938">24 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Also, people came to me during the next day, saying my talk actually triggered them to start tweeting and/or blogging again or for the first time, which is exaclty what I was trying to achieve with my talk.</p>
+<p>The reward for &#8220;best compliment during feedback&#8221; goes to <a href="http://ziobrando.blogspot.be/" target="_blank">Alberto Brandolini</a> - yes, I became a fanboy during the IDDD days, and was constantly bugging him with questions and trying to peek in his mind -, who actually told me my talk was &#8220;An immersive experience&#8221;!!</p>
+<p>For the record, you can find the slides for the talk <a href="http://www.slideshare.net/TomJanssens1/getting-better" target="_blank">here</a>.</p>
+<p>As usual, we met up at the hotel bar, but by now, the group had expanded to about 20-something, if I recall correctly&#8230; Things that happed in Leuven should probably stay in Leuven, but let us just state that my decision to drink only &#8220;Chimay bleu&#8221; during the whole night, was probably not the best decision ever. We did start of with the whole group on Marter&#8217;s square, but somehow this evolved in to something that might have been a little bit too much - but in a funny way, nevertheless - ;-).</p>
+<p>I think it would be safe to say that the initial assumption about the hour of arriving home actually was a linear interpolation; you can do the math yourselves.</p>
+<p>On thing that I did love, that gives a good indicator of the general atmosphere there, is this:</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p><a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> is full of suprises :-) tomorrow I will co-talk with @<a href="https://twitter.com/tojans">tojans</a> about cqrs. I was drunk and he forced me into it&#8230; ;) enjoy!</p>
+&mdash; Marco Heimeshoff (@Heimeshoff) <a href="https://twitter.com/Heimeshoff/status/327189597010395136">24 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<h3>Day 4: wrapping it up</h3>
+<p>So, on with the final day&#8230; Even though some people looked a bit like &#8220;the walking dead&#8221; *cough* Jeroen *cough*, some bottles of sparkling water and a few litres of coffee managed to get us back on track&#8230; First Vaughn give us some interesting final insights, and then up next was <a href="https://twitter.com/ziobrando" target="_blank">Alberto</a>&nbsp;with a workshop called &#8220;Event based modeling&#8221;.</p>
+<p>Explaining the amazing results and the simplicity in this technique would make this blog post even longer, so I will not extrapolate further on this. You can find some slides in Italian from Alberto <a href="http://www.slideshare.net/ziobrando/event-based-modeling-iad-2012-15371656" target="_blank">here</a>, and I am confident we will hear more about this technique as people are discovering the huge amount of value there is in mapping your business process using simple post-its, starting from events, discovering commands &amp; triggers, and finally modeling your domain&#8230;.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>Notice the Domain Expert? - @<a href="https://twitter.com/ziobrando">ziobrando</a> <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> <a title="http://twitter.com/yreynhout/status/327352522257862656/photo/1" href="http://t.co/O5nnwXizay">twitter.com/yreynhout/stat&hellip;</a></p>
+&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327352522257862656">25 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>I think it is also safe to say he is a really smart and creative guy that manages to think on a higher level, but translate it in a way that everybody understands it.</p>
+<p>Next to this his cartoons are also really great ;-) .</p>
+<p>We also had Tomasz Jaskula on the floor, and I have to say he gave a really great and brutally honest presentation about building his startup, <a href="http://www.linkmycv.pl/" target="_blank">LinkMyCV.pl</a>.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/tjaskula">tjaskula</a> doing his lightning talk! <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> <a title="http://twitter.com/yreynhout/status/327333076223029248/photo/1" href="http://t.co/AoG6yuYqAf">twitter.com/yreynhout/stat&hellip;</a></p>
+&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327333076223029248">25 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>One of the things he said that really struck me was what he called the architecture 2011 effect:</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>. @<a href="https://twitter.com/tjaskula">tjaskula</a> in action &#8220;we created another layer to hide the layered crap we created the year before&#8221; <a href="https://twitter.com/search/%23awesomeness">#awesomeness</a> <a href="https://twitter.com/search/%23IDDDtour">#IDDDtour</a></p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/327333358747123712">25 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>&nbsp;</p>
+<p>You can find his slides <a href="http://www.slideshare.net/tjaskula/leveraging-more-then-ddd-lite-in-the-startup-project" target="_blank">here</a>&#8230;</p>
+<p>Another thing on the todo list, was the partially improvised lightning talk from <a href="https://twitter.com/Heimeshoff" target="_blank">Marco </a>&amp; me about CQRS. As we were going through both of our presentations, we agreed that his one was actually better, so we decided to use mostly his structure, which also allowed me to delegate the speaking to him. Anyway, I think he did a great job, and really managed to add some value in the room.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/heimeshoff">heimeshoff</a> &amp; @<a href="https://twitter.com/tojans">tojans</a> demoing CQRS. <a title="http://twitter.com/yreynhout/status/327427029052039168/photo/1" href="http://t.co/VSUXoIxjRL">twitter.com/yreynhout/stat&hellip;</a></p>
+&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327427029052039168">25 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>One quote that stuck me in particular:</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>&#8220;When it&#8217;s in the head of the user, it&#8217;s difficult to refactor.&#8221; via @<a href="https://twitter.com/heimeshoff">heimeshoff</a> <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a></p>
+&mdash; Mathias Verraes (@mathiasverraes) <a href="https://twitter.com/mathiasverraes/status/327424460191842304">25 april 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>After 4 days of this really intensive workshop, we decided to call it a day, and went for a final drink - once again on Marter&#8217;s square -, where I met some more people I had not actually seen or talked to before, my apologies. Once again interesting discussions emerged, and we finally wrapped it all up over - once again - a few beers.</p>
+<h3>Conclusion</h3>
+<p>Wow! I was completely brainfried when I got home, and it actually took me about a week to get my brain back from hyper- to normal speed again. This has been - on both a personal and professional level - such an enriching experience that I would love doing this again. And again. And again.</p>
+<p>The most odd thing that struck me when I was talking with Vaughn during the last day, was that all of this started with a simple tweet, which is, in effect, by definition less then 140 chars. Talk about empowerement people!!! But that is probably the subject for another blog post.</p>
+<p>Thanks for sharing &amp; caring everyone!!!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Freedom: Learning stuff, doing consulting, aka the fun - and money balance]]></title>
+    <link href="http://tojans.github.io/blog/2013/03/30/freedom-learning-stuff-doing-consulting-aka-the-fun-and-money-balance/"/>
+    <updated>2013-03-30T00:00:00+01:00</updated>
+    <id>http://tojans.github.io/blog/2013/03/30/freedom-learning-stuff-doing-consulting-aka-the-fun-and-money-balance</id>
+    <content type="html"><![CDATA[<h3>Introduction</h3>
+<p>As I was wide awake at 5am this morning, and it was the end of the month, I decided to do some invoicing (while the Mrs. &amp; kids are still asleep ;) ).</p>
+<p>Because I had some time left, I decided to take a look at my stats&#8230; This invoice app was built about 10 years ago in MsAccess in a few days, and has not really changed a lot since then (except for some adjustments to allow certain billing specific extents; things like non-EU or VAT-exclusive stuff, as well as some automated payment reminder letters).</p>
+<p>Anyway, that is not the subject of this post, but as I was browsing some of my available graphs - it has been a few months since I did that - , I decided to write a small blog post about my findings.</p>
+<p>I will start of with what most of you will probably consider quite a controversial thing; I will just post a *slightly censored* graph of my invoices cumul over my years as a company owner. ..</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f3%2finvoicing.png" alt="" /></p>
+<p><span style="font-size: 1.17em;">LOL, that looks odd&#8230;</span></p>
+<!--more-->
+<p>There are a few things you might notice here:</p>
+<ul>
+<li>That is not a regular income at all.</li>
+<li>When I do have a good year, the line looks really steep (f.e. look at the yellow line from this year).</li>
+<li>Looks like I have a good year every n years.</li>
+<li>It looks like the steepness of your good years is increasing</li>
+</ul>
+<div>In other words: what are you doing here? Let me explain my process&#8230;</div>
+<div>
+<p></p>
+</div>
+<h3><span style="font-size: 1.17em;">In the beginning</span></h3>
+<p>&#8230; I was working as an employee, and walked a probably pretty standard path from being a developer to being an Oracle DBA (side-path), Jr. PM and eventually an ICT manager, all in a relatively small timespan. When I decided to start a business, I had some big plans about what to do, and decided it was now or never, so I quit my job and started developing some products I could use to build other products&#8230;</p>
+<p>After selling it to a few clients (together with some customization), I decided I needed to build a better one, so I started doing that (not the best business decision ever, as you might know). However, while this decision was not really good from a business perspective, I was getting up to date with all the latest in tech, as I was using the newest versions of .Net and other new and exciting stuff, so I did learn a lot in the process&#8230;</p>
+<p>The second one was not really a success, as I had some half-baked product I could use, but it was to generic, so I had not really considered how to market it. So I decided to do some part-time Oracle DBA consultance to fill a temp financial gap, with a one month contract, 2 days/week&#8230; But, as you can guess, that one month got extended with 3 months extra, and after that a year&#8230;</p>
+<p>Having seen the easy path, I decided to go for it, so I started with yet another consulting job, this time 4 days/week.. This lasted for a small year, and after that, I decided to switch to fulltime consulting, and I kept doing that for over a year&#8230;. That one was obiously the pink line in the graph&#8230;</p>
+<p>The reason the pink line was more steep the the previous one was due to 2 reasons IMO:</p>
+<ol>
+<li>Performing more hours</li>
+<li>Having learned a lot of valuable lessons during my first period as a product developer, a had a slight advantage over most of the developers. As I tend to think more &#8220;business-value driven&#8221;, I can charge more to my clients&#8230;</li>
+</ol>
+<div><br /></div>
+<hr />
+<h3>Intermezzo - Time for a break</h3>
+<p>During that last consulting task, I told my customer I was not going to be able to make it on the 2nd of September, because my oldest son was going his first day to school, and I wanted to be there&#8230; He told me that was not possible, as he wanted me to perform some things for him during that period.</p>
+<p>Suddenly it hit me like a brick: I had turned into a guy that valued money over life&#8230;</p>
+<h3>Some background info</h3>
+<p>During puberty, I had not one, but two uncles who worked really, really hard, planning on an early retirement (i.e. fifty-something) and living the life when retired. Both of them did not make it in their sixties (in fact, one of them died about 4 months after he retired). This left a huge impression on me, and I decided from that moment on that I would never make the same mistake, ever. So I started having a more of a carpe-diem mentality, working during the weekend, but only to sponsor me and my friends having fun, (i.e. sponsoring food, drinks, my car, my &#8220;kot&#8221; (i.e. student room))&#8230; I worked hard, earned some good money, but spent it all on &#8220;the good life&#8221;. Even though I never regretted it, I do agree with my parents that I should not have spent it all; being a bit less &#8220;Carpe Diem&#8221; might have been the more sane approach ;).</p>
+<p>The most important lesson for me was this:</p>
+<ol>
+<li>If you want to have fun, you need freedom</li>
+<li>You can buy freedom with money</li>
+<li>The more money you have, the more freedom you have</li>
+</ol>
+<div>Most of the &#8220;successfull&#8221; people I know - i.e. considered successfull by society -, will tell you exactly what I mentioned above. However, there are a lot of people that society considers successfull, that I do not; here is why:</div>
+<div><br /></div>
+<div style="padding-left: 30px;">As your income changes, so does your perception of freedom, so you need more money&#8230; So you need to work more&#8230;</div>
+<div style="padding-left: 30px;"><br /></div>
+<h3>The plan a.k.a. the missing link, and why IT helps here</h3>
+<p>People building a house have a plan, people building a project have a plan, people doing whatever have a plan, but a lot of people I know do not really have a plan regarding what they want to do with their life, so they set goals like this:</p>
+<p style="padding-left: 30px;">I want to get rich, so I can do what I want.</p>
+<p>This is not a good plan IMO, as an IT guy I see a lot of problems with this plan; it has to many unknowns:</p>
+<ul>
+<li>What is &#8220;rich&#8221; ?</li>
+<li>What is &#8220;doing what you want&#8221;</li>
+</ul>
+<div>So let me try rephrasing the goal:</div>
+<div><br /></div>
+<div style="padding-left: 30px;">I want to earn enough money to do what I want with my life</div>
+<div style="padding-left: 30px;"><br /></div>
+<div>That&#8217;s better, but I still do not know what &#8220;doing what I want&#8221; means, so let us try rephrasing that one:</div>
+<div><br /></div>
+<div style="padding-left: 30px;">I want to earn enough money to:</div>
+<div style="padding-left: 30px;">
+<ul>
+<li>Provide my wife and kids a life without to much hassle       
+<ul>
+<li>Material:       
+<ul>
+<li>House</li>
+<li>Food</li>
+<li>Education</li>
+<li>Toys</li>
+<li>&#8230;</li>
+</ul>
+</li>
+<li>Personal       
+<ul>
+<li>Quality time</li>
+<li>Sharing things (knowledge, &#8230;)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Enjoy myself       
+<ul>
+<li>Work on things I like</li>
+<li>Grown on a personal level</li>
+<li>Expanding my horizons</li>
+</ul>
+</li>
+</ul>
+</div>
+<div><br /></div>
+<div>That looks a lot better, but it is not complete yet. You really, really need to think about the choices you make, f.e. one can spend a lot of money on a house, but prices can go up exponentially&#8230; Do you really need a house that can house 10, while your family only consists out of 4 people? Would it kill you, if you postpone your renovation plans by 4 years, but it buys you some time with the kids? Do you need a big fancy car to impress the neighbours, or can you do with less ?</div>
+<div><br /></div>
+<div>Another thing, is that your time is fixed; while it is fun to go to a very good restaurant, you can go out to a snack bar, and enjoy yourself for a percentage of the price. Your time is fixed, but your budget is not. I prefer to do both, so I prioritize, I can enjoy both a quick snack, but also an extensive dinner in a fancy restaurant&#8230;</div>
+<div><br /></div>
+<h3>It is all about priorities people - a.k.a. part deux</h3>
+<p>Most people seem to follow a <a href="http://en.wikipedia.org/wiki/Waterfall_model" target="_blank">Waterfall-like approach</a> in life: they set their goals, start working on them and never look back. I tend to prefer the &#8221;<a href="http://en.wikipedia.org/wiki/Lean_software_development" target="_blank">lean</a>&#8221; approach: I work in small incremental steps, towards conrete goals. One of those goals can be: earn enough money so that I can enjoy myself and my family for a year. Enjoying myself usually means spending time with the Mrs. and the kids, learning new things, and being really picky about the projects/clients you pick.</p>
+<p>You can do this, but you have to pick some things, you can not have it all&#8230;</p>
+<p>But, there is an added bonus in here &#8230;</p>
+<p>&nbsp;</p>
+<hr />
+<h3>End of the intermezzo - The next lesson learned</h3>
+<div><br /></div>
+<div>One of my biggest enjoyments in life, next to having fun with the Mrs &amp; kids, is learning something new. As an <a href="http://www.corebvba.be/blog/search.aspx?q=entp">ENTP</a>, I tend to have a very short attention span, and I am triggered by default by new and exciting/impossible things, in fact, I am usually attracted to things most people tend to walk away from&#8230;</div>
+<div><br /></div>
+<div>Every time I learn something new, I take a paycut. Over the years I took some time to learn <a href="http://www.corebvba.be/blog/?tag=/BDD">BDD</a>/<a href="http://www.corebvba.be/blog/?tag=/CQRS">CQRS</a>, or last year, about <a href="http://www.corebvba.be/blog/post/Project-Startup10-Learning-to-build-your-own-business.aspx">lean startups</a>. This means less finances to spend on a fancy car, a big trip, some things on the house, but it also means I drove the kids to school in the morning, and was at home when the bus drove them back from school. So I benefitted in two ways, and lost in another. I had no problem with that, as I valued the advantages over the disadvantages.</div>
+<div><br /></div>
+<div>But, here is the added bonus: taking some time of and learning things nobody else has the time to learn, increases my market value as a consultant. As all my newly acquired skills are usually helpfull in improving my business value as a consultant, I can charge more every time. And I can guarantee you people will be happy to pay what you charge, as long as you can deliver. So, in the end, taking free time to learn something new, will allow you to increase your income for the times you give up your freedom. This gives you three options:</div>
+<div>
+<ul>
+<li>You can now take longer periods of freedom mode inbetween consulting assignments, if you keep your expenses on the same level</li>
+<li>Spend more money on some things you postponed while in freedom mode, and keep your freedom periods similar</li>
+<li>A combo of both</li>
+</ul>
+<div>My approach is usually the third one; I do spend some more money, but try to keep it reasonable.</div>
+</div>
+<div><br /></div>
+<div>I tend to think Rob is about to walk the same path lately&#8230;</div>
+<h3>Conclusion</h3>
+<p>Well, yet another lenghty post about why I think it is important to consider what you are doing and why you are doing it&#8230;</p>
+<p>If you are doing what you love, and love what you are doing, everything else will come automatically&#8230;.</p>
+<p>Life is all about choices you make, so stop procrastinating or postponing whatever you are doing, set some very concrete, short term goals, and work towards them&#8230;</p>
+<p>On a side note: people who know me personally: the reason I am currently doing all this commuting and time away from home, is that it buys me a whole 2 months of quality time with the kids during their vacation; once again it is all about choices&#8230;</p>
+<p>Tom</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fixing corrupt downloads with your ISP]]></title>
+    <link href="http://tojans.github.io/blog/2013/03/17/fixing-corrupt-downloads-with-your-isp/"/>
+    <updated>2013-03-17T00:00:00+01:00</updated>
+    <id>http://tojans.github.io/blog/2013/03/17/fixing-corrupt-downloads-with-your-isp</id>
+    <content type="html"><![CDATA[<p>About 3 days ago my internet connection with telenet started being really slow, and gave me corrupted downloads if files were larger then a few megabytes. Every file I tried to download gave me corrupt files.</p>
+<p>As this problem appeared on 4 different PC&#8217;s simultaneously, I knew the problem was not related to a specific PC configuration.</p>
+<p>As one of my PC&#8217;s was wired (through a router), and that one was not working either, I decided to shortcut the router, and connect directly to the telenet router (without my own router), and that seemed to work.</p>
+<p>So the problem had to be located within my router. After checking the logs and upgrading the firmware, the issue still remained, so I started looking around on the net.</p>
+<p>After some browsing I found the cause of my connection problems; apparently <span style="text-decoration: line-through;">telenet lowered the MTU</span>? <strong>UPDATE:</strong> lowering my MTU might work&#8230;</p>
+<h3>What&#8217;s MTU?</h3>
+<p>This would bring us down to networking, and layer 2, the data layer, but I assume wikipedia can explain it way better (<a href="http://en.wikipedia.org/wiki/MTU" target="_blank">here</a>).</p>
+<p>What it comes down to is that large packages on the network fail, so you need to find out how large your packages can be when you send them over the network.</p>
+<h3>How can you do this?</h3>
+<p>First of all you have to find out your MTU setting of your router; it&#8217;s probably at 1500 for cable or 1492 for DSL. Next you have to find the size that works with your provider. For now I settled on a size of 1200.</p>
+<p>You can find out this size by doing the following (min is at 500-something AFAIK):</p>
+<p>start a command window and start pinging with a packet that can not be separated (IPv4 only, BTW):</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f3%2fSchermafbeelding+(2).png" alt="" /></p>
+<p>You get the picture I presume.</p>
+<p>After finding the matching packet size, you should set the MTU in your router to your value; problem solved&#8230;</p>
+<h3>Update:&nbsp;</h3>
+<p>While my big downloads now are fixed, @dvaneven mentioned his internet with the same provider still worked on MTU 1500, so I think I probably might need to replace my router.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/tojans">tojans</a> @<a href="https://twitter.com/telenet">telenet</a> Why would they lower the MTU?</p>
+&mdash; Dave Van Even (@dvaneven) <a href="https://twitter.com/dvaneven/status/313271752220356608">17 maart 2013</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>For now my workaround works, but I will buy another router ASAP.</p>
+<h3>Update 2:</h3>
+<p>I installed another router&#8230; problem solved !!</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Opinion: TDD and startups - you are all wrong (or right)]]></title>
+    <link href="http://tojans.github.io/blog/2013/03/06/opinion-tdd-and-startups-you-are-all-wrong-%28or-right%29/"/>
+    <updated>2013-03-06T00:00:00+01:00</updated>
+    <id>http://tojans.github.io/blog/2013/03/06/opinion-tdd-and-startups-you-are-all-wrong-(or-right)</id>
+    <content type="html"><![CDATA[<h3>Introduction</h3>
+<p>There has been a lot of buzz lately about <a href="http://blog.8thlight.com/uncle-bob/2013/03/05/TheStartUpTrap.html" target="_blank">a post of Uncle Bob Martin</a>, who claims that skipping Test-driven design is the worst mistake you can make when in a startup. This generated a lot of yay-and-nays on the twitter sphere, with mostly black and white opinions. I think they might all be right, but miss one important distinction: you always need to formalize what you are working on&#8230;</p>
+<h3>&#8220;So what&#8221; - Miles Davis</h3>
+<p>In my opinion, you need something to drive your behavior of your app, or as you put it in the context of startups, you need something to drive your search for a market fit. So while TDD might provide you &#8220;better&#8221; code in the end, it is not the code that matters, it is the behavior of the code that is all important. TDD for a startup should help you to reason about that behavior, i.e. what exactly are you trying to achieve.</p>
+<p style="text-align: left; padding-left: 30px;"><strong><em>Defining in an explicit way what (and even why) you are going to do something before you do it, allows you to:</em></strong></p>
+<ul>
+<li><strong><em>focus on your task</em></strong></li>
+<li><strong><em>define scope</em></strong></li>
+<li><strong><em>reason about it in a strategic way</em></strong></li>
+</ul>
+<p>If you are able to reason about what you are about to do in another way, please feel free. I can think of at least 5 ways to define what you are doing:</p>
+<ul>
+<li>An explicit analysis document</li>
+<li><a href="http://en.wikipedia.org/wiki/Literate_programming" target="_blank">Literate programming</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank">TDD</a></li>
+<li>BDD (<a href="http://en.wikipedia.org/wiki/Behavior-driven_development" target="_blank">behavior-</a>&nbsp;and <a href="http://en.wikipedia.org/wiki/Business-driven_development" target="_blank">business</a>-)</li>
+<li>Interface-driven design, the top down approach (although this is probably one of the lesser approaches)</li>
+<li>&#8230;</li>
+</ul>
+<div><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f3%2fCunningplan.jpg" alt="" /></div>
+<div><br /></div>
+<div>So, whatever comes naturally to you might be the best fit. The most important thing is making something explicit (aka &#8220;ze cunning plan&#8221;), as I have found out multiple times in the past: without a proper plan to support your vision, you are doomed to wander around in eternity, as you never have a proper definition of done and/or scope, or even priorities&#8230;</div>
+<div><br /></div>
+<div>As a developer, the best fit for me is usually some kind of a bastardized combo of all the techniques mentioned above, even combined with some <a href="http://impactmapping.org/">impact mapping</a> or other <a href="http://en.wikipedia.org/wiki/Domain-driven_design" target="_blank">DDD </a>techniques&#8230;</div>
+<div><br /></div>
+<div>On a sidenote: currently halfway into <a href="http://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577" target="_blank">Vaughn&#8217;s IDDD book</a>, and this proves to be very helpfull as well, it&#8217;s like <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=bxgy_cc_b_img_b/185-2294219-9118450" target="_blank">Eric Evan&#8217;s blue book</a>, but written in a more accessible and pleasant way&#8230;</div>
+<div><br /></div>
+<h3>Conclusion</h3>
+<p>So in the end, what it all comes down to, is that you need a formal/explicit spec about what you are working on, whether that is a design doc, some unit tests or something else, does not really mather; just find out whatever fits your methods best.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[An open letter to Mr. Murphy]]></title>
+    <link href="http://tojans.github.io/blog/2013/02/23/an-open-letter-to-mr.-murphy/"/>
+    <updated>2013-02-23T00:00:00+01:00</updated>
+    <id>http://tojans.github.io/blog/2013/02/23/an-open-letter-to-mr.-murphy</id>
+    <content type="html"><![CDATA[<p>&nbsp;</p>
+<p>Dear Mr. Murphy,</p>
+<p style="padding-left: 30px;"><strong><em>Pssssssssssssssssssssssssssshhhhhhhhhhhhhhhhhhhhhhhhtt !!!!</em></strong></p>
+<p>&#8230; That was exactly the sound I was hearing when I got up early this Saturday morning (6.30AM&#8217;ish).</p>
+<p>&nbsp;</p>
+<p>In the last months I have been billing on average about 9 to 10 hours per day for my customer, and those hours do not include my 30 to 60 minute lunchbreaks and my 3 to 5 hours spent on commuting when I decide not to sleep over, so you can imagine my time for doing things on the side is rather scarse at this moment.</p>
+<p>&nbsp;</p>
+<p>During the weekends, I am usually at one/both of my son&#8217;s soccer matches, or getting back on track with my family and some friends, which I do not see during the week.</p>
+<p>&nbsp;</p>
+<p>I still have 2 books to finish and review/write a blog post about it, and have not been able to do this just yet.</p>
+<p>&nbsp;</p>
+<p>Today is Saturday, and I need to be at my parent&#8217;s by 8.00AM where we meetup to disassemble, transport and temporarily store my brother&#8217;s new kitchen they will use after their renovation. This will probably take the whole day, so I decided to get up at 6.30AM, because I wanted to answer some mails today. (Knowing myself, I will probably not be any the mood for this tonight anyway, as we will probably have a night out with the &#8220;kitchen disassembling crew&#8221;.)</p>
+<p>&nbsp;</p>
+<p>So I got up at 6.30AM, ready to get started on these mails, as I heard a slightly disturbing sound&#8230; &#8220;PSSSSSSSSSSSSSSSSSSSSSSSSSSHHHHHHHHHHHHT&#8221;; a continuous hiss.</p>
+<p>As we do not have any gas plumbing in the house, I was not exactly afraid of explosions, but it was slightly disturbing nevertheless, so I went searching for the source of the sound.</p>
+<p>&nbsp;</p>
+<p>As I arrived in the cellar - all in my nightwear, for people with a lot of imagination -, I noticed our pression vessel from our rain water pump contained a very small dot of rust where water was streaming out at high pressure.</p>
+<p>&nbsp;</p>
+<p>So I opened up some faucets to release the pressure, and started mobbing away, as we also store our heating pellets in our cellar - luckily I did not put them directly at the floor, otherwise the first few bags would have been ruined as well.</p>
+<p>&nbsp;</p>
+<p>So, instead of answering my emails, I decided to get my priorities straight, and take the explicit time to thank you and send you my regards, Mr. Murphy, as you apparently also went the extra mile to surprise me with this great morning gift &#8230;.</p>
+<p>&nbsp;</p>
+<p>Kind regards</p>
+<p>&nbsp;</p>
+<p>Tom</p>
+<p>Your Humble Servant</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Saturday night 30 min brain dump - Luck]]></title>
+    <link href="http://tojans.github.io/blog/2013/02/02/saturday-night-30-min-brain-dump-luck/"/>
+    <updated>2013-02-02T00:00:00+01:00</updated>
+    <id>http://tojans.github.io/blog/2013/02/02/saturday-night-30-min-brain-dump-luck</id>
+    <content type="html"><![CDATA[<h3>Introduction</h3>
+<p>Sometimes you get lucky, and find a way where you can truely do the things you like in work&#8230; But why does luck always seem to be distributed unevenly, and does it always land with the same people&#8230;</p>
+<p>Here is a message for you: it does not! You can get lucky once by accident, but getting lucky multiple times seems to be quite impossible (not considering statistical anomylies).</p>
+<p>So I decided to write a post with some lessons learned from my personal experience&#8230;</p>
+<h3>Be more receptive to luck</h3>
+<p>Let us begin with the first quote</p>
+<p style="padding-left: 30px;"><em>&ldquo;If opportunity doesn&#8217;t knock, build a door&rdquo; - Milton Berle</em></p>
+<p>Simple, is it not; the reason some people are more lucky then others, is because they are willing to see the opportunities&#8230;.</p>
+<p>I will give you 3 more quotes to tickle your motivation on changing life, work, and all other things related to carbon-based lifeforms:</p>
+<p style="padding-left: 30px;"><em>&ldquo;The journey of a thousand miles begins with one step.&rdquo;<br />&#8220;If you do not change direction, you may end up where you are heading.&#8221;<br />&ldquo;When I let go of what I am, I become what I might be&rdquo;</em></p>
+<p style="padding-left: 30px;"><em> - Lao Tzu</em></p>
+<p>Here is the thing: people always want something, but are afraid to get out of their current comfort zone. If you really want it: stop making excuses and just do it! Ask yourself: what is the worst thing that could happen? Usually things are not that bad, and you can almost always find a plan B&#8230;</p>
+<p>Millions of opportunities might fly by, but people tend to always find an excuse and somehow assume the worst-case scenario will happen so they talk themselves out of it&#8230;</p>
+<p>This brings us to the next part&#8230; </p>
+<h3>Be willing to leave your comfort zone</h3>
+<p>This is hard for most of the people I meet, but is essential in my opinion. I will mention a quote from Ashton Kutcher - yes, Ashton Kutcher, quoting him is definately out of my comfort zone ;) -:</p>
+<p>&nbsp;</p>
+<p style="padding-left: 30px;"><em>&#8220;I&#8217;m continually trying to make choices that put me against my own comfort zone. As long as you&#8217;re uncomfortable, it means you&#8217;re growing.&#8221; <br />Ashton Kutcher&nbsp;</em></p>
+<p>&nbsp;</p>
+<p>People always ask me how I manage to keep up and do so much interesting things and jobs&#8230; Well, that&#8217;s easy: I spend time doing new things, way out of my comfort zone, so people consult me about those new things - makes sense, does it not?</p>
+<p>This also implies you have to make sacrifices, because you doing new things might imply that you have to be able to sacrifice other things&#8230; Which brings me to the next part:</p>
+<h3>Get your priorities straight</h3>
+<p style="padding-left: 30px;"><em>&#8220;But I need to pay my bills&#8221; - almost everybody when we talk about this</em></p>
+<p>Do you really need to have all the latest/biggest/best/most expensive/coolest phone/stereo/car/house/clothing/&#8230; Do you really need to go on a trip to an expensive hotel 3 times a year?</p>
+<p>You might, or you might not&#8230; What you do is all about choices. While you are working you cannot spend time with your kids, for example&#8230; While you are earning hard cash for that new car, you probably can not spend that time on some new tech you would like to learn about&#8230;</p>
+<p>Also, most people tend to forget why they started doing things, but just seem to be wandering on the road, always going forward, without evaluating where they wanted to go in the first place.</p>
+<h3>Do not be afraid of failure, but consider it part of the process</h3>
+<p>Failure is a part of life; accept that big plans will fail, but learn from your failure. There is a difference between a failure and a mistake: read<a href="http://sethgodin.typepad.com/seths_blog/2011/12/the-difference-between-a-failure-and-a-mistake.html" target="_blank"> Seth&#8217;s blog article on it</a>. Do this now!!!</p>
+<p>Here is an English proverb that you should remember:</p>
+<p style="padding-left: 30px;"><em>&ldquo;Hope for the best, but prepare for the worst&rdquo;</em></p>
+<p>Most people do not succeed at once&#8230; They might forget to tell you that, but there are usually a huge pile of failures before becoming succesfull. The important part is that it is a process, where you learn from your mistakes, so you do not make the same mistake another time&#8230;.</p>
+<p>&nbsp;</p>
+<p style="padding-left: 30px;"><em>&#8220;In order to succeed, your desire for success should be greater than your fear of failure.&#8221; &nbsp;&#8211;&nbsp;</em><em>Bill Cosby&nbsp;</em></p>
+<p>&nbsp;</p>
+<p>Another great quote which points out that you should accept it and go with the flow&#8230;.</p>
+<h3>Last but not least</h3>
+<p style="padding-left: 30px;"><em>&#8220;Be happy for this moment. This moment is your life.&nbsp;&#8221; - Omar Khayyam</em></p>
+<p>This is easily forgotten: most people are so tied up with their target, that they do not appreciate the current situation.</p>
+<p>Whenever I am in a situation where some things seem to be &#8220;unlucky&#8221; and I take a step back to reflect, I usually find out that it is only a small part that I am unlucky with, so I act until it changes.</p>
+<p>That&#8217;s it for a Saturday night 30min brain dump. Later folks!</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simplified Feature Branching - Source control done right]]></title>
+    <link href="http://tojans.github.io/blog/2012/12/01/simplified-feature-branching-source-control-done-right/"/>
+    <updated>2012-12-01T00:00:00+01:00</updated>
+    <id>http://tojans.github.io/blog/2012/12/01/simplified-feature-branching-source-control-done-right</id>
+    <content type="html"><![CDATA[<h2>Introduction</h2>
+<p>As one does typically develop features in parallel, and some features can not be released while others can, a lot of software teams seem to have problems with their source control.</p>
+<p>In this post I will describe <strong>Simplified Feature Branching</strong> usable with git or any other <a href="http://en.wikipedia.org/wiki/Distributed_revision_control">DVCS</a>.</p>
+<p>This model is not rocket science, and is a further simplification of <a href="http://dymitruk.com/blog/2012/02/05/branch-per-feature/">Adam Dymitruk&#8217;s post on feature branching</a>.</p>
+<p>It assumes you use proper release cycles and versioning during the <a href="http://en.wikipedia.org/wiki/Systems_Development_Life_Cycle">software development lifecycle</a>.</p>
+<p>Whenever I mention &#8220;feature&#8221; in this post, I actually mean &#8220;feature&#8221; or &#8220;bugfix&#8221;, but I am a lazy b*d.</p>
+<h2>The main idea: simplification</h2>
+<blockquote>
+<p>Make everything as simple as possible, but not simpler - <em>Albert Einstein</em></p>
+</blockquote>
+<p>Whenever things start to get complicated, we should attempt to simplify them by breaking it up into smaller parts. This is exactly what <strong>Simplified Feature Branching</strong> does. We make the distinction between branching and integration.</p>
+<p></p>
+<h2>Feature (and bugfix) branches</h2>
+<p>In large development teams we typically have the problem that several things are developed in parallel, and need to be integrated afterwards. What we will do is separate these two concepts.</p>
+<p>We will forget about integration for now, and will just create a branch for every new feature or bugfix we perform. We will give the branch a proper name (usually that will be some kind of an ID we get from a tracking tool).</p>
+<p>The Development repository would look like this:</p>
+<ul>
+<li>Development          
+<ul>
+<li>master          
+<ul>
+<li>[Bugfix] *</li>
+<li>[Feature] *</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>For example:</p>
+<ul>
+<li>Development          
+<ul>
+<li>master          
+<ul>
+<li>Bug-sales-123123</li>
+<li>Bug-marketing-5454</li>
+<li>Feature-sales-444</li>
+<li>&#8230;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>All branches would be children of Development/master. Exceptions are not allowed, unless you really, really need it and know what you are doing.</p>
+<p>This is exactly the same as <a href="http://dymitruk.com/blog/2012/02/05/branch-per-feature/">Adam&#8217;s model</a>.</p>
+<h2>Integration branches</h2>
+<p>Integration branches are the branches where we integrate the different features in a new branch. A typical workflow during development would look like this:</p>
+<pre><code>git fetch 
+git checkout development/master -B Bugfix-1231 
+...
+git checkout development/master -B Feature-5454
+...
+</code></pre>
+<p>Once we are satisfied with this integration, we typically deploy this dev branch to the shared development environment.</p>
+<p><strong>Never alter development/master!!</strong></p>
+<p>Important to note here, is that the whole process described here is targeting the development process, not release management, and this is exactly where the simplification starts.</p>
+<p>Integration branches are just temporary placeholders. Think about it! Integration branches should be dropped and recreated once a release is finalized!!!</p>
+<p>I would even suggest you to make this explicit by having a distinct repository for the release integration. As one typically goes through a process where multiple clients might have requested different features, I would opt for the following approach:</p>
+<ul>
+<li>Repo: development          
+<ul>
+<li>master          
+<ul>
+<li>[Bugfix] *</li>
+<li>[Feature] *</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Repo: releases          
+<ul>
+<li>master          
+<ul>
+<li>staging</li>
+<li>QA/[customer] *</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Here is the simplification: integration branches are just temporary things, which can be dropped and recreated as you want. Let&#8217;s say you want to setup a QA environment for a certain customer in the releases repo:</p>
+<pre><code>git fetch
+git checkout development/master -B QA/JohnTitor
+git checkout development/Bugfix-1231 -B Bugfix-1231
+git rebase QA/JohnTitor
+git checkout QA/JohnTitor
+git merge Bugfix-1231
+git checkout development/Feature-5454 -B Feature-5454
+git rebase QA/JohnTitor 
+git checkout QA/JohnTitor
+git merge Bugfix-1231
+git push release QA/JohnTitor -f
+</code></pre>
+<p>This will allow you to have proper branches per customer QA environments and a staging environment (for the final release), while having an acceptable merge tree. IF you want a single commit per feature branch (which makes it easy to revert a feature if necessary), it is advisable to run a interactive rebase in order to make sure every feature is a single commit.&nbsp;</p>
+<p>Once a the version on the staging environment has been approved by all the customers, we do the following:</p>
+<pre><code>git checkout master
+git merge staging
+git tag v1.2.3
+</code></pre>
+<p>As all changes are now integrated in the master, we can drop all the feature branches.</p>
+<pre><code>git branch -D Bugfix-1231
+git branch -D Feature-5454
+git branch -D ...
+</code></pre>
+<p>So all your releases are on the main branch. Once a release is done, you open up git on the development repository, and type the following:</p>
+<pre><code>git checkout master
+git pull --rebase releases
+</code></pre>
+<p>And voila, your development repository is up to date!!!</p>
+<h2>And an added bonus</h2>
+<p>One does not have to have a single development repository, for example one could have one per development team/country/division/&#8230; (In my current project we will use a separate repository for outsourced work for example). This approach would also integrate very nicely with code reviews and other CI-related things.</p>
+<p>By creating this <strong>simplified feature branching</strong> model, one clearly separates responsibilities using multiple repositories, and make sure the whole integration process is centralized and separated from development.</p>
+<p>Happy <strong>simplified feature branching</strong> everyone!!</p>
+<p>PS: do not forget to enable <a href="http://git-scm.com/2010/03/08/rerere.html">git rerere</a> when merging git branches; this might save you a lot of time&#8230; In fact Adam even suggests sharing your merge cache folder&#8230;</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How your personality type affects your development]]></title>
+    <link href="http://tojans.github.io/blog/2012/11/17/how-your-personality-type-affects-your-development/"/>
+    <updated>2012-11-17T00:00:00+01:00</updated>
+    <id>http://tojans.github.io/blog/2012/11/17/how-your-personality-type-affects-your-development</id>
+    <content type="html"><![CDATA[<h2>Introduction</h2>
+<p>During one of my more recent interviews I got an assesment from two different persons. While I still have no idea about the definitive outcome, the different types of questions they both asked triggered me to think about what kind of personality type they would be, so I started wondering how personality types are related to development&#8230;.</p>
+<h2>First things first: MBTI</h2>
+<p>Before we can determine the effect of your personality on your development, we will start by defining MBTI, so let us begin with <a href="http://en.wikipedia.org/wiki/Myers-Briggs_Type_Indicator">the wikipedia definition</a>:</p>
+<blockquote>
+<p><em>The Myers-Briggs Type Indicator (MBTI) assessment is a psychometric questionnaire designed to measure psychological preferences in how people perceive the world and make decisions.</em></p>
+</blockquote>
+<p>They do this by categorizing your personality in four dimensions; your gradation in every dimension is not a boolean, but rather a range (i.e. -1 to +1).</p>
+<p>I will describe each of the four dimensions in detail, and explain how they impact your development:</p>
+<h2>#1 Attitude: &#8220;Extraversion&#8221; versus &#8220;Intraversion&#8221; (E vs I)</h2>
+<p>Attitude is about the way evolve an idea and get inspired: some get inspired by doing and experimenting, while others get inspired by thinking about things.</p>
+<ul>
+<li>Development by people with high &#8220;Extraversion&#8221; is driven by    
+<ul>
+<li>experimenting with code</li>
+<li>evolving ideas in small incremental steps by talking with other people</li>
+<li>doing things right</li>
+</ul>
+</li>
+<li>Development by people with high &#8220;Intraversion&#8221; is driven by    
+<ul>
+<li>an internal thought process</li>
+<li>thinking ideas through before talking about it with other people</li>
+<li>doing the right thing</li>
+</ul>
+</li>
+</ul>
+<p>On a sidenote, &#8220;extraversion&#8221; is not a typo; it is the way you spell this word in MBTI terms.</p>
+<p></p>
+<h2>#2 Percieving: &#8220;Sensing&#8221; versus &#8220;iNtuition&#8221; (S vs N)</h2>
+<p>The second dimension is about how we percieve things&#8230; Some need to see the details (sensing), other  just have a general sense (i.e. intuition) of what it is supposed to do. This has obviously a rather big impact in the way that we write code&#8230;</p>
+<ul>
+<li>Development by people with high sensing is usually explicit    
+<ul>
+<li>&#8220;Hmmz I need to know all the ins and outs before I use this, how does this tiny bit work?&#8221;</li>
+<li>&#8220;Always use explicit typing everywhere, no exceptions!!&#8221;</li>
+<li>&#8220;This looks dirty, I need to change this&#8221;</li>
+<li>&#8220;Coding without conventions? Always use the &#8216;private&#8217; keyword, even though it is implicit&#8221;</li>
+</ul>
+</li>
+<li>Development by people with high iNtuition is usually implicit    
+<ul>
+<li>&#8220;I don&#8217;t care how it works, when it is important to know I will find it out&#8221;</li>
+<li>&#8220;dynamic and var are my friends&#8221;</li>
+<li>&#8220;I will refactor it when it hurts&#8221;</li>
+<li>&#8220;Ok, I will follow the coding conventions if you really force me&#8221;</li>
+</ul>
+</li>
+</ul>
+<h2>#3 Judging: &#8220;Thinking&#8221; versus &#8220;Feeling&#8221; (T vs F)</h2>
+<p>I quite honestly have not met a single developer who was a &#8220;feeling&#8221; type; every single one I met was a rational type (which is kind of a logical thing - pun intended).</p>
+<p>A lot of recruiters on the other hand, are usually a &#8220;feeling&#8221; type, hence this is probably a part of the problem I stated in <a href="http://www.corebvba.be/blog/post/Fallacies-of-the-tech-recruitment-process.aspx">one of my previous blog posts</a>.</p>
+<h2>#4 Lifestyle: &#8220;judging&#8221; versus &#8220;perceiving&#8221; (J vs P)</h2>
+<p>The final one is about which one of #2 and #3 you use the most to interact with the world: your &#8220;judging&#8221; or your &#8220;percieving part&#8221;.</p>
+<ul>
+<li>Development by a &#8220;judging&#8221; developer    
+<ul>
+<li>usually driven by a detailed plan</li>
+<li>not deadline-driven </li>
+<li>tends to be quite rigid when executing something, sometimes to rigid</li>
+<li>works first, plays later</li>
+</ul>
+</li>
+<li>Development by a &#8220;perceiving&#8221; developer    
+<ul>
+<li>driven by external impulses (Sensing or iNtuition)</li>
+<li>deadline-driven</li>
+<li>likes to keep his/her options open, sometimes indecisive</li>
+<li>works in bursts</li>
+</ul>
+</li>
+</ul>
+<h2>So how is this related to the assesment ?</h2>
+<p>When having an interview, it usually helps if the interviewer&#8217;s personality matches the interviewee&#8217;s as much as possible&#8230; There are compatibility matrices available for MBTI types which also mention opposites (f.e. my wife is my MBTI opposite), but I think this is not an advantage when doing an interview.</p>
+<p>As an ENTP myself, I met two interviewers, and based on their questions I would guess that the first interviewer was an ISTP and the second one an INTP. (Not sure about the first letter, as interviewers tend to be intraverted during an interview.)</p>
+<p>It does not take a genious to find out in which interview I performed best&#8230;</p>
+<p><strong>Update: I got pinged by both an INFP and an INFJ, so apparently the F part is still there for some developers. Next to this I misjudged my interviewers; they are ISTJ and ESTJ.. My bad!!! (but in my defense, the second one still matches my profile better then the first one&#8230;.)</strong></p>
+<p><strong>I also received some food for thought from Rob Ashton:</strong></p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/tojans">tojans</a> don&#8217;t think I agree with I/E - I think N/S is the biggest factor for dev, followed by J/P and I/E is about how you interact</p>
+&mdash; &#8216;Hurricane Rob&#8217; (@RobAshton) <a href="https://twitter.com/RobAshton/status/269714326934396928">november 17, 2012</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>&nbsp;</p>
+<h2>Finally</h2>
+<p>If you are a developer, this should give you a general idea of the MBTI type you are exactly. If you really want to find out, there is a short free questionaire online to determine your MBTI type <a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp">here</a>.</p>
+<p>On a sidenote, it would be great if the interviewers would be willing to send me a message whether I am correct or not with my guesstimate&#8230;</p>
+<p>Signing off,</p>
+<p>Tom</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fallacies of the tech recruitment process]]></title>
+    <link href="http://tojans.github.io/blog/2012/11/16/fallacies-of-the-tech-recruitment-process/"/>
+    <updated>2012-11-16T00:00:00+01:00</updated>
+    <id>http://tojans.github.io/blog/2012/11/16/fallacies-of-the-tech-recruitment-process</id>
+    <content type="html"><![CDATA[<p>Note: I would like to thank <a href="https://twitter.com/gbarrs">@gbarrs</a> for reviewing my blog post almost instantly, and also the offer of  <a href="https://twitter.com/GraemeF">@GraemeF</a>, <a href="https://twitter.com/MarkRendle">@MarkRendle</a>,  <a href="https://twitter.com/swaggerdmangene">@swaggerdmangene</a> and  <a href="https://twitter.com/moldyseaswimmer">@moldyseaswimmer</a> to be a reviewer. Without them, there would be a lot more <a href="http://en.wikipedia.org/wiki/Dunglish">Dunglish</a> in this post&#8230;</p>
+<h2>Why I like my job.</h2>
+<p>I have been hooked into computers ever since I wrote my first few lines of Basic on my mothers&#8217; brand new <a href="http://oldcomputers.net/trs80iii.html">TRS-80 Model 3</a> with 64Kb of ram and 2 - yes 2 !!! - diskdrives of a whopping 178Kb.  (Actually, I did not write the code, but I copied it character by character from <a href="http://www.1000bit.it/support/manuali/trs/Introduction%20to%20TRS-80%20Level%20II%20BASIC%20%281980%29%28Michael%20Zabinski%29%28pdf%29.pdf">a textbook that might have looked like this</a>, but in my defense, I was about 7 years old).</p>
+<p>The first program probably looked like this:</p>
+<p><code>10 PRINT "HI, WHAT IS YOUR NAME?"</code></p>
+<p><code>20 INPUT N$</code></p>
+<p><code>30 PRINT "HELLO, ",N$</code></p>
+<p>Exciting, is it not? In the five years that followed, I learned almost every in and out of this machine, where to peek and poke in memory, how to set pixels on the screen (monochrome, 128x48 resolution, imagine that), which ASCII codes to send to my dot matrix printer to switch control modes, &#8230;</p>
+<p>When I was about twelve years old, I had written a drawing application, complete with circles, boxes, Bresenham lines, and even the possibility to print the graphics on the (very noisy) dot matrix printer (remember those printers which had to print on chained paper?).</p>
+<p></p>
+<p>Then we got our first 80286, an IBM-compatible PC that ran at a mind-boggling speed of 16 Mhz, with 4 megs of memory and a color VGA screen&#8230; A screen buffer of 320x200 pixels with 256 colors was available directly by poking at the #A000 segment, and we discovered a whole brave new world out there using color pallette rotation, and apps like <a href="http://en.wikipedia.org/wiki/Deluxe_Paint">Deluxe Paint</a>. We even managed to do blitting by <a href="http://www.wagemakers.be/english/doc/vga">reprogramming the VGA-card directly</a> by poking video card ports and bypassing BIOS&#8230;</p>
+<p><img src="http://upload.wikimedia.org/wikipedia/en/6/6c/Snapshot_DeluxePaint_II_MSDOS.png" alt="Our GFX artist probably spent thousands of hours in Deluxe Paint" /></p>
+<p>As years progressed I got involved in the Belgian BBS/hacking/cracking scene, but after one of our fellow BBS&#8217;s got all his material confiscated, we decided to focus on the demo scene, as we had some experience writing some &#8220;cool intros&#8221; for our and other BBS&#8217;s.</p>
+<p>In the demo scene, we were not very succesfull, but we did have a lot of fun. (This was the pre-internet-era folks, so figuring out how to write a software 3D rasterizer from disassembling other demo &#8216;exe&#8217; files was a bit of a challenge. The example below was one of those demos we completely disassembled to figure out how everything worked.)</p>
+<p>
+<object width="480" height="360">
+<param name="movie" value="http://www.youtube.com/v/XtCW-axRJV8?version=3&amp;hl=nl_NL" />
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="480" height="360" src="http://www.youtube.com/v/XtCW-axRJV8?version=3&amp;hl=nl_NL" allowscriptaccess="always" allowfullscreen="true"></embed>
+</object>
+</p>
+<p>The biggest achievement that is now still traceable would probably be the fact that I did manage to come <a href="http://www.pouet.net/prod.php?which=8765">second in a 4K assembler demo on a demo party in Mons</a> (Which is now, in the hardware-accelerated era, probably pretty unspectacular) .</p>
+<h2>Fast forward to a few years later&#8230;</h2>
+<p>I walked a very diverse path, both in programming languages (e.g. all kinds of Basic, Turbo Pascal, x86 assembly, C, C++, C&#8211;, (PL/Transact)-SQL, Smalltalk, lua, ruby, shell scripts, C#, some 4GL&#8217;s and probably a dozen of others), in platforms (pre-PC area, Windows, *nix , VMS, AS400, &#8230;) as well as in my <a href="http://www.linkedin.com/in/tomjanssens">career</a> (Oracle dev/DBA, C++ dev, c# dev, ICT manager, technical analist, independent consultant).</p>
+<p>As I got involved with .Net (I wrote my first app framework when independent using a Beta of .Net 1.0), I started focussing on this new thing, first Winforms, and afterwards ASP.NET, and finally ASP.NET MVC.</p>
+<p>I skipped things like Silverlight, WCF, WWF and XAML as they all seemed way to much overhead for achieving something to me.</p>
+<p>However, in the last few years I started realizing something&#8230;</p>
+<h2>If you focus on the tech stack, you are focussing on the wrong thing!</h2>
+<p>Spending all those years behind a PC and the last 15 years interacting with both business and development, I started realizing the biggest problem is not in the tech stack, but it is in the interaction between business and technology that the biggest problems occur.</p>
+<p>From my numerous experiences with all those different environments, I know by experience that <strong>learning a new tech thing usually takes somewhere between a week and a few months before you can be productive</strong> (becoming an expert is a different thing, but that is not what I am referring to here).</p>
+<p>The hardest part is not in the tech, but it is in <strong>learning how to scope, plan and build software that matches the business&#8217; expectations</strong>. That is something one cannot learn in a few weeks, let alone months.</p>
+<p>This is exactly the reason why I read <a href="http://www.corebvba.be/blog/post/Continuous-thinking-Essential-business-books-shortlist-3-business-books-everyone-should-have-read.aspx">numerous business books</a> every year, and have taken several sabatticals of a few months studying new things (more specific: <a href="http://www.corebvba.be/blog/?tag=/BDD">Behaviour Driven Development</a>, Domain Driven Design including the <a href="http://www.corebvba.be/blog/?tag=/CQRS">Command-Query responsibility Seggregation thing</a>, as well as the whole <a href="http://www.corebvba.be/blog/post/Project-Startup10-Learning-to-build-your-own-business.aspx">Lean startup development process</a>).</p>
+<p>I did make some mistakes in the past, but hey, I am learning from them&#8230; (On a side-note, you should really check out <a href="http://sethgodin.typepad.com/seths_blog/2011/12/the-difference-between-a-failure-and-a-mistake.html">this blog post from Seth Godin</a> about the difference between a failure and a mistake.)</p>
+<h2>&#8220;What does this have to do with the tech recruitment process?&#8221;</h2>
+<p>The last few years all my business leads came from my personal or online network. Some experiences turned out pretty good, and some a bit less.</p>
+<p>Unfortunately, my current client&#8217;s project got delayed for a few months at first, and cancelled afterwards by his customer, so I am currently short on leads. (Luckily they are now giving me the opportunity to migrate them from a waterfall to a more scrum-like approach, so I am not quite broke yet; however, the job ends this month.)</p>
+<p>As I got short on leads, I decided to accellerate my job/project search using companies that play an intermediate between me and the customer, and I was flabbergasted by most of them&#8230;</p>
+<h2>Most recruiters just seem to play &#8220;Keyword lottery&#8221;</h2>
+<p>People from my personal/social network <strong>do not hire me because I know a certain tech stack, they hire me because they think I am capable of solving the problem they have.</strong></p>
+<p>However, <strong>almost</strong> every recruiter that contacts me - the exceptions know who they are - just search their database for keywords, and contact you based on those keywords. In the rare case that you do get asked some technical questions, the interviewers either do not know anything about the subject, or they start asking questions about the things irrelevant to the job.</p>
+<p>In my experience <strong>this keyword approach is as usefull as taking an asprin when your leg is broken</strong>. Here is an excerpt from a recent conversation I had with Szymon Pobiega on twitter:</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/tojans">tojans</a> Same for any technology, approach and methodology. Juniors tend to write they are experts if they heard a buzzword more than 3 times</p>
+&mdash; Szymon Pobiega (@SzymonPobiega) <a href="https://twitter.com/SzymonPobiega/status/268951237389598720">november 15, 2012</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Every single recruiter I talk to talks about how they would like to bond and invest into people, and really contribute and build a relationship, so I point them to my blog, and tell them this is exactly who I am. However, almost nobody - again, some exceptions - decided to invest in me by reading the blog and finding out what my exact profile is.</p>
+<p>There are exceptions to this rule, and some even go a long way to acquire your trust and confidence, for example the story of github recruitment comes to my mind; who would not love to be treated like that?</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>After doing lots of job interviews, this sounds like Walhalla: the @<a href="https://twitter.com/github">github</a> hiring experience <a title="https://github.com/blog/1269-the-github-hiring-experience" href="https://t.co/yTNE1wxw">github.com/blog/1269-the-&hellip;</a>&#8221; /via @<a href="https://twitter.com/jacopretorius">jacopretorius</a></p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/269327080850874368">november 16, 2012</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<h2>Closing up</h2>
+<p>I intended to make this a short post (i.e. 1K words), as it was more of a rant then a true essay, but as usual I am having a hard time respecting the limit.</p>
+<p>I hope I did not blow any of my own bridges by writing this post, but I find this whole recruiter thing rather frustrating, as the business model for most of them seems to evolve around introducing as many candidates as possible to as many potential customers as possible, filtering only by keywords&#8230;</p>
+<p>As the globalization and &#8220;enterprise consumerization&#8221; continues, I assume the world will evolve into an interconnected network of people first and organizations second, so I think that recruitment organizations that are simply focusing on getting the most contracts by using pure volume will not manage to survive in the future. (Maybe they should try reading <a href="http://agilemanifesto.org/">the Agile manifesto</a>.)</p>
+<p>Once again I will close this blog post with a quote:</p>
+<p><em>&#8220;The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.&#8221; - <a href="http://en.wikipedia.org/wiki/Stephen_Hawking">Stephen Hawking</a></em></p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous thinking: Essay: Ease and simplicity in software architecture]]></title>
+    <link href="http://tojans.github.io/blog/2012/10/31/continuous-thinking-essay-ease-and-simplicity-in-software-architecture/"/>
+    <updated>2012-10-31T00:00:00+01:00</updated>
+    <id>http://tojans.github.io/blog/2012/10/31/continuous-thinking-essay-ease-and-simplicity-in-software-architecture</id>
+    <content type="html"><![CDATA[<h1>Introduction</h1>
+<blockquote>
+<p>&ldquo;Almost all quality improvement comes via simplification of design, manufacturing&#8230; layout, processes, and procedures.&rdquo; - <a href="http://en.wikipedia.org/wiki/Tom_Peters" target="_blank">Tom Peters</a></p>
+</blockquote>
+<p>As I was tinkering around with <a href="http://www.erlang.org/" target="_blank">Erlang</a>/<a href="http://learnyousomeerlang.com/what-is-otp" target="_blank">OTP</a> and <a href="https://github.com/ToJans/Big" target="_blank">some other stuff</a>, I suddenly experienced yet another <a href="http://en.wikipedia.org/wiki/Aha-Erlebnis" target="_blank">&#8220;aha-erlebnis&#8221;</a>: there is a huge difference between something that is <strong>simple</strong> and something that is <strong>easy</strong>, but a lot of people tend to miss this rather important distinction.</p>
+<p></p>
+<h1>What do you mean?</h1>
+<p>When I told people I was considering writing a blog post about the difference between <strong>simple</strong> and <strong>easy</strong>; <a href="http://verraes.net/" target="_blank">Mathias Verraes</a> pointed me to a presentation on InfoQ named <a href="http://www.infoq.com/presentations/Simple-Made-Easy" target="_blank">&#8220;Simple Made Easy&#8221;</a> by <a href="https://twitter.com/richhickey" target="_blank">the creator of Clojure</a>.</p>
+<blockquote class="twitter-tweet">
+<p>@<a href="https://twitter.com/tojans">tojans</a> Inspiration: <a title="http://www.infoq.com/presentations/Simple-Made-Easy" href="http://t.co/Tiu0NvzJ">infoq.com/presentations/&hellip;</a> by @<a href="https://twitter.com/richhickey">richhickey</a></p>
+&mdash; Mathias Verraes (@mathiasverraes) <a href="https://twitter.com/mathiasverraes/status/263200589503164417">October 30, 2012</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>This is a great video, and I suggest you to take a look at it.&nbsp;As I can not include infoQ videos on this page, I will embed another video by the same speaker about the same subject.(But to be honest, I think the one on infoQ is better.)</p>
+<p>
+<object width="640" height="360">
+<param name="movie" value="http://www.youtube.com/v/rI8tNMsozo0?version=3&amp;hl=nl_NL" />
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="640" height="360" src="http://www.youtube.com/v/rI8tNMsozo0?version=3&amp;hl=nl_NL" allowfullscreen="true" allowscriptaccess="always"></embed>
+</object>
+</p>
+<h1>So how is this related to software architecture?</h1>
+<p>There is a very well known concept called <a href="http://en.wikipedia.org/wiki/Second-system_effect" target="_blank">the 2nd system effect</a> which basically describes a typical evolution of application development:</p>
+<h2>System 1: &#8220;I do not have a clue yet&#8221;</h2>
+<p>You develop a system, without really knowing all the requirements, so you spike a <a href="http://en.wikipedia.org/wiki/Minimum_viable_product" target="_blank">minimal viable product/prototype</a>, which is really <strong>simple</strong> and deploy it.</p>
+<p>The users start using it, and start asking for extra features.</p>
+<p>As you start implementing these features, you notice that your current software architecture is lacking a bit, but the <strong>easy</strong> way is to add yet another condition, another prerequisite, include another loop/code to your existing code until it turns into a big ball of mud; it loses the <strong>simplicity</strong> and becomes more <strong>complex</strong>. (<a href="http://en.wikipedia.org/wiki/Black_swan_theory" target="_blank">The black swan theory</a> has a big part in this.)</p>
+<blockquote>
+<p>Implementation 1: maintaining existing and implementing new/extra business features gets <strong>harder</strong> and <strong>more complex</strong> on every single step.</p>
+</blockquote>
+<h2>System 2: &#8220;Let&#8217;s make sure we can use it for everything&#8221;</h2>
+<p>Knowing what you did wrong in system 1, you provide an over the top architecture, which makes it <strong>easy</strong> to add numerous extensions and adjustements.</p>
+<p>However, the extension points and adjustements are adding an extra layer of abstraction, and thus make your code more <strong>complex</strong>. The business implementation is <strong>simple</strong>, but the extensibility is <strong>complex</strong>.</p>
+<blockquote>
+<p>Implementation 2: Maintaining existing and implementing new/extra business features is <strong>easy</strong>, but the whole extensibility thing adds a lot of <strong>complexity</strong>.</p>
+</blockquote>
+<p>This code is usually a <a href="http://www.urbandictionary.com/define.php?term=PITA" target="_blank">PITA</a> when you are trying to figure out what happened or are trying to debug the code.</p>
+<p>For the record: I actually suffered from this as well doing a project for a customer of mine, so I will take this occasion to apologize for my mistake: sorry Arnold!</p>
+<h2>System 3: &#8220;Let&#8217;s cut the crap&#8221;</h2>
+<p>Finally, one gets to version 3: we understand the necessities and evolution of the project, and are able to build a <strong>simple</strong> system which only abstracts the things that mather, so it avoids <strong>complexity</strong> whenever possible.</p>
+<blockquote>
+<p>Implementation 3: Maintaining existing and implementing new/extra business features is <strong>easy</strong> and <strong>simple</strong></p>
+</blockquote>
+<h1>Theory is nice, but how about practice?</h1>
+<p>In my personal experience, the best way to avoid this, is by not making assumptions in the beginning, as one is typically not able to predict the future - unless your last name is <a href="http://en.wikipedia.org/wiki/Ray_Kurzweil" target="_blank">Kurzweill</a> or <a href="http://en.wikipedia.org/wiki/John_Titor" target="_blank">Titor</a>, but that is another discussion - and refactoring code as you notice some smells.</p>
+<p>Here are some typical smells:</p>
+<ul>
+<li>intertangling code, a lot of dependencies</li>
+<li>code going several levels deep</li>
+<li>copy/paste coding</li>
+<li>building for something one might need in the future</li>
+<li>Too generic abstractions</li>
+<li>&#8230;</li>
+</ul>
+<p>If you want to refactor code, you need to have some confidence that your application requirements are still met after refactoring, which leads us to the following tool: <a href="http://en.wikipedia.org/wiki/Behavior-driven_development" target="_blank">Behaviour Driven Development(BDD)</a></p>
+<p>By using BDD one can find some black swans by exploring the specs with BAs before actually implementing them, and make sure the expected outcomes are still achieved after refactoring.</p>
+<p>There is a lot more to BDD then this, but this post is already long enough.</p>
+<h1>Conclusion</h1>
+<p>Well, I was in dubio whether I would write this post or not, but writing it all down somehow made me more confident about what to look for when implementing a system: do not create a <a href="http://en.wikipedia.org/wiki/Big_Design_Up_Front" target="_blank">BDUF</a>, but have small incremental changes to your system. Only implement arhitectural patterns when you actually need them, not a minute later or sooner.</p>
+<p>I would like to end this post with another one of my favorite quotes</p>
+<blockquote>
+<p>&#8220;Make everything as simple as possible, but not simpler&#8221; - <a href="http://en.wikipedia.org/wiki/Albert_Einstein" target="_blank">A. Einstein</a></p>
+</blockquote>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Trading the Elliott Wave - Silver 24/10/2012]]></title>
+    <link href="http://tojans.github.io/blog/2012/10/24/trading-the-elliott-wave-silver-24-10-2012/"/>
+    <updated>2012-10-24T00:00:00+02:00</updated>
+    <id>http://tojans.github.io/blog/2012/10/24/trading-the-elliott-wave-silver-24-10-2012</id>
+    <content type="html"><![CDATA[<p>s I think we are currently in wave 3 on several levels and we have some MACD/RSI divergence on the 4h-chart, I decided to put my money where my mouth is, and bought a few XAG/USD spot long sprinters with a leverage of about 80.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f10%2fopportunity.png" alt="" /></p><div style="text-align:right">]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Paycento Web Summit 2012 - Day two: Aaaaargh matie]]></title>
+    <link href="http://tojans.github.io/blog/2012/10/18/paycento-web-summit-2012-day-two-aaaaargh-matie/"/>
+    <updated>2012-10-18T00:00:00+02:00</updated>
+    <id>http://tojans.github.io/blog/2012/10/18/paycento-web-summit-2012-day-two-aaaaargh-matie</id>
+    <content type="html"><![CDATA[<h3>Introduction</h3>
+<p>This is a follow-up post to <a href="http://www.corebvba.be/blog/post/Paycento-websummit-2012-Is-gra-liom-Eire.aspx">the post from yesterday</a>. While the first day was really nice, the second day was completely different.</p>
+<h3>Meeting people</h3>
+<p>After a good night of sleep and some breakfast at our AirBnb host, Geert and I got back to the venue. As this was our second day, we seemed to have less challenges handling the Irish traffic in our &#8220;Fiat Cinquecento&#8221;. As we arrived there, we met up with Pieter again we had a small chat about the event he had the night before, had some coffee and a small breakfast (I love the catering at Web Summit), finished some things I had to do on my laptop, and started socializing.</p>
+<p></p>
+<p>First things first; as Geert introduced me to the guys from <a href="http://8thcolor.com/" target="_blank">8thcolor </a>yesterday - another Belgian start-up -, I decided to go and see what<a href="http://asksybil.com/" target="_blank"> their product &#8220;asksybil&#8221;</a>actually was like. Christophe and Martin gave me a short demo about their product, and I was really amazed: by analyzing your source code commits, they actually make a smart estimate about the experience of a certain developer with a certain tech stack. They then use this data to determine your liabalility on this dependency, and even estimate your risk exposre by looking whether some knowledge is only known by a single person.</p>
+<p>By talking with them, I realized I might have a potential lead for them, so I will try to introduce them in the next week into this company.</p>
+<p>We also had some great discussions about possible evolutions/alternate paths one could follow with this product; and we decided to keep in touch. I really think this is a product to watch out for&#8230;</p>
+<p>Another product I have seen was <a href="http://www.birdbox.com" target="_blank">Birdbox</a>: this is like a tool that aggregates all your pictures and videos over all social networks/sites/&#8230; I am definately going to try the beta of this. As we met over lunch I also told him about another startup idea I had, which in the end seemed to be similar, but not exactly the same; maybe it is still a potential case for my<a href="http://www.corebvba.be/blog/post/Project-Startup10-Learning-to-build-your-own-business.aspx"> #Startup10 project</a>.</p>
+<p>We also met a lot of other people who were actually really interested in building a business relationship with Paycento, so we did achieve what we wanted to achieve on this venue.</p>
+<h3>The end is near</h3>
+<p>Near the end of the last day, we met the guys from <a href="http://bubobox.com/" target="_blank">BuboBox</a>, another Belgian start-up who walked a path comparable to Paycento. As the venue was closing down, we decided to have a few drinks with them at the pub across the street, and I have to say I had quite some interesting discussions with both of the founders. After Pieter and Geert finished talking to the founder of <a href="http://9gag.com/" target="_blank">9Gag </a>we all regroupeed and had a few beers, but mostly a good chat talking about start-ups, persistence and life in general. (On a sidenote, I also found out one of them actually did read at least one of my blog posts -<a href="http://www.corebvba.be/blog/post/Epilogue-One-night-in-Paris-CQRS-beers-and-life-in-general.aspx"> the one about the trip to Paris</a> -, which is always great to hear&#8230;)</p>
+<p>I also noticed on twitter both <a href="https://twitter.com/RobAshton" target="_blank">@RobAshton</a> and <a href="https://twitter.com/GraemeF" target="_blank">@GraemeF</a> were in Dublin for<a href="http://www.nodedublin.com/" target="_blank"> a node conference</a>, but unfortunately we failed to meetup this time&#8230;</p>
+<blockquote class="twitter-tweet">
+<p>@<a href="https://twitter.com/robashton">robashton</a> @<a href="https://twitter.com/graemef">graemef</a> ok; still at the same pub.. another time; enjoy!!!</p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/258999970835877888">October 18, 2012</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<h3>Finally, in closing</h3>
+<p>&#8230; we decided to have dinner at an Italian restaurant close to the venue, to discuss the Web Summit, start-ups and Paycento. It was a great evening, and we gained some valuable insights, but also had lots of fun during dinner.</p>
+<p>Finally, we headed back to our car, and arrived back at our AirBnb, where we said goodbye to our hostesses, thanking them for their hospitality with some Belgian beer.</p>
+<p>So, that is it; Web Summit is gone.</p>
+<p>As we have to get up within a few hours, and I still have some other things to do, I will end this post with a quote from Sun Tzu - The art of war:</p>
+<p>&#8220;Opportunities multiply as they are seized&#8221;</p>
+<p>Good night,</p>
+<p>Tom</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Paycento Web Summit 2012 - Day one: Is gra liom Eire]]></title>
+    <link href="http://tojans.github.io/blog/2012/10/17/paycento-web-summit-2012-day-one-is-gra-liom-Eire/"/>
+    <updated>2012-10-17T00:00:00+02:00</updated>
+    <id>http://tojans.github.io/blog/2012/10/17/paycento-web-summit-2012-day-one-is-gra-liom-Eire</id>
+    <content type="html"><![CDATA[<h3 style="text-align: left;">Introduction</h3>
+<p style="text-align: left;">When Geert from <a href="http://www.paycento.com" target="_blank">Paycento </a>asked me to join him and Pieter to Ireland for THE start-up convention in Ireland named <a href="http://www.websummit.net/" target="_blank">Web Summit</a>, I immediately agreed to join them for the following reasons:</p>
+<ul style="text-align: left;">
+<li><span style="color: #333333; font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 16px;">Paycento is still very active, even though we <a href="http://www.corebvba.be/blog/?tag=/Paycento">do not blog about it currently</a>.</span></li>
+<li><span style="color: #333333; font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 16px;">Web Summit is probably the biggest conference for start-ups in Europe, so there is an interesting buzz here, with some really interesting speakers.</span></li>
+<li><span style="color: #333333; font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 16px; ">I love interacting with people I do not know yet, especially when we do share similar interests.</span></li>
+<li><span style="color: #333333; font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 16px; ">You get to see a whole new world out there, with opportunities you could not even imagine thinking about.</span> </li>
+<li><span style="color: #333333; font-family: arial, helvetica, clean, sans-serif; font-size: 13px; line-height: 16px;">And, last but not least: &#8220;Is gr&aacute; liom &Eacute;ire&#8221; - that is <a href="http://en.wikipedia.org/wiki/Gaelic" target="_blank">Gaelic </a>for &#8220;I love Ireland&#8221; - even though it has been over 10 years ago I spent a few days here, I really like the way Irish people interact and socialize.</span></li>
+</ul>
+<p style="text-align: left;">Here is an overview of our first day!!!</p>
+<p style="text-align: left;"></p>
+<h3 style="text-align: left;">3&#8230;2&#8230;1&#8230; Lift-off!! We have lift-off!!</h3>
+<p style="text-align: left;">So after a false start (our train arrived a bit on the late side in Brussels, but luckily our plane was delayed as well), we managed to safely land in Dublin, and actually got to our car, which has been the decor for a lot of laughing and Mr. Bean-like &#8220;adventures&#8221; on the Irish roads. Driving left is a bit of a challenge, and I am actually glad I did not bring my driver&#8217;s license - how convenient, isn&#8217;t it, Geert ;) -, because I would probably wind up driving the roundabout in the wrong direction.</p>
+<p style="text-align: left;"><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f10%2fws+voituur.png" alt="" /></p>
+<p style="text-align: left;">So after getting acquinted with our jolly transportation device we managed to arrive to the Web Summit in one piece, where we met Pieter (who had been in Dublin since yesterday evening).</p>
+<p style="text-align: left;">He gave us a short briefing about things to expect and things we should do (i.e. some mere guidance, nothing in particular), we put on our Paycento T-shirts and were ready for take off.</p>
+<p style="text-align: left;"><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f10%2fws_paycentobooth.png" alt="" /></p>
+<h3>Who did you meet ?</h3>
+<p>We met a lot of interesting people, and also found out ther<a href="http://www.bloovi.be/nl/nieuws/N830-invisible-puppy-leidt-belgische-missie-naar-de-dublin-web-summit-2012" target="_blank">e were 13 Belgian companies owning a booth at the convention</a>.</p>
+<p>As there are a lot of exibitors, we went by them one by one and talked to some of them.</p>
+<p>We also saw a lot of new and interesting approaches to known and unknown things, some of the things were quite amazing. One thing I loved in particular was the booth next to ours, where a company named <a href="http://ovelin.com/" target="_blank">Ovelin </a>showed us a really great app&#8221;<a href="http://www.guitarbots.com" target="_blank">guitarbots</a>&#8221; &nbsp;that listens to you playing the guitar and guides you using a game, so you can learn to play the guitar properly. While testing the app it immediately spotted my wrong grab on the G chord (muting the high E), so it is really kind of an amazing thing, it is like a guitar-teacher-in-a-box.</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f10%2fG-Chord-Shape.gif" alt="" /></p>
+<p>There were lots and lots more people we met, so this really is a great venue to attend.</p>
+<p>There would be way to many here to mention, but I am confident we will hear from some of them in the future&#8230;</p>
+<p>We also saw quite a few people there we plan on visiting tomorrow&#8230;.</p>
+<p>We also had a really interesting talk with the founder of MySQL who has now started <a href="http://mariadb.org/" target="_blank">MariaDB </a>as a drop-in replacement for MySQL, since he does not like the way MySQL is currently evolving; thank you for the ideas, inspiration and also the glass of Black wodka!</p>
+<blockquote class="twitter-tweet">
+<p>Having a glass of vodka with the founder of mysql <a href="https://twitter.com/search/%23websummit">#websummit</a> <a title="http://twitter.com/Paycento/status/258615427024973825/photo/1" href="http://t.co/HF494aYg">twitter.com/Paycento/statu&hellip;</a></p>
+&mdash; Paycento (@Paycento) <a href="https://twitter.com/Paycento/status/258615427024973825">October 17, 2012</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<h3>The Web Summit conference</h3>
+<p>The venue is really well organized, for example the catering really quite extensive (hot/cold platters,sandwiches,soup,&#8230;) and coffee/other drinks are available throughout the building. Everything is included in the ticket price, so you know what you will spend once you have acquired a ticket.</p>
+<p>In the evening there are special events, where the whole pub is full of start-up people willing to network, and once again we had quite a few interesting conversations.</p>
+<p>We even had the possibilitiy to win a <a href="http://en.wikipedia.org/wiki/Gibson_Les_Paul" target="_blank">Gibson Les Paul</a>, all we had to do was pose with it. I would love to win it, but I am afraid there were some really original poses in there, so I assume I will somehow not win this contest. -in my defense: I am not a poser ;) -.</p>
+<p>We left rather early, since we had some driving to do to our <a href="http://www.airbnb.com/" target="_blank">AirBnB </a>host.</p>
+<h3>Conclusion</h3>
+<p>While I had no idea what to expect, I am glad Paycento allowed me to join Web Summit; all in all it is a great experience, and I have both met a lot of interesting people, and we have heard a lot of interesting ideas/opinions.</p>
+<p>Feel free to come over and visit us over at booth 197, especially if you are a content provider, press or an investor.</p>
+<p>Signing off/see you tomorrow!</p>
+<p>Tom</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Erlang 101: an attempt to implement CQRS]]></title>
+    <link href="http://tojans.github.io/blog/2012/10/05/erlang-101-an-attempt-to-implement-cqrs/"/>
+    <updated>2012-10-05T00:00:00+02:00</updated>
+    <id>http://tojans.github.io/blog/2012/10/05/erlang-101-an-attempt-to-implement-cqrs</id>
+    <content type="html"><![CDATA[<h3>Introduction</h3>
+<p>As you might have noticed in<a href="http://www.corebvba.be/blog/post/Getting-started-with-Erlang-and-Nitrogen-(in-a-single-tweet).aspx" target="_blank"> one of my previous posts</a>, I am currently focussing on <a href="http://learnyousomeerlang.com/" target="_blank">Erlang</a>, because I assume that this platform might be the most efficient way <a href="https://github.com/ericmoritz/wsdemo/blob/results-v1/results.md" target="_blank">to handle umphteen connections over the web for now</a>&nbsp;(but that is the subject for another post).</p>
+<p>After running my first experiments and getting everything up and running on Windows, I finally decided to stop fighting usage of windows combined with Erlang so I installed myself a <a href="https://www.virtualbox.org/" target="_blank">virtualbox </a>with <a href="http://lxde.org/" target="_blank">Lubuntu LXDE</a> (please note that you have to set the available memory on the virtual appliance to 512MB, or the installation will crash).</p>
+<blockquote class="twitter-tweet">
+<p>2nd attempt for a virtualbox install of Lubuntu LXDE; aparently the installer crashes with mem != 512MB <a href="https://twitter.com/search/%23LOL">#LOL</a></p>
+&mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/253763997659176961">October 4, 2012</a></blockquote>
+<p>
+<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Before I start implementing what might be my next startup, I tried implementing one of the things that I consider to be my personal kata <a href="https://github.com/ToJans" target="_blank">(I made numerous attempts in .Net</a>): a <a href="http://martinfowler.com/bliki/CQRS.html" target="_blank">CQRS</a> implementation of a simple stock system.</p>
+<p>Disclaimer: I am a complete newb in Erlang, so I presume I am still miles away from a more elegant implementation.</p>
+<p></p>
+<h3>&#8220;Show me da Codez!!&#8221;</h3>
+<p>Here are the events:</p>
+<p>
+<script src="https://gist.github.com/3818011.js?file=item.hrl"></script>
+</p>
+<p>And here is the code (including unit tests)</p>
+<p>
+<script src="https://gist.github.com/3818011.js?file=item.erl"></script>
+</p>
+<h3>Running this on windows</h3>
+<p>In case you would like to test this on windows: install Erlang, and start werl.exe (= Erlang for windows). Download the source and save them in item.erl and item.hrl. Start up the Erlang console perform the following steps:</p>
+<p>
+<script src="https://gist.github.com/3818011.js?file=console.erl"></script>
+</p>
+<h3>Afterthoughts</h3>
+<p>As usual, I learn new tech by diving in head-first; nevertheless this still looks ugly as hell; a few points where I could improve:</p>
+<ul>
+<li>Make sure the routing works in a proper way, i.e. spawn one process per id, and make sure the respective commands get sent to the correct AR&#8217;s, this would allow me to remove the top 4 handle statements filtering out all the ones where the Id does not match the instance&#8217;s.</li>
+<li>Instead of passing in records to <code>handle</code> and <code>on</code> -methods, I could probably shortcut this using a custom behavior, and use some kind of a convention, so I could replace<br /> <code>handle(#state{active=false},#deposit_amount{id=_Id})</code><br /> by something like  <br /><code>handle_deposit_amount(#state{active=false})</code><br /> And the same for events. </li>
+<li>Getting to learn Erlang/OTP to the state that it is usable will probably require at least some months, being able to produce &#8220;nice&#8221; code even longer&#8230;</li>
+</ul>
+<p>All in all this has been a valuable exercise to start with, next on my agenda is trying to build an minimum viable product for yet another start-up idea that crossed my mind.</p>
+<p>In closing a message to more experienced Erlangers: feel free to fork the example and show me the proper way to do it!</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Trading the Elliott Wave - Silver 26/09/2012]]></title>
+    <link href="http://tojans.github.io/blog/2012/09/26/trading-the-elliott-wave-silver-26-09-2012/"/>
+    <updated>2012-09-26T00:00:00+02:00</updated>
+    <id>http://tojans.github.io/blog/2012/09/26/trading-the-elliott-wave-silver-26-09-2012</id>
+    <content type="html"><![CDATA[<p>No Elliott analysis yet, since I am a bit short on time, hence my quick and dirty analysis based on divergence&#8230; The trend looks strong, so I think we might be heading to the 261.8 retracement here&#8230; (i.e. 26.4299).</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fsilver.png" alt="" /></p>]]></content>
+  </entry>
+  
+</feed>

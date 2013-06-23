@@ -1,0 +1,240 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ASP.NET MVC ImageHandler for thumbnails - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="ASP.NET MVC ImageHandler for Thumbnails As some of you might know, I am a really big fan of community-driven technologies. I also like to contribute &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2009/01/26/asp.net-mvc-imagehandler-for-thumbnails/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">ASP.NET MVC ImageHandler for Thumbnails</h1>
+	<div class="entry-content" itemprop="articleBody"><span style="font-size: 10pt; color: #003300; font-family: Verdana">As some of you might know, I am a really big fan of community-driven technologies. I also like to contribute myself in order to exchange new ideas and meet new people with common interests.</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">Since I am quite new to ASP.NET MVC, I was thinking I would submit my first contribution : handling all your images through a custom actionresult/controller.<br />
+This allows me to do several things : </span>
+<ul>
+	<li>uniform access to images</li>
+	<li>possibility for custom types (this example ALWAYs renders as PNG)</li>
+	<li>generation of thumbnails.</li>
+</ul>
+<p>
+<span style="font-size: 10pt; color: #003300; font-family: Verdana">Let&#39;s start with the code for the ActionResult (initially inspired by/copy-pasted&nbsp;from <a href="http://blog.maartenballiauw.be/post/2008/05/ASPNET-MVC-custom-ActionResult.aspx"><font color="#800080">this</font></a>&nbsp;, but since the new RC it is my own code):</span> 
+</p>
+<span style="font-size: 10pt; color: #003300; font-family: Verdana"><font size="2" color="#0000ff"><font size="2" color="#0000ff"></font></font></span><span style="font-size: 10pt; color: #003300; font-family: Verdana"><font size="2" color="#0000ff"><font size="2" color="#0000ff"><font size="2" color="#0000ff"><font size="2" color="#0000ff">
+<p>
+using<font size="2"><font color="#000000"> System.IO;<br />
+</font></font>using<font size="2"><font color="#000000"> System.Web.Mvc;<br />
+</font></font><font size="2" color="#0000ff"><font size="2" color="#0000ff">using</font></font><font size="2"><font color="#000000"> System.Drawing;<br />
+<font size="2" color="#0000ff"><font size="2" color="#0000ff">using</font></font><font size="2"> System.Drawing.Imaging;</font><br />
+<br />
+</font></font><font size="2" color="#0000ff"><font size="2" color="#0000ff">namespace</font></font><font size="2"><font color="#000000"> Be.Corebvba.MVC<br />
+</font>{<br />
+&nbsp; </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">public</font></font><font size="2"> </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">class</font></font><font size="2"> </font><font size="2" color="#2b91af"><font size="2" color="#2b91af">ImageResult</font></font><font size="2"> : </font><font size="2" color="#2b91af"><font size="2" color="#2b91af">FileStreamResult</font></font><font size="2"> <br />
+&nbsp; {</font> <br />
+&nbsp;&nbsp;&nbsp; <font size="2" color="#0000ff"><font size="2" color="#0000ff">public</font></font><font size="2"> ImageResult(</font><font size="2" color="#2b91af"><font size="2" color="#2b91af">Image</font></font><font size="2"> input):</font><font size="2" color="#0000ff"><font size="2" color="#0000ff">this</font></font><font size="2">(input,input.Width,input.Height)</font><font size="2"> { } </font>
+</p>
+</font></font></font></font><font size="2" color="#0000ff"><font size="2" color="#0000ff">&nbsp;&nbsp;&nbsp; public</font></font><font size="2"> ImageResult(</font><font size="2" color="#2b91af"><font size="2" color="#2b91af">Image</font></font><font size="2"> input, </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">int</font></font><font size="2"> width,</font><font size="2" color="#0000ff"><font size="2" color="#0000ff">int</font></font><font size="2"> height) : <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2"></font><font size="2" color="#0000ff"><font size="2" color="#0000ff">base</font></font><font size="2">(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GetMemoryStream(input,width,height,</font><font size="2" color="#2b91af"><font size="2" color="#2b91af">ImageFormat</font></font><font size="2">.Png),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2" color="#a31515"><font size="2" color="#a31515">&quot;image/png&quot;</font></font><font size="2">)</font><font size="2">&nbsp;<br />
+&nbsp;&nbsp;&nbsp;{ } <br />
+<br />
+&nbsp;&nbsp;&nbsp; </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">static</font></font><font size="2"> </font><font size="2" color="#2b91af"><font size="2" color="#2b91af">MemoryStream</font></font><font size="2"> GetMemoryStream(</font><font size="2" color="#2b91af"><font size="2" color="#2b91af">Image</font></font><font size="2"> input,</font><font size="2" color="#0000ff"><font size="2" color="#0000ff">int</font></font><font size="2"> width,</font><font size="2" color="#0000ff"><font size="2" color="#0000ff">int</font></font><font size="2"> height,</font><font size="2" color="#2b91af"><font size="2" color="#2b91af">ImageFormat</font></font><font size="2"> fmt)</font><font size="2"> <br />
+&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="2" color="#008000"><font size="2" color="#008000">// maintain aspect ratio</font></font> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2"></font><font size="2" color="#0000ff"><font size="2" color="#0000ff">if</font></font><font size="2"> (input.Width &gt; input.Height)</font><font size="2"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; height = input.Height * width / input.Width;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="2" color="#0000ff"><font size="2" color="#0000ff">else</font></font> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2">width = input.Width * height / input.Height; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">var</font></font><font size="2"> bmp = </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">new</font></font><font size="2"> </font><font size="2" color="#2b91af"><font size="2" color="#2b91af">Bitmap</font></font><font size="2">(input, width, height);</font><font size="2"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="2" color="#0000ff"><font size="2" color="#0000ff">var</font></font><font size="2"> ms = </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">new</font></font><font size="2"> </font><font size="2" color="#2b91af"><font size="2" color="#2b91af">MemoryStream</font></font><font size="2">();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bmp.Save(ms, </font></font><font size="2" color="#2b91af"><font size="2" color="#2b91af">ImageFormat</font></font><font size="2">.Png);</font><font size="2"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ms.Position = 0; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2" color="#0000ff"><font size="2" color="#0000ff">return</font></font><font size="2"> ms;</font><font size="2"> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp; } <br />
+} 
+<p>
+<span style="font-size: 10pt; color: #003300; font-family: Verdana"></span>
+</p>
+</font></span><span style="font-size: 10pt; color: #003300; font-family: Verdana">The code&nbsp;for the controller is pretty straighforward as well :<br />
+<br />
+</span><span style="font-size: 10pt; color: blue; font-family: Verdana">public</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">ActionResult</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> ThumbImage(</span><span style="font-size: 10pt; color: blue; font-family: Verdana">int</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> id,</span><span style="font-size: 10pt; color: blue; font-family: Verdana">int</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> width,</span><span style="font-size: 10pt; color: blue; font-family: Verdana">int</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> height)<br />
+{<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">var</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> d = _rDocument.GetById(id);<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">Image</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> i=</span><span style="font-size: 10pt; color: blue; font-family: Verdana">null</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">;<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">try<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: #003300; font-family: Verdana">{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i = </span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">Image</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">.FromFile(d.PhysicalFilename);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">return</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: blue; font-family: Verdana">new</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> Be.Corebvba.MVC.</span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">ImageResult</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">(i, width, height);<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">catch</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> (</span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">Exception</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> ex)<br />
+&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i = </span><span style="font-size: 10pt; color: blue; font-family: Verdana">new</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">Bitmap</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">(1, 1);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">return</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: blue; font-family: Verdana">new</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> Be.Corebvba.MVC.</span><span style="font-size: 10pt; color: #2b91af; font-family: Verdana">ImageResult</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">(i,1,1);<br />
+&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">finally<br />
+&nbsp;&nbsp; </span><span style="font-size: 10pt; color: #003300; font-family: Verdana">{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 10pt; color: blue; font-family: Verdana">if</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> (i != </span><span style="font-size: 10pt; color: blue; font-family: Verdana">null</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">) i.Dispose();<br />
+&nbsp;&nbsp; }<br />
+}<br />
+<br />
+</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">This does need some better errorhandling, but I suppose you get the idea&#8230; (The _rDocument is a pointer to a Document repository which stores physical files. If you access your images from a database, you could simply use Image.FromStream instead of an Image.FromFile .</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">In my document i reference the image as follows, et voila, automatic thumbnails&nbsp;:<br />
+<br />
+</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">&lt;% </span><span style="font-size: 10pt; color: blue; font-family: Verdana">var</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> imgurl = Url.Action(</span><span style="font-size: 10pt; color: #a31515; font-family: Verdana">&quot;ThumbImage&quot;</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">, </span><span style="font-size: 10pt; color: #a31515; font-family: Verdana">&quot;Documents&quot;</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">, </span><span style="font-size: 10pt; color: blue; font-family: Verdana">new</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> { id = d.ID,width=100,height=100 }); %&gt;<br />
+</span><span style="font-size: 10pt; color: blue; font-family: Verdana">&lt;</span><span style="font-size: 10pt; color: #a31515; font-family: Verdana">img</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: red; font-family: Verdana">src</span><span style="font-size: 10pt; color: blue; font-family: Verdana">=&quot;</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">&lt;%=imgurl %&gt;</span><span style="font-size: 10pt; color: blue; font-family: Verdana">&quot;</span><span style="font-size: 10pt; color: #003300; font-family: Verdana"> </span><span style="font-size: 10pt; color: red; font-family: Verdana">style</span><span style="font-size: 10pt; color: blue; font-family: Verdana">=&quot;</span><span style="font-size: 10pt; color: red; font-family: Verdana">float</span><span style="font-size: 10pt; color: #003300; font-family: Verdana">:</span><span style="font-size: 10pt; color: blue; font-family: Verdana">left&quot;/&gt;</span><font face="Times New Roman" size="3">&nbsp;</font> 
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

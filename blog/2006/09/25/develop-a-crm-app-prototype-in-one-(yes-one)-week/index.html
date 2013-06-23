@@ -1,0 +1,223 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Develop a CRM-app prototype in one (yes ONE) week - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="Develop a CRM-app Prototype in One (Yes ONE) Week After developing several base implementations of a CRM package I have decided to re implement the &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2006/09/25/develop-a-crm-app-prototype-in-one-%28yes-one%29-week/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Develop a CRM-app Prototype in One (Yes ONE) Week</h1>
+	<div class="entry-content" itemprop="articleBody">After developing several base implementations of a CRM package I have decided to re implement the full app from top to bottom.<br />
+So what is the big deal about it ?<br />
+<br />
+<img src="/blog/admin/Pages/content/binary/deadline.jpg" border="0" alt="" width="28" height="30" />&nbsp;&nbsp; <strong><br />
+<br />
+I have only a week left to develop a fully functional prototype.<br />
+<br />
+</strong>
+<h4>Why ?</h4>I am currently developing a CRM framework for one of my customers (private banking).<br />
+While the current framework is working pretty decent, I am very unhappy with the current implementation (fifth already).<br />
+Every developer has experienced at least once that building an app from the ground up can be pretty cumbersome, since adding functionalities changes/extends the framework gradually, and some adaptations are pretty ugly to implement in your framework.<br />
+<h4>Why do you blog about it, and why would I bother ?</h4>For me : some constructive criticism might give me the extra boost I might need.<br />
+For you&nbsp; : you might see me totally miss my deadline, and mock with me.<br />
+<h4>How will you be able to do this ?</h4>The whole idea around this short time frame is based around the following aspects :<br />
+<ul>
+	<li>Since we have documented all company terminology/procedures/assets etc in a wiki, I will not need to contact my customer for further info. </li>
+	<li>Developing several extensive prototypes (5) gives you a main idea how to do it. </li>
+	<li>I need a really flexible framework that I can sell to other clients as well, so adaptation for other customers will be easy.<br />
+	</li>
+	<li>I work better under pressure :p .<br />
+	</li>
+	<li>Since the initial scope is quite small, technical difficulties are rather obsolete. The big challenge will be in the generalizations etc&#8230;</li>
+</ul>
+<h4>What is the scope ?</h4>Being able to manage contact(group)s/resources/products/activities/campaigns, using security policies etc..<br />
+Email/reporting/integration will be considered later&#8230;.<br />
+<h4>What is the target platform ?</h4>SQL Server &amp; ASP.Net 2.0 / C# using Atlas<br />
+<br />
+<h4>3.2.1 Go !!!!<br />
+</h4>I have already been working on this for quite a while, but decided to let go the current implementation.<br />
+The basic idea is to start from nothing.<br />
+<br />
+I have had my own &quot;Eureka&quot; moment while driving to one of my customers.<br />
+It is actually based upon the act_as_&#8230;-modules from RubyOnRails.<br />
+<br />
+The whole idea is using some kind of loosely coupled objects &amp; tables to extend the base functionality from the core objects.<br />
+Some possible implementations :<br />
+<ul>
+	<li>ActAsCommentable : by invoking this module the users will be able to add comments to the base object </li>
+	<li>ActAsTaggable : this module will make a base-object taggable. Hierarchies should be possible in a vocabulary<br />
+	</li>
+	<li>ActAsSecured : will (dis)allow CRUD operations </li>
+	<li>ActAsDefaultForm : will create a basic browsable/editable table using some kind of template. </li>
+	<li>ActAsList : will modify a certain field to be represented by a field from another table. </li>
+	<li>ActAsLoggable : self-explanatory<br />
+	</li>
+	<li>&#8230;</li>
+</ul>
+This list will probably extend over time&#8230; Some people might recognize this stuff as AOP &#8230;<br />
+<br />
+Well, that should be it for the first post. Now I&#39;m off to home, and later this evening I will start with the implementation.<br />
+<br />
+Wish me Luck !!!!<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

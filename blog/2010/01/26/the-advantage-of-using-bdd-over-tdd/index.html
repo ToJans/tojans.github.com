@@ -1,0 +1,201 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>The advantage of using BDD over TDD - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="The Advantage of Using BDD Over TDD Introduction
+After reading the latest post from @jeremydmiller I felt the urge to write a small article about &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2010/01/26/the-advantage-of-using-bdd-over-tdd/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">The Advantage of Using BDD Over TDD</h1>
+	<div class="entry-content" itemprop="articleBody"><h3>Introduction</h3>
+<p>After reading <a href="http://codebetter.com/blogs/jeremy.miller/archive/2010/01/24/a-train-of-thought-january-2010-edition.aspx" target="_blank">the latest post</a> from <a href="http://twitter.com/JeremyDMiller" target="_blank">@jeremydmiller</a> I felt the urge to write a small article about the BDD part since there might be missing a vital part here about BDD&#8230;</p>
+<p></p>
+<h3>What is true BDD ?</h3>
+<p>For a general introduction on BDD I would like to refer you to <a href="http://en.wikipedia.org/wiki/Behavior_driven_development">wikipedia</a>. There are also a lot of <a href="http://www.corebvba.be/blog/?tag=/bdd">articles on this blog on specific issues as well</a>.</p>
+<p>Just to get an idea I&#8217;ll show you an excerpt of a spec (taken from <a href="http://github.com/ToJans/Aubergine/blob/master/Be.Corebvba.Aubergine.Examples/Website/Stories/Make_sure_my_Website_gets_enough_traffic.txt" target="_blank">here</a>):</p>
+<p><div class="code">
+</p>
+<pre>Define a browser<br /> <span class="kwrd">using</span> Be.Corebvba.Aubergine.Examples.Website.Contexts.BrowserContext<br />  from Be.Corebvba.Aubergine.Examples.DLL<br /><br />Story Make sure my website gets enough visibility<br />    Is about a browser<br />    <br />    As a website owner<br />    I want to make sure that I get enough visibility<br />    So that I can get enough traffic<br /><br />    Scenario Search results <span class="kwrd">for</span> <span class="str">'keywords'</span> on searchengine should contain <span class="str">'www.corebvba.be'</span> <br />        Given the current url <span class="kwrd">is</span> <span class="str">'search url'</span><br />        When searching <span class="kwrd">for</span> <span class="str">'keywords'</span><br />        Then the result should contain <span class="str">'www.corebvba.be'</span><br />        Example<br />        +--------------+--------------------------------+------------------+<br />        | searchengine | search url                     | keywords         |<br />        +--------------+--------------------------------+------------------+<br />        | google       | http:<span class="rem">//www.google.be/search?q= | BDD .Net         |<br />        | bing         | http://www.bing.com/search?q=  | core bvba tom    |<br />        | bing         | http://www.bing.com/search?q=  | Quantum physics  |<br />        | faulty link  | http://www.googleaaa           | core bvba tom    |<br />        +--------------+--------------------------------+------------------+<br /><br />    Scenario Search results on google for keywords should contain 'www.corebvba.be' <br />        Given the current url is 'http://www.google.be/search?q=' <br />        When searching for the following keywords<br />            +-----------+<br />            | keywords  |<br />            +-----------+<br />            | Aubergine |<br />            | BDD       |<br />            +-----------+<br />        Then the result should contain 'www.corebvba.be' and the following markup elements<br />            +------------------+<br />            | type | inner     |<br />            +------------------+<br />            | em   | BDD       |<br />            | em   | Aubergine |<br />            +------------------+<br />    </pre></span>
+<p><br /></div></p>
+<p>Each time I compile my application, these specs get executed, and I get <a href="http://www.corebvba.be/simpletasklist/Content/output.html">a report about which specs fail and which specs succeed</a>, so you customer knows which functionalities are working.</p>
+<p>&nbsp;</p>
+<p>In a true bdd engine specs are written using an intermediate language (a.k.a. <a href="http://domaindrivendesign.org/node/132" target="_blank">ubiquitous language</a>).<br />The biggest advantage of this extra layer is that it makes your specs completely independent from your design/infrastructure implementation.</p>
+<p>This also implies that I personally do not consider engines that require writing your specs in code (like <a href="http://twitter.com/aaronjensen" target="_blank">@aaronjensen</a>&#8217;s <a href="http://github.com/machine/machine.specifications" target="_blank">mspec</a> for example) as true BDD engines. (Please do note that this is my personal opinion)</p>
+<h3>Why is that an advantage ?</h3>
+<p>The first advantage is that this domain language is usable/understandable by domain experts as well. All you have to do is send them a link to the latest build bdd html report, and they know what to expect from your app&#8230; <br />Given you explain the available grammar for a context to a domain expert he/she should even be able to write their own scenario&#8217;s. (Hence, my bdd engine has a commandline option to get the available grammar from a context DLL, so in theory you could send the compiled DLL to the domain expert and let him/her write the specs)</p>
+<p>The second one is a bit less obvious, and is why one requires the ubiqutous langugage in a true BDD engine: since behaviour almost never changes, you can simply replace complete parts of an application without having to rewrite your specs. Instead of fixing tests you only need to fix your contexts.</p>
+<p style="padding-left: 30px;"><strong>You never have to rewrite your specs, since the bevaviour does not change, it&#8217;s only the implementation that does</strong></p>
+<p>Fixing context implementations is a usually less work compared to rewriting tests since a test usually contains some/a lot of dependencies in comparision to a single sentence of context grammar (which typically handles only a single dependency).</p>
+<p>As an example I am giving this anology : if behavioural tests would be an app written using an ioc container and dependency injection principles, then unit tests would be an app written without them.</p>
+<p>If you apply bdd-like practices to tdd (also known as <a href="http://agileinaflash.blogspot.com/2009/03/arrange-act-assert.html" target="_blank">Arrange/Act/Assert</a>) you are missing out on a large part of BDD imho; it is like writing your apps using dependency injection, but without using a container: it works and it makes your code better, but you could make your life a lot easier if you would use a container.</p>
+<p>&nbsp;</p>
+<h3>Another advantage: refactoring<br /></h3>
+<p>Another huge advantage that I initially missed in my reflections on BDD, is even more important:</p>
+<p style="padding-left: 30px;"><strong>By defining your behaviour before writing a single line of code, both you and the domain experts can think your app through upfront, and refactor at will<br /></strong></p>
+<p>Think about this a little bit. Usually you have a certain idea about how an app is supposed to behave. Your customer has this idea as well, but the problem might be that the customer&#8217;s ideas are different from your&#8217;s.</p>
+<p>Bij defining the behavior of the app explicitly in BDD specs, you rule out a lot of the (rather frustrating) refactorings due to misinterpretations, since the possible mismatch between different interpretations is closer to zero.</p>
+<p>A few months ago, I have been refactoring a BDD story over and over during a whole week together with a domain expert, and the end result was that we managed to switch from umphteen screens to only 3; this was a huge win, since we did not only have less UI to implement, but the whole process became a lot simpler for the user !!!</p>
+<h3><br /></h3>
+<h3>Finally</h3>
+<p>Whether you *do* start using BDD is completely up to you. As you might know, there is no silver bullet, but it might be a tool that helps a little.</p>
+<p>In my personal experiences opinion BDD is currently the way to go; but I might be a bit opinionated, since I have been dogfooding <a href="http://agileinaflash.blogspot.com/2009/03/arrange-act-assert.html" target="_blank">my own BDD engine</a> for a few months now&#8230;</p>
+<p>And for those of you why think I am suffering from the &#8220;Not-invented-here&#8221;-syndrome, you are probably right - although I have written an <a href="http://wiki.github.com/ToJans/Aubergine/the_aubergine_design_manifest" target="_blank">Aubergine manifest</a> to explain why we needed another bdd engine- .</p>
+<p>Happy development !!</p>
+<div style="text-align: right;"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><br /></a></div><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

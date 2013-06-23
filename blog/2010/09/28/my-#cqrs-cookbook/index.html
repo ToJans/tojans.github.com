@@ -1,0 +1,236 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My #CQRS cookbook - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="My #CQRS Cookbook Here is my personal take on how I interpret all things CQRS&#8230;
+Commercial impact: why use CQRS ?
+CQRS enforces you to apply &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2010/09/28/my-%23cqrs-cookbook/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">My #CQRS Cookbook</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Here is my personal take on how I interpret all things CQRS&#8230;</p>
+<h2>Commercial impact: why use CQRS ?<br /></h2>
+<p>CQRS enforces you to apply strict boundaries to your app in a consistent way. <br />These boundaries convert your single application into 3 separate parts, only coupled by commands, events and queries.<br />By using CQRS you convert your single app into 3 apps who can be built in parallel.</p>
+<p>So basically, when you do have enough resources, the approach can decrease your time to implement something by a factor of 2.5 (estimate, 3 times - 0.5 for the common interfaces - commands, events and queries).</p>
+<p>Since all the parts require a different kind of development knowledge, it is easier to assign parts to developers based on their expertise/domain knowlege etc.</p>
+<p>It also implies that your app is composed of smaller - and thus more maintainable- units.</p>
+<p>CQRS also enables distributed applications as well (i.e. higly scalable cloud apps)</p>
+<p>For a software shop, CQRS can be a huge commercial advantage&#8230;</p>
+<p>(On a technical side note CQRS also makes integration testing super simple, due to it&#8217;s boundaries)</p>
+<p>&nbsp;</p>
+<h2>Explaining CQRS and MVC: the simplest explanation possible (AFAIK)<br /></h2>
+<p>(For reasons of simplicity, sagas are not mentioned here)</p>
+<p>This is how MVC works with CQRS</p>
+<ul>
+<li>UI invokes a function on the controller</li>
+<li>A  controller function can either:          
+<ul>
+<li>Query a viewmodel and send it to the UI</li>
+<li>Run a command using the following sequence<br /> 
+<ul>
+<li>Build a command</li>
+<li>Push the command to the bus and verify whether it was a valid command</li>
+<li>Redirect to another controller function (which is chosen based on the validity of the command)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>This is how the bus works</p>
+<ul>
+<li>The bus receives and validates a command before accepting it</li>
+<li>The bus delegates a valid command to a command handler</li>
+<li>The command handler converts the valid command in to a function call on an aggregate root</li>
+<li>The function call on the aggregate root can send events (state changes in the domain)</li>
+<li>The aggregate roots consume the published events (i.e. changes are applied to the respective domain entities)</li>
+<li>The event handlers consume the published events (i.e. changes are applied to the respective viewmodels)</li>
+</ul>
+<p></p>
+<h2>Definitions<br /></h2>
+<h3>Command</h3>
+<p>A Command represents a request to change the domain state.</p>
+<p>A Command is consumed once by a Command Handler.</p>
+<p>Command names should always be in the imperative (i.e. CancelOrder )</p>
+<h3>(Domain) event</h3>
+<p>An event represents a state change in the domain.</p>
+<p>Events are handled by AR&#8217;s, Sagas and Event Handlers</p>
+<p>Event names should always be in the past tense (i.e. OrderCanceled )</p>
+<h3>Aggregate root (AR)<br /></h3>
+<p>DDD definition +</p>
+<p>An AR contains public functions which can publish Events. (these events happen in a single transactional boundary - think unit of work)</p>
+<p>An AR can also consume Events which are about itself.</p>
+<h3>Saga</h3>
+<p>A saga consolidates Event information accross AR boundaries.</p>
+<p>A saga can raise Commands based on the consolidated events or a time event.</p>
+<p>A saga is considered a temporal object (i.e. limited lifetime)</p>
+<h3>Command Handler</h3>
+<p>A command handler converts a command into a function call on an AR by:</p>
+<ul>
+<li> Converting the command&#8217;s parameters into the target function&#8217;s parameters, sometimes using the viewmodel to convert and/or extend the command parameters into parameters understandable by the AR.</li>
+<li>Calling the function on the AR.</li>
+<li>The function will emit zero or more events</li>
+</ul>
+<h3>Event handler</h3>
+<p>An event handler applies the state changes to it&#8217;s respective target (i.e. a viewmodel or an AR)</p>
+<h3>Viewmodel<br /></h3>
+<p>A view model is a representation of the UI data using a first normal form datamodel</p>
+<h1>How to handle business logic which crosses multiple AR boundaries ?<br /></h1>
+<p>If you need to process some logic which crosses multiple AR boundaries, you can either create a new AR which references those AR&#8217;s, or create a Saga which consolidates events about these ARs.</p>
+<p>To know which one to create, you need to know your domain expert&#8217;s opinion on the transition process. If the domain expert only cares about the endresult, you should use a saga. If your domain expert needs to be exposed to the transformation process in itself, then you should use an AR.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

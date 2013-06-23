@@ -1,0 +1,177 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Continuous thinking: why a 4GL should be avoided to start a new app - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="Continuous Thinking: Why a 4GL Should Be Avoided to Start a New App Introduction
+As an avid member of the DDD/CQRS discussion group, somebody asked &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2011/05/30/continuous-thinking-why-a-4gl-should-be-avoided-to-start-a-new-app/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Continuous Thinking: Why a 4GL Should Be Avoided to Start a New App</h1>
+	<div class="entry-content" itemprop="articleBody"><h3>Introduction<br /></h3>
+<p>As an avid member of the <a href="https://groups.google.com/forum/?hl=en#!forum/dddcqrs" target="_blank">DDD/CQRS discussion group</a>, somebody <a href="https://groups.google.com/d/msg/dddcqrs/ymg615XWCr0/gEgIts8bwjcJ" target="_blank">asked me what I meant with the following sentence</a>:</p>
+<pre><em>it looks a lot like a 4GL, and I assume we all know what that means...</em></pre>
+<p>Since I tend to think my answer formulated my ideas pretty well, I decided to post it on my blog too; I hope this might help some of you to avoid the 4GL pitfall&#8230;</p>
+<p>&nbsp;</p>
+<h3>Why should a business avoid writing apps in a 4GL ?</h3>
+<p>This was <a href="https://groups.google.com/d/msg/dddcqrs/ymg615XWCr0/beX7AxPlE1QJ" target="_blank">my answer</a>:</p>
+<p style="padding-left: 30px;"><em>WARNING: This might be a bit off-topic here, but I do want to clarify my **PERSONAL** opinion on 4GLs.<br /><br />[AD  MODE]As an independent consultant one of my key specializations is  brownfield migrations (together with non-communicating teams).[/AD MODE]<br /><br />Having  seen numerous examples, I think most of these homegrown x-year old+  MSAccess or similar applications are usually the perfect example of why  one should respect the SOLID principles. <br /><br />Here a typical evolution of a 4GL app:<br />There  is a business need for a small piece of software (think CRUD client  list), which does not need to do a lot. So someone drags and drops a  CRUD app together in a few hours/days/weeks depending on the scope&#8230;  Everybody is thrilled and excited about the custom piece of software,  which was developed in a fraction of the time, it is custom  built,cheaper,[Add the obvious here],&#8230;.<br /><br />Unfortunately, an app  is bound to grow more complicated as the business is evolving, f.e.  &#8220;Could you add products/quotes/&#8221;,&#8221;except for this and that this should  do that&#8221;, &#8230;<br />After some time, such an app is also bound to have &#8220;user hacks&#8221; (i.e. changing a field&#8217;s  meaning to work around a limitation for example, because it would cost to much to implement the change), so when this specific  coworker is on holiday nobody knows how to work with the app&#8230;<br />Educating new users/software devs might also become quite a steep hill to climb.<br /><br />I  usually get consulted by the time the app has been growing for about 3  to 10 years into an unmaintainable behemoth with a massive amount of  implicit business knowledge in it, where a single change might break  everything or take numerous days to implement, <br /><br />Unfortunately, there is no nearby river available to clean this kind of Augeas stable.<br />I  do not intend to describe the whole process we need to go through, but I  can assure you it takes a lot of time/effort/resources, and requires  quite a lot of engagement from both the management and the software  team.<br />A business in this kind of situation needs to handle this  problem, better sooner then later, because it is bound to constrain the  business growth/evolution sooner or later.<br /><br />[sarcastic mode]<br />If you do decide to implement an app in a 4GL, please send me your coordinates, and I will give you a call in about a year or 3<br />[/sarcastic mode]</em></p>
+<h3><br /></h3>
+<h3>Conclusion</h3>
+<p>In my honest opinion,<strong> a 4GL should never be used to implement business logic</strong>; if you do break this rule, you are bound to get into problematic situations sooner or later; in case you do decide on using a 4GL, I would stongly advise to use it<strong> only for the front-end</strong>, and respect the <a href="http://en.wikipedia.org/wiki/Solid_%28object-oriented_design%29" target="_blank">SOLID</a> principles.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rant : Your abomination is my clever hack - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="Rant : Your Abomination Is My Clever Hack When I read the article from OdeToCode about the abuse of a programming language to create shortcuts, I &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2009/12/02/rant-your-abomination-is-my-clever-hack/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Rant : Your Abomination Is My Clever Hack</h1>
+	<div class="entry-content" itemprop="articleBody"><p>When I read the <a href="http://odetocode.com/Blogs/scott/archive/2009/11/30/your-abomination-is-my-clever-hack.aspx" target="_blank">article from OdeToCode about the abuse of a programming language to create shortcuts</a>, I felt the need to respond.</p>
+<h3>What is it about ?</h3>
+<p>Simply stated, it is about using some clever tricks to make it easier for the developer to reach his goal. The example was a stackoverflow post : <a href="http://stackoverflow.com/questions/1718037/abuse-of-c-lambda-expressions-or-syntax-brilliance">Abuse of C# lambda expressions or Syntax brilliance? </a></p>
+<p>Which discusses code that looks like this :</p>
+<p><div class="code">
+</p>
+<p>.Attributes(style =&gt; <span class="str">&#8220;width:100%&#8221;</span>)</p>
+<p></div></p>
+<h3>What is the issue here ?</h3>
+<p>The issue was that the reaction of the c# language designers. They said it was unacceptable to use such a shortcut, since it was not originally intended in the language design. According to them, one should never use such a construct. I firmly disagree&#8230;</p>
+<h3>Why should one be allowed to abuse a development language ?<br /></h3>
+<p>Simply stated : because you can. Every single thing that can help a developer to make cleaner/safer/better code (in his/her opinion) should be allowed. Why do we develop most of our applications in c#/java/ruby/PHP and not in assembly ? Because using these languages is considered cleaner/safer/better then using assembly. So while the original language designers might not like the idea, the hacks provide an extra cleaner/safer/better way to address a certain implementation subdomain. After all, the language is there as an intermediate between the developer and the hardware, and anything that allows better communication between the developer and the hardware, should be considered a plus&#8230; Which brings us to our next point of attention.</p>
+<h3>Who is saying that the approach you use here is cleaner/safer/better ?<br /></h3>
+<p>Actually : nobody. That is something that you need to find out yourself. While some people might like to use the shown constuct, others might like the more verbose way of expressing things. Most of the time, these shortcuts are there as an alternative to the &#8220;common&#8221; way to do something. In most cases, the fact whether you like or dislike something is based on your background/knowledge/reference frame . <br />The fact that the alternative was built means that somebody had the intention of providing a better/safer/cleaner way of doing something. Whether you agree or disagree with this person is completely up to you&#8230; (Although I must admit that I certainly agree with this person). If you look at the dynamicobject feature (another heavy point of discussion), then you might see that this actually does something simular as the shortcut used here, so the language development team is actually doing the same.</p>
+<p>Please note that it does not stop here; some people found the original c#/vb.net language to constraining, so they <a href="http://boo.codehaus.org/" target="_blank">developed their own</a>, including <a href="http://boo.codehaus.org/BooManifesto.pdf" target="_blank">a manifest</a>.</p>
+<p>So, to conclude, if you think you can make your own life easier by using certain &#8216;abusive&#8217; constructs : please do !!!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

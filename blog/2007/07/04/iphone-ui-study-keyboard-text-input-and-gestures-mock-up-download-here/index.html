@@ -1,0 +1,224 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IPhone UI study : keyboard text input and gestures mock up - download here - Tom's ramblings</title>
+	<meta name="author" content="Tom Janssens">
+
+	
+	<meta name="description" content="IPhone UI Study : Keyboard Text Input and Gestures Mock Up - Download Here Updated !!!
+Somebody in&nbsp;stated in a&nbsp;comment&nbsp;he got an &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://tojans.github.io/blog/2007/07/04/iphone-ui-study-keyboard-text-input-and-gestures-mock-up-download-here/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("tom@corebvba.be") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Tom's ramblings</a></h1>
+  
+    <p class="subtitle">Random opinionated blurbs</p>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About Tom</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    <p>Tom builds software and helps organisations to get better at building software.</p>
+
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/tojans" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/tojans" title="GitHub">GitHub</a>
+		
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/tomjanssens">LinkedIn</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">IPhone UI Study : Keyboard Text Input and Gestures Mock Up - Download Here</h1>
+	<div class="entry-content" itemprop="articleBody"><p>
+<strong>Updated !!!<br />
+</strong><strong>Somebody in&nbsp;stated in a&nbsp;comment&nbsp;he got an exception. I finally found the cause of it, and updated the application. Download the new version below, and be sure to refresh your browser cache</strong> 
+</p>
+<p>
+While looking at a few you tube videos about the iPhone, especially regarding the keyboard/text input, I was thinking : hey, why wouldn&#39;t&nbsp;I try to replicate the iPhone UI behavior ?&nbsp;I don&#39;t think it&nbsp;&nbsp;should be that hard &#8230; 
+</p>
+<p>
+Being able to use your fingers on a PDA instead of a stylus would improve the usability of handhelds a lot. 
+</p>
+<p>
+So yesterday I started developing, and after a few hours I had basic gesture recognition, and I got a few ideas on how to do the keyboard mapping. 
+</p>
+<p>
+Finally this is the result : 
+</p>
+<p>
+<img src="/blog/content/binary/IphoneMockup.GIF" border="0" alt="" width="28" height="30" /> 
+</p>
+<p>
+The demo mainly consists of two parts : 
+</p>
+<p>
+The gestures : 
+</p>
+<ul>
+	<li>Draw a gesture in the designated area. </li>
+	<li>Define a name in the text box and press the &#39;Add&#8230;&#39; button to add a gesture to the list </li>
+	<li>Every time you draw a gesture the closest match to the registered gestions will be visible under &#39;Last recognized gesture&#39;</li>
+</ul>
+<p>
+The text input : 
+</p>
+<ul>
+	<li>Click on the buttons to form a word as quick as you can.&nbsp;For most larger words you do not need a lot of precision while typing. </li>
+	<li>When the selected word in the list box is OK press &lt;Space&gt; or &lt;Enter&gt; </li>
+	<li>In the example above I wanted to&nbsp;type the word <strong>&quot;STARTED&quot;</strong>, but i missed a few buttons. Still, the algorithm can figure out that&nbsp;while&nbsp;I typed&nbsp;<strong>&quot;QTATTEX&quot;</strong> I actually meant started. </li>
+	<li>Click once on the list box with suggestions to select the next item in the list. </li>
+	<li>If you want to select the literal text (bottom left), just click on it. The literal will be added to your text. </li>
+	<li>Press &lt;CLR&gt; to re-enter a word.</li>
+</ul>
+<p>
+You can download the demo here : 
+</p>
+<p>
+<a href="http://www.corebvba.be/blog/content/binary/IphoneMockup1.zip">IphoneMockup1.zip (399,67 KB)</a>&nbsp;<br />
+<br />
+<u>New version on 2007/7/5 !!&nbsp;<br />
+</u>- fixed the Unhandled exception when a gesture exists of a single point click. 
+</p>
+<p>
+This demo runs on windows/.NET 2.0, and the supported language is English only atm.<br />
+If I manage to find a pocketpc I will try to port it to the compact framework. 
+</p>
+<p>
+Please let me know what you think of this application by posting a comment. 
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Tom Janssens -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'tojansramblings';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-41936060-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>
