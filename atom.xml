@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Tom's ramblings]]></title>
-  <link href="http://tojans.github.io/atom.xml" rel="self"/>
-  <link href="http://tojans.github.io/"/>
-  <updated>2013-06-23T12:26:40+02:00</updated>
-  <id>http://tojans.github.io/</id>
+  <link href="http://ToJans.github.io/atom.xml" rel="self"/>
+  <link href="http://ToJans.github.io/"/>
+  <updated>2013-06-24T09:47:04+02:00</updated>
+  <id>http://ToJans.github.io/</id>
   <author>
     <name><![CDATA[Tom Janssens]]></name>
     <email><![CDATA[tom@corebvba.be]]></email>
@@ -14,10 +14,23 @@
 
   
   <entry>
+    <title type="html"><![CDATA[DDD in a tweet]]></title>
+    <link href="http://ToJans.github.io/blog/2013/06/24/ddd-in-a-tweet/"/>
+    <updated>2013-06-24T09:28:00+02:00</updated>
+    <id>http://ToJans.github.io/blog/2013/06/24/ddd-in-a-tweet</id>
+    <content type="html"><![CDATA[<blockquote class="twitter-tweet"><p>The essence of DDD: make the implicit explicit (language, boundaries, code) and evolve your model so it matches the domain /cc <a href="https://twitter.com/julielerman">@julielerman</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/348887983283380224">June 23, 2013</a></blockquote>
+
+
+<script async src="http://ToJans.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Blogging: less is more and my name is my brand]]></title>
-    <link href="http://tojans.github.io/blog/2013/06/23/blogging-less-is-more-and-my-name-is-my-brand/"/>
+    <link href="http://ToJans.github.io/blog/2013/06/23/blogging-less-is-more-and-my-name-is-my-brand/"/>
     <updated>2013-06-23T10:50:00+02:00</updated>
-    <id>http://tojans.github.io/blog/2013/06/23/blogging-less-is-more-and-my-name-is-my-brand</id>
+    <id>http://ToJans.github.io/blog/2013/06/23/blogging-less-is-more-and-my-name-is-my-brand</id>
     <content type="html"><![CDATA[<h3>Introduction</h3>
 
 <p>It has been about 10 years ago, since I opted for a blogging platform called <a href="http://www.dotnetblogengine.net/">BlogEngine.Net</a>, which was &ndash; at the that moment -<br/>
@@ -98,16 +111,16 @@ again with a motivational quote:</p>
   
   <entry>
     <title type="html"><![CDATA[Open brief aan de Belgische overheid: hoe los je de crisis op]]></title>
-    <link href="http://tojans.github.io/blog/2013/06/11/open-brief-aan-de-belgische-overheid-hoe-los-je-de-crisis-op/"/>
+    <link href="http://ToJans.github.io/blog/2013/06/11/open-brief-aan-de-belgische-overheid-hoe-los-je-de-crisis-op/"/>
     <updated>2013-06-11T00:00:00+02:00</updated>
-    <id>http://tojans.github.io/blog/2013/06/11/open-brief-aan-de-belgische-overheid-hoe-los-je-de-crisis-op</id>
+    <id>http://ToJans.github.io/blog/2013/06/11/open-brief-aan-de-belgische-overheid-hoe-los-je-de-crisis-op</id>
     <content type="html"><![CDATA[<h3>Introductie</h3>
 <p>Ik zag net een tweet verschijnen van <a href="http://www.unizo.be/blog_organisatie/" target="_blank">Karel Van Eetvelt</a> - de CEO van UNIZO -, dat het niet goed gaat met de Vlaamse werkgevers</p>
 <blockquote class="twitter-tweet" lang="nl">
 <p>Zware alarmkreet Vlaamse werkgevers en zelfstandigen. Economische crisis, belastingdrukverhoging en brutale controles tasten vertrouwen aan.</p>
 &mdash; Karel Van Eetvelt (@karelvaneetvelt) <a href="https://twitter.com/karelvaneetvelt/status/344357431364681730">11 juni 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>Eerlijk gezegd is dit niet de eerste keer dat ik dit hoor, maar ik heb de indruk dat de crisis nu pas nog maar echt aan het beginnen is&#8230; Normaal gezien zou een overheid hier dan moeten ingrijpen in de mate van het mogelijke, maar jammer genoeg worden mijns inziens in Belgi&euml;/Vlaanderen steeds de verkeerde beslissingen genomen door de overheid.</p>
 <!-- more -->
@@ -121,7 +134,7 @@ again with a motivational quote:</p>
 <p>@<a href="https://twitter.com/karelvaneetvelt">karelvaneetvelt</a> Verminder subsidies/&#8221;specialekes&#8221; en verlaag de algemene lasten; op die manier betaalt *iedereen* dezelfde bijdrages.</p>
 &mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/344361795106004992">11 juni 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>Het is heel eenvoudig: het systeem is zodanig ingewikkeld, dat het merendeel van de subsidies en lastenverlagingen speciale expertise vereist, waarvoor je als klein bedrijf de kennis niet in huis hebt, of de investering niet durft te doen. Grote bedrijven hebben wel de ruimte om alles uit te pluizen, gezien de grootte-orde van het resultaat</p>
 <p>Waarom wordt in Belgi&euml; belastingsondtuiking als een nationale sport aanzien? Omdat de belastingen zo hoog zijn tiens. Veronderstel dat we - kort door de bocht - alle subsidies en lastenverlagingen afschaffen, maar de BTW en vennootschapsbelasting beperken tot 6%. Denken jullie dan dat het merendeel van de mensen nog de moeite zal doen om belastingen te ontduiken? Ik eerlijk gezegd niet. Deze vereenvoudiging brengt ons bij het volgende voordeel:</p>
@@ -130,14 +143,14 @@ again with a motivational quote:</p>
 <p>@<a href="https://twitter.com/karelvaneetvelt">karelvaneetvelt</a> minder subsidies &amp; specialekes = mogelijkheid tot decimeren van overheidsinstanties =&gt; terug besparingen.</p>
 &mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/344362090800226304">11 juni 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>Als alle subsidies en belastingsverminderingen wegvallen, kunnen we dan waarschijnlijk ook het aantal mensen dat voor de overheid werkt decimeren, en werken we bijgevolg ook al een groot deel van het &#8220;Griekse symptoom&#8221; weg.</p>
 <blockquote class="twitter-tweet" lang="nl">
 <p>@<a href="https://twitter.com/karelvaneetvelt">karelvaneetvelt</a> de overheidsinstanties zitten nog in de jaren 80, terwijl het bedrijfsleven alsmaar flexibeler &amp; efficienter is geworden.</p>
 &mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/344362757065433088">11 juni 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>Denk maar aan de vele sketches op televisie, zoals de schrijnend realistische: <a href="http://www.zideo.nl/playzideo/6c4957556e315a74" target="_blank">&#8220;wat als zelfstandigen ambtenaren waren&#8221;</a>.</p>
 <p>Dit kost geld; onnoemelijk veel geld, en is gewoon niet meer van deze tijd; fix it ASAP!</p>
@@ -145,7 +158,7 @@ again with a motivational quote:</p>
 <p>@<a href="https://twitter.com/karelvaneetvelt">karelvaneetvelt</a> opteer niet alleen voor administratieve vereenvoudiging, bv: voor elke wet die er bij komt moeten er twee afgeschaft worden</p>
 &mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/344362928314658816">11 juni 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>Het systeem is gewoon v&eacute;&eacute;l te ingewikkeld; we hebben niet alleen administratieve vereenvoudiging nodig, maar ook fiscale vereenvoudiging, en dan zwijgen we nog over het feit dat we gewesten, provincies, en God weet nog hoeveel verschillende niet-communicerende en overhead-cre&euml;rende instanties hebben.</p>
 <h3>Tot slot</h3>
@@ -158,9 +171,9 @@ again with a motivational quote:</p>
   
   <entry>
     <title type="html"><![CDATA[Installing and compiling Elixir and the Dynamo web framework on Windows]]></title>
-    <link href="http://tojans.github.io/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/"/>
+    <link href="http://ToJans.github.io/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/"/>
     <updated>2013-06-09T00:00:00+02:00</updated>
-    <id>http://tojans.github.io/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows</id>
+    <id>http://ToJans.github.io/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows</id>
     <content type="html"><![CDATA[<h3>Introduction</h3>
 <p>People following me on twitter noticed I got entangled in yet another new language for the Erlang/BEAM VM:&nbsp;</p>
 <h3><img style="font-size: 10px;" src="http://www.corebvba.be/blog/image.axd?picture=2013%2f6%2felixir-logo.png" alt="" /></h3>
@@ -206,9 +219,9 @@ again with a motivational quote:</p>
   
   <entry>
     <title type="html"><![CDATA[How to hire a senior developer]]></title>
-    <link href="http://tojans.github.io/blog/2013/05/30/how-to-hire-a-senior-developer/"/>
+    <link href="http://ToJans.github.io/blog/2013/05/30/how-to-hire-a-senior-developer/"/>
     <updated>2013-05-30T00:00:00+02:00</updated>
-    <id>http://tojans.github.io/blog/2013/05/30/how-to-hire-a-senior-developer</id>
+    <id>http://ToJans.github.io/blog/2013/05/30/how-to-hire-a-senior-developer</id>
     <content type="html"><![CDATA[<h3>Introduction</h3>
 <p>A little while ago I wrote a post <a href="http://www.corebvba.be/blog/post/Fallacies-of-the-tech-recruitment-process.aspx">the fallacies of the tech recruitment process</a>. While it is nice to point out what is wrong, I never actually provided the proper way to find out if a senior developer might be experienced enough and the right fit for your company, so this time I decided to put my money where my mouth is, and tell you how to hire a senior developer.</p>
 <h3>Why hire a &#8220;senior developer&#8221; and what is a senior developer exactly</h3>
@@ -292,9 +305,9 @@ again with a motivational quote:</p>
   
   <entry>
     <title type="html"><![CDATA[Erlang Camp Amsterdam: why you should follow it and getting started with Erlang and Axiom]]></title>
-    <link href="http://tojans.github.io/blog/2013/05/17/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom/"/>
+    <link href="http://ToJans.github.io/blog/2013/05/17/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom/"/>
     <updated>2013-05-17T00:00:00+02:00</updated>
-    <id>http://tojans.github.io/blog/2013/05/17/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom</id>
+    <id>http://ToJans.github.io/blog/2013/05/17/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom</id>
     <content type="html"><![CDATA[<h2>Introduction</h2>
 <p>The last two days of August there is a <a href="http://www.erlangcamp.com/amsterdam">2 day Erlang course in Amsterdam</a>. One of the most incredible things, is that there is a low cost offer sponsored by <a href="http://www.spilgames.com/">Spil games</a> that reduces the price to 55&euro; for both days; talk about a steal!!</p>
 <h2>First things first: why should you follow a camp on Erlang?</h2>
@@ -495,23 +508,23 @@ Eshell V5.10.1  (abort with ^G)
   
   <entry>
     <title type="html"><![CDATA[IDDDtour 2013 Belgium - an immersive experience]]></title>
-    <link href="http://tojans.github.io/blog/2013/05/01/idddtour-2013-belgium-an-immersive-experience/"/>
+    <link href="http://ToJans.github.io/blog/2013/05/01/idddtour-2013-belgium-an-immersive-experience/"/>
     <updated>2013-05-01T00:00:00+02:00</updated>
-    <id>http://tojans.github.io/blog/2013/05/01/idddtour-2013-belgium-an-immersive-experience</id>
+    <id>http://ToJans.github.io/blog/2013/05/01/idddtour-2013-belgium-an-immersive-experience</id>
     <content type="html"><![CDATA[<h3>Introduction: what &amp; how?</h3>
 <p><a href="http://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577" target="_blank">&#8220;Implementing Domain Driven Design&#8221;</a> is a book written by <a href="http://vaughnvernon.co/" target="_blank">Vaughn Vernon</a>, and you can consider it a practical guide to <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215" target="_blank">the blue book</a> - a lot of people consider the blue book to be used as a reference, but it takes some persistence to read it -. Vaughn tried to solve exactly that problem with his book&#8230;</p>
 <blockquote class="twitter-tweet" lang="nl">
 <p>&#8220;implementing domain driven design&#8221; by @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a> has arrived <a href="https://twitter.com/search/%23YesYesYes">#YesYesYes</a> <a href="https://twitter.com/search/%23DDD">#DDD</a> <a href="https://twitter.com/search/%23IDDD">#IDDD</a> <a title="http://twitter.com/ToJans/status/301755160173105152/photo/1" href="http://t.co/IztEyMa5">twitter.com/ToJans/status/&hellip;</a></p>
 &mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/301755160173105152">13 februari 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>A little while ago, Vaughn Vernon was tweeting about how had given a free course about his book &#8220;Implementing domain driven design&#8221; while visiting Bogota, Columbia. This course was given for free to help start-ups there.</p>
 <blockquote class="twitter-tweet" lang="nl">
 <p>My free one-day <a href="https://twitter.com/search/%23IDDD">#IDDD</a> Tutorial will be held in <a href="https://twitter.com/search/%23Bogota">#Bogota</a> <a href="https://twitter.com/search/%23Colombia">#Colombia</a> from 8:30am-6pm Monday Oct 8 at @<a href="https://twitter.com/hubbog">hubbog</a> Calle 98 # 18-71 Second Floor.</p>
 &mdash; Vaughn Vernon (@VaughnVernon) <a href="https://twitter.com/VaughnVernon/status/254081465153880064">5 oktober 2012</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>In the next few hours after this tweet, an idea emerged on twitter about a concept called the IDDDtour, where Vaughn would be teaching his book to larger classes and doing a tour through Europe, but at a fraction of the cost. As I am somebody who is more of a head first kind of guy, I decided to take ownership and figure out a way to make this a real thing&#8230;</p>
 <!--more-->
@@ -522,7 +535,7 @@ Eshell V5.10.1  (abort with ^G)
 <p>Please RT the new <a href="https://twitter.com/search/%23IDDD">#IDDD</a> Google Group: <a title="https://groups.google.com/forum/?fromgroups#!forum/iddd" href="https://t.co/RIgwaU2R">groups.google.com/forum/?fromgro&hellip;</a></p>
 &mdash; Vaughn Vernon (@VaughnVernon) <a href="https://twitter.com/VaughnVernon/status/254296338433449985">5 oktober 2012</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>&#8230; And the response was quite big: <a href="https://groups.google.com/forum/?hl=nl&amp;fromgroups=#!topic/iddd/qQ9MIQ0p7FE" target="_blank">we had 68 messages in the first thread</a>, and people wanted to organize IDDD classes all over Europe. But reading through all these posts, I noticed that this whole &#8220;organizing using a discussion board&#8221; was not really working, and as most of the people interested in DDD would probably be experienced in using Github, I decided to set up a repository there, and use the wiki and issues from github instead. I setup<a href="https://github.com/ToJans/IDDD-Europe-tour-2013/wiki/Home/e0804db9804fb0e947b8f9da9782cc8b42ed9e5d" target="_blank"> an initial landing page with some guidelines</a>, posted <a href="https://groups.google.com/d/msg/iddd/chX0Wz_IkyQ/lhsTDjenMdoJ" target="_blank">a small message</a> and tweeted about it.</p>
 <p>&nbsp;</p>
@@ -530,7 +543,7 @@ Eshell V5.10.1  (abort with ^G)
 <p>IDDD Europe 2013 tour: Let&#8217;s get organized !! <a title="https://github.com/ToJans/IDDD-Europe-tour-2013/wiki" href="https://t.co/YgQfmQwn">github.com/ToJans/IDDD-Eu&hellip;</a> /cc @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a> @<a href="https://twitter.com/abdullin">abdullin</a></p>
 &mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/255233611115159552">8 oktober 2012</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>&nbsp;</p>
 <p>The wiki turned out to work pretty good, and after only two days, we had reached a consensus about 4 locations in Europe, all with a self-organizing team!!!</p>
@@ -538,7 +551,7 @@ Eshell V5.10.1  (abort with ^G)
 <p>IDDD European tour April 2013 countries are finalized:Belgium / Poland / Hungary - <a title="https://groups.google.com/d/msg/iddd/3qA3rOA5DXE/aL-P_UXPOkwJ" href="https://t.co/NUZlQvld">groups.google.com/d/msg/iddd/3qA&hellip;</a> <a href="https://twitter.com/search/%23DDD">#DDD</a> /cc @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a> @<a href="https://twitter.com/abdullin">abdullin</a></p>
 &mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/255952084686491648">10 oktober 2012</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p><a href="https://github.com/ToJans/IDDD-Europe-tour-2013/issues/2">I also opened up an issue on the github repo</a>, to find out whether somebody would be willing to sponsor the venue and food in Belgium in exchange for free attendance, and the miracle happened: shortly after opening the issue <a href="https://twitter.com/NordinHaouari" target="_blank">Nordin</a>&nbsp;from <a href="http://www.cegeka.be/" target="_blank">CeGeKa</a>&nbsp;replied that they would be willing to sponsor&#8230; I assumed opening an issue would not have worked, but as we all know: <em>in IT assumptions should not be considered valid or invalid before they are verified</em>.</p>
 <p><span style="font-size: 10px;">So now it was time to transfer the ownership to Vaughn , in order for him to be able to organize everything else. He setup <a href="http://idddtour.com/" target="_blank">a professional site</a>, and we were good to go&#8230;</span></p>
@@ -552,7 +565,7 @@ Eshell V5.10.1  (abort with ^G)
 <p>Full house at <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a>. Looking forward to a lot of discussions with so many passionate people over the next days. <a title="http://twitter.com/Heimeshoff/status/326258619794485248/photo/1" href="http://t.co/XLFkgJaWRK">twitter.com/Heimeshoff/sta&hellip;</a></p>
 &mdash; Marco Heimeshoff (@Heimeshoff) <a href="https://twitter.com/Heimeshoff/status/326258619794485248">22 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>Still standing there, Vaughn interrupted the class, and asked whether I was Tom, as we had never met in real life before&#8230; So I replied that I was, apologized for being late in front of the whole class, so we could continue with the course. Well, that did have one advantage: everybody now knew who I was, even though arriving late for an event you co-organized is probably not the best first impression somebody can provide ;-) .</p>
 <p>What followed was a really interesting journey about context mapping, bounded contexts and other things mentioned in the book (Yes, buy the book, you should, really). Everybody was soaking up the stories, and all things considered, the first day of the course everybody was probably still getting used to the big group of students.</p>
@@ -560,7 +573,7 @@ Eshell V5.10.1  (abort with ^G)
 <p>At @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a>&#8217;s <a href="https://twitter.com/search/%23iddd">#iddd</a> workshop in Leuven. Day 1: strategic design <a title="http://twitter.com/JeroenSoeters/status/326230755086843904/photo/1" href="http://t.co/h0iBCbhTdT">twitter.com/JeroenSoeters/&hellip;</a></p>
 &mdash; Jeroen Soeters (@JeroenSoeters) <a href="https://twitter.com/JeroenSoeters/status/326230755086843904">22 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>What I consider a very good thing, is that a lot of interaction started to emerge: people were sharing stories and getting acquainted with each other during the breaks. There was a healthy buzz there, and people who know me in real life can probably understand why I was thrilled about that.</p>
 <p>We did not have any evening sessions in the first day, so we finished before dinner.</p>
@@ -575,7 +588,7 @@ Eshell V5.10.1  (abort with ^G)
 <p>@<a href="https://twitter.com/yreynhout">yreynhout</a> doing a talk at <a href="https://twitter.com/search/%23idddtour">#idddtour</a> Belgium <a title="http://twitter.com/tjaskula/status/326758888030486528/photo/1" href="http://t.co/cJFmoIGtmT">twitter.com/tjaskula/statu&hellip;</a></p>
 &mdash; Thomas Jaskula (@tjaskula) <a href="https://twitter.com/tjaskula/status/326758888030486528">23 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>After the last presentation, we met up once again in the bar of the hotel, and we actually spent the whole night there&#8230; I think it was probably around 3.00am&#8217;ish here before I got back to the hotel, let&#8217;s hope this pattern does not interpolate in a linear fashion ;-) !</p>
 <h3>Day 3: Let&#8217;s keep on track folks !!!</h3>
@@ -586,7 +599,7 @@ Eshell V5.10.1  (abort with ^G)
 <p>@<a href="https://twitter.com/tojans">tojans</a> doing his thing <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> &#8230; Fantastic! <a title="http://twitter.com/yreynhout/status/327100138000613376/photo/1" href="http://t.co/SYOQs3sCOu">twitter.com/yreynhout/stat&hellip;</a></p>
 &mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327100138000613376">24 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>I received a tremendous amount of tips from everyone during the talk, but there was one person who really popped in particular, and added a lot of practical tips and shared his experience: <a href="https://twitter.com/TimSchraepen" target="_blank">Tim Schraepen</a>. So, thanks Tim, for all the extra info !!!.</p>
 <p>Feedback after the talk was also great:&#8221;</p>
@@ -594,13 +607,13 @@ Eshell V5.10.1  (abort with ^G)
 <p>. @<a href="https://twitter.com/tojans">tojans</a> is not afraid to show his failed experiments to the world, and it&#8217;sbeautiful. #<a href="https://twitter.com/search/%23IDDDtour">#IDDDtour</a></p>
 &mdash; Mathias Verraes (@mathiasverraes) <a href="https://twitter.com/mathiasverraes/status/327117798662873088">24 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <blockquote class="twitter-tweet" lang="nl">
 <p>Really enjoyable presentation by @<a href="https://twitter.com/tojans">tojans</a> :-) <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a></p>
 &mdash; ziobrando (@ziobrando) <a href="https://twitter.com/ziobrando/status/327117778060455938">24 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>Also, people came to me during the next day, saying my talk actually triggered them to start tweeting and/or blogging again or for the first time, which is exaclty what I was trying to achieve with my talk.</p>
 <p>The reward for &#8220;best compliment during feedback&#8221; goes to <a href="http://ziobrando.blogspot.be/" target="_blank">Alberto Brandolini</a> - yes, I became a fanboy during the IDDD days, and was constantly bugging him with questions and trying to peek in his mind -, who actually told me my talk was &#8220;An immersive experience&#8221;!!</p>
@@ -612,7 +625,7 @@ Eshell V5.10.1  (abort with ^G)
 <p><a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> is full of suprises :-) tomorrow I will co-talk with @<a href="https://twitter.com/tojans">tojans</a> about cqrs. I was drunk and he forced me into it&#8230; ;) enjoy!</p>
 &mdash; Marco Heimeshoff (@Heimeshoff) <a href="https://twitter.com/Heimeshoff/status/327189597010395136">24 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <h3>Day 4: wrapping it up</h3>
 <p>So, on with the final day&#8230; Even though some people looked a bit like &#8220;the walking dead&#8221; *cough* Jeroen *cough*, some bottles of sparkling water and a few litres of coffee managed to get us back on track&#8230; First Vaughn give us some interesting final insights, and then up next was <a href="https://twitter.com/ziobrando" target="_blank">Alberto</a>&nbsp;with a workshop called &#8220;Event based modeling&#8221;.</p>
@@ -621,7 +634,7 @@ Eshell V5.10.1  (abort with ^G)
 <p>Notice the Domain Expert? - @<a href="https://twitter.com/ziobrando">ziobrando</a> <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> <a title="http://twitter.com/yreynhout/status/327352522257862656/photo/1" href="http://t.co/O5nnwXizay">twitter.com/yreynhout/stat&hellip;</a></p>
 &mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327352522257862656">25 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>I think it is also safe to say he is a really smart and creative guy that manages to think on a higher level, but translate it in a way that everybody understands it.</p>
 <p>Next to this his cartoons are also really great ;-) .</p>
@@ -630,14 +643,14 @@ Eshell V5.10.1  (abort with ^G)
 <p>@<a href="https://twitter.com/tjaskula">tjaskula</a> doing his lightning talk! <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> <a title="http://twitter.com/yreynhout/status/327333076223029248/photo/1" href="http://t.co/AoG6yuYqAf">twitter.com/yreynhout/stat&hellip;</a></p>
 &mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327333076223029248">25 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>One of the things he said that really struck me was what he called the architecture 2011 effect:</p>
 <blockquote class="twitter-tweet" lang="nl">
 <p>. @<a href="https://twitter.com/tjaskula">tjaskula</a> in action &#8220;we created another layer to hide the layered crap we created the year before&#8221; <a href="https://twitter.com/search/%23awesomeness">#awesomeness</a> <a href="https://twitter.com/search/%23IDDDtour">#IDDDtour</a></p>
 &mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/327333358747123712">25 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>&nbsp;</p>
 <p>You can find his slides <a href="http://www.slideshare.net/tjaskula/leveraging-more-then-ddd-lite-in-the-startup-project" target="_blank">here</a>&#8230;</p>
@@ -646,14 +659,14 @@ Eshell V5.10.1  (abort with ^G)
 <p>@<a href="https://twitter.com/heimeshoff">heimeshoff</a> &amp; @<a href="https://twitter.com/tojans">tojans</a> demoing CQRS. <a title="http://twitter.com/yreynhout/status/327427029052039168/photo/1" href="http://t.co/VSUXoIxjRL">twitter.com/yreynhout/stat&hellip;</a></p>
 &mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327427029052039168">25 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>One quote that stuck me in particular:</p>
 <blockquote class="twitter-tweet" lang="nl">
 <p>&#8220;When it&#8217;s in the head of the user, it&#8217;s difficult to refactor.&#8221; via @<a href="https://twitter.com/heimeshoff">heimeshoff</a> <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a></p>
 &mdash; Mathias Verraes (@mathiasverraes) <a href="https://twitter.com/mathiasverraes/status/327424460191842304">25 april 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>After 4 days of this really intensive workshop, we decided to call it a day, and went for a final drink - once again on Marter&#8217;s square -, where I met some more people I had not actually seen or talked to before, my apologies. Once again interesting discussions emerged, and we finally wrapped it all up over - once again - a few beers.</p>
 <h3>Conclusion</h3>
@@ -665,9 +678,9 @@ Eshell V5.10.1  (abort with ^G)
   
   <entry>
     <title type="html"><![CDATA[Freedom: Learning stuff, doing consulting, aka the fun - and money balance]]></title>
-    <link href="http://tojans.github.io/blog/2013/03/30/freedom-learning-stuff-doing-consulting-aka-the-fun-and-money-balance/"/>
+    <link href="http://ToJans.github.io/blog/2013/03/30/freedom-learning-stuff-doing-consulting-aka-the-fun-and-money-balance/"/>
     <updated>2013-03-30T00:00:00+01:00</updated>
-    <id>http://tojans.github.io/blog/2013/03/30/freedom-learning-stuff-doing-consulting-aka-the-fun-and-money-balance</id>
+    <id>http://ToJans.github.io/blog/2013/03/30/freedom-learning-stuff-doing-consulting-aka-the-fun-and-money-balance</id>
     <content type="html"><![CDATA[<h3>Introduction</h3>
 <p>As I was wide awake at 5am this morning, and it was the end of the month, I decided to do some invoicing (while the Mrs. &amp; kids are still asleep ;) ).</p>
 <p>Because I had some time left, I decided to take a look at my stats&#8230; This invoice app was built about 10 years ago in MsAccess in a few days, and has not really changed a lot since then (except for some adjustments to allow certain billing specific extents; things like non-EU or VAT-exclusive stuff, as well as some automated payment reminder letters).</p>
@@ -797,9 +810,9 @@ Eshell V5.10.1  (abort with ^G)
   
   <entry>
     <title type="html"><![CDATA[Fixing corrupt downloads with your ISP]]></title>
-    <link href="http://tojans.github.io/blog/2013/03/17/fixing-corrupt-downloads-with-your-isp/"/>
+    <link href="http://ToJans.github.io/blog/2013/03/17/fixing-corrupt-downloads-with-your-isp/"/>
     <updated>2013-03-17T00:00:00+01:00</updated>
-    <id>http://tojans.github.io/blog/2013/03/17/fixing-corrupt-downloads-with-your-isp</id>
+    <id>http://ToJans.github.io/blog/2013/03/17/fixing-corrupt-downloads-with-your-isp</id>
     <content type="html"><![CDATA[<p>About 3 days ago my internet connection with telenet started being really slow, and gave me corrupted downloads if files were larger then a few megabytes. Every file I tried to download gave me corrupt files.</p>
 <p>As this problem appeared on 4 different PC&#8217;s simultaneously, I knew the problem was not related to a specific PC configuration.</p>
 <p>As one of my PC&#8217;s was wired (through a router), and that one was not working either, I decided to shortcut the router, and connect directly to the telenet router (without my own router), and that seemed to work.</p>
@@ -821,7 +834,7 @@ Eshell V5.10.1  (abort with ^G)
 <p>@<a href="https://twitter.com/tojans">tojans</a> @<a href="https://twitter.com/telenet">telenet</a> Why would they lower the MTU?</p>
 &mdash; Dave Van Even (@dvaneven) <a href="https://twitter.com/dvaneven/status/313271752220356608">17 maart 2013</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>For now my workaround works, but I will buy another router ASAP.</p>
 <h3>Update 2:</h3>
@@ -830,9 +843,9 @@ Eshell V5.10.1  (abort with ^G)
   
   <entry>
     <title type="html"><![CDATA[Opinion: TDD and startups - you are all wrong (or right)]]></title>
-    <link href="http://tojans.github.io/blog/2013/03/06/opinion-tdd-and-startups-you-are-all-wrong-%28or-right%29/"/>
+    <link href="http://ToJans.github.io/blog/2013/03/06/opinion-tdd-and-startups-you-are-all-wrong-%28or-right%29/"/>
     <updated>2013-03-06T00:00:00+01:00</updated>
-    <id>http://tojans.github.io/blog/2013/03/06/opinion-tdd-and-startups-you-are-all-wrong-(or-right)</id>
+    <id>http://ToJans.github.io/blog/2013/03/06/opinion-tdd-and-startups-you-are-all-wrong-(or-right)</id>
     <content type="html"><![CDATA[<h3>Introduction</h3>
 <p>There has been a lot of buzz lately about <a href="http://blog.8thlight.com/uncle-bob/2013/03/05/TheStartUpTrap.html" target="_blank">a post of Uncle Bob Martin</a>, who claims that skipping Test-driven design is the worst mistake you can make when in a startup. This generated a lot of yay-and-nays on the twitter sphere, with mostly black and white opinions. I think they might all be right, but miss one important distinction: you always need to formalize what you are working on&#8230;</p>
 <h3>&#8220;So what&#8221; - Miles Davis</h3>
@@ -866,9 +879,9 @@ Eshell V5.10.1  (abort with ^G)
   
   <entry>
     <title type="html"><![CDATA[An open letter to Mr. Murphy]]></title>
-    <link href="http://tojans.github.io/blog/2013/02/23/an-open-letter-to-mr.-murphy/"/>
+    <link href="http://ToJans.github.io/blog/2013/02/23/an-open-letter-to-mr.-murphy/"/>
     <updated>2013-02-23T00:00:00+01:00</updated>
-    <id>http://tojans.github.io/blog/2013/02/23/an-open-letter-to-mr.-murphy</id>
+    <id>http://ToJans.github.io/blog/2013/02/23/an-open-letter-to-mr.-murphy</id>
     <content type="html"><![CDATA[<p>&nbsp;</p>
 <p>Dear Mr. Murphy,</p>
 <p style="padding-left: 30px;"><strong><em>Pssssssssssssssssssssssssssshhhhhhhhhhhhhhhhhhhhhhhhtt !!!!</em></strong></p>
@@ -900,9 +913,9 @@ Eshell V5.10.1  (abort with ^G)
   
   <entry>
     <title type="html"><![CDATA[Saturday night 30 min brain dump - Luck]]></title>
-    <link href="http://tojans.github.io/blog/2013/02/02/saturday-night-30-min-brain-dump-luck/"/>
+    <link href="http://ToJans.github.io/blog/2013/02/02/saturday-night-30-min-brain-dump-luck/"/>
     <updated>2013-02-02T00:00:00+01:00</updated>
-    <id>http://tojans.github.io/blog/2013/02/02/saturday-night-30-min-brain-dump-luck</id>
+    <id>http://ToJans.github.io/blog/2013/02/02/saturday-night-30-min-brain-dump-luck</id>
     <content type="html"><![CDATA[<h3>Introduction</h3>
 <p>Sometimes you get lucky, and find a way where you can truely do the things you like in work&#8230; But why does luck always seem to be distributed unevenly, and does it always land with the same people&#8230;</p>
 <p>Here is a message for you: it does not! You can get lucky once by accident, but getting lucky multiple times seems to be quite impossible (not considering statistical anomylies).</p>
@@ -947,9 +960,9 @@ Eshell V5.10.1  (abort with ^G)
   
   <entry>
     <title type="html"><![CDATA[Simplified Feature Branching - Source control done right]]></title>
-    <link href="http://tojans.github.io/blog/2012/12/01/simplified-feature-branching-source-control-done-right/"/>
+    <link href="http://ToJans.github.io/blog/2012/12/01/simplified-feature-branching-source-control-done-right/"/>
     <updated>2012-12-01T00:00:00+01:00</updated>
-    <id>http://tojans.github.io/blog/2012/12/01/simplified-feature-branching-source-control-done-right</id>
+    <id>http://ToJans.github.io/blog/2012/12/01/simplified-feature-branching-source-control-done-right</id>
     <content type="html"><![CDATA[<h2>Introduction</h2>
 <p>As one does typically develop features in parallel, and some features can not be released while others can, a lot of software teams seem to have problems with their source control.</p>
 <p>In this post I will describe <strong>Simplified Feature Branching</strong> usable with git or any other <a href="http://en.wikipedia.org/wiki/Distributed_revision_control">DVCS</a>.</p>
@@ -1068,9 +1081,9 @@ git pull --rebase releases
   
   <entry>
     <title type="html"><![CDATA[How your personality type affects your development]]></title>
-    <link href="http://tojans.github.io/blog/2012/11/17/how-your-personality-type-affects-your-development/"/>
+    <link href="http://ToJans.github.io/blog/2012/11/17/how-your-personality-type-affects-your-development/"/>
     <updated>2012-11-17T00:00:00+01:00</updated>
-    <id>http://tojans.github.io/blog/2012/11/17/how-your-personality-type-affects-your-development</id>
+    <id>http://ToJans.github.io/blog/2012/11/17/how-your-personality-type-affects-your-development</id>
     <content type="html"><![CDATA[<h2>Introduction</h2>
 <p>During one of my more recent interviews I got an assesment from two different persons. While I still have no idea about the definitive outcome, the different types of questions they both asked triggered me to think about what kind of personality type they would be, so I started wondering how personality types are related to development&#8230;.</p>
 <h2>First things first: MBTI</h2>
@@ -1153,7 +1166,7 @@ git pull --rebase releases
 <p>@<a href="https://twitter.com/tojans">tojans</a> don&#8217;t think I agree with I/E - I think N/S is the biggest factor for dev, followed by J/P and I/E is about how you interact</p>
 &mdash; &#8216;Hurricane Rob&#8217; (@RobAshton) <a href="https://twitter.com/RobAshton/status/269714326934396928">november 17, 2012</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>&nbsp;</p>
 <h2>Finally</h2>
@@ -1165,9 +1178,9 @@ git pull --rebase releases
   
   <entry>
     <title type="html"><![CDATA[Fallacies of the tech recruitment process]]></title>
-    <link href="http://tojans.github.io/blog/2012/11/16/fallacies-of-the-tech-recruitment-process/"/>
+    <link href="http://ToJans.github.io/blog/2012/11/16/fallacies-of-the-tech-recruitment-process/"/>
     <updated>2012-11-16T00:00:00+01:00</updated>
-    <id>http://tojans.github.io/blog/2012/11/16/fallacies-of-the-tech-recruitment-process</id>
+    <id>http://ToJans.github.io/blog/2012/11/16/fallacies-of-the-tech-recruitment-process</id>
     <content type="html"><![CDATA[<p>Note: I would like to thank <a href="https://twitter.com/gbarrs">@gbarrs</a> for reviewing my blog post almost instantly, and also the offer of  <a href="https://twitter.com/GraemeF">@GraemeF</a>, <a href="https://twitter.com/MarkRendle">@MarkRendle</a>,  <a href="https://twitter.com/swaggerdmangene">@swaggerdmangene</a> and  <a href="https://twitter.com/moldyseaswimmer">@moldyseaswimmer</a> to be a reviewer. Without them, there would be a lot more <a href="http://en.wikipedia.org/wiki/Dunglish">Dunglish</a> in this post&#8230;</p>
 <h2>Why I like my job.</h2>
 <p>I have been hooked into computers ever since I wrote my first few lines of Basic on my mothers&#8217; brand new <a href="http://oldcomputers.net/trs80iii.html">TRS-80 Model 3</a> with 64Kb of ram and 2 - yes 2 !!! - diskdrives of a whopping 178Kb.  (Actually, I did not write the code, but I copied it character by character from <a href="http://www.1000bit.it/support/manuali/trs/Introduction%20to%20TRS-80%20Level%20II%20BASIC%20%281980%29%28Michael%20Zabinski%29%28pdf%29.pdf">a textbook that might have looked like this</a>, but in my defense, I was about 7 years old).</p>
@@ -1213,7 +1226,7 @@ git pull --rebase releases
 <p>@<a href="https://twitter.com/tojans">tojans</a> Same for any technology, approach and methodology. Juniors tend to write they are experts if they heard a buzzword more than 3 times</p>
 &mdash; Szymon Pobiega (@SzymonPobiega) <a href="https://twitter.com/SzymonPobiega/status/268951237389598720">november 15, 2012</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>Every single recruiter I talk to talks about how they would like to bond and invest into people, and really contribute and build a relationship, so I point them to my blog, and tell them this is exactly who I am. However, almost nobody - again, some exceptions - decided to invest in me by reading the blog and finding out what my exact profile is.</p>
 <p>There are exceptions to this rule, and some even go a long way to acquire your trust and confidence, for example the story of github recruitment comes to my mind; who would not love to be treated like that?</p>
@@ -1221,7 +1234,7 @@ git pull --rebase releases
 <p>After doing lots of job interviews, this sounds like Walhalla: the @<a href="https://twitter.com/github">github</a> hiring experience <a title="https://github.com/blog/1269-the-github-hiring-experience" href="https://t.co/yTNE1wxw">github.com/blog/1269-the-&hellip;</a>&#8221; /via @<a href="https://twitter.com/jacopretorius">jacopretorius</a></p>
 &mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/269327080850874368">november 16, 2012</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <h2>Closing up</h2>
 <p>I intended to make this a short post (i.e. 1K words), as it was more of a rant then a true essay, but as usual I am having a hard time respecting the limit.</p>
@@ -1233,9 +1246,9 @@ git pull --rebase releases
   
   <entry>
     <title type="html"><![CDATA[Continuous thinking: Essay: Ease and simplicity in software architecture]]></title>
-    <link href="http://tojans.github.io/blog/2012/10/31/continuous-thinking-essay-ease-and-simplicity-in-software-architecture/"/>
+    <link href="http://ToJans.github.io/blog/2012/10/31/continuous-thinking-essay-ease-and-simplicity-in-software-architecture/"/>
     <updated>2012-10-31T00:00:00+01:00</updated>
-    <id>http://tojans.github.io/blog/2012/10/31/continuous-thinking-essay-ease-and-simplicity-in-software-architecture</id>
+    <id>http://ToJans.github.io/blog/2012/10/31/continuous-thinking-essay-ease-and-simplicity-in-software-architecture</id>
     <content type="html"><![CDATA[<h1>Introduction</h1>
 <blockquote>
 <p>&ldquo;Almost all quality improvement comes via simplification of design, manufacturing&#8230; layout, processes, and procedures.&rdquo; - <a href="http://en.wikipedia.org/wiki/Tom_Peters" target="_blank">Tom Peters</a></p>
@@ -1248,7 +1261,7 @@ git pull --rebase releases
 <p>@<a href="https://twitter.com/tojans">tojans</a> Inspiration: <a title="http://www.infoq.com/presentations/Simple-Made-Easy" href="http://t.co/Tiu0NvzJ">infoq.com/presentations/&hellip;</a> by @<a href="https://twitter.com/richhickey">richhickey</a></p>
 &mdash; Mathias Verraes (@mathiasverraes) <a href="https://twitter.com/mathiasverraes/status/263200589503164417">October 30, 2012</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>This is a great video, and I suggest you to take a look at it.&nbsp;As I can not include infoQ videos on this page, I will embed another video by the same speaker about the same subject.(But to be honest, I think the one on infoQ is better.)</p>
 <p>
@@ -1304,18 +1317,18 @@ git pull --rebase releases
   
   <entry>
     <title type="html"><![CDATA[Trading the Elliott Wave - Silver 24/10/2012]]></title>
-    <link href="http://tojans.github.io/blog/2012/10/24/trading-the-elliott-wave-silver-24-10-2012/"/>
+    <link href="http://ToJans.github.io/blog/2012/10/24/trading-the-elliott-wave-silver-24-10-2012/"/>
     <updated>2012-10-24T00:00:00+02:00</updated>
-    <id>http://tojans.github.io/blog/2012/10/24/trading-the-elliott-wave-silver-24-10-2012</id>
+    <id>http://ToJans.github.io/blog/2012/10/24/trading-the-elliott-wave-silver-24-10-2012</id>
     <content type="html"><![CDATA[<p>s I think we are currently in wave 3 on several levels and we have some MACD/RSI divergence on the 4h-chart, I decided to put my money where my mouth is, and bought a few XAG/USD spot long sprinters with a leverage of about 80.</p>
 <p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f10%2fopportunity.png" alt="" /></p><div style="text-align:right">]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Paycento Web Summit 2012 - Day two: Aaaaargh matie]]></title>
-    <link href="http://tojans.github.io/blog/2012/10/18/paycento-web-summit-2012-day-two-aaaaargh-matie/"/>
+    <link href="http://ToJans.github.io/blog/2012/10/18/paycento-web-summit-2012-day-two-aaaaargh-matie/"/>
     <updated>2012-10-18T00:00:00+02:00</updated>
-    <id>http://tojans.github.io/blog/2012/10/18/paycento-web-summit-2012-day-two-aaaaargh-matie</id>
+    <id>http://ToJans.github.io/blog/2012/10/18/paycento-web-summit-2012-day-two-aaaaargh-matie</id>
     <content type="html"><![CDATA[<h3>Introduction</h3>
 <p>This is a follow-up post to <a href="http://www.corebvba.be/blog/post/Paycento-websummit-2012-Is-gra-liom-Eire.aspx">the post from yesterday</a>. While the first day was really nice, the second day was completely different.</p>
 <h3>Meeting people</h3>
@@ -1333,7 +1346,7 @@ git pull --rebase releases
 <p>@<a href="https://twitter.com/robashton">robashton</a> @<a href="https://twitter.com/graemef">graemef</a> ok; still at the same pub.. another time; enjoy!!!</p>
 &mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/258999970835877888">October 18, 2012</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <h3>Finally, in closing</h3>
 <p>&#8230; we decided to have dinner at an Italian restaurant close to the venue, to discuss the Web Summit, start-ups and Paycento. It was a great evening, and we gained some valuable insights, but also had lots of fun during dinner.</p>
@@ -1347,9 +1360,9 @@ git pull --rebase releases
   
   <entry>
     <title type="html"><![CDATA[Paycento Web Summit 2012 - Day one: Is gra liom Eire]]></title>
-    <link href="http://tojans.github.io/blog/2012/10/17/paycento-web-summit-2012-day-one-is-gra-liom-Eire/"/>
+    <link href="http://ToJans.github.io/blog/2012/10/17/paycento-web-summit-2012-day-one-is-gra-liom-Eire/"/>
     <updated>2012-10-17T00:00:00+02:00</updated>
-    <id>http://tojans.github.io/blog/2012/10/17/paycento-web-summit-2012-day-one-is-gra-liom-Eire</id>
+    <id>http://ToJans.github.io/blog/2012/10/17/paycento-web-summit-2012-day-one-is-gra-liom-Eire</id>
     <content type="html"><![CDATA[<h3 style="text-align: left;">Introduction</h3>
 <p style="text-align: left;">When Geert from <a href="http://www.paycento.com" target="_blank">Paycento </a>asked me to join him and Pieter to Ireland for THE start-up convention in Ireland named <a href="http://www.websummit.net/" target="_blank">Web Summit</a>, I immediately agreed to join them for the following reasons:</p>
 <ul style="text-align: left;">
@@ -1380,7 +1393,7 @@ git pull --rebase releases
 <p>Having a glass of vodka with the founder of mysql <a href="https://twitter.com/search/%23websummit">#websummit</a> <a title="http://twitter.com/Paycento/status/258615427024973825/photo/1" href="http://t.co/HF494aYg">twitter.com/Paycento/statu&hellip;</a></p>
 &mdash; Paycento (@Paycento) <a href="https://twitter.com/Paycento/status/258615427024973825">October 17, 2012</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <h3>The Web Summit conference</h3>
 <p>The venue is really well organized, for example the catering really quite extensive (hot/cold platters,sandwiches,soup,&#8230;) and coffee/other drinks are available throughout the building. Everything is included in the ticket price, so you know what you will spend once you have acquired a ticket.</p>
@@ -1396,9 +1409,9 @@ git pull --rebase releases
   
   <entry>
     <title type="html"><![CDATA[Erlang 101: an attempt to implement CQRS]]></title>
-    <link href="http://tojans.github.io/blog/2012/10/05/erlang-101-an-attempt-to-implement-cqrs/"/>
+    <link href="http://ToJans.github.io/blog/2012/10/05/erlang-101-an-attempt-to-implement-cqrs/"/>
     <updated>2012-10-05T00:00:00+02:00</updated>
-    <id>http://tojans.github.io/blog/2012/10/05/erlang-101-an-attempt-to-implement-cqrs</id>
+    <id>http://ToJans.github.io/blog/2012/10/05/erlang-101-an-attempt-to-implement-cqrs</id>
     <content type="html"><![CDATA[<h3>Introduction</h3>
 <p>As you might have noticed in<a href="http://www.corebvba.be/blog/post/Getting-started-with-Erlang-and-Nitrogen-(in-a-single-tweet).aspx" target="_blank"> one of my previous posts</a>, I am currently focussing on <a href="http://learnyousomeerlang.com/" target="_blank">Erlang</a>, because I assume that this platform might be the most efficient way <a href="https://github.com/ericmoritz/wsdemo/blob/results-v1/results.md" target="_blank">to handle umphteen connections over the web for now</a>&nbsp;(but that is the subject for another post).</p>
 <p>After running my first experiments and getting everything up and running on Windows, I finally decided to stop fighting usage of windows combined with Erlang so I installed myself a <a href="https://www.virtualbox.org/" target="_blank">virtualbox </a>with <a href="http://lxde.org/" target="_blank">Lubuntu LXDE</a> (please note that you have to set the available memory on the virtual appliance to 512MB, or the installation will crash).</p>
@@ -1406,7 +1419,7 @@ git pull --rebase releases
 <p>2nd attempt for a virtualbox install of Lubuntu LXDE; aparently the installer crashes with mem != 512MB <a href="https://twitter.com/search/%23LOL">#LOL</a></p>
 &mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/253763997659176961">October 4, 2012</a></blockquote>
 <p>
-<script src="http://tojans.github.io//platform.twitter.com/widgets.js"></script>
+<script src="http://ToJans.github.io//platform.twitter.com/widgets.js"></script>
 </p>
 <p>Before I start implementing what might be my next startup, I tried implementing one of the things that I consider to be my personal kata <a href="https://github.com/ToJans" target="_blank">(I made numerous attempts in .Net</a>): a <a href="http://martinfowler.com/bliki/CQRS.html" target="_blank">CQRS</a> implementation of a simple stock system.</p>
 <p>Disclaimer: I am a complete newb in Erlang, so I presume I am still miles away from a more elegant implementation.</p>
@@ -1434,15 +1447,6 @@ git pull --rebase releases
 </ul>
 <p>All in all this has been a valuable exercise to start with, next on my agenda is trying to build an minimum viable product for yet another start-up idea that crossed my mind.</p>
 <p>In closing a message to more experienced Erlangers: feel free to fork the example and show me the proper way to do it!</p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Trading the Elliott Wave - Silver 26/09/2012]]></title>
-    <link href="http://tojans.github.io/blog/2012/09/26/trading-the-elliott-wave-silver-26-09-2012/"/>
-    <updated>2012-09-26T00:00:00+02:00</updated>
-    <id>http://tojans.github.io/blog/2012/09/26/trading-the-elliott-wave-silver-26-09-2012</id>
-    <content type="html"><![CDATA[<p>No Elliott analysis yet, since I am a bit short on time, hence my quick and dirty analysis based on divergence&#8230; The trend looks strong, so I think we might be heading to the 261.8 retracement here&#8230; (i.e. 26.4299).</p>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fsilver.png" alt="" /></p>]]></content>
   </entry>
   
 </feed>

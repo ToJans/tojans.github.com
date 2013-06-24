@@ -7,7 +7,7 @@
 	<meta name="author" content="Tom Janssens">
 
 	
-	<meta name="description" content="Jun 13th, 2007 Comments Technorati Subscription : In order to increase my blog visibility I have subscribed myself to Technorati.&nbsp;In order to &hellip;">
+	<meta name="description" content="Jun 20th, 2007 Comments Send Smtp Mail With an Image Included : A Small but Interesting Code Fragment Back over at codeproject an interesting &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -17,7 +17,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="Tom's ramblings" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://tojans.github.io/blog/page/13/">
+	<link rel="canonical" href="http://ToJans.github.io/blog/page/13/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -95,6 +95,87 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-06-20T00:00:00+02:00" data-updated="true" itemprop="datePublished">Jun 20<span>th</span>, 2007</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2007/06/20/send-smtp-mail-with-an-image-included-a-small-but-interesting-code-fragment/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2007/06/20/send-smtp-mail-with-an-image-included-a-small-but-interesting-code-fragment/" itemprop="url">Send Smtp Mail With an Image Included : A Small but Interesting Code Fragment</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>
+Back over at codeproject an interesting article has been posted : <a href="http://www.codeproject.com/useritems/Seding_Mail.asp">how to send mail over smtp including an attached image</a>.
+</p>
+<p>
+This is the code :
+</p>
+<p>
+//create the mail message<br />
+MailMessage mail = new MailMessage();
+</p>
+<p>
+//set the addresses<br />
+mail.From = new MailAddress(&quot;<a href="mailto:prashant@gmail.com">prashant@gmail.com</a>&quot;);<br />
+mail.To.Add(&quot;<a href="mailto:you@gmail.com">you@gmail.com</a>&quot;);
+</p>
+<p>
+//set the content<br />
+mail.Subject = &quot;Mail From Prashant Lavate&quot;;
+</p>
+<p>
+//first we create the Plain Text part<br />
+AlternateView plainView = AlternateView.CreateAlternateViewFromString(&quot;This is my text , viewable by those clients that don&#39;t support html&quot;, null, &quot;text/plain&quot;);
+</p>
+<p>
+//then we create the Html part<br />
+//to embed images, we need to use the prefix &#39;cid&#39; in the img src value<br />
+//the cid value will map to the Content-Id of a Linked resource.<br />
+//thus &lt;img src=&#39;cid:logo&#39;&gt; will map to a LinkedResource with a ContentId of &#39;companylogo&#39;<br />
+AlternateView htmlView = AlternateView.CreateAlternateViewFromString(&quot;Here is an embedded image.&lt;img src=cid:companylogo&gt;&quot;, null, &quot;text/html&quot;);
+</p>
+<p>
+//create the LinkedResource (embedded image)<br />
+LinkedResource logo = new LinkedResource( &quot;c:&#92;temp&#92;prashant.gif&quot; );<br />
+logo.ContentId = &quot;logo&quot;;<br />
+//add the LinkedResource to the appropriate view<br />
+htmlView.LinkedResources.Add(logo);
+</p>
+<p>
+//add the views<br />
+mail.AlternateViews.Add(plainView);<br />
+mail.AlternateViews.Add(htmlView);
+</p>
+<p>
+<br />
+//send the message<br />
+SmtpClient smtp = new SmtpClient(&quot;127.0.0.1&quot;); //specify the mail server address<br />
+smtp.Send(mail);Remember to set the Language of your code snippet using the Language dropdown.
+</p>
+<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -677,134 +758,6 @@ Wish me Luck !!!!<br />
 <br />
 <br />
 <br />
-<div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2006-09-25T00:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 25<span>th</span>, 2006</time></div>
-		<div class="tags">
-
-</div>
-		
-			<span class="comments"><a href="/blog/2006/09/25/crm-day-1-some-simple-ideas-explained/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2006/09/25/crm-day-1-some-simple-ideas-explained/" itemprop="url">CRM Day 1 : Some Simple Ideas Explained</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>
-Today I will not actually program any stuff, but i will layout some basic stuff on <strike>paper </strike>this blog.
-</p>
-<h4>First draft :</h4>
-<p>
-I will start from the default object properties :
-</p>
-<p>
-DefaultObjectProps :
-</p>
-<ul>
-	<li>id : unique identifier </li>
-	<li>description : text description (for dropdownlists etc) </li>
-	<li>created : date of creation </li>
-	<li>created by : user </li>
-	<li>modified : date of last modification </li>
-	<li>modified by : user</li>
-</ul>
-<p>
-Then the default act_as_props
-</p>
-<p>
-DefaultActAsProps &lt; DefaultObjectProps
-</p>
-<ul>
-	<li>Parent (id, type)</li>
-</ul>
-<p>
-ActAsSecured &lt; DefaultActAsProps
-</p>
-<ul>
-	<li>OwnerUser : user </li>
-	<li>OwnerGroup : group </li>
-	<li>UserRights,GroupRights,AnonymousRights : CRUD bools </li>
-	<li>implements : 
-	<ul>
-		<li>bool Allow Read (type,int id) </li>
-		<li>bool Allow Write (type,int id) </li>
-		<li>bool Allow Create (type,int id) </li>
-		<li>bool Allow Update (type,int id)</li>
-	</ul>
-	</li>
-</ul>
-<p>
-ActAsTree &lt; DefaultActAsProps
-</p>
-<p>
-ActAsPageable &lt; DefaultActAsProps
-</p>
-<p>
-ActAsSortable &lt; DefaultActAsProps
-</p>
-<p>
-ActAsFilterable &lt; DefaultActAsProps
-</p>
-<p>
-ActAsTaggable &lt; DefaultActAsProps
-</p>
-<p>
-ActAsSchedule &lt; DefaultActAsProps
-</p>
-<p>
-ActAsCommentable &lt; DefaultActAsProps
-</p>
-<p>
-ActAsRule &lt; DefaultActAsProps
-</p>
-<p>
-ActAsFileContainer &lt; DefaultActAsProps
-</p>
-<p>
-An object instance can be represented in two ways
-</p>
-<ul>
-	<li>PresentAsRow : Object row view </li>
-	<li>PresentAsForm : Object Form view</li>
-</ul>
-<p>
-These rowpresenters will be&nbsp;used in a form. The default form view will be modified by the act-as modules
-</p>
-<p>
-For example :
-</p>
-<ul>
-	<li>If an object implements ActAsTree, the&nbsp;grid&nbsp;can be modified into a treeview </li>
-	<li>If an object implements ActAsTaggable, each&nbsp;object can be tagged </li>
-	<li>If an object implements ActAsSchedule, the objects can be shown in a calendar view </li>
-	<li>&#8230;&nbsp;</li>
-</ul>
-<p>
-I hope you get the idea from these examples&#8230;
-</p>
-<p>
-That is it for today&#8230; See you again tomorrow&#8230;
-</p>
 <div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
 
 		

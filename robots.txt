@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://tojans.github.io/sitemap.xml 
+Sitemap: http://ToJans.github.io/sitemap.xml 
