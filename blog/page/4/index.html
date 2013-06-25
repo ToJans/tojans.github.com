@@ -7,8 +7,7 @@
 	<meta name="author" content="Tom Janssens">
 
 	
-	<meta name="description" content="Jun 14th, 2012 Comments From the Trenches - Improving Scalability in .Net for Paycento Introduction
-As most of you might know, I am currently in the &hellip;">
+	<meta name="description" content="Jul 5th, 2012 Comments Project #Startup10: Lessons Learned With Blommekes.be Note: this is a post from&nbsp;a blog post series about starting up 10 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +95,117 @@ As most of you might know, I am currently in the &hellip;">
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-05T00:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 5<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/07/05/project-%23startup10-lessons-learned-with-blommekes.be/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/07/05/project-%23startup10-lessons-learned-with-blommekes.be/" itemprop="url">Project #Startup10: Lessons Learned With Blommekes.be</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">Note: this is a post from&nbsp;</span><a style="text-decoration: none; color: #5c80b1; background-image: url(http://www.corebvba.be/blog/pics/remote.gif); padding-right: 10px; white-space: nowrap; font-family: Verdana; font-size: 11px; line-height: 17px; background-position: 100% 0%; background-repeat: no-repeat no-repeat; " href="http://www.corebvba.be/blog/post/Project-Startup10-Learning-to-build-your-own-business.aspx">a blog post series about starting up 10 businesses in a year</a><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">.</span></p>
+<h1><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">#1:&nbsp;<a href="http://blommekes.be/" target="_blank">http://Blommekes.Be</a>&nbsp;- koopt een blommeke voor u vrouw en het zal wa beter gaan </span></h1>
+<h3><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">Introduction</span></h3>
+<p><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">The biggest problem in getting started with startups, is finding your inspiration, and deriving a business plan; in this post I will describe how blommekes.be was conceived, and also mistakes, lessons learned during the process.</span></p>
+<h3><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">Inspiration</span></h3>
+<p><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">After the idea of <a href="http://www.corebvba.be/blog/post/Project-Startup10-Learning-to-build-your-own-business.aspx">starting 10 startups in a year</a> was conceived, this was the first startup that I conceived together with Pieter from <a href="http://www.vertaalbureau-taalvirtuozen.be/" target="_blank">Taalvirtuozen</a>. </span></p>
+<p><span style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px; ">We brainstormed for for about 3 nights straight to find a good idea. The brainstorming process was pretty straightforward: we shared a powerpoint file in google docs, and started adding ideas at random (one per page) while babbling over Skype together. We found our inspiration by surfing the net, (i.e. news sites etc), thinking about where we could find new markets and/or opportunities.</span></p>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">After these 3 nights, we decided to pick an idea and go for it. The odd thing was that we conceived the idea of blommekes.be during that night; the minute we imagined it, we assumed that this would be a perfect match for our first startup: <a href="http://blommekes.be" target="_blank">blommekes.be</a>.</span></span></p>
+<p><a href="http://blommekes.be" target="_blank"><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f7%2fblommekes-site.png" alt="" /></a></p>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"></span></span></p>
+<h3><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">Unique selling points</span></span></h3>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">We checked most of the online webshops for flowers, and while there is a stiff competition there, we decided to approach the market from a different point of view. As a man, I have no idea what the current trends are, and I hate having to check in/register and configure umptheen options before getting my final order. We decided to drive blommekes.be by making it utterly simple to order something and target it at people who were just there to order flowers and get it done.</span></span></p>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">As we were targetting men only, we decided to approach it with a funny, tongue-in-cheeck, &#8220;us against the women&#8221;- kind of style.</span></span></p>
+<h3><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">So it began</span></span></h3>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">Having read through all startup material, we decided to dive in head first, and applying the lean startup mantra &#8220;measuring is knowing&#8221;, so we both launched a tweet and a facebook post after we set up an initial page where one could order some flowers; once you clicked on the order button, you got to a page where you got the reply: &#8220;You can not order at this time, please come back later.&#8221;</span></span></p>
+<p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">This was picked up by a huge number of enthousiasts, and got retweeted multiple times. so we assumed we were on to something here&#8230; (f.e. in the first hour after our 2 tweets and facebook posts we had 100 visitors and some retweets), so we decided we were probably on to something good here.</span></span></p>
+<h3><br /></h3>
+<p><em style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px;"><img src="http://www.corebvba.be/blog/image.axd?picture=2012%2f7%2fblommekes-stats-day1.png" alt="" /></em></p>
+<p style="padding-left: 30px;"><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"><strong><em>We made our first mistakes here</em></strong></span></span></p>
+<ul>
+<li><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"><em>Visitors are not buyers; just because you are able to attract visitors does not mean you can get them to buy antyhing&#8230; Only about 10% clicked on the order button, and none of them on the pay button</em></span></span></li>
+<li><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"><em>As I had a history in sales, I somehow presumed we could use the slightly adjusted 1 to 18 ratio for conversion, so I assumed about 1 in 400 visitors would place an order (i.e. 1 in 20&sup2;); as we did not manage to get this conversion ratio, I presume we are lacking some things on our site, but more on that later&#8230;</em></span></span></li>
+<li><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"><em>We failed to collect data from those first time users; for example an email or something similar might have been a good idea.</em></span></span></li>
+<li><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"><em>Apparently once people had seen the site, they were not really keen to get back to it, because they knew what it was all about.&nbsp;</em></span></span></li>
+</ul>
+<h3>What was next</h3>
+<p>We needed to get the following things working:</p>
+<p>&nbsp;</p>
+<ul>
+<li>Find a flower shop willing to collaborate on this project</li>
+<li>Make sure we are able to arrange the transportation for the flowers (both the delivery and the packaging)</li>
+<li>Get the payment up and running</li>
+<li>Have some online marketing</li>
+<li>Try doing some offline marketing as well</li>
+</ul>
+<div>The first one was the easiest, as it was a win-win situation for both parties; no strings attached, so we found a local florist willing to help us really soon; I sold the idea on the first pitch.</div>
+<div><br /></div>
+<div>The second one proved to be quite hard, as this was a completely new world for me; in the end we decided to go for our national postal service, and we found some clever ways to package our flowers to make sure they would remain fresh and in a good state during the transportation. This step also required me to order a minimum quantity of 100 boxes at a a price of 2.36&euro;/box; which is a lot for the packaging alone, but I did not want to be stuck with a thousand boxes if the startup failed.</div>
+<div><br /></div>
+<div style="padding-left: 30px;"><strong><em>Yet another lesson</em></strong></div>
+<div style="padding-left: 30px;"><em>It is a whole different ballpark out there; for example ordering the boxes to late caused me to miss our first deadline by a day: Mother&#8217;s day&#8230;</em></div>
+<div><br /></div>
+<div>The payment was, quite frankly, a disaster. As we wanted to support a non-tech audience, we needed both VISA, MasterCard and direct bank payment support. After spending quite some time on getting A****Pay working, I tried the first real payment, and guess what happened:</div>
+<h3><br /></h3>
+<p><img src="https://twitpic.com/show/iphone/8h8t63" alt="" /></p>
+<p>&nbsp;</p>
+<p>After googling a bit for this, it turned out that this &#8220;temporary problem&#8221; was over 4 months old, and still was not fixed, so they basically fubarred me by not informing me.</p>
+<p>So I decided to cut my losses, invest a steep startup cost in a well known payment provider, pay their monthly fee and also accept a high transaction cost from VISA, after all, we lost a lot of time on this&#8230;</p>
+<p style="padding-left: 30px;"><strong><em>Next lesson</em></strong></p>
+<p style="padding-left: 30px;"><em>When you have some momentum going; do not lose it. Do not go for the cheapest possible solution, but opt for established (but maybe more costly) options. In the end, choosing for cheap usually ends up in costing you more money after all. Never loose momentum, as this will cost you potential customers.</em></p>
+<p>The online&nbsp;marketing was completely Pieter&#8217;s accomplishment, and I actually considered it to be quite good. However, it did not go viral, even though we wanted it to. Even though te reactions of the people were utterly positive, people did not share the link.</p>
+<p style="padding-left: 30px;"><strong><em>Another lesson</em></strong></p>
+<p style="padding-left: 30px;"><em>Consider your target audience; people who tend to make things go viral, need something extraordinary they never saw before. While a lot of the people we targetted considered this something they never saw before, it never occured to them that they could actually share it in order to help us. Going viral is hard, and I presume it requires some real expertise and a lot of effort before you are able to create something like that on demand, a.k.a. &#8220;Hello Captain Obvious&#8221;.</em></p>
+<p>
+<object width="640" height="360">
+<param name="movie" value="http://www.youtube.com/v/swgOU58ghxk?version=3&amp;hl=nl_NL" />
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="640" height="360" src="http://www.youtube.com/v/swgOU58ghxk?version=3&amp;hl=nl_NL" allowfullscreen="true" allowscriptaccess="always"></embed>
+</object>
+</p>
+<p>&nbsp;</p>
+<p>We also decided to give&nbsp;offline marketing a shot, so Pieter ordered a thousand business cards, which we put about everywhere we managed to put them (i.e. restaurants, pubs, family spread them, &#8230;). The white on orange text underneath is unreadable due to the crappy webcam, but the text in white says &#8220;Geven &amp; Nemen&#8221;, which is Dutch for &#8220;Give &amp; Take&#8221;, which is intentionally somewhat interpretable in different ways&#8230;</p>
+<p><img src="https://p.twimg.com/AnsgdVyCMAERCxS.png:large" alt="" /></p>
+<p style="padding-left: 30px;"><strong><em>Here is another lesson</em></strong></p>
+<p style="padding-left: 30px;"><em>While it might be worthwile for some, spreading business cards everywhere was apparently not really worthwile for our specific kind of branche. I assume online services need online marketing, and breaching that boundary probably ends up costing you more then you gain.</em></p>
+<h3>So we&nbsp;finally had everything in place</h3>
+<p>One could order and pay flowers, we could transport them; our test shipment had proven to be excellent (i.e. tested in the most extreme possible way), So we were ready to go&#8230;</p>
+<p>Unfortunately, nothing happened&#8230;</p>
+<p>Absolutely nothing ? Well no, we got an order here and there, but nothing spectacular, so for now, the financial result of this whole experience is not exactly what we hoped it to be ** COUGH ** understatement ** COUGH **.</p>
+<h3>Future evolution</h3>
+<p>Is this the end of <a href="http://blommekes.be/" target="_blank">blommekes.be</a>? No, certainly not&#8230; We will try to adjust and improve our process in every way we can, even though this might be in small, gradual and incremental steps. We have made the initial effort, and as this was the first true startup, it was one hell of a ride&#8230;</p>
+<p>As we are progressing with the other startups, we are learning valuable lessons, which we reapply to the previous startups as well.</p>
+<p style="padding-left: 30px;"><strong><em>Another lesson</em></strong></p>
+<p style="padding-left: 30px;"><em>Some things are obvious once they tell them to you, but can be missed quite easy, f.e. not showing the customer how they will be able to pay for their orders might actually hold them back completely.</em></p>
+<p style="padding-left: 30px;"><em>Another obvious one is you need to have recurring customers. While a lot of the people I talked to seemed to know the site &#8220;Blommekes.be&#8221;, and considered it a great idea; most of them never really bothered to visit it again once they had seen it. We tried fixing it by adding a jokes section yesterday, but I am assuming I should probably give the possibility for the visitors to subscribe for an email, so <strong>here is my question to you: would you subscribe to a weekly email that shows you the new flower arrangement and possibly some new jokes that have been added, or not?</strong></em></p>
+<h3>Conclusion</h3>
+<p>While this whole thing has not exaclty been &#8220;a ride in the park&#8221;, we did make some actual progress, and got our first lessons in lean startups. As initially stated, we never assumed we would get it right the first time, the whole spirit of the &#8220;Project #Startup10&#8221;, is learning how to do a startup, so even though we have not been able to turn this into anything profitable (yet), we are making progress&#8230;</p>
+<p>Whether or not blommekes.be will be a keeper, that is something&nbsp;only&nbsp;time will tell.</p>
+<p>The reason I am sharing this, is because I am willing to learn from both my experiences and yours, so if you do have any tips, pointers, or even a simple &#8220;me too&#8221;, please mention this in the comments, as this is one of the things that motivate me to write these kind of posts&#8230;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -662,84 +772,6 @@ As most of you might know, I am currently in the &hellip;">
 <p>Signing off,</p>
 <p>&nbsp;</p>
 <p>Tom</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-15T00:00:00+01:00" data-updated="true" itemprop="datePublished">Jan 15<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-</div>
-		
-			<span class="comments"><a href="/blog/2012/01/15/cqrs-for-the-lazy-ss/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/01/15/cqrs-for-the-lazy-ss/" itemprop="url">CQRS for the Lazy -ss</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<h2>Introduction</h2>
-<p>In one of my numerous attempts to create a neat approach to CQRS, this is yet another attempt to remove all the protocol that CQRS requires. I love bootstrapping new projects and experimenting with new approaches, and this is another step that improves efficiency. It is a natural evolution to one of my other CQRS playgrounds: <a href="https://github.com/ToJans/Scritchy" target="_blank">Scritchy</a>.</p>
-<p>The conventional CQRS approach requires you to write&nbsp;command - and event classes, to wire up your commands and event handlers to the relevant AR&#8217;s, saga&#8217;s and viewmodel builders.<br />I removed some of the clutter in that process with Scritchy. <a href="https://github.com/ToJans/Scritchy/wiki/auto-wiring" target="_blank">Scritchy uses conventions to wire up the commands and events to the relevant components</a>. This makes CQRS a lot less verbose while still offers the same advantages.</p>
-<h2>Scritchy v2 ?</h2>
-<p>While this is a good attempt, it still requires you to write the dreaded event - and command classes.<a href="http://www.linkedin.com/profile/view?id=2995972&amp;trk=tab_pro#recommendations" target="_blank"> Having pushed some best practices/usages/libs to some enterprise teams in the past</a>, I noticed the following: any change that adds extra steps/work to the process makes acceptance harder by devs, as most people are usually trapped in a certain approach, and they do not see an advantage in having to write more code to do the same thing. If they do not need to write all the &#8220;protocol&#8221;/extra classes, you have removed yet another step that might slow down acceptance of the practice.</p>
-<p>&nbsp;</p>
-<p>The new approach I am about to tell you about in this blog post completely hides the messages from the dev, i.e. the dev can just use a conventional method call, and messages are created underneath.</p>
-<p>&nbsp;</p>
-<h2>Disclaimer</h2>
-<p>This is a possible approach to the problem, but I tend to think that the majority of the CQRS evangelists and practitioners value explicitness over pragmatism. I love the explicitness and clarity of their examples and implementations, but in the real world most people start to think: &#8220;Wow, that is a lot of code to simply add an item to the stock; are they nuts ?&#8221;.</p>
-<p>Having experienced the fallacy of the explicitness in a startup attempt, my brain got tickled to find fast and neat approaches to a pretty established conventional path. I think this one is pretty close.</p>
-<p>The full source is available over at <a href="https://github.com/ToJans/MinimalisticCQRS">GitHub</a>, and the demo app can be seen/tested<a href="http://minimalisticcqrs.apphb.com/"> over at appharbor</a>.</p>
-<h2>Example</h2>
-<p>So without further ado, here I will show you ALL THE CODE required to implement a complete CQRS app:</p>
-<p></p>
-<h3>The domain: Bank account</h3>
-<p>Let us first start with some sequence diagrams to introduce you to the problem domain:</p>
-<p><img style="width: 322px; height: 213px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBSZWdpc3RlciBhbiBhY2NvdW50CmVuZCBub3RlCkdVSS0-QQAQBlVuaXF1ZW5lc3NWYWxpZGF0b3I6ADUIABwHID8KAF4Fb3ZlciAAHRoKIAAVCE51bWJlciB1AFYFID8AcAkgCm9wdCAAbAYKICAAeww6AIEpCQCBEQcKICBvcHQgQWxsb3dlZAogIABVCS0AKgsAgT4HAIFmCAAkBWVuZAplbmQKCg&amp;s=earth" alt="" /></p>
-<p><img style="width: 172px; height: 152px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBEZXBvc2l0IHNvbWUgY2FzaAplbmQgbm90ZQpHVUktPkFjY291bnQ6ACEIQ2FzaApvcHQgQWxsb3dlZAogIAAcBy0AIgtBbW91bnQAVQdlZAplbmQKCg&amp;s=earth" alt="" /></p>
-<p><img style="width: 180px; height: 152px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBXaXRoZHJhdyBzb21lIGNhc2gKZW5kIG5vdGUKR1VJLT5BY2NvdW50OgAhCUNhc2gKb3B0IEFsbG93ZWQKICAAHQctACMLQW1vdW50AFYIbgplbmQKCg&amp;s=earth" alt="" /></p>
-<p><img style="width: 437px; height: 324px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBUcmFuc2ZlciBhbiBhbW91bnQgZnJvbSBBIHRvIEIKZW5kIG5vdGUKR1VJLT5BY2MAHQVBOgAvCEEALgUKb3B0IFZhbGlkIGZvciBzb3VyY2UKICAAJwktADAMIAAvBldpdGhkcmF3bgATFgCBEQhTYWdhOgCBHglQcm9jZXNzZWRPblMAVw8AJQwAgSEKQjogAC0HAIFiCE9uVGFyZ2V0CiAgAIEpDnQADwgAgS8KQgCBLgtCAIExCERlcG9zaXRlZAAaEUdVSQCBIQpDb21wbGUAIQZlbHNlAIJhCmludgBmDyAAXhgAgXAWRmFpbGVkAIE-CwCBZh9BOiBDYW5jZWwAg2YIAIFYDQCDCRUAgU8WQQCBVBEAUgUAgV4GbmQKZW5kCg&amp;s=earth" alt="" /></p>
-<h3>Domain:Account</h3>
-<p>
-<script src="https://gist.github.com/1615489.js?file=Domain%5CAccount.cs"></script>
-</p>
-<p>Nothing spectacular here; yes, I do realize it is a boring sample, but we need a well-known domain to explain it IMO; suggestions for an alternative domain are welcome!</p>
-<h3>Domain:AccountTransferSaga</h3>
-<p>
-<script src="https://gist.github.com/1615489.js?file=Domain%5CAccountTransferSaga.cs"></script>
-</p>
-<p>Orchestrates the transfer between 2 accounts</p>
-<h3>Domain:AccountUniquenessSaga</h3>
-<p>
-<script src="https://gist.github.com/1615489.js?file=Domain%5CAccountUniquenessSaga.cs"></script>
-</p>
-<p>Verifies uniqueness of the account; I do realize on rare cases there might be an error here (when using async processing one might have eventual consistency), but I consider the effort in fixing the error by hand less then the cost to implement it on the domain.</p>
-<p>The code above is all that is needed for the domain, i.e. no events or commands etc&#8230; isn&#8217;t that neat ?</p>
-<h3>Hubs</h3>
-<p>In order to show you what else is needed, I added all the server-side code as well, so you have an idea how much code you need to implement a complete app</p>
-<p>
-<script src="https://gist.github.com/1615489.js?file=Hubs%5CCommandHub.cs"></script>
-<script src="https://gist.github.com/1615489.js?file=Hubs%5CQueryHub.cs"></script>
-</p>
-<h2>Conclusion</h2>
-<p>This is an approach to CQRS that removes the need to write message classes; it uses a combination of serializing method invocation on a dynamic together with conventions to build a system where messages are completely hidden from the user. Talk about removing infrastructure from the code!&nbsp;</p>
-<p>I assume there will be a lot of opponents to this approach, as this gives room for typos etc. However, I do believe that this approach combined with TDD/BDD could be for CQRS what rails was for MVC : a pragmatic approach that allows you to just write code at blistering speed without a lot of added protocol.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
 
 		
 		

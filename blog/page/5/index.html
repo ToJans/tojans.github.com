@@ -7,8 +7,8 @@
 	<meta name="author" content="Tom Janssens">
 
 	
-	<meta name="description" content="Dec 27th, 2011 Comments 2010 - 2011: A Retrospective One of my main motivators, my youngest son Matisse #PrideAndJoy Introduction
-I like the concept &hellip;">
+	<meta name="description" content="Jan 15th, 2012 Comments CQRS for the Lazy -ss Introduction
+In one of my numerous attempts to create a neat approach to CQRS, this is yet another &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,84 @@ I like the concept &hellip;">
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-15T00:00:00+01:00" data-updated="true" itemprop="datePublished">Jan 15<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2012/01/15/cqrs-for-the-lazy-ss/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/01/15/cqrs-for-the-lazy-ss/" itemprop="url">CQRS for the Lazy -ss</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h2>Introduction</h2>
+<p>In one of my numerous attempts to create a neat approach to CQRS, this is yet another attempt to remove all the protocol that CQRS requires. I love bootstrapping new projects and experimenting with new approaches, and this is another step that improves efficiency. It is a natural evolution to one of my other CQRS playgrounds: <a href="https://github.com/ToJans/Scritchy" target="_blank">Scritchy</a>.</p>
+<p>The conventional CQRS approach requires you to write&nbsp;command - and event classes, to wire up your commands and event handlers to the relevant AR&#8217;s, saga&#8217;s and viewmodel builders.<br />I removed some of the clutter in that process with Scritchy. <a href="https://github.com/ToJans/Scritchy/wiki/auto-wiring" target="_blank">Scritchy uses conventions to wire up the commands and events to the relevant components</a>. This makes CQRS a lot less verbose while still offers the same advantages.</p>
+<h2>Scritchy v2 ?</h2>
+<p>While this is a good attempt, it still requires you to write the dreaded event - and command classes.<a href="http://www.linkedin.com/profile/view?id=2995972&amp;trk=tab_pro#recommendations" target="_blank"> Having pushed some best practices/usages/libs to some enterprise teams in the past</a>, I noticed the following: any change that adds extra steps/work to the process makes acceptance harder by devs, as most people are usually trapped in a certain approach, and they do not see an advantage in having to write more code to do the same thing. If they do not need to write all the &#8220;protocol&#8221;/extra classes, you have removed yet another step that might slow down acceptance of the practice.</p>
+<p>&nbsp;</p>
+<p>The new approach I am about to tell you about in this blog post completely hides the messages from the dev, i.e. the dev can just use a conventional method call, and messages are created underneath.</p>
+<p>&nbsp;</p>
+<h2>Disclaimer</h2>
+<p>This is a possible approach to the problem, but I tend to think that the majority of the CQRS evangelists and practitioners value explicitness over pragmatism. I love the explicitness and clarity of their examples and implementations, but in the real world most people start to think: &#8220;Wow, that is a lot of code to simply add an item to the stock; are they nuts ?&#8221;.</p>
+<p>Having experienced the fallacy of the explicitness in a startup attempt, my brain got tickled to find fast and neat approaches to a pretty established conventional path. I think this one is pretty close.</p>
+<p>The full source is available over at <a href="https://github.com/ToJans/MinimalisticCQRS">GitHub</a>, and the demo app can be seen/tested<a href="http://minimalisticcqrs.apphb.com/"> over at appharbor</a>.</p>
+<h2>Example</h2>
+<p>So without further ado, here I will show you ALL THE CODE required to implement a complete CQRS app:</p>
+<p></p>
+<h3>The domain: Bank account</h3>
+<p>Let us first start with some sequence diagrams to introduce you to the problem domain:</p>
+<p><img style="width: 322px; height: 213px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBSZWdpc3RlciBhbiBhY2NvdW50CmVuZCBub3RlCkdVSS0-QQAQBlVuaXF1ZW5lc3NWYWxpZGF0b3I6ADUIABwHID8KAF4Fb3ZlciAAHRoKIAAVCE51bWJlciB1AFYFID8AcAkgCm9wdCAAbAYKICAAeww6AIEpCQCBEQcKICBvcHQgQWxsb3dlZAogIABVCS0AKgsAgT4HAIFmCAAkBWVuZAplbmQKCg&amp;s=earth" alt="" /></p>
+<p><img style="width: 172px; height: 152px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBEZXBvc2l0IHNvbWUgY2FzaAplbmQgbm90ZQpHVUktPkFjY291bnQ6ACEIQ2FzaApvcHQgQWxsb3dlZAogIAAcBy0AIgtBbW91bnQAVQdlZAplbmQKCg&amp;s=earth" alt="" /></p>
+<p><img style="width: 180px; height: 152px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBXaXRoZHJhdyBzb21lIGNhc2gKZW5kIG5vdGUKR1VJLT5BY2NvdW50OgAhCUNhc2gKb3B0IEFsbG93ZWQKICAAHQctACMLQW1vdW50AFYIbgplbmQKCg&amp;s=earth" alt="" /></p>
+<p><img style="width: 437px; height: 324px;" src="http://www.websequencediagrams.com/cgi-bin/cdraw?lz=bm90ZSBsZWZ0IG9mIEdVSToKICBUcmFuc2ZlciBhbiBhbW91bnQgZnJvbSBBIHRvIEIKZW5kIG5vdGUKR1VJLT5BY2MAHQVBOgAvCEEALgUKb3B0IFZhbGlkIGZvciBzb3VyY2UKICAAJwktADAMIAAvBldpdGhkcmF3bgATFgCBEQhTYWdhOgCBHglQcm9jZXNzZWRPblMAVw8AJQwAgSEKQjogAC0HAIFiCE9uVGFyZ2V0CiAgAIEpDnQADwgAgS8KQgCBLgtCAIExCERlcG9zaXRlZAAaEUdVSQCBIQpDb21wbGUAIQZlbHNlAIJhCmludgBmDyAAXhgAgXAWRmFpbGVkAIE-CwCBZh9BOiBDYW5jZWwAg2YIAIFYDQCDCRUAgU8WQQCBVBEAUgUAgV4GbmQKZW5kCg&amp;s=earth" alt="" /></p>
+<h3>Domain:Account</h3>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Domain%5CAccount.cs"></script>
+</p>
+<p>Nothing spectacular here; yes, I do realize it is a boring sample, but we need a well-known domain to explain it IMO; suggestions for an alternative domain are welcome!</p>
+<h3>Domain:AccountTransferSaga</h3>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Domain%5CAccountTransferSaga.cs"></script>
+</p>
+<p>Orchestrates the transfer between 2 accounts</p>
+<h3>Domain:AccountUniquenessSaga</h3>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Domain%5CAccountUniquenessSaga.cs"></script>
+</p>
+<p>Verifies uniqueness of the account; I do realize on rare cases there might be an error here (when using async processing one might have eventual consistency), but I consider the effort in fixing the error by hand less then the cost to implement it on the domain.</p>
+<p>The code above is all that is needed for the domain, i.e. no events or commands etc&#8230; isn&#8217;t that neat ?</p>
+<h3>Hubs</h3>
+<p>In order to show you what else is needed, I added all the server-side code as well, so you have an idea how much code you need to implement a complete app</p>
+<p>
+<script src="https://gist.github.com/1615489.js?file=Hubs%5CCommandHub.cs"></script>
+<script src="https://gist.github.com/1615489.js?file=Hubs%5CQueryHub.cs"></script>
+</p>
+<h2>Conclusion</h2>
+<p>This is an approach to CQRS that removes the need to write message classes; it uses a combination of serializing method invocation on a dynamic together with conventions to build a system where messages are completely hidden from the user. Talk about removing infrastructure from the code!&nbsp;</p>
+<p>I assume there will be a lot of opponents to this approach, as this gives room for typos etc. However, I do believe that this approach combined with TDD/BDD could be for CQRS what rails was for MVC : a pragmatic approach that allows you to just write code at blistering speed without a lot of added protocol.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -770,64 +848,6 @@ I'm frightened of the old ones." - John Cage</pre>
 <p>I am aware that CQRS is considered to complicated by some, and I am aware that some experts advise against the usage of CQRS in most cases.&nbsp;However, it is my opinion that CQRS provides you with a proper template for development, where everything is nicely separated the way it is supposed to be, and easily adjustable. Another motivation for the CQRS approach is the spaghetti-code of the nillies, currently also known as lasagna-code: numerous amounts of layers over layers that make adding a simple field to a screen a few days of work.</p>
 <p>By providing Scritchy, I am trying to find a way to make CQRS not only working, but also relatively easy to use and understand.</p>
 <p>This is not the end, but the beginning of a new path&#8230;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-10-06T00:00:00+02:00" data-updated="true" itemprop="datePublished">Oct 6<span>th</span>, 2011</time></div>
-		<div class="tags">
-
-</div>
-		
-			<span class="comments"><a href="/blog/2011/10/06/continuous-thinking-how-your-mbti-type-can-help-you/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2011/10/06/continuous-thinking-how-your-mbti-type-can-help-you/" itemprop="url">Continuous Thinking: How Your MBTI Type Can Help You</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<h3>Introduction</h3>
-<p>I just finished commenting someone&#8217;s opinion on <a href="http://en.wikipedia.org/wiki/Myers-Briggs_Type_Indicator" target="_blank">the MBTI personality type</a>&nbsp;in a linkedin status update.</p>
-<p>As you might have read in <a href="http://www.corebvba.be/blog/post/Continuous-thinking-Essay-The-secret-sauce-of-great-leadership-IMO-B)-.aspx">my previous post regarding &#8220;The secret sauce of great leadership - IMO ;)&#8221;</a> I am an avid fan of determining your own personality type in order to improve yourself.</p>
-<p>Because this person had seen <a href="http://vimeo.com/20441760" target="_blank">a presentation by Patrick Vermeren on the myth of MBTI</a>, he <a href="https://twitter.com/#!/berkun/status/121332727134949376" target="_blank">retweeted the following</a>:</p>
-<p style="padding-left: 30px; "><em><strong>I wish there was a test to take to find out how much you hate Meyers-Briggs (MBTI). I&#8217;d score off the charts.</strong></em></p>
-<p>Since I most certainly do not agree, I commented some things on the linkedin thread. As I think the comment might have some value for my blog readers as well, I decided to post it here as well:</p>
-<p></p>
-<p>&nbsp;</p>
-<h3>Here is my opinion</h3>
-<p>I believe your personality can change during puberty, but afterwards it is pretty much fixed.&nbsp;</p>
-<p>MBTI made me aware of my personality, and how to bridge to other types of personalities, by making the differences explicit.&nbsp;</p>
-<p>While the test might not be spot on for some (f.e. my sister), it was spot on for me; the description matched me in both positive and negative ways. Since then I have learned to accept my personality, and being aware of your shortcomings and strengths helps you to improve yourself (i.e. self-awareness is key here). Once you master handling yourself, you can attempt to guess your discussion partner&#8217;s MBTI type, which is quite obvious for the first letters,&nbsp;&nbsp;but harder for the next:&nbsp;</p>
-<p>&nbsp;</p>
-<ol>
-<li>Introvert or Extravert ? (easy)&nbsp;</li>
-<li>Sensing or iNtuitive (i.e. perception by facts or intuition)&nbsp;</li>
-<li>Feeling or Thinking (i.e. emotion vs ratio)&nbsp;</li>
-<li>Judging or Percepting (i.e. judge and get done with it vs constantly looking for alternative options/possibilities)&nbsp;</li>
-</ol>
-<p>&nbsp;</p>
-<p>Once you realize the type of your conversation partner, you should know how to talk to him/her&#8230;</p>
-<p>&nbsp;</p>
-<h3>Conclusion</h3>
-<p>While the MBTI test is certainly not a solution to everything, it can increase your self-awareness, and in the next phase also the awareness on how to interact with your discussion partner. You could compare this to level 3 and level 4 thinking in poker.</p>
-<p>In my opinion anything that builds your self-awareness can be a good tool to expand your personal horizon.</p>
-<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
 
 		
 		

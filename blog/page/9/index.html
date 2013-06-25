@@ -7,7 +7,8 @@
 	<meta name="author" content="Tom Janssens">
 
 	
-	<meta name="description" content="Dec 8th, 2009 Comments The Quest for the Perfect ASP.Net MVC Code : v0.3 You can download the full source here using (msys)git:&nbsp;&nbsp;&nbsp;& &hellip;">
+	<meta name="description" content="Dec 22nd, 2009 Comments Howto+why Using a Prototype & Bdd for a Project Estimate + Personal Rant Introduction
+As you might or might not now, &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,6 +96,105 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-22T00:00:00+01:00" data-updated="true" itemprop="datePublished">Dec 22<span>nd</span>, 2009</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/blog/2009/12/22/howto%2Bwhy-using-a-prototype-bdd-for-a-project-estimate-%2B-personal-rant/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2009/12/22/howto%2Bwhy-using-a-prototype-bdd-for-a-project-estimate-%2B-personal-rant/" itemprop="url">Howto+why Using a Prototype & Bdd for a Project Estimate + Personal Rant</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h3>Introduction</h3>
+<p>As you might or might not now, estimating the budget for a project can be very hard sometimes. In order to get started on a project we first need a real estimate of what the client will need, and the client should know what I am going to deliver to him/her.<br />What I personally learned from the past is that one can never be fine-grained enough, since there will always be mismatches somewhere.</p>
+<p>We can however try to offer the client something that he/she can both understand and work with, next to a description of what everything should do (from a business point of view).</p>
+<p>How can we do this, while investing as little work as possible ?</p>
+<p>&nbsp;</p>
+<h3>Unfortunately one can not correctly estimate projects without doing some work</h3>
+<p>As straightforward as this might seem, most people do not seem to be able to grasp this ( do not be ashamed; I have been guilty as well ).</p>
+<p>In order to give a correct estimate, you have to INVEST a decent amount of TIME.</p>
+<p></p>
+<h3>How can we make sure that we have as little mismatches as possible ?</h3>
+<p>You can do this by making sure the estimate is complete; a short list of possible deliverables:</p>
+<ul>
+<li>User manual</li>
+<li>Technical reference manual</li>
+<li>Quickstart guide</li>
+<li>Sourcecode</li>
+<li>Educating the endusers</li>
+<li>A scope definition for the software</li>
+<li>A feature definition within the software scope</li>
+</ul>
+<p>Building this list is usually really easy, except for the last 2 parts:</p>
+<h3><br /></h3>
+<h3>Scope and feature definition for the software</h3>
+<p>This commonly known cartoon is unfortunately true in most cases (click to go the original one) :</p>
+<p><a href="http://www.projectcartoon.com/cartoon/3"><img src="http://www.projectcartoon.com/images/project.jpg" alt="Project planning cartoon" /></a></p>
+<p>Defining the scope of the software is usually hard work, and most of the time the expectations of the client do not match the planned implementations of the developer. How can we avoid this pitfall ???</p>
+<p>This is quite easy, but it does require some work: you build a prototype/wireframe of the application, and show this to the client, asking if everything he wants is in there. This requires quite some time, but usually your quote will be selected because they can see how much time you invested in it, and it shows just how professional you approach your work.</p>
+<p>Next to this you should start on some high level BDD stories describing the behaviour of the problem domain and the application. This means writing stories from a domain perspective (i.e. no computers involved) as well as from an app perspective if necessary.</p>
+<p>&nbsp;</p>
+<h3>But how do I do this technically ?</h3>
+<p>Well, that is completely up to yourself. In order to get you started I can show you how I do it :</p>
+<p>For the prototyping I currently use a combination of HTML/jQuery/jQuery UI and a jQuery plugin called polypage.</p>
+<p>You can see a screenshot here:</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2009%2f12%2fmarkomo_prototype.png" alt="" /></p>
+<p>I am using jQuery UI for <a href="http://docs.jquery.com/UI/Tabs" target="_blank">tabs</a> and an <a href="http://docs.jquery.com/UI/Accordion" target="_blank">accordion </a>to define different possible steps of a screen. Next to this I use <a href="http://code.new-bamboo.co.uk/polypage/" target="_blank">polypage </a>to switch different states (you can click on the &#8220;logged in&#8221; link on the left top in orde to switch between a user that is logged in, and one that is not logged in.)</p>
+<p>You can look at the sample here : <a href="http://www.corebvba.be/demos/prototype/index.html">http://www.corebvba.be/demos/prototype/index.html</a> . Please note that this is pure HTML/Javascript, so there is no serverside involved here&#8230; So if you save the html/css and script sources you have everything I have&#8230; It might also be interesting to know that there is only a single HTML file: index.html. All the necessary code is in there.</p>
+<p>Next to this I describe my domain features using BDD/the ubiquitous language. This will later be fed back into the program tests using BDD. For a good introduction on BDD I should redirect you to <a title="Introducing BDD" href="http://dannorth.net/introducing-bdd" target="_blank">Dan North</a>.</p>
+<p>Describing the domain functionality is needed in order to make sure that you can also estimate your resource usage for everything that happens behind the scenes (which will probably be the biggest part in enterprise projects).</p>
+<p>It goes without saying that I do use <a href="http://wiki.github.com/ToJans/Aubergine" target="_blank">my very own BDD framework</a> as a BDD implementation framework later on.</p>
+<p>&nbsp;</p>
+<h3>In conclusion</h3>
+<p>If you use both HTML wireframes/prototypes together with BDD to describe the problem domain, you usually can grasp wath the project is about, and you should be able to give some good estimates on the budget for a project. Another advantage of this technique is that your quote does show how much time you already invested in their project, and how professional you are about it. This will probabaly give you a commercial advantage over other quotes, since most of them will probably not be as detailed as this one.</p>
+<p>I do bill some of my work from this phase back to the client if I do get the project, but usually this is not a problem, since the client can see the value of doing this.</p>
+<p>&nbsp;</p>
+<h3>A warning/personal rant<br /></h3>
+<p>I also realize that this approach is not always possible, since some clients are not willing to invest enough time in order to give you enough information. Based on my previous experience with this kind of situation I can only advise you one thing: turn around and run away from it as fast as you can, especially in combination with fixed-price projects !! These kind of clients will never know what the final scope and features of the application will be, so you will have to do dozens of rewrites because they do not know the domain or scope themselves, and implement all kinds of extra functionalities that were never mentioned in the initial scope!!! It implies waterfall development, but in the worst possible way !!!</p>
+<p>A few typical taglines by which you can smell problems before beginning on the project:</p>
+<ul>
+<li>&#8220;Oh that is something we do not know yet, but it shouldn&#8217;t be that hard.&#8221;</li>
+<li>Stakeholders having discussions over domain problems</li>
+<li>&#8220;It should be something like site XXX&#8221;. FINAL STOP. (no further details provided)</li>
+<li>&#8220;We need to interface some external apps&#8230; we&#8217;ll see which ones later on&#8221;</li>
+<li>&#8220;How much data.. oh we do not know yet&#8221;</li>
+</ul>
+<p>A few typical lines by which you can notice you are in trouble while working on a project:</p>
+<ul>
+<li>&#8220;When I say I want to upload files in internet explorer, I do mean any file, even it is larger then 200MB&#8221;</li>
+<li>&#8220;What ? Your CSS layout does not support Internet explorer 4 ? Fix it asap&#8221;</li>
+<li>&#8220;Uploading the file repository is slow; I don&#8217;t care that I upload 2GB of data over a DSL line; it is slow, you should fix it&#8221;</li>
+<li>&#8220;Oh, but we do need both implicit and explicit fine-grained security, in such a way that we do not know yet ourselves. Just implement something, and we&#8217;ll let you know if it is ok&#8221;</li>
+<li>&#8220;Yes can you do this ? How much time does it take ? 10 days ?&#8221; =&gt; 20 days later: &#8220;Ok, we want it by next week&#8230;&#8221;</li>
+<li>&#8220;Oh, we decided to use the app for all our customers instead of just ourselves&#8230; Why doesn&#8217;t your app support the load of umphteen times the original amount of users/data ?&#8221;</li>
+<li>&#8220;BTW I forgot to tell you, we need custom theming for every customer group, and we should be able to do it ourselves&#8230; No, we do not want to edit aspx/css files, just make an editor, ok ?&#8221;</li>
+<li>And finally : &#8220;What do you mean, another invoice ? We are not paying since your original quote stated xxx&#8221; after investing y times the work estimated in the original quote&#8230; &#8220;Yeah, we&#8217;ll see you in court, which means you can wait another year for your money (if you are lucky)&#8221;</li>
+</ul>
+<p>As hilarious as this list may seem, these are all things that I have experienced in real life&#8230; So please take my advice and run away as fast as you can from such clients&#8230;</p>
+<p>PS: for really professional people not willing to invest too much time in a project quote, I can always advise <a href="http://estimategoat.com/" target="_blank">this site</a>.</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -533,49 +633,6 @@ Processing file :  C:\Projecten\Be.Corebvba.Aubergine\Be.Corebvba.Aubergine.Exam
 <h3>Edit 2 : Apparently the reference is wrong (rereference Be.corebvba.aubergine.dll under the lib folder)<br /></h3>
 <p>&nbsp;</p>
 <p>Enjoy !!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-11-09T00:00:00+01:00" data-updated="true" itemprop="datePublished">Nov 9<span>th</span>, 2009</time></div>
-		<div class="tags">
-
-</div>
-		
-			<span class="comments"><a href="/blog/2009/11/09/published-a-new-article-on-codeproject-getting-started-with-bdd-%2B-new-version-of-aubergine/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2009/11/09/published-a-new-article-on-codeproject-getting-started-with-bdd-%2B-new-version-of-aubergine/" itemprop="url">Published a New Article on CodeProject : Getting Started With BDD + New Version of Aubergine</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>Hi again,</p>
-<p>I just published a brand <a href="http://www.codeproject.com/KB/library/GettingStartedWithBDD.aspx">new article on CodeProject : Getting started with BDD</a>.</p>
-<p>I also modified my Aubergine Framework a bit by adding a new feature : automatic case-insensitive DSL enum conversion.</p>
-<p>You can download the latest version here (it also contains&nbsp; the example for codeproject )</p>
-<p>&nbsp;</p>
-<p><a href="http://www.corebvba.be/blog/file.axd?file=2009%2f11%2fAubergine_v0.04.zip">Aubergine_v0.04.zip (18,72 kb)</a></p>
-<p>Enjoy !!</p>
-<h2>Edit</h2>
-<p>Since the article state on CodeProject is still &#8220;Pending&#8221;, I simply posted it in the pages section of this blog; you <a href="http://www.corebvba.be/blog/page/Getting-started-with-BDD-%28behavior-driven-development%29-in-Net.aspx">can read it here</a>.</p>
-<h2>Edit #2</h2>
-<p><a href="http://www.corebvba.be/blog/post/Aubergine-%28BDD-for-net%29-v005-text-storieshtml-custom-outputcmdline-parser.aspx">v0.05 is released !!</a></p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
 
 		
 		
