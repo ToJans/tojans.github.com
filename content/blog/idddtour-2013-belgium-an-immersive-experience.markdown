@@ -1,0 +1,174 @@
+---
+layout: post
+date: "2013-05-01"
+slug: "idddtour-2013-belgium-an-immersive-experience"
+title: IDDDtour 2013 Belgium - an immersive experience
+comments: true
+sharing: true
+footer: true
+---
+
+<h3>Introduction: what &amp; how?</h3>
+<p><a href="http://www.amazon.com/gp/product/0321834577/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321834577&linkCode=as2&tag=httptojanme-20">Implementing Domain-Driven Design</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=httptojanme-20&l=as2&o=1&a=0321834577" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+ is a book written by <a href="http://vaughnvernon.co/" target="_blank">Vaughn Vernon</a>, and you can consider it a practical guide to <a href="http://www.amazon.com/gp/product/0321125215/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321125215&linkCode=as2&tag=httptojanme-20">the blue book</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=httptojanme-20&l=as2&o=1&a=0321125215" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+ - a lot of people consider the blue book to be used as a reference, but it takes some persistence to read it -. Vaughn tried to solve exactly that problem with his book...</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>"implementing domain driven design" by @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a> has arrived <a href="https://twitter.com/search/%23YesYesYes">#YesYesYes</a> <a href="https://twitter.com/search/%23DDD">#DDD</a> <a href="https://twitter.com/search/%23IDDD">#IDDD</a> <a title="http://twitter.com/ToJans/status/301755160173105152/photo/1" href="http://t.co/IztEyMa5">twitter.com/ToJans/status/&hellip;</a></p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/301755160173105152">13 februari 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>A little while ago, Vaughn Vernon was tweeting about how had given a free course about his book "Implementing domain driven design" while visiting Bogota, Columbia. This course was given for free to help start-ups there.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>My free one-day <a href="https://twitter.com/search/%23IDDD">#IDDD</a> Tutorial will be held in <a href="https://twitter.com/search/%23Bogota">#Bogota</a> <a href="https://twitter.com/search/%23Colombia">#Colombia</a> from 8:30am-6pm Monday Oct 8 at @<a href="https://twitter.com/hubbog">hubbog</a> Calle 98 # 18-71 Second Floor.</p>
+&mdash; Vaughn Vernon (@VaughnVernon) <a href="https://twitter.com/VaughnVernon/status/254081465153880064">5 oktober 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>In the next few hours after this tweet, an idea emerged on twitter about a concept called the IDDDtour, where Vaughn would be teaching his book to larger classes and doing a tour through Europe, but at a fraction of the cost. As I am somebody who is more of a head first kind of guy, I decided to take ownership and figure out a way to make this a real thing...</p>
+<!--more-->
+
+<h3>...So I created a discussion group on Google</h3>
+<p>Next, Vaughn tweeted about the group I created.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>Please RT the new <a href="https://twitter.com/search/%23IDDD">#IDDD</a> Google Group: <a title="https://groups.google.com/forum/?fromgroups#!forum/iddd" href="https://t.co/RIgwaU2R">groups.google.com/forum/?fromgro&hellip;</a></p>
+&mdash; Vaughn Vernon (@VaughnVernon) <a href="https://twitter.com/VaughnVernon/status/254296338433449985">5 oktober 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>... And the response was quite big: <a href="https://groups.google.com/forum/?hl=nl&amp;fromgroups=#!topic/iddd/qQ9MIQ0p7FE" target="_blank">we had 68 messages in the first thread</a>, and people wanted to organize IDDD classes all over Europe. But reading through all these posts, I noticed that this whole "organizing using a discussion board" was not really working, and as most of the people interested in DDD would probably be experienced in using Github, I decided to set up a repository there, and use the wiki and issues from github instead. I setup<a href="https://github.com/ToJans/IDDD-Europe-tour-2013/wiki/Home/e0804db9804fb0e947b8f9da9782cc8b42ed9e5d" target="_blank"> an initial landing page with some guidelines</a>, posted <a href="https://groups.google.com/d/msg/iddd/chX0Wz_IkyQ/lhsTDjenMdoJ" target="_blank">a small message</a> and tweeted about it.</p>
+<p>&nbsp;</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>IDDD Europe 2013 tour: Let's get organized !! <a title="https://github.com/ToJans/IDDD-Europe-tour-2013/wiki" href="https://t.co/YgQfmQwn">github.com/ToJans/IDDD-Eu&hellip;</a> /cc @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a> @<a href="https://twitter.com/abdullin">abdullin</a></p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/255233611115159552">8 oktober 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>&nbsp;</p>
+<p>The wiki turned out to work pretty good, and after only two days, we had reached a consensus about 4 locations in Europe, all with a self-organizing team!!!</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>IDDD European tour April 2013 countries are finalized:Belgium / Poland / Hungary - <a title="https://groups.google.com/d/msg/iddd/3qA3rOA5DXE/aL-P_UXPOkwJ" href="https://t.co/NUZlQvld">groups.google.com/d/msg/iddd/3qA&hellip;</a> <a href="https://twitter.com/search/%23DDD">#DDD</a> /cc @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a> @<a href="https://twitter.com/abdullin">abdullin</a></p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/255952084686491648">10 oktober 2012</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p><a href="https://github.com/ToJans/IDDD-Europe-tour-2013/issues/2">I also opened up an issue on the github repo</a>, to find out whether somebody would be willing to sponsor the venue and food in Belgium in exchange for free attendance, and the miracle happened: shortly after opening the issue <a href="https://twitter.com/NordinHaouari" target="_blank">Nordin</a>&nbsp;from <a href="http://www.cegeka.be/" target="_blank">CeGeKa</a>&nbsp;replied that they would be willing to sponsor... I assumed opening an issue would not have worked, but as we all know: <em>in IT assumptions should not be considered valid or invalid before they are verified</em>.</p>
+<p><span style="font-size: 10px;">So now it was time to transfer the ownership to Vaughn , in order for him to be able to organize everything else. He setup <a href="http://idddtour.com/" target="_blank">a professional site</a>, and we were good to go...</span></p>
+<h3>Fast forward to six months later... Day 1 of the event</h3>
+<p>The moment was finally there... I took my backpack early in the morning, got in my car, and drove to "de Brabanthal" in Leuven...</p>
+<p>&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fBrabanthal.jpg" alt="" /></p>
+<p>I arrived late due to underestimating the traffic jams, but eventually got there. As I was welcomed by somebody at the front desk providing me a name tag, it took me a while to realize that this was actually Nicole, Vaughn's wife, basically helping us out where necessary and also providing some interesting discussions during the next four days... Thanks Nicole!!!</p>
+<p>When I entered the room I was a bit flabbergasted: about 70 people were sitting there, and I was thinking "Yes, we did it!!!"</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>Full house at <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a>. Looking forward to a lot of discussions with so many passionate people over the next days. <a title="http://twitter.com/Heimeshoff/status/326258619794485248/photo/1" href="http://t.co/XLFkgJaWRK">twitter.com/Heimeshoff/sta&hellip;</a></p>
+&mdash; Marco Heimeshoff (@Heimeshoff) <a href="https://twitter.com/Heimeshoff/status/326258619794485248">22 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Still standing there, Vaughn interrupted the class, and asked whether I was Tom, as we had never met in real life before... So I replied that I was, apologized for being late in front of the whole class, so we could continue with the course. Well, that did have one advantage: everybody now knew who I was, even though arriving late for an event you co-organized is probably not the best first impression somebody can provide ;-) .</p>
+<p>What followed was a really interesting journey about context mapping, bounded contexts and other things mentioned in the book (Yes, buy the book, you should, really). Everybody was soaking up the stories, and all things considered, the first day of the course everybody was probably still getting used to the big group of students.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>At @<a href="https://twitter.com/vaughnvernon">vaughnvernon</a>'s <a href="https://twitter.com/search/%23iddd">#iddd</a> workshop in Leuven. Day 1: strategic design <a title="http://twitter.com/JeroenSoeters/status/326230755086843904/photo/1" href="http://t.co/h0iBCbhTdT">twitter.com/JeroenSoeters/&hellip;</a></p>
+&mdash; Jeroen Soeters (@JeroenSoeters) <a href="https://twitter.com/JeroenSoeters/status/326230755086843904">22 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>What I consider a very good thing, is that a lot of interaction started to emerge: people were sharing stories and getting acquainted with each other during the breaks. There was a healthy buzz there, and people who know me in real life can probably understand why I was thrilled about that.</p>
+<p>We did not have any evening sessions in the first day, so we finished before dinner.</p>
+<p>Because of my experience with the traffic I decided not to commute, but booked a BnB on the first day for 3 nights, within a reasonable distance from where most of the others stayed. For the record, my airbnb host was a really great guy going by the unusual name of Idesbald, so, Idesbald, if you are reading this: thanks!</p>
+<p>We arranged to meet up at the bar in hotel that night, and find a place to enjoy dinner. About half of the people during the dinner meetup on a regular basis having <a href="https://twitter.com/search?q=%23cqrsbeers" target="_blank">#CQRSBeers</a> in Belgium, so the atmosphere was comparable: it is all about sharing and learning from each other in face to face conversations. I personally discovered a tremendous amount of new things picking my peers' brains.</p>
+<p>While we stayed up pretty late, I think I got back to the bnb on a reasonable time (about 1.00am'ish).</p>
+<h3>Day 2: Day of the rascals</h3>
+<p>Day 2 was a very interesting - but also exhausting - day; we were having really lively discussions and stepping up, even though questions/opinions were sometimes inapropriate and/or irrelevant (yes, me too, so I apologise). There were quite a lot of discussions going off-topic a bit to much (more about implementation details then about modeling), but it is great to see the crowd is engaged and people are passionate about their jobs. I can only imagine how hard it must have been for Vaughn to answer all these questions, still trying to be polite and keeping the class on track, but I assume everybody learned from it one way or another...</p>
+<p>People were starting to mingle with other groups more and more, and I think I personally met about half of the attendees by then in person...</p>
+<p>On the second day we had one presentation after dinner: <a href="https://twitter.com/yreynhout" target="_blank">Yves</a> sharing his experiences about exploring his domain, and it was a very interesting talk.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/yreynhout">yreynhout</a> doing a talk at <a href="https://twitter.com/search/%23idddtour">#idddtour</a> Belgium <a title="http://twitter.com/tjaskula/status/326758888030486528/photo/1" href="http://t.co/cJFmoIGtmT">twitter.com/tjaskula/statu&hellip;</a></p>
+&mdash; Thomas Jaskula (@tjaskula) <a href="https://twitter.com/tjaskula/status/326758888030486528">23 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>After the last presentation, we met up once again in the bar of the hotel, and we actually spent the whole night there... I think it was probably around 3.00am'ish here before I got back to the hotel, let's hope this pattern does not interpolate in a linear fashion ;-) !</p>
+<h3>Day 3: Let's keep on track folks !!!</h3>
+<p>Day 3 was one of my favorite days, as we could get our hands dirty and really start implementing code... People who know me in real life will probably confirm that I am more of hands-on kind of practitioner, so I started coding... As I am currently doing something that you could consider "a bottom-up strategic consulting/devops" kind of thing, I have not been doing a lot of code, lately. Implementing the code, and working on a case that <a href="https://github.com/ToJans/SaasOvation" target="_blank">I would be able to show during the CQRS presentation</a>, really reminded me how much I love writing code...</p>
+<p>I assumed Yves was going to talk about CQRS, so I decided to do a talk on something different for the evening session. But, as always, assumptions are never valid until verified. As he had decided not to talk about CQRS, I decided I had to. So, in the evening session, I was going to give my first presentation over a timespan of 20 minutes (I had show a preview to Tomasz and his Parisian friends in about 5 minutes, so 20 minutes should have been doable), and then <a href="http://www.corebvba.be/blog/post/Presentation-CQRS-101-All-your-BASE-belong-to-us-on-march-6th-for-visugbe.aspx">reuse my old talk I performed for the VISUG about a year ago</a>.</p>
+<p>However, as I started giving my presentation, I was noticing that there was a lot of feedback, people were really - and I mean really - engaged, and there was a lot of added value in the tips from the audience, so after a few minutes we decided to just have this talk, and postpone the CQRS talk.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/tojans">tojans</a> doing his thing <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> ... Fantastic! <a title="http://twitter.com/yreynhout/status/327100138000613376/photo/1" href="http://t.co/SYOQs3sCOu">twitter.com/yreynhout/stat&hellip;</a></p>
+&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327100138000613376">24 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>I received a tremendous amount of tips from everyone during the talk, but there was one person who really popped in particular, and added a lot of practical tips and shared his experience: <a href="https://twitter.com/TimSchraepen" target="_blank">Tim Schraepen</a>. So, thanks Tim, for all the extra info !!!.</p>
+<p>Feedback after the talk was also great:"</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>. @<a href="https://twitter.com/tojans">tojans</a> is not afraid to show his failed experiments to the world, and it'sbeautiful. #<a href="https://twitter.com/search/%23IDDDtour">#IDDDtour</a></p>
+&mdash; Mathias Verraes (@mathiasverraes) <a href="https://twitter.com/mathiasverraes/status/327117798662873088">24 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>Really enjoyable presentation by @<a href="https://twitter.com/tojans">tojans</a> :-) <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a></p>
+&mdash; ziobrando (@ziobrando) <a href="https://twitter.com/ziobrando/status/327117778060455938">24 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>Also, people came to me during the next day, saying my talk actually triggered them to start tweeting and/or blogging again or for the first time, which is exaclty what I was trying to achieve with my talk.</p>
+<p>The reward for "best compliment during feedback" goes to <a href="http://ziobrando.blogspot.be/" target="_blank">Alberto Brandolini</a> - yes, I became a fanboy during the IDDD days, and was constantly bugging him with questions and trying to peek in his mind -, who actually told me my talk was "An immersive experience"!!</p>
+<p>For the record, you can find the slides for the talk <a href="http://www.slideshare.net/TomJanssens1/getting-better" target="_blank">here</a>.</p>
+<p>As usual, we met up at the hotel bar, but by now, the group had expanded to about 20-something, if I recall correctly... Things that happed in Leuven should probably stay in Leuven, but let us just state that my decision to drink only "Chimay bleu" during the whole night, was probably not the best decision ever. We did start of with the whole group on Marter's square, but somehow this evolved in to something that might have been a little bit too much - but in a funny way, nevertheless - ;-).</p>
+<p>I think it would be safe to say that the initial assumption about the hour of arriving home actually was a linear interpolation; you can do the math yourselves.</p>
+<p>On thing that I did love, that gives a good indicator of the general atmosphere there, is this:</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p><a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> is full of suprises :-) tomorrow I will co-talk with @<a href="https://twitter.com/tojans">tojans</a> about cqrs. I was drunk and he forced me into it... ;) enjoy!</p>
+&mdash; Marco Heimeshoff (@Heimeshoff) <a href="https://twitter.com/Heimeshoff/status/327189597010395136">24 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<h3>Day 4: wrapping it up</h3>
+<p>So, on with the final day... Even though some people looked a bit like "the walking dead" *cough* Jeroen *cough*, some bottles of sparkling water and a few litres of coffee managed to get us back on track... First Vaughn give us some interesting final insights, and then up next was <a href="https://twitter.com/ziobrando" target="_blank">Alberto</a>&nbsp;with a workshop called "Event based modeling".</p>
+<p>Explaining the amazing results and the simplicity in this technique would make this blog post even longer, so I will not extrapolate further on this. You can find some slides in Italian from Alberto <a href="http://www.slideshare.net/ziobrando/event-based-modeling-iad-2012-15371656" target="_blank">here</a>, and I am confident we will hear more about this technique as people are discovering the huge amount of value there is in mapping your business process using simple post-its, starting from events, discovering commands &amp; triggers, and finally modeling your domain....</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>Notice the Domain Expert? - @<a href="https://twitter.com/ziobrando">ziobrando</a> <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> <a title="http://twitter.com/yreynhout/status/327352522257862656/photo/1" href="http://t.co/O5nnwXizay">twitter.com/yreynhout/stat&hellip;</a></p>
+&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327352522257862656">25 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>I think it is also safe to say he is a really smart and creative guy that manages to think on a higher level, but translate it in a way that everybody understands it.</p>
+<p>Next to this his cartoons are also really great ;-) .</p>
+<p>We also had Tomasz Jaskula on the floor, and I have to say he gave a really great and brutally honest presentation about building his startup, <a href="http://www.linkmycv.pl/" target="_blank">LinkMyCV.pl</a>.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/tjaskula">tjaskula</a> doing his lightning talk! <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a> <a title="http://twitter.com/yreynhout/status/327333076223029248/photo/1" href="http://t.co/AoG6yuYqAf">twitter.com/yreynhout/stat&hellip;</a></p>
+&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327333076223029248">25 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>One of the things he said that really struck me was what he called the architecture 2011 effect:</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>. @<a href="https://twitter.com/tjaskula">tjaskula</a> in action "we created another layer to hide the layered crap we created the year before" <a href="https://twitter.com/search/%23awesomeness">#awesomeness</a> <a href="https://twitter.com/search/%23IDDDtour">#IDDDtour</a></p>
+&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/327333358747123712">25 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>&nbsp;</p>
+<p>You can find his slides <a href="http://www.slideshare.net/tjaskula/leveraging-more-then-ddd-lite-in-the-startup-project" target="_blank">here</a>...</p>
+<p>Another thing on the todo list, was the partially improvised lightning talk from <a href="https://twitter.com/Heimeshoff" target="_blank">Marco </a>&amp; me about CQRS. As we were going through both of our presentations, we agreed that his one was actually better, so we decided to use mostly his structure, which also allowed me to delegate the speaking to him. Anyway, I think he did a great job, and really managed to add some value in the room.</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>@<a href="https://twitter.com/heimeshoff">heimeshoff</a> &amp; @<a href="https://twitter.com/tojans">tojans</a> demoing CQRS. <a title="http://twitter.com/yreynhout/status/327427029052039168/photo/1" href="http://t.co/VSUXoIxjRL">twitter.com/yreynhout/stat&hellip;</a></p>
+&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/327427029052039168">25 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>One quote that stuck me in particular:</p>
+<blockquote class="twitter-tweet" lang="nl">
+<p>"When it's in the head of the user, it's difficult to refactor." via @<a href="https://twitter.com/heimeshoff">heimeshoff</a> <a href="https://twitter.com/search/%23IDDDTour">#IDDDTour</a></p>
+&mdash; Mathias Verraes (@mathiasverraes) <a href="https://twitter.com/mathiasverraes/status/327424460191842304">25 april 2013</a></blockquote>
+<p>
+<script src="//platform.twitter.com/widgets.js"></script>
+</p>
+<p>After 4 days of this really intensive workshop, we decided to call it a day, and went for a final drink - once again on Marter's square -, where I met some more people I had not actually seen or talked to before, my apologies. Once again interesting discussions emerged, and we finally wrapped it all up over - once again - a few beers.</p>
+<h3>Conclusion</h3>
+<p>Wow! I was completely brainfried when I got home, and it actually took me about a week to get my brain back from hyper- to normal speed again. This has been - on both a personal and professional level - such an enriching experience that I would love doing this again. And again. And again.</p>
+<p>The most odd thing that struck me when I was talking with Vaughn during the last day, was that all of this started with a simple tweet, which is, in effect, by definition less then 140 chars. Talk about empowerement people!!! But that is probably the subject for another blog post.</p>
+<p>Thanks for sharing &amp; caring everyone!!!</p>
