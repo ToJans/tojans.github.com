@@ -1,10 +1,30 @@
 baseurl="http://tojans.me/"
 title="Tom's ramblings"
 footnotereturnlinkcontents="↩"
+theme="redlounge"
 [permalinks]
-  post="/blog/:year/:month/:title/"
+  blog="/blog/:year/:month/:day/:slug/"
 [params]
-  Subtitle="Random opinionated blurbs"
+  sidebartitle = "Tom's ramblings"
+  sidebartagline="Random opinionated blurbs"
   AuthorName="Tom Janssens"
   GitHubUser="tojans"
-  SidebarRecentLimit=5
+[[menu.main]]
+    name = "About"
+    url = "/about"
+[[menu.social]]
+    pre = "<i class='fa fa-twitter'></i>"
+    url = "http://www.twitter.com/tojans"
+    identifier = "twitter"
+[[menu.social]]
+    pre = "<i class='fa fa-github'></i>"
+    url = "http://www.github.com/tojans"
+    identifier = "github"
+[[menu.social]]
+    pre = "<i class='fa fa-linkedin'></i>"
+    url = "http://www.linkedin.com/in/tomjanssens"
+    identifier = "linkedin"
+[[menu.social]]
+    pre = "<i class='fa fa-rss'></i>"
+    url = "/index.xml"
+    identifier = "atom"
