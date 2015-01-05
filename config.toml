@@ -2,6 +2,8 @@ baseurl="http://tojans.me/"
 title="Tom's ramblings"
 footnotereturnlinkcontents="↩"
 theme="redlounge"
+disqusShortname = "tojansramblings"
+
 [permalinks]
   blog="/blog/:year/:month/:day/:slug/"
 [params]
