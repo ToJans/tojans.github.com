@@ -1,0 +1,10 @@
+baseurl="http://tojans.me/"
+title="Tom's ramblings"
+footnotereturnlinkcontents="↩"
+[permalinks]
+  post="/blog/:year/:month/:title/"
+[params]
+  Subtitle="Random opinionated blurbs"
+  AuthorName="Tom Janssens"
+  GitHubUser="tojans"
+  SidebarRecentLimit=5
