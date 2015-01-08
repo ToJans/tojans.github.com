@@ -70,7 +70,7 @@ In case you'd still want some humble tips despite my confession as a fraud, feel
 
 ## And finally
 
-A retorical question: if a person or company is offering start-up consultancy, why would their opinion be any better than yours?
+A rhetorical question: if a person or company is offering start-up consultancy, why would their opinion be any better than yours?
 
 If a company is truly an expert in converting ideas into viable businesses, wouldn't they spend their time launching one product after another, as opposed to consulting for you at an hourly/fixed rate?
 
