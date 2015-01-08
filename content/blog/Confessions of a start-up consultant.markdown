@@ -6,9 +6,6 @@ title = "Confessions of a start-up consultant"
 
 ![If you're a fraud, you might as well go all the way!](http://media.salon.com/2014/01/wolf_wall_street2.jpg)
 
-Most start-up consultants are a fraud; let me tell you why...
-
-
 ## About a year ago
 
 I was talking to one of my business mentors; he asked:
