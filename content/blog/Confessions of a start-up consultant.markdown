@@ -79,3 +79,16 @@ Signing off,
 Tom
 
 _Former Start-up Consultant Imposter_
+
+<a id="update"><h2>Update</h2></a>
+
+Yves mentioned some things on twitter, and I think he might have a good point: 
+
+<blockquote class="twitter-tweet" lang="nl"><p><a href="https://twitter.com/ToJans">@ToJans</a> When you gave those advices,years ago,was it honest, without any intention to harm? If yes you then did a honest job !</p>&mdash; ylorph (@ylorph) <a href="https://twitter.com/ylorph/status/553518250185981952">9 januari 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-conversation="none" lang="nl"><p><a href="https://twitter.com/ToJans">@ToJans</a> and don&#39;t call yourself &#39;Fraud&#39; retroactively. you, eventually, were maybe incorrect.</p>&mdash; ylorph (@ylorph) <a href="https://twitter.com/ylorph/status/553518581145956352">9 januari 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+Guess I wasn't being an imposter after all...
