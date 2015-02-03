@@ -24,7 +24,7 @@ If you happen to work for people who lead by terror, you might find some comfort
 
 Have a debt with the mob, and they will not bother you for a year, until all of a sudden they point a gun at your head.
 
-Ignore technical debt you and are in a similar situation: it will come and haunt you at the worst possible moment.
+Ignore technical debt and you are in a similar situation: it will come and haunt you at the worst possible moment.
 
 Whenever people tell you refactoring is optional, give them this quote.
 
