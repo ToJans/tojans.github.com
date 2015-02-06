@@ -1,9 +1,7 @@
 +++
 Categories = []
-Description = ""
-Tags = []
+layout = "post"
 date = "2015-02-03T09:31:12+01:00"
-menu = "main"
 title = "My favorite Ziobrando quotes"
 +++
 
