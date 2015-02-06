@@ -119,9 +119,9 @@ I see the same symptoms over and over again: whenever we learn a new tech/langua
 
 I remember that, when I was about the age of 7, I learned programming by typing the sourcecode that I had in a book. By changing the parameters, I slowly grasped more and more concepts.
 
-This is similar to monads in Haskel: don't learn the theory, just use theimplementations (`maybe`,`either`,...). If you add a `do` in front, it's just like imperative programming. That should get you started; you can always figure it out later.
+This is similar to monads in Haskell: don't learn the theory, just use theimplementations (`maybe`,`either`,...). If you add a `do` in front, it's just like imperative programming. That should get you started; you can always figure it out later.
 
-Also, find something smart, who can explain it in a way you can understand it. When I was looking for someone who could explain me what Haskell lenses were; [Scott](https://twitter.com/ScottWlaschin) told me: it's something you could  compare to property getters and setters. Aha-Erlebnis on the spot!
+Also, find someone smart, who can explain it in a way you can understand it. When I was looking for someone who could explain me what Haskell lenses were; [Scott](https://twitter.com/ScottWlaschin) told me: it's something you could  compare to property getters and setters. Aha-Erlebnis on the spot!
 
 Whenever I give a talk about [DDD](http://en.wikipedia.org/wiki/Domain-driven_design) to a crowd that's relatively unkown with DDD, I try to avoid as much DDD lingo as I can, because **making your audience feel stupid doesn't help to convey the message**.
 
