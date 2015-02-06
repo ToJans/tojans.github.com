@@ -7,7 +7,7 @@ comments: true
 categories: 
 ---
  
-Take an average programmer - let's call him Joe D. - and have him talk to a fictuous academic called Alan T.:
+Take an average programmer - let's call him Joe D. - and have him talk to a fictitious academic called Alan T.:
 
 ## What doesn't work
 
