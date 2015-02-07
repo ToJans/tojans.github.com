@@ -37,7 +37,7 @@ A: Well, it's hard to explain, but I'll try to explain it in a few ways. I assum
 
 J: Yes?
 
-A: Well, if you concatenate 2 lists of length 2 and 3, then Idris figures out a compile time that your resulting list has a length of 5, so doing something like `list[10]` will throw a compile time error...
+A: Well, if you concatenate 2 lists of length 2 and 3, then Idris figures out at compile time that your resulting list has a length of 5, so doing something like `list[10]` will throw a compile time error...
 
 J: Hmm, I think I've seen something similar in code contracts?
 
