@@ -66,6 +66,14 @@ This is how it works:
 [1]: Refund is for the session only, additional costs (f.e. rent for a meeting room) will not be refunded. Refunds will happen within a 30 workdays.
 </div>
 
+## Do you know someone who might be interested?
+
+Introduce me and my services to someone who might benefit from it, and if it all works out you receive a 20% commission. 
+
+This offer is also valid for customers, so if you know a few people that might be interested, your session might become really cheap!
+
+<a href="mailto:a@b.c?CC=tom@corebvba.be&Subject=I%20think%20you%20might%20be%20interested%20in%20Tom%27s%20services&Body=Hi%2C%0A%0AI%20think%20you%20might%20be%20interested%20in%20one%20of%20Tom%27s%20services%20over%20at%20http%3A//tojans.me/services%20.%0A%0AKind%20regards%2C%0A%0A_"> &lt;&lt;  Introduce someone to my services  &gt;&gt; <a>
+
 <hr/>
 
 # Available sessions
