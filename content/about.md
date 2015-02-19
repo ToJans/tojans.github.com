@@ -40,8 +40,6 @@ For more references, please check my [LinkedIn Profile](http://be.linkedin.com/i
 
 ## My organisation
 
-![Core : Software and consultancy](http://www.corebvba.be/blog/image.axd?picture=2010%2f2%2fCore.gif)
-
 Core BVBA - Nieuwegestraat 76 - B9620 Zottegem - Belgium
 
 +32 9 328.41.65 - Ond.Nr: BE 861.455.911

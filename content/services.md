@@ -103,7 +103,7 @@ Using the LIA protocol will enable you to:
 
 ### Interested?
 
-Here are the details, **take action now**:
+I can teach this to you and your team in a couple of hours, **take action now**:
 
 - Duration: **4 hours**.
 - Attendees: **3 to 12 people**, both from the business and the IT departement.
@@ -155,7 +155,7 @@ A typical event storming session should take about one to two hours.
 
 ### Model storming
 
-**Model storming** shows you how **approach** a smaller part of your organisation **from different angles by using different models** to represent problems and solutions.
+**Model storming** shows you how to **approach** a smaller part of your organisation **from different angles by using different models** to represent problems and solutions.
 
 This approach typically helps you to:
 
@@ -168,9 +168,9 @@ This approach typically helps you to:
 
 A typical model storming session should take about one to two hours.
 
-### Interested?
+### Interested? 
 
-Here are the details, take action now:
+I can teach this to you and your team in a couple of hours, **take action now**:
 
 - Duration: **4 hours**.
 - Attendees: **3 to 8 people**, both from the business and the IT departement.
