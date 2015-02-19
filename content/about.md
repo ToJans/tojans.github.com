@@ -1,10 +1,8 @@
 ---
-layout: page
 title: "About me"
-date: "2013-06-21" 
-comments: false
-sharing: true
-footer: true
+nocomment: true
+nodate: true
+nopaging: true
 ---
 I solve business problems by building software and help organisations to get better at building software.
 
