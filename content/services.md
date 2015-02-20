@@ -47,7 +47,7 @@ I have **solid track record** when it comes to **picking emerging tech**: over t
 
 If you want more info about me or **verify my references**, please check my ["About me"](/about) page.
 
-## Feeling a bit hesitant? Does it sound to good to be true? <a id="refund">&nbsp;</a>
+## Feeling a bit hesitant? Does it sound too good to be true? <a id="refund">&nbsp;</a>
 
 
 I am so confident about these approaches that I provide **a full money-back guarantee**.
