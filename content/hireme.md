@@ -45,7 +45,7 @@ A use an independent, pragmatic, bottom-up approach, in several phases:
 
 # My background:
 
-As for software development, I have a background in TDD, BDD, DDD, CQRS, C#, F#, Erlang and a bit of Haskell.
+As for software development, I have a background in TDD, BDD, DDD, CQRS, C#, F#, Erlang, JavaScript and a bit of Haskell.
 
 During my career as an employee, I have been both a software developer, a project manager, an Oracle DBA as an IT manager. 
 
