@@ -12,7 +12,7 @@ nopaging = true
 Are you looking for someone to:
 
 - Tackle a software/legacy project that nobody wants to touch? 
-- Build a small product you want to be developed from start to finish?
+- Build a small product that needs to be developed from start to finish?
 
 **I'm your man and [I have a ton of references to prove it](/about/#toc_1).**
 
