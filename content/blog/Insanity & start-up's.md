@@ -19,7 +19,7 @@ In order to outperform your competitors by such numbers, your company will need 
 
 The first-mover advantage (a.k.a. technological leadership) is a well known concept that can be applied to almost everything:
 
-When you are the first one to do something, you have a monopoly-like status on the market, which comes with all the advantages a monopoly gives (i.e. huge profite margins, exclusivity, effortlessly growning user base...).
+When you are the first one to do something, you have a monopoly-like status on the market, which comes with all the advantages a monopoly gives (i.e. huge profite margins, exclusivity, effortlessly growing user base...).
 
 As others notice your new market, they try to enter it, but usually as a first-mover you have already built a well-known brand and a huge technological lead over future competitors, which makes it hard for them to enter the market.
 
@@ -110,7 +110,9 @@ Don't copy their stories, but use them as a source for inspiration.
 
 # In conclusion
 
-The start-up scene is there, and it's alive and kicking. However, I wouldn't get to much involved, as you might end up investing all your time in yak-shaving as opposed to building your product and market share.
+The start-up scene is there, and it's alive and kicking. 
+
+However, I wouldn't get to much involved, as you might end up investing all your time in yak-shaving as opposed to building your product and market share.
 
 While you can spend a lot of time in start-up scene, don't forget why you are there: to build a product.
 
