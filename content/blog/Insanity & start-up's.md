@@ -1,6 +1,6 @@
 +++
 date = "2015-05-07T07:06:00+02:00"
-title = "Insanity & start up's"
+title = "Insanity & start-up's"
 +++
 
 VCs are looking for start-ups who outperform their competitors not by a ten-fold, but at least a hundred- or a thousand-fold.
