@@ -1,6 +1,6 @@
 +++
 date = "2015-05-07T07:06:00+02:00"
-title = "Insanity & start-up's"
+title = "Insanity & start-ups"
 +++
 
 VCs are looking for start-ups who outperform their competitors not by a ten-fold, but at least a hundred- or a thousand-fold.
@@ -78,9 +78,18 @@ Examples:
 
 # How is this related to start-ups & insanity?
 
+
 A lot of the successful start-ups have at least one of these advantages, and the most succesful have all of them.
 
-The way they became like that, is by doing their own thing, and not by listening to others.
+But, the way they became like that, is by doing their own thing, and not by listening to others.
+
+In order for a start-up to be successful, it has to be different from the other 99% of start-ups. That's where insanity comes in:
+
+> __Insanity: doing the same thing over and over again and expecting different results.__
+
+> ___Albert Einstein___
+
+If you want to succeed, you need to be different.
 
 ## "Don't believe the hype" - _Public Enemy_
 
@@ -107,6 +116,15 @@ After all, knowledge has become a commodity, and we should take the full advanta
 However, I would be wary of any "this is the way you should do it" advice, as in most cases you will not outperform your competitors by doing the same thing others do.
 
 Don't copy their stories, but use them as a source for inspiration.
+
+### EDIT
+
+Or, as Yves put it:
+
+<blockquote class="twitter-tweet" lang="nl"><p lang="en" dir="ltr"><a href="https://twitter.com/ToJans">@ToJans</a> ok if I sum some of this up as &quot;Ask for experience not advice&quot; ?</p>&mdash; ylorph (@ylorph) <a href="https://twitter.com/ylorph/status/596232226813116416">7 mei 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 
 # In conclusion
 
