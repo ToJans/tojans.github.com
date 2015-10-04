@@ -5,6 +5,7 @@ title = "Services"
 nocomment = true
 nodate = true
 nopaging = true
+draft = true
 +++
 
 # Get better at building software
@@ -41,7 +42,7 @@ I have **solid track record** when it comes to **picking emerging tech**: over t
 - Dependent typing
 - F# / Fsharp
 - Erlang
-- Haskell 
+- Haskell
 - Idris
 - ...
 
@@ -58,7 +59,7 @@ This is how it works:
 - We **set a date and place**.
 - You **transfer the amount** mentioned on the invoice.
 - You and your team **enjoy the session**.
-- You **provide feedback** after the session. 
+- You **provide feedback** after the session.
 
 **If you are not satisfied after the session**, you receive a credit note on the spot, and **you will get your money back!** [1]
 
@@ -68,7 +69,7 @@ This is how it works:
 
 ## Do you know someone who might be interested?
 
-Introduce me and my services to someone who might benefit from it, and if it all works out you receive a 20% commission. 
+Introduce me and my services to someone who might benefit from it, and if it all works out you receive a 20% commission.
 
 This offer is also valid for customers, so if you know a few people that might be interested, your session might become really cheap!
 
@@ -176,7 +177,7 @@ This approach typically helps you to:
 
 A typical model storming session should take about one to two hours.
 
-### Interested? 
+### Interested?
 
 I can teach this to you and your team in a couple of hours, **take action now**:
 
