@@ -1,6 +1,10 @@
 @hugo.exe
+
 @cd public
-@git add .
+
+@git add -A .
 @git commit -m "another publish"
+
 @git push origin master
+
 @cd ..
