@@ -7,19 +7,26 @@ title = "Hangman in Haskell"
 
 +++
 
-As I noticed a [question for a more idiomatic `Haskell` version of the game `Hangman` on
+As I noticed a [question for a more idiomatic **Haskell** version of the game **Hangman** on
 codereview.stackoverflow.com](http://codereview.stackexchange.com/questions/106485/hangperson-in-haskell?atw=1),
  I decided to give it a go; this is the result:
 
+### Note
+
+This article has been [posted on Reddit's Haskell channel](https://www.reddit.com/r/haskell/comments/3nfook/my_version_of_hangman_in_haskell_feedback_welcome/), and gradual improvements were made on this article
+based on tips in the threads, so feel free to check these.
+
 ## Tips
 
-Most idiomatic Haskell code I see has a very high `signal to noise ratio`. In your code I have to read every single line and figure out what it does in my head.
+Most idiomatic Haskell code I see has a very high **signal to noise ratio**. In your code I have to read every single line and figure out what it does in my head.
 
-You can achieve this by making a lot of tiny functions (after all, `composition is key` for a functional program), and use as much of the `domain language` as possible. These tiny functions don't need to stand on their own; using `let x=... in ...` or `where x=...` tends to help a lot.
+You can achieve this by making a lot of tiny functions (after all, **composition is key** for a functional program), and use as much of the **domain language** as possible. These tiny functions don't need to stand on their own; using `let x=... in ...` or `where x=...` tends to help a lot.
 
-Also, try to figure out what state you need to keep, and name it. I see a lot of functional programmers design their apps `types-first`. Having an explicit model that doesn't allow faulty state tends to help big-time.
+Also, try to figure out what state you need to keep, and name it. I see a lot of functional programmers design their apps **types-first**. Having an explicit model that doesn't allow faulty state tends to help big-time.
 
-Make sure you don't add state you can calculate from other state, use functions for that, otherwise your data structure might get inconsistent.
+Make sure you don't add state you can calculate from other state, use functions for that, otherwise your data structure might get inconsistent. Old dogs refer to this as **normalisation**. Normalisation used to be
+a necessity because storage was expensive back in the days, but not any longer. However, in code, it is better
+to still respect this rule.
 
 AFAIK tuples should mostly be used inside functions, but never exposed, except maybe for the most trivial cases like key-value pairs, and even that is debatable... After all, how much work is it to define `data KeyValuePair a b= KeyValuePair a b`?
 
