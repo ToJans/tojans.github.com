@@ -2,7 +2,7 @@
 date = "2015-10-02T12:08:56+02:00"
 draft = false
 title = "Propositions as types and the future of programming"
-
+slug = "propositions-as-types"
 +++
 
 ![Tweet from Leroy Jetson in 2115](/images/jetsons.png)

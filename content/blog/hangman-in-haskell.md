@@ -4,6 +4,7 @@ Description = "A Haskell implementation of the hangman game"
 Tags = ["Development", "Haskell"]
 date = "2015-10-04T10:23:42+02:00"
 title = "Hangman in Haskell"
+slug ="hangman-in-haskell"
 
 +++
 

@@ -2,6 +2,7 @@
 Description = ""
 date = "2015-03-06T11:00:26+01:00"
 title = "Building your own product"
+slug = "building-your-own-product"
 +++
 
 ## Phase 0

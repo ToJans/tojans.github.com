@@ -1,11 +1,12 @@
 +++
 date = "2015-05-07T07:06:00+02:00"
 title = "Insanity & start-ups"
+slug = "insanity-and-start-ups"
 +++
 
 VCs are looking for start-ups who outperform their competitors not by a ten-fold, but at least a hundred- or a thousand-fold.
 
-It is hard to predict which companies will evolve in this way, but one thing is well-known: your company will have to be fundamentally different than everyone else's in order to reach such ratios. 
+It is hard to predict which companies will evolve in this way, but one thing is well-known: your company will have to be fundamentally different than everyone else's in order to reach such ratios.
 
 # Key differences in succesful start-ups
 
@@ -93,7 +94,7 @@ If you want to succeed, you need to be different.
 
 ## "Don't believe the hype" - _Public Enemy_
 
-In times of gold-digger madness, the organisations that have the best profit/risk ratio are the ones that provide shovels and tools, not the ones who actually dig for gold. 
+In times of gold-digger madness, the organisations that have the best profit/risk ratio are the ones that provide shovels and tools, not the ones who actually dig for gold.
 
 I had the same ethical question as a software-/product consultant as well: "if I know so well how to build a product, than why am I not building a product myself?".
 
@@ -128,7 +129,7 @@ Or, as Yves put it:
 
 # In conclusion
 
-The start-up scene is there, and it's alive and kicking. 
+The start-up scene is there, and it's alive and kicking.
 
 However, I wouldn't get to much involved, as you might end up investing all your time in yak-shaving as opposed to building your product and market share.
 

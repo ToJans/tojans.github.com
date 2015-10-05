@@ -2,6 +2,7 @@
 Description = ""
 date = "2015-01-08T16:19:46+01:00"
 title = "Confessions of a start-up consultant"
+slug = "confessions-of-a-start-up-consultant"
 +++
 
 ![If you're a fraud, you might as well go all the way!](http://media.salon.com/2014/01/wolf_wall_street2.jpg)
@@ -33,9 +34,9 @@ As I start suggesting some people, I see him gazing away. As we go a long way ba
 
 ![BAM!](http://www.ademloos.be/sites/default/files/imagecache/voorvertoning-afbeeldingen-180x180px/bamgedr_0.jpg)
 
-This was so blatantly obvious that I was ashamed that I didn't think about it: if you want to find somebody who's good at something, look for a proven track record! 
+This was so blatantly obvious that I was ashamed that I didn't think about it: if you want to find somebody who's good at something, look for a proven track record!
 
-I help a lot of people who ask me for start-up advice. Maybe it's because I've failed and blogged about these failures that people come to me. 
+I help a lot of people who ask me for start-up advice. Maybe it's because I've failed and blogged about these failures that people come to me.
 
 It was only **after** we had that talk that I realized that I was a fraud.
 
@@ -63,7 +64,7 @@ About a month after I had this talk, I got an idea, sold it, and spent almost al
 
 In case you'd still want some humble tips despite my confession as a fraud, feel free to check these slides:
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/41626693" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> 
+<iframe src="//www.slideshare.net/slideshow/embed_code/41626693" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 
 ## And finally
 
@@ -82,7 +83,7 @@ _Former Start-up Consultant Imposter_
 
 <a id="update"><h2>Update</h2></a>
 
-Yves mentioned some things on twitter, and I think he might have a good point: 
+Yves mentioned some things on twitter, and I think he might have a good point:
 
 <blockquote class="twitter-tweet" lang="nl"><p><a href="https://twitter.com/ToJans">@ToJans</a> When you gave those advices,years ago,was it honest, without any intention to harm? If yes you then did a honest job !</p>&mdash; ylorph (@ylorph) <a href="https://twitter.com/ylorph/status/553518250185981952">9 januari 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
