@@ -9,6 +9,6 @@ title = "DDD elevator pitch"
 <h3>DDD elevator pitch</h3>
 <p>In business, you make fine-grained adjustments all the time, in order to stay ahead of the competition.</p>
 <p>Software tends to be rigid and hard to change.</p>
-<p>Domain Driven Design tackles this paradox, and considers software a living thing - just like your business.</p>
+<p>Domain-Driven Design tackles this paradox, and considers software a living thing - just like your business.</p>
 <p>By making the implicit concepts from your business explicit, DDD will give your software the ability to keep up with the agility that your business requires.</p>
 </div>
