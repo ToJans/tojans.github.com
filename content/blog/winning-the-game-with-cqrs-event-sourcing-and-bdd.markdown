@@ -3,6 +3,7 @@ layout: post
 date: "2010-09-01"
 slug: "winning-the-game-with-cqrs-event-sourcing-and-bdd"
 title: Winning the game with CQRS/event sourcing and BDD
+categories: ["Development", "DDD"]
 ---
 
 <h1>Yes !! I did it !!!<br /></h1>

@@ -3,6 +3,7 @@ layout: post
 date: "2010-09-28"
 slug: "my-#cqrs-cookbook"
 title: 'My #CQRS cookbook'
+Tags: ["Development", "DDD"]
 ---
 
 <p>Here is my personal take on how I interpret all things CQRS...</p>
@@ -23,7 +24,7 @@ title: 'My #CQRS cookbook'
 <li>A  controller function can either:          
 <ul>
 <li>Query a viewmodel and send it to the UI</li>
-<li>Run a command using the following sequence<br /> 
+<li>Run a command using the following sequence<br />
 <ul>
 <li>Build a command</li>
 <li>Push the command to the bus and verify whether it was a valid command</li>

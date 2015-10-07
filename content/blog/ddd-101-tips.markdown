@@ -4,7 +4,7 @@ date: "2013-11-24"
 slug: "ddd-101-tips"
 title: "DDD 101 tips"
 comments: true
-categories: 
+categories: ["Development", "DDD"]
 ---
 
 Here are my tips for getting started with DDD; they were written as [a response to a question in the BE-DDD newsgroup](https://groups.google.com/d/msg/be-ddd/uI5t9BsvWjc/mKjbDybf62cJ):

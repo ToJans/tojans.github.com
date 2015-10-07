@@ -4,7 +4,7 @@ date: "2013-10-19"
 slug: "dddbe-meetup-2-legacy-inferno"
 title: "DDDBE meetup #2 - Legacy Inferno"
 comments: true
-categories: 
+categories: ["Development", "DDD"]
 ---
 ![This is probably what it looks just before matter turns into antimatter](http://i.snag.gy/azzFo.jpg)
 
@@ -31,7 +31,7 @@ I could try explaining this, but I would assume that our presenter [@Felienne](h
 
 ## TL;DR
 
-Turns out a lot of companies are using Excel as a tool to write software, and it is one of biggest sources of hidden legacy in the enterprise. 
+Turns out a lot of companies are using Excel as a tool to write software, and it is one of biggest sources of hidden legacy in the enterprise.
 She even told us about a horror story where Excel files were actually used to monitor and manage a system that handled the distribution of gasses like argon...
 And apparently that is just the tip of the iceberg, and there are a lot more of these stories to be found over at [eusprig.org](http://eusprig.org/horror-stories.htm).
 
@@ -62,11 +62,11 @@ and you will see directly whether your code works or not.
 This might seem like an obvious thing, but it is not! Consider all the things people are doing in the latest decade to shorten the feedback cycle of their
 unit tests; this is a big thing.
 
-In fact, I think there is one guy who realized this, and he actually started building an IDE that provides instant feedback: 
+In fact, I think there is one guy who realized this, and he actually started building an IDE that provides instant feedback:
 
 <iframe width="480" height="360" src="http://www.kickstarter.com/projects/ibdknox/light-table/widget/video.html" frameborder="0" scrolling="no"> </iframe>
 
-This is an IDE that allows you to write software in the same way Excel works, and, to be honest, it looks awesome!! 
+This is an IDE that allows you to write software in the same way Excel works, and, to be honest, it looks awesome!!
 (While writing this post, I noticed [an alpha is available](http://www.lighttable.com/), so that's another thing on my todo list.)
 
 ## Software design principles apply
@@ -130,7 +130,3 @@ Tom
 Expert in Tomfoolery
 
 PS: if you do find any errors in this text or would like to add something, feel free to do so by editing this file [here](https://github.com/ToJans/tojans.me.dev/blob/master/source/_posts/2013-10-19-DDDBE-meetup-2-legacy-inferno.markdown) and sending me a pull request...
-
-
-
-

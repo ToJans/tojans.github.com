@@ -4,7 +4,7 @@ date: "2014-02-17"
 slug: "why-bad-software-architecture-is-easy-to-monetize"
 title: "Why bad software architecture is easy to monetize"
 comments: true
-categories: 
+Tags: ["Development", "DDD"]
 ---
 
 This morning I received yet another "interesting" job offer, which looked like this:
@@ -50,7 +50,7 @@ It is now winter. Your tenants start complaining about lack of insulation, and t
 
 ## Not finished yet
 
-Having found a way to achieve what he wants, the tenant now figured out that your plexi glass windows are not compliant with national standards. 
+Having found a way to achieve what he wants, the tenant now figured out that your plexi glass windows are not compliant with national standards.
 Disappointed, you go back to the contractor, and he tells you he can add proper windows for another 30.000 USD. You realize there is no other alternative, so you decide to do it...
 
 ## Finally resolved? Or not?
@@ -59,11 +59,11 @@ After applying proper windowing, you think you finally nailed it... But a few mo
 
 # Conclusion
 
-Building software works in a similar way. A lot of software shops will promise you heaven, and they might deliver something that looks like heaven, but in the long run it will **always** cost you money. 
+Building software works in a similar way. A lot of software shops will promise you heaven, and they might deliver something that looks like heaven, but in the long run it will **always** cost you money.
 
 In housing, usually stories like these are not possible, because there is a minimal - legal or other - standard that housing needs to comply to.
 
-However, in software there is no such thing. Writing software software to handle your core domain (i.e. the thing that makes you different from your competitors) is never finished, because you need to change in order to stay ahead of the competition. 
+However, in software there is no such thing. Writing software software to handle your core domain (i.e. the thing that makes you different from your competitors) is never finished, because you need to change in order to stay ahead of the competition.
 
 If you opt for the cheap, short term solution, it will cost you a lot more money in the long run.
 
@@ -75,7 +75,7 @@ Software architecture can not be fixed, it needs to be tailored to your specific
 
 While building a house might also have a lot of unknowns, the biggest part of houses that are being built are pretty standard; it are usually only the exceptional houses that go multiple times over budget. When writing software for your core domain, your software is custom; if it would not be, this would imply that you are the same as your competitors.
 
-## Some might say: "we can configure this in our framework/application". 
+## Some might say: "we can configure this in our framework/application".
 
 That is in fact even worse, because usually your core domain (what provides your competitive advantage), will now be written in a language that is specific to your vendor's product. This will create an even bigger vendor lock-in.
 

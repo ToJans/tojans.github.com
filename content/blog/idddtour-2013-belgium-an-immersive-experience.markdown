@@ -6,6 +6,7 @@ title: IDDDtour 2013 Belgium - an immersive experience
 comments: true
 sharing: true
 footer: true
+categories: ["Development", "DDD"]
 ---
 
 <h3>Introduction: what &amp; how?</h3>

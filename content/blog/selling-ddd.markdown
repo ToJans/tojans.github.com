@@ -4,10 +4,10 @@ date: "2014-02-24"
 slug: "selling-ddd"
 title: "Selling DDD"
 comments: true
-categories: 
+Tags : ["Development", "DDD"]
 ---
 
-A little while ago, we gave a [series of short talks called "DDD Basics"](http://www.eventbrite.com/e/dddbe-5-ddd-basics-registration-9912037170) 
+A little while ago, we gave a [series of short talks called "DDD Basics"](http://www.eventbrite.com/e/dddbe-5-ddd-basics-registration-9912037170)
 for the [Belgian Domain-driven design community](http://domaindriven.be/).
 The focus was on strategic design.
 

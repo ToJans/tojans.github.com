@@ -3,6 +3,7 @@ layout: post
 date: "2011-11-28"
 slug: "continuous-thinking-cqrs-explained-to-a-10-year-old"
 title: 'Continuous thinking: CQRS explained to a 10-year old'
+categories: ["Development", "DDD"]
 ---
 
 <h3>Introduction</h3>

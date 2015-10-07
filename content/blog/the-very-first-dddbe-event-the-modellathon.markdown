@@ -4,7 +4,7 @@ date: "2013-09-04"
 slug: "the-very-first-dddbe-event-the-modellathon"
 title: "The very first #DDDBE event: the modellathon"
 comments: true
-categories: 
+Tags: ["Development", "DDD"]
 ---
 
 This is my personal review of the [@DDDBE](https://twitter.com/dddbe) inaugural meeting: a [modellathon](https://modellathon.eventbrite.com/).
@@ -18,7 +18,7 @@ As we were sitting together on the train with some of the [#CQRSBeers](https://t
 
 Somehow the idea for the first workshop emerged: instead of having hackathons (hacking away on code), why not have a modellathon (hacking away on domain models).
 
-### UPDATE 
+### UPDATE
 Apparently the modellathon term was [Jef Claes](https://twitter.com/JefClaes)' idea !
 
 <blockquote class="twitter-tweet"><p><a href="https://twitter.com/ToJans">@ToJans</a> For the record, I coined the term on our way back from DDDX ;)</p>&mdash; Jef Claes (@JefClaes) <a href="https://twitter.com/JefClaes/statuses/375266359875481600">September 4, 2013</a></blockquote>
@@ -38,15 +38,15 @@ This was not your average fictuous model, we even received some official Kazachs
 <blockquote class="twitter-tweet"><p><a href="https://twitter.com/search?q=%23DDDBE&amp;src=hash">#DDDBE</a> is starting, and I have the strong feeling that <a href="https://twitter.com/DDD_Borat">@DDD_Borat</a> has his filthy fingers in this ;) <a href="http://t.co/q1LjjACz4d">pic.twitter.com/q1LjjACz4d</a></p>&mdash; Marco Heimeshoff (@Heimeshoff) <a href="https://twitter.com/Heimeshoff/statuses/374940972167495680">September 3, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-We were divided into groups of 4 people, trying to make sure that at least one person having experience in domain modelling was in every group. 
+We were divided into groups of 4 people, trying to make sure that at least one person having experience in domain modelling was in every group.
 
-Just to elaborate on the "experienced" part: when we asked who had experience in domain modelling, not a lot of fingers went up, but when we asked who had managed to build a domain model in the past, that somehow turned out to be completely wrong, some more fingers went up. 
+Just to elaborate on the "experienced" part: when we asked who had experience in domain modelling, not a lot of fingers went up, but when we asked who had managed to build a domain model in the past, that somehow turned out to be completely wrong, some more fingers went up.
 
 The role of the expert was just to find a way to get started, but once you have the juices flowing, the expert's opinion is as valuable as anyone else's. So it is more about facilitating the process then being good in the whole modelling part.
 
 # On to the modelling part
 
-During the first pomodoro of the modellathon (after a general introduction by the domain experts), people started experimenting with different kinds of modelling at different groups. 
+During the first pomodoro of the modellathon (after a general introduction by the domain experts), people started experimenting with different kinds of modelling at different groups.
 
 A lot of people were trying to use the event storming approach - as they had experienced the value of the technique in a really great workshop with [Alberto Brandolini](https://twitter.com/ziobrando) during [Vaughn Vernon](https://twitter.com/VaughnVernon)'s [IDDD tour](http://idddtour.com/) in [Belgium](http://tojans.me/blog/2013/05/01/idddtour-2013-belgium-an-immersive-experience/).
 
@@ -76,13 +76,13 @@ So we did, and by building this mockup for the evaluation part, we managed to ge
 We noticed the higher level overview might have been all that was required for this particular bounded context or subdomain, because it made sense by mocking up the UI.
 
 The most interesting part however, is how we progressed from mapping nouns  from the specs to trying to find out why the system was needed ([Root cause analysis/5 why's - anyone?](http://en.wikipedia.org/wiki/5_Whys)).
-Then, by modelling our UI mockup, we were able to verify whether our assumed domain model would be usable in the real world... 
+Then, by modelling our UI mockup, we were able to verify whether our assumed domain model would be usable in the real world...
 
 # Conclusion
 
 Well, this was a really interesting exercise to perform; I think the biggest lesson in all this, was to experiment, and not being afraid of starting over, especially using a different modelling approach. As we all observed in the end, and Mathias mentioned in the beginning:
 
->  "essentially, all models are wrong, but some are useful" - George Edward Pelham Box 
+>  "essentially, all models are wrong, but some are useful" - George Edward Pelham Box
 
 Hence, we could coin the concept model storming (initally mentioned by Mr. Brandolini I assume - give credit when it's due -) as the best approach to doing things: find several ways to model your domain, and gain new insights every time you do it.
 
@@ -118,4 +118,3 @@ This just came in; _he who shall not be named_ A.K.A. the Mob/Godfather of Event
 
 <blockquote class="twitter-tweet"><p>Fantastic blog posts from <a href="https://twitter.com/ToJans">@ToJans</a> <a href="http://t.co/AyV1SxUlvZ">http://t.co/AyV1SxUlvZ</a> and <a href="https://twitter.com/mathiasverraes">@mathiasverraes</a> <a href="http://t.co/PwG2NMR4Jg">http://t.co/PwG2NMR4Jg</a> about <a href="https://twitter.com/search?q=%23eventstorming&amp;src=hash">#eventstorming</a> &amp; <a href="https://twitter.com/search?q=%23modelstorming&amp;src=hash">#modelstorming</a></p>&mdash; ziobrando (@ziobrando) <a href="https://twitter.com/ziobrando/statuses/375725315730837506">September 5, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-

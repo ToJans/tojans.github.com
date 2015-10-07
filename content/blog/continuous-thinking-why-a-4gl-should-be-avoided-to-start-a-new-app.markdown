@@ -3,6 +3,7 @@ layout: post
 date: "2011-05-30"
 slug: "continuous-thinking-why-a-4gl-should-be-avoided-to-start-a-new-app"
 title: 'Continuous thinking: why a 4GL should be avoided to start a new app'
+categories: ["Development", "DDD"]
 ---
 
 <h3>Introduction<br /></h3>

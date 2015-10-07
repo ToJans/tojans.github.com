@@ -4,9 +4,9 @@ date: "2015-02-06"
 slug: "how-to-explain-dependent-typing"
 title: "How to explain dependent typing"
 comments: true
-categories: 
+categories: ["Development", "DDD"]
 ---
- 
+
 Take an average programmer - let's call him Joe D. - and have him talk to a fictitious academic called Alan T.:
 
 ## What doesn't work
@@ -81,7 +81,7 @@ J: That's a relatively new concept, can you give me another example?
 
 A: Sure, think about `string.reverse`: the length should be equal every time, reversing a string twice should result in the original string etc...
 
-J: Ah ok, I think I get it; if some random value doesn't comply with the rules you defined, you need to figure out if it's the rules that are wrong, or your behavior. 
+J: Ah ok, I think I get it; if some random value doesn't comply with the rules you defined, you need to figure out if it's the rules that are wrong, or your behavior.
 
 A: Yes, if the rules are set for a while, and a test crashes, it is usually the behavior that will be wrong...
 
@@ -99,7 +99,7 @@ A: You can do that with your types to; you can actually prove that your types "w
 
 J: Hmmz sounds interesting, but also complicated... How would I get started and how long would it take to get up to speed with this.
 
-A: Learning to prove something might take a bit longer, but you could start reaping the benefits by writing code in Idris using some predefined dependent types, like `Fin`, which defines natural numbers within the range `0..N-1`. 
+A: Learning to prove something might take a bit longer, but you could start reaping the benefits by writing code in Idris using some predefined dependent types, like `Fin`, which defines natural numbers within the range `0..N-1`.
 
 J: ?
 
