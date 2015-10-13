@@ -173,7 +173,7 @@ Now, as Haskellers do not only want to use `sum` on a `list` (i.e. `array`), but
 sum :: (Foldable t, Num a) => t a -> a
 sum = foldl (+) 0
 ```
-Which means we can now use the sum function on any `Foldable` instance that contains numbers.
+Because there exists a `Foldable` instance for a  `list`, we can use the "Foldable `sum`" function, and remove the `sum` function that only works on lists.
 
 ## So what is controversial about this proposal?
 
