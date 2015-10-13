@@ -53,7 +53,7 @@ In Haskell we'd write it like this:
 
 ```Haskell
 concat :: [[a]] -> [a]
-concat = foldl (\acc val -> acc ++ val) []
+concat vals = foldl (\acc val -> acc ++ val) [] vals
 
 values = [[1,2,3],[4,5,6]]
 
@@ -118,6 +118,7 @@ prod tree = prodAcc tree 1
 You might see a pattern here. Haskellers **hate** copy paste programming, so they extract what is common.
 
 If you take a look at what is common and different, you see only two differences:
+
 - We use `+` and `*`
 - We start from `0` and `1`
 
