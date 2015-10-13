@@ -71,10 +71,10 @@ instances into a single instance; for example a `sum` : it starts with an initia
 
 ```Haskell
 sum :: Num a => [a] -> a
-sum = foldl (\acc val -> acc + val) 0
+sum vals = foldl (\acc val -> acc + val) 0 vals
 
 product :: Num a => [a] -> a
-product = foldl (\acc val -> acc * val) 1
+product vals = foldl (\acc val -> acc * val) 1 vals
 ```
 
 Now, imagine that you have a `binary tree structure` where a `node` contains either `a left and a right node` or `a leaf with a value` or an `empty node`:
