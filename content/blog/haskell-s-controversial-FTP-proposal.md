@@ -132,10 +132,10 @@ data Tree a = Node (Tree a) (Tree a)
 instance Foldable Tree where
   -- some code here
 
-sum :: Num a -> Tree a -> a
+sum :: Num a => Tree a -> a
 sum tree = foldl (\acc val -> acc + val) 0 tree
 
-prod :: Num a -> Tree a -> a
+prod :: Num a => Tree a -> a
 prod tree = foldl (\acc val -> acc * val) 1 tree
 ```
 
@@ -149,10 +149,10 @@ data Tree a = Node (Tree a) (Tree a)
 instance Foldable Tree where
   -- some code here
 
-sum :: Num a -> Tree a -> a
+sum :: Num a => Tree a -> a
 sum = foldl (+) 0
 
-prod :: Num a -> Tree a -> a
+prod :: Num a => Tree a -> a
 prod = foldl (*) 1
 ```
 
