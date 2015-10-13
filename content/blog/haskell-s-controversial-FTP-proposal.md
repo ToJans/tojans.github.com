@@ -8,6 +8,8 @@ title = "Foldable for non-Haskellers: Haskell's controversial FTP proposal"
 In the Haskell world, there is currently a big fuss about
 [the "Foldable/Traversable in Prelude"-proposal](https://wiki.haskell.org/Foldable_Traversable_In_Prelude).
 
+**Edit:** For the record: it **was** a proposal, and has been implemented in the current version of Haskell (GHC)
+
 As a non-Haskeller, you probably wonder what all the fuss is about.
 
 ## First things first: some context
