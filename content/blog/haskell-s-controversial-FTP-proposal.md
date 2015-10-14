@@ -116,7 +116,7 @@ concat values
 
 Notice that in the Haskell example the `concat` function is defined for a `list` of `lists`, i.e. `concat :: [[a]] -> [a]`.
 
-There is a well known functional paradigm called a `fold`, which allows you to convert something that has multiple value into a single value.
+There is a well known functional paradigm called a `fold`, which allows you to convert something that has multiple values into a single value.
 
 Let's take the example of a `sum`:
 
@@ -226,7 +226,7 @@ prod tree = foldl (\acc val -> acc * val) 1 tree
 >   - The type for this accumulator function remains `Num a => a -> a -> a`
 > - Replacing this in the original declaration, we now we end up with
 >   - `sum tree = foldl (+) 0 tree`
->   - The type declaration still is `sum :: Num a => Tree a -> a` so we know the function
+>   - The type declaration still is `sum :: Num a => Tree a -> a`
 > - As the function's parameters are similar once again, we can omit the `tree` part, so
 >   - `sum tree = foldl (+) 0 tree` is equivalent to `sum = foldl (+) 0`
 >   - The type declaration still is `sum :: Num a => Tree a -> a`
