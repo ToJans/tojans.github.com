@@ -277,10 +277,102 @@ Because there exists a `Foldable` instance for a  `list`, we can use the "Foldab
 
 ## So what is controversial about this proposal?
 
-People come from different backgrounds. When you talk about a `list`, people new in Haskell think about a sequence, and they can imagine what is happening.
+<strike>People come from different backgrounds. When you talk about a `list`, people new in Haskell think about a sequence, and they can imagine what is happening.
 
 However, due to the new signature (i.e. the `Foldable` thing), people new to Haskell might have a hard time to get started with Haskell, because they need to learn about
 the concept of `Foldable` first, so the barrier of entry is getting larger.
 
+
 In my opinion, it might be a little harder to grasp at first, but if, as a beginner, you are willing to just accept a few things without knowing why they are like they are,
-the barrier to entry shouldn't be much higher than before.
+the barrier to entry shouldn't be much higher than before.</strike>
+
+### UPDATE
+
+I assumed I understood what all the fuss was about, but apparently I did not. Luckily, [@bitemyapp](https://twitter.com/bitemyapp) went the extra mile to explain while it was wrong:
+
+<blockquote class="twitter-tweet" lang="nl"><p lang="en" dir="ltr">Either and (,) in Haskell are not arbitrary&#10;&#10;<a href="https://t.co/2yJ1NBjMvS">https://t.co/2yJ1NBjMvS</a></p>&mdash; Chris Allen (@bitemyapp) <a href="https://twitter.com/bitemyapp/status/656273487267389440">20 oktober 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+I'd suggest you to read his article, but I'll give you the recap here:
+
+Next to a `Foldable`, we also have a `Functor`. A `Functor` is something that you can `map over`, a structure that contains zero, one or more values. An example in GHCI:
+
+```Haskell
+Prelude> let inc = (1 +)
+Prelude> inc 5
+6
+Prelude> fmap inc [1,2,3]
+[2,3,4]
+Prelude> fmap inc (Just 5)
+Just 6
+Prelude> fmap inc Nothing
+Nothing
+Prelude> fmap inc (Right 4)
+Right 5
+Prelude> fmap inc (Left 3)
+Left 3
+```
+
+Just think of this as a `map` or `select (C#)` statement. In the example above we have the following statements:
+
+- `let inc = (1 +)`
+  - is of the type `inc :: Num a => a -> a`, so it takes a `Num` instance, and adds `1` to it?
+- `inc 5`
+  - returns `6`
+- `fmap inc [1,2,3]`
+  - returns `[2,3,4]`
+  - the container is a `List`, and the values in the list are `Num` instances.
+  - the type signature for `fmap` is : `fmap (a->b) -> [a] -> [b]`
+  - `fmap` takes a transformation function and a list, and returns a `List` containing the transformed values in the same order.
+  - For a `list`, Haskell's `fmap` is equivalent to `map`, which is equivalent to a C# `select` statement.
+  - In C#, `fmap` could be implemented for a list as `List<Tb> fmap<Ta,Tb>(Func<Ta,Tb> transform,List<Ta> list) => list.Select(transform).ToList()`.
+  - `Bifunctors`:
+    - The `Maybe` type is a type that either represents a value or nothing.
+      - this type was introduced to avoid null checking in all of your code.
+      - values are represented using `Just a` where a can be any value.
+      - nothing is represented using `Nothing`.
+      - when you want to change the value of a `Maybe`, you typically only want to change it, when it contains a value. If it does not contain a value, you just want to do nothing with it.
+      - how do we change the value of something in a container when using Haskell? Exactly: using `fmap`
+      - `fmap inc (Just 5)`
+        - returns `Just 6`, so it applied the `inc` function to the value of the `Maybe`
+      - `fmap inc Nothing`
+        - returns `Nothing`, because it doesn't make any sense to apply changes to a "null value"
+      - let's say we have a var called `maybeVal`, that has the type `Maybe Num`, so it is either `Nothing` or `Just x` where x is a number.
+      - if we want to either increment the value if it's defined, or just return a `0` if it is not, we could do it like this:
+      - `maybe 0 inc maybeVal`
+        - if `maybeVal` is `Nothing` it uses the first argument : `0`
+           - `maybe 0 inc Nothing` returns `0`
+        - if `maybeVal` has a value (`Just 5`), it applies the `inc` function to the value and returns that value, i.e. `6`
+          - `maybe 0 inc (Just 5)` returns `6`
+        - `fmap` is the `Functor` implementation, `maybe` is the `Bifunctor` implementation.
+    - the `Either` type
+      - Now, avoiding `null` checks everywhere is fun and all, but what if you would like to return some kind of error message in case a value is not defined?
+      - For this we have the `Either a b` type, that can return 2 different types:
+        - It can `Left a`, where `Left a` is typically an error message
+        - It can return a `Right b`, where `Right b` is similar to a `Just b`, so this contains the value.
+        - Let's say we have a function to parse a `date` from a `string`. We want it to return either the date, or an error message.
+          - this would be the type of the function: `parseDateFromString :: String -> Either Error Date`
+          - this would be equivalent to `Either<Error,Date> parseDateFromString(String)`
+          - in case there is a problem with the parsing we'd get return value like this: `Left (Error "Invalid date format; expected YYYY/MM/DD")`
+          - in case there is no problem  with the parsing we'd get the value like this: `Right (Date 2015 10 20)`
+        - What if we would like to print the year if it's a valid year, or display the error when it is not? Let's assume we have a value `eitherErrorOrDate`
+          - we would call `either displayError printYear eitherErrorOrDate`
+            - the type of `eitherErrorOrDate` would be `Either Error Date`
+            - for now, just take my word for it: a type of `IO ()` means: `something that interacted with the outside world, but didn't return any value`
+            - the type of the function `displayError` would be `Error -> IO ()`, so it takes an error, and implies a changed world when executed.
+            - the type of the function `printYear` would be `Date -> IO ()`, so it takes an error, and implies a changed world when executed.
+
+### Now what's wrong with the controversial FTP proposal:
+
+In a `Maybe` or an `Either`, it makes sense that you only want to `map` to the `Just` value or the `Right` value.
+
+Now, let's say you have a `Tuple`, and would map over this:
+
+- A tuple has the type `(a,b)`
+- So when you `fmap` `inc` over `(1,2)`, you'd expect a `(2,3)`, correct?
+- Well, you don't : GHCI returns a `(1,3)`
+- This is because a tuple can contain 2 different types, f.e. `("Hello",4)`
+- As an `fmap` can only take one type as an input parameter, they decided to go for the second element, so `fmap inc ("Hello",4)` returns `("Hello", 5)`.
+- This doesn't make sense, as the first element might be just as important in a tuple as the other, so this shouldn't have been a `Functor` in the first place.
+
+Thank you Chris for taking the time to explain this!
