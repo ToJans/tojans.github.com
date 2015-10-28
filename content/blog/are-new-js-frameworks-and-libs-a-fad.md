@@ -78,7 +78,7 @@ When you use jQuery, most of your code ends up something like this:
 <div id="some-div"></div>
 <input id="some-text"/>
 
-$(#someText).change( () => $("#some-div").html($("#some-text").val()));
+$("#someText").change( () => $("#some-div").html($("#some-text").val()));
 ```
 
 This gets old really fast, especially when you have a lot of UI to update.
@@ -142,6 +142,11 @@ So it has all the benefits of react, but without the ugly `setState` or the over
 And, by the way, your data no longer needs to be owned by a component; you can now have data as the root, and pass it in to your components. So there is no longer the need for a flux/redux architecture if you are using a rather straightforward app.
 
 Finally, vue.js buts the declarative back in the views. As react is basically javascript, you had to re-introduce things like if statements and for-loops in your jsx. This gets ugly really fast. Vue opted for attributes like `v-for` and `v-if`, which allow you to get rid of the ugly warts in your jsx files.
+
+**UPDATE**: here's an example why declarative is better in templates:
+
+<blockquote class="twitter-tweet" lang="nl"><p lang="en" dir="ltr"><a href="https://twitter.com/jen20">@jen20</a> here&#39;s an example: I need a loop, but I don&#39;t want to create a child component. also : closing brackets etc. <a href="https://t.co/CFhpO8N6Ug">pic.twitter.com/CFhpO8N6Ug</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/659364100795998208">28 oktober 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Finally, on learning libs and frameworks:
 
