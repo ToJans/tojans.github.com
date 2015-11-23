@@ -2,12 +2,12 @@
 Categories = ["Development", "Tesla"]
 Description = ""
 date = "2015-11-23T15:25:03+01:00"
-menu = "main"
-title = "Brain dump: How I'd implement Tesla's auto-pilot feature"
+slug = "tesla"
+title = "Brain dump: How I'd implement Tesla's Autopilot feature"
 
 +++
 
-I recently saw this tweet by Elon Musk:
+I recently saw this tweet by Elon Musk, who is looking for developers for their Autopilot feature:
 
 <blockquote class="twitter-tweet" lang="nl"><p lang="en" dir="ltr">We are looking for hardcore software engineers. No prior experience with cars required. Please include code sample or link to your work.</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/667517215390863360">20 november 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -39,11 +39,11 @@ We listen to the radio, and look around while driving, listen to other cars etce
 
 ## Flexible
 
-Cars will be in a lot of different environments, which might require different kind of auto-pilots in different circumstances.
+Cars will be in a lot of different environments, which might require different kind of Autopilots in different circumstances.
 
 ## Fully-automated, semi-automated and manual modes
 
-Whenever an auto-pilot is in doubt, he should anticipate and allow the driver to decide.
+Whenever an Autopilot is in doubt, he should anticipate and allow the driver to decide.
 
 # Implementation
 
@@ -63,7 +63,7 @@ This would probably include the following layers:
 
 Once you know where you're at and what your goal is, you can figure out what to do next. There would be several systems working in parallel, and than one "master system" that decides which outputs to use, and whether to defer them to the driver or perform the commands automatically.
 
-  - A hard-coded rule engine where every rule is based on the input of a few sensors, and only has simple output as well, f.e. accel (m²/s) and/or turn (degrees). The main motivation behind this engine would be comparable to "Conway's game of life" - [brag mode] Invented by Mr. Mel Conway, whom I spoke to during the #buildstufflt conference last week [/brag mode] - where simple rules can enable complex behavior.
+  - A hard-coded rule engine where every rule is based on the input of a few sensors, and only has simple output as well, f.e. accel (m²/s) and/or turn (degrees). The main motivation behind this engine would be comparable to "Conway's game of life", where simple rules can enable complex behavior.
   - One or more deep learning networks that takes into account the environment, location, weather, ... These would be based on the stats that are collected from cars all over the world.
   - A decision layer built on top of all the previous layers, that evaluates the situation and figures out what to do next:
     - no change.
@@ -74,7 +74,7 @@ Once you know where you're at and what your goal is, you can figure out what to 
 
 ## Providing feedback
 
-While the auto-pilot might only have a few potential outcomes, I do think it is important to visualize the whole process.
+While the Autopilot might only have a few potential outcomes, I do think it is important to visualize the whole process.
 
   - visualize what the car is thinking, so drivers can anticipate and understand the car's reactions.
   - Allows the car to do some things for himself, based on some heuristics that determine the safety of the current situation.
@@ -88,6 +88,6 @@ While the auto-pilot might only have a few potential outcomes, I do think it is 
 
 # Conclusion
 
-Well, that's it. That's how I'd probably get started on my first version of the auto-pilot. Of course, once you start implementing a system with this amount of inherent complexity, you will discover a lot of unknown unknowns, so I could easily imagine that extra layers and system might be added and removed as the system evolves.
+Well, that's it. That's how I'd probably get started on my first version of the Autopilot. Of course, once you start implementing a system with this amount of inherent complexity, you will discover a lot of unknown unknowns, so I could easily imagine that extra layers and system might be added and removed as the system evolves.
 
 Please not that this is a 60-minute brain dump, so don't take this to seriously. Anyway, Mr. Musk, if you'd like to know more: have your people call my people, maybe we can talk ;).
