@@ -141,7 +141,7 @@ So it has all the benefits of react, but without the ugly `setState` or the over
 
 And, by the way, your data no longer needs to be owned by a component; you can now have data as the root, and pass it in to your components. So there is no longer the need for a flux/redux architecture if you are using a rather straightforward app.
 
-Finally, vue.js buts the declarative back in the views. As react is basically javascript, you had to re-introduce things like if statements and for-loops in your jsx. This gets ugly really fast. Vue opted for attributes like `v-for` and `v-if`, which allow you to get rid of the ugly warts in your jsx files.
+Finally, vue.js puts the declarative back in the views. As react is basically javascript, you had to re-introduce things like if statements and for-loops in your jsx. This gets ugly really fast. Vue opted for attributes like `v-for` and `v-if`, which allow you to get rid of the ugly warts in your jsx files.
 
 **UPDATE**: here's an example why declarative is better in templates:
 
