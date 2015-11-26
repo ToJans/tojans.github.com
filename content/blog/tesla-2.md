@@ -3,7 +3,7 @@ Categories = ["Development", "Tesla"]
 Description = ""
 date = "2015-11-24T15:25:03+01:00"
 slug = "tesla-2"
-title = "Brain dump: How I'd implement Tesla's Autopilot feature - levels of AI"
+title = "Brain dump #2: How I'd implement Tesla's Autopilot feature - levels of AI"
 +++
 
 About two weeks ago, I decided to have some healthy life changes, and one of them is walking to my office. This walk takes about half an hour, so it is easy to fit this in my daily schedule.
