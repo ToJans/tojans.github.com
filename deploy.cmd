@@ -1,4 +1,4 @@
-@hugo.exe
+@.\hugo.exe
 
 @cd public
 
