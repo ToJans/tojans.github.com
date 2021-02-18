@@ -1,6 +1,6 @@
 @.\hugo.exe
 
-mv public docs 
+move public docs 
 
 @git add -A .
 @git commit -m "another publish"
