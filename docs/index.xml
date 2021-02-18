@@ -22,7 +22,7 @@
       <pubDate>Thu, 24 Dec 2015 16:49:41 +0100</pubDate>
       
       <guid>https://tojans.me/posts/2015retrospective/</guid>
-      <description>As I have a spare hour while my kids and the Mrs.</description>
+      <description>As I have a spare hour while my kids and the Mrs. watch &amp;ldquo;The Grinch&amp;rdquo; (which is an awesome Christmas movie by the way), I decided to take half an hour to reflect and sit back.</description>
     </item>
     
     <item>
@@ -40,7 +40,8 @@
       <pubDate>Mon, 23 Nov 2015 15:25:03 +0100</pubDate>
       
       <guid>https://tojans.me/posts/tesla/</guid>
-      <description>I recently saw this tweet by Elon Musk, who is looking for developers for their Autopilot feature:</description>
+      <description>I recently saw this tweet by Elon Musk, who is looking for developers for their Autopilot feature:
+We are looking for hardcore software engineers.</description>
     </item>
     
     <item>
@@ -51,7 +52,7 @@
       <guid>https://tojans.me/posts/are-new-js-frameworks-and-libs-a-fad/</guid>
       <description>Good question!
  TL-DR: Most are, except:
- jQuery React vue.</description>
+ jQuery React vue.js   Frameworks - not for me! In web UI, frameworks like BackBone, Ember and Angular might be all nice and stuff, but when you start using them to compose larger applications, things tend to break down quite easily with less experienced developers.</description>
     </item>
     
     <item>
@@ -60,7 +61,8 @@
       <pubDate>Tue, 13 Oct 2015 10:46:54 +0200</pubDate>
       
       <guid>https://tojans.me/posts/haskell-s-controversial-ftp-proposal/</guid>
-      <description>In the Haskell world, there is currently a big fuss about the &amp;ldquo;Foldable/Traversable in Prelude&amp;rdquo;-proposal.</description>
+      <description>In the Haskell world, there is currently a big fuss about the &amp;ldquo;Foldable/Traversable in Prelude&amp;rdquo;-proposal.
+Edit: For the record: it was a proposal, and has been implemented in the current version of Haskell (GHC)</description>
     </item>
     
     <item>
@@ -78,7 +80,7 @@
       <pubDate>Sun, 04 Oct 2015 10:23:42 +0200</pubDate>
       
       <guid>https://tojans.me/posts/hangman-in-haskell/</guid>
-      <description>As I noticed a question for a more idiomatic Haskell version of the game Hangman on codereview.</description>
+      <description>As I noticed a question for a more idiomatic Haskell version of the game Hangman on codereview.stackoverflow.com, I decided to give it a go; this is the result:</description>
     </item>
     
     <item>
@@ -87,7 +89,8 @@
       <pubDate>Fri, 02 Oct 2015 12:08:56 +0200</pubDate>
       
       <guid>https://tojans.me/posts/propositions-as-types/</guid>
-      <description>What&amp;rsquo;s all the fuss about? Quite recently, Philip Wadler published the paper &amp;ldquo;Propositions as Types&amp;rdquo;</description>
+      <description>What&amp;rsquo;s all the fuss about? Quite recently, Philip Wadler published the paper &amp;ldquo;Propositions as Types&amp;rdquo;
+If I understood this correctly, this is about the fact that the application of a function to a type is also a type.</description>
     </item>
     
     <item>
@@ -105,7 +108,8 @@
       <pubDate>Fri, 06 Mar 2015 11:00:26 +0100</pubDate>
       
       <guid>https://tojans.me/posts/building-your-own-product/</guid>
-      <description>Phase 0 In March 2014, I was looking for a new project.</description>
+      <description>Phase 0 In March 2014, I was looking for a new project.
+I had an idea to generate sales leads for an up-market sunroom builder , so pitched it, setup a POC and successfully sold the idea.</description>
     </item>
     
     <item>
@@ -123,7 +127,8 @@
       <pubDate>Tue, 03 Feb 2015 09:31:12 +0100</pubDate>
       
       <guid>https://tojans.me/posts/ziobrando-quotes/</guid>
-      <description>Every once in a while Alberto Brandolini - also known as &amp;ldquo;Ziobrando&amp;rdquo; - generates brilliant quotes.</description>
+      <description>Every once in a while Alberto Brandolini - also known as &amp;ldquo;Ziobrando&amp;rdquo; - generates brilliant quotes.
+These are some of my personal favorites:</description>
     </item>
     
     <item>
@@ -132,7 +137,8 @@
       <pubDate>Thu, 08 Jan 2015 16:19:46 +0100</pubDate>
       
       <guid>https://tojans.me/posts/confessions-of-a-start-up-consultant/</guid>
-      <description>About a year ago I was talking to one of my business mentors; he asked:</description>
+      <description>About a year ago I was talking to one of my business mentors; he asked:
+ &amp;ldquo;How do I get on the first page of Google search?</description>
     </item>
     
     <item>
@@ -141,7 +147,8 @@
       <pubDate>Thu, 27 Nov 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/about-dependent-typing-idris-and-the-road-to-valhalla/</guid>
-      <description>Due to my DDD background, I am constantly on a quest for the utopian domain model.</description>
+      <description>Due to my DDD background, I am constantly on a quest for the utopian domain model.
+Last week during the Build Stuff 2014 conference I saw a presentation by Amanda Laucher about dependent typing that spiked my interest.</description>
     </item>
     
     <item>
@@ -159,7 +166,8 @@
       <pubDate>Thu, 28 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/the-essence-of-microservices/</guid>
-      <description>During the DDDQ lean coffee last weekend the question on microservices popped up once again.</description>
+      <description>During the DDDQ lean coffee last weekend the question on microservices popped up once again.
+This is not my first post about this subject, but apparently people wanted to know more.</description>
     </item>
     
     <item>
@@ -186,7 +194,8 @@
       <pubDate>Thu, 19 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/functors-applicatives-and-monads-for-csharp-developers-part-2/</guid>
-      <description>TL;DR: A C# List implementation respecting the category theory Haskell usually uses.</description>
+      <description>TL;DR: A C# List implementation respecting the category theory Haskell usually uses.
+So, after implementing the Maybe Monad in C# respecting category theory yesterday, I decided to implement the list as well, to gain a deeper understanding of it.</description>
     </item>
     
     <item>
@@ -196,7 +205,7 @@
       
       <guid>https://tojans.me/posts/imitation-innovation-and-the-love-for-the-game/</guid>
       <description>As I posted this tweet
-In communities, others take credit for/copy the things you do.</description>
+In communities, others take credit for/copy the things you do.&amp;#10;Be flattered and understand the why: they probably lack insight and &amp;quot;fiero&amp;quot;.</description>
     </item>
     
     <item>
@@ -205,7 +214,8 @@ In communities, others take credit for/copy the things you do.</description>
       <pubDate>Mon, 16 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/functors-applicatives-and-monads-for-csharp-developers/</guid>
-      <description>For me personally, the whole functor/applicative/monad thing was one of the hardest things to grasp when studying FP.</description>
+      <description>For me personally, the whole functor/applicative/monad thing was one of the hardest things to grasp when studying FP.
+Being familiar with C#, I wondered why these concepts were missing in C#, so I decided - as an exercise and to see if I really understood it - to implement it in C#.</description>
     </item>
     
     <item>
@@ -223,7 +233,7 @@ In communities, others take credit for/copy the things you do.</description>
       <pubDate>Thu, 24 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/the-lean-start-up-triangle/</guid>
-      <description>At first: &amp;quot;Yeah, build-measure-learn; easy, I get it...&amp;quot;&amp;#10;Now: &amp;quot;Wow, I didn&amp;#39;t get that at all!</description>
+      <description>At first: &amp;quot;Yeah, build-measure-learn; easy, I get it...&amp;quot;&amp;#10;Now: &amp;quot;Wow, I didn&amp;#39;t get that at all! I wonder how much more I missed!</description>
     </item>
     
     <item>
@@ -260,7 +270,7 @@ I wrote an example - obviously badly written on purpose - by which I prove why 1
       <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/selling-ddd/</guid>
-      <description>A little while ago, we gave a series of short talks called &amp;ldquo;DDD Basics&amp;rdquo; for the Belgian Domain-driven design community.</description>
+      <description>A little while ago, we gave a series of short talks called &amp;ldquo;DDD Basics&amp;rdquo; for the Belgian Domain-driven design community. The focus was on strategic design.</description>
     </item>
     
     <item>
@@ -278,7 +288,8 @@ I wrote an example - obviously badly written on purpose - by which I prove why 1
       <pubDate>Mon, 17 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/why-bad-software-architecture-is-easy-to-monetize/</guid>
-      <description>This morning I received yet another &amp;ldquo;interesting&amp;rdquo; job offer, which looked like this:</description>
+      <description>This morning I received yet another &amp;ldquo;interesting&amp;rdquo; job offer, which looked like this:
+Wanted: &amp;quot;senior .Net architect&amp;quot;&amp;#10;Description &amp;quot;build one framework to build all future projects, using sharepoint&amp;quot;&amp;#10;#ThanksButNoThanks</description>
     </item>
     
     <item>
@@ -297,7 +308,8 @@ Understanding the the observer&#39;s POV, state of mind and past experience usua
       <pubDate>Mon, 03 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/february-will-be-awesome/</guid>
-      <description>After chatting with a lot of friends yesterday, I realized: February will be awesome.</description>
+      <description>After chatting with a lot of friends yesterday, I realized: February will be awesome. Here&amp;rsquo;s why:
+ I get to finish the Erlang FoundationDB driver.</description>
     </item>
     
     <item>
@@ -306,7 +318,7 @@ Understanding the the observer&#39;s POV, state of mind and past experience usua
       <pubDate>Thu, 30 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/micro-service-architecture-versus-soa-eda/</guid>
-      <description>@pjvds @FransBouma it sounds like (-micro) services. Isn&amp;#39;t this what everyone has been saying for about a decade?</description>
+      <description>@pjvds @FransBouma it sounds like (-micro) services. Isn&amp;#39;t this what everyone has been saying for about a decade? Soa+eda? Why new things?</description>
     </item>
     
     <item>
@@ -381,7 +393,8 @@ We are looking for a senior recruitment supervisor manager leadership executive 
       
       <guid>https://tojans.me/posts/towards-a-more-elegant-fizzbuzz/</guid>
       <description>This morning I saw this tweet:
-blogged: Clojure Kata #1 � Fizz Buzz https://t.</description>
+blogged: Clojure Kata #1 � Fizz Buzz https://t.co/kdZvqjzkRa
+&amp;mdash; JanVanRyswyck (@JanVanRyswyck) 19 december 2013As Jan is learning Clojure, he was exploring the fizzbuzz code kata.</description>
     </item>
     
     <item>
@@ -399,7 +412,8 @@ blogged: Clojure Kata #1 � Fizz Buzz https://t.</description>
       <pubDate>Sat, 30 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/enjoying-programmer-anarchy-happypancake/</guid>
-      <description>Note: This is the first post in a series of posts about my experiences working for HappyPancake:</description>
+      <description>Note: This is the first post in a series of posts about my experiences working for HappyPancake:
+ Introduction &amp;amp; Swedish culture.</description>
     </item>
     
     <item>
@@ -408,7 +422,8 @@ blogged: Clojure Kata #1 � Fizz Buzz https://t.</description>
       <pubDate>Sat, 30 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/enjoying-programmer-anarchy-happypancake-2/</guid>
-      <description>Note: This is the second post in a series of posts about my experiences working for HappyPancake:</description>
+      <description>Note: This is the second post in a series of posts about my experiences working for HappyPancake:
+ Introduction &amp;amp; Swedish culture.</description>
     </item>
     
     <item>
@@ -453,7 +468,7 @@ blogged: Clojure Kata #1 � Fizz Buzz https://t.</description>
       <pubDate>Tue, 24 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/software-architects-you-are-doing-it-wrong/</guid>
-      <description>Introduction A post by @abdullin nailed it pretty good: software architects are doing it wrong all the time.</description>
+      <description>Introduction A post by @abdullin nailed it pretty good: software architects are doing it wrong all the time. Here&amp;rsquo;s why:</description>
     </item>
     
     <item>
@@ -462,7 +477,8 @@ blogged: Clojure Kata #1 � Fizz Buzz https://t.</description>
       <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/visualizing-event-storming/</guid>
-      <description>This is just a sketch that tries to explain my understanding about how Alberto Brandolini&amp;rsquo;s Event Storming works.</description>
+      <description>This is just a sketch that tries to explain my understanding about how Alberto Brandolini&amp;rsquo;s Event Storming works.
+Next time I will skip the pencils and use a marker</description>
     </item>
     
     <item>
@@ -480,7 +496,8 @@ blogged: Clojure Kata #1 � Fizz Buzz https://t.</description>
       <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/the-very-first-dddbe-event-the-modellathon/</guid>
-      <description>This is my personal review of the @DDDBE inaugural meeting: a modellathon.</description>
+      <description>This is my personal review of the @DDDBE inaugural meeting: a modellathon.
+Some background info So, last night we had the very first event of the Belgian DDD community: a modellathon facilitated by Mathias Verraes and Stijn Vannieuwenhuyse, and kindly hosted by the hosting company Combell.</description>
     </item>
     
     <item>
@@ -516,7 +533,8 @@ blogged: Clojure Kata #1 � Fizz Buzz https://t.</description>
       <pubDate>Sun, 28 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/event-sourcing-for-the-rest-of-us/</guid>
-      <description>I recently saw a discussion on twitter about the definition of event sourcing:</description>
+      <description>I recently saw a discussion on twitter about the definition of event sourcing:
+Event sourcing: persisting entities by appending all state transitions to transaction log.</description>
     </item>
     
     <item>
@@ -525,7 +543,8 @@ blogged: Clojure Kata #1 � Fizz Buzz https://t.</description>
       <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/learn-elixir-through-exercism-dot-io/</guid>
-      <description>I am currently in the process of improving my Elixir skills using the site Exercism.</description>
+      <description>I am currently in the process of improving my Elixir skills using the site Exercism.io.
+What&amp;rsquo;s Exercism.io? Exercism.io is a really neat concept: it provides you a platform to learn a new development language, where you get feedback on your exercises from other users who previously succeeded in completing the exercise.</description>
     </item>
     
     <item>
@@ -558,7 +577,8 @@ whether &lt;a href=&#34;https://elixir-lang.org&#34;&gt;Elixir&lt;/a&gt; runs on
       <pubDate>Tue, 25 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/why-i-contribute-to-oss-projects/</guid>
-      <description>I spent quite some time contributing patches to the Elixir project lately, and I am quite proud of it:</description>
+      <description>I spent quite some time contributing patches to the Elixir project lately, and I am quite proud of it:
+Some people have been asking me why I spend so many time on contributing patches to a relatively unknown OSS project, and others - coming from a non-ICT-background asked me why I bother to work on someone else&amp;rsquo;s product for free, while I can charge thousands of Euros to other companies.</description>
     </item>
     
     <item>
@@ -576,7 +596,7 @@ whether &lt;a href=&#34;https://elixir-lang.org&#34;&gt;Elixir&lt;/a&gt; runs on
       <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/blogging-less-is-more-and-my-name-is-my-brand/</guid>
-      <description>Introduction It has been about 10 years ago, since I opted for a blogging platform called BlogEngine.</description>
+      <description>Introduction It has been about 10 years ago, since I opted for a blogging platform called BlogEngine.Net, which was - at the that moment -</description>
     </item>
     
     <item>
@@ -708,7 +728,7 @@ Pssssssssssssssssssssssssssshhhhhhhhhhhhhhhhhhhhhhhhtt !!!!
       <pubDate>Sat, 02 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/saturday-night-30-min-brain-dump-luck/</guid>
-      <description>IntroductionSometimes you get lucky, and find a way where you can truely do the things you like in work.</description>
+      <description>IntroductionSometimes you get lucky, and find a way where you can truely do the things you like in work... But why does luck always seem to be distributed unevenly, and does it always land with the same people.</description>
     </item>
     
     <item>
@@ -726,7 +746,7 @@ Pssssssssssssssssssssssssssshhhhhhhhhhhhhhhhhhhhhhhhtt !!!!
       <pubDate>Sat, 17 Nov 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/how-your-personality-type-affects-your-development/</guid>
-      <description>IntroductionDuring one of my more recent interviews I got an assesment from two different persons.</description>
+      <description>IntroductionDuring one of my more recent interviews I got an assesment from two different persons. While I still have no idea about the definitive outcome, the different types of questions they both asked triggered me to think about what kind of personality type they would be, so I started wondering how personality types are related to development.</description>
     </item>
     
     <item>
@@ -744,7 +764,8 @@ Pssssssssssssssssssssssssssshhhhhhhhhhhhhhhhhhhhhhhhtt !!!!
       <pubDate>Wed, 31 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/continuous-thinking-essay-ease-and-simplicity-in-software-architecture/</guid>
-      <description>Introduction&amp;ldquo;Almost all quality improvement comes via simplification of design, manufacturing.</description>
+      <description>Introduction&amp;ldquo;Almost all quality improvement comes via simplification of design, manufacturing... layout, processes, and procedures.&amp;rdquo; - Tom Peters
+As I was tinkering around with Erlang/OTP and some other stuff, I suddenly experienced yet another &#34;</description>
     </item>
     
     <item>
@@ -762,7 +783,7 @@ Pssssssssssssssssssssssssssshhhhhhhhhhhhhhhhhhhhhhhhtt !!!!
       <pubDate>Thu, 18 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/paycento-web-summit-2012-day-two-aaaaargh-matie/</guid>
-      <description>IntroductionThis is a follow-up post to the post from yesterday.</description>
+      <description>IntroductionThis is a follow-up post to the post from yesterday. While the first day was really nice, the second day was completely different.</description>
     </item>
     
     <item>
@@ -807,7 +828,7 @@ Pssssssssssssssssssssssssssshhhhhhhhhhhhhhhhhhhhhhhhtt !!!!
       <pubDate>Thu, 13 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/live-blogging-getting-started-with-erlang-and-nitrogen/</guid>
-      <description>NoteThis is an experiment where I try &#34;live blogging&#34;: I blog as I get along further in the process.</description>
+      <description>NoteThis is an experiment where I try &#34;live blogging&#34;: I blog as I get along further in the process... Feel free to comment/tweet during the process.</description>
     </item>
     
     <item>
@@ -816,7 +837,8 @@ Pssssssssssssssssssssssssssshhhhhhhhhhhhhhhhhhhhhhhhtt !!!!
       <pubDate>Wed, 12 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/tweet-my-opinion-on-new-theoretic-development-approaches/</guid>
-      <description>Every theoretic development approach is a &#34;Pseudo-Illuminate Legacy Enhancement of Subordinate Hierarchical Implementation Theories&#34;</description>
+      <description>Every theoretic development approach is a &#34;Pseudo-Illuminate Legacy Enhancement of Subordinate Hierarchical Implementation Theories&#34; #IMHO
+&amp;mdash; Tom * suǝssuɐſ (@ToJans) September 12, 2012</description>
     </item>
     
     <item>
@@ -825,7 +847,7 @@ Pssssssssssssssssssssssssssshhhhhhhhhhhhhhhhhhhhhhhhtt !!!!
       <pubDate>Tue, 11 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/de-voedselzandloper-zin-en-onzin/</guid>
-      <description>IntroductieDe voedselzandloper is vandaag een paar keer in het nieuws vermeld, als zijnde een onconventioneel, en zelfs gevaarlijk dieet/voedingspatroon.</description>
+      <description>IntroductieDe voedselzandloper is vandaag een paar keer in het nieuws vermeld, als zijnde een onconventioneel, en zelfs gevaarlijk dieet/voedingspatroon. In deze blog post probeer ik uit te leggen wat mijn persoonlijke ervaringen zijn op dit gebied; ik heb namelijk een jaar geleden een gelijkaardig (doch niet echt identiek) voedingsplan gevolgd.</description>
     </item>
     
     <item>
@@ -853,7 +875,8 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Thu, 09 Aug 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/project-#startup10-working-title-big/</guid>
-      <description>note: The source for this project is on Github; the following text is a copy of the file Readme.</description>
+      <description>note: The source for this project is on Github; the following text is a copy of the file Readme.md.
+Project #Startup10 - Startup #3 : Project Big</description>
     </item>
     
     <item>
@@ -862,7 +885,8 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Fri, 13 Jul 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/epilogue-one-night-in-paris-#cqrs-beers-and-life-in-general/</guid>
-      <description>Ce soir #cqrsbeer chez Justine avec @abdullin @thinkb4coding @ToJans groups.google.com/forum/?fromgro&amp;hellip; #cqrs</description>
+      <description>Ce soir #cqrsbeer chez Justine avec @abdullin @thinkb4coding @ToJans groups.google.com/forum/?fromgro&amp;hellip; #cqrs
+&amp;mdash; ALT.Net FR (@altnetfr) July 12, 2012IntroductionWhen I told people I was going to drive to Paris (350KM, a 3 hour drive, traffic jams not included) to have a discussion with a few persons I know from the internet, most of my friends were questioning my sanity.</description>
     </item>
     
     <item>
@@ -871,7 +895,8 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/project-#startup10-lessons-learned-with-blommekes.be/</guid>
-      <description>Note: this is a post from&amp;nbsp;a blog post series about starting up 10 businesses in a year.</description>
+      <description>Note: this is a post from&amp;nbsp;a blog post series about starting up 10 businesses in a year.
+#1:&amp;nbsp;https://Blommekes.Be&amp;nbsp;- koopt een blommeke voor u vrouw en het zal wa beter gaan IntroductionThe biggest problem in getting started with startups, is finding your inspiration, and deriving a business plan; in this post I will describe how blommekes.</description>
     </item>
     
     <item>
@@ -889,7 +914,7 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Fri, 18 May 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/y-u-build-your-own-build-server-for-paycento/</guid>
-      <description>IntroductionAs you might now I started working quite recently for the startup Paycento.</description>
+      <description>IntroductionAs you might now I started working quite recently for the startup Paycento. One of the things I am currently doing is setting up a system that allows us to do continuous integration and deployment everywhere and anywhere.</description>
     </item>
     
     <item>
@@ -907,7 +932,8 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Mon, 19 Mar 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/project-yakshayqrs-another-cqrs-evolution/</guid>
-      <description>IntroductionTL;DR: I managed to minimize the CQRS overhead even further.</description>
+      <description>IntroductionTL;DR: I managed to minimize the CQRS overhead even further.
+Over the years, I have been trying to minimize CQRS in several iterations, even releasing a framework and a lib in doing so.</description>
     </item>
     
     <item>
@@ -916,7 +942,9 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Wed, 29 Feb 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/project-#startup10-you-pay-peanuts-you-get-the-monkeys/</guid>
-      <description>Note: this is a post from&amp;nbsp;a blog post series about starting up 10 businesses in a year.</description>
+      <description>Note: this is a post from&amp;nbsp;a blog post series about starting up 10 businesses in a year.
+&amp;nbsp;
+IntroductionI love appharbour, in fact, I have 8 apps running over there at this moment.</description>
     </item>
     
     <item>
@@ -925,7 +953,7 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Tue, 28 Feb 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/project-#startup10-learning-to-build-your-own-business/</guid>
-      <description>Note: this is the first post in the series &#34;Project #Startup10&#34;</description>
+      <description>Note: this is the first post in the series &#34;Project #Startup10&#34; :&amp;nbsp;a blog post series about starting up 10 businesses in a single year.</description>
     </item>
     
     <item>
@@ -952,7 +980,7 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Wed, 18 Jan 2012 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/the-seven-habits-of-possibly-spectacularly-successful-executives/</guid>
-      <description>IntroductionOver at a private LinkedIn newsgroup for ENTP personality types, somebody posted a link to &#34;</description>
+      <description>IntroductionOver at a private LinkedIn newsgroup for ENTP personality types, somebody posted a link to &#34;The Seven Habits of Spectacularly unsuccessful Executives&#34;</description>
     </item>
     
     <item>
@@ -970,7 +998,9 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Tue, 27 Dec 2011 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/2010-2011-a-retrospective/</guid>
-      <description>One of my main motivators, my youngest son Matisse #PrideAndJoy</description>
+      <description>One of my main motivators, my youngest son Matisse #PrideAndJoy
+
+IntroductionI like the concept of retrospectives; it makes you self-reflect and think about the paths you followed and want to follow in the future.</description>
     </item>
     
     <item>
@@ -979,7 +1009,7 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Fri, 23 Dec 2011 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/open-brief-aan-belgische-ondernemers-stappen-naar-een-beter-belgie/</guid>
-      <description>We zitten in de problemen in ons landje; hoe zou U als ondernemer het probleem aanpakken ?</description>
+      <description>We zitten in de problemen in ons landje; hoe zou U als ondernemer het probleem aanpakken ? #BeterBelgieHet geld is op, de mensen komen op straat, er is schrik voor de economische malaise en verdere implicaties er van, .</description>
     </item>
     
     <item>
@@ -997,7 +1027,7 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Sun, 18 Dec 2011 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/continuous-thinking-essay-tldr-functional-programming-sql-select-statement/</guid>
-      <description>IntroductionI am currently in the process of studying F# - a functional programming language -.</description>
+      <description>IntroductionI am currently in the process of studying F# - a functional programming language -.&amp;nbsp;Since I am a big fan of meta-cognition, I am trying to find out how the mindset of the functional programming paradigm differs from that of a C# one (i.</description>
     </item>
     
     <item>
@@ -1006,7 +1036,7 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Mon, 28 Nov 2011 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/continuous-thinking-cqrs-explained-to-a-10-year-old/</guid>
-      <description>IntroductionThe concept behind CQRS is neat: detach your domain implementation completely from your representation requirements.</description>
+      <description>IntroductionThe concept behind CQRS is neat: detach your domain implementation completely from your representation requirements. I even wrote a framework for it&amp;nbsp;as a learning tool, so somebody without any prior experience should be able to boot a CQRS app in a few minutes.</description>
     </item>
     
     <item>
@@ -1024,7 +1054,7 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Tue, 15 Nov 2011 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/pragmatic-cqrs-verifying-username-uniqueness-when-registering-a-new-user/</guid>
-      <description>IntroductionMost people who get started with CQRS have issues with this classical example: &#34;</description>
+      <description>IntroductionMost people who get started with CQRS have issues with this classical example: &#34;how do we verify username uniqueness when a new user registers ?</description>
     </item>
     
     <item>
@@ -1033,7 +1063,7 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Tue, 25 Oct 2011 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/quick-tip-how-to-do-tdd-bdd-and-debug-unit-tests-with-visual-studio-express-editions/</guid>
-      <description>IntroductionThis article will show you how you can do TDD/BDD with Visual Studio Express editions.</description>
+      <description>IntroductionThis article will show you how you can do TDD/BDD with Visual Studio Express editions. While most people say it is not possible, it is actually pretty easy.</description>
     </item>
     
     <item>
@@ -1051,7 +1081,8 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Thu, 06 Oct 2011 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/continuous-thinking-how-your-mbti-type-can-help-you/</guid>
-      <description>IntroductionI just finished commenting someone&#39;s opinion on the MBTI personality type&amp;nbsp;in a linkedin status update.</description>
+      <description>IntroductionI just finished commenting someone&#39;s opinion on the MBTI personality type&amp;nbsp;in a linkedin status update.
+As you might have read in my previous post regarding &#34;</description>
     </item>
     
     <item>
@@ -1079,7 +1110,8 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Thu, 31 Mar 2011 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/continuous-thinking-nerdbeers-providing-business-value-by-issue-tracking/</guid>
-      <description>Note: this post is part of a series; you can find the first post here.</description>
+      <description>Note: this post is part of a series; you can find the first post here.
+IntroductionWell, another 14 days passed by for the NerdBeers project, and a lot has happened:</description>
     </item>
     
     <item>
@@ -1097,7 +1129,8 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Mon, 07 Mar 2011 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/continuous-thinking-just-ship-it-the-story-of-nerdbeers/</guid>
-      <description>NoteThis is the first in a series of posts :</description>
+      <description>NoteThis is the first in a series of posts :
+Continuous thinking: just ship it - the story of NerdBeers (this post)Continuous thinking: Nerdbeers continued - We all win !</description>
     </item>
     
     <item>
@@ -1142,7 +1175,8 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Tue, 07 Dec 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/testing-how-far-you-can-go-with-removing-cqrs-infrastructure/</guid>
-      <description>This is an example of something that would be easily converted to CQRS, but without the overhead:</description>
+      <description>This is an example of something that would be easily converted to CQRS, but without the overhead:
+</description>
     </item>
     
     <item>
@@ -1160,7 +1194,9 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/my-#cqrs-cookbook/</guid>
-      <description>Here is my personal take on how I interpret all things CQRS.</description>
+      <description>Here is my personal take on how I interpret all things CQRS...
+Commercial impact: why use CQRS ?
+CQRS enforces you to apply strict boundaries to your app in a consistent way.</description>
     </item>
     
     <item>
@@ -1206,7 +1242,7 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Wed, 11 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/getting-started-quickly-with-bdd-in-.net/</guid>
-      <description>IntroductionThis article will give you a brief introduction on how to get started with BDD (Behaviour driven development).</description>
+      <description>IntroductionThis article will give you a brief introduction on how to get started with BDD (Behaviour driven development). It is my second attempt for such an article.</description>
     </item>
     
     <item>
@@ -1215,7 +1251,7 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       <pubDate>Thu, 20 May 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/building-an-mvvm-framework-for-both-.net-and-.net-cf/</guid>
-      <description>IntroductionAs you might allready know, I am maintaining a .</description>
+      <description>IntroductionAs you might allready know, I am maintaining a .Net CF application for one of my customers. Unfortunately, the design of the app is a total disaster, and maintaining it is actually a living hell.</description>
     </item>
     
     <item>
@@ -1272,7 +1308,8 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       
       <guid>https://tojans.me/posts/build-asp.net-mvc-applications-fast-with-mvcextensions-v0.4/</guid>
       <description>Introduction
-Today I finished v0.4 of my MVCExtensions library and I pushed the sourcecode to github.</description>
+Today I finished v0.4 of my MVCExtensions library and I pushed the sourcecode to github.
+I also included a very simple tasklist, in order to show you on how to get started using this library.</description>
     </item>
     
     <item>
@@ -1282,7 +1319,7 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
       
       <guid>https://tojans.me/posts/teaser-on-my-upcoming-mvcextensions-project-release/</guid>
       <description>Hi there,
-I am going to give you a quick teaser on how to setup a full asp.</description>
+I am going to give you a quick teaser on how to setup a full asp.net mvc application with database &amp;amp; all the rest using my soon-to-be-updated MVCExtensions library.</description>
     </item>
     
     <item>
@@ -1310,7 +1347,7 @@ I am going to give you a quick teaser on how to setup a full asp.</description>
       
       <guid>https://tojans.me/posts/2009-retrospective-.net-technologies-and-lessons-learned/</guid>
       <description>Introduction&amp;nbsp;
-In December 2008 I was doing my job as a freelance technical analyst for a big company.</description>
+In December 2008 I was doing my job as a freelance technical analyst for a big company. While it was a very interesting job in several ways, I felt that a burn-out was coming up.</description>
     </item>
     
     <item>
@@ -1328,7 +1365,7 @@ In December 2008 I was doing my job as a freelance technical analyst for a big c
       <pubDate>Tue, 22 Dec 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/howto&#43;why-using-a-prototype-bdd-for-a-project-estimate-&#43;-personal-rant/</guid>
-      <description>IntroductionAs you might or might not now, estimating the budget for a project can be very hard sometimes.</description>
+      <description>IntroductionAs you might or might not now, estimating the budget for a project can be very hard sometimes. In order to get started on a project we first need a real estimate of what the client will need, and the client should know what I am going to deliver to him/her.</description>
     </item>
     
     <item>
@@ -1338,7 +1375,8 @@ In December 2008 I was doing my job as a freelance technical analyst for a big c
       
       <guid>https://tojans.me/posts/the-quest-for-the-perfect-asp.net-mvc-code-v0.3/</guid>
       <description>You can download the full source here using (msys)git:
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; https://github.</description>
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; https://github.com/ToJans/MVCExtensions
+// The quest for perfect asp.net MVC code - v0.</description>
     </item>
     
     <item>
@@ -1365,7 +1403,7 @@ In December 2008 I was doing my job as a freelance technical analyst for a big c
       <pubDate>Mon, 30 Nov 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/m-v-vm-in-asp.net-mvc-removing-dependencies-between-asp.net-views-and-controller-actions/</guid>
-      <description>Since the early days I have always been a fan of the ASP.</description>
+      <description>Since the early days I have always been a fan of the ASP.net MVC framework, although I had one really big issue with it : the coupling of the controller actions in the view pages.</description>
     </item>
     
     <item>
@@ -1375,7 +1413,7 @@ In December 2008 I was doing my job as a freelance technical analyst for a big c
       
       <guid>https://tojans.me/posts/aubergine-bdd-for-.net-source-code-available-on-github/</guid>
       <description>Hi there....
-After a few weeks of working on Aubergine (BDD for .</description>
+After a few weeks of working on Aubergine (BDD for .Net) I have decided to release the sourcecode for this tool out in the open.</description>
     </item>
     
     <item>
@@ -1387,7 +1425,7 @@ After a few weeks of working on Aubergine (BDD for .</description>
       <description>Hi there,
 V0.07 is here :
 Auberginev0.07.zip (28,61 kb)
-Changes:* Support for &#34;</description>
+Changes:* Support for &#34;Given I did&#34; clause (more info inthis essay )</description>
     </item>
     
     <item>
@@ -1396,7 +1434,8 @@ Changes:* Support for &#34;</description>
       <pubDate>Fri, 13 Nov 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/new-essay-on-bdd-given-i-did-to-support-flow-in-user-stories/</guid>
-      <description>Just a quick link to my new essay on BDD:</description>
+      <description>Just a quick link to my new essay on BDD:
+Essay : Extending BDD stories ; the &#34;Given I did&#34; clause - including flow in user stories</description>
     </item>
     
     <item>
@@ -1415,7 +1454,8 @@ Changes:* Support for &#34;</description>
       <pubDate>Thu, 12 Nov 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/aubergine-bdd-for-.net-v0.06-support-for-parameter-tables-in-given-when-then/</guid>
-      <description>Ok, we keep on going; now we support parameter tables for given/when/then, which are parsed as array members.</description>
+      <description>Ok, we keep on going; now we support parameter tables for given/when/then, which are parsed as array members.
+I am now getting very close to full cucumber-like support !</description>
     </item>
     
     <item>
@@ -1425,7 +1465,8 @@ Changes:* Support for &#34;</description>
       
       <guid>https://tojans.me/posts/published-a-new-article-on-codeproject-getting-started-with-bdd-&#43;-new-version-of-aubergine/</guid>
       <description>Hi again,
-I just published a brand new article on CodeProject : Getting started with BDD.</description>
+I just published a brand new article on CodeProject : Getting started with BDD.
+I also modified my Aubergine Framework a bit by adding a new feature : automatic case-insensitive DSL enum conversion.</description>
     </item>
     
     <item>
@@ -1434,7 +1475,9 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Sat, 07 Nov 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/aubergine-.net-bdd-support-for-named-typed-parameters-&#43;-recursive-dsl-&#43;-bugfix-&#43;-no-more-assertions/</guid>
-      <description>Ok, I had some ideas this morning when I woke up, so I quickly implemented them.</description>
+      <description>Ok, I had some ideas this morning when I woke up, so I quickly implemented them.
+
+Changes (v0.02)</description>
     </item>
     
     <item>
@@ -1444,7 +1487,9 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       
       <guid>https://tojans.me/posts/bdd-with-dsl-aubergine-a-ruby-cucumber-like-alternative-for-.net-download-available/</guid>
       <description>UpdateAgain a lot has changed : look here
-&amp;nbsp;</description>
+&amp;nbsp;
+&amp;nbsp;
+IntroductionIn this article you can download the very first alpha version of Aubergine; a BDD /DSL framework for .</description>
     </item>
     
     <item>
@@ -1453,7 +1498,8 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Wed, 04 Nov 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/a-new-bdd-framework-in-.net-aubergine/</guid>
-      <description>REMARK : An executable testrunner and some sample code is availableHere : https://www.</description>
+      <description>REMARK : An executable testrunner and some sample code is availableHere : https://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx
+REMARK : Skip to &#34;Edit 2&#34; to see the current syntax&amp;nbsp;</description>
     </item>
     
     <item>
@@ -1462,7 +1508,8 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Tue, 20 Oct 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/w00t-building-a-new-app-from-the-ground-up-ioc-database-and-other-stuff-a-real-framework/</guid>
-      <description>This is one of the articles in our series; the parts are:</description>
+      <description>This is one of the articles in our series; the parts are:
+Methodology, technology &amp;amp; tools usedSetting up the environmentFirst specs and getting startedIOC, database and other stuff; a real framework&amp;nbsp; &amp;nbsp;Happy reading !</description>
     </item>
     
     <item>
@@ -1471,7 +1518,8 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Mon, 19 Oct 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/w00t-building-a-new-app-from-the-ground-up-first-specs-and-getting-started/</guid>
-      <description>This is one of the articles in our series; the parts are:</description>
+      <description>This is one of the articles in our series; the parts are:
+Methodology, technology &amp;amp; tools usedSetting up the environmentFirst specs and getting startedIOC, database and other stuff; a real framework&amp;nbsp; &amp;nbsp;Happy reading !</description>
     </item>
     
     <item>
@@ -1480,7 +1528,8 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Mon, 19 Oct 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/w00t-building-a-new-app-from-the-ground-up-methodology-technology-tools-used/</guid>
-      <description>This is one of the articles in our series; the parts are:</description>
+      <description>This is one of the articles in our series; the parts are:
+Methodology, technology &amp;amp; tools usedSetting up the environmentFirst specs and getting startedIOC, database and other stuff; a real framework&amp;nbsp; &amp;nbsp;Happy reading !</description>
     </item>
     
     <item>
@@ -1489,7 +1538,8 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Mon, 19 Oct 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/w00t-building-a-new-app-from-the-ground-up-setting-up-the-environment/</guid>
-      <description>This is one of the articles in our series; the parts are:</description>
+      <description>This is one of the articles in our series; the parts are:
+Methodology, technology &amp;amp; tools usedSetting up the environmentFirst specs and getting startedIOC, database and other stuff; a real framework&amp;nbsp; &amp;nbsp;Happy reading !</description>
     </item>
     
     <item>
@@ -1543,7 +1593,8 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Tue, 07 Apr 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/why-choose-asp.net-mvc-as-a-web-development-platform/</guid>
-      <description>Microsoft has recently released their final version of ASP.NET MVC.</description>
+      <description>Microsoft has recently released their final version of ASP.NET MVC.
+A few months ago I investigated some time in studying this new framework (while it was in beta 3).</description>
     </item>
     
     <item>
@@ -1552,7 +1603,7 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Mon, 26 Jan 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/asp.net-mvc-imagehandler-for-thumbnails/</guid>
-      <description>As some of you might know, I am a really big fan of community-driven technologies.</description>
+      <description>As some of you might know, I am a really big fan of community-driven technologies. I also like to contribute myself in order to exchange new ideas and meet new people with common interests.</description>
     </item>
     
     <item>
@@ -1570,7 +1621,7 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Sat, 29 Nov 2008 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/core-past-current-future-exit-freelance-consultancy-enter-project-business-development/</guid>
-      <description>Believe it or not : exit consultancy, enter projects &amp;amp; business development !</description>
+      <description>Believe it or not : exit consultancy, enter projects &amp;amp; business development !!After doing some consultancy I have decided to stop doing freelance consultancy, and start focussing on doing projects and business development&amp;nbsp;again.</description>
     </item>
     
     <item>
@@ -1597,7 +1648,7 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Tue, 21 Aug 2007 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/video-rally-pittoresque/</guid>
-      <description>Last weekend I participated for the first time with Rally Pittoresque, an old timer rally.</description>
+      <description>Last weekend I participated for the first time with Rally Pittoresque, an old timer rally. There were some pretty exclusive and nice cars there, a nice atmosphere, and it was great fun, so I posted a small video impression.</description>
     </item>
     
     <item>
@@ -1615,7 +1666,7 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Thu, 19 Jul 2007 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/iphone-thumb-keyboard-for-windows-mobile-5-6-download-available/</guid>
-      <description>I have a new version of the intelligent keyboard for Windows Mobile 5/6 available.</description>
+      <description>I have a new version of the intelligent keyboard for Windows Mobile 5/6 available. In this version, I use a smaller dictionary (15000 english words), and I have improved the performance as well.</description>
     </item>
     
     <item>
@@ -1670,7 +1721,7 @@ Somebody in&amp;nbsp;stated in a&amp;nbsp;comment&amp;nbsp;he got an exception. 
       <pubDate>Tue, 03 Jul 2007 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/new-version-of-dasblog-with-extra-and-jforsythe-macros-installed/</guid>
-      <description>As you might or might not have noticed, last weekend I upgraded to newtelligence DasBlog 1.</description>
+      <description>As you might or might not have noticed, last weekend I upgraded to newtelligence DasBlog 1.9.7174.0 nightly build, and modified my layout a little bit.</description>
     </item>
     
     <item>
@@ -1679,7 +1730,7 @@ Somebody in&amp;nbsp;stated in a&amp;nbsp;comment&amp;nbsp;he got an exception. 
       <pubDate>Wed, 27 Jun 2007 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/safe-method-invoker-in-c#/</guid>
-      <description>Today I was reading an article on codeproject by Mark Clifton about using a safe invoker for a method.</description>
+      <description>Today I was reading an article on codeproject by Mark Clifton about using a safe invoker for a method. While the idea was quite good, I think the implementation was a bit bloated, soI posted a comment with my own implementation.</description>
     </item>
     
     <item>
@@ -1715,7 +1766,7 @@ Somebody in&amp;nbsp;stated in a&amp;nbsp;comment&amp;nbsp;he got an exception. 
       <pubDate>Wed, 13 Jun 2007 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/technorati-subscription/</guid>
-      <description>In order to increase my blog visibility I have subscribed myself to Technorati.</description>
+      <description>In order to increase my blog visibility I have subscribed myself to Technorati.&amp;nbsp;In order to claim this blog I had to create an article with a link to my&amp;nbsp;Technorati Profile&amp;nbsp;.</description>
     </item>
     
     <item>
@@ -1760,7 +1811,8 @@ Somebody in&amp;nbsp;stated in a&amp;nbsp;comment&amp;nbsp;he got an exception. 
       <pubDate>Thu, 28 Sep 2006 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/crm-day-4-discovered-a-new-approach/</guid>
-      <description>Yesterday I had some things to do, so I could not really implement the main classes.</description>
+      <description>Yesterday I had some things to do, so I could not really implement the main classes.
+Today, I am happy not to have started, since I have discovered Subsonic.</description>
     </item>
     
     <item>
@@ -1778,7 +1830,7 @@ Somebody in&amp;nbsp;stated in a&amp;nbsp;comment&amp;nbsp;he got an exception. 
       <pubDate>Mon, 25 Sep 2006 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/crm-day-1-some-simple-ideas-explained/</guid>
-      <description>Today I will not actually program any stuff, but i will layout some basic stuff on paper this blog.</description>
+      <description>Today I will not actually program any stuff, but i will layout some basic stuff on paper this blog.First draft :I will start from the default object properties :DefaultObjectProps :id : unique identifier description : text description (for dropdownlists etc) created : date of creation created by : user modified : date of last modification modified by : userThen the default act_as_propsDefaultActAsProps &amp;lt; DefaultObjectPropsParent (id, type)ActAsSecured &amp;lt; DefaultActAsPropsOwnerUser : user OwnerGroup : group UserRights,GroupRights,AnonymousRights : CRUD bools implements : bool Allow Read (type,int id) bool Allow Write (type,int id) bool Allow Create (type,int id) bool Allow Update (type,int id)ActAsTree &amp;lt; DefaultActAsPropsActAsPageable &amp;lt; DefaultActAsPropsActAsSortable &amp;lt; DefaultActAsPropsActAsFilterable &amp;lt; DefaultActAsPropsActAsTaggable &amp;lt; DefaultActAsPropsActAsSchedule &amp;lt; DefaultActAsPropsActAsCommentable &amp;lt; DefaultActAsPropsActAsRule &amp;lt; DefaultActAsPropsActAsFileContainer &amp;lt; DefaultActAsPropsAn object instance can be represented in two waysPresentAsRow : Object row view PresentAsForm : Object Form viewThese rowpresenters will be&amp;nbsp;used in a form.</description>
     </item>
     
     <item>
@@ -1796,7 +1848,8 @@ Somebody in&amp;nbsp;stated in a&amp;nbsp;comment&amp;nbsp;he got an exception. 
       <pubDate>Tue, 28 Mar 2006 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/mesothelioma-and-lawyers/</guid>
-      <description>Mesothelioma and lawyers ?Google has been providing a tool to show the current rates for adsense words.</description>
+      <description>Mesothelioma and lawyers ?Google has been providing a tool to show the current rates for adsense words.
+This is the top 10 of current pay-per-clicks :</description>
     </item>
     
     <item>
@@ -1805,7 +1858,7 @@ Somebody in&amp;nbsp;stated in a&amp;nbsp;comment&amp;nbsp;he got an exception. 
       <pubDate>Thu, 23 Mar 2006 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/howto-dutch-onderhandelen-over-je-loon/</guid>
-      <description>De volgende vraag werd op een forum gesteld :&amp;nbsp;.</description>
+      <description>De volgende vraag werd op een forum gesteld :&amp;nbsp;...&amp;nbsp;De nieuwe functie is echter een uurtje rijden en vereist dat ik goed bereikbaar ben.</description>
     </item>
     
     <item>
@@ -1851,7 +1904,7 @@ While checking out some stuff on my PC I noticed some old sloppy code lying arou
       <pubDate>Tue, 19 Apr 2005 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/current-progress/</guid>
-      <description>I am currently&amp;nbsp;very very &amp;nbsp;busy (15h+ a day) developing several projects, including Aestethics+ and Fact+.</description>
+      <description>I am currently&amp;nbsp;very very &amp;nbsp;busy (15h+ a day) developing several projects, including Aestethics+ and Fact+.Since it&amp;#39;s been a long time since I&amp;#39;ve posted any updates, I decided to make an effort today (although it&amp;#39;s currently 1.</description>
     </item>
     
     <item>
@@ -1860,7 +1913,7 @@ While checking out some stuff on my PC I noticed some old sloppy code lying arou
       <pubDate>Tue, 18 Jan 2005 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/aestethics&#43;-se-p910i/</guid>
-      <description>I&amp;#39;m currently working on a new application for a plastic surgery clinic :&amp;nbsp; &amp;quot;Aestethics+&amp;quot;.</description>
+      <description>I&amp;#39;m currently working on a new application for a plastic surgery clinic :&amp;nbsp; &amp;quot;Aestethics+&amp;quot;.&amp;nbsp;&amp;nbsp;More news about this when the specs/prototype is finished.</description>
     </item>
     
     <item>
@@ -1869,7 +1922,7 @@ While checking out some stuff on my PC I noticed some old sloppy code lying arou
       <pubDate>Fri, 24 Dec 2004 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/best-wishes/</guid>
-      <description>Best wishes; a Merry Christmas and a Happy New Year to everyone !</description>
+      <description>Best wishes; a Merry Christmas and a Happy New Year to everyone !!!!</description>
     </item>
     
     <item>
@@ -1878,7 +1931,7 @@ While checking out some stuff on my PC I noticed some old sloppy code lying arou
       <pubDate>Sun, 12 Dec 2004 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/new-google-service-predict-your-search-requests/</guid>
-      <description>In it&amp;#39;s ever-continuing quest of improving their search engine, google is trying out a new concept : Google auto-suggest.</description>
+      <description>In it&amp;#39;s ever-continuing quest of improving their search engine, google is trying out a new concept : Google auto-suggest. As you type in your search words, google tries to predict them.</description>
     </item>
     
     <item>
@@ -1914,7 +1967,7 @@ While checking out some stuff on my PC I noticed some old sloppy code lying arou
       <pubDate>Tue, 30 Nov 2004 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/testdriven.net-1.0-out/</guid>
-      <description>Found this on Peli&amp;#39;s blog, and as an adaptee of the xp principles, and as a .</description>
+      <description>Found this on Peli&amp;#39;s blog, and as an adaptee of the xp principles, and as a .NET programmer, I simply have the duty to mention this : &amp;nbsp;TestDriven.</description>
     </item>
     
     <item>
@@ -1923,16 +1976,25 @@ While checking out some stuff on my PC I noticed some old sloppy code lying arou
       <pubDate>Tue, 30 Nov 2004 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/the-user-interface-aspect/</guid>
-      <description>Her is an excerpt from my former blog regarding user interface aspects.</description>
+      <description>Her is an excerpt from my former blog regarding user interface aspects... It&amp;#39;s interesting to see how my opinion evolved from this kind of thinking to CROAMprevious web logs can be found @ blogspot&amp;nbsp;---&amp;gt;&amp;lt;8----------------------A user-interface is one of the points that makes or breaks your program when users start to work with it.</description>
     </item>
     
     <item>
-      <title>Contact</title>
+      <title>Contact me</title>
       <link>https://tojans.me/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/contact/</guid>
-      <description>Laden…</description>
+      <description>Tom Janssens Tom@corebvba.be+32 478 336 376CoreNieuwegestraat 76 B9620 Zottegem BELGIUM VAT nr.</description>
+    </item>
+    
+    <item>
+      <title>Hello</title>
+      <link>https://tojans.me/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tojans.me/about/</guid>
+      <description>About me My parents bought their first computer - a TRS-80 Model III - when I was about 8 years old.</description>
     </item>
     
   </channel>

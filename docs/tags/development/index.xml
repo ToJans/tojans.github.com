@@ -15,7 +15,7 @@
       <guid>https://tojans.me/posts/are-new-js-frameworks-and-libs-a-fad/</guid>
       <description>Good question!
  TL-DR: Most are, except:
- jQuery React vue.</description>
+ jQuery React vue.js   Frameworks - not for me! In web UI, frameworks like BackBone, Ember and Angular might be all nice and stuff, but when you start using them to compose larger applications, things tend to break down quite easily with less experienced developers.</description>
     </item>
     
     <item>
@@ -24,7 +24,8 @@
       <pubDate>Tue, 13 Oct 2015 10:46:54 +0200</pubDate>
       
       <guid>https://tojans.me/posts/haskell-s-controversial-ftp-proposal/</guid>
-      <description>In the Haskell world, there is currently a big fuss about the &amp;ldquo;Foldable/Traversable in Prelude&amp;rdquo;-proposal.</description>
+      <description>In the Haskell world, there is currently a big fuss about the &amp;ldquo;Foldable/Traversable in Prelude&amp;rdquo;-proposal.
+Edit: For the record: it was a proposal, and has been implemented in the current version of Haskell (GHC)</description>
     </item>
     
     <item>
@@ -33,7 +34,7 @@
       <pubDate>Sun, 04 Oct 2015 10:23:42 +0200</pubDate>
       
       <guid>https://tojans.me/posts/hangman-in-haskell/</guid>
-      <description>As I noticed a question for a more idiomatic Haskell version of the game Hangman on codereview.</description>
+      <description>As I noticed a question for a more idiomatic Haskell version of the game Hangman on codereview.stackoverflow.com, I decided to give it a go; this is the result:</description>
     </item>
     
     <item>
@@ -42,7 +43,7 @@
       <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/selling-ddd/</guid>
-      <description>A little while ago, we gave a series of short talks called &amp;ldquo;DDD Basics&amp;rdquo; for the Belgian Domain-driven design community.</description>
+      <description>A little while ago, we gave a series of short talks called &amp;ldquo;DDD Basics&amp;rdquo; for the Belgian Domain-driven design community. The focus was on strategic design.</description>
     </item>
     
     <item>
@@ -51,7 +52,8 @@
       <pubDate>Mon, 17 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/why-bad-software-architecture-is-easy-to-monetize/</guid>
-      <description>This morning I received yet another &amp;ldquo;interesting&amp;rdquo; job offer, which looked like this:</description>
+      <description>This morning I received yet another &amp;ldquo;interesting&amp;rdquo; job offer, which looked like this:
+Wanted: &amp;quot;senior .Net architect&amp;quot;&amp;#10;Description &amp;quot;build one framework to build all future projects, using sharepoint&amp;quot;&amp;#10;#ThanksButNoThanks</description>
     </item>
     
     <item>
@@ -60,7 +62,8 @@
       <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/the-very-first-dddbe-event-the-modellathon/</guid>
-      <description>This is my personal review of the @DDDBE inaugural meeting: a modellathon.</description>
+      <description>This is my personal review of the @DDDBE inaugural meeting: a modellathon.
+Some background info So, last night we had the very first event of the Belgian DDD community: a modellathon facilitated by Mathias Verraes and Stijn Vannieuwenhuyse, and kindly hosted by the hosting company Combell.</description>
     </item>
     
     <item>
@@ -69,7 +72,9 @@
       <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/my-#cqrs-cookbook/</guid>
-      <description>Here is my personal take on how I interpret all things CQRS.</description>
+      <description>Here is my personal take on how I interpret all things CQRS...
+Commercial impact: why use CQRS ?
+CQRS enforces you to apply strict boundaries to your app in a consistent way.</description>
     </item>
     
   </channel>

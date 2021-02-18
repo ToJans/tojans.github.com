@@ -13,7 +13,7 @@
       <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/selling-ddd/</guid>
-      <description>A little while ago, we gave a series of short talks called &amp;ldquo;DDD Basics&amp;rdquo; for the Belgian Domain-driven design community.</description>
+      <description>A little while ago, we gave a series of short talks called &amp;ldquo;DDD Basics&amp;rdquo; for the Belgian Domain-driven design community. The focus was on strategic design.</description>
     </item>
     
     <item>
@@ -22,7 +22,8 @@
       <pubDate>Mon, 17 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/why-bad-software-architecture-is-easy-to-monetize/</guid>
-      <description>This morning I received yet another &amp;ldquo;interesting&amp;rdquo; job offer, which looked like this:</description>
+      <description>This morning I received yet another &amp;ldquo;interesting&amp;rdquo; job offer, which looked like this:
+Wanted: &amp;quot;senior .Net architect&amp;quot;&amp;#10;Description &amp;quot;build one framework to build all future projects, using sharepoint&amp;quot;&amp;#10;#ThanksButNoThanks</description>
     </item>
     
     <item>
@@ -31,7 +32,8 @@
       <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/the-very-first-dddbe-event-the-modellathon/</guid>
-      <description>This is my personal review of the @DDDBE inaugural meeting: a modellathon.</description>
+      <description>This is my personal review of the @DDDBE inaugural meeting: a modellathon.
+Some background info So, last night we had the very first event of the Belgian DDD community: a modellathon facilitated by Mathias Verraes and Stijn Vannieuwenhuyse, and kindly hosted by the hosting company Combell.</description>
     </item>
     
     <item>
@@ -40,7 +42,9 @@
       <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/my-#cqrs-cookbook/</guid>
-      <description>Here is my personal take on how I interpret all things CQRS.</description>
+      <description>Here is my personal take on how I interpret all things CQRS...
+Commercial impact: why use CQRS ?
+CQRS enforces you to apply strict boundaries to your app in a consistent way.</description>
     </item>
     
   </channel>

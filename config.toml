@@ -3,7 +3,7 @@ languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Tom's ramblings"
 theme = "anatole"
-summarylength = 10
+summarylength = 20
 enableEmoji = true
 enableRobotsTXT = true
 publishDir = "docs"
@@ -93,7 +93,13 @@ name = "Blog posts"
 weight = 300
 identifier = "posts"
 url = "/posts/"
-    
+
+[[menu.main]]
+name = "About"
+weight = 350
+identifier = "about"
+url = "/about/"
+
 [[menu.main]]
 name = "Contact"
 weight = 400

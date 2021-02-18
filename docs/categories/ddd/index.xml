@@ -31,7 +31,8 @@
       <pubDate>Thu, 27 Nov 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/about-dependent-typing-idris-and-the-road-to-valhalla/</guid>
-      <description>Due to my DDD background, I am constantly on a quest for the utopian domain model.</description>
+      <description>Due to my DDD background, I am constantly on a quest for the utopian domain model.
+Last week during the Build Stuff 2014 conference I saw a presentation by Amanda Laucher about dependent typing that spiked my interest.</description>
     </item>
     
     <item>
@@ -111,7 +112,7 @@
       <pubDate>Mon, 28 Nov 2011 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/continuous-thinking-cqrs-explained-to-a-10-year-old/</guid>
-      <description>IntroductionThe concept behind CQRS is neat: detach your domain implementation completely from your representation requirements.</description>
+      <description>IntroductionThe concept behind CQRS is neat: detach your domain implementation completely from your representation requirements. I even wrote a framework for it&amp;nbsp;as a learning tool, so somebody without any prior experience should be able to boot a CQRS app in a few minutes.</description>
     </item>
     
     <item>

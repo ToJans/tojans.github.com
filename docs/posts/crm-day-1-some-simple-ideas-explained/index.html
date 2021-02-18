@@ -53,7 +53,7 @@
 <meta name="twitter:image" content="https://tojans.me/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content="CRM day 1 : Some simple ideas explained"/>
-<meta name="twitter:description" content="Today I will not actually program any stuff, but i will layout some basic stuff on paper this blog."/>
+<meta name="twitter:description" content="Today I will not actually program any stuff, but i will layout some basic stuff on paper this blog.First draft :I will start from the default object properties :DefaultObjectProps :id : unique identifier description : text description (for dropdownlists etc) created : date of creation created by : user modified : date of last modification modified by : userThen the default act_as_propsDefaultActAsProps &lt; DefaultObjectPropsParent (id, type)ActAsSecured &lt; DefaultActAsPropsOwnerUser : user OwnerGroup : group UserRights,GroupRights,AnonymousRights : CRUD bools implements : bool Allow Read (type,int id) bool Allow Write (type,int id) bool Allow Create (type,int id) bool Allow Update (type,int id)ActAsTree &lt; DefaultActAsPropsActAsPageable &lt; DefaultActAsPropsActAsSortable &lt; DefaultActAsPropsActAsFilterable &lt; DefaultActAsPropsActAsTaggable &lt; DefaultActAsPropsActAsSchedule &lt; DefaultActAsPropsActAsCommentable &lt; DefaultActAsPropsActAsRule &lt; DefaultActAsPropsActAsFileContainer &lt; DefaultActAsPropsAn object instance can be represented in two waysPresentAsRow : Object row view PresentAsForm : Object Form viewThese rowpresenters will be&nbsp;used in a form."/>
 
 </head>
 <body><div class="sidebar . ">
@@ -118,6 +118,12 @@
                    href="/posts/"
                         
                    title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About</a></li>
         
             
             <li><a 
