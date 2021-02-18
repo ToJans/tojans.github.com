@@ -10,7 +10,7 @@ slug = "propositions-as-types"
 ## What's all the fuss about?
 
 Quite recently, [Philip Wadler](https://twitter.com/PhilipWadler) published the paper
-["Propositions as Types"](http://homepages.inf.ed.ac.uk/wadler/papers/propositions-as-types/propositions-as-types.pdf)
+["Propositions as Types"](https://homepages.inf.ed.ac.uk/wadler/papers/propositions-as-types/propositions-as-types.pdf)
 
 If I understood this correctly, this is about the fact that the `application of a function to a type` is also a `type`. Based on this observation, we could describe a whole app in `types`.
 
@@ -19,7 +19,7 @@ what you would want it to do, and `it will deduct the code/proof itself`. ( It m
 
 ## Why do you think this is the future?
 
-Some time ago [I created a small study group](https://github.com/ToJans/idris101) to learn some [Idris](http://www.idris-lang.org/), a
+Some time ago [I created a small study group](https://github.com/ToJans/idris101) to learn some [Idris](https://www.idris-lang.org/), a
 [dependently typed language](https://en.wikipedia.org/wiki/Dependent_type). While I think it is
 way to early to be usable right now, I do believe I have seen a glimpse of the future.
 

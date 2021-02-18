@@ -10,7 +10,7 @@ I&#39;m currently working on a new application for a plastic surgery clinic :&nb
 A small screenshot of an early prototype (click to enlarge): 
 </p>
 <p>
-<a href="http://www.corebvba.be/blog/content/binary/aestethics+.GIF" target="_new"><img style="width: 414px; height: 260px" src="/blog/content/binary/aestethics+.GIF" border="0" alt="" width="414" height="260" /></a>
+<a href="https://www.corebvba.be/blog/content/binary/aestethics+.GIF" target="_new"><img style="width: 414px; height: 260px" src="/blog/content/binary/aestethics+.GIF" border="0" alt="" width="414" height="260" /></a>
 </p>
 <p>
 Also, in order to prevent forgetting appointements, tasks etc... I&#39;ve acquired myself a new device called a P910i. It&#39;s a hybrid GSM/PDA, but in a reasonable form factor. It certainly has improved my life a lot. Unlike any other smartphones/pda&#39;s, this one has 3 input methods : a touchscreen, a (very small) keyboard, and a virtual (=onscreen) keyboard.<br />

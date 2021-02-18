@@ -10,5 +10,5 @@ title: Major update for MvcExtensions
 <p>This application framework has allready been used for 2 custom customer applications, and I have to say that it made my development quite successfull.</p>
 <p>I have to admit that the documentation is still lacking a lot, but there is a sample project included.</p>
 <p>As always, you can download the code here :</p>
-<p><a href="http://github.com/ToJans/MVCExtensions" target="_blank">http://github.com/ToJans/MVCExtensions</a></p>
-<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+<p><a href="https://github.com/ToJans/MVCExtensions" target="_blank">https://github.com/ToJans/MVCExtensions</a></p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="https://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="https://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>

@@ -18,7 +18,7 @@ Currently the demo application supports :<br />
 In order to use it you need to have windows mobile 5 or 6, together with the .net compact framework version 2.0 installed. Simply unzip the zip file, and start the &#39;coreinput.exe&#39; on your PDA. 
 </p>
 <p>
-Please let me know what you think about this, by providing comments. It seems like over a hundred people have downloaded it, but so far I only got&nbsp;3 reactions from users <a href="http://forum.xda-developers.com/showthread.php?t=317962">on this forum</a>. 
+Please let me know what you think about this, by providing comments. It seems like over a hundred people have downloaded it, but so far I only got&nbsp;3 reactions from users <a href="https://forum.xda-developers.com/showthread.php?t=317962">on this forum</a>. 
 </p>
 <p>
 Future improvements :<br />
@@ -30,7 +30,7 @@ Future improvements :<br />
 You can download the latest version here : 
 </p>
 <p>
-<a href="http://www.corebvba.be/blog/content/binary/coreInput1.zip">coreInput1.zip (67,24 KB)</a> 
+<a href="https://www.corebvba.be/blog/content/binary/coreInput1.zip">coreInput1.zip (67,24 KB)</a> 
 </p>
 <p>
 For further instructions I would like to refer to the related posts. 

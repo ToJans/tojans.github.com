@@ -9,7 +9,7 @@ title: The user interface aspect
 Her is an excerpt from my former blog regarding user interface aspects... It&#39;s interesting to see how my opinion evolved from this kind of thinking to CROAM
 </p>
 <p>
-previous web logs can be found @ <a href="http://corebvba.blogspot.com/">blogspot</a>
+previous web logs can be found @ <a href="https://corebvba.blogspot.com/">blogspot</a>
 </p>
 <p>
 &nbsp;

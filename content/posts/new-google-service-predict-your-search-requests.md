@@ -13,5 +13,5 @@ In internet explorer (or mozilla, or almost any browser for that mather) you hav
 <p>
 Google had this feature already, but now it has&nbsp;advanced even further in this : it tries to predict your search terms, and shows the number of results you get with a certain term in the list. Please note that&nbsp;this is currently in an experimental phase, so there still might be some minor bugs etc...<br />
 <br />
-Try it <a href="http://www.google.com/webhp?complete=1&amp;hl=en">here</a>. 
+Try it <a href="https://www.google.com/webhp?complete=1&amp;hl=en">here</a>. 
 </p>

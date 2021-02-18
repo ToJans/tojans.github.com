@@ -6,8 +6,8 @@ title: "Learn Elixir (or Ruby, Javascript, Clojure) through exercism.io"
 comments: true
 categories: 
 ---
-I am currently in the process of improving my [Elixir](http://elixir-lang.org) skills
-using the site [Exercism.io](http://exercism.io). 
+I am currently in the process of improving my [Elixir](https://elixir-lang.org) skills
+using the site [Exercism.io](https://exercism.io). 
 
 ## What's Exercism.io?
 
@@ -17,7 +17,7 @@ Exercism.io is a really neat concept: it provides you a platform to learn a new 
 
 It works using a command line tool to manage things on your machine, and the website, where users provide feedback on your code, and you provide feedback on the code from other people if you completed the exercise previously.
 
-![My Exercism.io dashboard](http://i.snag.gy/Lw7K4.jpg)
+![My Exercism.io dashboard](https://i.snag.gy/Lw7K4.jpg)
 
 I will walk you briefly through the steps here.
 

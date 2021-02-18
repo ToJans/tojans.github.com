@@ -32,7 +32,7 @@ Whenever people tell you refactoring is optional, give them this quote.
 
 People tend to think they can create a big design/model up front that will cope with all situations and exceptions. Unless you've been handling the same model for years, you are usually wrong.
 
-This comes from one of his talks about [Domain Driven Design](http://en.wikipedia.org/wiki/Domain-driven_design).
+This comes from one of his talks about [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design).
 
 "I need one design/framework to rule them all" => unlikely to succeed, especially on the first try.
 
@@ -52,5 +52,5 @@ Moral of the story: carefully consider ideas before you commit to them.
 
 ## Want more?
 
-Yes, I am a Ziobrando fanyboy. Read more at [his blog](http://ziobrando.blogspot.com/) or follow him [on twitter](https://twitter.com/ziobrando).
+Yes, I am a Ziobrando fanyboy. Read more at [his blog](https://ziobrando.blogspot.com/) or follow him [on twitter](https://twitter.com/ziobrando).
 

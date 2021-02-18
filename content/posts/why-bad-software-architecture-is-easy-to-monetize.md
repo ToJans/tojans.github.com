@@ -20,7 +20,7 @@ Why do a lot of consultancy/web shops do it then?
 
 ... About someone building a house...
 
-<iframe src="http://www.flickr.com/photos/30515687@N05/3856245334/in/photolist-6SLgow-6SLh31-6SLky7-6SLkFY-6SLn3P-6SLwFu-6SLwQs-6SLwUh-6SLxgX-6SLxvr-6SLxHV-6SLxU2-6SLyek-6SLynr-6SLzTJ-6SLAxu-6SM5TF-6SNr5d-6SNrtE-6SNrTq-6SNs3q-6SQbeb-6SQnXb-6SQoM7-6SQoY3-6SQA3b-6SQAwu-6SQATN-6SR5Tb-6WV5nB-6XgBwC-77u21V-77ubax-77xVYf-77xWsf-7u7UbR-7uX58a-7vbncH-7vbnvp-7vfafJ-7vfbdf-7vfbGm-7vtzxr-7vxowm-cAxjX5-8ny56k-dnhF9J-8VkCiB-bzvYAQ-e2GgF7-e2Aw34/player/" width="500" height="403" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe src="https://www.flickr.com/photos/30515687@N05/3856245334/in/photolist-6SLgow-6SLh31-6SLky7-6SLkFY-6SLn3P-6SLwFu-6SLwQs-6SLwUh-6SLxgX-6SLxvr-6SLxHV-6SLxU2-6SLyek-6SLynr-6SLzTJ-6SLAxu-6SM5TF-6SNr5d-6SNrtE-6SNrTq-6SNs3q-6SQbeb-6SQnXb-6SQoM7-6SQoY3-6SQA3b-6SQAwu-6SQATN-6SR5Tb-6WV5nB-6XgBwC-77u21V-77ubax-77xVYf-77xWsf-7u7UbR-7uX58a-7vbncH-7vbnvp-7vfafJ-7vfbdf-7vfbGm-7vtzxr-7vxowm-cAxjX5-8ny56k-dnhF9J-8VkCiB-bzvYAQ-e2GgF7-e2Aw34/player/" width="500" height="403" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
 ## The project
 

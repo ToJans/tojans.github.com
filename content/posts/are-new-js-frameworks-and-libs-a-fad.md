@@ -11,11 +11,11 @@ Good question!
 >
 >  - [jQuery](https://jquery.com/)
 >  - [React](https://facebook.github.io/react/)
->  - [vue.js](http://vuejs.org/)
+>  - [vue.js](https://vuejs.org/)
 
 ## Frameworks - not for me!
 
-In web UI, frameworks like [BackBone](http://backbonejs.org/), [Ember](http://emberjs.com/) and [Angular](https://angularjs.org/) might be all nice and stuff, but when you start using them to compose larger applications, things tend to break down quite easily with less experienced developers.
+In web UI, frameworks like [BackBone](https://backbonejs.org/), [Ember](https://emberjs.com/) and [Angular](https://angularjs.org/) might be all nice and stuff, but when you start using them to compose larger applications, things tend to break down quite easily with less experienced developers.
 
 Developing large client-side applications requires the same modelling skillset as developing large server-side applications; the complexity is usually not located in the infrastructure, but in properly mapping boundaries and responsibilities within your solution space.
 
@@ -118,7 +118,7 @@ Next to this, you should also notice the whole `getInitialState` and the use of 
 
 ### The new kid on the block: Vue.js
 
-Welcome to [vue.js](http://vuejs.org/). Vue.js is like React, but without the warts: it doesn't require VirtualDom, but just updates the relevant dom elements based on the changes of your state. It also doesn't require you to ugly warts like `setState`. Let me show you an example for this code in vue.js:
+Welcome to [vue.js](https://vuejs.org/). Vue.js is like React, but without the warts: it doesn't require VirtualDom, but just updates the relevant dom elements based on the changes of your state. It also doesn't require you to ugly warts like `setState`. Let me show you an example for this code in vue.js:
 
 ```
 <div id="some-div">
@@ -164,4 +164,4 @@ The added benefit over react is not that large that it will make me rewrite my r
 
 ## PS: on ELM
 
-For the ones asking: I did take a look to [ELM](http://elm-lang.org/), but for me the whole FRP things feels too alien from HTML. I'd rather implement my domain logic in a typed functional language, and use simple javascript for the representation.
+For the ones asking: I did take a look to [ELM](https://elm-lang.org/), but for me the whole FRP things feels too alien from HTML. I'd rather implement my domain logic in a typed functional language, and use simple javascript for the representation.

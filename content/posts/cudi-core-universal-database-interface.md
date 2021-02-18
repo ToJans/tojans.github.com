@@ -49,4 +49,4 @@ Misschien is CUDI voor uw bedrijf wel <u>de oplossing</u> ? Contacteer ons, en w
 Tot slot:<br />
 E&eacute;n beeld zegt meer dan 1000 woorden : klik op de tekening
 </p>
-<a href="http://www.corebvba.be/blog/content/binary/cudi2.JPG" target="_new"><img style="width: 239px; height: 150px" src="/blog/content/binary/cudi2.JPG" border="0" alt="" width="239" height="150" /></a>
+<a href="https://www.corebvba.be/blog/content/binary/cudi2.JPG" target="_new"><img style="width: 239px; height: 150px" src="/blog/content/binary/cudi2.JPG" border="0" alt="" width="239" height="150" /></a>

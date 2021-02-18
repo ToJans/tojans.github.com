@@ -17,7 +17,7 @@ I do believe this is a good habit, but that is not what this post is about.
 
 # Tesla's Autopilot feature: several levels of AI:
 
-Based on [my previous observations](http://tojans.me/blog/2015/11/23/tesla/) and some thinking on the way back yesterday, I would assume there would be three levels of thinking:
+Based on [my previous observations](https://tojans.me/blog/2015/11/23/tesla/) and some thinking on the way back yesterday, I would assume there would be three levels of thinking:
 
 - The instinctive layer
 - The short-term layer

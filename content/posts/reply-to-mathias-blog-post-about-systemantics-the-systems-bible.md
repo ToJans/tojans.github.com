@@ -9,7 +9,7 @@ categories:
 
 # Some context
 
-[@MathiasVerraes](http://twitter.com/mathiasverraes) just published [a short review](http://verraes.net/2013/08/john-gall-systemantics-the-systems-bible/) about a book called ["Systemantics - The Systems Bible" by John Gall](http://www.amazon.com/SYSTEMANTICS-THE-SYSTEMS-BIBLE-ebook/dp/B00AK1BIDM).
+[@MathiasVerraes](https://twitter.com/mathiasverraes) just published [a short review](https://verraes.net/2013/08/john-gall-systemantics-the-systems-bible/) about a book called ["Systemantics - The Systems Bible" by John Gall](https://www.amazon.com/SYSTEMANTICS-THE-SYSTEMS-BIBLE-ebook/dp/B00AK1BIDM).
 
 One of the quotes he mentioned was the following one:
 
@@ -17,20 +17,20 @@ One of the quotes he mentioned was the following one:
 
 # Here is what I learned recently
 
-The whole quote refers to [what Taleb baptized "Anti-fragile"](http://www.amazon.com/Antifragile-Things-That-Gain-Disorder/dp/1400067820/ref=sr_1_1?ie=UTF8&qid=1376114525&sr=8-1&keywords=antifragile):
+The whole quote refers to [what Taleb baptized "Anti-fragile"](https://www.amazon.com/Antifragile-Things-That-Gain-Disorder/dp/1400067820/ref=sr_1_1?ie=UTF8&qid=1376114525&sr=8-1&keywords=antifragile):
 You begin with a very fragile system (it breaks all the time), so people add rules and fix things with feedback to make it more robust.
 
 The more robust your system gets, the harder it will become to incorporate something that completely ignores expected behavior.
 
 Taleb says that, given enough time and a system that gets more robust as time progresses, an unexpected thing should happen that will break the system.
 
-The problem is that, by the time this ["black swan"](http://en.wikipedia.org/wiki/The_Black_Swan_(2007_book)) occurs, people will have grown so reliable on the system, that the impact of the failure will be huge (Consider the whole story with the [Credit Default Swaps](http://nl.wikipedia.org/wiki/Credit_default_swap#Risico.27s_verbonden_aan_credit_default_swaps) in the banking industries for a recent example.)
+The problem is that, by the time this ["black swan"](https://en.wikipedia.org/wiki/The_Black_Swan_(2007_book)) occurs, people will have grown so reliable on the system, that the impact of the failure will be huge (Consider the whole story with the [Credit Default Swaps](https://nl.wikipedia.org/wiki/Credit_default_swap#Risico.27s_verbonden_aan_credit_default_swaps) in the banking industries for a recent example.)
 
 > TL;DR: There is no such thing as "Too big to fail"
 
 His solution is building systems that grown stronger upon unexpected behavior, and the only way to build such a system, is by continuously forcing unexpected behavior upon it, causing it to fail. A system that is used to failure, will less likely have stronger survival chances if a "Black swan" would occur.
 
-One very known and understandable example is [the Chaos monkey by NetFlix](http://techblog.netflix.com/2012/07/chaos-monkey-released-into-wild.html), another one could be [genetic algorithms](http://en.wikipedia.org/wiki/Genetic_algorithm). What is typical about these systems, is that they are built out of small, independent units, and when these small parts fail, the whole system knows how to handle this.
+One very known and understandable example is [the Chaos monkey by NetFlix](https://techblog.netflix.com/2012/07/chaos-monkey-released-into-wild.html), another one could be [genetic algorithms](https://en.wikipedia.org/wiki/Genetic_algorithm). What is typical about these systems, is that they are built out of small, independent units, and when these small parts fail, the whole system knows how to handle this.
 
 # Once again about Erlang/Elixir/the BEAM VM
 

@@ -7,7 +7,7 @@ title: To git or not to git - Source control done right / intro and quick tutori
 
 <h4>Introduction&nbsp;</h4>
 <p>
-<a href="http://en.wikipedia.org/wiki/Revision_control" target="_blank">Source control</a> has always been a really annoying issue for me, since it was either : 
+<a href="https://en.wikipedia.org/wiki/Revision_control" target="_blank">Source control</a> has always been a really annoying issue for me, since it was either : 
 </p>
 <ul>
 	<li>
@@ -42,20 +42,20 @@ title: To git or not to git - Source control done right / intro and quick tutori
 	</li>
 </ul>
 <p>
-I have been working with <a href="http://subversion.tigris.org/" target="_blank">Subversion</a>/<a href="http://tortoisesvn.tigris.org/" target="_blank">TortoiseSVN </a>for a little while, but I was noticing that I really had to force myself into using the source control repository. A few times in the last month I noticed that I did not do enough commits, forcing me into re-implementing stuff again. I was also lacking a very good <a href="http://en.wikipedia.org/wiki/Diff" target="_blank">diff tool </a>to compare different versions 
+I have been working with <a href="https://subversion.tigris.org/" target="_blank">Subversion</a>/<a href="https://tortoisesvn.tigris.org/" target="_blank">TortoiseSVN </a>for a little while, but I was noticing that I really had to force myself into using the source control repository. A few times in the last month I noticed that I did not do enough commits, forcing me into re-implementing stuff again. I was also lacking a very good <a href="https://en.wikipedia.org/wiki/Diff" target="_blank">diff tool </a>to compare different versions 
 </p>
 <p>
 I have been looking for different alternatives every now and then, but without much success, until recently... 
 </p>
 <h4>The holy grail : git</h4>
 <p>
-I found <a href="http://git-scm.com/" target="_blank">git</a>.<br />
+I found <a href="https://git-scm.com/" target="_blank">git</a>.<br />
 Getting started with&nbsp;git has been a real pleasure. Setup/Commits/history checking is all really easy with git. As a proof of concept&nbsp;I will&nbsp;show you a small walkthrough in a Windows environment. 
 </p>
 <h5>1. Download (g)it</h5>
 <p>
-Download the windows version from here : <a href="http://code.google.com/p/msysgit/downloads/list">http://code.google.com/p/msysgit/downloads/list</a><br />
-(I downloaded <a href="http://msysgit.googlecode.com/files/Git-1.6.2.2-preview20090408.exe" target="_blank">the latest preview</a>.)<br />
+Download the windows version from here : <a href="https://code.google.com/p/msysgit/downloads/list">https://code.google.com/p/msysgit/downloads/list</a><br />
+(I downloaded <a href="https://msysgit.googlecode.com/files/Git-1.6.2.2-preview20090408.exe" target="_blank">the latest preview</a>.)<br />
 Use the default install. 
 </p>
 <h5>2. Create git repository</h5>
@@ -137,7 +137,7 @@ commit a289f8a70b961f83110c96a91e9ed97edb900909
 Author: Tom Janssens &lt;Tom@xx&gt;Date:&nbsp;&nbsp; Wed May 6 10:28:53 2009 +0200
 </pre>
 <pre>
-&nbsp;&nbsp;&nbsp; Inital checkin from http://xx.unfuddle.com/svn/xx_htm/tags/v1.3.0.3404/
+&nbsp;&nbsp;&nbsp; Inital checkin from https://xx.unfuddle.com/svn/xx_htm/tags/v1.3.0.3404/
 </pre>
 <p>
 &nbsp;

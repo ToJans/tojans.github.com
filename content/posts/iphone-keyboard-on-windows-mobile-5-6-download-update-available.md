@@ -15,5 +15,5 @@ So I adjusted a single variable, compiled the version, and ... Now it even runs 
 You can download the version here : 
 </p>
 <p>
-<a href="http://www.corebvba.be/blog/content/binary/coreInput12.zip">coreInput12.zip (67,25 KB)</a> 
+<a href="https://www.corebvba.be/blog/content/binary/coreInput12.zip">coreInput12.zip (67,25 KB)</a> 
 </p>

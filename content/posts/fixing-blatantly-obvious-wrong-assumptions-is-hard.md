@@ -10,7 +10,7 @@ categories:
 So, yesterday I had another one of those "in your face moments": While working on the 
 [Erlang FoundationDB driver](https://github.com/happypancake/fdb-erlang), I spent **a lot** of time on a bug that was so blatantly obvious that I did not notice it for a long time.
 
-![My dev environment](http://i.snag.gy/5r5eC.jpg)
+![My dev environment](https://i.snag.gy/5r5eC.jpg)
 
 As I had been stuck for a long time, [Tomas](https://twitter.com/ptomasroos) suggested me to ask the [FoundationDB guys](https://foundationdb.com/) for help, so we did.
 
@@ -25,7 +25,7 @@ Well, in one of the usual ways it does...
 
 First things first: the solution is an Erlang interface to FoundationDB.
 
-An [Erlang NIF](http://www.erlang.org/doc/tutorial/nif.html) - NIF is short for a "Native InterFace" -
+An [Erlang NIF](https://www.erlang.org/doc/tutorial/nif.html) - NIF is short for a "Native InterFace" -
 requires you to write an interface with a lib-file (or DLL on windows) that converts the Erlang terms to proper binary parameters, calls the relevant function(s), and then reports 
 the results back in the Erlang term binary format.
 

@@ -13,9 +13,9 @@ categories:
 
 The basic lean start-up diagram looks like this:
 
-![Build-measure-learn triangle](http://i.snag.gy/xg4LB.jpg)
+![Build-measure-learn triangle](https://i.snag.gy/xg4LB.jpg)
 
-A while a go, [when I decided to do 10 start-ups](http://tojans.me/blog/2012/02/28/project-%23startup10-learning-to-build-your-own-business/) 
+A while a go, [when I decided to do 10 start-ups](https://tojans.me/blog/2012/02/28/project-%23startup10-learning-to-build-your-own-business/) 
 the process usually was like this (simplification):
 
 - brainstorm with another person on a start-up ideas
@@ -30,7 +30,7 @@ the process usually was like this (simplification):
 
 So, it looked a bit like this:
 
-![Build-measure-learn for idea, market &amp; product](http://i.snag.gy/nUUr7.jpg)
+![Build-measure-learn for idea, market &amp; product](https://i.snag.gy/nUUr7.jpg)
 
 None of these were a success, and all of them have been shut down.
 
@@ -118,12 +118,12 @@ I am currently in the process of building the first version, so I can not tell y
 When I initially learned about the lean start-up, I assumed it was a triangle. After a few iterations, I noticed it was a series of triangle in the main 
 triangle. Another few years, and the pattern finally emerges:
 
-![build-measure-learn](http://i.snag.gy/kGcvM.jpg)
+![build-measure-learn](https://i.snag.gy/kGcvM.jpg)
 
 ## Key takeaway
 
 > The whole build-measure-learn thing should be recursively repeated ad libitum. Apply it everywhere!
 
-The attentive reader might recall this pattern as [Sierpinski's triangle](http://en.wikipedia.org/wiki/Sierpinski_triangle)
+The attentive reader might recall this pattern as [Sierpinski's triangle](https://en.wikipedia.org/wiki/Sierpinski_triangle)
 
 Wish me luck!

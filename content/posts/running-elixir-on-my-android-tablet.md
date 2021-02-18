@@ -8,11 +8,11 @@ categories:
 ---
 
 As the Mrs. does not allow me to take the laptop on vacation, but we do take the tablet with us, I decided to find out 
-whether [Elixir](http://elixir-lang.org) runs on an Android tablet.
+whether [Elixir](https://elixir-lang.org) runs on an Android tablet.
 
 I experimented for about an hour or so, and apparently it is quite easy. Here is my proof:
 
-<blockquote class="twitter-tweet"><p><a href="https://twitter.com/search?q=%23elixir&amp;src=hash">#elixir</a> on android, now all I need is a REPL! <a href="https://twitter.com/search?q=%23DirtyHackButItWorks&amp;src=hash">#DirtyHackButItWorks</a> <a href="https://twitter.com/search?q=%23SL4A&amp;src=hash">#SL4A</a> <a href="https://twitter.com/search?q=%23Erlang4Android&amp;src=hash">#Erlang4Android</a> -pa /elixir/lib/elixir/ebin <a href="http://t.co/cAN2Ez4UQb">pic.twitter.com/cAN2Ez4UQb</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/349508106407014400">June 25, 2013</a></blockquote>
+<blockquote class="twitter-tweet"><p><a href="https://twitter.com/search?q=%23elixir&amp;src=hash">#elixir</a> on android, now all I need is a REPL! <a href="https://twitter.com/search?q=%23DirtyHackButItWorks&amp;src=hash">#DirtyHackButItWorks</a> <a href="https://twitter.com/search?q=%23SL4A&amp;src=hash">#SL4A</a> <a href="https://twitter.com/search?q=%23Erlang4Android&amp;src=hash">#Erlang4Android</a> -pa /elixir/lib/elixir/ebin <a href="https://t.co/cAN2Ez4UQb">pic.twitter.com/cAN2Ez4UQb</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/349508106407014400">June 25, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### How do you do this
@@ -27,8 +27,8 @@ I am not sure about the naming, as my tablet is in Dutch.)
 [here](https://code.google.com/p/android-scripting/downloads/detail?name=sl4a_r6.apk&can=2&q=). I used release 6.
 3. Install [Erlang4Android](https://code.google.com/p/erlang4android/) R16B - download 
 [here](https://code.google.com/p/erlang4android/downloads/detail?name=Erlang4AndroidR16B.apk&can=2&q=).
-4. Download the [Elixir precompiled package](http://elixir-lang.org/packages.html) and unzip it on your device. I used 
-[v0.9.3](http://dl.dropbox.com/u/4934685/elixir/v0.9.3.zip) and unzipped into `/mnt/sdcard/elixir`
+4. Download the [Elixir precompiled package](https://elixir-lang.org/packages.html) and unzip it on your device. I used 
+[v0.9.3](https://dl.dropbox.com/u/4934685/elixir/v0.9.3.zip) and unzipped into `/mnt/sdcard/elixir`
 5. Fire up `Erlang4Android`, install `Erlang`, and click on the 3 squares on the top right, choose `settings`. Enter 
 `-pa /mnt/sdcard/elixir/lib/elixir/ebin` as a parameter, so your erlang scripting environment will auto-load the elixir lib.
 6. Close `Erlang4Android`, open up `SL4A`, and click the menu on the bottom, `view`, and then choose `interpreters`

@@ -6,14 +6,14 @@ title: "Trolling the 100% TDD coverage approach - or not"
 comments: true
 categories: 
 ---
-When I read [this blog post](http://dupdob.wordpress.com/2014/02/21/the-secret-for-100-test-coverage-remove-code) about how and why one should achieve 100% code coverage on his code, I was flabbergasted, and when I noticed Bart's reply, I decided to check:
+When I read [this blog post](https://dupdob.wordpress.com/2014/02/21/the-secret-for-100-test-coverage-remove-code) about how and why one should achieve 100% code coverage on his code, I was flabbergasted, and when I noticed Bart's reply, I decided to check:
 
 <blockquote class="twitter-tweet" lang="nl"><p><a href="https://twitter.com/ToJans">@ToJans</a> It&#39;s a troll right ?</p>&mdash; Bart Waterschoot (@bwaterschoot) <a href="https://twitter.com/bwaterschoot/statuses/437954629545242624">24 februari 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### The subject 
 
-Here is the gist of [the article](http://dupdob.wordpress.com/2014/02/21/the-secret-for-100-test-coverage-remove-code):
+Here is the gist of [the article](https://dupdob.wordpress.com/2014/02/21/the-secret-for-100-test-coverage-remove-code):
 
 > For me, there is no question **100% coverage is** the **only** worthy **objective, do not settle for less**.
 
@@ -65,7 +65,7 @@ Which might sound reasonable, however, there are some caveats IMO:
 >
 >If you really want to verify how good your solution matches the problem space, I would suggest you to use property based testing; that will discover way more edge- and side-cases then you could ever imagine....
 >
->[1] http://devgrind.com/2007/04/25/how-to-not-solve-a-sudoku/
+>[1] https://devgrind.com/2007/04/25/how-to-not-solve-a-sudoku/
 
 ### In conclusion
 

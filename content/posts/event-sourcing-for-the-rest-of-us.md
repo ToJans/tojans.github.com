@@ -7,7 +7,7 @@ comments: true
 categories: 
 ---
 
-I recently saw a discussion on twitter about the [definition](http://martinfowler.com/eaaDev/EventSourcing.html)
+I recently saw a discussion on twitter about the [definition](https://martinfowler.com/eaaDev/EventSourcing.html)
  of event sourcing:
 
 <blockquote class="twitter-tweet"><p>Event sourcing: persisting entities by appending all state transitions to transaction log. To rebuild the state, we replay this log.</p>&mdash; Rinat Abdullin (@abdullin) <a href="https://twitter.com/abdullin/statuses/361079569933012992">July 27, 2013</a></blockquote>
@@ -16,14 +16,14 @@ I recently saw a discussion on twitter about the [definition](http://martinfowle
 <blockquote class="twitter-tweet"><p><a href="https://twitter.com/thinkb4coding">@thinkb4coding</a> which problems in this paper stand out to you?</p>&mdash; Rinat Abdullin (@abdullin) <a href="https://twitter.com/abdullin/statuses/361108972478005250">July 27, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-After a response by [Jérémy](http://twitter.com/thinkb4coding) in 
-[a blog post](http://thinkbeforecoding.com/post/2013/07/28/Event-Sourcing-vs-Command-Sourcing), 
+After a response by [Jérémy](https://twitter.com/thinkb4coding) in 
+[a blog post](https://thinkbeforecoding.com/post/2013/07/28/Event-Sourcing-vs-Command-Sourcing), 
 I decided to offer you my interpretation of event sourcing as well. If my interpretation is not optimal, 
 or simply wrong, feel free to tell me.
 
 ## Event sourcing explained in a tweet
 
-This was my initial response to [Rinat](http://twitter.com/abdullin):
+This was my initial response to [Rinat](https://twitter.com/abdullin):
 
 <blockquote class="twitter-tweet"><p>An event is a semantic log entry of a state transition.&#10;Event sourcing rebuilds state by applying historic events. &#10;/cc <a href="https://twitter.com/abdullin">@abdullin</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/361429914580291586">July 28, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -36,7 +36,7 @@ First we need to define what a semantic or event log is.
 I assume everyone knows what a state transition and a log entry is, so I will focus on a single 
 word here: semantic.
 
-> TL;DR: A transaction log logs the application implementation's state transitions, while a semantic/event log logs the problem's state transitions in a way it is understandable by non-developers (expressed in a language that people refer to as the [ubiquitous language](http://martinfowler.com/bliki/UbiquitousLanguage.html)).
+> TL;DR: A transaction log logs the application implementation's state transitions, while a semantic/event log logs the problem's state transitions in a way it is understandable by non-developers (expressed in a language that people refer to as the [ubiquitous language](https://martinfowler.com/bliki/UbiquitousLanguage.html)).
 
 A transaction log contains things like `update table abc set x=3,y=y+4 where z=123`. A developer might understand what this is about, and even a business user might know what it means, but _the intent of this log entry is implicit_ because it can only be derived from the implementation.
 
@@ -72,7 +72,7 @@ How do you do this? Quite simple: for every single event that happened in the pa
 
 This also implies that you can not change state directly in your application, but you have to do it by emitting an event.
 
-Let me explain it with a simple example in [Elixir](http://elixir-lang.org); I will show you the non-event-sourced code first:
+Let me explain it with a simple example in [Elixir](https://elixir-lang.org); I will show you the non-event-sourced code first:
 
 ```
    def EnableBusinessRule(product_id,{rule_id,weight}) do

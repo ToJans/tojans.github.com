@@ -7,7 +7,7 @@ title: 'Project YakShayQRS : another CQRS evolution'
 
 <h3>Introduction</h3>
 <p>TL;DR: I managed to minimize the CQRS overhead even further.</p>
-<p>Over the years, I have been trying to minimize <a href="http://www.corebvba.be/blog/?tag=/CQRS">CQRS in several iterations</a>, even releasing a framework and a lib in doing so. Yet, I have still not been satisfied by the approach I reached. This time I once again am pretty satisfied with the way things turned out, and they actually seem to require even way less overhead...</p>
+<p>Over the years, I have been trying to minimize <a href="https://www.corebvba.be/blog/?tag=/CQRS">CQRS in several iterations</a>, even releasing a framework and a lib in doing so. Yet, I have still not been satisfied by the approach I reached. This time I once again am pretty satisfied with the way things turned out, and they actually seem to require even way less overhead...</p>
 <h3><br /></h3>
 <h3>How it works</h3>
 <p>The concept is quite simple: I use a generic message class to implement messaging. Next to this I use the virtual keyword:</p>
@@ -30,4 +30,4 @@ title: 'Project YakShayQRS : another CQRS evolution'
 </p>
 <p>As usual, the full source can be found <a href="https://github.com/ToJans/YakShayQRS/tree/RinatMode" target="_blank">over at github</a>.</p>
 <h3>Conclusion</h3>
-<p>This is yet another evolutionary approach to CQRS, and it feels pretty neat (event though the same things applied to the previous versions. Let me know what you think !</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+<p>This is yet another evolutionary approach to CQRS, and it feels pretty neat (event though the same things applied to the previous versions. Let me know what you think !</p><div style="text-align:right"><a class="addthis_button" href="https://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="https://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>

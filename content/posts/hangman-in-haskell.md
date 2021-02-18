@@ -9,7 +9,7 @@ slug ="hangman-in-haskell"
 +++
 
 As I noticed a [question for a more idiomatic **Haskell** version of the game **Hangman** on
-codereview.stackoverflow.com](http://codereview.stackexchange.com/questions/106485/hangperson-in-haskell?atw=1),
+codereview.stackoverflow.com](https://codereview.stackexchange.com/questions/106485/hangperson-in-haskell?atw=1),
  I decided to give it a go; this is the result:
 
 ### Note

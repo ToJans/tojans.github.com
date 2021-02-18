@@ -7,9 +7,9 @@ title: Simplified Feature Branching - Source control done right
 
 <h2>Introduction</h2>
 <p>As one does typically develop features in parallel, and some features can not be released while others can, a lot of software teams seem to have problems with their source control.</p>
-<p>In this post I will describe <strong>Simplified Feature Branching</strong> usable with git or any other <a href="http://en.wikipedia.org/wiki/Distributed_revision_control">DVCS</a>.</p>
-<p>This model is not rocket science, and is a further simplification of <a href="http://dymitruk.com/blog/2012/02/05/branch-per-feature/">Adam Dymitruk's post on feature branching</a>.</p>
-<p>It assumes you use proper release cycles and versioning during the <a href="http://en.wikipedia.org/wiki/Systems_Development_Life_Cycle">software development lifecycle</a>.</p>
+<p>In this post I will describe <strong>Simplified Feature Branching</strong> usable with git or any other <a href="https://en.wikipedia.org/wiki/Distributed_revision_control">DVCS</a>.</p>
+<p>This model is not rocket science, and is a further simplification of <a href="https://dymitruk.com/blog/2012/02/05/branch-per-feature/">Adam Dymitruk's post on feature branching</a>.</p>
+<p>It assumes you use proper release cycles and versioning during the <a href="https://en.wikipedia.org/wiki/Systems_Development_Life_Cycle">software development lifecycle</a>.</p>
 <p>Whenever I mention "feature" in this post, I actually mean "feature" or "bugfix", but I am a lazy b*d.</p>
 <h2>The main idea: simplification</h2>
 <blockquote>
@@ -49,7 +49,7 @@ title: Simplified Feature Branching - Source control done right
 </li>
 </ul>
 <p>All branches would be children of Development/master. Exceptions are not allowed, unless you really, really need it and know what you are doing.</p>
-<p>This is exactly the same as <a href="http://dymitruk.com/blog/2012/02/05/branch-per-feature/">Adam's model</a>.</p>
+<p>This is exactly the same as <a href="https://dymitruk.com/blog/2012/02/05/branch-per-feature/">Adam's model</a>.</p>
 <h2>Integration branches</h2>
 <p>Integration branches are the branches where we integrate the different features in a new branch. A typical workflow during development would look like this:</p>
 <pre><code>git fetch 
@@ -118,4 +118,4 @@ git pull --rebase releases
 <p>One does not have to have a single development repository, for example one could have one per development team/country/division/... (In my current project we will use a separate repository for outsourced work for example). This approach would also integrate very nicely with code reviews and other CI-related things.</p>
 <p>By creating this <strong>simplified feature branching</strong> model, one clearly separates responsibilities using multiple repositories, and make sure the whole integration process is centralized and separated from development.</p>
 <p>Happy <strong>simplified feature branching</strong> everyone!!</p>
-<p>PS: do not forget to enable <a href="http://git-scm.com/2010/03/08/rerere.html">git rerere</a> when merging git branches; this might save you a lot of time... In fact Adam even suggests sharing your merge cache folder...</p>
+<p>PS: do not forget to enable <a href="https://git-scm.com/2010/03/08/rerere.html">git rerere</a> when merging git branches; this might save you a lot of time... In fact Adam even suggests sharing your merge cache folder...</p>

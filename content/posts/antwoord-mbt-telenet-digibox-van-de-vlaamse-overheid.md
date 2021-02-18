@@ -5,8 +5,8 @@ slug: "antwoord-mbt-telenet-digibox-van-de-vlaamse-overheid"
 title: Antwoord mbt Telenet Digibox van de vlaamse overheid
 ---
 
-<img style="float: right" src="/blog/content/binary/digicorder.jpg" border="0" alt="" width="28" height="30" />&nbsp;<strong><font size="4">G</font>ezien ik niet zo&#39;n fan ben van de Telenet DigiBox/DigiCorder heb ik enkele dagen geleden </strong><a href="http://www.corebvba.be/blog/Alternatief+Voor+Digiboxdigicorder++Telenet+Digitale+Televisie.aspx"><strong>een mail verstuurd</strong></a><strong> naar het kabinet van de minster van media : Geert Bourgois.<br />
-Vandaag heb ik een duidelijk geformuleerd en grondig uitgewerkt antwoord gekregen van Caroline Uyttendaele - Raadgever media (</strong><a href="http://gathering.tweakers.net/forum/list_messages/1223215/last"><strong>en dit tegen alle verwachtingen in</strong></a><strong>):</strong> 
+<img style="float: right" src="/blog/content/binary/digicorder.jpg" border="0" alt="" width="28" height="30" />&nbsp;<strong><font size="4">G</font>ezien ik niet zo&#39;n fan ben van de Telenet DigiBox/DigiCorder heb ik enkele dagen geleden </strong><a href="https://www.corebvba.be/blog/Alternatief+Voor+Digiboxdigicorder++Telenet+Digitale+Televisie.aspx"><strong>een mail verstuurd</strong></a><strong> naar het kabinet van de minster van media : Geert Bourgois.<br />
+Vandaag heb ik een duidelijk geformuleerd en grondig uitgewerkt antwoord gekregen van Caroline Uyttendaele - Raadgever media (</strong><a href="https://gathering.tweakers.net/forum/list_messages/1223215/last"><strong>en dit tegen alle verwachtingen in</strong></a><strong>):</strong> 
 <blockquote dir="ltr" style="margin-right: 0px">
 	<div dir="ltr" align="left">
 	<font face="Arial" size="2"><span class="726455409-13062007"><em>Geachte Heer Janssens,</em></span></font> 

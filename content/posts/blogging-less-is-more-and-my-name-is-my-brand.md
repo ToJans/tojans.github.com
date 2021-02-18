@@ -9,14 +9,14 @@ categories:
 
 ### Introduction
 
-It has been about 10 years ago, since I opted for a blogging platform called [BlogEngine.Net](http://www.dotnetblogengine.net/), which was - at the that moment -  
+It has been about 10 years ago, since I opted for a blogging platform called [BlogEngine.Net](https://www.dotnetblogengine.net/), which was - at the that moment -  
 one of the leading blogging platforms in .Net space.
 
 While this has served me quite well, I decided it was finally the time to migrate, because a lot of things have changed since that day. After some careful considerations
-I decided to migrate from BlogEngine.Net to a static site built with [OctoPress](http://octopress.org/)(built on top of [Jekyll](https://github.com/mojombo/jekyll))
- that is hosted on [github pages](http://pages.github.com/) with a new domain name.
+I decided to migrate from BlogEngine.Net to a static site built with [OctoPress](https://octopress.org/)(built on top of [Jekyll](https://github.com/mojombo/jekyll))
+ that is hosted on [github pages](https://pages.github.com/) with a new domain name.
 
-![A screenshot of my old blog](http://i.snag.gy/XTBMP.jpg)
+![A screenshot of my old blog](https://i.snag.gy/XTBMP.jpg)
  
 ### Motivation
 
@@ -38,7 +38,7 @@ Fast forward to today: after 10 years of being in business, I now realize nobody
 So after some careful consideration - it took over a month to make the decision, which is a long time for me -, I now no longer represent myself by my brand,
 but by my own name.
 
-I am still planning on creating some kind of a landing page for my company [Core](http://www.corebvba.be), but for now this is not a priority.
+I am still planning on creating some kind of a landing page for my company [Core](https://www.corebvba.be), but for now this is not a priority.
 
 ### Layout: Outdated, crowded, not drawing attention to the content.
 
@@ -47,7 +47,7 @@ a search functionality, email subscriptions, twitter feeds and a lot of other st
 
 It took me a decade to realize what google realized from the beginning: simplicity is king. There is no need to force-feed all this bait onto your visitors, as 
 they will usually not bite anyway. If they are interested, they will go the extra mile, just make sure one can find all the content in a centralized place 
-(i.e. [the archive](http://tojans.me/blog/archives/)), and that should be enough.
+(i.e. [the archive](https://tojans.me/blog/archives/)), and that should be enough.
 
 After all, most of my visitors on my old site used to visit about 1.4 pages on average, so why bother with all this extra overhead? People come to your site
 because they want to read an article, and in case they want to read more, they should be able to, but it should not be forced on them.
@@ -58,8 +58,8 @@ I still use my old hosting provider I started with a decade ago, and now probabl
 provider was hosting my blog, I am now planning on gradually migrating all content from there.
 
 I am considering a VPS or something similar in the future to run my 
-[Erlang](http://tojans.me/blog/2013/05/17/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom/)/
-[Elixir](http://tojans.me/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/) experiments, or I might even drop that, and just opt for cloud-based solutions.
+[Erlang](https://tojans.me/blog/2013/05/17/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom/)/
+[Elixir](https://tojans.me/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/) experiments, or I might even drop that, and just opt for cloud-based solutions.
 
 ### Usability: overly complicated, too much features almost nobody used, mobile/tablet usage was a mess
 
@@ -76,6 +76,6 @@ Next to this, it also brings a new, more cleaner atmosphere to the visitor, whic
 Well, the migration is not complete yet, as I still have to extract all references and content from old blog. The most important thing is get started, so let us end
 again with a motivational quote:
 
-{% blockquote  Antoine De Saint-Exupery, Author of "Le petit prince"   http://en.wikipedia.org/wiki/Le_petit_prince %}
+{% blockquote  Antoine De Saint-Exupery, Author of "Le petit prince"   https://en.wikipedia.org/wiki/Le_petit_prince %}
 What saves a man is to take a step. Then another step. It is always the same step, but you have to take it. 
 {% endblockquote %}

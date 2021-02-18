@@ -17,8 +17,8 @@ Are you looking for someone to:
 
 # Legacy projects
 
-I untangle complicated projects using both conventional (f.e. [DDD](http://en.wikipedia.org/wiki/Domain-driven_design)) and non-conventional
-(f.e. [event-storming](http://ziobrando.blogspot.be/2013/11/introducing-event-storming.html))  techniques.
+I untangle complicated projects using both conventional (f.e. [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)) and non-conventional
+(f.e. [event-storming](https://ziobrando.blogspot.be/2013/11/introducing-event-storming.html))  techniques.
 
 (I am one of the founders of [DDD Belgium](domaindriven.be) and have been involved in the event-storming from the very beginning.)
 
@@ -48,7 +48,7 @@ As for software development, I have a background in TDD, BDD, DDD, CQRS, C#, F#,
 
 During my career as an employee, I have been both a software developer, a project manager, an Oracle DBA as an IT manager.
 
-After employment I've handled a ton of different [projects](http://be.linkedin.com/in/tomjanssens#background-projects), published on [a pleathora of subjects](http://be.linkedin.com/in/tomjanssens#background-publications).
+After employment I've handled a ton of different [projects](https://be.linkedin.com/in/tomjanssens#background-projects), published on [a pleathora of subjects](https://be.linkedin.com/in/tomjanssens#background-publications).
 
 # More questions, interested?
 

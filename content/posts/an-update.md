@@ -12,11 +12,11 @@ It has been a while since I have updated this blog, so I decided to give you a s
 
 ## Bootstrapping and consulting
 
-I have been bootstrapping [Virtual Sales Lab](http://virtualsaleslab.com), and doing some consultancy on the side to fund for it. 
+I have been bootstrapping [Virtual Sales Lab](https://virtualsaleslab.com), and doing some consultancy on the side to fund for it. 
 This implies living on a shoe string budget without cutting the kids and Mrs. short of any assets.
 
-Here is a short video, showing one of the online tools that [Virtual Sales Lab](http://virtualsaleslab.com)
- offers; try it yourself [here](http://vslweb.azurewebsites.net/r/vsl/en/designer/index/conservatory): 
+Here is a short video, showing one of the online tools that [Virtual Sales Lab](https://virtualsaleslab.com)
+ offers; try it yourself [here](https://vslweb.azurewebsites.net/r/vsl/en/designer/index/conservatory): 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m-ngIgARRrs" frameborder="0" allowfullscreen></iframe>
 
@@ -77,7 +77,7 @@ Here is an overview of my commits in the last month, while in `crunch mode`:
 
    - Any bugs that are reported or that I notice myself are solved whenever I have commited my current code, bugs shouldn't last longer than a day after being noticed.
    - All of my effort is focused on the front-end: I reduce tech debt as much as possible there, and it gets better/faster/easier on every single designer I write.
-   - My back-end was built by duck taping things like Azure storage and [Auth0](http://auth0.com) together using super simple .Net MVC code. 
+   - My back-end was built by duck taping things like Azure storage and [Auth0](https://auth0.com) together using super simple .Net MVC code. 
    - The hardest part about software development while bootstrapping, is not vision, strategy or tactics, but logistics. F.e. I tend to avoid integration points etc, 
    but just send an email to the client. Another example: for two years, I've been using a google sheet as my table storage, using a simple form post.
    I know this might hurt in the long run, but I have it covered, because....
@@ -85,11 +85,11 @@ Here is an overview of my commits in the last month, while in `crunch mode`:
    and come back when it hurts, because ...
    - ... I have an expert working on a proper version of the back-end, respecting DDD- and other practices.
    - Deployment is as simple as a `git push`; `master` is auto-deployed to the Azure test environment, and the `release` branch to production.
-   - I use `Asp.Net MVC`, the expert is using [Suave](http://suave.io) for the back-end. 
+   - I use `Asp.Net MVC`, the expert is using [Suave](https://suave.io) for the back-end. 
    - Platforms:
      - Web servers: 
        - designers: Azure B1 App services + table/blob storage
-       - website+CMS+mailings: [Wix](http://wix.com)
+       - website+CMS+mailings: [Wix](https://wix.com)
      - Quotes, CRM, marketing material, logos, ...:
        - drafts via google docs, final versions on dropbox in a file structure
      - Calendar:
@@ -100,7 +100,7 @@ Here is an overview of my commits in the last month, while in `crunch mode`:
        - Slack, Skype, ...
        - Fixed telephone number: via VOIP
        - Integrated chat on the website
-       - Email: routing all domains via [mailgun](http://mailgun.com) to gmail
+       - Email: routing all domains via [mailgun](https://mailgun.com) to gmail
 - In non-crunch-mode I spend about 4 to 6 hours a day and weekends on the Mrs, kids, social contact, fun activities, etc. 
 In crunch mode I spend about an hour watching TV when I go to bed, that's it.
 
@@ -157,4 +157,4 @@ Signing off,
 
 Tom
 
-[Virtual Sales Lab](http://virtualsaleslab.com)
+[Virtual Sales Lab](https://virtualsaleslab.com)

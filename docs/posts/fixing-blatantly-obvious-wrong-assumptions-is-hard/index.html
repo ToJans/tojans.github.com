@@ -69,19 +69,19 @@
     <ul class="social-links">
         
             <li>
-                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
                     <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
                     <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
                     <i class="fab fa-github fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
@@ -148,7 +148,7 @@
 
             <p>So, yesterday I had another one of those &ldquo;in your face moments&rdquo;: While working on the 
 <a href="https://github.com/happypancake/fdb-erlang">Erlang FoundationDB driver</a>, I spent <strong>a lot</strong> of time on a bug that was so blatantly obvious that I did not notice it for a long time.</p>
-<p><img src="http://i.snag.gy/5r5eC.jpg" alt="My dev environment"></p>
+<p><img src="https://i.snag.gy/5r5eC.jpg" alt="My dev environment"></p>
 <p>As I had been stuck for a long time, <a href="https://twitter.com/ptomasroos">Tomas</a> suggested me to ask the <a href="https://foundationdb.com/">FoundationDB guys</a> for help, so we did.</p>
 <p>When I asked for help, the bug was so obvious that it probably took them like 2 seconds to notice what the problem was. (I explain it step by step later, but <a href="https://github.com/happypancake/fdb-erlang/commit/2b15aeef27ced6a6d14d97f9a01c9682f9047c14#diff-754ec66646d2386b94625d7ecb6c1ca8L309">here&rsquo;s the commit fixing the bug</a> if you cannot wait.)</p>
 <p>What the bug comes down to, is that I had to pass pointers to instances that did exist, and that they would not be allocated by the calling function. (After all, having the caller allocating two <code>int</code>s and a reference to
@@ -156,7 +156,7 @@ a <code>struct</code> would be pretty useless IMO.)</p>
 <h3 id="thats-a-stupid-bug-how-did-that-happen">That&rsquo;s a stupid bug! How did that happen?</h3>
 <p>Well, in one of the usual ways it does&hellip;</p>
 <p>First things first: the solution is an Erlang interface to FoundationDB.</p>
-<p>An <a href="http://www.erlang.org/doc/tutorial/nif.html">Erlang NIF</a> - NIF is short for a &ldquo;Native InterFace&rdquo; -
+<p>An <a href="https://www.erlang.org/doc/tutorial/nif.html">Erlang NIF</a> - NIF is short for a &ldquo;Native InterFace&rdquo; -
 requires you to write an interface with a lib-file (or DLL on windows) that converts the Erlang terms to proper binary parameters, calls the relevant function(s), and then reports 
 the results back in the Erlang term binary format.</p>
 <p>When I was creating this wrapper, I noticed this was quite a repetitive job, prone to errors, so I decided to write a bash script that generated the C-code skeleton for all of these calls for me, based on a header file and 
@@ -189,27 +189,36 @@ When I asked the FoundationDB guys for help, they replied almost instantly sayin
 
         </div>
     </div>
-</div><div class="footer">
-	<hr class="thin" />
-	<div class="pure-menu pure-menu-horizontal pure-menu-open">
-		<ul class="footer-menu">
-		
-		</ul>
-	</div>
-
-	<p>&copy; 2021. All rights reserved. </p>
 </div>
 
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-41936060-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 </body>
 
 </html>

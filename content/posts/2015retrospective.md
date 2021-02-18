@@ -57,10 +57,10 @@ projects that made me some extra money, so I could continue bootstrapping.
 
 (FYI this year as a side-project I'm planning a 3-day "Haskell for OO-developers" course, ping me if you're interested.)
 
-## http://Arealities.com -> http://virtualsaleslab.com
+## https://Arealities.com -> https://virtualsaleslab.com
 
-2016 will be the make-or-break year for my start-up http://arealities.com, which is now
-rebranded as http://virtualsaleslab.com.
+2016 will be the make-or-break year for my start-up https://arealities.com, which is now
+rebranded as https://virtualsaleslab.com.
 
 Since December I've gotten a separate office and a partner who is working full-time
 on the commercial/marketing side of things.

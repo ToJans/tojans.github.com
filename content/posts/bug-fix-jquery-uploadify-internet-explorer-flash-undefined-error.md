@@ -6,7 +6,7 @@ title: 'Bug fix : JQuery Uploadify / Internet explorer / Flash Undefined error'
 ---
 
 <p>
-I had the problem that the <a href="http://www.corebvba.be/blog/admin/Pages/www.uploadify.com">upload component</a> did not work with a client of mine on different versions of IE . 
+I had the problem that the <a href="https://www.corebvba.be/blog/admin/Pages/www.uploadify.com">upload component</a> did not work with a client of mine on different versions of IE . 
 </p>
 <p>
 This is appearantly due to the way flash works with dynamic flash components located within form tags in internet explorer.<br />

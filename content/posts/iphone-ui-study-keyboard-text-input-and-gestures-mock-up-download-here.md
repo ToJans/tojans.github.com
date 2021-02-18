@@ -50,7 +50,7 @@ The text input :
 You can download the demo here : 
 </p>
 <p>
-<a href="http://www.corebvba.be/blog/content/binary/IphoneMockup1.zip">IphoneMockup1.zip (399,67 KB)</a>&nbsp;<br />
+<a href="https://www.corebvba.be/blog/content/binary/IphoneMockup1.zip">IphoneMockup1.zip (399,67 KB)</a>&nbsp;<br />
 <br />
 <u>New version on 2007/7/5 !!&nbsp;<br />
 </u>- fixed the Unhandled exception when a gesture exists of a single point click. 

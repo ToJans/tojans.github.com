@@ -9,7 +9,7 @@ footer: true
 ---
 
 <h3>Introductie</h3>
-<p>Ik zag net een tweet verschijnen van <a href="http://www.unizo.be/blog_organisatie/" target="_blank">Karel Van Eetvelt</a> - de CEO van UNIZO -, dat het niet goed gaat met de Vlaamse werkgevers</p>
+<p>Ik zag net een tweet verschijnen van <a href="https://www.unizo.be/blog_organisatie/" target="_blank">Karel Van Eetvelt</a> - de CEO van UNIZO -, dat het niet goed gaat met de Vlaamse werkgevers</p>
 <blockquote class="twitter-tweet" lang="nl">
 <p>Zware alarmkreet Vlaamse werkgevers en zelfstandigen. Economische crisis, belastingdrukverhoging en brutale controles tasten vertrouwen aan.</p>
 &mdash; Karel Van Eetvelt (@karelvaneetvelt) <a href="https://twitter.com/karelvaneetvelt/status/344357431364681730">11 juni 2013</a></blockquote>
@@ -46,7 +46,7 @@ footer: true
 <p>
 <script src="//platform.twitter.com/widgets.js"></script>
 </p>
-<p>Denk maar aan de vele sketches op televisie, zoals de schrijnend realistische: <a href="http://www.zideo.nl/playzideo/6c4957556e315a74" target="_blank">"wat als zelfstandigen ambtenaren waren"</a>.</p>
+<p>Denk maar aan de vele sketches op televisie, zoals de schrijnend realistische: <a href="https://www.zideo.nl/playzideo/6c4957556e315a74" target="_blank">"wat als zelfstandigen ambtenaren waren"</a>.</p>
 <p>Dit kost geld; onnoemelijk veel geld, en is gewoon niet meer van deze tijd; fix it ASAP!</p>
 <blockquote class="twitter-tweet" lang="nl">
 <p>@<a href="https://twitter.com/karelvaneetvelt">karelvaneetvelt</a> opteer niet alleen voor administratieve vereenvoudiging, bv: voor elke wet die er bij komt moeten er twee afgeschaft worden</p>

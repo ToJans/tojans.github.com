@@ -15,7 +15,7 @@ Since it&#39;s been a long time since I&#39;ve posted any updates, I decided to 
 Aestethics+ is a program written especially for plastic surgery clinics to manage their patients, an it looks like this (Click on the screen shot for a bigger version) :
 </p>
 <p>
-<a href="http://users.pandora.be/bull/core/aestheticsAnimated.gif"><img src="http://users.pandora.be/bull/core/aestheticsAnimatedSmall.gif" alt="" width="290" height="195" /></a>
+<a href="https://users.pandora.be/bull/core/aestheticsAnimated.gif"><img src="https://users.pandora.be/bull/core/aestheticsAnimatedSmall.gif" alt="" width="290" height="195" /></a>
 </p>
 <p>
 It has been developed in cooperation with a team of several plastic surgeons from a new plastic surgery clinic, so it is actually modeled according to the need of the surgeons.<br />

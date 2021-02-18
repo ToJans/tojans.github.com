@@ -12,7 +12,7 @@ There are 2 extrema in how to handle integration between different systems:
 
 ## Implicit integration: Fred George's micro-service architecture
 
-The concept of [micro-service architecture](http://vimeo.com/79866979) is ["Antifragile"](http://www.amazon.com/Antifragile-Things-That-Gain-Disorder/dp/1400067820) applied to software architecture: have lots of versions of very tiny micro-services running, without precisely knowing which service does what. 
+The concept of [micro-service architecture](https://vimeo.com/79866979) is ["Antifragile"](https://www.amazon.com/Antifragile-Things-That-Gain-Disorder/dp/1400067820) applied to software architecture: have lots of versions of very tiny micro-services running, without precisely knowing which service does what. 
 
 This comes down to an approach where you publish all messages to a single enterprise bus, and then several children act as proxies for this message bus.
 
@@ -26,7 +26,7 @@ The advantage is that integrating new things, replacing services and services th
 
 ## Explicit integration: Alistair Cockburn's Hexagonal pattern + explicit interfacing
 
-On the other side of the spectrum, you can do [hexagonal architecture](http://alistair.cockburn.us/Hexagonal+architecture) with very explicit integration handling. Both incoming and outgoing things go through explicit interfaces using adapters and ports. This is like CQS - or even CQRS - applied to system integration.
+On the other side of the spectrum, you can do [hexagonal architecture](https://alistair.cockburn.us/Hexagonal+architecture) with very explicit integration handling. Both incoming and outgoing things go through explicit interfaces using adapters and ports. This is like CQS - or even CQRS - applied to system integration.
 
 Whenever one would cross an AR instance boundary, one might do this through a plethora of interfaces:
 
@@ -45,11 +45,11 @@ Advantages are the transparency of the system (as everything is explicit in code
 
 ## Conclusion
 
-So there you have it: the two extrema of software integration. Both have their advantages and disadvantages. The thing I would like to mention the most, is that one should never forget about [Conway's law](http://en.wikipedia.org/wiki/Conway's_law), i.e. system models will mimic the organisation's model they were built with.
+So there you have it: the two extrema of software integration. Both have their advantages and disadvantages. The thing I would like to mention the most, is that one should never forget about [Conway's law](https://en.wikipedia.org/wiki/Conway's_law), i.e. system models will mimic the organisation's model they were built with.
 
 Take a look at the organisation culture you have, and base your architecture decision on that.
 
-Other than that, be pragmatic. Executing multiple AR updates in a single UOW might not be a problem, if you are aware about it. It's all about [easy vs simplicity](http://tojans.me/blog/2012/10/31/continuous-thinking-essay-ease-and-simplicity-in-software-architecture/) in the end.
+Other than that, be pragmatic. Executing multiple AR updates in a single UOW might not be a problem, if you are aware about it. It's all about [easy vs simplicity](https://tojans.me/blog/2012/10/31/continuous-thinking-essay-ease-and-simplicity-in-software-architecture/) in the end.
 
 > Technical debt only becomes debt when "the loan" is claimed. If you have an ugly hack, but it works, and you'll never have to change it, so be it. However, one can always come in to claim the loan (one or multiple times), you need to be aware of that. In the end it is all about risk management.
 

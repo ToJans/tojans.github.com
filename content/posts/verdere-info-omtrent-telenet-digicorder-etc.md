@@ -6,7 +6,7 @@ title: Verdere info omtrent telenet digicorder etc..
 ---
 
 <p>
-Ik heb vandaag via een forum een verduidelijking gekregen van iemand die een ex-medewerker is voor de helpdesk van telenet. Je kan <a href="http://gathering.tweakers.net/forum/list_message/28292715#28292715">het volledige antwoord hier vinden</a>. 
+Ik heb vandaag via een forum een verduidelijking gekregen van iemand die een ex-medewerker is voor de helpdesk van telenet. Je kan <a href="https://gathering.tweakers.net/forum/list_message/28292715#28292715">het volledige antwoord hier vinden</a>. 
 </p>
 <p>
 Dit is de quote : 
@@ -27,5 +27,5 @@ Dit is de quote :
 	<br />
 	en zoals hierboven al vermeld: die ehternet-poort is voor aansluiting richting de modem en enkel dat is ingebouwd. Je kan ev. via de intern beschikbare JTAG-plug wel wat extra code erop hacken of nakijken hoe het exact werkt. Maar er is geen standaard manier om je pc met de stb te laten communiceren via die poort. (mbv tv-kabel en infrarood-zenders wrs wel)<br />
 	<br />
-	hopelijk zijn hiermee al enkele vragen beantwoord en foute aannames ontkracht <img class="smiley" src="http://gathering.tweakers.net/global/smileys/wink.gif" alt=";)" width="15" height="15" /><br />
+	hopelijk zijn hiermee al enkele vragen beantwoord en foute aannames ontkracht <img class="smiley" src="https://gathering.tweakers.net/global/smileys/wink.gif" alt=";)" width="15" height="15" /><br />
 </blockquote>

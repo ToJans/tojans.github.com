@@ -35,7 +35,7 @@ footer: true
 <p>You might, or you might not... What you do is all about choices. While you are working you cannot spend time with your kids, for example... While you are earning hard cash for that new car, you probably can not spend that time on some new tech you would like to learn about...</p>
 <p>Also, most people tend to forget why they started doing things, but just seem to be wandering on the road, always going forward, without evaluating where they wanted to go in the first place.</p>
 <h3>Do not be afraid of failure, but consider it part of the process</h3>
-<p>Failure is a part of life; accept that big plans will fail, but learn from your failure. There is a difference between a failure and a mistake: read<a href="http://sethgodin.typepad.com/seths_blog/2011/12/the-difference-between-a-failure-and-a-mistake.html" target="_blank"> Seth's blog article on it</a>. Do this now!!!</p>
+<p>Failure is a part of life; accept that big plans will fail, but learn from your failure. There is a difference between a failure and a mistake: read<a href="https://sethgodin.typepad.com/seths_blog/2011/12/the-difference-between-a-failure-and-a-mistake.html" target="_blank"> Seth's blog article on it</a>. Do this now!!!</p>
 <p>Here is an English proverb that you should remember:</p>
 <p style="padding-left: 30px;"><em>&ldquo;Hope for the best, but prepare for the worst&rdquo;</em></p>
 <p>Most people do not succeed at once... They might forget to tell you that, but there are usually a huge pile of failures before becoming succesfull. The important part is that it is a process, where you learn from your mistakes, so you do not make the same mistake another time....</p>

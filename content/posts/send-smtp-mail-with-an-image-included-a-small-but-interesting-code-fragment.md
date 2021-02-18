@@ -6,7 +6,7 @@ title: 'Send smtp mail with an image included : a small but interesting code fra
 ---
 
 <p>
-Back over at codeproject an interesting article has been posted : <a href="http://www.codeproject.com/useritems/Seding_Mail.asp">how to send mail over smtp including an attached image</a>.
+Back over at codeproject an interesting article has been posted : <a href="https://www.codeproject.com/useritems/Seding_Mail.asp">how to send mail over smtp including an attached image</a>.
 </p>
 <p>
 This is the code :

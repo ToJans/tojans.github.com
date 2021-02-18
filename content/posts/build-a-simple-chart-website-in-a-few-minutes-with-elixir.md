@@ -11,13 +11,13 @@ As I am currently thinking about setting up a social platform for Elliot Wave an
 
 This is the result of an hour of hacking (mostly figuring out how to libs work):
 
-![This post will walk you through getting this up and running in a few minutes.](http://i.snag.gy/G8EhB.jpg)
+![This post will walk you through getting this up and running in a few minutes.](https://i.snag.gy/G8EhB.jpg)
 
 <!-- more -->
 
 ## Prerequistes
 
-I have previously written an extensive blog post on how to install the prerequisites on Windows [here](http://tojans.me/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/). Please follow this guide.
+I have previously written an extensive blog post on how to install the prerequisites on Windows [here](https://tojans.me/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/). Please follow this guide.
 
 Once you followed this, we are ready to get started on our web app.
 
@@ -152,12 +152,12 @@ mix compile
 mix server
 ``` 
 
-Then you should surf to [http://localhost:4000](http://localhost:4000) and you should see the following output:
-![Woohoo](http://i.snag.gy/bOA9k.jpg)
+Then you should surf to [https://localhost:4000](https://localhost:4000) and you should see the following output:
+![Woohoo](https://i.snag.gy/bOA9k.jpg)
 
 However, when you pick a symbol - `AAPL` for example - and `submit the form, you will get the following error back:
 
-![Uh-Ooh!!! Trouble in paradise !!!](http://i.snag.gy/tbJux.jpg)
+![Uh-Ooh!!! Trouble in paradise !!!](https://i.snag.gy/tbJux.jpg)
 
 But, that makes sense, as we do not have a handler yet for the `post` to `/`, only a `get` verb handler is currently implemented. So let's add that too !
 
@@ -238,7 +238,7 @@ Note that I added a title this time as well, so we know what we are seeing.
 
 That's it, you should see the following result (I took `USO` this time):
 
-![Might be in the 4th wave currently?](http://i.snag.gy/jhvDo.jpg)
+![Might be in the 4th wave currently?](https://i.snag.gy/jhvDo.jpg)
 
 ## For the lazy
 

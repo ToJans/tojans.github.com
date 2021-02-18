@@ -55,11 +55,11 @@ Given a mature enough system, the 80/20 rule usually applies: this is how using 
 
 ## 4. Many small things > A few big things
 
-Explicit, short code wins every time. Try to express the model in the [ubiquitous language](http://martinfowler.com/bliki/UbiquitousLanguage.html), and minimize the amount of things happening in a single function/class/... . In functional language, a function should contain at max 5 lines, for example.
+Explicit, short code wins every time. Try to express the model in the [ubiquitous language](https://martinfowler.com/bliki/UbiquitousLanguage.html), and minimize the amount of things happening in a single function/class/... . In functional language, a function should contain at max 5 lines, for example.
 
 If it contains more then 5 lines, you might be doing things the wrong way. The 5 line rule might be harder in languages where you do not have things like pattern matching.
 
-Make distinct functions for things that might change state and things that query state, almost never intermingle these. People refer to this as [Command-Query separation / CQS](http://en.wikipedia.org/wiki/Command%E2%80%93query_separation).
+Make distinct functions for things that might change state and things that query state, almost never intermingle these. People refer to this as [Command-Query separation / CQS](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation).
 
 Small, share-nothing systems inspired by nature tend to be able to make complexity manageable, provided you use it in a proper way.
 
@@ -71,9 +71,9 @@ Don't overshoot the goal; only use extractions and abstractions to remove comple
 
 ## 5. Explicitness > Implicitness
 
-Respecting rule #4, make sure you use intent-revealing function names, preferably in the [ubiquitous language](http://martinfowler.com/bliki/UbiquitousLanguage.html). 
+Respecting rule #4, make sure you use intent-revealing function names, preferably in the [ubiquitous language](https://martinfowler.com/bliki/UbiquitousLanguage.html). 
 
-Also, always respect [Tell-Don't-Ask / TDA ](http://pragprog.com/articles/tell-dont-ask); A simple example:
+Also, always respect [Tell-Don't-Ask / TDA ](https://pragprog.com/articles/tell-dont-ask); A simple example:
 
 This is implicit:
 

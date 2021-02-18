@@ -13,7 +13,7 @@ This allows me to do several things : </span>
 	<li>generation of thumbnails.</li>
 </ul>
 <p>
-<span style="font-size: 10pt; color: #003300; font-family: Verdana">Let&#39;s start with the code for the ActionResult (initially inspired by/copy-pasted&nbsp;from <a href="http://blog.maartenballiauw.be/post/2008/05/ASPNET-MVC-custom-ActionResult.aspx"><font color="#800080">this</font></a>&nbsp;, but since the new RC it is my own code):</span> 
+<span style="font-size: 10pt; color: #003300; font-family: Verdana">Let&#39;s start with the code for the ActionResult (initially inspired by/copy-pasted&nbsp;from <a href="https://blog.maartenballiauw.be/post/2008/05/ASPNET-MVC-custom-ActionResult.aspx"><font color="#800080">this</font></a>&nbsp;, but since the new RC it is my own code):</span> 
 </p>
 <span style="font-size: 10pt; color: #003300; font-family: Verdana"><font size="2" color="#0000ff"><font size="2" color="#0000ff"></font></font></span><span style="font-size: 10pt; color: #003300; font-family: Verdana"><font size="2" color="#0000ff"><font size="2" color="#0000ff"><font size="2" color="#0000ff"><font size="2" color="#0000ff">
 <p>

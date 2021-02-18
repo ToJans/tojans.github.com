@@ -7,15 +7,15 @@ comments: true
 categories: 
 ---
 
-Note: This is the second post in a series of posts about my experiences working for [HappyPancake](http://www.happypancake.com/):
+Note: This is the second post in a series of posts about my experiences working for [HappyPancake](https://www.happypancake.com/):
  
-- [Introduction & Swedish culture.](http://tojans.me/blog/2013/11/30/enjoying-programmer-anarchy-happypancake)
-- [Working remote.](http://tojans.me/blog/2013/11/30/enjoying-programmer-anarchy-happypancake-2)
+- [Introduction & Swedish culture.](https://tojans.me/blog/2013/11/30/enjoying-programmer-anarchy-happypancake)
+- [Working remote.](https://tojans.me/blog/2013/11/30/enjoying-programmer-anarchy-happypancake-2)
 - ~~Programmer anarchy.~~
 - ~~The bit with Rinat.~~
 - ~~The dev stack.~~
 - ~~The infrastructure part.~~
-- [Enjoyed programmer anarchy - looking for the next project](http://tojans.me/blog/2014/01/13/enjoyed-programmer-anarchy-looking-for-the-next-project/)
+- [Enjoyed programmer anarchy - looking for the next project](https://tojans.me/blog/2014/01/13/enjoyed-programmer-anarchy-looking-for-the-next-project/)
 
 ## Working remote: a small quest
 
@@ -33,7 +33,7 @@ In the beginning we used GTalk a lot, but as now someone else is joining in (mor
 
 After some time with GTalk and google Hangouts, we decided to have most communication over [Campfire](https://www.campfirenow.com/).
 
-![It's like your own private mirc](http://i.snag.gy/tuO3Z.jpg)
+![It's like your own private mirc](https://i.snag.gy/tuO3Z.jpg)
 
 This was for several reasons:
 
@@ -42,13 +42,13 @@ This was for several reasons:
 
 > Chat bots!!
 
-- [Hubot](http://hubot.github.com/) has some nice features, like `/remind me in [timespan] to [subject]` or `/translate me [phrase]`, or `youtube me [some piece of music I'd like to listen to]` (although I do that in the sandbox room, not the R&D room).
+- [Hubot](https://hubot.github.com/) has some nice features, like `/remind me in [timespan] to [subject]` or `/translate me [phrase]`, or `youtube me [some piece of music I'd like to listen to]` (although I do that in the sandbox room, not the R&D room).
 - Yesterday we started using [shovel](https://github.com/seomoz/shovel) for devops, so we can deploy by typing
 `shovel deploy hpc_web to devserver`, and it reports to us back in the chat room, so everyone can see what we are doing. Shovel has both a campfire, a command line and a webservice interface, so we can invoke our devops scripts in multiple ways...
 
 ## Cooperative brainstorming and analysis: Mindmup
 
-This was somewhat of a challenge; we needed to find a way that we could organize and visualize our thoughts, and we tried several real-time collaborative platforms for that. We even tried using a tablet for that, on-screen drawing etc, but in the end, the thing that works pretty smooth is a tool called [mindmup](http://www.mindmup.com/), which allows you to cooperatively work on a hierarchically organised notes, and I have to say it works perfect! We combine that with google hangouts, and we end up with an experience comparable to seeing each other in real life.
+This was somewhat of a challenge; we needed to find a way that we could organize and visualize our thoughts, and we tried several real-time collaborative platforms for that. We even tried using a tablet for that, on-screen drawing etc, but in the end, the thing that works pretty smooth is a tool called [mindmup](https://www.mindmup.com/), which allows you to cooperatively work on a hierarchically organised notes, and I have to say it works perfect! We combine that with google hangouts, and we end up with an experience comparable to seeing each other in real life.
 
 We also used an approach comparable to event storming, but ending up with use cases to model the domain, but more on that in another post!
 

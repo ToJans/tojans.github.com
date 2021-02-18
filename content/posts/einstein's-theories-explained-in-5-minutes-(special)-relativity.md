@@ -23,11 +23,11 @@ title: 'Einstein''s theories explained in 5 minutes: (special) relativity'
 <h4>What is so special about it ?<br /></h4>
 <p>And would it not be better if we got started with general relativity first ?</p>
 <p>Actually special relativity is easier then general relativity; special relativity describes relativity for easy cases, while the general theory tries do describe all possibilities in a single theory...</p>
-<p><img style="float: left;" src="http://www.corebvba.be/blog/image.axd?picture=2010%2f1%2fEinsteinSpeedOfLight.png" alt="" /></p>
+<p><img style="float: left;" src="https://www.corebvba.be/blog/image.axd?picture=2010%2f1%2fEinsteinSpeedOfLight.png" alt="" /></p>
 <h4>Ok, so what is it all about ?</h4>
 <p>In order to explain it, I first looked at some references (i.e. wikipedia), but they seem to talk Jibberish for the most part, so I will try to explain it in my own words, using an example.</p>
 <p style="padding-left: 30px;">Albert Einstein used to approach Physics in a very theoretical way; he made up special cases using the extremes of physics laws, and then imagined what would happen. This theory probably started with the observation that the speed of light was constant. Think about this : no mather where you are, the light always travels at the same -albeit very high- speed. Einstein wondered what it would look like if he would fly in front of a top of a ray of light that was fired... Would you be able to see the top of the light or not ?</p>
-<p><img style="float: right;" src="http://www.corebvba.be/blog/image.axd?picture=2010%2f1%2fSpeedOfLightTop.png" alt="" /></p>
+<p><img style="float: right;" src="https://www.corebvba.be/blog/image.axd?picture=2010%2f1%2fSpeedOfLightTop.png" alt="" /></p>
 <h4>Why is that such a good question ? It just sounds like a lot of mumbo-jumbo to me ...<br /></h4>
 <p>Think about it; as you might know - or not, depending on your age or background - , we can see things because light reflects on it. Everything you see is because a ray of light (from a lamp or the sun) reaches your eyes, either directly, or by reflecting from another surface. You could compare it with this : the light source emits a constant flow of marbles, and these marbles hit your eyes, either directly, our by bouncing on other surfaces...</p>
 <p>Remember that the speed of light was constant ? This would mean that all those marbles travel at the same speed, no mather where they are; either they are moving at the speed of light, or they cease to exist....</p>
@@ -40,7 +40,7 @@ title: 'Einstein''s theories explained in 5 minutes: (special) relativity'
 <p>Calm down, one step at a time... To explain it, I will take you back to the marbles example, but this time with another case. First I will try explaining this aspect to you in a simple sentence :</p>
 <p style="padding-left: 30px;"><em>The exact time you see something happening is dependent on your distance from the event.</em></p>
 <p>Take a good look at the sentence above; this means that if you and another person look at something, you have a different perception about the exact time it happened. I can explain this to you with a simple picture.</p>
-<p><img style="float: left;" src="http://www.corebvba.be/blog/image.axd?picture=2010%2f1%2fRelativeSpeed.png" alt="" /></p>
+<p><img style="float: left;" src="https://www.corebvba.be/blog/image.axd?picture=2010%2f1%2fRelativeSpeed.png" alt="" /></p>
 <p>This picture represents a light bulb that emits yellow light, and suddenly switches to red light. Each row is a timeframe.</p>
 <p>In the beginning a light is emitting yellow marbles, so both people see yellow light bulb... Then, a certain moment the light bulb switches from red to blue. Now, you do remember that light is like marbles who always travel at exact the same speed, do you ? What would this mean ? The moment the light switches to red, the persons would still be receiving the yellow marbles, and not the red ones. So, while the light is actually red, both the left and the right person would still be receiving the yellow version...</p>
 <p>Next to this, you can see that when the first red marble hits the left person (i.e. the left person sees a red bulb), the right person still sees a yellow bulb, as the red ones have not reached him yet.... This means that the time when something happens at another location depends on the viewer's distance from that event; there is a delay.</p>
@@ -54,4 +54,4 @@ title: 'Einstein''s theories explained in 5 minutes: (special) relativity'
 <h2>And now we take a break for a short commercial...</h2>
 <p>... until I am able to finish this blog post. In the mean time please do leave some comments with your opinions, remarks, improvements and suggestions as I want to make these series as good as possible... I hope you enjoyed the first part and that I will see you back again later !!!</p>
 <p>Kind regards,</p>
-<p>Tom</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+<p>Tom</p><div style="text-align:right"><a class="addthis_button" href="https://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="https://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>

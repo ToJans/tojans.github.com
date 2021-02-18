@@ -69,19 +69,19 @@
     <ul class="social-links">
         
             <li>
-                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
                     <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
                     <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
                     <i class="fab fa-github fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
@@ -147,8 +147,8 @@
             </div>
 
             <h3>Introduction</h3>
-<p><a href="http://martinfowler.com/bliki/CQRS.html">CQRS</a> is one of my architectural pet peeves, as you might have noticed<a href="http://www.corebvba.be/blog/?tag=/CQRS"> from the numerous amount of blog posts I made on this subject</a>. However, I noticed the concept is complicated and hard to grasp for newcomers to CQRS. I have been spiking numerous attempts of a framework that makes CQRS both more manageable and understandable, failed hundreds of times, and even published a few of my acceptable attempts as gists <a href="https://github.com/tojans">over at github</a>...</p>
-<p>A few days ago I was messing around with <a href="http://www.hanselman.com/blog/AsynchronousScalableWebApplicationsWithRealtimePersistentLongrunningConnectionsWithSignalR.aspx" target="_blank">SignalR</a> trying to setup again another CQRS attempt, and failed miserably.... However, 2 nights after that approach I had an ephiphany which had been lingering around in my head ever since.</p>
+<p><a href="https://martinfowler.com/bliki/CQRS.html">CQRS</a> is one of my architectural pet peeves, as you might have noticed<a href="https://www.corebvba.be/blog/?tag=/CQRS"> from the numerous amount of blog posts I made on this subject</a>. However, I noticed the concept is complicated and hard to grasp for newcomers to CQRS. I have been spiking numerous attempts of a framework that makes CQRS both more manageable and understandable, failed hundreds of times, and even published a few of my acceptable attempts as gists <a href="https://github.com/tojans">over at github</a>...</p>
+<p>A few days ago I was messing around with <a href="https://www.hanselman.com/blog/AsynchronousScalableWebApplicationsWithRealtimePersistentLongrunningConnectionsWithSignalR.aspx" target="_blank">SignalR</a> trying to setup again another CQRS attempt, and failed miserably.... However, 2 nights after that approach I had an ephiphany which had been lingering around in my head ever since.</p>
 <p>Today I decided to get back to business, so this afternoon I started spiking a proof of concept (POC).</p>
 <p>I think you will be happy to see that I managed to get most of the annoyance out of CQRS with this simple concept.</p>
 <p></p>
@@ -158,7 +158,7 @@
 <li>My eventstore is currently implemented as a List of objects. While this works for this concept, you can imagine that this might get you into trouble</li>
 <li>The Aggregate roots get completely rebuilt every single time (no cache), so the app might get a litlle bit slow when you push numerous commands to it</li>
 <li>The concept is completely synchronous, but making it asynchronous should be effortless.</li>
-<li>The functionality I talked about in these 3 points are currently implemented as overrides of the abstract class ScratchBus, which requires you to override the function to load an ar, and to replay events on an object. As there are some nice alternatives available, I am not planning on reimplementing them, but for now I opt for <a href="http://www.corebvba.be/blog/post/Continuous-thinking-just-ship-it-the-story-of-NerdBeers.aspx">the simplest thing that could possibly work</a>.</li>
+<li>The functionality I talked about in these 3 points are currently implemented as overrides of the abstract class ScratchBus, which requires you to override the function to load an ar, and to replay events on an object. As there are some nice alternatives available, I am not planning on reimplementing them, but for now I opt for <a href="https://www.corebvba.be/blog/post/Continuous-thinking-just-ship-it-the-story-of-NerdBeers.aspx">the simplest thing that could possibly work</a>.</li>
 <li><span style="text-decoration: line-through;">I am currently still thinking about conventions for the viewmodels as these conventions need to provide more flexibiltity then just EVENT/AR.ID binding... I am not sure whether I will find an acceptable solution on that matter...</span>&nbsp;<strong>Update:</strong> KISS as usual, view instances are built/modified by stateless handlers; piece of cake !</li>
 </ul>
 <div>Anyway, enough stalling, here we go:</div>
@@ -170,13 +170,13 @@
 <h3>Sold! Where can I get it ?</h3>
 <p><span style="text-decoration: line-through;">Depending on the feedback I get, I might push it online <a href="https://github.com/tojans" target="_blank">over at my github account</a>, but for now, I would rather try to find a good solution for the viewmodel/event conventions</span>.</p>
 <p><strong>Update:</strong> I published the sourcecode <a href="https://github.com/ToJans/Scritchy" target="_blank">over at my github account</a>.</p>
-<p><strong>Update 2:</strong> Whenever I push the source to github, the <a href="http://scritchyexample.apphb.com/" target="_blank">demo at appharbor</a> gets updated as well automagically.</p>
-<p>Feel free to PM me any time (or tweet; <a href="http://twitter.com/#/tojans" target="_blank">@tojans</a> )...</p>
+<p><strong>Update 2:</strong> Whenever I push the source to github, the <a href="https://scritchyexample.apphb.com/" target="_blank">demo at appharbor</a> gets updated as well automagically.</p>
+<p>Feel free to PM me any time (or tweet; <a href="https://twitter.com/#/tojans" target="_blank">@tojans</a> )...</p>
 <h3>Conclusion</h3>
 <p>While this is still a work in progress, and nowhere near ready for production usage, I think this might actually be a pretty cool implementation. If I can somehow find a way to complete this framework, I think I might be on to something here.</p>
 <p>I am aware that CQRS is considered to complicated by some, and I am aware that some experts advise against the usage of CQRS in most cases.&nbsp;However, it is my opinion that CQRS provides you with a proper template for development, where everything is nicely separated the way it is supposed to be, and easily adjustable. Another motivation for the CQRS approach is the spaghetti-code of the nillies, currently also known as lasagna-code: numerous amounts of layers over layers that make adding a simple field to a screen a few days of work.</p>
 <p>By providing Scritchy, I am trying to find a way to make CQRS not only working, but also relatively easy to use and understand.</p>
-<p>This is not the end, but the beginning of a new path...</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+<p>This is not the end, but the beginning of a new path...</p><div style="text-align:right"><a class="addthis_button" href="https://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="https://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
 </div>
         <div class="post-footer">
             <div class="info">
@@ -191,27 +191,36 @@
 
         </div>
     </div>
-</div><div class="footer">
-	<hr class="thin" />
-	<div class="pure-menu pure-menu-horizontal pure-menu-open">
-		<ul class="footer-menu">
-		
-		</ul>
-	</div>
-
-	<p>&copy; 2021. All rights reserved. </p>
 </div>
 
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-41936060-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 </body>
 
 </html>

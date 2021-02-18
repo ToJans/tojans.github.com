@@ -85,12 +85,12 @@ This offer is also valid for customers, so if you know a few people that might b
 
 **Identify and take ownership of issues.**
 
-<blockquote class="twitter-tweet" lang="nl"><p>Ready for lean coffee <a href="http://t.co/Fgyh6yUxjd">pic.twitter.com/Fgyh6yUxjd</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/413041816754483201">17 december 2013</a></blockquote>
+<blockquote class="twitter-tweet" lang="nl"><p>Ready for lean coffee <a href="https://t.co/Fgyh6yUxjd">pic.twitter.com/Fgyh6yUxjd</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/413041816754483201">17 december 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### What
 
-LIA is a protocol I **derived from the [proven lean coffee protocol](http://agilecoffee.com/leancoffee/)**.
+LIA is a protocol I **derived from the [proven lean coffee protocol](https://agilecoffee.com/leancoffee/)**.
 It will **enable** you and your team members to **discuss issues** in a **respectful, productive and efficient** way.
 
 It shows you how to invest time in **the things that matter**, and **stop wasting valuable time** on discussions that are going nowhere or issues that are irrelevant.
@@ -141,14 +141,14 @@ I can teach this to you and your team in a couple of hours, **take action now**:
 
 **Unify business and software development.**
 
-<blockquote class="twitter-tweet" lang="nl"><p>.<a href="https://twitter.com/JefClaes">@JefClaes</a> and <a href="https://twitter.com/ToJans">@ToJans</a> are doing a great job on <a href="https://twitter.com/hashtag/TGGcon?src=hash">#TGGcon</a> workshop Event storming, the atmosphere is really great! :) <a href="http://t.co/MiDUMqXY7h">pic.twitter.com/MiDUMqXY7h</a></p>&mdash; The Geek Gathering (@Geek_Gathering) <a href="https://twitter.com/Geek_Gathering/status/464318677916319744">8 mei 2014</a></blockquote>
+<blockquote class="twitter-tweet" lang="nl"><p>.<a href="https://twitter.com/JefClaes">@JefClaes</a> and <a href="https://twitter.com/ToJans">@ToJans</a> are doing a great job on <a href="https://twitter.com/hashtag/TGGcon?src=hash">#TGGcon</a> workshop Event storming, the atmosphere is really great! :) <a href="https://t.co/MiDUMqXY7h">pic.twitter.com/MiDUMqXY7h</a></p>&mdash; The Geek Gathering (@Geek_Gathering) <a href="https://twitter.com/Geek_Gathering/status/464318677916319744">8 mei 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 During this session you will learn to **reduce the gap between business and software development**. You will also see how we can make sure **your software reflects the way your business works**.
 
 ### Event storming
 
-This session starts off with **event storming**, a technique invented by [Avanscoperta](http://www.avanscoperta.it/en/)'s [Alberto Brandolini](http://ziobrando.blogspot.be/).
+This session starts off with **event storming**, a technique invented by [Avanscoperta](https://www.avanscoperta.it/en/)'s [Alberto Brandolini](https://ziobrando.blogspot.be/).
 
 Event storming will:
 

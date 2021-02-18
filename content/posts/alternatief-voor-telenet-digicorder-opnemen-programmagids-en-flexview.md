@@ -8,7 +8,7 @@ title: Alternatief voor Telenet digicorder opnemen, programmagids en flexview
 <p>
 Verder met het digicorder-verhaal : <br />
 <br />
-Ik heb in plaats van een digicorder een HDD/DVD recorder aangeschaft met EPG en g-link: de <a rel="external" href="http://www.sony.be/view/ShowProduct.action?product=RDR-HX725&amp;site=odw_nl_BE&amp;pageType=Overview&amp;imageType=Main&amp;category=DVD+Recorder" target="_blank" class="link">Sony RDR HX725</a><br />
+Ik heb in plaats van een digicorder een HDD/DVD recorder aangeschaft met EPG en g-link: de <a rel="external" href="https://www.sony.be/view/ShowProduct.action?product=RDR-HX725&amp;site=odw_nl_BE&amp;pageType=Overview&amp;imageType=Main&amp;category=DVD+Recorder" target="_blank" class="link">Sony RDR HX725</a><br />
 <br />
 Voor mij dus voorlopig geen digitale tv, maar wel veel van de mogelijkheden die digitale tv ook biedt :<br />
 - programmagids<br />

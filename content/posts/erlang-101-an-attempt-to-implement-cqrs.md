@@ -6,15 +6,15 @@ title: 'Erlang 101: an attempt to implement CQRS'
 ---
 
 <h3>Introduction</h3>
-<p>As you might have noticed in<a href="http://www.corebvba.be/blog/post/Getting-started-with-Erlang-and-Nitrogen-(in-a-single-tweet).aspx" target="_blank"> one of my previous posts</a>, I am currently focussing on <a href="http://learnyousomeerlang.com/" target="_blank">Erlang</a>, because I assume that this platform might be the most efficient way <a href="https://github.com/ericmoritz/wsdemo/blob/results-v1/results.md" target="_blank">to handle umphteen connections over the web for now</a>&nbsp;(but that is the subject for another post).</p>
-<p>After running my first experiments and getting everything up and running on Windows, I finally decided to stop fighting usage of windows combined with Erlang so I installed myself a <a href="https://www.virtualbox.org/" target="_blank">virtualbox </a>with <a href="http://lxde.org/" target="_blank">Lubuntu LXDE</a> (please note that you have to set the available memory on the virtual appliance to 512MB, or the installation will crash).</p>
+<p>As you might have noticed in<a href="https://www.corebvba.be/blog/post/Getting-started-with-Erlang-and-Nitrogen-(in-a-single-tweet).aspx" target="_blank"> one of my previous posts</a>, I am currently focussing on <a href="https://learnyousomeerlang.com/" target="_blank">Erlang</a>, because I assume that this platform might be the most efficient way <a href="https://github.com/ericmoritz/wsdemo/blob/results-v1/results.md" target="_blank">to handle umphteen connections over the web for now</a>&nbsp;(but that is the subject for another post).</p>
+<p>After running my first experiments and getting everything up and running on Windows, I finally decided to stop fighting usage of windows combined with Erlang so I installed myself a <a href="https://www.virtualbox.org/" target="_blank">virtualbox </a>with <a href="https://lxde.org/" target="_blank">Lubuntu LXDE</a> (please note that you have to set the available memory on the virtual appliance to 512MB, or the installation will crash).</p>
 <blockquote class="twitter-tweet">
 <p>2nd attempt for a virtualbox install of Lubuntu LXDE; aparently the installer crashes with mem != 512MB <a href="https://twitter.com/search/%23LOL">#LOL</a></p>
 &mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/253763997659176961">October 4, 2012</a></blockquote>
 <p>
 <script src="//platform.twitter.com/widgets.js"></script>
 </p>
-<p>Before I start implementing what might be my next startup, I tried implementing one of the things that I consider to be my personal kata <a href="https://github.com/ToJans" target="_blank">(I made numerous attempts in .Net</a>): a <a href="http://martinfowler.com/bliki/CQRS.html" target="_blank">CQRS</a> implementation of a simple stock system.</p>
+<p>Before I start implementing what might be my next startup, I tried implementing one of the things that I consider to be my personal kata <a href="https://github.com/ToJans" target="_blank">(I made numerous attempts in .Net</a>): a <a href="https://martinfowler.com/bliki/CQRS.html" target="_blank">CQRS</a> implementation of a simple stock system.</p>
 <p>Disclaimer: I am a complete newb in Erlang, so I presume I am still miles away from a more elegant implementation.</p>
 <p></p>
 <h3>"Show me da Codez!!"</h3>

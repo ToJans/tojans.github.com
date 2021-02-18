@@ -8,7 +8,7 @@ categories: ["Development", "DDD"]
 ---
 Due to my DDD background, I am constantly on a quest for the utopian domain model.
 
-Last week during [the Build Stuff 2014 conference](http://buildstuff.lt) I saw a presentation by [Amanda Laucher](https://twitter.com/pandamonial)
+Last week during [the Build Stuff 2014 conference](https://buildstuff.lt) I saw a presentation by [Amanda Laucher](https://twitter.com/pandamonial)
 about dependent typing that spiked my interest. Here is a short interview with her:
 <iframe width="560" height="315" src="//www.youtube.com/embed/E5XbCwwPTb0" frameborder="0" allowfullscreen></iframe>
 
@@ -61,7 +61,7 @@ I will give an opinionated list ordered from `check everything at run-time` to `
 Based on my previous assumptions mentioned here, you could say that dependent typing is something that allows you verify your system's behavior at compile-time,
 and even have proof that it works the way you want it to work, so this is the utopian goal I was trying to achieve, correct?
 
-![Nailed it](http://4.bp.blogspot.com/-bRpZyy2YqpY/U392wDd-qSI/AAAAAAAACbk/y_t7M5t7Ff0/s1600/1231622_244281602442693_997882900_n.jpg)
+![Nailed it](https://4.bp.blogspot.com/-bRpZyy2YqpY/U392wDd-qSI/AAAAAAAACbk/y_t7M5t7Ff0/s1600/1231622_244281602442693_997882900_n.jpg)
 
 Wrong! I will tell you later why this reasoning is flawed, but first I will show you how I got to a deeper understanding about the necessity of dependent typing:
 
@@ -70,7 +70,7 @@ Wrong! I will tell you later why this reasoning is flawed, but first I will show
 ## The insight
 
 As I was trying to figure out what dependent typing exactly was by nagging [Mathias Brandewinter](https://twitter.com/brandewinder) and
-[Andrea Magnorsky](https://twitter.com/silverSpoon), I had an idea: I would try spiking [the bowling kata](http://codingdojo.org/cgi-bin/index.pl?KataBowling)
+[Andrea Magnorsky](https://twitter.com/silverSpoon), I had an idea: I would try spiking [the bowling kata](https://codingdojo.org/cgi-bin/index.pl?KataBowling)
 in [Idris](https://twitter.com/silverSpoon), one of the more recent dependently typed languages that looks similar to Haskell.
 
 I got as far as installing the Idris executable using the link that Andrea provided me. When I told them about the idea to do the bowling kata in Idris, they

@@ -123,6 +123,6 @@ This is similar to monads in Haskell: don't learn the theory, just use the imple
 
 Also, find someone smart, who can explain it in a way you can understand it. When I was looking for someone who could explain me what Haskell lenses were; [Scott](https://twitter.com/ScottWlaschin) told me: it's something you could  compare to property getters and setters. Aha-Erlebnis on the spot!
 
-Whenever I give a talk about [DDD](http://en.wikipedia.org/wiki/Domain-driven_design) to a crowd that's relatively unkown with DDD, I try to avoid as much DDD lingo as I can, because **making your audience feel stupid doesn't help to convey the message**.
+Whenever I give a talk about [DDD](https://en.wikipedia.org/wiki/Domain-driven_design) to a crowd that's relatively unkown with DDD, I try to avoid as much DDD lingo as I can, because **making your audience feel stupid doesn't help to convey the message**.
 
-If you ask my opinion: don't throw type category at people when they want to learn Idris, but try to give short and small examples and exercises that are a bit less abstract then the usual things academics propose. For inspiration I'd like to direct you to [rosettacode.org](http://rosettacode.org/). That how I usually learned languages, and for me it works!
+If you ask my opinion: don't throw type category at people when they want to learn Idris, but try to give short and small examples and exercises that are a bit less abstract then the usual things academics propose. For inspiration I'd like to direct you to [rosettacode.org](https://rosettacode.org/). That how I usually learned languages, and for me it works!

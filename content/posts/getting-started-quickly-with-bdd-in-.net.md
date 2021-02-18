@@ -6,10 +6,10 @@ title: Getting started quickly with BDD in .Net
 ---
 
 <h3>Introduction</h3>
-<p>This article will give you a brief introduction on how to get started with BDD (Behaviour driven development). It is <a href="http://www.corebvba.be/blog/page/Getting-started-with-BDD-%28behavior-driven-development%29-in-Net.aspx">my second attempt</a> for such an article.</p>
+<p>This article will give you a brief introduction on how to get started with BDD (Behaviour driven development). It is <a href="https://www.corebvba.be/blog/page/Getting-started-with-BDD-%28behavior-driven-development%29-in-Net.aspx">my second attempt</a> for such an article.</p>
 <p>I will show you the complete workflow on how to write an app using BDD in .Net.</p>
 <h3>Background</h3>
-<p>Small note: if you want to know why you should use BDD, I would like to refer you to another one of my articles: <a href="http://www.corebvba.be/blog/post/The-advantage-of-using-BDD-over-TDD.aspx">The advantage of using BDD over TDD</a></p>
+<p>Small note: if you want to know why you should use BDD, I would like to refer you to another one of my articles: <a href="https://www.corebvba.be/blog/post/The-advantage-of-using-BDD-over-TDD.aspx">The advantage of using BDD over TDD</a></p>
 <p>Today I finally managed to upgrade my Aubergine BDD framework to v0.1.</p>
 <p>This is now starting to get really usable (I've been dogfooding it for a while now).</p>
 <p>This release contains the following changes:</p>
@@ -24,22 +24,22 @@ title: Getting started quickly with BDD in .Net
 <p>In the spirit of OSS development, I am going to show you how to develop an application using BDD together with SharpDevelop, an OSS IDE for .Net. You are offcourse free tu use any other IDE (i.e. Visual Studio, Monodevelop, ...)</p>
 <h4>Sharpdevelop <br /></h4>
 <p>If you want to continue this tutorial using SharpDevelop, you can download it here (I used 3.2):</p>
-<p><a href="http://www.icsharpcode.net/opensource/sd/download/#SharpDevelop3x" target="_blank">http://www.icsharpcode.net/opensource/sd/download/#SharpDevelop3x</a></p>
+<p><a href="https://www.icsharpcode.net/opensource/sd/download/#SharpDevelop3x" target="_blank">https://www.icsharpcode.net/opensource/sd/download/#SharpDevelop3x</a></p>
 <p>In other IDE's the steps will probably be more or less the same, except that your screenshots will probably not match.</p>
 <h4>Aubergine<br /></h4>
 <p>Next to this you also need my Aubergine BDD framework. You can download it here:</p>
-<p><a href="http://github.com/ToJans/Aubergine/zipball/master" target="_blank">http://github.com/ToJans/Aubergine/zipball/master</a></p>
+<p><a href="https://github.com/ToJans/Aubergine/zipball/master" target="_blank">https://github.com/ToJans/Aubergine/zipball/master</a></p>
 <p>If you want to, you can also take a quick peek at the source here:</p>
-<p><a href="http://github.com/ToJans/Aubergine" target="_blank">http://github.com/ToJans/Aubergine</a></p>
+<p><a href="https://github.com/ToJans/Aubergine" target="_blank">https://github.com/ToJans/Aubergine</a></p>
 <p>&nbsp;</p>
 <h3>Getting started</h3>
 <p>Create a new empty solution in sharpdevelop, name it MyFirstBDD</p>
 <p>&nbsp;</p>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f1.GIF" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f1.GIF" alt="" /></p>
 <p>Right click on the solution, and add a new project</p>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f2.GIF" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f2.GIF" alt="" /></p>
 <p>Choose class library, and name it MyFirstBDD.Tests</p>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f3.GIF" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f3.GIF" alt="" /></p>
 <h3>Define your specs</h3>
 <p>This is a very simple example, but IRL you will have multiple txt-files with multiple stories and scenarios describing as much functionality as possible</p>
 <p>Right-Click on the MyFirstBDD.Tests, and choose add a new file. For the file-type, select empty file, but name it specs.txt, and add the following content:</p>
@@ -60,10 +60,10 @@ title: Getting started quickly with BDD in .Net
 <p><div class="code">
 <br /><span class="kwrd">using</span> System;<br /><span class="kwrd">using</span> System.Collections.Generic;<br /><span class="kwrd">using</span> System.IO;<br /><span class="kwrd">using</span> NUnit.Framework;<br /><br /><span class="kwrd">namespace</span> MyFirstBDD.Tests<br />{<br />&nbsp;&nbsp;&nbsp; [TestFixture]<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> Fixture : Aubergine.NUnitBDD.Fixture <br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">override</span> IEnumerable&lt;<span class="kwrd">string</span>&gt; SpecFiles<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; get {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">yield</span> <span class="kwrd">return</span> Path.Combine(Directory.GetCurrentDirectory(),<span class="str">"specs.txt"</span>);<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> Fixture()<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br /></div></p>
 <p>Also make sure you change the properties to copy "always" and build action "content". Also add a reference to the needed libs (both aubergine and project references)</p>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f4.GIF" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f4.GIF" alt="" /></p>
 <p>Change your project type for myFirstBDD from "console project" to "Class library" in the properties and everything should compile !!</p>
 <p>Right click on the fixture class definition in the source code, and you should see the context option "Unit test" available</p>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f5.GIF" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f5.GIF" alt="" /></p>
 <p>&nbsp;</p>
 <p>If you do run the tests, it will say no tests are ran yet, but we'll fix that soon...</p>
 <h3>Implement the application</h3>
@@ -77,16 +77,16 @@ title: Getting started quickly with BDD in .Net
 <h3>And execute your testcode (with coverage percentage if you want too)</h3>
 <p>Right click on the fixture class definition, unit test, unit test with coverage...</p>
 <p>If everything went well, you should see the following (similar) output:</p>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f6.GIF" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2010%2f8%2f6.GIF" alt="" /></p>
 <p>&nbsp;</p>
 <p>So you can see everything passed, and we have got a whopping 100% code coverage !!! (not hard in this case, but hey :-) )</p>
 <p>We can now start on our UI, but that is a whole different story (Weak event messagebroker comes to mind for example)</p>
 <h3>In conclusion</h3>
 <p>While this is by no means a complete guide on BDD development, this should be enough to get you started.</p>
 <p>If you like this, or have some remarks, please do let me know !!!</p>
-<p>For any other articles on BDD on this blog, you can follow this link: <a href="http://www.corebvba.be/blog/?tag=/bdd">corebvba - BDD</a></p>
+<p>For any other articles on BDD on this blog, you can follow this link: <a href="https://www.corebvba.be/blog/?tag=/bdd">corebvba - BDD</a></p>
 <p>&nbsp;</p>
 <h3>Wait, what about a ready-built solution ?</h3>
 <p>Here you go:</p>
-<p><a href="http://www.corebvba.be/blog/file.axd?file=2010%2f8%2fMyFirstBDD.zip">MyFirstBDD.zip (72,79 kb)</a></p>
-<p>Enjoy !</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+<p><a href="https://www.corebvba.be/blog/file.axd?file=2010%2f8%2fMyFirstBDD.zip">MyFirstBDD.zip (72,79 kb)</a></p>
+<p>Enjoy !</p><div style="text-align:right"><a class="addthis_button" href="https://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="https://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>

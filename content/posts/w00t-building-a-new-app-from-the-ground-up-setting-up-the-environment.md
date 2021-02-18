@@ -7,10 +7,10 @@ title: 'w00t : Building a new app from the ground up : setting up the environmen
 
 This is one of the articles in our series; the parts are:<br />
 <ol>
-	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-methodology-technology-tools-used.aspx">Methodology, technology &amp; tools used</a></li>
-	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-setting-up-the-environment.aspx">Setting up the environment</a></li>
-	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-First-specs-and-getting-started.aspx">First specs and getting started</a></li>
-	<li><a href="http://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-IOC-database-and-other-stuff3b-a-real-framework.aspx">IOC, database and other stuff; a real framework</a>&nbsp; <br />
+	<li><a href="https://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-methodology-technology-tools-used.aspx">Methodology, technology &amp; tools used</a></li>
+	<li><a href="https://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-setting-up-the-environment.aspx">Setting up the environment</a></li>
+	<li><a href="https://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-First-specs-and-getting-started.aspx">First specs and getting started</a></li>
+	<li><a href="https://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-IOC-database-and-other-stuff3b-a-real-framework.aspx">IOC, database and other stuff; a real framework</a>&nbsp; <br />
 	</li>
 </ol>
 <p>
@@ -25,9 +25,9 @@ Ok, here are the steps to setup the development environment for my new project :
 &nbsp;
 </p>
 <ul>
-	<li><a href="http://code.google.com/p/msysgit/" target="_blank">MSysGit</a></li>
-	<li>Visual Studio pro or express - <a href="http://www.microsoft.com/express/download/#webInstall" target="_blank">web developer &amp; c#</a>&nbsp;</li>
-	<li><a href="http://www.microsoft.com/downloads/details.aspx?familyid=D3F06BB9-5F5F-4F46-91E9-813B3FCE2DB1&amp;displaylang=en" target="_blank">Asp.net MVC 2 preview 2</a> <br />
+	<li><a href="https://code.google.com/p/msysgit/" target="_blank">MSysGit</a></li>
+	<li>Visual Studio pro or express - <a href="https://www.microsoft.com/express/download/#webInstall" target="_blank">web developer &amp; c#</a>&nbsp;</li>
+	<li><a href="https://www.microsoft.com/downloads/details.aspx?familyid=D3F06BB9-5F5F-4F46-91E9-813B3FCE2DB1&amp;displaylang=en" target="_blank">Asp.net MVC 2 preview 2</a> <br />
 	</li>
 </ul>
 <h2>The steps</h2>

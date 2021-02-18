@@ -13,7 +13,7 @@ Since I use a single shared Google calendar for every customer I have, so all th
 I did it a few times manually in the beginning, but since this was too much of a hassle i decided to write a small program for it.
 </p>
 <p>
-The program is very simple an reads files from the stdinput and outputs to stdout. I Use the <a href="http://www.ddaysoftware.com/Pages/Projects/DDay.iCal/" target="_blank" title="Open source iCal lib">DDay.iCal</a> library for this. 
+The program is very simple an reads files from the stdinput and outputs to stdout. I Use the <a href="https://www.ddaysoftware.com/Pages/Projects/DDay.iCal/" target="_blank" title="Open source iCal lib">DDay.iCal</a> library for this. 
 </p>
 <p>
 This is the source for the program (pretty straightforward) : 
@@ -100,5 +100,5 @@ The resulting output should look like this :
 That&#39;s all folks !!! Enjoy !!
 </p>
 <p>
-<a href="http://www.corebvba.be/blog/file.axd?file=2009%2f10%2fIcalToCSVPipe.zip">IcalToCSVPipe.zip (108,58 kb)</a>
+<a href="https://www.corebvba.be/blog/file.axd?file=2009%2f10%2fIcalToCSVPipe.zip">IcalToCSVPipe.zip (108,58 kb)</a>
 </p>

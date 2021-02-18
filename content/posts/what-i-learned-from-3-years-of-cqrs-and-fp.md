@@ -10,7 +10,7 @@ categories:
 I am currently setting up part of a BC for a customer, and it took me some refactoring after having not done any serious .Net for a few years, 
 but I got there in the end; here is how I structured my current software project in .Net.
 
-<blockquote class="twitter-tweet" lang="nl"><p>Upcoming blog post: &quot;What I learned from 3 years of CQRS and FP&quot; <a href="http://t.co/MsfoInALtM">pic.twitter.com/MsfoInALtM</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/443087149148041216">10 maart 2014</a></blockquote>
+<blockquote class="twitter-tweet" lang="nl"><p>Upcoming blog post: &quot;What I learned from 3 years of CQRS and FP&quot; <a href="https://t.co/MsfoInALtM">pic.twitter.com/MsfoInALtM</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/443087149148041216">10 maart 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I think it is a reasonable base, easy to extend; some remarks:

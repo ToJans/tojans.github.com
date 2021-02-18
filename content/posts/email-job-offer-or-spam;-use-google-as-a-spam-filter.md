@@ -49,7 +49,7 @@ Today I recieved a strange mail in my inbox :
 	</p>
 </blockquote>
 <p>
-Luckily, google is my friend : when <a href="http://groups.google.be/groups/search?hl=nl&amp;ie=UTF-8&amp;oe=UTF-8&amp;q=%22Our+International+Corporation+has+a+variety+of+high-paid+positions+available+at+the+moment.%22">I searched for the first sentence of mail in google discussions</a>, I found out it was actually spam. I must say it&#39;s the first time I wasn&#39;t able to tell if it was spam or not, until I got halfway the mail : 
+Luckily, google is my friend : when <a href="https://groups.google.be/groups/search?hl=nl&amp;ie=UTF-8&amp;oe=UTF-8&amp;q=%22Our+International+Corporation+has+a+variety+of+high-paid+positions+available+at+the+moment.%22">I searched for the first sentence of mail in google discussions</a>, I found out it was actually spam. I must say it&#39;s the first time I wasn&#39;t able to tell if it was spam or not, until I got halfway the mail : 
 </p>
 <blockquote>
 	<p>
@@ -62,5 +62,5 @@ Luckily, google is my friend : when <a href="http://groups.google.be/groups/sear
 I&#39;ve had a lot of whitewashing/viagra/s*xx offers, but this is the first time I got a job offer by spam :) 
 </p>
 <p>
-While doing this I noticed the first matched were all in <a href="http://groups.google.be/group/news.admin.net-abuse.sightings?lnk=sg&amp;hl=nl">news.admin.net-abuse.sightings</a> . I think&nbsp;that using google&nbsp;one might be able to build a very basic spam filter. 
+While doing this I noticed the first matched were all in <a href="https://groups.google.be/group/news.admin.net-abuse.sightings?lnk=sg&amp;hl=nl">news.admin.net-abuse.sightings</a> . I think&nbsp;that using google&nbsp;one might be able to build a very basic spam filter. 
 </p>

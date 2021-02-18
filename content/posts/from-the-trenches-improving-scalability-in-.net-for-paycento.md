@@ -6,13 +6,13 @@ title: From the trenches - improving scalability in .Net for Paycento
 ---
 
 <h3>Introduction</h3>
-<p>As most of you might know, I am currently in the process of improving the scalability of the <a href="http://www.paycento.com/" target="_blank">Paycento </a>backend..</p>
+<p>As most of you might know, I am currently in the process of improving the scalability of the <a href="https://www.paycento.com/" target="_blank">Paycento </a>backend..</p>
 <p>As a real lean adept, the idea is to optimize where it hurts... As the creator of Node.js pointed out perfectly, the biggest pain is in the disk/network access etc.. Blocking threads hurt bigtime... So I started searching for easy low-cost optimizations that would not require to much effort....</p>
 <p>
 <object width="640" height="360">
-<param name="movie" value="http://www.youtube.com/v/M-sc73Y-zQA?version=3&amp;hl=nl_NL" />
+<param name="movie" value="https://www.youtube.com/v/M-sc73Y-zQA?version=3&amp;hl=nl_NL" />
 <param name="allowFullScreen" value="true" />
-<param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="640" height="360" src="http://www.youtube.com/v/M-sc73Y-zQA?version=3&amp;hl=nl_NL" allowscriptaccess="always" allowfullscreen="true"></embed>
+<param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="640" height="360" src="https://www.youtube.com/v/M-sc73Y-zQA?version=3&amp;hl=nl_NL" allowscriptaccess="always" allowfullscreen="true"></embed>
 </object>
 </p>
 <p>&nbsp;</p>
@@ -32,7 +32,7 @@ title: From the trenches - improving scalability in .Net for Paycento
 <p>&nbsp;</p>
 <h3>First things first: Caching</h3>
 <p>The easiest way to speed up network/disk access, is simply avoiding it, so I started with caching the part that requires scalability...</p>
-<p>Caching is an essential part of scalable websites, and there is no need to reinvent the wheel here... I started of with a simple static in-memory dictionary to verify my hunches, and then I started considering established options...&nbsp;After some reading up between different caching solutions, I found it hard to decide which option to select, but luckily I found the wonderfull <a href="http://www.nuget.org/packages/Glav.CacheAdapter" target="_blank">CacheAdapter written and maintained by Paul Glavich</a>. It allows you to switch between different caching types by altering web/app.config. The current cache options are:</p>
+<p>Caching is an essential part of scalable websites, and there is no need to reinvent the wheel here... I started of with a simple static in-memory dictionary to verify my hunches, and then I started considering established options...&nbsp;After some reading up between different caching solutions, I found it hard to decide which option to select, but luckily I found the wonderfull <a href="https://www.nuget.org/packages/Glav.CacheAdapter" target="_blank">CacheAdapter written and maintained by Paul Glavich</a>. It allows you to switch between different caching types by altering web/app.config. The current cache options are:</p>
 <ul>
 <li>No cache</li>
 <li>.Net 4.0 ObjectCache</li>
@@ -62,4 +62,4 @@ title: From the trenches - improving scalability in .Net for Paycento
 <p>Unfortunately non-selects are AFAIK (close to) impossible to make async, so we currently simply opt to update the cached values directly and process the SQL on a background thread...</p>
 <p>&nbsp;</p>
 <h3>What's up next ?</h3>
-<p>For now, we have the tools and options in place to start optimizing the code... We applied the principles to 2 execution paths that require performance, and reached our initial performance goal. So now we need to optimize other paths as well. As my pseudo-fulltime consultancy period for Paycento is about to end next week, I can only assume it will be quite a busy week.. Fortunately, I will still be a member of the Paycento team, even though it will (for now) be more on an ad-hoc basis...</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+<p>For now, we have the tools and options in place to start optimizing the code... We applied the principles to 2 execution paths that require performance, and reached our initial performance goal. So now we need to optimize other paths as well. As my pseudo-fulltime consultancy period for Paycento is about to end next week, I can only assume it will be quite a busy week.. Fortunately, I will still be a member of the Paycento team, even though it will (for now) be more on an ad-hoc basis...</p><div style="text-align:right"><a class="addthis_button" href="https://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="https://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>

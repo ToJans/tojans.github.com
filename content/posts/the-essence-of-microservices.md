@@ -6,14 +6,14 @@ title: "The essence of microservices"
 comments: true
 categories: 
 ---
-During the DDDQ lean coffee last weekend the question on [microservices](http://martinfowler.com/articles/microservices.html) popped up once again.
+During the DDDQ lean coffee last weekend the question on [microservices](https://martinfowler.com/articles/microservices.html) popped up once again.
 
-This is [not my first post about this subject](http://tojans.me/blog/2014/01/30/micro-service-architecture-versus-soa-eda/), 
+This is [not my first post about this subject](https://tojans.me/blog/2014/01/30/micro-service-architecture-versus-soa-eda/), 
 but apparently [people wanted to know more](https://twitter.com/ToJans/status/504718485403222016).
 
 # Whyyyy !?! Whyyyyy!
 
-![Whyyy](http://a0.1nsk.ru/3/a32b30b66d.png)
+![Whyyy](https://a0.1nsk.ru/3/a32b30b66d.png)
 
 From my understanding ** you should only use microservices when you want to run small controlled business experiments**.
 
@@ -30,7 +30,7 @@ you might want to try something new everyday, for example:
 >
 > You (temporarily) extend your software functionality to run small controlled business experiments.
 
-If you would like to know more about "small controlled experiments", I would suggest you to read [Mathias' post](http://verraes.net/2014/03/small-controlled-experiments/). 
+If you would like to know more about "small controlled experiments", I would suggest you to read [Mathias' post](https://verraes.net/2014/03/small-controlled-experiments/). 
 He applies these principles to agile software development, but you can also apply these principles to doing business.
 
 # What
@@ -58,5 +58,5 @@ Most businesses are not fully agile, so I would advise against using microservic
 Figure out which part of your business is
 agile, and which is not, and find a way to run small controlled business experiments.
 
-<blockquote class="twitter-tweet" lang="nl"><p><a href="https://twitter.com/hashtag/microservices?src=hash">#microservices</a> <a href="http://t.co/T7XOjcUE73">pic.twitter.com/T7XOjcUE73</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/448360079159328768">25 maart 2014</a></blockquote>
+<blockquote class="twitter-tweet" lang="nl"><p><a href="https://twitter.com/hashtag/microservices?src=hash">#microservices</a> <a href="https://t.co/T7XOjcUE73">pic.twitter.com/T7XOjcUE73</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/448360079159328768">25 maart 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

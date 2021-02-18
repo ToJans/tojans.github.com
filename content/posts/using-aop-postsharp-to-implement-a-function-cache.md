@@ -6,7 +6,7 @@ title: Using AOP / PostSharp to implement a function cache
 ---
 
 <p>
-I&nbsp;just posted <a href="http://www.codeproject.com/KB/cs/ps-custom-attributes-2.aspx?msg=2349925#xx2349925xx">this comment</a> on codeproject : 
+I&nbsp;just posted <a href="https://www.codeproject.com/KB/cs/ps-custom-attributes-2.aspx?msg=2349925#xx2349925xx">this comment</a> on codeproject : 
 </p>
 <p>
 I just discovered this a few hours ago, and I allready wrote a small but very helpfull attribute : a attribute to cache constant but timeconsuming function calls.<br />

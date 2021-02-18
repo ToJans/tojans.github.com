@@ -16,7 +16,7 @@ I&#39; ll explain this model with an imaginary company called &#39;Xmastree&#39;
 The graph for each objective in this model looks like this :
 </p>
 <p>
-<img src="http://users.pandora.be/bull/weblog/images/Cram.GIF" alt="" width="487" height="191" />
+<img src="https://users.pandora.be/bull/weblog/images/Cram.GIF" alt="" width="487" height="191" />
 </p>
 <p>
 Example objectives:

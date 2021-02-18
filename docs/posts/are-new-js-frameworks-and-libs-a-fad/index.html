@@ -71,19 +71,19 @@
     <ul class="social-links">
         
             <li>
-                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
                     <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
                     <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
                     <i class="fab fa-github fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
@@ -154,11 +154,11 @@
 <ul>
 <li><a href="https://jquery.com/">jQuery</a></li>
 <li><a href="https://facebook.github.io/react/">React</a></li>
-<li><a href="http://vuejs.org/">vue.js</a></li>
+<li><a href="https://vuejs.org/">vue.js</a></li>
 </ul>
 </blockquote>
 <h2 id="frameworks---not-for-me">Frameworks - not for me!</h2>
-<p>In web UI, frameworks like <a href="http://backbonejs.org/">BackBone</a>, <a href="http://emberjs.com/">Ember</a> and <a href="https://angularjs.org/">Angular</a> might be all nice and stuff, but when you start using them to compose larger applications, things tend to break down quite easily with less experienced developers.</p>
+<p>In web UI, frameworks like <a href="https://backbonejs.org/">BackBone</a>, <a href="https://emberjs.com/">Ember</a> and <a href="https://angularjs.org/">Angular</a> might be all nice and stuff, but when you start using them to compose larger applications, things tend to break down quite easily with less experienced developers.</p>
 <p>Developing large client-side applications requires the same modelling skillset as developing large server-side applications; the complexity is usually not located in the infrastructure, but in properly mapping boundaries and responsibilities within your solution space.</p>
 <blockquote>
 <p><strong>I tend to grow my architecture as my application progresses. Using frameworks you can get something up and running very fast, but they enforce you into a single way of doing things.</strong></p>
@@ -228,7 +228,7 @@ ReactDOM.render(
 <p>Another thing to notice is that, while react only updates the DOM elements that require updating, it does this with an intermediate step using <code>VirtualDom</code>, so whenever an element in your view requires re-rendering, react renders the whole tree, diffs it with the old version, and than updates the DOM.</p>
 <p>Next to this, you should also notice the whole <code>getInitialState</code> and the use of <code>setState</code>. Why can&rsquo;t I just declare the data on my component and modify it using regular JavaScript ops?</p>
 <h3 id="the-new-kid-on-the-block-vuejs">The new kid on the block: Vue.js</h3>
-<p>Welcome to <a href="http://vuejs.org/">vue.js</a>. Vue.js is like React, but without the warts: it doesn&rsquo;t require VirtualDom, but just updates the relevant dom elements based on the changes of your state. It also doesn&rsquo;t require you to ugly warts like <code>setState</code>. Let me show you an example for this code in vue.js:</p>
+<p>Welcome to <a href="https://vuejs.org/">vue.js</a>. Vue.js is like React, but without the warts: it doesn&rsquo;t require VirtualDom, but just updates the relevant dom elements based on the changes of your state. It also doesn&rsquo;t require you to ugly warts like <code>setState</code>. Let me show you an example for this code in vue.js:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div id=&#34;some-div&#34;&gt;
     &lt;div&gt;The text in the input box is {{someText}}&lt;/div&gt;
     &lt;input v-model=&#34;someText&#34; /&gt;
@@ -257,7 +257,7 @@ new Vue({
 <p>Which is exactly why I think you should at least take a look at vue.js right now.</p>
 <p>The added benefit over react is not that large that it will make me rewrite my react apps into vue apps, but I&rsquo;ll probably use it for new projects.</p>
 <h2 id="ps-on-elm">PS: on ELM</h2>
-<p>For the ones asking: I did take a look to <a href="http://elm-lang.org/">ELM</a>, but for me the whole FRP things feels too alien from HTML. I&rsquo;d rather implement my domain logic in a typed functional language, and use simple javascript for the representation.</p>
+<p>For the ones asking: I did take a look to <a href="https://elm-lang.org/">ELM</a>, but for me the whole FRP things feels too alien from HTML. I&rsquo;d rather implement my domain logic in a typed functional language, and use simple javascript for the representation.</p>
 </div>
         <div class="post-footer">
             <div class="info">
@@ -273,27 +273,36 @@ new Vue({
 
         </div>
     </div>
-</div><div class="footer">
-	<hr class="thin" />
-	<div class="pure-menu pure-menu-horizontal pure-menu-open">
-		<ul class="footer-menu">
-		
-		</ul>
-	</div>
-
-	<p>&copy; 2021. All rights reserved. </p>
 </div>
 
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-41936060-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 </body>
 
 </html>

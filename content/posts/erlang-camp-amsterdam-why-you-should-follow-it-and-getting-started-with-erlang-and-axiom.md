@@ -10,9 +10,9 @@ footer: true
 ---
 
 <h2>Introduction</h2>
-<p>The last two days of August there is a <a href="http://www.erlangcamp.com/amsterdam">2 day Erlang course in Amsterdam</a>. One of the most incredible things, is that there is a low cost offer sponsored by <a href="http://www.spilgames.com/">Spil games</a> that reduces the price to 55&euro; for both days; talk about a steal!!</p>
+<p>The last two days of August there is a <a href="https://www.erlangcamp.com/amsterdam">2 day Erlang course in Amsterdam</a>. One of the most incredible things, is that there is a low cost offer sponsored by <a href="https://www.spilgames.com/">Spil games</a> that reduces the price to 55&euro; for both days; talk about a steal!!</p>
 <h2>First things first: why should you follow a camp on Erlang?</h2>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f5%2ferlcamp.png" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2013%2f5%2ferlcamp.png" alt="" /></p>
 <p>People who know me in person know that I am an avid fan of Erlang, even though I have only done some very small experiments with it.</p>
 <p>Even if you are not planning on developing something in Erlang, you should at least try to grasp the basic concepts!!</p>
 <p>You want to know why? Here is why:</p>
@@ -36,15 +36,15 @@ footer: true
 <h3>Others</h3>
 <p>There are numerous other reasons why to opt for Erlang in certain cases, here are some resources:</p>
 <ul>
-<li><a href="http://www.erlang.org/download/armstrong_thesis_2003.pdf">Joe Armstrong's original paper on Erlang from 2003</a></li>
-<li><a href="http://pragprog.com/articles/erlang">The pragmatic programmer's page on Erlang</a></li>
+<li><a href="https://www.erlang.org/download/armstrong_thesis_2003.pdf">Joe Armstrong's original paper on Erlang from 2003</a></li>
+<li><a href="https://pragprog.com/articles/erlang">The pragmatic programmer's page on Erlang</a></li>
 <li>Please post any other suggestions in the comments</li>
 </ul>
 <h2>Ok, you convinced me, but how do you get started on this?</h2>
 <p>Quite simple: unicorns &amp; fairydust. Or, if those are not available, there is another way (it took me a while to figure all of this out, but once you know it, it is quite simple):</p>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fstart.png" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fstart.png" alt="" /></p>
 <h3>Install prerequisites</h3>
-<p>First we need some kind of a package manager. As this example is currently in Windows, I will start by installing a package manager: <a href="http://chocolatey.org">Chocolatey</a>.</p>
+<p>First we need some kind of a package manager. As this example is currently in Windows, I will start by installing a package manager: <a href="https://chocolatey.org">Chocolatey</a>.</p>
 <p>Open a command window as an administrator, and type the following (copied from the chocolatey website):</p>
 <pre><code><strong>@powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; SET PATH=%PATH%;%systemdrive%\chocolatey\bin
 </strong></code></pre>
@@ -85,7 +85,7 @@ update-deps                          Update fetched dependencies
 ----&gt;&lt;8------- cut for brevity
 </code></pre>
 <h2>Let's build a POC helloworld first</h2>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fHelloWorld.png" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fHelloWorld.png" alt="" /></p>
 <p>Create the folder where you want your app to reside, and copy the file <code>rebar.</code> and <code>rebar.cmd</code> into this folder.</p>
 <p>First we are going to generate an app; this should create a subfolder <code>src</code> with 3 files in it.</p>
 <pre><code>E:\Dev\erlang\erlcdemo&gt;<strong>rebar create-app appid=helloworld</strong>
@@ -118,7 +118,7 @@ E:\Dev\erlang\erlcdemo\src&gt;
 </code></pre>
 <p>Ok, so this works, but it is not very impressive, so ...</p>
 <h2>Let's convert the POC into a web app!</h2>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fHelloWorldWeb.png" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fHelloWorldWeb.png" alt="" /></p>
 <h3>Get a web framework</h3>
 <p>We will use rebar to download the <a href="https://github.com/tsujigiri/axiom">axiom framework</a>, which is a bit like Sinatra for Erlang.</p>
 <p>We create a file in the root folder of our solution called <code>rebar.config</code>:</p>
@@ -183,9 +183,9 @@ Eshell V5.10.1  (abort with ^G)
 {ok,&lt;0.49.0&gt;}
 2&gt;
 </code></pre>
-<p>That's it; now surf to <a href="http://localhost:7654/">http://localhost:7654/</a> and you should get a 404 / Not found.</p>
-<p>Next, surf to <a href="http://localhost:7654/hi">http://localhost:7654/hi</a> and you should get <code>Hello stranger!</code> as an answer.</p>
-<p>Next, try <a href="http://localhost:7654/hi/Bart">http://localhost:7654/hi/Bart</a> and <a href="http://localhost:7654/hi/Tom">http://localhost:7654/hi/Tom</a>, and they should all work...</p>
+<p>That's it; now surf to <a href="https://localhost:7654/">https://localhost:7654/</a> and you should get a 404 / Not found.</p>
+<p>Next, surf to <a href="https://localhost:7654/hi">https://localhost:7654/hi</a> and you should get <code>Hello stranger!</code> as an answer.</p>
+<p>Next, try <a href="https://localhost:7654/hi/Bart">https://localhost:7654/hi/Bart</a> and <a href="https://localhost:7654/hi/Tom">https://localhost:7654/hi/Tom</a>, and they should all work...</p>
 <p>If you change the <code>helloworld.erl</code> file, there is no need to quit Erlang, just compile it from the shell, and code will hot-load:</p>
 <pre><code>E:\Dev\erlang\erlcdemo&gt;<strong>erl -pa ebin deps\crypto\ebin deps\ranch\ebin deps\cowboy\ebin deps\axiom\ebin deps\erlydtl\ebin</strong>
 Eshell V5.10.1  (abort with ^G)
@@ -199,7 +199,7 @@ Eshell V5.10.1  (abort with ^G)
 <h2>Conclusion</h2>
 <p>Well, we only touched the top of the iceberg here, but the main idea of this post is to get you interested in Erlang, and show you how easy it is to get started if you know how to do it.</p>
 <p>Erlang really shines in always available/connected/distributed systems.</p>
-<p>And, if your interest is triggered, might I suggest you to join me on the <a href="http://www.erlangcamp.com/amsterdam">Erlang Camp course in Amsterdam</a>, as this is true value for the buck.</p>
+<p>And, if your interest is triggered, might I suggest you to join me on the <a href="https://www.erlangcamp.com/amsterdam">Erlang Camp course in Amsterdam</a>, as this is true value for the buck.</p>
 <p>Laters!</p>
 <p>Tom</p>
 <p>&nbsp;</p>

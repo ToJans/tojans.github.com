@@ -10,9 +10,9 @@ title: 'Quick tip: How to do TDD/BDD and debug unit tests with Visual Studio Exp
 <p>This article will show you how you can do TDD/BDD with Visual Studio Express editions. While most people say it is not possible, it is actually pretty easy.</p>
 <h3>Prerequisites</h3>
 <ul>
-<li><a href="http://www.microsoft.com/express" target="_blank">A Visual Studio Express edition</a></li>
+<li><a href="https://www.microsoft.com/express" target="_blank">A Visual Studio Express edition</a></li>
 <li><a href="https://github.com/continuoustests/AutoTest.Net/downloads" target="_blank">AutoTest.Net</a></li>
-<li><a href="http://nuget.codeplex.com/releases" target="_blank">Nuget</a></li>
+<li><a href="https://nuget.codeplex.com/releases" target="_blank">Nuget</a></li>
 </ul>
 <h3>How do you do it ?</h3>
 <p></p>
@@ -51,4 +51,4 @@ title: 'Quick tip: How to do TDD/BDD and debug unit tests with Visual Studio Exp
 </ol>
 <h3>Final words</h3>
 <p><span style="font-size: 10px; font-weight: normal;">While this approach takes a few minutes to setup, it is definetely not that hard to do. In fact, I just copy the test exes and settings over from another project whenever I need to do it a second time on the same machine. At least this approach will allow you to do proper TDD/BDD with the Express editions of Visual Studio.</span></p>
-<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="https://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="https://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>

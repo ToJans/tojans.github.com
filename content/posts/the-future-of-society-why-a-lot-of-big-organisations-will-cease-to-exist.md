@@ -9,7 +9,7 @@ categories:
 
 ## Introduction
 
-This post is an attempt to predict what the following decades will look like. I wrote a more technical post [about this 3 years ago](http://tojans.me/blog/2010/12/15/continuous-thinking-the-future-of-software/), which still makes sense far as I'm concerned.
+This post is an attempt to predict what the following decades will look like. I wrote a more technical post [about this 3 years ago](https://tojans.me/blog/2010/12/15/continuous-thinking-the-future-of-software/), which still makes sense far as I'm concerned.
 
 Somehow, my understanding about how this applies to non-software things has evolved, and after trying to make my point on twitter, I decided to elaborate in this blog post about my assumptions on the future.
 
@@ -25,9 +25,9 @@ Knowledge used to be something people used to consider exclusive. In the world o
 
 As knowledge is becoming a commodity, people are starting to share knowledge, others improve it and publish their conclusions. One could say that the speed by which we learn is growing exponentially, just because we can share it and get feedback in a way people from a few decades ago could not even have imagined.
 
-![Fifth Solvay Conference](http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Solvay_conference_1927.jpg/700px-Solvay_conference_1927.jpg)
+![Fifth Solvay Conference](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Solvay_conference_1927.jpg/700px-Solvay_conference_1927.jpg)
 <!--more-->
-Let's take a look at a picture of one of the most [famous science conferences (i.e. the fifth Solvay conference in Brussels-Belgium)](http://en.wikipedia.org/wiki/Solvay_Conference) that ever happened, and think about how these people communicated:
+Let's take a look at a picture of one of the most [famous science conferences (i.e. the fifth Solvay conference in Brussels-Belgium)](https://en.wikipedia.org/wiki/Solvay_Conference) that ever happened, and think about how these people communicated:
 
 - they sent letters to each other
 - they met at conferences
@@ -46,7 +46,7 @@ I would say, that in general, you would have to be aware that knowledge has beco
 
 Taking the previous part of this post, I would think that this decade will be all about learning to cope with knowledge as a commodity, but I as a direct consequence of this, I see one other big thing happening: the "consumerization" of things.
 
-It is my personal opinion, that people are starting to embrace "knowledge as a commodity", and start to realize they no longer need all this overhead of a "classical enterprise" to make a difference. Things like [Kickstarter](http://www.kickstarter.com/) give the power to innovate to the people. As knowledge is freely available, a lot of things will no longer require all the overhead of a classical enterprise.
+It is my personal opinion, that people are starting to embrace "knowledge as a commodity", and start to realize they no longer need all this overhead of a "classical enterprise" to make a difference. Things like [Kickstarter](https://www.kickstarter.com/) give the power to innovate to the people. As knowledge is freely available, a lot of things will no longer require all the overhead of a classical enterprise.
 
 Let's say that f.e. within a few decades, we would be able to 3D-print most of the materials at a reasonable size and a reasonable cost. One could say "wow I like that thing, I'll download the template and let my 3D-printer print it.". You no longer require an organisation to do this. People would be able to publish a template (or sell it), and others would be able to build it without to much effort.
 
@@ -54,15 +54,15 @@ Think about this: in the future not even knowledge will be a commodity, but also
 
 This would of course imply that the need for middle-men, or even the classical big organisations as we know them today will simply cease to exist, just because people can do stuff themselves.
 
-This is also one of the reasons I consider ["anti-fragile" by Taleb](http://tojans.me/blog/2013/08/10/reply-to-mathias-blog-post-about-systemantics-the-systems-bible/) to be such a ground-breaking book. I think his vision will align with the future of society.
+This is also one of the reasons I consider ["anti-fragile" by Taleb](https://tojans.me/blog/2013/08/10/reply-to-mathias-blog-post-about-systemantics-the-systems-bible/) to be such a ground-breaking book. I think his vision will align with the future of society.
 
 ## On to the tech part - Conway's law
 
-Respecting Conway's law - which is [quite popular lately](http://tojans.me/blog/2013/12/16/the-extrema-of-system-integration/) -, the need for one big service/website/server/... would cease to exist, but every single person would have their own server, or even better multiple servers. Think about this for a while: why would you need Facebook, if you would be able to share your pictures and messages directly with your relatives and friends, just by having some kind of a digital handshake that somehow allows access to things.
+Respecting Conway's law - which is [quite popular lately](https://tojans.me/blog/2013/12/16/the-extrema-of-system-integration/) -, the need for one big service/website/server/... would cease to exist, but every single person would have their own server, or even better multiple servers. Think about this for a while: why would you need Facebook, if you would be able to share your pictures and messages directly with your relatives and friends, just by having some kind of a digital handshake that somehow allows access to things.
 
 Why would we need to have one big organisation that indexes the whole of internet (i.e. Google etc), if we would be able to access all this information directly on the devices they were published on?
 
-People have been predicting this for a while, and it is known as ["The internet of things"](http://en.wikipedia.org/wiki/Internet_of_Things), or IoT for short.
+People have been predicting this for a while, and it is known as ["The internet of things"](https://en.wikipedia.org/wiki/Internet_of_Things), or IoT for short.
 
 This will happen, the question is just where, when and how.
 
@@ -76,7 +76,7 @@ As better solutions usually emerge when the experience in the problem-space grow
 
 Just to clarify, I am not saying that individuals and corporations should seize their attempt to build an IoT, or will be unsuccessful with it. So by all means, if I insulted anyone with this blog post, please accept my apologies.
 
-I just think the tech implementation will not be the main driver behind this revolution. However, once people are aware that the current tech stack is not suited for IoT, a technology will emerge, but - [as happened before](http://en.wikipedia.org/wiki/Videotape_format_war) - it is not necessarily the best technique that will win the battle.
+I just think the tech implementation will not be the main driver behind this revolution. However, once people are aware that the current tech stack is not suited for IoT, a technology will emerge, but - [as happened before](https://en.wikipedia.org/wiki/Videotape_format_war) - it is not necessarily the best technique that will win the battle.
 
 ## Conclusion
 

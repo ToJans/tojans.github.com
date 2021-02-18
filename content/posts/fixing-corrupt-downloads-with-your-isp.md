@@ -14,13 +14,13 @@ footer: true
 <p>So the problem had to be located within my router. After checking the logs and upgrading the firmware, the issue still remained, so I started looking around on the net.</p>
 <p>After some browsing I found the cause of my connection problems; apparently <span style="text-decoration: line-through;">telenet lowered the MTU</span>? <strong>UPDATE:</strong> lowering my MTU might work...</p>
 <h3>What's MTU?</h3>
-<p>This would bring us down to networking, and layer 2, the data layer, but I assume wikipedia can explain it way better (<a href="http://en.wikipedia.org/wiki/MTU" target="_blank">here</a>).</p>
+<p>This would bring us down to networking, and layer 2, the data layer, but I assume wikipedia can explain it way better (<a href="https://en.wikipedia.org/wiki/MTU" target="_blank">here</a>).</p>
 <p>What it comes down to is that large packages on the network fail, so you need to find out how large your packages can be when you send them over the network.</p>
 <h3>How can you do this?</h3>
 <p>First of all you have to find out your MTU setting of your router; it's probably at 1500 for cable or 1492 for DSL. Next you have to find the size that works with your provider. For now I settled on a size of 1200.</p>
 <p>You can find out this size by doing the following (min is at 500-something AFAIK):</p>
 <p>start a command window and start pinging with a packet that can not be separated (IPv4 only, BTW):</p>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f3%2fSchermafbeelding+(2).png" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2013%2f3%2fSchermafbeelding+(2).png" alt="" /></p>
 <p>You get the picture I presume.</p>
 <p>After finding the matching packet size, you should set the MTU in your router to your value; problem solved...</p>
 <h3>Update:&nbsp;</h3>

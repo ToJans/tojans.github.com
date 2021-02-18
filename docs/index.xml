@@ -363,7 +363,7 @@ We are looking for a senior recruitment supervisor manager leadership executive 
       
       <guid>https://tojans.me/posts/the-future-of-society-why-a-lot-of-big-organisations-will-cease-to-exist/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This post is an attempt to predict what the following decades will look like. I wrote a more technical post &lt;a href=&#34;http://tojans.me/blog/2010/12/15/continuous-thinking-the-future-of-software/&#34;&gt;about this 3 years ago&lt;/a&gt;, which still makes sense far as I&amp;rsquo;m concerned.&lt;/p&gt;
+&lt;p&gt;This post is an attempt to predict what the following decades will look like. I wrote a more technical post &lt;a href=&#34;https://tojans.me/blog/2010/12/15/continuous-thinking-the-future-of-software/&#34;&gt;about this 3 years ago&lt;/a&gt;, which still makes sense far as I&amp;rsquo;m concerned.&lt;/p&gt;
 &lt;p&gt;Somehow, my understanding about how this applies to non-software things has evolved, and after trying to make my point on twitter, I decided to elaborate in this blog post about my assumptions on the future.&lt;/p&gt;
 &lt;h2 id=&#34;disclaimer&#34;&gt;Disclaimer&lt;/h2&gt;
 &lt;p&gt;I&amp;rsquo;m only slightly aware about &amp;ldquo;the how&amp;rdquo; of the technology that could drive these things. My assumptions are purely based on my observations about how people interact with devices and technology at this very moment.&lt;/p&gt;
@@ -371,7 +371,7 @@ We are looking for a senior recruitment supervisor manager leadership executive 
 &lt;p&gt;I would definitely say the past decade has been all about knowledge economy, i.e. the democratization of knowledge.&lt;/p&gt;
 &lt;p&gt;Knowledge used to be something people used to consider exclusive. In the world of today, people no longer consider knowledge something exclusive, as almost everyone can search information about almost anything on the internet. One could say, that it is no longer valuable what people know, but what makes the difference is how people apply and combine that knowledge.&lt;/p&gt;
 &lt;p&gt;As knowledge is becoming a commodity, people are starting to share knowledge, others improve it and publish their conclusions. One could say that the speed by which we learn is growing exponentially, just because we can share it and get feedback in a way people from a few decades ago could not even have imagined.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Solvay_conference_1927.jpg/700px-Solvay_conference_1927.jpg&#34; alt=&#34;Fifth Solvay Conference&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Solvay_conference_1927.jpg/700px-Solvay_conference_1927.jpg&#34; alt=&#34;Fifth Solvay Conference&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -381,7 +381,7 @@ We are looking for a senior recruitment supervisor manager leadership executive 
       
       <guid>https://tojans.me/posts/towards-a-more-elegant-fizzbuzz/</guid>
       <description>This morning I saw this tweet:
-blogged: Clojure Kata #1 � Fizz Buzz http://t.</description>
+blogged: Clojure Kata #1 � Fizz Buzz https://t.</description>
     </item>
     
     <item>
@@ -444,7 +444,7 @@ blogged: Clojure Kata #1 � Fizz Buzz http://t.</description>
       <pubDate>Sun, 06 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/monads/</guid>
-      <description>So, what is a monad? I get sick and tired of people making simple things complicated, so when someone told me he was going to take a look at what a monad is, I assumed it was time to intervene; this is [the wikipedia explanation](http://en.</description>
+      <description>So, what is a monad? I get sick and tired of people making simple things complicated, so when someone told me he was going to take a look at what a monad is, I assumed it was time to intervene; this is [the wikipedia explanation](https://en.</description>
     </item>
     
     <item>
@@ -544,9 +544,9 @@ blogged: Clojure Kata #1 � Fizz Buzz http://t.</description>
       
       <guid>https://tojans.me/posts/running-elixir-on-my-android-tablet/</guid>
       <description>&lt;p&gt;As the Mrs. does not allow me to take the laptop on vacation, but we do take the tablet with us, I decided to find out 
-whether &lt;a href=&#34;http://elixir-lang.org&#34;&gt;Elixir&lt;/a&gt; runs on an Android tablet.&lt;/p&gt;
+whether &lt;a href=&#34;https://elixir-lang.org&#34;&gt;Elixir&lt;/a&gt; runs on an Android tablet.&lt;/p&gt;
 &lt;p&gt;I experimented for about an hour or so, and apparently it is quite easy. Here is my proof:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/search?q=%23elixir&amp;amp;src=hash&#34;&gt;#elixir&lt;/a&gt; on android, now all I need is a REPL! &lt;a href=&#34;https://twitter.com/search?q=%23DirtyHackButItWorks&amp;amp;src=hash&#34;&gt;#DirtyHackButItWorks&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%23SL4A&amp;amp;src=hash&#34;&gt;#SL4A&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%23Erlang4Android&amp;amp;src=hash&#34;&gt;#Erlang4Android&lt;/a&gt; -pa /elixir/lib/elixir/ebin &lt;a href=&#34;http://t.co/cAN2Ez4UQb&#34;&gt;pic.twitter.com/cAN2Ez4UQb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tom Janssens (@ToJans) &lt;a href=&#34;https://twitter.com/ToJans/statuses/349508106407014400&#34;&gt;June 25, 2013&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/search?q=%23elixir&amp;amp;src=hash&#34;&gt;#elixir&lt;/a&gt; on android, now all I need is a REPL! &lt;a href=&#34;https://twitter.com/search?q=%23DirtyHackButItWorks&amp;amp;src=hash&#34;&gt;#DirtyHackButItWorks&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%23SL4A&amp;amp;src=hash&#34;&gt;#SL4A&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%23Erlang4Android&amp;amp;src=hash&#34;&gt;#Erlang4Android&lt;/a&gt; -pa /elixir/lib/elixir/ebin &lt;a href=&#34;https://t.co/cAN2Ez4UQb&#34;&gt;pic.twitter.com/cAN2Ez4UQb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tom Janssens (@ToJans) &lt;a href=&#34;https://twitter.com/ToJans/statuses/349508106407014400&#34;&gt;June 25, 2013&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;h3 id=&#34;how-do-you-do-this&#34;&gt;How do you do this&lt;/h3&gt;
 &lt;p&gt;With a lot of unicorns and fairydust&amp;hellip; No, actually it is quite simple&amp;hellip;.&lt;/p&gt;</description>
@@ -596,10 +596,10 @@ whether &lt;a href=&#34;http://elixir-lang.org&#34;&gt;Elixir&lt;/a&gt; runs on 
       <guid>https://tojans.me/posts/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/</guid>
       <description>&lt;h3&gt;Introduction&lt;/h3&gt;
 &lt;p&gt;People following me on twitter noticed I got entangled in yet another new language for the Erlang/BEAM VM:&amp;nbsp;&lt;/p&gt;
-&lt;h3&gt;&lt;img style=&#34;font-size: 10px;&#34; src=&#34;http://www.corebvba.be/blog/image.axd?picture=2013%2f6%2felixir-logo.png&#34; alt=&#34;&#34; /&gt;&lt;/h3&gt;
-&lt;p&gt;Elixir could be easily described as &#34;ruby for the BEAM/Erlang VM&#34;. In previous posts, I mentioned &lt;a href=&#34;http://www.corebvba.be/blog/post/Erlang-Camp-Amsterdam-why-you-should-follow-it-and-getting-started-with-Erlang-and-Axiom.aspx&#34;&gt;why people should learn Erlang&lt;/a&gt;, but in fact, I think most people might be better off when they skip Erlang and opt directly for Elixir. It has all the advantages of Erlang, but offers a Ruby-like syntax, macros, polymorphism and more.&lt;/p&gt;
-&lt;p&gt;As &lt;a href=&#34;http://benjamintanweihao.github.io/blog/2013/06/08/why-my-next-programming-language-is-elixir/&#34; target=&#34;_blank&#34;&gt;someone else made a perfect blog post on why you should learn Elixir&lt;/a&gt;, I will not elaborate further on it in this post. Read his post; the info is all there.&lt;/p&gt;
-&lt;p&gt;As usual, you can find more info about Elixir on &lt;a href=&#34;http://en.wikipedia.org/wiki/Elixir_(programming_language)&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt;&amp;nbsp;, or on the &lt;a href=&#34;http://elixir-lang.org/&#34; target=&#34;_blank&#34;&gt;Elixir site&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;&lt;img style=&#34;font-size: 10px;&#34; src=&#34;https://www.corebvba.be/blog/image.axd?picture=2013%2f6%2felixir-logo.png&#34; alt=&#34;&#34; /&gt;&lt;/h3&gt;
+&lt;p&gt;Elixir could be easily described as &#34;ruby for the BEAM/Erlang VM&#34;. In previous posts, I mentioned &lt;a href=&#34;https://www.corebvba.be/blog/post/Erlang-Camp-Amsterdam-why-you-should-follow-it-and-getting-started-with-Erlang-and-Axiom.aspx&#34;&gt;why people should learn Erlang&lt;/a&gt;, but in fact, I think most people might be better off when they skip Erlang and opt directly for Elixir. It has all the advantages of Erlang, but offers a Ruby-like syntax, macros, polymorphism and more.&lt;/p&gt;
+&lt;p&gt;As &lt;a href=&#34;https://benjamintanweihao.github.io/blog/2013/06/08/why-my-next-programming-language-is-elixir/&#34; target=&#34;_blank&#34;&gt;someone else made a perfect blog post on why you should learn Elixir&lt;/a&gt;, I will not elaborate further on it in this post. Read his post; the info is all there.&lt;/p&gt;
+&lt;p&gt;As usual, you can find more info about Elixir on &lt;a href=&#34;https://en.wikipedia.org/wiki/Elixir_(programming_language)&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt;&amp;nbsp;, or on the &lt;a href=&#34;https://elixir-lang.org/&#34; target=&#34;_blank&#34;&gt;Elixir site&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In this post, I will show you how to get started with Elixir and generate a template website using the &lt;a href=&#34;https://github.com/elixir-lang/dynamo&#34; target=&#34;_blank&#34;&gt;Dynamo web framework&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Installing Elixir is simple, but because one of the Dynamo web framework dependencies requires the make tool, you need to do some extra work. If anybody finds a better/simpler way to do this, please let me know in the comments.&lt;/p&gt;</description>
     </item>
@@ -611,7 +611,7 @@ whether &lt;a href=&#34;http://elixir-lang.org&#34;&gt;Elixir&lt;/a&gt; runs on 
       
       <guid>https://tojans.me/posts/how-to-hire-a-senior-developer/</guid>
       <description>&lt;h3&gt;Introduction&lt;/h3&gt;
-&lt;p&gt;A little while ago I wrote a post &lt;a href=&#34;http://www.corebvba.be/blog/post/Fallacies-of-the-tech-recruitment-process.aspx&#34;&gt;the fallacies of the tech recruitment process&lt;/a&gt;. While it is nice to point out what is wrong, I never actually provided the proper way to find out if a senior developer might be experienced enough and the right fit for your company, so this time I decided to put my money where my mouth is, and tell you how to hire a senior developer.&lt;/p&gt;
+&lt;p&gt;A little while ago I wrote a post &lt;a href=&#34;https://www.corebvba.be/blog/post/Fallacies-of-the-tech-recruitment-process.aspx&#34;&gt;the fallacies of the tech recruitment process&lt;/a&gt;. While it is nice to point out what is wrong, I never actually provided the proper way to find out if a senior developer might be experienced enough and the right fit for your company, so this time I decided to put my money where my mouth is, and tell you how to hire a senior developer.&lt;/p&gt;
 &lt;h3&gt;Why hire a &#34;senior developer&#34; and what is a senior developer exactly&lt;/h3&gt;
 &lt;p&gt;In my opinion, a senior developer is a developer who manages to think out of the box, and who does not stop reasoning about finding a solution at technical boundaries. A senior developer is somebody who tries to provide business value for every single step he makes, while a junior is more or less focussed on implementing the whole thing, a senior thinks about what he has to do and why he has to do it...&lt;/p&gt;</description>
     </item>
@@ -623,9 +623,9 @@ whether &lt;a href=&#34;http://elixir-lang.org&#34;&gt;Elixir&lt;/a&gt; runs on 
       
       <guid>https://tojans.me/posts/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom/</guid>
       <description>&lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;The last two days of August there is a &lt;a href=&#34;http://www.erlangcamp.com/amsterdam&#34;&gt;2 day Erlang course in Amsterdam&lt;/a&gt;. One of the most incredible things, is that there is a low cost offer sponsored by &lt;a href=&#34;http://www.spilgames.com/&#34;&gt;Spil games&lt;/a&gt; that reduces the price to 55&amp;euro; for both days; talk about a steal!!&lt;/p&gt;
+&lt;p&gt;The last two days of August there is a &lt;a href=&#34;https://www.erlangcamp.com/amsterdam&#34;&gt;2 day Erlang course in Amsterdam&lt;/a&gt;. One of the most incredible things, is that there is a low cost offer sponsored by &lt;a href=&#34;https://www.spilgames.com/&#34;&gt;Spil games&lt;/a&gt; that reduces the price to 55&amp;euro; for both days; talk about a steal!!&lt;/p&gt;
 &lt;h2&gt;First things first: why should you follow a camp on Erlang?&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.corebvba.be/blog/image.axd?picture=2013%2f5%2ferlcamp.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.corebvba.be/blog/image.axd?picture=2013%2f5%2ferlcamp.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;People who know me in person know that I am an avid fan of Erlang, even though I have only done some very small experiments with it.&lt;/p&gt;
 &lt;p&gt;Even if you are not planning on developing something in Erlang, you should at least try to grasp the basic concepts!!&lt;/p&gt;
 &lt;p&gt;You want to know why? Here is why:&lt;/p&gt;</description>
@@ -638,11 +638,11 @@ whether &lt;a href=&#34;http://elixir-lang.org&#34;&gt;Elixir&lt;/a&gt; runs on 
       
       <guid>https://tojans.me/posts/idddtour-2013-belgium-an-immersive-experience/</guid>
       <description>&lt;h3&gt;Introduction: what &amp;amp; how?&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/gp/product/0321834577/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321834577&amp;linkCode=as2&amp;tag=httptojanme-20&#34;&gt;Implementing Domain-Driven Design&lt;/a&gt;&lt;img src=&#34;http://ir-na.amazon-adsystem.com/e/ir?t=httptojanme-20&amp;l=as2&amp;o=1&amp;a=0321834577&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;
- is a book written by &lt;a href=&#34;http://vaughnvernon.co/&#34; target=&#34;_blank&#34;&gt;Vaughn Vernon&lt;/a&gt;, and you can consider it a practical guide to &lt;a href=&#34;http://www.amazon.com/gp/product/0321125215/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321125215&amp;linkCode=as2&amp;tag=httptojanme-20&#34;&gt;the blue book&lt;/a&gt;&lt;img src=&#34;http://ir-na.amazon-adsystem.com/e/ir?t=httptojanme-20&amp;l=as2&amp;o=1&amp;a=0321125215&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/gp/product/0321834577/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321834577&amp;linkCode=as2&amp;tag=httptojanme-20&#34;&gt;Implementing Domain-Driven Design&lt;/a&gt;&lt;img src=&#34;https://ir-na.amazon-adsystem.com/e/ir?t=httptojanme-20&amp;l=as2&amp;o=1&amp;a=0321834577&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;
+ is a book written by &lt;a href=&#34;https://vaughnvernon.co/&#34; target=&#34;_blank&#34;&gt;Vaughn Vernon&lt;/a&gt;, and you can consider it a practical guide to &lt;a href=&#34;https://www.amazon.com/gp/product/0321125215/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321125215&amp;linkCode=as2&amp;tag=httptojanme-20&#34;&gt;the blue book&lt;/a&gt;&lt;img src=&#34;https://ir-na.amazon-adsystem.com/e/ir?t=httptojanme-20&amp;l=as2&amp;o=1&amp;a=0321125215&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;
  - a lot of people consider the blue book to be used as a reference, but it takes some persistence to read it -. Vaughn tried to solve exactly that problem with his book...&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;nl&#34;&gt;
-&lt;p&gt;&#34;implementing domain driven design&#34; by @&lt;a href=&#34;https://twitter.com/vaughnvernon&#34;&gt;vaughnvernon&lt;/a&gt; has arrived &lt;a href=&#34;https://twitter.com/search/%23YesYesYes&#34;&gt;#YesYesYes&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search/%23DDD&#34;&gt;#DDD&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search/%23IDDD&#34;&gt;#IDDD&lt;/a&gt; &lt;a title=&#34;http://twitter.com/ToJans/status/301755160173105152/photo/1&#34; href=&#34;http://t.co/IztEyMa5&#34;&gt;twitter.com/ToJans/status/&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&#34;implementing domain driven design&#34; by @&lt;a href=&#34;https://twitter.com/vaughnvernon&#34;&gt;vaughnvernon&lt;/a&gt; has arrived &lt;a href=&#34;https://twitter.com/search/%23YesYesYes&#34;&gt;#YesYesYes&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search/%23DDD&#34;&gt;#DDD&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search/%23IDDD&#34;&gt;#IDDD&lt;/a&gt; &lt;a title=&#34;https://twitter.com/ToJans/status/301755160173105152/photo/1&#34; href=&#34;https://t.co/IztEyMa5&#34;&gt;twitter.com/ToJans/status/&amp;hellip;&lt;/a&gt;&lt;/p&gt;
 &amp;mdash; Tom Janssens (@ToJans) &lt;a href=&#34;https://twitter.com/ToJans/status/301755160173105152&#34;&gt;13 februari 2013&lt;/a&gt;&lt;/blockquote&gt;
 &lt;p&gt;
 &lt;script src=&#34;//platform.twitter.com/widgets.js&#34;&gt;&lt;/script&gt;
@@ -668,7 +668,7 @@ whether &lt;a href=&#34;http://elixir-lang.org&#34;&gt;Elixir&lt;/a&gt; runs on 
 &lt;p&gt;Because I had some time left, I decided to take a look at my stats... This invoice app was built about 10 years ago in MsAccess in a few days, and has not really changed a lot since then (except for some adjustments to allow certain billing specific extents; things like non-EU or VAT-exclusive stuff, as well as some automated payment reminder letters).&lt;/p&gt;
 &lt;p&gt;Anyway, that is not the subject of this post, but as I was browsing some of my available graphs - it has been a few months since I did that - , I decided to write a small blog post about my findings.&lt;/p&gt;
 &lt;p&gt;I will start of with what most of you will probably consider quite a controversial thing; I will just post a *slightly censored* graph of my invoices cumul over my years as a company owner. ..&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.corebvba.be/blog/image.axd?picture=2013%2f3%2finvoicing.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.corebvba.be/blog/image.axd?picture=2013%2f3%2finvoicing.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style=&#34;font-size: 1.17em;&#34;&gt;LOL, that looks odd...&lt;/span&gt;&lt;/p&gt;</description>
     </item>
     
@@ -1338,7 +1338,7 @@ In December 2008 I was doing my job as a freelance technical analyst for a big c
       
       <guid>https://tojans.me/posts/the-quest-for-the-perfect-asp.net-mvc-code-v0.3/</guid>
       <description>You can download the full source here using (msys)git:
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; http://github.</description>
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; https://github.</description>
     </item>
     
     <item>
@@ -1453,7 +1453,7 @@ I just published a brand new article on CodeProject : Getting started with BDD.<
       <pubDate>Wed, 04 Nov 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/a-new-bdd-framework-in-.net-aubergine/</guid>
-      <description>REMARK : An executable testrunner and some sample code is availableHere : http://www.</description>
+      <description>REMARK : An executable testrunner and some sample code is availableHere : https://www.</description>
     </item>
     
     <item>

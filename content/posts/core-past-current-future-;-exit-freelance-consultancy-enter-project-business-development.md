@@ -32,7 +32,7 @@ I have also met a few people in my consultancy years with whom I would almost ce
 Also, based on my current workload, I am very interested in meeting people who would like to do some freelance .net software development for potential software projects. Please do note that I work on a task basis, i.e. &quot;this is what I need, and this is what will pay for it&quot;. Some people might have problems with this, while others love to work like this.
 </p>
 <p>
-<img src="http://users.pandora.be/bull/got/hk/carport-na.jpg" alt="My future office ;)" title="This is my future office ;)" width="410" height="331" />
+<img src="https://users.pandora.be/bull/got/hk/carport-na.jpg" alt="My future office ;)" title="This is my future office ;)" width="410" height="331" />
 </p>
 <p>
 &nbsp;

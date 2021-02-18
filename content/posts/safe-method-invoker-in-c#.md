@@ -6,10 +6,10 @@ title: Safe method invoker in c#
 ---
 
 <p>
-Today I was reading <a href="http://www.codeproject.com/useritems/SafeMethodCaller.asp">an article on codeproject by Mark Clifton about using a safe invoker for a method</a>. 
+Today I was reading <a href="https://www.codeproject.com/useritems/SafeMethodCaller.asp">an article on codeproject by Mark Clifton about using a safe invoker for a method</a>. 
 </p>
 <p>
-While the idea was quite good, I think the implementation was a bit bloated, so<a href="http://www.codeproject.com/useritems/SafeMethodCaller.asp?msg=2101585#xx2101585xx"> I posted a comment with my own implementation</a>. 
+While the idea was quite good, I think the implementation was a bit bloated, so<a href="https://www.codeproject.com/useritems/SafeMethodCaller.asp?msg=2101585#xx2101585xx"> I posted a comment with my own implementation</a>. 
 </p>
 <p>
 This was the implementation I posted: 

@@ -69,19 +69,19 @@
     <ul class="social-links">
         
             <li>
-                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
                     <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
                     <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
                     <i class="fab fa-github fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
@@ -146,18 +146,18 @@
                 
             </div>
 
-            <p>I recently saw a discussion on twitter about the <a href="http://martinfowler.com/eaaDev/EventSourcing.html">definition</a>
+            <p>I recently saw a discussion on twitter about the <a href="https://martinfowler.com/eaaDev/EventSourcing.html">definition</a>
 of event sourcing:</p>
 <blockquote class="twitter-tweet"><p>Event sourcing: persisting entities by appending all state transitions to transaction log. To rebuild the state, we replay this log.</p>&mdash; Rinat Abdullin (@abdullin) <a href="https://twitter.com/abdullin/statuses/361079569933012992">July 27, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <blockquote class="twitter-tweet"><p><a href="https://twitter.com/thinkb4coding">@thinkb4coding</a> which problems in this paper stand out to you?</p>&mdash; Rinat Abdullin (@abdullin) <a href="https://twitter.com/abdullin/statuses/361108972478005250">July 27, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>After a response by <a href="http://twitter.com/thinkb4coding">Jérémy</a> in 
-<a href="http://thinkbeforecoding.com/post/2013/07/28/Event-Sourcing-vs-Command-Sourcing">a blog post</a>, 
+<p>After a response by <a href="https://twitter.com/thinkb4coding">Jérémy</a> in 
+<a href="https://thinkbeforecoding.com/post/2013/07/28/Event-Sourcing-vs-Command-Sourcing">a blog post</a>, 
 I decided to offer you my interpretation of event sourcing as well. If my interpretation is not optimal, 
 or simply wrong, feel free to tell me.</p>
 <h2 id="event-sourcing-explained-in-a-tweet">Event sourcing explained in a tweet</h2>
-<p>This was my initial response to <a href="http://twitter.com/abdullin">Rinat</a>:</p>
+<p>This was my initial response to <a href="https://twitter.com/abdullin">Rinat</a>:</p>
 <blockquote class="twitter-tweet"><p>An event is a semantic log entry of a state transition.&#10;Event sourcing rebuilds state by applying historic events. &#10;/cc <a href="https://twitter.com/abdullin">@abdullin</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/361429914580291586">July 28, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Let me walk you through it briefly:</p>
@@ -166,7 +166,7 @@ or simply wrong, feel free to tell me.</p>
 I assume everyone knows what a state transition and a log entry is, so I will focus on a single 
 word here: semantic.</p>
 <blockquote>
-<p>TL;DR: A transaction log logs the application implementation&rsquo;s state transitions, while a semantic/event log logs the problem&rsquo;s state transitions in a way it is understandable by non-developers (expressed in a language that people refer to as the <a href="http://martinfowler.com/bliki/UbiquitousLanguage.html">ubiquitous language</a>).</p>
+<p>TL;DR: A transaction log logs the application implementation&rsquo;s state transitions, while a semantic/event log logs the problem&rsquo;s state transitions in a way it is understandable by non-developers (expressed in a language that people refer to as the <a href="https://martinfowler.com/bliki/UbiquitousLanguage.html">ubiquitous language</a>).</p>
 </blockquote>
 <p>A transaction log contains things like <code>update table abc set x=3,y=y+4 where z=123</code>. A developer might understand what this is about, and even a business user might know what it means, but <em>the intent of this log entry is implicit</em> because it can only be derived from the implementation.</p>
 <p>The intent might have been a status that was changed, an amount that was set, or even a new business rule  that has been enabled. Without knowing the details of the implementation, there is no way to figure out what this log entry actually means.</p>
@@ -194,7 +194,7 @@ word here: semantic.</p>
 <p>What is event sourcing? Recreating state by starting with the initial state and applying past events to it.</p>
 <p>How do you do this? Quite simple: for every single event that happened in the past, you feed it in to the state, you have some kind of a handler that translates this event log entry into a state change.</p>
 <p>This also implies that you can not change state directly in your application, but you have to do it by emitting an event.</p>
-<p>Let me explain it with a simple example in <a href="http://elixir-lang.org">Elixir</a>; I will show you the non-event-sourced code first:</p>
+<p>Let me explain it with a simple example in <a href="https://elixir-lang.org">Elixir</a>; I will show you the non-event-sourced code first:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">   def EnableBusinessRule(product_id,{rule_id,weight}) do
      Guard.that rule_exists(rule_id) and product_exists(product_id) 
      if weight &lt;0 do weight=0
@@ -235,27 +235,36 @@ word here: semantic.</p>
 
         </div>
     </div>
-</div><div class="footer">
-	<hr class="thin" />
-	<div class="pure-menu pure-menu-horizontal pure-menu-open">
-		<ul class="footer-menu">
-		
-		</ul>
-	</div>
-
-	<p>&copy; 2021. All rights reserved. </p>
 </div>
 
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-41936060-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 </body>
 
 </html>

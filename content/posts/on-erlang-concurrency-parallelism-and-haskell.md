@@ -53,5 +53,5 @@ So we still think that at this moment Erlang is the best choice, but in the futu
 
 Looks like I have some more reading to do:
 
-<blockquote class="twitter-tweet"><p><a href="https://twitter.com/ToJans">@ToJans</a> <a href="https://twitter.com/ErlangInfo">@ErlangInfo</a> <a href="https://twitter.com/GraemeF">@GraemeF</a> <a href="https://twitter.com/ptomasroos">@ptomasroos</a> Haskell has so much more than sparks. Check out <a href="http://t.co/6cyqsLK7tb">http://t.co/6cyqsLK7tb</a></p>&mdash; Bob Ippolito (@etrepum) <a href="https://twitter.com/etrepum/statuses/375745710425407488">September 5, 2013</a></blockquote>
+<blockquote class="twitter-tweet"><p><a href="https://twitter.com/ToJans">@ToJans</a> <a href="https://twitter.com/ErlangInfo">@ErlangInfo</a> <a href="https://twitter.com/GraemeF">@GraemeF</a> <a href="https://twitter.com/ptomasroos">@ptomasroos</a> Haskell has so much more than sparks. Check out <a href="https://t.co/6cyqsLK7tb">https://t.co/6cyqsLK7tb</a></p>&mdash; Bob Ippolito (@etrepum) <a href="https://twitter.com/etrepum/statuses/375745710425407488">September 5, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

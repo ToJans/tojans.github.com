@@ -36,7 +36,7 @@ Just to give you another clue, here&#39;s a question I got from somebody online 
 &gt;Het afstudeerproject gaat over het maken van een DSL in JRuby/Ruby, <br />
 &gt;het&nbsp;&nbsp;zelfde onderwerp waar jij in 2005 een topic over opende bij <br />
 &gt;tweakers.net.<br />
-&gt;(http://gathering.tweakers.net/forum/list_messages/1047491///dsl%2Cruby)<br />
+&gt;(https://gathering.tweakers.net/forum/list_messages/1047491///dsl%2Cruby)<br />
 &gt;Ik vroeg mij af of je er nog verder mee bent gegaan en wat je <br />
 &gt;ervaringen&nbsp;&nbsp;hierbij zijn.<br />
 &gt;<br />

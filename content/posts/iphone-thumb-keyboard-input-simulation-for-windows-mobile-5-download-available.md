@@ -6,7 +6,7 @@ title: iPhone thumb keyboard input simulation for windows mobile 5 / download av
 ---
 
 <p>
-I have been&nbsp;extending <a href="http://www.corebvba.be/blog/IPhone+UI+Study+Keyboard+Text+Input+And+Gestures+Mock+Up+Download+Here.aspx">my&nbsp;former iPhone UI input simulations</a> further, and migrated the intelligent thumb keyboard part to windows mobile 6 : 
+I have been&nbsp;extending <a href="https://www.corebvba.be/blog/IPhone+UI+Study+Keyboard+Text+Input+And+Gestures+Mock+Up+Download+Here.aspx">my&nbsp;former iPhone UI input simulations</a> further, and migrated the intelligent thumb keyboard part to windows mobile 6 : 
 </p>
 <p>
 &nbsp;<img src="/blog/content/binary/iphoneMockupWM6.GIF" border="0" alt="" width="28" height="30" /> 
@@ -34,7 +34,7 @@ Since it is only a prototype, I&nbsp;am of course open to suggestions. Some thin
 	<li>SPEED &amp; memory usage improvements (currently uses about 12,7MB, no idea about the speed)</li>
 </ul>
 <p>
-The windows version<a href="http://www.corebvba.be/blog/IPhone+UI+Study+Keyboard+Text+Input+And+Gestures+Mock+Up+Download+Here.aspx"> of the former program</a> has also been adapted and the gesture part has been improved : 
+The windows version<a href="https://www.corebvba.be/blog/IPhone+UI+Study+Keyboard+Text+Input+And+Gestures+Mock+Up+Download+Here.aspx"> of the former program</a> has also been adapted and the gesture part has been improved : 
 </p>
 <p>
 <img src="/blog/content/binary/iphoneMockupPC2.GIF" border="0" alt="" width="28" height="30" /> 
@@ -52,13 +52,13 @@ You can now define if a mouse gesture has to be located in a certain place, and 
 You can download the Windows Mobile 5 version here (just unzip and copy the exe to your device, and execute it from there): 
 </p>
 <p>
-<strong>Download for windows mobile 5 :</strong>&nbsp;<a href="http://www.corebvba.be/blog/content/binary/coreInput.zip">coreInput.zip (253,25 KB)</a> 
+<strong>Download for windows mobile 5 :</strong>&nbsp;<a href="https://www.corebvba.be/blog/content/binary/coreInput.zip">coreInput.zip (253,25 KB)</a> 
 </p>
 <p>
 The Windows Version can be found here (unzip &amp; run) 
 </p>
 <p>
-<strong>Download for Windows&nbsp;PC :</strong> <a href="http://www.corebvba.be/blog/content/binary/IphoneMockup12.zip">IphoneMockup12.zip (258,87 KB)</a> 
+<strong>Download for Windows&nbsp;PC :</strong> <a href="https://www.corebvba.be/blog/content/binary/IphoneMockup12.zip">IphoneMockup12.zip (258,87 KB)</a> 
 </p>
 <p>
 You require .Net 2.0 runtimes on both of the platforms to run the app.<br />

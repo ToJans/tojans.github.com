@@ -53,7 +53,7 @@
 <meta name="twitter:image" content="https://tojans.me/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content="A new BDD framework in .Net : Aubergine"/>
-<meta name="twitter:description" content="REMARK : An executable testrunner and some sample code is availableHere : http://www."/>
+<meta name="twitter:description" content="REMARK : An executable testrunner and some sample code is availableHere : https://www."/>
 
 </head>
 <body><div class="sidebar . ">
@@ -69,19 +69,19 @@
     <ul class="social-links">
         
             <li>
-                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
                     <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
                     <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
                     <i class="fab fa-github fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
@@ -147,12 +147,12 @@
             </div>
 
             <h3>REMARK : An executable testrunner and some sample code is available</h3>
-<p>Here : <a href="http://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx">http://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx</a></p>
+<p>Here : <a href="https://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx">https://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx</a></p>
 <h3>REMARK : Skip to "Edit 2" to see the current syntax</h3>
 <p>&nbsp;</p>
 <p>Just a quick update !!</p>
-<p>After thinking a bit more about the problems mentioned by Aaron <a href="http://www.corebvba.be/blog/post/A-new-BDD-framework-in-Net-NetSpec.aspx">in my previous post</a>, and taking a look at <a href="http://cukes.info/" target="_blank">Cucumber (in ruby)</a>, I decided to give it another go. Since I have to be in the shop within<span style="text-decoration: line-through;"> half an hour</span> 20 mins I can only give you a sample of what the current spec looks like; explanations will come in later posts..</p>
-<p>I'm also considering a rename, since <a href="http://gitorious.org/netspec" target="_blank">netspec already seems to exist</a> as a .Net spec platform... Since Cucumber was my inspiration, I'm currently thinking about <a href="http://simple.wikipedia.org/wiki/Aubergine" target="_blank">Aubergine/Eggplant</a>. Suggestions are welcome</p>
+<p>After thinking a bit more about the problems mentioned by Aaron <a href="https://www.corebvba.be/blog/post/A-new-BDD-framework-in-Net-NetSpec.aspx">in my previous post</a>, and taking a look at <a href="https://cukes.info/" target="_blank">Cucumber (in ruby)</a>, I decided to give it another go. Since I have to be in the shop within<span style="text-decoration: line-through;"> half an hour</span> 20 mins I can only give you a sample of what the current spec looks like; explanations will come in later posts..</p>
+<p>I'm also considering a rename, since <a href="https://gitorious.org/netspec" target="_blank">netspec already seems to exist</a> as a .Net spec platform... Since Cucumber was my inspiration, I'm currently thinking about <a href="https://simple.wikipedia.org/wiki/Aubergine" target="_blank">Aubergine/Eggplant</a>. Suggestions are welcome</p>
 <p>I'm not really fond of the implementation yet, but I'll have to think about that a little bit more... As you might notice there has been a slight shift towards the Cucumber method of doing things.</p>
 <p>Here we go :</p>
 <p><div class="code">
@@ -191,14 +191,14 @@
 <p>It just occured to me: another advantage of the Example extension is that one can include special characters in the test_data. An example :</p>
 <p>&nbsp;</p>
 <p><div class="code">
-<br /><span class="kwrd">class</span> Make_sure_my_website_gets_enough_visibility: Story&amp;lt;BrowserContext&amp;gt<br />{<br />&nbsp;&nbsp;&nbsp; As_a website_owner;<br />&nbsp;&nbsp;&nbsp; I_want to_make_sure_that_I_get_enough_visibility;<br />&nbsp;&nbsp;&nbsp; So_that I_can_get_enough_traffic;<br /><br />&nbsp;&nbsp;&nbsp; [Cols(<span class="str">"searchengine"</span>,<span class="str">"search_url"</span>,<span class="str">"keywords"</span>,<span class="str">"my_url"</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">"google"</span>,<span class="str">"http://www.google.be/search?q="</span>,<span class="str">"core bvba tom janssens"</span>,<span class="str">"www.corebvba.be"</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">"google"</span>,<span class="str">"http://www.google.be/search?q="</span>,<span class="str">"BDD .Net"</span>,<span class="str">"www.corebvba.be"</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">"bing"</span>,<span class="str">"http://www.bing.com/search?q="</span>,<span class="str">"core bvba tom janssens"</span>,<span class="str">"www.corebvba.be"</span>)]<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Search_results_for_keywords_on_searchengine_should_contain_my_url : Scenario<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Given current_url_is_search_url;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; When searching_for_keywords;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Then result_should_contain_my_url;<br />&nbsp;&nbsp;&nbsp; }<br />}<br /></div></p>
+<br /><span class="kwrd">class</span> Make_sure_my_website_gets_enough_visibility: Story&amp;lt;BrowserContext&amp;gt<br />{<br />&nbsp;&nbsp;&nbsp; As_a website_owner;<br />&nbsp;&nbsp;&nbsp; I_want to_make_sure_that_I_get_enough_visibility;<br />&nbsp;&nbsp;&nbsp; So_that I_can_get_enough_traffic;<br /><br />&nbsp;&nbsp;&nbsp; [Cols(<span class="str">"searchengine"</span>,<span class="str">"search_url"</span>,<span class="str">"keywords"</span>,<span class="str">"my_url"</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">"google"</span>,<span class="str">"https://www.google.be/search?q="</span>,<span class="str">"core bvba tom janssens"</span>,<span class="str">"www.corebvba.be"</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">"google"</span>,<span class="str">"https://www.google.be/search?q="</span>,<span class="str">"BDD .Net"</span>,<span class="str">"www.corebvba.be"</span>)]<br />&nbsp;&nbsp;&nbsp; [Data(<span class="str">"bing"</span>,<span class="str">"https://www.bing.com/search?q="</span>,<span class="str">"core bvba tom janssens"</span>,<span class="str">"www.corebvba.be"</span>)]<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">class</span> Search_results_for_keywords_on_searchengine_should_contain_my_url : Scenario<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Given current_url_is_search_url;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; When searching_for_keywords;<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Then result_should_contain_my_url;<br />&nbsp;&nbsp;&nbsp; }<br />}<br /></div></p>
 <p>&nbsp;</p>
 <p>Which makes your testing scenarios even better. After running these tests you should get an output like this :</p>
-<pre><br />Make sure my website gets enough visibility =&gt; NOK<br />&nbsp;&nbsp; As a website owner<br />&nbsp;&nbsp; I want to make sure that I get enough visibility<br />&nbsp;&nbsp; So that I can get enough traffic<br /><br />&nbsp;&nbsp; Search results for "core bvba tom janssens" on "google" should contain "www.corebvba.be" =&gt; OK<br />&nbsp;&nbsp; &nbsp;&nbsp; Given current url is "http://www.google.be/search?q="<br />&nbsp;&nbsp; &nbsp;&nbsp; When searching for "core bvba tom janssens"<br />&nbsp;&nbsp; &nbsp;&nbsp; Then result should contain "www.corebvba.be"<br /><br />&nbsp;&nbsp; Search results for "BDD .net" on "google" should contain "www.corebvba.be" =&gt; NOK<br />&nbsp;&nbsp; &nbsp;&nbsp; Given current url is "http://www.google.be/search?q="<br />&nbsp;&nbsp; &nbsp;&nbsp; When searching for "BDD .Net"<br />&nbsp;&nbsp; &nbsp;&nbsp; Then result should contain "www.corebvba.be"<br /><br />&nbsp;&nbsp; Search results for "core bvba tom janssens" on "bing" should contain "www.corebvba.be" =&gt; OK<br />&nbsp;&nbsp;  &nbsp; Given current url is "http://www.bing.com/search?q="&nbsp; <br />&nbsp;&nbsp;  &nbsp; When searching for "core bvba tom janssens"<br />&nbsp;&nbsp;  &nbsp; Then result should contain "www.corebvba.be"</pre>
+<pre><br />Make sure my website gets enough visibility =&gt; NOK<br />&nbsp;&nbsp; As a website owner<br />&nbsp;&nbsp; I want to make sure that I get enough visibility<br />&nbsp;&nbsp; So that I can get enough traffic<br /><br />&nbsp;&nbsp; Search results for "core bvba tom janssens" on "google" should contain "www.corebvba.be" =&gt; OK<br />&nbsp;&nbsp; &nbsp;&nbsp; Given current url is "https://www.google.be/search?q="<br />&nbsp;&nbsp; &nbsp;&nbsp; When searching for "core bvba tom janssens"<br />&nbsp;&nbsp; &nbsp;&nbsp; Then result should contain "www.corebvba.be"<br /><br />&nbsp;&nbsp; Search results for "BDD .net" on "google" should contain "www.corebvba.be" =&gt; NOK<br />&nbsp;&nbsp; &nbsp;&nbsp; Given current url is "https://www.google.be/search?q="<br />&nbsp;&nbsp; &nbsp;&nbsp; When searching for "BDD .Net"<br />&nbsp;&nbsp; &nbsp;&nbsp; Then result should contain "www.corebvba.be"<br /><br />&nbsp;&nbsp; Search results for "core bvba tom janssens" on "bing" should contain "www.corebvba.be" =&gt; OK<br />&nbsp;&nbsp;  &nbsp; Given current url is "https://www.bing.com/search?q="&nbsp; <br />&nbsp;&nbsp;  &nbsp; When searching for "core bvba tom janssens"<br />&nbsp;&nbsp;  &nbsp; Then result should contain "www.corebvba.be"</pre>
 <p>&nbsp;</p>
 <p>Which is pretty neat I think !!!<br /><br />Finally, this is the implementation of the BrowserContext class :</p>
 <p><div class="code">
-<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> BrowserContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Url { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Result { get; set; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">private</span> WebClient wc = <span class="kwrd">new</span> WebClient();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">"current_url_is_(.*)"</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SetUrl(<span class="kwrd">string</span> url)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Url = url;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">"searching_for_(.*)"</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SearchForKeyWords(<span class="kwrd">string</span> keywords)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result = wc.DownloadString(Url + HttpUtility.UrlEncode(keywords));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">"result_should_contain_(.*)"</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> ResultShouldContain(<span class="kwrd">string</span> myurl)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result.Contains(myurl).ShouldEqual(<span class="kwrd">true</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> BrowserContext<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Url { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">string</span> Result { get; set; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">private</span> WebClient wc = <span class="kwrd">new</span> WebClient();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">"current_url_is_(.*)"</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SetUrl(<span class="kwrd">string</span> url)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Url = url;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">"searching_for_(.*)"</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> SearchForKeyWords(<span class="kwrd">string</span> keywords)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result = wc.DownloadString(Url + HttpUtility.UrlEncode(keywords));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [DSL(<span class="str">"result_should_contain_(.*)"</span>)]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">void</span> ResultShouldContain(<span class="kwrd">string</span> myurl)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result.Contains(myurl).ShouldEqual(<span class="kwrd">true</span>);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br /></div></p><div style="text-align:right"><a class="addthis_button" href="https://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="https://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
 </div>
         <div class="post-footer">
             <div class="info">
@@ -213,27 +213,36 @@
 
         </div>
     </div>
-</div><div class="footer">
-	<hr class="thin" />
-	<div class="pure-menu pure-menu-horizontal pure-menu-open">
-		<ul class="footer-menu">
-		
-		</ul>
-	</div>
-
-	<p>&copy; 2021. All rights reserved. </p>
 </div>
 
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-41936060-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 </body>
 
 </html>

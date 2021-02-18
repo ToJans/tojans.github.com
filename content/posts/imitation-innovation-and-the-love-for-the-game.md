@@ -14,7 +14,7 @@ As I posted this tweet
 
 It caused some reactions on twitter, so I'll give you the recap:
 
-<blockquote class="twitter-tweet" lang="nl"><p><a href="https://twitter.com/JefClaes">@JefClaes</a> <a href="https://twitter.com/ziobrando">@ziobrando</a> LOL, don&#39;t worry; it&#39;s about something else; this was my inspiration: <a href="http://t.co/cyYZRsYhB0">pic.twitter.com/cyYZRsYhB0</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/479520971419058176">19 juni 2014</a></blockquote>
+<blockquote class="twitter-tweet" lang="nl"><p><a href="https://twitter.com/JefClaes">@JefClaes</a> <a href="https://twitter.com/ziobrando">@ziobrando</a> LOL, don&#39;t worry; it&#39;s about something else; this was my inspiration: <a href="https://t.co/cyYZRsYhB0">pic.twitter.com/cyYZRsYhB0</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/479520971419058176">19 juni 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <blockquote class="twitter-tweet" lang="nl"><p><a href="https://twitter.com/JefClaes">@JefClaes</a> <a href="https://twitter.com/ziobrando">@ziobrando</a> I&#39;m trying to figure out why some people innovate and others just are there to reap benefits in case stuff works.</p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/statuses/479521688934440960">19 juni 2014</a></blockquote>

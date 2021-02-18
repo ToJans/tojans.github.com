@@ -13,31 +13,31 @@ title: Teaser on my upcoming mvcextensions project release
 <li>Create a new asp.net MVC project</li>
 <li>Add a reference to the MVCExtensions DLL and it's dependencies</li>
 <li>Create your model <br />
-<script src="http://gist.github.com/280330.js?file=Task.cs"></script>
+<script src="https://gist.github.com/280330.js?file=Task.cs"></script>
 </li>
 <li>Create your database mappings <br />
-<script src="http://gist.github.com/280330.js?file=TaskDatabaseFluentMapping.cs"></script>
+<script src="https://gist.github.com/280330.js?file=TaskDatabaseFluentMapping.cs"></script>
 </li>
 <li>Create your viewmodels<br />
-<script src="http://gist.github.com/280330.js?file=VMIndex.cs"></script>
-<script src="http://gist.github.com/280330.js?file=VMEdit.cs"></script>
+<script src="https://gist.github.com/280330.js?file=VMIndex.cs"></script>
+<script src="https://gist.github.com/280330.js?file=VMEdit.cs"></script>
 </li>
 <li>Create your views<br />
-<script src="http://gist.github.com/280330.js?file=application.spark.html"></script>
-<script src="http://gist.github.com/280330.js?file=index.spark.html"></script>
-<script src="http://gist.github.com/280330.js?file=edit.spark.html"></script>
+<script src="https://gist.github.com/280330.js?file=application.spark.html"></script>
+<script src="https://gist.github.com/280330.js?file=index.spark.html"></script>
+<script src="https://gist.github.com/280330.js?file=edit.spark.html"></script>
 </li>
 <li>Create your controller<br />
-<script src="http://gist.github.com/280330.js?file=HomeController.cs"></script>
+<script src="https://gist.github.com/280330.js?file=HomeController.cs"></script>
 </li>
 <li>Create your custom childcontainer for the homecontroller<br />
-<script src="http://gist.github.com/280330.js?file=homecontainer.cs"></script>
+<script src="https://gist.github.com/280330.js?file=homecontainer.cs"></script>
 </li>
 <li>Wire up everything in global.asax
-<script src="http://gist.github.com/280330.js?file=AAAA_global.asax.cs"></script>
+<script src="https://gist.github.com/280330.js?file=AAAA_global.asax.cs"></script>
 </li>
 </ol>
 <p>That is all there is to it; you now have a fully functional ASP.Net MVC application that  uses Castle.Windsor IOC/Automapper/Spark viewengine with al_a and al_form support !!!</p>
-<p>I still have a few things to finish first (namely the string1024 and memofields need custom Modelbinders in order to mimic a string type), but as soon as I implemented those I can push everything to <a href="http://github.com/ToJans/MVCExtensions"> this github repository</a></p>
+<p>I still have a few things to finish first (namely the string1024 and memofields need custom Modelbinders in order to mimic a string type), but as soon as I implemented those I can push everything to <a href="https://github.com/ToJans/MVCExtensions"> this github repository</a></p>
 <p>Enjoy !!</p>
-<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="https://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="https://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>

@@ -69,19 +69,19 @@
     <ul class="social-links">
         
             <li>
-                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
                     <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
                     <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
                     <i class="fab fa-github fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
@@ -152,13 +152,13 @@
 <p>So the problem had to be located within my router. After checking the logs and upgrading the firmware, the issue still remained, so I started looking around on the net.</p>
 <p>After some browsing I found the cause of my connection problems; apparently <span style="text-decoration: line-through;">telenet lowered the MTU</span>? <strong>UPDATE:</strong> lowering my MTU might work...</p>
 <h3>What's MTU?</h3>
-<p>This would bring us down to networking, and layer 2, the data layer, but I assume wikipedia can explain it way better (<a href="http://en.wikipedia.org/wiki/MTU" target="_blank">here</a>).</p>
+<p>This would bring us down to networking, and layer 2, the data layer, but I assume wikipedia can explain it way better (<a href="https://en.wikipedia.org/wiki/MTU" target="_blank">here</a>).</p>
 <p>What it comes down to is that large packages on the network fail, so you need to find out how large your packages can be when you send them over the network.</p>
 <h3>How can you do this?</h3>
 <p>First of all you have to find out your MTU setting of your router; it's probably at 1500 for cable or 1492 for DSL. Next you have to find the size that works with your provider. For now I settled on a size of 1200.</p>
 <p>You can find out this size by doing the following (min is at 500-something AFAIK):</p>
 <p>start a command window and start pinging with a packet that can not be separated (IPv4 only, BTW):</p>
-<p><img src="http://www.corebvba.be/blog/image.axd?picture=2013%2f3%2fSchermafbeelding+(2).png" alt="" /></p>
+<p><img src="https://www.corebvba.be/blog/image.axd?picture=2013%2f3%2fSchermafbeelding+(2).png" alt="" /></p>
 <p>You get the picture I presume.</p>
 <p>After finding the matching packet size, you should set the MTU in your router to your value; problem solved...</p>
 <h3>Update:&nbsp;</h3>
@@ -186,27 +186,36 @@
 
         </div>
     </div>
-</div><div class="footer">
-	<hr class="thin" />
-	<div class="pure-menu pure-menu-horizontal pure-menu-open">
-		<ul class="footer-menu">
-		
-		</ul>
-	</div>
-
-	<p>&copy; 2021. All rights reserved. </p>
 </div>
 
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-41936060-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 </body>
 
 </html>

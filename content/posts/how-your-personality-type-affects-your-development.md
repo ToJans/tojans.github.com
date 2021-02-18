@@ -8,7 +8,7 @@ title: How your personality type affects your development
 <h2>Introduction</h2>
 <p>During one of my more recent interviews I got an assesment from two different persons. While I still have no idea about the definitive outcome, the different types of questions they both asked triggered me to think about what kind of personality type they would be, so I started wondering how personality types are related to development....</p>
 <h2>First things first: MBTI</h2>
-<p>Before we can determine the effect of your personality on your development, we will start by defining MBTI, so let us begin with <a href="http://en.wikipedia.org/wiki/Myers-Briggs_Type_Indicator">the wikipedia definition</a>:</p>
+<p>Before we can determine the effect of your personality on your development, we will start by defining MBTI, so let us begin with <a href="https://en.wikipedia.org/wiki/Myers-Briggs_Type_Indicator">the wikipedia definition</a>:</p>
 <blockquote>
 <p><em>The Myers-Briggs Type Indicator (MBTI) assessment is a psychometric questionnaire designed to measure psychological preferences in how people perceive the world and make decisions.</em></p>
 </blockquote>
@@ -56,7 +56,7 @@ title: How your personality type affects your development
 </ul>
 <h2>#3 Judging: "Thinking" versus "Feeling" (T vs F)</h2>
 <p>I quite honestly have not met a single developer who was a "feeling" type; every single one I met was a rational type (which is kind of a logical thing - pun intended).</p>
-<p>A lot of recruiters on the other hand, are usually a "feeling" type, hence this is probably a part of the problem I stated in <a href="http://www.corebvba.be/blog/post/Fallacies-of-the-tech-recruitment-process.aspx">one of my previous blog posts</a>.</p>
+<p>A lot of recruiters on the other hand, are usually a "feeling" type, hence this is probably a part of the problem I stated in <a href="https://www.corebvba.be/blog/post/Fallacies-of-the-tech-recruitment-process.aspx">one of my previous blog posts</a>.</p>
 <h2>#4 Lifestyle: "judging" versus "perceiving" (J vs P)</h2>
 <p>The final one is about which one of #2 and #3 you use the most to interact with the world: your "judging" or your "percieving part".</p>
 <ul>
@@ -91,7 +91,7 @@ title: How your personality type affects your development
 </p>
 <p>&nbsp;</p>
 <h2>Finally</h2>
-<p>If you are a developer, this should give you a general idea of the MBTI type you are exactly. If you really want to find out, there is a short free questionaire online to determine your MBTI type <a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp">here</a>.</p>
+<p>If you are a developer, this should give you a general idea of the MBTI type you are exactly. If you really want to find out, there is a short free questionaire online to determine your MBTI type <a href="https://www.humanmetrics.com/cgi-win/jtypes2.asp">here</a>.</p>
 <p>On a sidenote, it would be great if the interviewers would be willing to send me a message whether I am correct or not with my guesstimate...</p>
 <p>Signing off,</p>
 <p>Tom</p>

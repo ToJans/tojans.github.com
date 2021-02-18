@@ -5,7 +5,7 @@ title = "Confessions of a start-up consultant"
 slug = "confessions-of-a-start-up-consultant"
 +++
 
-![If you're a fraud, you might as well go all the way!](http://media.salon.com/2014/01/wolf_wall_street2.jpg)
+![If you're a fraud, you might as well go all the way!](https://media.salon.com/2014/01/wolf_wall_street2.jpg)
 
 ## About a year ago
 
@@ -32,7 +32,7 @@ As I start suggesting some people, I see him gazing away. As we go a long way ba
 - "???"
 - "I'll just google for SEO belgium, take a look at the results, and work my way from there..."
 
-![BAM!](http://www.ademloos.be/sites/default/files/imagecache/voorvertoning-afbeeldingen-180x180px/bamgedr_0.jpg)
+![BAM!](https://www.ademloos.be/sites/default/files/imagecache/voorvertoning-afbeeldingen-180x180px/bamgedr_0.jpg)
 
 This was so blatantly obvious that I was ashamed that I didn't think about it: if you want to find somebody who's good at something, look for a proven track record!
 
@@ -44,7 +44,7 @@ It was only **after** we had that talk that I realized that I was a fraud.
 
 I have read a lot about start-ups and failed a few times in launching one. As I blogged about my failures people would ask for my advice, because I was apparently able to connect the dots.
 
-<blockquote class="twitter-tweet" lang="nl"><p>The difference between knowledge and experience in one image: <a href="http://t.co/AH2zaR7gdM">http://t.co/AH2zaR7gdM</a> <a href="http://t.co/SzgHdTJz9r">pic.twitter.com/SzgHdTJz9r</a></p>&mdash; Buffer (@buffer) <a href="https://twitter.com/buffer/status/423592231371833345">15 januari 2014</a></blockquote>
+<blockquote class="twitter-tweet" lang="nl"><p>The difference between knowledge and experience in one image: <a href="https://t.co/AH2zaR7gdM">https://t.co/AH2zaR7gdM</a> <a href="https://t.co/SzgHdTJz9r">pic.twitter.com/SzgHdTJz9r</a></p>&mdash; Buffer (@buffer) <a href="https://twitter.com/buffer/status/423592231371833345">15 januari 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I gave most of my advice pro deo, but on occasion I also billed some of my larger clients who wanted to run a side project like a start-up.

@@ -69,19 +69,19 @@
     <ul class="social-links">
         
             <li>
-                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
                     <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
                     <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
         
             <li>
-                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
                     <i class="fab fa-github fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
@@ -173,9 +173,9 @@ using TDD.</p>
 <li>Spend 8 months on 20% of the product working around the framework&rsquo;s limitations.</li>
 </ul>
 <h2 id="4-many-small-things--a-few-big-things">4. Many small things &gt; A few big things</h2>
-<p>Explicit, short code wins every time. Try to express the model in the <a href="http://martinfowler.com/bliki/UbiquitousLanguage.html">ubiquitous language</a>, and minimize the amount of things happening in a single function/class/&hellip; . In functional language, a function should contain at max 5 lines, for example.</p>
+<p>Explicit, short code wins every time. Try to express the model in the <a href="https://martinfowler.com/bliki/UbiquitousLanguage.html">ubiquitous language</a>, and minimize the amount of things happening in a single function/class/&hellip; . In functional language, a function should contain at max 5 lines, for example.</p>
 <p>If it contains more then 5 lines, you might be doing things the wrong way. The 5 line rule might be harder in languages where you do not have things like pattern matching.</p>
-<p>Make distinct functions for things that might change state and things that query state, almost never intermingle these. People refer to this as <a href="http://en.wikipedia.org/wiki/Command%E2%80%93query_separation">Command-Query separation / CQS</a>.</p>
+<p>Make distinct functions for things that might change state and things that query state, almost never intermingle these. People refer to this as <a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation">Command-Query separation / CQS</a>.</p>
 <p>Small, share-nothing systems inspired by nature tend to be able to make complexity manageable, provided you use it in a proper way.</p>
 <h3 id="but-">BUT !!!</h3>
 <p>Don&rsquo;t overshoot the goal; only use extractions and abstractions to remove complexity. Never introduce these before you have the need for it. (Preferrably it has to hurt multiple times before you start abstracting/extracting away.)</p>
@@ -183,8 +183,8 @@ using TDD.</p>
 <p>Make everything as simple as possible, but not simpler. - A. Einstein</p>
 </blockquote>
 <h2 id="5-explicitness--implicitness">5. Explicitness &gt; Implicitness</h2>
-<p>Respecting rule #4, make sure you use intent-revealing function names, preferably in the <a href="http://martinfowler.com/bliki/UbiquitousLanguage.html">ubiquitous language</a>.</p>
-<p>Also, always respect <a href="http://pragprog.com/articles/tell-dont-ask">Tell-Don&rsquo;t-Ask / TDA </a>; A simple example:</p>
+<p>Respecting rule #4, make sure you use intent-revealing function names, preferably in the <a href="https://martinfowler.com/bliki/UbiquitousLanguage.html">ubiquitous language</a>.</p>
+<p>Also, always respect <a href="https://pragprog.com/articles/tell-dont-ask">Tell-Don&rsquo;t-Ask / TDA </a>; A simple example:</p>
 <p>This is implicit:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">if (account.Type == AccountType.A &amp;&amp; account.Percentile &gt; 90) then
   Mailer.Send(HolidayInitiative)
@@ -210,27 +210,36 @@ using TDD.</p>
 
         </div>
     </div>
-</div><div class="footer">
-	<hr class="thin" />
-	<div class="pure-menu pure-menu-horizontal pure-menu-open">
-		<ul class="footer-menu">
-		
-		</ul>
-	</div>
-
-	<p>&copy; 2021. All rights reserved. </p>
 </div>
 
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-41936060-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 </body>
 
 </html>
