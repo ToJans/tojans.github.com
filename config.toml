@@ -7,6 +7,7 @@ summarylength = 10
 enableEmoji = true
 enableRobotsTXT = true
 relativeURLs = true
+publishDir = "docs"
 
 # Enable Disqus
 disqusShortname = "tojansramblings"
