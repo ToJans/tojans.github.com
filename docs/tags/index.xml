@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tom&#39;s ramblings</title>
-    <link>http://tojans.me/tags/</link>
+    <link>https://tojans.me/tags/</link>
     <description>Recent content in Tags on Tom&#39;s ramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2015 11:42:18 +0100</lastBuildDate><atom:link href="http://tojans.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Oct 2015 11:42:18 +0100</lastBuildDate><atom:link href="https://tojans.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Development</title>
-      <link>http://tojans.me/tags/development/</link>
+      <link>https://tojans.me/tags/development/</link>
       <pubDate>Wed, 28 Oct 2015 11:42:18 +0100</pubDate>
       
-      <guid>http://tojans.me/tags/development/</guid>
+      <guid>https://tojans.me/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JavaScript</title>
-      <link>http://tojans.me/tags/javascript/</link>
+      <link>https://tojans.me/tags/javascript/</link>
       <pubDate>Wed, 28 Oct 2015 11:42:18 +0100</pubDate>
       
-      <guid>http://tojans.me/tags/javascript/</guid>
+      <guid>https://tojans.me/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jQuery</title>
-      <link>http://tojans.me/tags/jquery/</link>
+      <link>https://tojans.me/tags/jquery/</link>
       <pubDate>Wed, 28 Oct 2015 11:42:18 +0100</pubDate>
       
-      <guid>http://tojans.me/tags/jquery/</guid>
+      <guid>https://tojans.me/tags/jquery/</guid>
       <description></description>
     </item>
     
     <item>
       <title>React</title>
-      <link>http://tojans.me/tags/react/</link>
+      <link>https://tojans.me/tags/react/</link>
       <pubDate>Wed, 28 Oct 2015 11:42:18 +0100</pubDate>
       
-      <guid>http://tojans.me/tags/react/</guid>
+      <guid>https://tojans.me/tags/react/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vue</title>
-      <link>http://tojans.me/tags/vue/</link>
+      <link>https://tojans.me/tags/vue/</link>
       <pubDate>Wed, 28 Oct 2015 11:42:18 +0100</pubDate>
       
-      <guid>http://tojans.me/tags/vue/</guid>
+      <guid>https://tojans.me/tags/vue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Haskell</title>
-      <link>http://tojans.me/tags/haskell/</link>
+      <link>https://tojans.me/tags/haskell/</link>
       <pubDate>Tue, 13 Oct 2015 10:46:54 +0200</pubDate>
       
-      <guid>http://tojans.me/tags/haskell/</guid>
+      <guid>https://tojans.me/tags/haskell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DDD</title>
-      <link>http://tojans.me/tags/ddd/</link>
+      <link>https://tojans.me/tags/ddd/</link>
       <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/tags/ddd/</guid>
+      <guid>https://tojans.me/tags/ddd/</guid>
       <description></description>
     </item>
     

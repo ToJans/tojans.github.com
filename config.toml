@@ -1,4 +1,4 @@
-baseURL ="http://tojans.me/"
+baseURL ="https://tojans.me/"
 languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Tom's ramblings"
@@ -6,7 +6,6 @@ theme = "anatole"
 summarylength = 10
 enableEmoji = true
 enableRobotsTXT = true
-relativeURLs = true
 publishDir = "docs"
 
 # Enable Disqus

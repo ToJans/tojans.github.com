@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tesla on Tom&#39;s ramblings</title>
-    <link>http://tojans.me/categories/tesla/</link>
+    <link>https://tojans.me/categories/tesla/</link>
     <description>Recent content in Tesla on Tom&#39;s ramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2015 15:25:03 +0100</lastBuildDate><atom:link href="http://tojans.me/categories/tesla/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Nov 2015 15:25:03 +0100</lastBuildDate><atom:link href="https://tojans.me/categories/tesla/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Brain dump #2: How I&#39;d implement Tesla&#39;s Autopilot feature - levels of AI</title>
-      <link>http://tojans.me/posts/tesla-2/</link>
+      <link>https://tojans.me/posts/tesla-2/</link>
       <pubDate>Tue, 24 Nov 2015 15:25:03 +0100</pubDate>
       
-      <guid>http://tojans.me/posts/tesla-2/</guid>
+      <guid>https://tojans.me/posts/tesla-2/</guid>
       <description>About two weeks ago, I decided to have some healthy life changes, and one of them is walking to my office.</description>
     </item>
     
     <item>
       <title>Brain dump #1: How I&#39;d implement Tesla&#39;s Autopilot feature</title>
-      <link>http://tojans.me/posts/tesla/</link>
+      <link>https://tojans.me/posts/tesla/</link>
       <pubDate>Mon, 23 Nov 2015 15:25:03 +0100</pubDate>
       
-      <guid>http://tojans.me/posts/tesla/</guid>
+      <guid>https://tojans.me/posts/tesla/</guid>
       <description>I recently saw this tweet by Elon Musk, who is looking for developers for their Autopilot feature:</description>
     </item>
     

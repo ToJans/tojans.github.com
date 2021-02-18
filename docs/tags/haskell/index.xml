@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Haskell on Tom&#39;s ramblings</title>
-    <link>http://tojans.me/tags/haskell/</link>
+    <link>https://tojans.me/tags/haskell/</link>
     <description>Recent content in Haskell on Tom&#39;s ramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 13 Oct 2015 10:46:54 +0200</lastBuildDate><atom:link href="http://tojans.me/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Oct 2015 10:46:54 +0200</lastBuildDate><atom:link href="https://tojans.me/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Foldable for non-Haskellers: Haskell&#39;s controversial FTP proposal</title>
-      <link>http://tojans.me/posts/haskell-s-controversial-ftp-proposal/</link>
+      <link>https://tojans.me/posts/haskell-s-controversial-ftp-proposal/</link>
       <pubDate>Tue, 13 Oct 2015 10:46:54 +0200</pubDate>
       
-      <guid>http://tojans.me/posts/haskell-s-controversial-ftp-proposal/</guid>
+      <guid>https://tojans.me/posts/haskell-s-controversial-ftp-proposal/</guid>
       <description>In the Haskell world, there is currently a big fuss about the &amp;ldquo;Foldable/Traversable in Prelude&amp;rdquo;-proposal.</description>
     </item>
     
     <item>
       <title>Hangman in Haskell</title>
-      <link>http://tojans.me/posts/hangman-in-haskell/</link>
+      <link>https://tojans.me/posts/hangman-in-haskell/</link>
       <pubDate>Sun, 04 Oct 2015 10:23:42 +0200</pubDate>
       
-      <guid>http://tojans.me/posts/hangman-in-haskell/</guid>
+      <guid>https://tojans.me/posts/hangman-in-haskell/</guid>
       <description>As I noticed a question for a more idiomatic Haskell version of the game Hangman on codereview.</description>
     </item>
     

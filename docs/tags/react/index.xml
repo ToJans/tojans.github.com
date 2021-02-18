@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>React on Tom&#39;s ramblings</title>
-    <link>http://tojans.me/tags/react/</link>
+    <link>https://tojans.me/tags/react/</link>
     <description>Recent content in React on Tom&#39;s ramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2015 11:42:18 +0100</lastBuildDate><atom:link href="http://tojans.me/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Oct 2015 11:42:18 +0100</lastBuildDate><atom:link href="https://tojans.me/tags/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Are new `.js` ui frameworks and - libs a fad?</title>
-      <link>http://tojans.me/posts/are-new-js-frameworks-and-libs-a-fad/</link>
+      <link>https://tojans.me/posts/are-new-js-frameworks-and-libs-a-fad/</link>
       <pubDate>Wed, 28 Oct 2015 11:42:18 +0100</pubDate>
       
-      <guid>http://tojans.me/posts/are-new-js-frameworks-and-libs-a-fad/</guid>
+      <guid>https://tojans.me/posts/are-new-js-frameworks-and-libs-a-fad/</guid>
       <description>Good question!
  TL-DR: Most are, except:
  jQuery React vue.</description>

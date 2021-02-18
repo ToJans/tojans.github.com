@@ -2,89 +2,89 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DDD on Tom&#39;s ramblings</title>
-    <link>http://tojans.me/categories/ddd/</link>
+    <link>https://tojans.me/categories/ddd/</link>
     <description>Recent content in DDD on Tom&#39;s ramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Oct 2015 11:07:19 +0200</lastBuildDate><atom:link href="http://tojans.me/categories/ddd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Oct 2015 11:07:19 +0200</lastBuildDate><atom:link href="https://tojans.me/categories/ddd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DDD elevator pitch</title>
-      <link>http://tojans.me/posts/ddd-elevator-pitch/</link>
+      <link>https://tojans.me/posts/ddd-elevator-pitch/</link>
       <pubDate>Wed, 07 Oct 2015 11:07:19 +0200</pubDate>
       
-      <guid>http://tojans.me/posts/ddd-elevator-pitch/</guid>
+      <guid>https://tojans.me/posts/ddd-elevator-pitch/</guid>
       <description>DDD elevator pitch@ToJans In business, you make fine-grained adjustments all the time, in order to stay ahead of the competition.</description>
     </item>
     
     <item>
       <title>How to explain dependent typing</title>
-      <link>http://tojans.me/posts/how-to-explain-dependent-typing/</link>
+      <link>https://tojans.me/posts/how-to-explain-dependent-typing/</link>
       <pubDate>Fri, 06 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/posts/how-to-explain-dependent-typing/</guid>
+      <guid>https://tojans.me/posts/how-to-explain-dependent-typing/</guid>
       <description>Take an average programmer - let&amp;rsquo;s call him Joe D. - and have him talk to a fictitious academic called Alan T.</description>
     </item>
     
     <item>
       <title>about dependent typing, Idris and the road to Valhalla</title>
-      <link>http://tojans.me/posts/about-dependent-typing-idris-and-the-road-to-valhalla/</link>
+      <link>https://tojans.me/posts/about-dependent-typing-idris-and-the-road-to-valhalla/</link>
       <pubDate>Thu, 27 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/posts/about-dependent-typing-idris-and-the-road-to-valhalla/</guid>
+      <guid>https://tojans.me/posts/about-dependent-typing-idris-and-the-road-to-valhalla/</guid>
       <description>Due to my DDD background, I am constantly on a quest for the utopian domain model.</description>
     </item>
     
     <item>
       <title>CQRS and functional programming</title>
-      <link>http://tojans.me/posts/cqrs-and-functional-programming/</link>
+      <link>https://tojans.me/posts/cqrs-and-functional-programming/</link>
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/posts/cqrs-and-functional-programming/</guid>
+      <guid>https://tojans.me/posts/cqrs-and-functional-programming/</guid>
       <description>So, a little while ago, while I was studying Haskell, I decided to implement Greg Young&amp;rsquo;s SimpleCQRS example in Haskell.</description>
     </item>
     
     <item>
       <title>Growing software teams: size DOES matter</title>
-      <link>http://tojans.me/posts/growing-software-teams-size-does-matter/</link>
+      <link>https://tojans.me/posts/growing-software-teams-size-does-matter/</link>
       <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/posts/growing-software-teams-size-does-matter/</guid>
+      <guid>https://tojans.me/posts/growing-software-teams-size-does-matter/</guid>
       <description>Growing software teams The problem Consider the amount of different communication channels (that relate directly to communication overhead and potential misunderstandings) on teams growing in size using the formula N*(N-1)/2:</description>
     </item>
     
     <item>
       <title>DDD 101 tips</title>
-      <link>http://tojans.me/posts/ddd-101-tips/</link>
+      <link>https://tojans.me/posts/ddd-101-tips/</link>
       <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/posts/ddd-101-tips/</guid>
+      <guid>https://tojans.me/posts/ddd-101-tips/</guid>
       <description>Here are my tips for getting started with DDD; they were written as a response to a question in the BE-DDD newsgroup:</description>
     </item>
     
     <item>
       <title>DDDBE meetup #2 - Legacy Inferno</title>
-      <link>http://tojans.me/posts/dddbe-meetup-2-legacy-inferno/</link>
+      <link>https://tojans.me/posts/dddbe-meetup-2-legacy-inferno/</link>
       <pubDate>Sat, 19 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/posts/dddbe-meetup-2-legacy-inferno/</guid>
+      <guid>https://tojans.me/posts/dddbe-meetup-2-legacy-inferno/</guid>
       <description>After the great feedback of the first event, the Belgian DDD community had to do a second one, and last Thursday we did:</description>
     </item>
     
     <item>
       <title>DDD in a tweet</title>
-      <link>http://tojans.me/posts/ddd-in-a-tweet/</link>
+      <link>https://tojans.me/posts/ddd-in-a-tweet/</link>
       <pubDate>Mon, 24 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/posts/ddd-in-a-tweet/</guid>
+      <guid>https://tojans.me/posts/ddd-in-a-tweet/</guid>
       <description>The essence of DDD: make the implicit explicit (language, boundaries, code) and evolve your model so it matches the domain /cc @julielerman</description>
     </item>
     
     <item>
       <title>IDDDtour 2013 Belgium - an immersive experience</title>
-      <link>http://tojans.me/posts/idddtour-2013-belgium-an-immersive-experience/</link>
+      <link>https://tojans.me/posts/idddtour-2013-belgium-an-immersive-experience/</link>
       <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/posts/idddtour-2013-belgium-an-immersive-experience/</guid>
+      <guid>https://tojans.me/posts/idddtour-2013-belgium-an-immersive-experience/</guid>
       <description>&lt;h3&gt;Introduction: what &amp;amp; how?&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.amazon.com/gp/product/0321834577/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321834577&amp;linkCode=as2&amp;tag=httptojanme-20&#34;&gt;Implementing Domain-Driven Design&lt;/a&gt;&lt;img src=&#34;http://ir-na.amazon-adsystem.com/e/ir?t=httptojanme-20&amp;l=as2&amp;o=1&amp;a=0321834577&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;
  is a book written by &lt;a href=&#34;http://vaughnvernon.co/&#34; target=&#34;_blank&#34;&gt;Vaughn Vernon&lt;/a&gt;, and you can consider it a practical guide to &lt;a href=&#34;http://www.amazon.com/gp/product/0321125215/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321125215&amp;linkCode=as2&amp;tag=httptojanme-20&#34;&gt;the blue book&lt;/a&gt;&lt;img src=&#34;http://ir-na.amazon-adsystem.com/e/ir?t=httptojanme-20&amp;l=as2&amp;o=1&amp;a=0321125215&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;
@@ -107,29 +107,29 @@
     
     <item>
       <title>Continuous thinking: CQRS explained to a 10-year old</title>
-      <link>http://tojans.me/posts/continuous-thinking-cqrs-explained-to-a-10-year-old/</link>
+      <link>https://tojans.me/posts/continuous-thinking-cqrs-explained-to-a-10-year-old/</link>
       <pubDate>Mon, 28 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/posts/continuous-thinking-cqrs-explained-to-a-10-year-old/</guid>
+      <guid>https://tojans.me/posts/continuous-thinking-cqrs-explained-to-a-10-year-old/</guid>
       <description>IntroductionThe concept behind CQRS is neat: detach your domain implementation completely from your representation requirements.</description>
     </item>
     
     <item>
       <title>Continuous thinking: why a 4GL should be avoided to start a new app</title>
-      <link>http://tojans.me/posts/continuous-thinking-why-a-4gl-should-be-avoided-to-start-a-new-app/</link>
+      <link>https://tojans.me/posts/continuous-thinking-why-a-4gl-should-be-avoided-to-start-a-new-app/</link>
       <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/posts/continuous-thinking-why-a-4gl-should-be-avoided-to-start-a-new-app/</guid>
+      <guid>https://tojans.me/posts/continuous-thinking-why-a-4gl-should-be-avoided-to-start-a-new-app/</guid>
       <description>Introduction
 As an avid member of the DDD/CQRS discussion group, somebody asked me what I meant with the following sentence:</description>
     </item>
     
     <item>
       <title>Winning the game with CQRS/event sourcing and BDD</title>
-      <link>http://tojans.me/posts/winning-the-game-with-cqrs-event-sourcing-and-bdd/</link>
+      <link>https://tojans.me/posts/winning-the-game-with-cqrs-event-sourcing-and-bdd/</link>
       <pubDate>Wed, 01 Sep 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://tojans.me/posts/winning-the-game-with-cqrs-event-sourcing-and-bdd/</guid>
+      <guid>https://tojans.me/posts/winning-the-game-with-cqrs-event-sourcing-and-bdd/</guid>
       <description>Yes !! I did it !!!
 I have been making a few attempts to combine BDD with CQRS/event sourcing, since they seem to make a perfect fit.</description>
     </item>
