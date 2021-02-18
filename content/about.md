@@ -1,10 +1,9 @@
 ---
-title: "Hello"
+title: "About me"
 nocomment: true
 nodate: true
 nopaging: true
 ---
-# About me
 
 My parents bought their first computer - a [TRS-80 Model III](https://en.wikipedia.org/wiki/TRS-80) - when I was about 8 years old. I found a book in English about programming, and it got me hooked for life. I graduated in 1998 as a bachelor in IT. 
 

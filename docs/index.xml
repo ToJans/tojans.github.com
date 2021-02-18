@@ -1980,21 +1980,21 @@ While checking out some stuff on my PC I noticed some old sloppy code lying arou
     </item>
     
     <item>
+      <title>About me</title>
+      <link>https://tojans.me/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tojans.me/about/</guid>
+      <description>My parents bought their first computer - a TRS-80 Model III - when I was about 8 years old. I found a book in English about programming, and it got me hooked for life.</description>
+    </item>
+    
+    <item>
       <title>Contact me</title>
       <link>https://tojans.me/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/contact/</guid>
       <description>Tom Janssens Tom@corebvba.be+32 478 336 376CoreNieuwegestraat 76 B9620 Zottegem BELGIUM VAT nr.</description>
-    </item>
-    
-    <item>
-      <title>Hello</title>
-      <link>https://tojans.me/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tojans.me/about/</guid>
-      <description>About me My parents bought their first computer - a TRS-80 Model III - when I was about 8 years old.</description>
     </item>
     
   </channel>
