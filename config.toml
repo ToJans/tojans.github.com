@@ -6,6 +6,7 @@ theme = "anatole"
 summarylength = 10
 enableEmoji = true
 enableRobotsTXT = true
+relativeURLs = true
 
 # Enable Disqus
 disqusShortname = "tojansramblings"

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | Build a simple chart website in a few minutes with Elixir </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="http://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="http://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="http://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="http://tojans.me/posts/build-a-simple-chart-website-in-a-few-minutes-with-elixir/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="http://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="http://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Build a simple chart website in a few minutes with Elixir"/>
+<meta name="twitter:description" content="As I am currently thinking about setting up a social platform for Elliot Wave analysis, I decided to use Elixir as my new platform, to see if it would be doable."/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="http://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="../../">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="../../index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="../../posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="../../contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Build a simple chart website in a few minutes with Elixir</h3>
+                
+            </div>
+
+            <p>As I am currently thinking about setting up a social platform for Elliot Wave analysis, I decided to use Elixir as my new platform, to see if it would be doable.</p>
+<p>This is the result of an hour of hacking (mostly figuring out how to libs work):</p>
+<p><img src="http://i.snag.gy/G8EhB.jpg" alt="This post will walk you through getting this up and running in a few minutes."></p>
+<!-- more -->
+<h2 id="prerequistes">Prerequistes</h2>
+<p>I have previously written an extensive blog post on how to install the prerequisites on Windows <a href="http://tojans.me/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/">here</a>. Please follow this guide.</p>
+<p>Once you followed this, we are ready to get started on our web app.</p>
+<h2 id="setting-up-the-project">Setting up the project</h2>
+<p>Go to the dynamo path from your installation, and type</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mix dynamo ../ew
+</code></pre></div><p>This will create your project in the folder <code>..\ew</code>; go to that folder and fire up your favorite editor.</p>
+<h2 id="getting-some-stock-quotes">Getting some stock quotes</h2>
+<p>As we are going to need some prices, we need to get that information from the internet somewhere. Luckily, Yahoo has a hassle-free service that provides exactly those, and there is an Elixir library available use this service.</p>
+<p>To use it we will need to add it to the dependencies; open up the <code>mix.exs</code> file in the root of you project, go to the bottom of the file, and add <code>,{ :yahoo_finance,&quot;0.1.0&quot;,git: &quot;https://github.com/baldmountain/yahoo_finance&quot;}</code> to the deps. Also, add <code>, :inets</code> to the <code>applications: [:cowboy, : dynamo]</code>; this <code>inets</code> application needs to be started in order to be able to download from http.</p>
+<p>After these changes, your file should look like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">defmodule Ew.Mixfile do
+  use Mix.Project
+
+  def project do
+    [ app: :ew,
+      version: &#34;0.0.1&#34;,
+      dynamos: [Ew.Dynamo],
+      compilers: [:elixir, :dynamo, :app],
+      env: [prod: [compile_path: &#34;ebin&#34;]],
+      compile_path: &#34;tmp/#{Mix.env}/ew/ebin&#34;,
+      deps: deps ]
+  end
+
+  # Configuration for the OTP application
+  def application do
+    [ applications: [:cowboy, :dynamo, :inets],
+      mod: { Ew, [] } ]
+  end
+
+  defp deps do
+    [ { :cowboy, github: &#34;extend/cowboy&#34; },
+      { :dynamo, &#34;0.1.0.dev&#34;, github: &#34;elixir-lang/dynamo&#34; },
+      { :yahoo_finance,&#34;0.1.0&#34;,git: &#34;https://github.com/baldmountain/yahoo_finance&#34;} ]
+  end
+end
+</code></pre></div><p>Now we will have to get and compile the dependencies, so open up a command window and type the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mix deps.get
+</code></pre></div><p>You will see a lot of output; it should fetch the dependencies and compile them.</p>
+<h2 id="so-much-for-dependencies-lets-build-a-site-">So much for dependencies, let&rsquo;s build a site !</h2>
+<p>It makes sense to define a layout, so we do not have to repeat ourselves. create a folder <code>web\templates\layouts</code> and add a file called <code>main.html.eex</code>; this should be the content:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;
+			&lt;%= content_for(:title)  || &#34;Ellibotwave&#34; %&gt;
+		&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;&lt;%= content_for(:title) || &#34;Ellibotwave&#34; %&gt;&lt;/h1&gt;
+		&lt;%= content_for(:template) %&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><p>I assume this is pretty self explaining, is it not? The <code>&lt;%= content_for(:title)  || &quot;Ellibotwave&quot; %&gt;</code> renders the title if it was provided, and otherwise it defaults to <code>Ellibotwave</code>.</p>
+<p>The <code>&lt;%= content_for(:template) %&gt;</code> renders the main content.</p>
+<h2 id="next-we-will-handle-the-entry-page">Next we will handle the entry page.</h2>
+<p>Create a folder <code>web\templates\commands</code>, and add a file called <code>pick_a_symbol.eex</code>; this should be the content:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;form action=&#34;/&#34; method=&#34;post&#34;&gt;
+	&lt;fieldset&gt;
+		&lt;label&gt;Symbol&lt;/label&gt;
+  	&lt;input name=&#34;symbol&#34; list=&#34;symbols&#34; autofocus=&#34;autofocus&#34; required=&#34;required&#34; /&gt;
+  	&lt;datalist id=&#34;symbols&#34;&gt;
+  		&lt;option value=&#34;AAPL&#34;/&gt;
+  		&lt;option value=&#34;LEDS&#34;/&gt;
+  		&lt;option value=&#34;USO&#34;/&gt;
+  		&lt;option value=&#34;DJIA&#34;/&gt;
+  	&lt;/datalist&gt;
+	&lt;/fieldset&gt;
+	&lt;input type=&#34;submit&#34; name=&#34;Get chart&#34;/&gt;
+&lt;/form&gt;
+</code></pre></div><p>Once again, this is not exactly rocket science.</p>
+<p>Open up <code>web\templates\index.html</code>, and change it to this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;h3&gt;Welcome&lt;/h3&gt;
+
+This is an experimental site about Elliot waves. Please select a NASDAQ symbol.
+
+&lt;%= render(&#34;commands/pick_a_symbol&#34;) %&gt;
+
+</code></pre></div><p>I assume everyone understands what this means. Now we need to do one more thing: set the layout file. for this we open up the file <code>web\routers\application_router.ex</code> and replace the <code>prepare</code> function. Your file should look like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">defmodule ApplicationRouter do
+  use Dynamo.Router
+
+  prepare do
+    conn = conn.assign(:layout, &#34;main&#34;)
+    conn.fetch(:params)
+  end
+
+  get &#34;/&#34; do
+    conn = conn.assign(:title, &#34;Welcome to Dynamo!&#34;)
+    render conn, &#34;index.html&#34;
+  end
+end
+</code></pre></div><p>Some clarification here: as we are working in a functional language, our data is immutable, so we assign the version of <code>conn</code> with the extra <code>:layout</code> parameter to conn again.</p>
+<h1 id="lets-test-">Let&rsquo;s test !!!</h1>
+<p>When you did everything correcly, you can now go to the command line again, and type the following two commands:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mix compile
+mix server
+</code></pre></div><p>Then you should surf to <a href="http://localhost:4000">http://localhost:4000</a> and you should see the following output:
+<img src="http://i.snag.gy/bOA9k.jpg" alt="Woohoo"></p>
+<p>However, when you pick a symbol - <code>AAPL</code> for example - and `submit the form, you will get the following error back:</p>
+<p><img src="http://i.snag.gy/tbJux.jpg" alt="Uh-Ooh!!! Trouble in paradise !!!"></p>
+<p>But, that makes sense, as we do not have a handler yet for the <code>post</code> to <code>/</code>, only a <code>get</code> verb handler is currently implemented. So let&rsquo;s add that too !</p>
+<h2 id="the-postman-always-rings-twice">The postman always rings twice</h2>
+<p>Or maybe he doesn&rsquo;t, but who cares; let&rsquo;s create a new handler that fetches the quotes for a certain stock; add the following 2 functions underneat the <code>get &quot;/&quot; do ... end</code> function in the file <code>web\routers\application_router.ex</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">  post &#34;/&#34; do
+    quotes = YahooFinance.get_historical_quotes(conn.params[:symbol],365) 
+      |&gt; Enum.reverse() 
+      |&gt; quotes_to_json()
+    conn = conn.assign(:quotes,quotes)
+    conn = conn.assign(:symbol,conn.params[:symbol])
+    render conn,&#34;views/chart.html&#34;
+  end
+
+  defp quotes_to_json(quotes) do 
+    Enum.map_join quotes,&#34;,\n&#34;,fn x-&gt; 
+      &#34;[&#39;#{x.date}&#39;,#{x.low},#{x.open},#{x.close},#{x.high}]&#34; 
+    end
+  end 
+</code></pre></div><p>Some remarks here: first we get the daily quotes for the symbol during the last 365 days using the library we included in the dependencies, then we take the output of that, and we reverse it. We use the pipe operator for that (<code>|&gt;</code>). For example <code>abc(1) |&gt; b (2)</code> really means this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">temp1 = abc(1)
+temp2 = b(temp1,2)
+</code></pre></div><p>This allows for some very coincise code.</p>
+<p>The <code>Enum.map_join</code> takes all the quotes, formats them to JSON using string interpolation, and then joins them together, so <code>quotes</code> is actually a json representation that we will use in our view to render the data.</p>
+<p>As you can see, we also render a view called <code>views/chart.html</code>, so we need to create a <code>web\templates\views</code> folder and add the file <code>chart.html.eex</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;%= render(&#34;commands/pick_a_symbol&#34;) %&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.google.com/jsapi&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+  google.load(&#39;visualization&#39;, &#39;1&#39;, {packages: [&#39;corechart&#39;]});
+&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+  function drawVisualization() {
+    var data = google.visualization.arrayToDataTable([
+       // [&#39;Mon&#39;, 20, 28, 38, 45],
+       // [&#39;Tue&#39;, 25, 30, 45, 50]
+        &lt;%= @quotes %&gt;
+      ]
+      // Treat first row as data as well.
+    , true);
+
+    var options = {   
+      legend:&#39;none&#39;
+    };
+
+    var chart = new google.visualization.CandlestickChart(document.getElementById(&#39;chart&#39;));
+    chart.draw(data, options);
+  }
+
+  google.setOnLoadCallback(drawVisualization);
+&lt;/script&gt;
+
+&lt;div id=&#34;chart&#34; style=&#34;width:90%;height:30em&#34; /&gt;
+</code></pre></div><p>This is really just a dirty hack, but it works, so I am pleased with it.</p>
+<p>Fire up a command window, and once again verify whether everything works:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mix compile
+mix server
+</code></pre></div><p>Note that I added a title this time as well, so we know what we are seeing.</p>
+<p>That&rsquo;s it, you should see the following result (I took <code>USO</code> this time):</p>
+<p><img src="http://i.snag.gy/jhvDo.jpg" alt="Might be in the 4th wave currently?"></p>
+<h2 id="for-the-lazy">For the lazy</h2>
+<p>If you do not feel like doing all this work, and would simply like to fiddle around a bit with the source, here it is: <a href="https://github.com/ToJans/ew">https://github.com/ToJans/ew</a>.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Well, it was pretty easy to setup, most of the time went into getting to know the libraries and work around the limitations. Setting up an app with dynamo seems ceraintly doable, and I will see if I can setup an instance on my VPS for demo purposes (I would add caching to reduce network load and speed it up a bit).</p>
+<p>There are a few caveats however: because dynamo is still in early alpha, some things just do not work correctly, or all of a sudden they stop working after upgrading your dependencies, so please consider this before you tackle your next big thing with dynamo.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div><div class="footer">
+	<hr class="thin" />
+	<div class="pure-menu pure-menu-horizontal pure-menu-open">
+		<ul class="footer-menu">
+		
+		</ul>
+	</div>
+
+	<p>&copy; 2021. All rights reserved. </p>
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41936060-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+
+</html>

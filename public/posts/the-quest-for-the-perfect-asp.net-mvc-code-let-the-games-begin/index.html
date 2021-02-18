@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | The Quest for the perfect ASP.Net MVC code : Let the games begin </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="http://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="http://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="http://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="http://tojans.me/posts/the-quest-for-the-perfect-asp.net-mvc-code-let-the-games-begin/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="http://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="http://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="The Quest for the perfect ASP.Net MVC code : Let the games begin"/>
+<meta name="twitter:description" content="Edit:Please note that the source has changed a lot lately, and that I now use a proper viewmodel instead of domain objects, so all hardlinked references to the domain objects &amp; controllers in the MVC project have disappeared."/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="http://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="../../">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="../../index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="../../posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="../../contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>The Quest for the perfect ASP.Net MVC code : Let the games begin</h3>
+                
+            </div>
+
+            <h3>Edit:</h3>
+<p>Please note that the source has changed a lot lately, and that I now use a proper viewmodel instead of domain objects, so all hardlinked references to the domain objects &amp; controllers in the MVC project have disappeared. This also automaticly made my ugly domain object extension methods to get the controller action links completely redundant.</p>
+<p>You can see the latest version on <a href="http://github.com/ToJans/MVCExtensions/tree/master/src/" target="_blank">github</a>.</p>
+<p>The next thing to do is split up the mapping bit using a proper mapping tool (f.e. <a href="http://www.codeplex.com/AutoMapper" target="_blank">AutoMapper</a>).</p>
+<h3>Edit 2:</h3>
+<p>New article here : <a class="taggedlink" href="http://www.corebvba.be/blog/post/The-Quest-for-the-perfect-ASPNet-MVC-code-v03.aspx">The Quest for the perfect ASP.Net MVC code : v0.3</a></p>
+<p><div class="code">
+</p>
+<p>// For a <span class="kwrd">while</span> I have been looking <span class="kwrd">for</span> the perfect ASP.Net MVC code.<br />// This <span class="kwrd">is</span> the cleanest code I have been able to write.<br />// I would like to challenge everyone to <span class="kwrd">do</span> better !!!<br />//<br />// By <span class="kwrd">this</span> I mean creating a better controller/views <span class="kwrd">if</span> possible codewise.<br />// The focus <span class="kwrd">is</span> not on the layout stuff, but having it might be a plus.<br />//<br />// The scope : a very rudimentary Task list (KISS)<br />//<br />// Some more info about my approach :<br />// It uses view models which contain both data and ActionLink references<br />// (like ICommand <span class="kwrd">in</span> WPF M-V-VM )<br />//<br />// You can download the full source here : <br />//&nbsp;&nbsp;&nbsp;&nbsp; http://github.com/ToJans/MVCExtensions/tree/master/src/<br />//<br />// You will see it <span class="kwrd">is</span> very easy to alter, just download it and press F5<br />//<br />// Please <span class="kwrd">do</span> let me know what you think about my approach <span class="kwrd">as</span> well,<br />// and whether you could <span class="kwrd">do</span> better: ToJans@twitter<br />// Send <span class="kwrd">this</span> link to <span class="kwrd">as</span> much fellow coders <span class="kwrd">as</span> possible, so we can see lots of alternatives<br />//<br />// PS: you can also leave a comment @ my website (look at my twitter account)<br />//<br /><br />// --------------------------------------------------------------------------------<br />// Controller :<br />// --------------------------------------------------------------------------------<br /><span class="kwrd">namespace</span> Tasks.Core.Controllers<br />{<br />&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> <span class="kwrd">class</span> TaskController : Controller<br />&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <span class="kwrd">for</span> the sake of the demo we <span class="kwrd">do</span> not use DI <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // but just a <span class="kwrd">static</span> <span class="kwrd">class</span> instance here with a fake repo<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">static</span> IRepository&lt;Task&gt; rTask = rTask ?? <span class="kwrd">new</span> FakeRepository&lt;Task&gt;(<span class="kwrd">null</span>);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult Index()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> View(<span class="kwrd">new</span> VMIndex()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AllTasks = rTask.Find.OrderBy(o =&gt; o.Name),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AL_AddTask = <span class="kwrd">this</span>.ActionLink(<span class="str">"Add new task"</span>,c=&gt;c.AddNewTask(<span class="kwrd">null</span>,<span class="kwrd">null</span>))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult AddNewTask(<span class="kwrd">string</span> name,<span class="kwrd">string</span> description)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var t = <span class="kwrd">new</span> Task() { Description = description, Name = name };<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rTask.SaveOrUpdate(t);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">this</span>.RedirectToAction(c =&gt; c.Index());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult Done(<span class="kwrd">int</span> id)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var t = rTask.GetById(id);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.Done = !t.Done;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rTask.SaveOrUpdate(t);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">this</span>.RedirectToAction(c=&gt;c.Index());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult Edit(<span class="kwrd">int</span> id)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var t = rTask.GetById(id);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> View(<span class="kwrd">new</span> VMEdit()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name = t.Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Description = t.Description,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AL_PostEdit = <span class="kwrd">this</span>.ActionLink(<span class="str">"Save changes"</span>,c=&gt;c.PostEdit(t.Id,<span class="kwrd">null</span>,<span class="kwrd">null</span>)),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AL_CancelEdit = <span class="kwrd">this</span>.ActionLink(<span class="str">"Cancel changes"</span>,c=&gt;c.Index())<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult PostEdit(<span class="kwrd">int</span> id,<span class="kwrd">string</span> name,<span class="kwrd">string</span> description)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var t = rTask.GetById(id);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.Name = name;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.Description = description;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rTask.SaveOrUpdate(t);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">this</span>.RedirectToAction(c =&gt; c.Index());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">public</span> ActionResult Delete(<span class="kwrd">int</span> id)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rTask.Delete(rTask.GetById(id));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="kwrd">return</span> <span class="kwrd">this</span>.RedirectToAction(c =&gt; c.Index());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; }<br />}<br /><br />// --------------------------------------------------------------------------------<br />// Index.Spark<br />// --------------------------------------------------------------------------------<br />&lt;viewdata model=<span class="str">"Tasks.Core.ViewModel.Tasks.VMIndex"</span> /&gt;<br />&lt;content name=<span class="str">"Title"</span>&gt;<br />&nbsp;&nbsp;&nbsp; Index<br />&lt;/content&gt;<br /><br />&lt;content name=<span class="str">"Main"</span>&gt;<br />&lt;h1&gt;Task list&lt;/h1&gt;<br />&lt;<span class="kwrd">if</span> condition=<span class="str">"Model.AllTasks.Count()==0"</span>&gt;<br />&nbsp;&nbsp;&nbsp; No tasks yet.<br />&lt;/<span class="kwrd">if</span>&gt;<br />&lt;<span class="kwrd">else</span>&gt;<br />&nbsp; &lt;table&gt;<br />&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Name&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Name&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Status&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Edit&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Delete&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br />&nbsp;&nbsp;&nbsp; &lt;tr each=<span class="str">"var t in Model.AllTasks"</span>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;${t.Name}&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;${t.Description}&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;&lt;alink a=<span class="str">"t.AL_Status()"</span> /&gt;&lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;&lt;alink a=<span class="str">"t.AL_Edit()"</span> /&gt; &lt;/td&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;&lt;alink a=<span class="str">"t.AL_Delete()"</span> /&gt; &lt;/td&gt;<br />&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br />&nbsp; &lt;/table&gt;<br />&lt;/<span class="kwrd">else</span>&gt;<br />&lt;hr /&gt;<br />&lt;h3&gt;Add a <span class="kwrd">new</span> task&lt;/h3&gt;<br />&nbsp;&nbsp;&nbsp; &lt;aform a=<span class="str">"Model.AL_AddTask"</span>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label <span class="kwrd">for</span>=<span class="str">"Name"</span>&gt;Name :&lt;/label&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type=<span class="str">"text"</span> name=<span class="str">"Name"</span> /&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label <span class="kwrd">for</span>=<span class="str">"Description"</span>&gt;Description:&lt;/label&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;textarea cols=<span class="str">"20"</span> rows=<span class="str">"2"</span> name=<span class="str">"Description"</span> &gt;&lt;/textarea&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp; &lt;/aform&gt;<br />&lt;/content&gt;<br /><br />// --------------------------------------------------------------------------------<br />// Edit.Spark<br />// --------------------------------------------------------------------------------<br />&lt;viewdata model=<span class="str">"Tasks.Core.ViewModel.Tasks.VMEdit"</span> /&gt;<br /><br />&lt;content name=<span class="str">"Title"</span>&gt;<br />&nbsp;&nbsp;&nbsp; Edit<br />&lt;/content&gt;<br />&lt;content name=<span class="str">"Main"</span>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;Edit <span class="kwrd">this</span> task&lt;/h3&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;aform a=<span class="str">"Model.AL_PostEdit"</span>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label <span class="kwrd">for</span>=<span class="str">"Name"</span>&gt;Name :&lt;/label&gt;&lt;br/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type=<span class="str">"text"</span> <span class="kwrd">value</span>=<span class="str">"${Model.Name}"</span> name=<span class="str">"Name"</span> /&gt;&lt;br/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label <span class="kwrd">for</span>=<span class="str">"Description"</span>&gt;Description:&lt;/label&gt;&lt;br/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;textarea cols=<span class="str">"20"</span> rows=<span class="str">"2"</span> name=<span class="str">"Description"</span> &gt;${Model.Description}&lt;/textarea&gt;&lt;br /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/aform&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;alink a=<span class="str">"Model.AL_CancelEdit"</span> /&gt;<br />&lt;/content&gt;<br /></div></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div><div class="footer">
+	<hr class="thin" />
+	<div class="pure-menu pure-menu-horizontal pure-menu-open">
+		<ul class="footer-menu">
+		
+		</ul>
+	</div>
+
+	<p>&copy; 2021. All rights reserved. </p>
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41936060-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+
+</html>

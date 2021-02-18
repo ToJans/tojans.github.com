@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | Fixing blatantly obvious wrong assumptions is hard </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="http://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="http://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="http://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="http://tojans.me/posts/fixing-blatantly-obvious-wrong-assumptions-is-hard/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="http://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="http://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Fixing blatantly obvious wrong assumptions is hard"/>
+<meta name="twitter:description" content="So, yesterday I had another one of those &ldquo;in your face moments&rdquo;: While working on the Erlang FoundationDB driver, I spent a lot of time on a bug that was so blatantly obvious that I did not notice it for a long time."/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="http://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="../../">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="../../index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="../../posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="../../contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Fixing blatantly obvious wrong assumptions is hard</h3>
+                
+            </div>
+
+            <p>So, yesterday I had another one of those &ldquo;in your face moments&rdquo;: While working on the 
+<a href="https://github.com/happypancake/fdb-erlang">Erlang FoundationDB driver</a>, I spent <strong>a lot</strong> of time on a bug that was so blatantly obvious that I did not notice it for a long time.</p>
+<p><img src="http://i.snag.gy/5r5eC.jpg" alt="My dev environment"></p>
+<p>As I had been stuck for a long time, <a href="https://twitter.com/ptomasroos">Tomas</a> suggested me to ask the <a href="https://foundationdb.com/">FoundationDB guys</a> for help, so we did.</p>
+<p>When I asked for help, the bug was so obvious that it probably took them like 2 seconds to notice what the problem was. (I explain it step by step later, but <a href="https://github.com/happypancake/fdb-erlang/commit/2b15aeef27ced6a6d14d97f9a01c9682f9047c14#diff-754ec66646d2386b94625d7ecb6c1ca8L309">here&rsquo;s the commit fixing the bug</a> if you cannot wait.)</p>
+<p>What the bug comes down to, is that I had to pass pointers to instances that did exist, and that they would not be allocated by the calling function. (After all, having the caller allocating two <code>int</code>s and a reference to
+a <code>struct</code> would be pretty useless IMO.)</p>
+<h3 id="thats-a-stupid-bug-how-did-that-happen">That&rsquo;s a stupid bug! How did that happen?</h3>
+<p>Well, in one of the usual ways it does&hellip;</p>
+<p>First things first: the solution is an Erlang interface to FoundationDB.</p>
+<p>An <a href="http://www.erlang.org/doc/tutorial/nif.html">Erlang NIF</a> - NIF is short for a &ldquo;Native InterFace&rdquo; -
+requires you to write an interface with a lib-file (or DLL on windows) that converts the Erlang terms to proper binary parameters, calls the relevant function(s), and then reports 
+the results back in the Erlang term binary format.</p>
+<p>When I was creating this wrapper, I noticed this was quite a repetitive job, prone to errors, so I decided to write a bash script that generated the C-code skeleton for all of these calls for me, based on a header file and 
+the library.</p>
+<p>This turned out to be <a href="https://github.com/happypancake/fdb-erlang/blob/master/tools/generate_fdb_nif">quite easy to write</a>. I do agree that it is will probably be hard to de-construct, but as this script was required to run only once, this was good enough for me.</p>
+<p>But, automatically parsing these things and generating the C-files had an extra implication: I generated code like this:</p>
+<script src="https://gist.github.com/ToJans/8613033.js?file=before.c"></script>
+<p>Hence, when I was calling the FoundationDB library, I did it like this:</p>
+<script src="https://gist.github.com/ToJans/8613033.js?file=intermediate.c"></script>
+<p>Please notice lines 4 to 6: these were auto-generated.</p>
+<p>So while running my unit/integration tests on this, I started debugging the NIF - <a href="https://www.gnu.org/software/gdb/">GDB</a> is pretty neat by the way -, and could not find the error.
+When I asked the FoundationDB guys for help, they replied almost instantly saying I should not pass in pointers to integers and pointers to pointers to structs - <code>**</code> is usually a red flag in C code anyway, but, in my defense,  it had been over 15 years ago that I actually used C(PP) -.</p>
+<p>So I replaced it with initialized values like this:</p>
+<script src="https://gist.github.com/ToJans/8613033.js?file=after.c"></script>
+<p>Once again, notice lines 4 to 6.</p>
+<h3 id="lessons-learned">Lessons learned</h3>
+<p>It has been probably more then a few years ago that I have been bitten by such a stupid bug.</p>
+<p>Next time, if I am stuck on what seems to be a very hard problem, I&rsquo;ll better get some external advice sooner; apparently an extra pair of eyes helps big-time.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div><div class="footer">
+	<hr class="thin" />
+	<div class="pure-menu pure-menu-horizontal pure-menu-open">
+		<ul class="footer-menu">
+		
+		</ul>
+	</div>
+
+	<p>&copy; 2021. All rights reserved. </p>
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41936060-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | Continuous thinking: CQRS explained to a 10-year old </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="http://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="http://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="http://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="http://tojans.me/posts/continuous-thinking-cqrs-explained-to-a-10-year-old/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="http://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="http://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Continuous thinking: CQRS explained to a 10-year old"/>
+<meta name="twitter:description" content="IntroductionThe concept behind CQRS is neat: detach your domain implementation completely from your representation requirements."/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="http://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="../../">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="../../index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="../../posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="../../contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Continuous thinking: CQRS explained to a 10-year old</h3>
+                
+            </div>
+
+            <h3>Introduction</h3>
+<p>The concept behind CQRS is neat: detach your domain implementation completely from your representation requirements. I even wrote a framework for it&nbsp;as a learning tool, so somebody without any prior experience should be able to boot a CQRS app in a few minutes.</p>
+<p>The main idea behind this framework is providing developers new to CQRS an operating room where they can compose their own little<a href="http://youtu.be/xos2MnVxe-c" target="_blank"> CQRS Frankenstein app</a>.</p>
+<p>The whole framework is constructed in a way that it forces you to make your domain implementation completely persistence ignorant, respecting typical AR/transactional boundaries.</p>
+<p><a href="http://github.com/ToJans/Scritchy/wiki" target="_blank">Scritchy</a> is not "the framework to write CQRS apps"; Scritchy is a framework that tries to provide you a learning platform where you can start grasping the basic principles, advantages and disadvantages in using CQRS.</p>
+<p>Once you understand the basic principles behind the CQRS setup, and why everything is setup the way it is, I would advise anybody to gradually replace parts of the framework and just opt for whatever approach you like, using proper message busses, pub/sub/...&nbsp;</p>
+<p>If you write your app following the conventions Scritchy dictates, the only thing you need to change to remove the Scritchy dependency is the base object your Aggregate Root inherits from; that is the only dependency that is ever necessary in you app implementation. This was by design,to make future migrations as easy as possible.</p>
+<p>I wrote this framework to enable a dev new to CQRS to get his app up and running in a few minutes... But apparently that is not enough....</p>
+<p></p>
+<p>&nbsp;</p>
+<h3>Once upon a time at a certain newsgroup...</h3>
+<p>There has been <a href="https://groups.google.com/forum/#!topic/dddcqrs/cSgPPgMFEq8" target="_blank">a huge discussion over at the CQRS newsgroup about whether a CQRS framework has a "raison d'&ecirc;tre"</a>. I think it has, as a learning tool, some disagree; I'm fine with that:</p>
+<p><a href="http://xkcd.com/386/" target="_blank"><img src="http://imgs.xkcd.com/comics/duty_calls.png" alt="XKCD: duty calls" /></a></p>
+<p>What I find really odd however, is that white coats are now starting to draw <a href="https://groups.google.com/forum/#!topic/dddcqrs/XAq0lCyLDs4" target="_blank">"MetaSchema's"</a> or whatever the **** they call them, complicating and abstracting a very simple concept even more then necessary.</p>
+<p>As an answer to that<a href="https://github.com/ToJans/MinimalisticCQRS/blob/master/MinimalisticCQRS/MiniCQRS.cs" target="_blank"> I wrapped up a basic app in a few hours which demonstrated about what I think CQRS is in it's core concept</a>, i.e. make a CQRS app as simple as possible, only abstracting what you absolutely have to...</p>
+<p>This is the answer I got:</p>
+<pre><span style="color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: 13px;">It is unfortunate that people learn programming without meeting the basic tenets of structured programming.&nbsp;
+</span><span style="color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: 13px;">Programming with procedures (your commands and queries) has been here form more then 30 decades,&nbsp;
+</span><span style="color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: 13px;">some are commands other are queries. CQS is usually applied here too!</span></pre>
+<p>ROFL !! Talk about missing the point!! Anyway, after all these fruitless attempts I decided to invest my time in some things more productive and get away from all these semantic meta-level blahblahblah....</p>
+<p>&nbsp;</p>
+<h3>CQRS - the essence IMO - how would you explain it to a 10-year old ?</h3>
+<p>All those neat diagrams perfectly aligned and perfectly abstracting away everything in CQRS usually give me the shivers, which is why I started writing this article in the first place. I think<a href="http://codeofrob.com/archive/2011/09/28/cqrs-is-too-complicated.aspx" target="_blank"> Rob Ashton's article was a great attempt</a>, but still a bit to complicated.</p>
+<p>One of <a href="http://www.linkedin.com/in/tomjanssens" target="_blank">my current occupations as an ICT generalist is giving strategic ICT advice</a>. Every time we talk about customer interaction/transfering your intent to your customers, I suggest them to interact with their customers as if they were 10-year-olds as an exercise, in order to get to the essence of their intent... So I decided to dogfood this approach, and here is my attempt to explain CQRS to my 10-year-old audience:</p>
+<p>&nbsp;</p>
+<p><img src="http://www.corebvba.be/blog/image.axd?picture=2011%2f11%2fCQRS10YO.png" alt="" /></p>
+<p>&nbsp;</p>
+<p>That is all there is to CQRS IMO, nothing more, nothing less.</p>
+<p>(For all the font freaks, the typeface used in this graph is MouseDrawn&trade;, which will be available for ordering soon, SRP 10K&euro; ;) ).</p>
+<p>&nbsp;</p>
+<h3>Conclusion</h3>
+<p>CQRS is a neat concept, and applying it <a href="http://www.corebvba.be/blog/post/My-CQRS-Cookbook.aspx">gives you all kinds of advantages</a>... But there is no need to make it more complicated then it is; in essence it is just about separating your domain implementation from your UI representation, nothing more, nothin less.&nbsp;</p>
+<p>I feel a lot of people are getting confused when they try to get started with CQRS. There is no need to; just separate your UI/domain implementation and UI representation.</p>
+<p>People interested in the absolute minimum required to do CQRS, I suggest to take a look <a href="https://github.com/ToJans/MinimalisticCQRS/blob/master/MinimalisticCQRS/MiniCQRS.cs" target="_blank">at my example app over at github</a>. I would advise <a href="https://github.com/ToJans/Scritchy" target="_blank">Scritchy to people who want to experiment with CQRS for the first time and want a proper app architecture</a>&nbsp;(<a href="http://nuget.org/List/Packages/Scritchy" target="_blank">nuget available</a>). For others - the more experienced people - I suggest you opt for whatever you think is appropriate, as CQRS is not about components, it is about a concept.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="../../categories/development/">Development</a><a class="category" href="../../categories/ddd/">DDD</a></span>
+
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div><div class="footer">
+	<hr class="thin" />
+	<div class="pure-menu pure-menu-horizontal pure-menu-open">
+		<ul class="footer-menu">
+		
+		</ul>
+	</div>
+
+	<p>&copy; 2021. All rights reserved. </p>
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41936060-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+
+</html>

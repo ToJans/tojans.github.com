@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | micro-service-architecture versus SOA-EDA </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="http://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="http://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="http://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="http://tojans.me/posts/micro-service-architecture-versus-soa-eda/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="http://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="http://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="micro-service-architecture versus SOA-EDA"/>
+<meta name="twitter:description" content="@pjvds @FransBouma it sounds like (-micro) services. Isn&#39;t this what everyone has been saying for about a decade?"/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="http://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="../../">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="../../index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="../../posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="../../contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>micro-service-architecture versus SOA-EDA</h3>
+                
+            </div>
+
+            <blockquote class="twitter-tweet" data-conversation="none" lang="nl"><p><a href="https://twitter.com/pjvds">@pjvds</a> <a href="https://twitter.com/FransBouma">@FransBouma</a> it sounds like (-micro) services. Isn&#39;t this what everyone has been saying for about a decade? Soa+eda? Why new things?</p>&mdash; gregyoung (@gregyoung) <a href="https://twitter.com/gregyoung/statuses/428888276351455232">30 januari 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>First things first:</p>
+<ul>
+<li>MSA = micro-service architecture (MS = micro-service)</li>
+<li>SOA = service-oriented architecture</li>
+<li>EDA = event-driven architecture</li>
+</ul>
+<h3 id="introduction">Introduction</h3>
+<p>When people start talking about MSA, they usually mention the fact that a micro-service should be about a 100 lines of code. And then&hellip; it stops, and they fail to explain the difference between MSA and SOA, except for the fact that the services need to be smaller.</p>
+<p>Luckily, I have had the time to investigate this concept during my <a href="http://tojans.me/blog/2014/01/13/enjoyed-programmer-anarchy-looking-for-the-next-project/">recently finished client project</a>, and it took me a while to grasp the difference; here is the gist of it:</p>
+<h3 id="micro-service-architecture-and-the-human-body">Micro-service architecture and the human body</h3>
+<blockquote>
+<p>Let&rsquo;s assume I am being chased by a lion. If I he scratches my leg, will that result in a sudden death, i.e. a collapse of my whole body?</p>
+</blockquote>
+<p>No it does not. It might hurt big-time, and I might need to get some help on the long term, but the first few minutes, seconds or maybe even hours, my brain will probably ignore the signals sent by the nerve receptors, and I should probably try to reduce the amount of blood loss I have.</p>
+<p>My adrenaline levels will rise, I will ignore the pain signals, and I might be able to run faster and longer then I ever imagined.</p>
+<h3 id="the-information-highway">The information highway</h3>
+<p>Think about the way our body communicates with our brain: the brain has two main paths for communicating with the body: the nerves and the blood vessels. They both have a distinct function:</p>
+<ul>
+<li>Nerves control muscles and report back status using nerve receptors.</li>
+<li>Blood vessels report back information to your brain using hormones generated by your organs; for example the <a href="http://en.wikipedia.org/wiki/Leptin">leptin hormone</a> reports satiety to the brain. They are also used to transport
+essential nutrients to your cells.</li>
+</ul>
+<p>This is a gross simplification, but is in essence how your body works.</p>
+<h3 id="some-remarks">Some remarks</h3>
+<ul>
+<li>The brain responds to both hormones and nerve receptors with a distinction; nerves are about state of an organ or muscle(i.e. lift that arm), while hormones are more about meta-information: how can I survive/multiply/&hellip;</li>
+<li>An organ might fail, but that does not imply that you die. The body can adapt itself in numerous ways by regulating hormones first, and finding new ways after that.</li>
+<li>The brain is a mystery; we know some things about it,  but we don&rsquo;t know everything. If we would have unlimited bodies, computing power and engineering skills, we could probably attach all nerves and hormone detectors to a machine, put them all in a room, and use survival of the fittest to figure out the best path to enlightenment. The problem is in defining what &ldquo;survival&rdquo; actually means, i.e. live the longest in the room, grow the oldest, have the fullest life, &hellip;</li>
+<li>Some organs are essential (f.e. your heart).</li>
+<li>The body is adaptive, f.e. nerve receptors in the brain have been retrained to allow blind people to &ldquo;see&rdquo; (= a perception of awareness).</li>
+</ul>
+<h3 id="this-brings-us-to-the-msa">This brings us to the MSA</h3>
+<p>Does your brain know how your nerves and blood vessels are organised? I don&rsquo;t think so; what matters to the brain is cause and consequence. MSA&rsquo;s work just like that:</p>
+<ul>
+<li>Your nerves report the well-being of the system: do all my organs function, is one missing, it&rsquo;s the state of your system:
+<ul>
+<li>does my service still run</li>
+<li>when was the last time it emitted an event (i.e. is it actually used).</li>
+<li>how much events were emitted in a time-frame</li>
+<li>does the system reply to a heart-beat.</li>
+</ul>
+</li>
+<li>While your nerves are important, the value is in the well-being (i.e. the hormones flowing through your blood stream)
+<ul>
+<li>do we have visitors on my web site</li>
+<li>are they ordering stuff</li>
+<li>do we get payments</li>
+<li>but also very short-term other goals
+<ul>
+<li>do people buy our new product X</li>
+<li>does offering the 2nd item for free help</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="the-gist-of-it">The gist of it</h3>
+<p>Here&rsquo;s the difference between SOA and MSA: as long as the &ldquo;hormones&rdquo;(=used to generate business metrics) do not signal a problem, you don&rsquo;t care about the organs (i.e. individual services), f.e. if you don&rsquo;t know what a service is doing, just shut it down. If the business metrics don&rsquo;t show it, it was useless. If people start making a fuss about it, add the proper business metric, and reboot the service.</p>
+<p>Have an extra feature or a customer-specific thing? Just let both services run, and let the one processing those responses decide which answer to take.</p>
+<p>Does a service fail? As long as your business metrics don&rsquo;t show it, you don&rsquo;t have a problem&hellip; In fact, because your business rules might change every once in a while, services will get redundant.</p>
+<p>Embrace failure and shut-down services at random during office hours. If your business metrics show failure, make sure that there are always at least 2 of them running, so the next time one of them fails, you will no longer have that issue&hellip; Or just write another service - after all, it&rsquo;s just a couple of 100 lines - that does what it is supposed to do, and maybe even way better then before.</p>
+<p>If a system fails, you go back to the nerves to check what might be the cause, or just decide to fix it by launching another service. Experience will tell you.</p>
+<h3 id="where-all-of-this-is-coming-from">Where all of this is coming from</h3>
+<p>As Nassim Taleb explains in 
+<a href="http://www.amazon.com/gp/product/0812979680/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0812979680&linkCode=as2&tag=httptojanme-20">Antifragile: Things That Gain from Disorder</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=httptojanme-20&l=as2&o=1&a=0812979680" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+, the risk of a lot of small things all failing simultaneously is way smaller then the risk of one big thing failing at once. To get good at handling failure, it is better to fail all the time. This will allow you to have confidence in the system as a whole, while individual components might fail.</p>
+<p>The essence of MSA is monitoring the &ldquo;what&rdquo;, while EDA and SOA typically monitor the &ldquo;how&rdquo;. You don&rsquo;t care about how the system works, just that it works&hellip; If it fails, you fix it by adding another service or adjusting the existing service. By making failure a non-event, you become essentially resistant to it.</p>
+<p>This also implies you need to respect programmer anarchy, but that is the subject for another post.</p>
+<p><strong>PS: I&rsquo;m currently looking for projects, feel free to <a href="mailto::tom@corebvba.be">contact me</a>.</strong></p>
+<p><a name="#update"> </a></p>
+<h2 id="update">UPDATE</h2>
+<p>While discussing this post on twitter, I think Simon Guindon hit the nail on the head:</p>
+<blockquote class="twitter-tweet" lang="nl"><p><a href="https://twitter.com/gregyoung">@gregyoung</a> <a href="https://twitter.com/ToJans">@ToJans</a> <a href="https://twitter.com/pjvds">@pjvds</a> <a href="https://twitter.com/FransBouma">@FransBouma</a> <a href="https://twitter.com/nntaleb">@nntaleb</a> <a href="https://twitter.com/fgeorge52">@fgeorge52</a> &quot;it&#39;s a mindset&quot; hand waving and struggling to differentiate :)</p>&mdash; Simon Guindon (@simongui) <a href="https://twitter.com/simongui/statuses/429139607561576448">31 januari 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>In my opinion MSA is more about the mindset then about the architecture. When you start from the MSA mindset, you can get rid of a lot of the cruft and overhead that conventional systems typically have. I do assume MSA is not for everyone (f.e. it would probably be completely averse to SOX-compliance).</p>
+<p>A key factor is indeed determining where exactly to use MSA, and where not:</p>
+<blockquote class="twitter-tweet" data-conversation="none" lang="nl"><p><a href="https://twitter.com/ToJans">@ToJans</a> <a href="https://twitter.com/gregyoung">@gregyoung</a> <a href="https://twitter.com/pjvds">@pjvds</a> <a href="https://twitter.com/FransBouma">@FransBouma</a> <a href="https://twitter.com/nntaleb">@nntaleb</a> <a href="https://twitter.com/fgeorge52">@fgeorge52</a> interesting post. I think the next step is working out where MSA is suitable.</p>&mdash; Nick (@ntcoding) <a href="https://twitter.com/ntcoding/statuses/428942161430597632">30 januari 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Finally, this:</p>
+<blockquote class="twitter-tweet" lang="nl"><p><a href="https://twitter.com/ToJans">@ToJans</a> <a href="https://twitter.com/pjvds">@pjvds</a> <a href="https://twitter.com/FransBouma">@FransBouma</a> <a href="https://twitter.com/nntaleb">@nntaleb</a> <a href="https://twitter.com/fgeorge52">@fgeorge52</a> <a href="https://twitter.com/simongui">@simongui</a> I dunno in well done systems this stuff is decades old.</p>&mdash; gregyoung (@gregyoung) <a href="https://twitter.com/gregyoung/statuses/429139825300484096">31 januari 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" lang="nl"><p><a href="https://twitter.com/ToJans">@ToJans</a> <a href="https://twitter.com/pjvds">@pjvds</a> <a href="https://twitter.com/FransBouma">@FransBouma</a> <a href="https://twitter.com/nntaleb">@nntaleb</a> <a href="https://twitter.com/fgeorge52">@fgeorge52</a> <a href="https://twitter.com/simongui">@simongui</a> not to say its a bad idea and new naming can help bring it forward</p>&mdash; gregyoung (@gregyoung) <a href="https://twitter.com/gregyoung/statuses/429139899954892800">31 januari 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div><div class="footer">
+	<hr class="thin" />
+	<div class="pure-menu pure-menu-horizontal pure-menu-open">
+		<ul class="footer-menu">
+		
+		</ul>
+	</div>
+
+	<p>&copy; 2021. All rights reserved. </p>
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41936060-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+
+</html>

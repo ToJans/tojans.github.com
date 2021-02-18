@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DDD on Tom&#39;s ramblings</title>
+    <link>http://tojans.me/tags/ddd/</link>
+    <description>Recent content in DDD on Tom&#39;s ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 24 Feb 2014 00:00:00 +0000</lastBuildDate><atom:link href="http://tojans.me/tags/ddd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Selling DDD</title>
+      <link>http://tojans.me/posts/selling-ddd/</link>
+      <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tojans.me/posts/selling-ddd/</guid>
+      <description>A little while ago, we gave a series of short talks called &amp;ldquo;DDD Basics&amp;rdquo; for the Belgian Domain-driven design community.</description>
+    </item>
+    
+    <item>
+      <title>Why bad software architecture is easy to monetize</title>
+      <link>http://tojans.me/posts/why-bad-software-architecture-is-easy-to-monetize/</link>
+      <pubDate>Mon, 17 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tojans.me/posts/why-bad-software-architecture-is-easy-to-monetize/</guid>
+      <description>This morning I received yet another &amp;ldquo;interesting&amp;rdquo; job offer, which looked like this:</description>
+    </item>
+    
+    <item>
+      <title>The very first #DDDBE event: the modellathon</title>
+      <link>http://tojans.me/posts/the-very-first-dddbe-event-the-modellathon/</link>
+      <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://tojans.me/posts/the-very-first-dddbe-event-the-modellathon/</guid>
+      <description>This is my personal review of the @DDDBE inaugural meeting: a modellathon.</description>
+    </item>
+    
+    <item>
+      <title>My #CQRS cookbook</title>
+      <link>http://tojans.me/posts/my-#cqrs-cookbook/</link>
+      <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tojans.me/posts/my-#cqrs-cookbook/</guid>
+      <description>Here is my personal take on how I interpret all things CQRS.</description>
+    </item>
+    
+  </channel>
+</rss>
