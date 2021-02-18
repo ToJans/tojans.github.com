@@ -1,32 +1,100 @@
-baseurl="http://tojans.me/"
-title="Tom's ramblings"
-footnotereturnlinkcontents="↩"
-theme="redlounge"
+baseURL ="http://tojans.me/"
+languageCode = "en"
+DefaultContentLanguage = "en"
+title = "Tom's ramblings"
+theme = "anatole"
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
+
+# Enable Disqus
 disqusShortname = "tojansramblings"
 
-[permalinks]
-  blog="/blog/:year/:month/:day/:slug/"
+# Google Analytics
+googleAnalytics = "UA-41936060-1"
+
+# Syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
 [params]
-  sidebartitle = "Tom's ramblings"
-  sidebartagline="Random opinionated blurbs"
-  AuthorName="Tom Janssens"
-  GitHubUser="tojans"
+title = "Tom's ramblings"
+author="Tom Janssens"
+#copyright = "2020-2021"
+description="Random opinionated blurbs"
+profilePicture = "images/profile.jpg"
+keywords = ""
+favicon = "favicons/"
+# example ["css/custom.css"]
+customCss = []
+# example ["js/custom.js"]
+customJs = [] 
+mainSections = []
+images = ["images/site-feature-image.png"]
+doNotLoadAnimations = true
+# Form Spree Contact Form
+#contactFormAction = "https://formspree.io/f/your-form-hash-here"
+# Google Site Verify
+#googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+# indexDateFormat = "Mon, Jan 2, 2006"
+# listDateFormat = "Jan 2"
+# singleDateFormat = "Mon, Jan 2, 2006"
+# display mode dark or light
+#displayMode = "dark"
+
+[params.simpleAnalytics]
+# enable = true
+# customurl = "https://analytics.example.com"
+
+## Math settings
+[params.math]
+enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
+
+## Social links
+# use 'fab' when brand icons, use 'fas' when standard solid icons.
+[[params.socialIcons]]
+icon = "fab fa-twitter"
+title = "Twitter"
+url = "http://www.twitter.com/tojans"
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "http://www.linkedin.com/in/tomjanssens"
+
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "http://www.github.com/tojans"
+
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:tom@corebvba.be"
+
+[[params.socialIcons]]
+icon = "fas fa-rss"
+title = "RSS"
+url = "/index.xml"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+
 [[menu.main]]
-    name = "About"
-    url = "/about"
-[[menu.social]]
-    pre = "<i class='fa fa-twitter'></i>"
-    url = "http://www.twitter.com/tojans"
-    identifier = "twitter"
-[[menu.social]]
-    pre = "<i class='fa fa-github'></i>"
-    url = "http://www.github.com/tojans"
-    identifier = "github"
-[[menu.social]]
-    pre = "<i class='fa fa-linkedin'></i>"
-    url = "http://www.linkedin.com/in/tomjanssens"
-    identifier = "linkedin"
-[[menu.social]]
-    pre = "<i class='fa fa-rss'></i>"
-    url = "/index.xml"
-    identifier = "atom"
+name = "Blog posts"
+weight = 300
+identifier = "posts"
+url = "/posts/"
+    
+[[menu.main]]
+name = "Contact"
+weight = 400
+identifier = "contact"
+url = "/contact/"
