@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | Build asp.net MVC applications FAST with  MVCExtensions v0.4 </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="http://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="http://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="http://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="http://tojans.me/posts/build-asp.net-mvc-applications-fast-with-mvcextensions-v0.4/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="http://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="http://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Build asp.net MVC applications FAST with  MVCExtensions v0.4"/>
+<meta name="twitter:description" content="Introduction
+Today I finished v0.4 of my MVCExtensions library and I pushed the sourcecode to github."/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="http://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="/contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Build asp.net MVC applications FAST with  MVCExtensions v0.4</h3>
+                
+            </div>
+
+            <h3>Introduction<br /></h3>
+<p>Today I finished v0.4 of my MVCExtensions library and <a title="Source on github" href="http://github.com/ToJans/MVCExtensions/archives/master" target="_blank">I pushed the sourcecode to github</a>.</p>
+<p>I also included a very simple tasklist, in order to show you on how to get started using this library. You can also see (slightly outdated) example code in <a title="Teaser on my upcoming mvcextensions project release" href="http://www.corebvba.be/blog/post/Teaser-on-my-upcoming-mvcextensions-project-release.aspx">this blog post</a>...</p>
+<p>You can see a demo of the tasklist app running <a title="Simple task list demo app" href="http://www.corebvba.be/simpletasklist/home.aspx">here</a>. (Try entering a task without a name, or with a name that has more then 256 chars to see the custom strings in action).</p>
+<p>You can download the full sourcecode <a title="Full sourcecode zip/tar" href="http://github.com/ToJans/MVCExtensions/archives/master" target="_blank">here</a>.</p>
+<h3>Update</h3>
+<p>I now made a screencast as well. it is available <a href="http://www.corebvba.be/blog/post/Screencast-Build-an-Aspnet-MVC-application-quickly-using-MVCExtensions.aspx">here</a>.</p>
+<p></p>
+<h3>What is MvcExtensions ?<br /></h3>
+<p>It is a library I wrote that takes out the burden of setting up a new MVC app each time. It was developed in order to be able to deliver apps faster to my customers...</p>
+<p>In order to set it up, you need to <a href="http://github.com/ToJans/MVCExtensions/blob/master/src/Tasks.Core/Services/TaskDatabaseFluentMapping.cs" target="_blank">create a class that defines where your domain model objects are</a>, and <a href="http://github.com/ToJans/MVCExtensions/blob/master/src/Tasks.UI.Web/Global.asax.cs" target="_blank">register the module in global.asax</a>. That's it !!!<br />The library auto-wires asp.net mvc with <a title="Castle.Windsor getting started" href="http://www.castleproject.org/container/gettingstarted/index.html" target="_blank">castle.windsor</a> IOC, <a href="http://twitter.com/JBogard" target="_blank">@jbogard's</a> <a href="http://www.lostechies.com/blogs/jimmy_bogard/archive/2009/01/22/automapper-the-object-object-mapper.aspx" target="_blank">Automapper</a>, <a href="http://twitter.com/Jagregory" target="_blank">@jagregory</a>'s <a href="http://fluentnhibernate.org/" target="_blank">FluentNHibernate </a>ORM, <a href="http://twitter.com/LouDeJ" target="_blank">@Loudej</a>'s <a href="http://sparkviewengine.com/" target="_blank">Spark viewengine</a>, <a href="http://twitter.com/JeremySkinner">@JeremySkinner</a>'s <a title="Mvccontrib home" href="http://mvccontrib.org/" target="_blank">MvcContrib</a> and some custom extensions. The idea is that the library takes all the hassle out of the setup of an asp.net MVC app and their dependencies...</p>
+<p>It should also be pretty well structured using <a href="http://github.com/ToJans/MVCExtensions/tree/master/src/MvcExtensions/Services/" target="_blank">Services</a>/<a href="http://github.com/ToJans/MVCExtensions/blob/master/src/MvcExtensions/Services/Impl/FluentNHibernate/Repository.cs" target="_blank">Generic repository</a>, <a href="http://github.com/ToJans/MVCExtensions/tree/master/src/Tasks.Core/Model/" target="_blank">Model</a>-<a href="http://github.com/ToJans/MVCExtensions/tree/master/src/Tasks.UI.Web/Views" target="_blank">View</a>-<a href="http://github.com/ToJans/MVCExtensions/tree/master/src/Tasks.UI.ViewModels/Home/" target="_blank">Viewmodels</a>, ...<br />It also has a few <a href="http://github.com/ToJans/MVCExtensions/blob/master/src/MvcExtensions/Model/MyText.cs" target="_blank">predefined string classes with fixed length/null-&amp; regex checkers for validation as well,</a> controller action links<a href="http://www.corebvba.be/blog/post/M-V-VM-in-AspNet-MVC-removing-dependencies-between-asp-Net-views-and-controller-actions.aspx" target="_blank"> that are defined in the controller instead of in the view</a>, ...</p>
+<p>This should allow you to write <a href="http://github.com/ToJans/MVCExtensions/blob/master/src/Tasks.Core/Controllers/HomeController.cs" target="_blank">very clean controllers</a> as well with <a href="http://github.com/ToJans/MVCExtensions/blob/master/src/Tasks.Core/Controllers/HomeContainer.cs" target="_blank">custom automappers injected into the controller</a>.</p>
+<p>It also contains<a href="http://github.com/ToJans/MVCExtensions/tree/master/src/MvcExtensions/UI/Web/View/" target="_blank"> 3 spark extensions</a> for the spark view engine in order to render <a href="http://github.com/ToJans/MVCExtensions/tree/master/src/MvcExtensions/UI/ViewModel/" target="_blank">actionlinks </a>without <a href="http://github.com/ToJans/MVCExtensions/blob/master/src/Tasks.UI.Web/Views/Home/Index.spark" target="_blank">much hassle</a>.</p>
+<h3>Some Aubergine BDD as well<br /></h3>
+<p>Next to this it also contains a  <a href="http://twitter.com/tojans" target="_blank">@tojans</a> <a title="Aubergine on github" href="http://github.com/ToJans/Aubergine" target="_blank">Aubergine</a> BDD&nbsp;<img title="Cool" src="http://www.corebvba.be/blog/editors/tiny_mce3/plugins/emotions/img/smiley-cool.gif" border="0" alt="Cool" />project with <a title="The specs (tm) ;)" href="http://github.com/ToJans/MVCExtensions/blob/master/src/Tasks.Specs/Stories/TaskStories.txt" target="_blank">specs</a> and a <a title="The context class" href="http://github.com/ToJans/MVCExtensions/blob/master/src/Tasks.Specs/TaskContext.cs" target="_blank">context</a>.</p>
+<p>This is the specs file:</p>
+<div id="LC1" class="line"><div class="code">
+<br />
+<pre>Define a group of tasks<br /> <span class="kwrd">using</span> Tasks.Specs.TaskContext<br />  from Tasks.Specs.DLL<br />  <br />  <br />Story manipulate tasks<br />    Is about a group of tasks<br />    <br />    As a person<br />    I want to log my tasks<br />    So that I <span class="kwrd">do</span> not forget anything and get my priorities straight<br />    <br />    Given the following tasks exist<br />        +---------------------------+------------------------+--------+<br />        | name                      | description            | status |<br />        +---------------------------+------------------------+--------+<br />        | Do the dishes             | Be carefull            | Todo   |<br />        | Update Aubergine project  | procrastination FTW !! | Todo   |<br />        | Order stamps              | 20 pieces              | Done   |<br />        +---------------------------+------------------------+--------+<br />    <br />    Scenario Add a <span class="kwrd">new</span> task<br />        When I add the following task<br />            +---------------------------+------------------------+--------+<br />            | name                      | description            | status |<br />            +---------------------------+------------------------+--------+<br />            | Feed the fishes           | Be carefull            | Todo   |<br />            +---------------------------+------------------------+--------+<br />        Then the tasklist should contain the following tasks <br />            +---------------------------+------------------------+--------+<br />            | name                      | description            | status |<br />            +---------------------------+------------------------+--------+<br />            | Do the dishes             | Be carefull            | Todo   |<br />            | Update Aubergine project  | procrastination FTW !! | Todo   |<br />            | Order stamps              | 20 pieces              | Done   |<br />            | Feed the fishes           | Be carefull            | Todo   |<br />            +---------------------------+------------------------+--------+<br />            <br />   Scenario Switch the task status from <span class="str">"Todo"</span><br />        When I <span class="kwrd">switch</span> the status of the task <span class="str">"Do the dishes"</span><br />        Then the tasklist should contain the following tasks <br />            +---------------------------+------------------------+--------+<br />            | name                      | description            | status |<br />            +---------------------------+------------------------+--------+<br />            | Do the dishes             | Be carefull            | Done   |<br />            | Update Aubergine project  | procrastination FTW !! | Todo   |<br />            | Order stamps              | 20 pieces              | Done   |<br />            +---------------------------+------------------------+--------+<br />   <br />   Scenario Switch the task status from <span class="str">"Done"</span><br />        When I <span class="kwrd">switch</span> the status of the task <span class="str">"Order stamps"</span><br />        Then the tasklist should contain the following tasks <br />            +---------------------------+------------------------+--------+<br />            | name                      | description            | status |<br />            +---------------------------+------------------------+--------+<br />            | Do the dishes             | Be carefull            | Todo   |<br />            | Update Aubergine project  | procrastination FTW !! | Todo   |<br />            | Order stamps              | 20 pieces              | Todo   |<br />            +---------------------------+------------------------+--------+<br />        <br />   Scenario Delete a task<br />        When I delete the task <span class="str">"Update Aubergine project"</span><br />        Then the tasklist should contain the following tasks <br />            +---------------------------+------------------------+--------+<br />            | name                      | description            | status |<br />            +---------------------------+------------------------+--------+<br />            | Do the dishes             | Be carefull            | Todo   |<br />            | Order stamps              | 20 pieces              | Done   |<br />            +---------------------------+------------------------+--------+<br /></pre>
+<br /></div></div>
+<p>The specs project generates and shows this <a href="http://www.corebvba.be/simpletasklist/Content/output.html" target="_blank">report</a> whenever it gets built (unless you introduce a bug).</p>
+<h3>What should I do with it ?</h3>
+<p>Well, I would suggest you to check it out, and try to create a small demo app using the mvcextensions lib.</p>
+<p>You can download all the required binaries from a single zip <a href="http://cloud.github.com/downloads/ToJans/MVCExtensions/MvcExtensions_2010_01_21_with_all_the_needed_DLL_s.zip">here</a>.</p>
+<p>I will probably create a walkthrough and/or screencast later on how to do this, unless somebody beats me to it... In case you would like me to show you a demo,<strong> do let me know what kind of app you would like to see.</strong> <br />Do not forget that it should be relatively limited on the functionality side in order to implement it in a short demo...</p>
+<p>Opinions are appreciated !!</p>
+<p>And as always : enjoy !!!</p><div style="text-align:right"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aec37702e3161d4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4aec37702e3161d4"></script></div>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div><div class="footer">
+	<hr class="thin" />
+	<div class="pure-menu pure-menu-horizontal pure-menu-open">
+		<ul class="footer-menu">
+		
+		</ul>
+	</div>
+
+	<p>&copy; 2021. All rights reserved. </p>
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41936060-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+
+</html>
