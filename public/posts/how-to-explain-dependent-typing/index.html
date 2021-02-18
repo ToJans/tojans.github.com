@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | How to explain dependent typing </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="http://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="http://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="http://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="http://tojans.me/posts/how-to-explain-dependent-typing/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="http://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="http://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="How to explain dependent typing"/>
+<meta name="twitter:description" content="Take an average programmer - let&rsquo;s call him Joe D. - and have him talk to a fictitious academic called Alan T."/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="http://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="/contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>How to explain dependent typing</h3>
+                
+            </div>
+
+            <p>Take an average programmer - let&rsquo;s call him Joe D. - and have him talk to a fictitious academic called Alan T.:</p>
+<h2 id="what-doesnt-work">What doesn&rsquo;t work</h2>
+<p>Alan: Hi, Joe, what&rsquo;s up? What can I help you with?</p>
+<p>Joe: Hi Alan. I heard about this thing called Idris and you are the expert; what is Idris exactly?</p>
+<p>A: It&rsquo;s a dependently typed language, why are you asking?</p>
+<p>J: Well, I heard you can improve your code with it, but I haven&rsquo;t got a clue how it works. What is this dependent typing thing?</p>
+<p>A: Ah dependent typing is easy:</p>
+<p>a dependent type is a type that depends on a value. It is an overlapping feature of math-encoding type theory and bug-stopping type systems. In intuitionistic type theory, dependent types are used to encode logic&rsquo;s quantifiers like &ldquo;for all&rdquo; and &ldquo;there exists&rdquo;. In functional programming languages like ATS, Agda, Idris and Epigram, dependent types prevent bugs by allowing very expressive types.</p>
+<p>J: Ok, thanks, that&rsquo;s too complicated for me, I think I&rsquo;ll pass for this one&hellip;</p>
+<p>&hellip;</p>
+<h2 id="what-might-work">What might work</h2>
+<p>That wasn&rsquo;t exactly a home-run, let&rsquo;s try again:</p>
+<p>J: What is dependent typing?</p>
+<p>A: Well, it&rsquo;s hard to explain, but I&rsquo;ll try to explain it in a few ways. I assume when you write code, you need to have all kinds of asserts and null checks to make sure the data you use as input is valid, correct?</p>
+<p>J: Yes?</p>
+<p>A: Well, if you concatenate 2 lists of length 2 and 3, then Idris figures out at compile time that your resulting list has a length of 5, so doing something like <code>list[10]</code> will throw a compile time error&hellip;</p>
+<p>J: Hmm, I think I&rsquo;ve seen something similar in code contracts?</p>
+<p>A: Some of it is comparable, but it&rsquo;s actually different. For now just assume that dependent types allow you to describe types that can never have invalid instances, by enforcing this at compile time. (Like the list example I gave you.) You could specify for example a record <code>{a:int,b:int} where a&lt;100 and a+b&lt;100</code>, and enforce this at compile time&hellip;. But there&rsquo;s more!</p>
+<p>J: I&rsquo;m interested, please continue&hellip;</p>
+<p>A: You heard about TDD/Test driven development?</p>
+<p>J: Yes, it&rsquo;s where you use tests to specify what the behavior of your class or function should be, before you write the class.</p>
+<p>A: The problem with that is, there are an infinite number of possibilities, so if you write a function <code>sum(int a,int b)</code>, you can start with a test of <code>0, 0</code>, then <code>0, 1</code>, then <code>1, 1</code>, and continue like that.</p>
+<p>J: Sure, but after a while you realize you can extrapolate, correct, so you look for edge cases.</p>
+<p>A: But how can you make sure you have all the edge cases?</p>
+<p>J: Well, you are never a 100% sure, but hey, that&rsquo;s the way we roll as developers, don&rsquo;t we?</p>
+<p>A: Have you ever heard about property based testing?</p>
+<p>J: No, what&rsquo;s that?</p>
+<p>A: I&rsquo;ll simplify it, but what if you defined your parameters for your tests using generators? And the results of the tests have to comply to some rules&hellip;</p>
+<p>J: What do you mean?</p>
+<p>A: Well, instead of writing all these tests for every single instance of <code>a</code> and <code>b</code> for the <code>sum</code> function, what if we generated a thousand random numbers for both, and just verified the outcome?</p>
+<p>J: How would you do that?</p>
+<p>A: Well, there&rsquo;s a few simple rules you can state for a sum of two integers <code>a</code> and <code>b</code>:</p>
+<p>J: Yes?</p>
+<p>A: <code>a+b = b+a;a&lt;=a+b; b&lt;=a+b</code> just to give a few</p>
+<p>I know these sound rather silly, but there&rsquo;s a lot of edge cases that might show up if you are not talking about a simple sum..</p>
+<p>J: That&rsquo;s a relatively new concept, can you give me another example?</p>
+<p>A: Sure, think about <code>string.reverse</code>: the length should be equal every time, reversing a string twice should result in the original string etc&hellip;</p>
+<p>J: Ah ok, I think I get it; if some random value doesn&rsquo;t comply with the rules you defined, you need to figure out if it&rsquo;s the rules that are wrong, or your behavior.</p>
+<p>A: Yes, if the rules are set for a while, and a test crashes, it is usually the behavior that will be wrong&hellip;</p>
+<p>J: Ok, I get it; what does this have to do with dependent typing?</p>
+<p>A: Let&rsquo;s go back to the sum example; imagine the rules <code>a+b = b+a</code> and <code>(a+b)+c = a+(b+c)</code>; do those ring a bell if you think back about school math?</p>
+<p>J: Oh boy, that&rsquo;s been a while&hellip; The second one is associative, but the first one?</p>
+<p>A: Commutative&hellip; Now, let&rsquo;s imagine these rules again. Do you remember using them at school to prove something?</p>
+<p>J: Yes?</p>
+<p>A: You can do that with your types to; you can actually prove that your types &ldquo;work&rdquo;.</p>
+<p>J: Hmmz sounds interesting, but also complicated&hellip; How would I get started and how long would it take to get up to speed with this.</p>
+<p>A: Learning to prove something might take a bit longer, but you could start reaping the benefits by writing code in Idris using some predefined dependent types, like <code>Fin</code>, which defines natural numbers within the range <code>0..N-1</code>.</p>
+<p>J: ?</p>
+<p>A: An instance of the type <code>Fin 100</code> can contain only values between 0 and smaller than 100.</p>
+<p>J: Let&rsquo;s start with a simple code kata: did you ever hear about <code>99 bottles of beer on the wall</code> ?</p>
+<p>&hellip;</p>
+<p>We actually got started on this kata in our <a href="https://twitter.com/search?q=idris101">Idris101 group learning project</a>, and you can check progress <a href="https://github.com/ToJans/idris101/tree/master/katas/001">here</a>.</p>
+<h2 id="how-to-explain-dependent-typing">How to explain dependent typing?</h2>
+<p>I see the same symptoms over and over again: whenever we learn a new tech/language/framework, we try to explain it to newcomers using the domain specific terminology. That doesn&rsquo;t work at all.</p>
+<p>I remember that, when I was about the age of 7, I learned programming by typing the sourcecode that I had in a book. By changing the parameters, I slowly grasped more and more concepts.</p>
+<p>This is similar to monads in Haskell: don&rsquo;t learn the theory, just use the implementations (<code>maybe</code>, <code>either</code>, &hellip;). If you add a <code>do</code> in front, it&rsquo;s just like imperative programming. That should get you started; you can always figure it out later.</p>
+<p>Also, find someone smart, who can explain it in a way you can understand it. When I was looking for someone who could explain me what Haskell lenses were; <a href="https://twitter.com/ScottWlaschin">Scott</a> told me: it&rsquo;s something you could  compare to property getters and setters. Aha-Erlebnis on the spot!</p>
+<p>Whenever I give a talk about <a href="http://en.wikipedia.org/wiki/Domain-driven_design">DDD</a> to a crowd that&rsquo;s relatively unkown with DDD, I try to avoid as much DDD lingo as I can, because <strong>making your audience feel stupid doesn&rsquo;t help to convey the message</strong>.</p>
+<p>If you ask my opinion: don&rsquo;t throw type category at people when they want to learn Idris, but try to give short and small examples and exercises that are a bit less abstract then the usual things academics propose. For inspiration I&rsquo;d like to direct you to <a href="http://rosettacode.org/">rosettacode.org</a>. That how I usually learned languages, and for me it works!</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/development/">Development</a><a class="category" href="/categories/ddd/">DDD</a></span>
+
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div><div class="footer">
+	<hr class="thin" />
+	<div class="pure-menu pure-menu-horizontal pure-menu-open">
+		<ul class="footer-menu">
+		
+		</ul>
+	</div>
+
+	<p>&copy; 2021. All rights reserved. </p>
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41936060-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+
+</html>

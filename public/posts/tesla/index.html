@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | Brain dump #1: How I&#39;d implement Tesla&#39;s Autopilot feature </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="http://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="http://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="http://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="http://tojans.me/posts/tesla/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="http://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="http://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Brain dump #1: How I&#39;d implement Tesla&#39;s Autopilot feature"/>
+<meta name="twitter:description" content="I recently saw this tweet by Elon Musk, who is looking for developers for their Autopilot feature:"/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="http://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="/contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Brain dump #1: How I&#39;d implement Tesla&#39;s Autopilot feature</h3>
+                
+            </div>
+
+            <p>I recently saw this tweet by Elon Musk, who is looking for developers for their Autopilot feature:</p>
+<blockquote class="twitter-tweet" lang="nl"><p lang="en" dir="ltr">We are looking for hardcore software engineers. No prior experience with cars required. Please include code sample or link to your work.</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/667517215390863360">20 november 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>As a long time Tesla fan, I couldn&rsquo;t help but wonder what kind of solution they will come up with, so I decided to do a little brain dump myself:</p>
+<h1 id="requirements">Requirements</h1>
+<h2 id="trustable">Trustable</h2>
+<p>Above all, software should be trustable. False positives are preferred over false negatives, as I wouldn&rsquo;t want to accidentally hit into another driver in
+case of doubt.</p>
+<h2 id="reliable">Reliable</h2>
+<p>But, somewhat opposed to &ldquo;trustable&rdquo;, the software also needs to be reliable. If a car starts exposing unexpected behavior - by having to many false positives and braking all the time, for example -, people will stop using it.</p>
+<h2 id="fast">Fast</h2>
+<p>When you are driving at higher speeds, every millisecond counts, so software would need to be extremely fast, and probably highly parallelized.</p>
+<h2 id="continuously-self-improving">Continuously (self-)improving</h2>
+<p>People learn from their mistakes. Humans can learn from other humans at the rate of speaking or writing. Cars can learn from other cars at networking speeds. It would be silly not to use this as an advantage.</p>
+<h2 id="context-aware">Context-aware</h2>
+<p>We listen to the radio, and look around while driving, listen to other cars etcetera. So cars would probably need to have the same kind of awareness.</p>
+<h2 id="flexible">Flexible</h2>
+<p>Cars will be in a lot of different environments, which might require different kind of Autopilots in different circumstances.</p>
+<h2 id="fully-automated-semi-automated-and-manual-modes">Fully-automated, semi-automated and manual modes</h2>
+<p>Whenever an Autopilot is in doubt, he should anticipate and allow the driver to decide.</p>
+<h1 id="implementation">Implementation</h1>
+<p>Based on the requirements, I would opt for the following architecture:</p>
+<h2 id="context-determination">Context determination</h2>
+<p>A layer to figure out the current context the car is in: where am I, where am I going, how&rsquo;s traffic, who&rsquo;s around me etcetera&hellip;</p>
+<p>This would probably include the following layers:</p>
+<ul>
+<li>A primitive HAL that includes some basic rules, f.e. when you detect an object less than a meter in front of you, never accelerate more than the object in front of you.</li>
+<li>A computer vision and identification layer that interprets the objects in the environment. This could be based on a combo of neural networks and sensible heuristics. You&rsquo;d want an outcome that says: on the right you have 2 trucks driving 30km/h slower than you, and one wants to pass the other one.</li>
+<li>A centralized layer that processes global traffic info, webcams, whatever is available to determine more context for the car, and sends info relevant to the car on regular intervals.</li>
+</ul>
+<h2 id="command-determination">Command determination</h2>
+<p>Once you know where you&rsquo;re at and what your goal is, you can figure out what to do next. There would be several systems working in parallel, and than one &ldquo;master system&rdquo; that decides which outputs to use, and whether to defer them to the driver or perform the commands automatically.</p>
+<ul>
+<li>A hard-coded rule engine where every rule is based on the input of a few sensors, and only has simple output as well, f.e. accel (m²/s) and/or turn (degrees). The main motivation behind this engine would be comparable to &ldquo;Conway&rsquo;s game of life&rdquo;, where simple rules can enable complex behavior.</li>
+<li>One or more deep learning networks that takes into account the environment, location, weather, &hellip; These would be based on the stats that are collected from cars all over the world.</li>
+<li>A decision layer built on top of all the previous layers, that evaluates the situation and figures out what to do next:
+<ul>
+<li>no change.</li>
+<li>change required.
+<ul>
+<li>no driver approval necessary.</li>
+<li>driver approval preferred.</li>
+<li>driver approval required.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="providing-feedback">Providing feedback</h2>
+<p>While the Autopilot might only have a few potential outcomes, I do think it is important to visualize the whole process.</p>
+<ul>
+<li>visualize what the car is thinking, so drivers can anticipate and understand the car&rsquo;s reactions.</li>
+<li>Allows the car to do some things for himself, based on some heuristics that determine the safety of the current situation.</li>
+<li>Alerts the driver in case of emergency.</li>
+<li>Might also show some hints on more than just the current driving situation:
+<ul>
+<li>A better route to take.</li>
+<li>How to be more energy efficient.</li>
+<li>Suggesting to visit an old friend living in the neighbourhood when an appointment in your calendar got cancelled.</li>
+<li>Reminder to call your wife to wish her a happy wedding anniversary.</li>
+<li>&hellip;</li>
+</ul>
+</li>
+</ul>
+<h1 id="conclusion">Conclusion</h1>
+<p>Well, that&rsquo;s it. That&rsquo;s how I&rsquo;d probably get started on my first version of the Autopilot. Of course, once you start implementing a system with this amount of inherent complexity, you will discover a lot of unknown unknowns, so I could easily imagine that extra layers and system might be added and removed as the system evolves.</p>
+<p>Please not that this is a 60-minute brain dump, so don&rsquo;t take this to seriously. Anyway, Mr. Musk, if you&rsquo;d like to know more: have your people call my people, maybe we can talk ;).</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/development/">Development</a><a class="category" href="/categories/tesla/">Tesla</a></span>
+
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div><div class="footer">
+	<hr class="thin" />
+	<div class="pure-menu pure-menu-horizontal pure-menu-open">
+		<ul class="footer-menu">
+		
+		</ul>
+	</div>
+
+	<p>&copy; 2021. All rights reserved. </p>
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41936060-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | Building your own product </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="http://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="http://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="http://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="http://tojans.me/posts/building-your-own-product/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="http://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="http://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Building your own product"/>
+<meta name="twitter:description" content="Phase 0 In March 2014, I was looking for a new project."/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="http://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="http://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="http://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="/contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Building your own product</h3>
+                
+            </div>
+
+            <h2 id="phase-0">Phase 0</h2>
+<p>In March 2014, I was looking for a new project.</p>
+<p>I had an idea to generate sales leads for
+<a href="http://pauwelsverandas.be">an up-market sunroom builder</a>
+, so pitched it, setup a POC and successfully sold the idea.</p>
+<h2 id="phase-i">Phase I</h2>
+<p>Six months later, the project was up and running, and you can try it here:</p>
+<iframe src="http://pauwels.azurewebsites.net/veranda" style="width:50em;height:37em">
+</iframe>
+<p><strong>So if you are interested in a sunroom and living in Europe, feel free to try
+the app and submit your contact data.</strong></p>
+<p><em>Disclaimer: because I am a big fan of the <code>no cure, no pay</code> credo, I arranged
+to get paid on sold units, not on leads, next to a fixed fee and some
+development costs.</em></p>
+<h2 id="phase-ii">Phase II</h2>
+<p>As I got more involved in the project, I noticed a big opportunity lying around:
+I started building a custom CAD application to allow more flexible sunroom
+designs, in order to shorten the sales feedback cycle and enable the prospect to
+see what the house extension would look like during the first customer visit.</p>
+<p>I rebuilt the whole thing from the ground up, and it steadily is evolving into a
+usable product.</p>
+<blockquote class="twitter-tweet" lang="nl"><p>I should probably call it a day... <a href="https://twitter.com/hashtag/nn?src=hash">#nn</a> <a href="http://t.co/VoDxX7zndR">pic.twitter.com/VoDxX7zndR</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/558086150372745216">22 januari 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>I included proper roof support structures&hellip;</p>
+<blockquote class="twitter-tweet" lang="nl"><p>Good enough roof structures for now <a href="https://twitter.com/hashtag/startup?src=hash">#startup</a> <a href="https://twitter.com/hashtag/salesdesigner?src=hash">#salesdesigner</a> <a href="http://t.co/IcAwATOO1H">pic.twitter.com/IcAwATOO1H</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/565842035392139264">12 februari 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>&hellip; and got started on the window designers&hellip;</p>
+<blockquote class="twitter-tweet" lang="nl"><p>LOL, so obvious I didn&#39;t see it at first: windows that can open need an inner frame! <a href="https://twitter.com/hashtag/stupid?src=hash">#stupid</a> <a href="http://t.co/G9tJX4EqDD">pic.twitter.com/G9tJX4EqDD</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/569819084650614784">23 februari 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<h2 id="the-end-of-phase-ii-">The end of phase II ?</h2>
+<p>Good question!</p>
+<p>Stuff always takes 3 times longer than you expect it to, and even when you have
+a date set there are no guarantees.</p>
+<p>I am currently well in phase 2, but as I am out of running out of cash and have
+a family to support, I considered my options:</p>
+<h3 id="charge-more-to-my-customer">Charge more to my customer</h3>
+<p>I consider my current client one of the more complicated potential use cases, and
+it will be a hell of a reference, once we have it all up and running.</p>
+<p>But, as they were also the ones to believe in my product and my
+capabilities, I consider it very important to offer them proper value for money.</p>
+<p>I believe in long-term relationships built on trust and win-win situations, so I
+want to avoid becoming a leecher.</p>
+<p>I did charge them some development costs over the course of a whole year, but I do not
+want to charge them to build my own product.</p>
+<p>We have a gentlemen&rsquo;s agreement, and I would like to keep it that way.</p>
+<h3 id="find-more-customers">Find more customers</h3>
+<p>The product is designed to be modular and adaptable, so I can build CAD apps for
+other types of customers as well, and this should be a reasonably short process
+for some types of my potential customers.</p>
+<p>I received a few leads out of the blue, so I know there is potential there.</p>
+<p>However, I would feel bad getting started on another client, while the first one
+is not up and running yet.</p>
+<h3 id="find-a-partner">Find a partner</h3>
+<p>I am still in dubio about this one. Sometimes it feels like this is too much to
+handle for one person, so help would be welcome. However, the only thing I can
+offer right now, is equity.</p>
+<p>Based on the assumption that it will take another year or so, to get up to
+something that you can actually call a viable business, this would probably
+imply a lot of equity.</p>
+<p>This feels odd, but it might be a necessity.</p>
+<h3 id="find-a-vc">Find a VC</h3>
+<p>Similar to finding a partner, VC money might help me to bridge the gap. However,
+it would probably cost me a lot of equity, which I&rsquo;m hesitant about.</p>
+<p>In the long run, this might be unavoidable, but for now I will defer.</p>
+<blockquote>
+<p>Feel free to make me an offer I cannot refuse.</p>
+</blockquote>
+<h3 id="sell-the-product">Sell the product</h3>
+<p>This is an easy one: no.</p>
+<h3 id="find-another-project">Find another project</h3>
+<p>This looked like the most viable alternative:</p>
+<ul>
+<li>Find a part-time project, so I can pay the bills and have time left to
+continue building the product.</li>
+<li>Find a full-time project, and pay someone else to work on the product.</li>
+</ul>
+<p>In the end, this looked like the most viable idea, so I took action:</p>
+<h2 id="finding-another-project">Finding another project</h2>
+<p>How do you find a new project quickly? I created a
+<a href="http://tojans.me/hireme/">hire me page</a> on my blog, and reached out to my
+personal network:</p>
+<h3 id="the-tweet">The tweet</h3>
+<blockquote class="twitter-tweet" lang="nl"><p>Hire me; I can help you with:&#10;- untangling entangled software.&#10;- building a product from scratch.&#10;<a href="http://t.co/pDLIo1Hg7v">http://t.co/pDLIo1Hg7v</a>&#10;(RT=nice)</p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/570858063567200256">26 februari 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>The amount of feedback I got was flabbergasting, so a big thank you to everyone.</p>
+<blockquote class="twitter-tweet" lang="nl"><p>WOW! Just WOW! Thank you everyone; I&#39;ll write a blog post about this later! <a href="https://twitter.com/hashtag/LookingForAProject?src=hash">#LookingForAProject</a> <a href="http://t.co/DmJ2DPesl8">pic.twitter.com/DmJ2DPesl8</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/571044631888191488">26 februari 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<h3 id="the-result">The result</h3>
+<p>While I got a ton of retweets, and a few very nice offers, the project that I am
+about to start is coming directly through one of my twitter followers, which I
+also happen to know from the
+<a href="http://www.domaindriven.be">@DDDBE community</a> events.</p>
+<p>In the end, this project was both the most appealing from a tech POV, and it
+really clicked with the team that I am about to join.</p>
+<h2 id="but-how-about-phase-ii">But how about phase II?</h2>
+<p>Phase II is still on my todo list. I will join the team full-time for the
+first month, and after that we plan to go part-time, so I can have the best of
+both worlds.</p>
+<p>A big shout-out to both my own project&rsquo;s customer, my new client and everyone
+that supported me one way or another over social media.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div><div class="footer">
+	<hr class="thin" />
+	<div class="pure-menu pure-menu-horizontal pure-menu-open">
+		<ul class="footer-menu">
+		
+		</ul>
+	</div>
+
+	<p>&copy; 2021. All rights reserved. </p>
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41936060-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+
+</html>
