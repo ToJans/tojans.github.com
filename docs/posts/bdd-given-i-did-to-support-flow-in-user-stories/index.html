@@ -166,21 +166,24 @@ This new concept adds extra conceptual information to the stories, and also redu
 <h3 id="in-the-beginning-there-was-nothing-">In the beginning, there was nothing !!!</h3>
 <p>I got started on this idea while I was replying to an email about the limitations of current BDD stories. Since my conversation partner said he had some issues on the current BDD syntax used, I asked him wether he could clarify on the issues.</p>
 <p>While I was replying to the response he sent, I was trying to explain my thoughts by giving an example :</p>
-<p>As a customer<br>
-I want to place orders<br>
-So that I can get the products where and when I want them</p>
-<p>Scenario Place an order<br>
-When I want to place an order<br>
-Then I should be able to select products in a catalog</p>
-<p>Scenario Order products<br>
-Given I have selected on or more products in a catalog<br>
-When I add it to my shopping cart<br>
-Then the shopping cart should contain the selected product</p>
-<p>Scenario Modify a product in the shopping cart<br>
-Given I have some products in my shopping cart<br>
-When I edit a product order<br>
-Then the edited product order should have changed</p>
-<h3 id="eureka-">Eureka !!</h3>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nf">As a customer  
+</span><span class="nf"></span><span class="k">I </span><span class="nf">want to place orders  
+</span><span class="nf">So that I can get the products where and when I want them
+</span><span class="nf">
+</span><span class="nf">Scenario Place an order  
+</span><span class="nf"></span><span class="k">When </span><span class="nf">I want to place an order  
+</span><span class="nf"></span><span class="k">Then </span><span class="nf">I should be able to select products in a catalog  
+</span><span class="nf">
+</span><span class="nf">Scenario Order products  
+</span><span class="nf"></span><span class="k">Given </span><span class="nf">I have selected on or more products in a catalog  
+</span><span class="nf"></span><span class="k">When </span><span class="nf">I add it to my shopping cart  
+</span><span class="nf"></span><span class="k">Then </span><span class="nf">the shopping cart should contain the selected product  
+</span><span class="nf">
+</span><span class="nf">Scenario Modify a product in the shopping cart  
+</span><span class="nf"></span><span class="k">Given </span><span class="nf">I have some products in my shopping cart  
+</span><span class="nf"></span><span class="k">When </span><span class="nf">I edit a product order  
+</span><span class="nf"></span><span class="k">Then </span><span class="nf">the edited product order should have changed
+</span></code></pre></div><h3 id="eureka-">Eureka !!</h3>
 <p>This was the moment I noticed that something was wrong. Let us take a good look at the last Scenario : &ldquo;Modify a product in the shopping cart&rdquo; . What is wrong with it, one might ask ? While I was writing this story I was thinking the following :</p>
 <ul>
 <li>What if the shopping cart is empty ?</li>
@@ -194,27 +197,27 @@ Then the edited product order should have changed</p>
 <li>Yes, it&rsquo;s not a given, it is a requirement that should say that this story is only valid in this particular case</li>
 <li>Hmmz interesting concept, let&rsquo;s try :</li>
 </ul>
-<p>Scenario Modify a product in the shopping cart<br>
-If I have some products in my shopping cart<br>
-When I edit an ordered product<br>
-Then the edited product should have changed</p>
-<ul>
-<li>Whoa ! that looks nice; If we have this scenario, we do not need an extra scenario for the empty shopping cart</li>
-<li>But wait, we could also say it like this</li>
-</ul>
-<p>Scenario Modify a product in the shopping cart<br>
-Given I have some products in my shopping cart<br>
-When I edit an ordered product<br>
-Then the edited product should have changed</p>
-<ul>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nf">Scenario Modify a product in the shopping cart  
+</span><span class="nf">If I have some products in my shopping cart  
+</span><span class="nf"></span><span class="k">When </span><span class="nf">I edit an ordered product  
+</span><span class="nf"></span><span class="k">Then </span><span class="nf">the edited product should have changed
+</span><span class="nf">
+</span><span class="nf">- Whoa ! that looks nice; If we have this scenario, we do not need an extra scenario for the empty shopping cart  
+</span><span class="nf">- But wait, we could also say it like this
+</span><span class="nf">
+</span><span class="nf">Scenario Modify a product in the shopping cart  
+</span><span class="nf"></span><span class="k">Given </span><span class="nf">I have some products in my shopping cart  
+</span><span class="nf"></span><span class="k">When </span><span class="nf">I edit an ordered product  
+</span><span class="nf"></span><span class="k">Then </span><span class="nf">the edited product should have changed
+</span></code></pre></div><ul>
 <li>What is the difference ?</li>
 <li>Well, it is really a conceptual thing; I&rsquo;ll try to think about another example</li>
 </ul>
-<p>Scenario Place the order<br>
-If I have identified myself as a valid customer<br>
-When I edit an ordered product<br>
-Then the edited product should have changed</p>
-<ul>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nf">Scenario Place the order  
+</span><span class="nf">If I have identified myself as a valid customer  
+</span><span class="nf"></span><span class="k">When </span><span class="nf">I edit an ordered product  
+</span><span class="nf"></span><span class="k">Then </span><span class="nf">the edited product should have changed
+</span></code></pre></div><ul>
 <li>Hmmz something is wrong with it ?</li>
 <li>What ?</li>
 </ul>
@@ -232,20 +235,22 @@ Then the edited product should have changed</p>
 <li>Yes ?</li>
 <li>Here is the example :</li>
 </ul>
-<p>Scenario Identify myself as a valid customer<br>
-Given  I have some valid id method<br>
-When  I identify myself<br>
-Then   it should state me as a valid customer</p>
-<p>Scenario Place the order<br>
-Given I did identify myself as a valid customer<br>
-  And I did order products<br>
-When place the order<br>
-Then order should be confirmed</p>
-<p>Scenario Order products<br>
-Given I did select one or more products in a catalog<br>
-When I add it to my shopping cart<br>
-Then the shopping cart should contain the selected product</p>
-<ul>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nf">Scenario Identify myself as a valid customer  
+</span><span class="nf">Given  I have some valid id method  
+</span><span class="nf">When  I identify myself  
+</span><span class="nf">Then   it should state me as a valid customer  
+</span><span class="nf">
+</span><span class="nf">Scenario Place the order  
+</span><span class="nf"></span><span class="k">Given </span><span class="nf">I did identify myself as a valid customer  
+</span><span class="nf">  </span><span class="k">And </span><span class="nf">I did order products  
+</span><span class="nf"></span><span class="k">When </span><span class="nf">place the order  
+</span><span class="nf"></span><span class="k">Then </span><span class="nf">order should be confirmed  
+</span><span class="nf">
+</span><span class="nf">Scenario Order products  
+</span><span class="nf"></span><span class="k">Given </span><span class="nf">I did select one or more products in a catalog  
+</span><span class="nf"></span><span class="k">When </span><span class="nf">I add it to my shopping cart  
+</span><span class="nf"></span><span class="k">Then </span><span class="nf">the shopping cart should contain the selected product  
+</span></code></pre></div><ul>
 <li>Whoa, that looks nice ! So what you are actually doing is extending the story the whole time ?</li>
 <li>Yes, that&rsquo;s it.</li>
 <li>So we are gradually replacing all the &ldquo;Given&quot;s by the &ldquo;Given I did&rdquo; and thus including extra flow in the context ?</li>

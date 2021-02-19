@@ -20,6 +20,7 @@ I got started on this idea while I was replying to an email about the limitation
 
 While I was replying to the response he sent, I was trying to explain my thoughts by giving an example :
 
+```gherkin
 As a customer  
 I want to place orders  
 So that I can get the products where and when I want them
@@ -37,6 +38,7 @@ Scenario Modify a product in the shopping cart
 Given I have some products in my shopping cart  
 When I edit a product order  
 Then the edited product order should have changed
+```
 
 ### Eureka !!  
 
@@ -52,6 +54,7 @@ This was the moment I noticed that something was wrong. Let us take a good look 
 - Yes, it's not a given, it is a requirement that should say that this story is only valid in this particular case  
 - Hmmz interesting concept, let's try :
 
+```gherkin
 Scenario Modify a product in the shopping cart  
 If I have some products in my shopping cart  
 When I edit an ordered product  
@@ -64,14 +67,17 @@ Scenario Modify a product in the shopping cart
 Given I have some products in my shopping cart  
 When I edit an ordered product  
 Then the edited product should have changed
+```
 
 - What is the difference ?  
 - Well, it is really a conceptual thing; I'll try to think about another example
 
+```gherkin
 Scenario Place the order  
 If I have identified myself as a valid customer  
 When I edit an ordered product  
 Then the edited product should have changed
+```
 
 - Hmmz something is wrong with it ?  
 - What ?
@@ -90,6 +96,7 @@ Then the edited product should have changed
 - Yes ?  
 - Here is the example :
 
+```gherkin
 Scenario Identify myself as a valid customer  
 Given  I have some valid id method  
 When  I identify myself  
@@ -105,6 +112,7 @@ Scenario Order products
 Given I did select one or more products in a catalog  
 When I add it to my shopping cart  
 Then the shopping cart should contain the selected product  
+```
 
 - Whoa, that looks nice ! So what you are actually doing is extending the story the whole time ?  
 - Yes, that's it.  
