@@ -8,7 +8,7 @@ nopaging: true
 
 Welcome to my blog. My name is Tom. 
 
-This blog is a collection of random opinionated blurbs, mostly driven by my learnings and insights. It should by no means be considered as the absolute thruth, but more as an exploration of [ideas](/posts/cqrs-and-functional-programming/) and opinons.
+This blog is a collection of random opinionated blurbs, mostly driven by my learnings and insights. It should by no means be considered as the absolute thruth, but more as an exploration of [ideas](/posts/cqrs-and-functional-programming/) and opinions.
 
 Exposing my thought process might help you in some ways, but I mostly write to self-reflect and gain more insights from your feedback.
 
