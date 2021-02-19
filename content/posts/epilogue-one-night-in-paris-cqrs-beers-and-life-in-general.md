@@ -32,7 +32,7 @@ title: 'Epilogue: One night in Paris - #CQRS, beers and life in general'
 <p>Next tot his I am always eager to meeting new people and extending my horizon; that is about it.</p>
 <h3>The outcome</h3>
 <p>Due to not being able to leave home on time, I knew I was about to get stuck in traffic, because I would arrive around 4PM in Paris (which is one of the worst hours as far as I know). I was correct; this is what it looked like:</p>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f7%2f289961_4367556274189_2095702751_o.jpg" alt="" /></p>
+<p><img src="/images/archive/corebvba/2012%2f7%2f289961_4367556274189_2095702751_o.jpg" alt="" /></p>
 <p>Nevertheless, I managed to arrive just on time at Rinat's work so we could take the subway to "Chez Justine", the pub where #CQRSBeersParis is usually held.&nbsp;</p>
 <p>During the dinner, we got to talk about a lot of things - usually software related -, and I met some some really interesting people. Unfortunately I first had to checkin to the hotel, and once again I managed to get lost, even though the hotel and the pub were only about 170 meters apart. By the time I got back (checked in, refreshed myself a bit, answered some emails and got lost), only Rinat and Jermey were there... So we had a hamburger while we watched Jermey implementing Simple.Testing in F# in a few lines of code...</p>
 <p>&nbsp;</p>

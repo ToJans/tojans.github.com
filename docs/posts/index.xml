@@ -616,7 +616,7 @@ Some people have been asking me why I spend so many time on contributing patches
       <guid>https://tojans.me/posts/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/</guid>
       <description>&lt;h3&gt;Introduction&lt;/h3&gt;
 &lt;p&gt;People following me on twitter noticed I got entangled in yet another new language for the Erlang/BEAM VM:&amp;nbsp;&lt;/p&gt;
-&lt;h3&gt;&lt;img style=&#34;font-size: 10px;&#34; src=&#34;https://www.corebvba.be/blog/image.axd?picture=2013%2f6%2felixir-logo.png&#34; alt=&#34;&#34; /&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;img style=&#34;font-size: 10px;&#34; src=&#34;https://tojans.me/images/archive/corebvba/2013%2f6%2felixir-logo.png&#34; alt=&#34;&#34; /&gt;&lt;/h3&gt;
 &lt;p&gt;Elixir could be easily described as &#34;ruby for the BEAM/Erlang VM&#34;. In previous posts, I mentioned &lt;a href=&#34;https://tojans.me/posts/Erlang-Camp-Amsterdam-why-you-should-follow-it-and-getting-started-with-Erlang-and-Axiom/&#34;&gt;why people should learn Erlang&lt;/a&gt;, but in fact, I think most people might be better off when they skip Erlang and opt directly for Elixir. It has all the advantages of Erlang, but offers a Ruby-like syntax, macros, polymorphism and more.&lt;/p&gt;
 &lt;p&gt;As &lt;a href=&#34;https://benjamintanweihao.github.io/blog/2013/06/08/why-my-next-programming-language-is-elixir/&#34; target=&#34;_blank&#34;&gt;someone else made a perfect blog post on why you should learn Elixir&lt;/a&gt;, I will not elaborate further on it in this post. Read his post; the info is all there.&lt;/p&gt;
 &lt;p&gt;As usual, you can find more info about Elixir on &lt;a href=&#34;https://en.wikipedia.org/wiki/Elixir_(programming_language)&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt;&amp;nbsp;, or on the &lt;a href=&#34;https://elixir-lang.org/&#34; target=&#34;_blank&#34;&gt;Elixir site&lt;/a&gt;.&lt;/p&gt;
@@ -645,7 +645,7 @@ Some people have been asking me why I spend so many time on contributing patches
       <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;The last two days of August there is a &lt;a href=&#34;https://www.erlangcamp.com/amsterdam&#34;&gt;2 day Erlang course in Amsterdam&lt;/a&gt;. One of the most incredible things, is that there is a low cost offer sponsored by &lt;a href=&#34;https://www.spilgames.com/&#34;&gt;Spil games&lt;/a&gt; that reduces the price to 55&amp;euro; for both days; talk about a steal!!&lt;/p&gt;
 &lt;h2&gt;First things first: why should you follow a camp on Erlang?&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.corebvba.be/blog/image.axd?picture=2013%2f5%2ferlcamp.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tojans.me/images/archive/corebvba/2013%2f5%2ferlcamp.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;People who know me in person know that I am an avid fan of Erlang, even though I have only done some very small experiments with it.&lt;/p&gt;
 &lt;p&gt;Even if you are not planning on developing something in Erlang, you should at least try to grasp the basic concepts!!&lt;/p&gt;
 &lt;p&gt;You want to know why? Here is why:&lt;/p&gt;</description>
@@ -688,7 +688,7 @@ Some people have been asking me why I spend so many time on contributing patches
 &lt;p&gt;Because I had some time left, I decided to take a look at my stats... This invoice app was built about 10 years ago in MsAccess in a few days, and has not really changed a lot since then (except for some adjustments to allow certain billing specific extents; things like non-EU or VAT-exclusive stuff, as well as some automated payment reminder letters).&lt;/p&gt;
 &lt;p&gt;Anyway, that is not the subject of this post, but as I was browsing some of my available graphs - it has been a few months since I did that - , I decided to write a small blog post about my findings.&lt;/p&gt;
 &lt;p&gt;I will start of with what most of you will probably consider quite a controversial thing; I will just post a *slightly censored* graph of my invoices cumul over my years as a company owner. ..&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.corebvba.be/blog/image.axd?picture=2013%2f3%2finvoicing.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tojans.me/images/archive/corebvba/2013%2f3%2finvoicing.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style=&#34;font-size: 1.17em;&#34;&gt;LOL, that looks odd...&lt;/span&gt;&lt;/p&gt;</description>
     </item>
     

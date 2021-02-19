@@ -14,7 +14,7 @@ title: Trading the Elliott Wave - Silver 05/09/2012
 <h3 style="font-size: 11px; margin-bottom: -10px; padding: 0px;">Disclaimer</h3>
 <p>This is just an interpetation that tries to predict the future and it might be completely wrong. I can not be held liable for any losses you make when following this advice.</p>
 <h3><span style="font-size: 11px;">Silver Daily</span></h3>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fsilver+20120905+daily.png" alt="" /></p>
+<p><img src="/images/archive/corebvba/2012%2f9%2fsilver+20120905+daily.png" alt="" /></p>
 <p>After reading up on the Elliott wave, I have to re-evaluate my previous post a bit; the whole movement from 2012/02 to 2012/08 is definately a bearish impulsive wave, ending in an ending diagonal in the fifth wave. This would imply that the following wave would probably be an ABC-wave. If the current level stays below the current top, then I would still assume a fallback to 30 before going to higher levels. The odd thing is, the pattern does not look like a corrective pattern to me, so this might not be an corrective wave, but an impulsive wave, which would also mean silver could drop to the 30-level and then explode exponentionally... I still have to read up a bit on Elliott waves since this looks like a problem.</p>
 <p>If the top is not in yet but grows even higher to the 34.5 level, then I would expect a fallback to the level between 31.6 and 31.3.</p>
 <p>&nbsp;</p>

@@ -11,7 +11,7 @@ title: 'De voedselzandloper: zin en onzin'
 <p>Ik ben geen voedingsdeskundige. Mijn ervaringen zijn exact dit: mijn persoonlijke ervaringen, of voor de statistici: een steekproef waarbij N=1; ik ben me er dan ook bewust van dat mijn ervaringen niet noodzakelijk voor anderen gelden, en hoop dat u dit ook beseft. Stel me dus niet aansprakelijk voor zaken die je zelf beslist te doen op basis van iets dat je op het internet gelezen hebt.</p>
 <p></p>
 <p>&nbsp;</p>
-<p><img style="float: left; margin: 5px;" src="https://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fvoedselzandloper.jpg" alt="" /></p>
+<p><img style="float: left; margin: 5px;" src="/images/archive/corebvba/2012%2f9%2fvoedselzandloper.jpg" alt="" /></p>
 <h3>De voedselzandloper: het boek en de theorie</h3>
 <p>&nbsp;</p>
 <p>De voedselzandloper is een bestseller die beschrijft hoe je door gezonder te eten langer zou kunnen leven en ondertussen ook vermageren indien je overgewicht hebt.</p>
@@ -24,9 +24,9 @@ title: 'De voedselzandloper: zin en onzin'
 <p>Laat ons eens kijken naaar de conventionele driehoek zoals die ons altijd aangeleerd is -tjah, door wie eigenlijk - ?</p>
 <p>De driehoek van 1992 aanbevolen door de USA ziet er als volgt uit:</p>
 <p>&nbsp;</p>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fUSDA_Food_Pyramid_92.gif" alt="" /></p>
+<p><img src="/images/archive/corebvba/2012%2f9%2fUSDA_Food_Pyramid_92.gif" alt="" /></p>
 <p>Bij die van 2005 hebben ze blijkbaar hun mening al herzien, en gaan ze op zoek naar een evenwichtigere verdeling...</p>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f9%2f500px-MyPyramidFood.svg.png" alt="" /></p>
+<p><img src="/images/archive/corebvba/2012%2f9%2f500px-MyPyramidFood.svg.png" alt="" /></p>
 <p>Dit representeert een gezonde, evenwichtige voeding... Of toch niet? En wat heeft dat met you te maken?</p>
 <p>Wel, tot een paar jaar geleden interesseerde dit me eerlijkgezegd geen bal, tot ik mijn revelatie ontdekte:</p>
 <p>
@@ -49,7 +49,7 @@ title: 'De voedselzandloper: zin en onzin'
 <p>Kort gezegd: eet vlees, vis, groenten, fruit en gezonde vetten (omega-3 vs omega-6), en probeer ook je levensstijl wat meer onder controle te krijgen.&nbsp;</p>
 <h3>Allemaal mooi in theorie, maar ik wil bewijzen!</h3>
 <p>Jaja, dat dacht ik ook toen ik een jaar geleden begon... Dit was het resultaat na 17 dagen - ja, u leest het goed: 17 dagen....</p>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fpaleo_17_days.jpg" alt="" /></p>
+<p><img src="/images/archive/corebvba/2012%2f9%2fpaleo_17_days.jpg" alt="" /></p>
 <p>Daarnaast voelde ik me ook 100 keer energieker en nog vele andere zaken... Voor meer info: ik heb een <a href="https://paleohacks.com/questions/7058/share-your-paleo-before-and-after/59898#59898" target="_blank">getuigenis gepost op paleohacks met wat meer info omtrent mijn ervaring</a>...&nbsp;</p>
 <p>Langzamerhand ben ik beginnen afwijken, met als resultaat dat ik terug verlang naar het gevoel van een jaar geleden, dus ben ik nu terug op de paleo-wagen gesprongen om me terug energieker te voelen etc... Punt is dat dit een levensstijl is, geen dieet, en dat dit - in tegenstelling tot wat veel mensen denken - heel gemakkelijk sustainable is.</p>
 <p>Het grootste en wel meest opvallende punt in mijn persoonlijke belevenis was het ongeloof en onbegrip van de meeste mensen; ze waren als het ware geshockeerd door mijn eetgewoonten: ettelijke hoeveelheden vlees en boter icm groenten, dat is toch een "recipe for a heart-attack" ?</p>
@@ -70,7 +70,7 @@ title: 'De voedselzandloper: zin en onzin'
 <p>Ik voelde me schitterend met +/- 80% paleo: af en toe een avondje stappen met wat vrienden met een pintje erbij, op restaurant vroeg ik gewoon een beetje extra groenten in plaats van frieten, en als er alleen maar pasta/brood was, dan at ik niet/een beetje/gewoon, afhankelijk van hoe ik me voelde en de omstandigheden.</p>
 <p>Ik kan me voorstellen dat de voedselzandloper je min of meer hetzelfde resultaat zou kunnen geven...</p>
 <h3>Wat als?</h3>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fWatAls1-2beNB.jpg.h380.jpg.568.jpg" alt="" /></p>
+<p><img src="/images/archive/corebvba/2012%2f9%2fWatAls1-2beNB.jpg.h380.jpg.568.jpg" alt="" /></p>
 <p>Wat als het verhaal van paleo nu eens zou kloppen, of dat van de voedselzandloper? Zou dit de exodus tot gevolg hebben? Waarschijnlijk niet; al zou het wel voor aanzienlijk minder gezondsheidskosten kunnen meebrengen voor de overheid, als het klopt. Een ander groot probleem zou zich stellen in de economie... Wat gebeurt er met de bakkers/voedsellobby wanneer de aan te raden hoeveelheid koolhydraten inees zaakt naar ergens rond de 150gr/dag, een fractie van wat ze nu is? Faillissementen? Chaos? Wie zal het zeggen... Ik kan alleen maar zeggen dat vanuit mijn persoonlijk standpunt het hele verhaal wel logisch overkomt.</p>
 <p>Daarnaast zou het ook een revelatie zijn als we nu eindelijk ziektes kunnen voorkomen in plaats van ze te moeten genezen, of slechter nog, gewoon de symptomen bestrijden... Kortom, er ligt nog een hele wereld open.</p>
 <p>Daarnaast zou ook de hele wetenschappelijke wereld op zijn kop draaien; het zou net zijn alsof men ontdekt heeft dat de aarde niet plat is, maar rond.</p>

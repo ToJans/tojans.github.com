@@ -31,7 +31,7 @@ categories: ["Development", "DDD"]
 <p>All those neat diagrams perfectly aligned and perfectly abstracting away everything in CQRS usually give me the shivers, which is why I started writing this article in the first place. I think<a href="https://codeofrob.com/archive/2011/09/28/cqrs-is-too-complicated" target="_blank"> Rob Ashton's article was a great attempt</a>, but still a bit to complicated.</p>
 <p>One of <a href="https://www.linkedin.com/in/tomjanssens" target="_blank">my current occupations as an ICT generalist is giving strategic ICT advice</a>. Every time we talk about customer interaction/transfering your intent to your customers, I suggest them to interact with their customers as if they were 10-year-olds as an exercise, in order to get to the essence of their intent... So I decided to dogfood this approach, and here is my attempt to explain CQRS to my 10-year-old audience:</p>
 <p>&nbsp;</p>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2011%2f11%2fCQRS10YO.png" alt="" /></p>
+<p><img src="/images/archive/corebvba/2011%2f11%2fCQRS10YO.png" alt="" /></p>
 <p>&nbsp;</p>
 <p>That is all there is to CQRS IMO, nothing more, nothing less.</p>
 <p>(For all the font freaks, the typeface used in this graph is MouseDrawn&trade;, which will be available for ordering soon, SRP 10K&euro; ;) ).</p>

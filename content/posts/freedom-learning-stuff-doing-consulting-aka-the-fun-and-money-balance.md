@@ -13,7 +13,7 @@ footer: true
 <p>Because I had some time left, I decided to take a look at my stats... This invoice app was built about 10 years ago in MsAccess in a few days, and has not really changed a lot since then (except for some adjustments to allow certain billing specific extents; things like non-EU or VAT-exclusive stuff, as well as some automated payment reminder letters).</p>
 <p>Anyway, that is not the subject of this post, but as I was browsing some of my available graphs - it has been a few months since I did that - , I decided to write a small blog post about my findings.</p>
 <p>I will start of with what most of you will probably consider quite a controversial thing; I will just post a *slightly censored* graph of my invoices cumul over my years as a company owner. ..</p>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2013%2f3%2finvoicing.png" alt="" /></p>
+<p><img src="/images/archive/corebvba/2013%2f3%2finvoicing.png" alt="" /></p>
 <p><span style="font-size: 1.17em;">LOL, that looks odd...</span></p>
 <!--more-->
 <p>There are a few things you might notice here:</p>

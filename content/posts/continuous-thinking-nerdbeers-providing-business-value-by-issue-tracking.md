@@ -36,7 +36,7 @@ title: 'Continuous thinking: Nerdbeers - Providing business value by issue track
 <h3>How can I prevent this lamenting stuff ?</h3>
 <p>The reason for lamenting is quite straightforward: I need a proper way to determine my - and the contributor's priorities. So I started creating issues on github, and after a few attempts of tagging, I finally found a method that works for me. It is heavily inspired by the Kanban stuff I use all the time during dev.</p>
 <p>This is what the open issues list currently looks like:</p>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2011%2f3%2fOpenIssues.png" alt="" width="659" height="465" /></p>
+<p><img src="/images/archive/corebvba/2011%2f3%2fOpenIssues.png" alt="" width="659" height="465" /></p>
 <p>&nbsp;</p>
 <h3>Whoa, that's a lot of tags!! Why is that ?</h3>
 <p>Well, because I need them; let's look at them one by one, in the order they are assigned:</p>
@@ -49,11 +49,11 @@ title: 'Continuous thinking: Nerdbeers - Providing business value by issue track
 <p>I tried searching for the minimal amount of tags which would allow to determine the correct priorities.</p>
 <p>Using these tags I found out that the huge branch I'm currently working on, does not really provide a lot of added business value, so I decided to lower the priority and make it a bottom one. This is actually something that happens a lot with projects: things get implemented because they are "cool", but they actually do not provide a lot of direct business value. These tags should help me to prioritize.</p>
 <p>Another cool thing is that the closed issues list now actually provides some value:</p>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2011%2f3%2fClosedIssues.png" alt="" width="659" height="465" /></p>
+<p><img src="/images/archive/corebvba/2011%2f3%2fClosedIssues.png" alt="" width="659" height="465" /></p>
 <p>&nbsp;</p>
 <h3>Fixing the features</h3>
 <p>As I was thinking about all the possible features, I noticed that I was adding a lot of them, without actually thinking them through. Since I wanted to avoid adding features which do not provide business value, I decided to implement a BDD technique into my feature definition.</p>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2011%2f3%2fIssueAddPinMap.png" alt="" width="659" height="465" /></p>
+<p><img src="/images/archive/corebvba/2011%2f3%2fIssueAddPinMap.png" alt="" width="659" height="465" /></p>
 <p>Lets take a look at this in detail:</p>
 <pre><span style="text-decoration: underline;"><strong>As a</strong></span> site owner
 <span style="text-decoration: underline;"><strong>I would like</strong></span> the Nerd

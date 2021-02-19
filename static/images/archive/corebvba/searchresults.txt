@@ -1,0 +1,306 @@
+75 results - 29 files
+
+content\posts\2009-retrospective-.net-technologies-and-lessons-learned.md:
+  7  
+  8: <p><img style="float: left; margin-left: 20px; margin-right: 20px; margin-top: 0px; margin-bottom: 0px;" src="/images/archive/corebvba/2010%2f1%2fIMAG0006.jpg" alt="my pride &amp; joy" width="260" height="439" /></p>
+  9  <h3>Introduction</h3>
+
+content\posts\2010-2011-a-retrospective.md:
+   7  
+   8: <h3><img style="border-style: initial; border-color: initial; font-size: 10px; font-weight: normal;" src="/images/archive/corebvba/2011%2f12%2fmatisse.jpg" alt="" /></h3>
+   9  <p style="text-align: left;"><strong><em>One of my main motivators, my youngest son Matisse #PrideAndJoy</em></strong></p>
+
+  21  <p>There were some other issues here as well (f.e. a side project where they requested some things to be configurable, but they forgot to add that the project was intended to be multi-tennant and configurable "by the client", and demanded I provided those features for the same budget).</p>
+  22: <p><img style="border-style: initial; border-color: initial;" src="/images/archive/corebvba/2011%2f12%2fquinten_.jpg" alt="" /></p>
+  23  <p><strong style="text-align: left;"><em>Another one of my main motivators, m</em></strong><strong><em>y oldest son, Quinten&nbsp;</em></strong><strong style="text-align: left;"><em>#PrideAndJoy</em></strong></p>
+
+  35  <p>I also got quite a few other leads out of my internet presence, some materialized, others did not. I am currently just starting to grasp the incredible power of online presence and image building, but it seems to me like there is a whole new ballpark out there.</p>
+  36: <p><img style="border-style: initial; border-color: initial;" src="/images/archive/corebvba/2011%2f12%2fkamp.jpg" alt="" /></p>
+  37  <p><strong><em>My sons and me exploring some "architectural techniques" on the beach ;)</em></strong></p>
+
+  68  <p>Finally a word for my wonderfull wife: after all those years she still seizes to amaze me, and I love the fact that she now found a job where she can fully develop her self and her work is being both respected and appreciated in every way possible.</p>
+  69: <p><img src="/images/archive/corebvba/2011%2f12%2fliesbeth.jpg" alt="" /></p>
+  70  <p><strong><em>My one and only, Liesbeth, 10 years ago when we were getting married</em></strong></p>
+
+content\posts\continuous-thinking-cqrs-explained-to-a-10-year-old.md:
+  33  <p>&nbsp;</p>
+  34: <p><img src="/images/archive/corebvba/2011%2f11%2fCQRS10YO.png" alt="" /></p>
+  35  <p>&nbsp;</p>
+
+content\posts\continuous-thinking-essay-tl;dr-functional-programming-=-sql-select-statement.md:
+  34  <p>Back in the days, this meant pulling/plugging wires/switches to develop an app; currently you could compare this to writing your app in a hex editor</p>
+  35: <p><img src="/images/archive/corebvba/2011%2f12%2fhex.png" alt="" /></p>
+  36  <p>As I do not know these hex codes by heart (I used to be able to interpret some of the hex codes during my demo/hacking days way back), I used the code from the next generation to generate this output (Yes, I cheated!).</p>
+
+content\posts\continuous-thinking-essential-business-books-shortlist-3-business-books-everyone-should-have-read.md:
+  19  <p><a href="https://www.amazon.com/Skills-New-Managers-Morey-Stettner/dp/0071356185" target="_blank">(link on amazon)</a></p>
+  20: <p><img src="/images/archive/corebvba/2010%2f12%2fman_with_Book.jpg" alt="Looks like he could use some skills" /></p>
+  21  <p>I know the title says "managers", but in my opinion this book can be used as a guidance for business in general.</p>
+
+  42  <p><a href="https://www.amazon.com/How-Connect-Business-Seconds-Less/dp/0761125957/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1293709920&amp;sr=1-1" target="_blank">(Link on amazon)</a></p>
+  43: <p><img src="/images/archive/corebvba/2010%2f12%2fconnect.jpg" alt="One can never have enough connections" /></p>
+  44  <p>Since building a network and interacting with people is in my opinion one of the most important aspects in business, this needs a little special attention.</p>
+
+  49  <p><a href="https://www.amazon.com/Management-Myth-Debunking-Business-Philosophy/dp/0393338525/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1293710453&amp;sr=1-1" target="_blank">(Link on amazon)</a></p>
+  50: <p><img src="/images/archive/corebvba/2010%2f12%2fmyth.jpg" alt="&quot;The big giant head&quot; from &quot;Third rock under the sun&quot; ?" /></p>
+  51  <p>While I read numerous books on methodologies and techniques on how to do business, this book points out what it is all about: techniques and methodolgies are there to help you, not to worship them.</p>
+
+  56  <h3>Conclusion</h3>
+  57: <p><img src="/images/archive/corebvba/2010%2f12%2fwin.jpg" alt="I'm not there yet, but I am making progress ;-)" /></p>
+  58  <p>There you have it, this is my shortlist. The books on the list offer you a very broad amount of universal tips, techniques and methodologies one can use in business. The first one is there to give you a general idea, the second one specializes in a very important aspect of doing business/management, and finally the last one reminds you of the fact that one has to be a little bit conservative when reading in on "The next big thing&trade;".</p>
+
+content\posts\continuous-thinking-nerdbeers-providing-business-value-by-issue-tracking.md:
+  38  <p>This is what the open issues list currently looks like:</p>
+  39: <p><img src="/images/archive/corebvba/2011%2f3%2fOpenIssues.png" alt="" width="659" height="465" /></p>
+  40  <p>&nbsp;</p>
+
+  51  <p>Another cool thing is that the closed issues list now actually provides some value:</p>
+  52: <p><img src="/images/archive/corebvba/2011%2f3%2fClosedIssues.png" alt="" width="659" height="465" /></p>
+  53  <p>&nbsp;</p>
+
+  55  <p>As I was thinking about all the possible features, I noticed that I was adding a lot of them, without actually thinking them through. Since I wanted to avoid adding features which do not provide business value, I decided to implement a BDD technique into my feature definition.</p>
+  56: <p><img src="/images/archive/corebvba/2011%2f3%2fIssueAddPinMap.png" alt="" width="659" height="465" /></p>
+  57  <p>Lets take a look at this in detail:</p>
+
+content\posts\de-voedselzandloper-zin-en-onzin.md:
+  13  <p>&nbsp;</p>
+  14: <p><img style="float: left; margin: 5px;" src="/images/archive/corebvba/2012%2f9%2fvoedselzandloper.jpg" alt="" /></p>
+  15  <h3>De voedselzandloper: het boek en de theorie</h3>
+
+  26  <p>&nbsp;</p>
+  27: <p><img src="/images/archive/corebvba/2012%2f9%2fUSDA_Food_Pyramid_92.gif" alt="" /></p>
+  28  <p>Bij die van 2005 hebben ze blijkbaar hun mening al herzien, en gaan ze op zoek naar een evenwichtigere verdeling...</p>
+  29: <p><img src="/images/archive/corebvba/2012%2f9%2f500px-MyPyramidFood.svg.png" alt="" /></p>
+  30  <p>Dit representeert een gezonde, evenwichtige voeding... Of toch niet? En wat heeft dat met you te maken?</p>
+
+  51  <p>Jaja, dat dacht ik ook toen ik een jaar geleden begon... Dit was het resultaat na 17 dagen - ja, u leest het goed: 17 dagen....</p>
+  52: <p><img src="/images/archive/corebvba/2012%2f9%2fpaleo_17_days.jpg" alt="" /></p>
+  53  <p>Daarnaast voelde ik me ook 100 keer energieker en nog vele andere zaken... Voor meer info: ik heb een <a href="https://paleohacks.com/questions/7058/share-your-paleo-before-and-after/59898#59898" target="_blank">getuigenis gepost op paleohacks met wat meer info omtrent mijn ervaring</a>...&nbsp;</p>
+
+  72  <h3>Wat als?</h3>
+  73: <p><img src="/images/archive/corebvba/2012%2f9%2fWatAls1-2beNB.jpg.h380.jpg.568.jpg" alt="" /></p>
+  74  <p>Wat als het verhaal van paleo nu eens zou kloppen, of dat van de voedselzandloper? Zou dit de exodus tot gevolg hebben? Waarschijnlijk niet; al zou het wel voor aanzienlijk minder gezondsheidskosten kunnen meebrengen voor de overheid, als het klopt. Een ander groot probleem zou zich stellen in de economie... Wat gebeurt er met de bakkers/voedsellobby wanneer de aan te raden hoeveelheid koolhydraten inees zaakt naar ergens rond de 150gr/dag, een fractie van wat ze nu is? Faillissementen? Chaos? Wie zal het zeggen... Ik kan alleen maar zeggen dat vanuit mijn persoonlijk standpunt het hele verhaal wel logisch overkomt.</p>
+
+content\posts\einstein's-theories-explained-in-5-minutes-(special)-relativity.md:
+  25  <p>Actually special relativity is easier then general relativity; special relativity describes relativity for easy cases, while the general theory tries do describe all possibilities in a single theory...</p>
+  26: <p><img style="float: left;" src="/images/archive/corebvba/2010%2f1%2fEinsteinSpeedOfLight.png" alt="" /></p>
+  27  <h4>Ok, so what is it all about ?</h4>
+
+  29  <p style="padding-left: 30px;">Albert Einstein used to approach Physics in a very theoretical way; he made up special cases using the extremes of physics laws, and then imagined what would happen. This theory probably started with the observation that the speed of light was constant. Think about this : no mather where you are, the light always travels at the same -albeit very high- speed. Einstein wondered what it would look like if he would fly in front of a top of a ray of light that was fired... Would you be able to see the top of the light or not ?</p>
+  30: <p><img style="float: right;" src="/images/archive/corebvba/2010%2f1%2fSpeedOfLightTop.png" alt="" /></p>
+  31  <h4>Why is that such a good question ? It just sounds like a lot of mumbo-jumbo to me ...<br /></h4>
+
+  42  <p>Take a good look at the sentence above; this means that if you and another person look at something, you have a different perception about the exact time it happened. I can explain this to you with a simple picture.</p>
+  43: <p><img style="float: left;" src="/images/archive/corebvba/2010%2f1%2fRelativeSpeed.png" alt="" /></p>
+  44  <p>This picture represents a light bulb that emits yellow light, and suddenly switches to red light. Each row is a timeframe.</p>
+
+content\posts\epilogue-one-night-in-paris-cqrs-beers-and-life-in-general.md:
+  34  <p>Due to not being able to leave home on time, I knew I was about to get stuck in traffic, because I would arrive around 4PM in Paris (which is one of the worst hours as far as I know). I was correct; this is what it looked like:</p>
+  35: <p><img src="/images/archive/corebvba/2012%2f7%2f289961_4367556274189_2095702751_o.jpg" alt="" /></p>
+  36  <p>Nevertheless, I managed to arrive just on time at Rinat's work so we could take the subway to "Chez Justine", the pub where #CQRSBeersParis is usually held.&nbsp;</p>
+
+content\posts\erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom.md:
+   14  <h2>First things first: why should you follow a camp on Erlang?</h2>
+   15: <p><img src="/images/archive/corebvba/2013%2f5%2ferlcamp.png" alt="" /></p>
+   16  <p>People who know me in person know that I am an avid fan of Erlang, even though I have only done some very small experiments with it.</p>
+
+   44  <p>Quite simple: unicorns &amp; fairydust. Or, if those are not available, there is another way (it took me a while to figure all of this out, but once you know it, it is quite simple):</p>
+   45: <p><img src="/images/archive/corebvba/2013%2f5%2fstart.png" alt="" /></p>
+   46  <h3>Install prerequisites</h3>
+
+   87  <h2>Let's build a POC helloworld first</h2>
+   88: <p><img src="/images/archive/corebvba/2013%2f5%2fHelloWorld.png" alt="" /></p>
+   89  <p>Create the folder where you want your app to reside, and copy the file <code>rebar.</code> and <code>rebar.cmd</code> into this folder.</p>
+
+  120  <h2>Let's convert the POC into a web app!</h2>
+  121: <p><img src="/images/archive/corebvba/2013%2f5%2fHelloWorldWeb.png" alt="" /></p>
+  122  <h3>Get a web framework</h3>
+
+content\posts\fixing-corrupt-downloads-with-your-isp.md:
+  22  <p>start a command window and start pinging with a packet that can not be separated (IPv4 only, BTW):</p>
+  23: <p><img src="/images/archive/corebvba/2013%2f3%2fSchermafbeelding+(2).png" alt="" /></p>
+  24  <p>You get the picture I presume.</p>
+
+content\posts\freedom-learning-stuff-doing-consulting-aka-the-fun-and-money-balance.md:
+  15  <p>I will start of with what most of you will probably consider quite a controversial thing; I will just post a *slightly censored* graph of my invoices cumul over my years as a company owner. ..</p>
+  16: <p><img src="/images/archive/corebvba/2013%2f3%2finvoicing.png" alt="" /></p>
+  17  <p><span style="font-size: 1.17em;">LOL, that looks odd...</span></p>
+
+content\posts\getting-started-quickly-with-bdd-in-.net.md:
+  37  <p>&nbsp;</p>
+  38: <p><img src="/images/archive/corebvba/2010%2f8%2f1.GIF" alt="" /></p>
+  39  <p>Right click on the solution, and add a new project</p>
+  40: <p><img src="/images/archive/corebvba/2010%2f8%2f2.GIF" alt="" /></p>
+  41  <p>Choose class library, and name it MyFirstBDD.Tests</p>
+  42: <p><img src="/images/archive/corebvba/2010%2f8%2f3.GIF" alt="" /></p>
+  43  <h3>Define your specs</h3>
+
+  62  <p>Also make sure you change the properties to copy "always" and build action "content". Also add a reference to the needed libs (both aubergine and project references)</p>
+  63: <p><img src="/images/archive/corebvba/2010%2f8%2f4.GIF" alt="" /></p>
+  64  <p>Change your project type for myFirstBDD from "console project" to "Class library" in the properties and everything should compile !!</p>
+  65  <p>Right click on the fixture class definition in the source code, and you should see the context option "Unit test" available</p>
+  66: <p><img src="/images/archive/corebvba/2010%2f8%2f5.GIF" alt="" /></p>
+  67  <p>&nbsp;</p>
+
+  79  <p>If everything went well, you should see the following (similar) output:</p>
+  80: <p><img src="/images/archive/corebvba/2010%2f8%2f6.GIF" alt="" /></p>
+  81  <p>&nbsp;</p>
+
+content\posts\howto+why-using-a-prototype-bdd-for-a-project-estimate-+-personal-rant.md:
+  40  <p>You can see a screenshot here:</p>
+  41: <p><img src="/images/archive/corebvba/2009%2f12%2fmarkomo_prototype.png" alt="" /></p>
+  42  <p>I am using jQuery UI for <a href="https://docs.jquery.com/UI/Tabs" target="_blank">tabs</a> and an <a href="https://docs.jquery.com/UI/Accordion" target="_blank">accordion </a>to define different possible steps of a screen. Next to this I use <a href="https://code.new-bamboo.co.uk/polypage/" target="_blank">polypage </a>to switch different states (you can click on the "logged in" link on the left top in orde to switch between a user that is logged in, and one that is not logged in.)</p>
+
+content\posts\idddtour-2013-belgium-an-immersive-experience.md:
+  60  <p>&nbsp;</p>
+  61: <p><img src="/images/archive/corebvba/2013%2f5%2fBrabanthal.jpg" alt="" /></p>
+  62  <p>I arrived late due to underestimating the traffic jams, but eventually got there. As I was welcomed by somebody at the front desk providing me a name tag, it took me a while to realize that this was actually Nicole, Vaughn's wife, basically helping us out where necessary and also providing some interesting discussions during the next four days... Thanks Nicole!!!</p>
+
+content\posts\installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows.md:
+  12  <p>People following me on twitter noticed I got entangled in yet another new language for the Erlang/BEAM VM:&nbsp;</p>
+  13: <h3><img style="font-size: 10px;" src="/images/archive/corebvba/2013%2f6%2felixir-logo.png" alt="" /></h3>
+  14  <p>Elixir could be easily described as "ruby for the BEAM/Erlang VM". In previous posts, I mentioned <a href="/posts/Erlang-Camp-Amsterdam-why-you-should-follow-it-and-getting-started-with-Erlang-and-Axiom/">why people should learn Erlang</a>, but in fact, I think most people might be better off when they skip Erlang and opt directly for Elixir. It has all the advantages of Erlang, but offers a Ruby-like syntax, macros, polymorphism and more.</p>
+
+  27  </ul>
+  28: <div><img src="/images/archive/corebvba/2013%2f6%2fmingw.png" alt="" /></div>
+  29  <div><br /></div>
+  30  <p>Next you need to make sure that "erlang/bin", "elixir/bin" and "MinGW\bin" are in your path, and we will verify that everything works; we will also need to copy the file "c:\mingw\bin\mingw32-make.exe" to "c:\mingw\bin\make.exe". Next we can test whether everything works:</p>
+  31: <p><img src="/images/archive/corebvba/2013%2f6%2fprerequisites.png" alt="" /></p>
+  32  <h3>Getting and building the web framework for Elixir: Dynamo</h3>
+
+  38  <p>Open up the shell, clone the repo and get/build the dependencies from dynamo using the mix tool : "mix deps.get".</p>
+  39: <p><img src="/images/archive/corebvba/2013%2f6%2fdyn-get-deps.png" alt="" /></p>
+  40  <p>You will get an error in the end, but that is not really a problem; the compilation should be succesful. Now you need to compile the dynamo app: "mix compile"</p>
+  41: <p><img src="/images/archive/corebvba/2013%2f6%2fdyn-compile.png" alt="" /></p>
+  42  <h3>Generate a web app with dynamo: blah</h3>
+  43  <p>You can now test whether dynamo works. You can now use dynamo to generate a web app: "mix dynamo [path of app]"</p>
+  44: <p><img src="/images/archive/corebvba/2013%2f6%2fdynamo-works.png" alt="" /></p>
+  45  <p>This has created a web-app in the blah folder. We go to the blah folder, and run once again "mix deps.get" and "mix compile". Then we should be able to start the server by typing "mix server".</p>
+  46: <p><img src="/images/archive/corebvba/2013%2f6%2fblah-works.png" alt="" /></p>
+  47  <p>Open up a browser on <a href="https://localhost:4000/" target="_blank">https://localhost:4000</a> and you can see the labor of your work.</p>
+  48: <p><img src="/images/archive/corebvba/2013%2f6%2fblah-runs.png" alt="" /></p>
+  49  <p>Now you can start working on your app, but that is the subject for another blog post. You can find more information about the dynamo web framework&nbsp;<a href="https://github.com/elixir-lang/dynamo#readme" target="_blank">here</a>.</p>
+
+content\posts\it-is-official-on-the-second-of-may-i-will-join-the-start-up-paycento.md:
+  10  <p>After having to keep my mouth shut for over a month - which was, as for those of you who know me, quite hard -, I am finally allowed to tell the world I am joining the start-up&nbsp;<a href="https://paycento.com/" target="_blank">www.paycento.com</a>&nbsp;.</p>
+  11: <p><img src="/images/archive/corebvba/2012%2f4%2fpaycento.png" alt="" /></p>
+  12  <h3>Paycento ? WHUT ? What's that ?</h3>
+
+  23  <div><br /></div>
+  24: <div><img src="/images/archive/corebvba/2012%2f4%2fPieterPitchingPaycento.jpg" alt="" /></div>
+  25  <div>[Our founder pitching Paycento for <a href="https://www.ban.be/Home/1731/BanVlaanderen" target="_blank">BAN Vlaanderen</a>]</div>
+
+content\posts\live-blogging-getting-started-with-erlang-and-nitrogen.md:
+   42  <p>I copied the whole nitrogen package to a new folder called HelloWorld - how original - opened a cmd window in the folder, and this is what I typed and the result..</p>
+   43: <p><img src="/images/archive/corebvba/2012%2f9%2ferlang-error.png" alt="" /></p>
+   44  <p>So I opened up Windows explorer and checked... Aha!</p>
+   45  <p>&nbsp;</p>
+   46: <p><img src="/images/archive/corebvba/2012%2f9%2ferlang-folder.png" alt="" /></p>
+   47  <p>I copied the bin path, went back to my hello-world folder, right-clicked start.cmd and chose for edit, and assumed replacing 5.7.5 (the Erlang version in the nitrogen package) with 5.9.2 would be enough, but then I noticed: there is also and erts-5.7.5 subfolderfolder in the hello world project, which looks like it contains the whole erlang version...</p>
+
+   59  <p>I browsed a bit further in the git project, and found <a href="https://github.com/nitrogen/nitrogen/blob/master/rel/overlay/win/README.md" target="_blank">this document</a> mentioned on the readme: "Compiling Nitrogen on Windows"... There they advise to install Erlang for win R15B02 for windows and install it in the folder "<span style="background-color: #f8f8f8; color: #333333; font-family: Consolas, 'Liberation Mono', Courier, monospace; font-size: 12px; line-height: 19px; white-space: nowrap;">c:\erl5.9</span>", so I installed yet another erlang (5.9.2), but now in the recommended folder, and tried running nitrogen again; here's what happened:</p>
+   60: <p><img src="/images/archive/corebvba/2012%2f9%2ferlang-error2.png" alt="" /></p>
+   61  <p>As it still does not work, I assume it is time to try and compile the thing...</p>
+
+   67  <p>And we're finally there!!!&nbsp;</p>
+   68: <p><img src="/images/archive/corebvba/2012%2f9%2fgit-finally.png" alt="" /></p>
+   69  <p>Now time to clean up the folders and pull in the sourcecode and build it...</p>
+   70  <p>&nbsp;</p>
+   71: <p><img src="/images/archive/corebvba/2012%2f9%2fnitro-pull.png" alt="" /></p>
+   72  <p>And we fail again...&nbsp;</p>
+   73: <p><img src="/images/archive/corebvba/2012%2f9%2fnitro-fail.png" alt="" /></p>
+   74  <p>So I am now digging into the rebar mailing lists:&nbsp;<a href="https://lists.basho.com/pipermail/rebar_lists.basho.com/2011-September/001074.html">https://lists.basho.com/pipermail/rebar_lists.basho.com/2011-September/001074.html</a></p>
+
+   76  <p>Aha, found it; I simply have to make sure c:\msysgit\bin is contained in the PATH environment variable; it now fetches all dependencies....</p>
+   77: <p><img src="/images/archive/corebvba/2012%2f9%2fnitro-rebar-ok.png" alt="" /></p>
+   78  <p>Crap... Now I get a compile error in nitrogen itself...</p>
+   79  <p>&nbsp;</p>
+   80: <p><img src="/images/archive/corebvba/2012%2f9%2fnitro-compilation-fail.png" alt="" /></p>
+   81  <p>So I checked to see if there was any Erlang feedback available on twitter...</p>
+
+   98  <p>Ok; I took a small break; looks like the problem is actually in the post_compile script for the mimetypes; currently debugging erlang script!!!&nbsp;</p>
+   99: <p><img src="/images/archive/corebvba/2012%2f9%2fdebugging-escript.png" alt="" /></p>
+  100  <p>My understanding of erlang is growing slowly&nbsp;<img title="Cool" src="https://www.corebvba.be/blog/editors/tiny_mce3/plugins/emotions/img/smiley-cool.gif" border="0" alt="Cool" />... Looks like this file just extracts all method definitions, since these have not changed, there is no need to change it, so I just commented the whole enchilada (gist here:&nbsp;<a href="https://gist.github.com/3714046">https://gist.github.com/3714046</a>) et voila, it compiles!</p>
+
+  102  <p>&nbsp;</p>
+  103: <p><img src="/images/archive/corebvba/2012%2f9%2fnitro-compiles.png" alt="" /></p>
+  104  <h3>AAAAAAAAAAAAAAAAAAAAARGH !&nbsp;</h3>
+  105  <p>Still no go; I'll call it a day for today, as I have some other stuff to do as well, and this took way longer then I hoped.... Laters!</p>
+  106: <p><img src="/images/archive/corebvba/2012%2f9%2fnitro-compiles-or-not.png" alt="" /></p>
+  107  <blockquote class="twitter-tweet">
+
+  127  <p>&nbsp;</p>
+  128: <p><img src="/images/archive/corebvba/2012%2f9%2ffinally.png" alt="" /></p>
+  129  <h3>Finally</h3>
+
+content\posts\opinion-tdd-and-startups-you-are-all-wrong-(or-right).md:
+  29  </ul>
+  30: <div><img src="/images/archive/corebvba/2013%2f3%2fCunningplan.jpg" alt="" /></div>
+  31  <div><br /></div>
+
+content\posts\override-interface-mappings-and-creata-a-generic-entity-version-filter.md:
+  13  <p>I took me quite some time, but spending a weekend at the Dutch coast cleared my mind a bit, and after the weekend I managed to get it working...</p>
+  14: <p><img style="vertical-align: middle;" src="/images/archive/corebvba/2010%2f4%2fZeeDenHaag.jpg" alt="The void (tm)" /></p>
+  15  <p></p>
+
+content\posts\paycento-web-summit-2012-day-one-is-gra-liom-eire.md:
+  20  <p style="text-align: left;">So after a false start (our train arrived a bit on the late side in Brussels, but luckily our plane was delayed as well), we managed to safely land in Dublin, and actually got to our car, which has been the decor for a lot of laughing and Mr. Bean-like "adventures" on the Irish roads. Driving left is a bit of a challenge, and I am actually glad I did not bring my driver's license - how convenient, isn't it, Geert ;) -, because I would probably wind up driving the roundabout in the wrong direction.</p>
+  21: <p style="text-align: left;"><img src="/images/archive/corebvba/2012%2f10%2fws+voituur.png" alt="" /></p>
+  22  <p style="text-align: left;">So after getting acquinted with our jolly transportation device we managed to arrive to the Web Summit in one piece, where we met Pieter (who had been in Dublin since yesterday evening).</p>
+  23  <p style="text-align: left;">He gave us a short briefing about things to expect and things we should do (i.e. some mere guidance, nothing in particular), we put on our Paycento T-shirts and were ready for take off.</p>
+  24: <p style="text-align: left;"><img src="/images/archive/corebvba/2012%2f10%2fws_paycentobooth.png" alt="" /></p>
+  25  <h3>Who did you meet ?</h3>
+
+  28  <p>We also saw a lot of new and interesting approaches to known and unknown things, some of the things were quite amazing. One thing I loved in particular was the booth next to ours, where a company named <a href="https://ovelin.com/" target="_blank">Ovelin </a>showed us a really great app"<a href="https://www.guitarbots.com" target="_blank">guitarbots</a>" &nbsp;that listens to you playing the guitar and guides you using a game, so you can learn to play the guitar properly. While testing the app it immediately spotted my wrong grab on the G chord (muting the high E), so it is really kind of an amazing thing, it is like a guitar-teacher-in-a-box.</p>
+  29: <p><img src="/images/archive/corebvba/2012%2f10%2fG-Chord-Shape.gif" alt="" /></p>
+  30  <p>There were lots and lots more people we met, so this really is a great venue to attend.</p>
+
+content\posts\presentation-cqrs-101-all-your-base-belong-to-us-on-march-6th-for-visug.be.md:
+  19  <p>The presentation is over; 45 people; a great crowd and lots of interaction....</p>
+  20: <p><img src="/images/archive/corebvba/2012%2f3%2fvisug.jpg" alt="" /></p>
+  21  <p>While I covered quite a lot of ground, I think the biggest remark was to show more concrete examples; you can find the slides <a href="https://docs.google.com/presentation/pub?id=157NwGxUZY_PKW0H_R_jjA3zLZkYiheuQfyh60IU0PrE&amp;start=false&amp;loop=false&amp;delayms=3000" target="_blank">here</a></p>
+
+content\posts\project-startup10-lessons-learned-with-blommekes.be.md:
+  15  <p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;">After these 3 nights, we decided to pick an idea and go for it. The odd thing was that we conceived the idea of blommekes.be during that night; the minute we imagined it, we assumed that this would be a perfect match for our first startup: <a href="https://blommekes.be" target="_blank">blommekes.be</a>.</span></span></p>
+  16: <p><a href="https://blommekes.be" target="_blank"><img src="/images/archive/corebvba/2012%2f7%2fblommekes-site.png" alt="" /></a></p>
+  17  <p><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"></span></span></p>
+
+  24  <h3><br /></h3>
+  25: <p><em style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px;"><img src="/images/archive/corebvba/2012%2f7%2fblommekes-stats-day1.png" alt="" /></em></p>
+  26  <p style="padding-left: 30px;"><span style="font-family: Verdana; color: #444444;"><span style="font-size: 11px; line-height: 17px;"><strong><em>We made our first mistakes here</em></strong></span></span></p>
+
+content\posts\project-startup10-you-pay-peanuts-you-get-the-monkeys.md:
+  23  <p>With my startups I would like to make money; the more the merrier... I assume the folks over at appharbour have the same goal. What was I making all this fuss about ? I presume I was expecting them to carry my investement on the web part, which is a bit unfair to be honest...</p>
+  24: <p><img style="border-style: initial; border-color: initial;" src="/images/archive/corebvba/2012%2f2%2fapphb.png" alt="" /></p>
+  25  <p>Their service is great, their product is great; for me, this service has been awesome... So I decided to put my money where my mouth is, and just pay the damn hostname forwarding... After all, what is 10 &euro;/month for their service; if I can not make 10&euro;/month profit for a website, I should probably shut it down anyway... Yes, I could do hosting for a cheaper amount, but that would mean I can not use all their infrastructure, and would probably have to manage the server myself etc...</p>
+
+content\posts\trading-the-elliot-wave-silver-28-8-2012.md:
+  15  <h3>Silver Daily</h3>
+  16: <p><img src="/images/archive/corebvba/2012%2f8%2fSilver(Daily)20120828111738.png" alt="" /></p>
+  17  <p>To me this looks like a bearish pattern which is about to turn bullish due to both MACD and RSI divergence; I assume we are currently in the 2nd wave of the bullish pattern. The two shortest dotted lines mark wave 1 and 3 of an impulsive wave; the longest line marks the complete wave...&nbsp;</p>
+
+  19  <h3>Silver Hourly</h3>
+  20: <p><img src="/images/archive/corebvba/2012%2f8%2fSilver(Hourly)20120828105956.png" alt="" /></p>
+  21  <p>This trend also looks like it is about to convert; maybe this is the end of the first wave ? Although there is some resistance at the 30.66 level from the daily, I am expecting it to even fall lower to 30.0ish (38.2ext)... In case it does break through 31.27, this means the first wave is not in yet (even though I expect it to be, since it looks more like a corrective then an impulsive pattern... The short dotted line points to a possible impulsive wave, but I expect the long one to be a longer-term wave 1.</p>
+
+  23  <h3>Silver 5 mins</h3>
+  24: <p><img src="/images/archive/corebvba/2012%2f8%2fSilver(5+Minutes)20120828110318.png" alt="" /></p>
+  25  <p>The marked wave looks like a bearish impulsive pattern to me, and the MACD seems to have convergence... so I presume the bullish trend is not yet complete.... The RSI might be a bit cumbersome, so I am not quite sure what to make of this....</p>
+
+content\posts\trading-the-elliott-wave-silver-05-09-2012.md:
+  16  <h3><span style="font-size: 11px;">Silver Daily</span></h3>
+  17: <p><img src="/images/archive/corebvba/2012%2f9%2fsilver+20120905+daily.png" alt="" /></p>
+  18  <p>After reading up on the Elliott wave, I have to re-evaluate my previous post a bit; the whole movement from 2012/02 to 2012/08 is definately a bearish impulsive wave, ending in an ending diagonal in the fifth wave. This would imply that the following wave would probably be an ABC-wave. If the current level stays below the current top, then I would still assume a fallback to 30 before going to higher levels. The odd thing is, the pattern does not look like a corrective pattern to me, so this might not be an corrective wave, but an impulsive wave, which would also mean silver could drop to the 30-level and then explode exponentionally... I still have to read up a bit on Elliott waves since this looks like a problem.</p>
+
+content\posts\trading-the-elliott-wave-silver-24-10-2012.md:
+  8  <p>s I think we are currently in wave 3 on several levels and we have some MACD/RSI divergence on the 4h-chart, I decided to put my money where my mouth is, and bought a few XAG/USD spot long sprinters with a leverage of about 80.</p>
+  9: <p><img src="/images/archive/corebvba/2012%2f10%2fopportunity.png" alt="" /></p><div style="text-align:right">
+
+content\posts\trading-the-elliott-wave-silver-26-09-2012.md:
+  8  <p>No Elliott analysis yet, since I am a bit short on time, hence my quick and dirty analysis based on divergence... The trend looks strong, so I think we might be heading to the 261.8 retracement here... (i.e. 26.4299).</p>
+  9: <p><img src="/images/archive/corebvba/2012%2f9%2fsilver.png" alt="" /></p>
+
+content\posts\y-u-build-your-own-build-server-for-paycento.md:
+  25  <p>Will you be carefull when there is no extra layer of security between you and the world; would you be more motivated to add just that extra integration test on a feature you are not a 100% sure about? I am assuming you are, because when you deploy it, it is your responsibility if something goes wrong....</p>
+  26: <p><img src="/images/archive/corebvba/2012%2f5%2fpower.jpg" alt="" /></p>
+  27  <p>This is not a blog post about the why when and how of continuous integration/deployment, but I am assuming you get the picture here...</p>

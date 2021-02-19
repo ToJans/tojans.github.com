@@ -18,15 +18,15 @@ title: 'Paycento Web Summit 2012 - Day one: Is gra liom Eire'
 <p style="text-align: left;"></p>
 <h3 style="text-align: left;">3...2...1... Lift-off!! We have lift-off!!</h3>
 <p style="text-align: left;">So after a false start (our train arrived a bit on the late side in Brussels, but luckily our plane was delayed as well), we managed to safely land in Dublin, and actually got to our car, which has been the decor for a lot of laughing and Mr. Bean-like "adventures" on the Irish roads. Driving left is a bit of a challenge, and I am actually glad I did not bring my driver's license - how convenient, isn't it, Geert ;) -, because I would probably wind up driving the roundabout in the wrong direction.</p>
-<p style="text-align: left;"><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f10%2fws+voituur.png" alt="" /></p>
+<p style="text-align: left;"><img src="/images/archive/corebvba/2012%2f10%2fws+voituur.png" alt="" /></p>
 <p style="text-align: left;">So after getting acquinted with our jolly transportation device we managed to arrive to the Web Summit in one piece, where we met Pieter (who had been in Dublin since yesterday evening).</p>
 <p style="text-align: left;">He gave us a short briefing about things to expect and things we should do (i.e. some mere guidance, nothing in particular), we put on our Paycento T-shirts and were ready for take off.</p>
-<p style="text-align: left;"><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f10%2fws_paycentobooth.png" alt="" /></p>
+<p style="text-align: left;"><img src="/images/archive/corebvba/2012%2f10%2fws_paycentobooth.png" alt="" /></p>
 <h3>Who did you meet ?</h3>
 <p>We met a lot of interesting people, and also found out ther<a href="https://www.bloovi.be/nl/nieuws/N830-invisible-puppy-leidt-belgische-missie-naar-de-dublin-web-summit-2012" target="_blank">e were 13 Belgian companies owning a booth at the convention</a>.</p>
 <p>As there are a lot of exibitors, we went by them one by one and talked to some of them.</p>
 <p>We also saw a lot of new and interesting approaches to known and unknown things, some of the things were quite amazing. One thing I loved in particular was the booth next to ours, where a company named <a href="https://ovelin.com/" target="_blank">Ovelin </a>showed us a really great app"<a href="https://www.guitarbots.com" target="_blank">guitarbots</a>" &nbsp;that listens to you playing the guitar and guides you using a game, so you can learn to play the guitar properly. While testing the app it immediately spotted my wrong grab on the G chord (muting the high E), so it is really kind of an amazing thing, it is like a guitar-teacher-in-a-box.</p>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f10%2fG-Chord-Shape.gif" alt="" /></p>
+<p><img src="/images/archive/corebvba/2012%2f10%2fG-Chord-Shape.gif" alt="" /></p>
 <p>There were lots and lots more people we met, so this really is a great venue to attend.</p>
 <p>There would be way to many here to mention, but I am confident we will hear from some of them in the future...</p>
 <p>We also saw quite a few people there we plan on visiting tomorrow....</p>

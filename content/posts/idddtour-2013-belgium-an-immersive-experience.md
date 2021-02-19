@@ -58,7 +58,7 @@ categories: ["Development", "DDD"]
 <h3>Fast forward to six months later... Day 1 of the event</h3>
 <p>The moment was finally there... I took my backpack early in the morning, got in my car, and drove to "de Brabanthal" in Leuven...</p>
 <p>&nbsp;</p>
-<p><img src="https://www.corebvba.be/blog/image.axd?picture=2013%2f5%2fBrabanthal.jpg" alt="" /></p>
+<p><img src="/images/archive/corebvba/2013%2f5%2fBrabanthal.jpg" alt="" /></p>
 <p>I arrived late due to underestimating the traffic jams, but eventually got there. As I was welcomed by somebody at the front desk providing me a name tag, it took me a while to realize that this was actually Nicole, Vaughn's wife, basically helping us out where necessary and also providing some interesting discussions during the next four days... Thanks Nicole!!!</p>
 <p>When I entered the room I was a bit flabbergasted: about 70 people were sitting there, and I was thinking "Yes, we did it!!!"</p>
 <blockquote class="twitter-tweet" lang="nl">
