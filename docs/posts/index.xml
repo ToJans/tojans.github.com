@@ -881,10 +881,10 @@ Project #Startup10 - Startup #3 : Project Big</description>
     
     <item>
       <title>Epilogue: One night in Paris - #CQRS, beers and life in general</title>
-      <link>https://tojans.me/posts/epilogue-one-night-in-paris-#cqrs-beers-and-life-in-general/</link>
+      <link>https://tojans.me/posts/epilogue-one-night-in-paris-cqrs-beers-and-life-in-general/</link>
       <pubDate>Fri, 13 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://tojans.me/posts/epilogue-one-night-in-paris-#cqrs-beers-and-life-in-general/</guid>
+      <guid>https://tojans.me/posts/epilogue-one-night-in-paris-cqrs-beers-and-life-in-general/</guid>
       <description>Ce soir #cqrsbeer chez Justine avec @abdullin @thinkb4coding @ToJans groups.google.com/forum/?fromgro&amp;hellip; #cqrs
 &amp;mdash; ALT.Net FR (@altnetfr) July 12, 2012IntroductionWhen I told people I was going to drive to Paris (350KM, a 3 hour drive, traffic jams not included) to have a discussion with a few persons I know from the internet, most of my friends were questioning my sanity.</description>
     </item>
@@ -967,10 +967,10 @@ IntroductionI love appharbour, in fact, I have 8 apps running over there at thi
     
     <item>
       <title>Presentation: CQRS 101 - All your BASE belong to us - on march 6th for visug.be</title>
-      <link>https://tojans.me/posts/presentation-cqrs-101-all-your-base-belong-to-us-on-march-6th-for-visug.be/</link>
+      <link>https://tojans.me/posts/presentation-cqrs-101-all-your-base-belong-to-us-on-march-6th-for-visugbe/</link>
       <pubDate>Wed, 22 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://tojans.me/posts/presentation-cqrs-101-all-your-base-belong-to-us-on-march-6th-for-visug.be/</guid>
+      <guid>https://tojans.me/posts/presentation-cqrs-101-all-your-base-belong-to-us-on-march-6th-for-visugbe/</guid>
       <description>I am presenting for Visug on the 6th of march; it is a session about CQRS; here is the abstract:</description>
     </item>
     
@@ -1199,10 +1199,10 @@ IntroductionWell, another 14 days passed by for the NerdBeers project, and a lo
     
     <item>
       <title>My #CQRS cookbook</title>
-      <link>https://tojans.me/posts/my-#cqrs-cookbook/</link>
+      <link>https://tojans.me/posts/my-cqrs-cookbook/</link>
       <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://tojans.me/posts/my-#cqrs-cookbook/</guid>
+      <guid>https://tojans.me/posts/my-cqrs-cookbook/</guid>
       <description>Here is my personal take on how I interpret all things CQRS...
 Commercial impact: why use CQRS ?
 CQRS enforces you to apply strict boundaries to your app in a consistent way.</description>
@@ -1735,10 +1735,10 @@ Somebody in&amp;nbsp;stated in a&amp;nbsp;comment&amp;nbsp;he got an exception. 
     
     <item>
       <title>Safe method invoker in c#</title>
-      <link>https://tojans.me/posts/safe-method-invoker-in-c#/</link>
+      <link>https://tojans.me/posts/safe-method-invoker-in-c/</link>
       <pubDate>Wed, 27 Jun 2007 00:00:00 +0000</pubDate>
       
-      <guid>https://tojans.me/posts/safe-method-invoker-in-c#/</guid>
+      <guid>https://tojans.me/posts/safe-method-invoker-in-c/</guid>
       <description>Today I was reading an article on codeproject by Mark Clifton about using a safe invoker for a method. While the idea was quite good, I think the implementation was a bit bloated, soI posted a comment with my own implementation.</description>
     </item>
     

@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2010-09-28"
-slug: "my-#cqrs-cookbook"
+slug: "my-cqrs-cookbook"
 title: 'My #CQRS cookbook'
 Tags: ["Development", "DDD"]
 ---

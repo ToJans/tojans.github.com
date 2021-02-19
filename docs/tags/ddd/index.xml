@@ -38,10 +38,10 @@ Some background info So, last night we had the very first event of the Belgian D
     
     <item>
       <title>My #CQRS cookbook</title>
-      <link>https://tojans.me/posts/my-#cqrs-cookbook/</link>
+      <link>https://tojans.me/posts/my-cqrs-cookbook/</link>
       <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
       
-      <guid>https://tojans.me/posts/my-#cqrs-cookbook/</guid>
+      <guid>https://tojans.me/posts/my-cqrs-cookbook/</guid>
       <description>Here is my personal take on how I interpret all things CQRS...
 Commercial impact: why use CQRS ?
 CQRS enforces you to apply strict boundaries to your app in a consistent way.</description>

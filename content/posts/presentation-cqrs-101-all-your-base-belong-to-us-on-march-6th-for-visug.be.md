@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2012-02-22"
-slug: "presentation-cqrs-101-all-your-base-belong-to-us-on-march-6th-for-visug.be"
+slug: "presentation-cqrs-101-all-your-base-belong-to-us-on-march-6th-for-visugbe"
 title: 'Presentation: CQRS 101 - All your BASE belong to us - on march 6th for visug.be'
 ---
 

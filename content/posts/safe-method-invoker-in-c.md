@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2007-06-27"
-slug: "safe-method-invoker-in-c#"
+slug: "safe-method-invoker-in-c"
 title: Safe method invoker in c#
 ---
 

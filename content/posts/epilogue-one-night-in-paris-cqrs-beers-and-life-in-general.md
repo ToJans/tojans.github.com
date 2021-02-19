@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2012-07-13"
-slug: "epilogue-one-night-in-paris-#cqrs-beers-and-life-in-general"
+slug: "epilogue-one-night-in-paris-cqrs-beers-and-life-in-general"
 title: 'Epilogue: One night in Paris - #CQRS, beers and life in general'
 ---
 
