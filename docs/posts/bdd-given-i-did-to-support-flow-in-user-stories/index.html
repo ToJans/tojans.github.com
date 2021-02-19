@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | Essay : Extending BDD stories ; the &#34;Given I did&#34; clause - including flow in user stories </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="https://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="https://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://tojans.me/posts/bdd-given-i-did-to-support-flow-in-user-stories/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="https://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Essay : Extending BDD stories ; the &#34;Given I did&#34; clause - including flow in user stories"/>
+<meta name="twitter:description" content="Introduction In this essay I am going to reflect my personal ideas and opinions on the DSL syntax used for BDD, and I will propose a new concept for the common BDD language."/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About me</a></li>
+        
+            
+            <li><a 
+                   href="/services/"
+                        
+                   title="">Services</a></li>
+        
+            
+            <li><a 
+                   href="/contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Essay : Extending BDD stories ; the &#34;Given I did&#34; clause - including flow in user stories</h3>
+                
+            </div>
+
+            <h3 id="introduction">Introduction</h3>
+<p>In this essay I am going to reflect my personal ideas and opinions on the DSL syntax used for BDD, and I will propose a new concept for the common BDD language.</p>
+<p>I am going to show you how I really grasped what I was doing wrong with my stories, and how the syntax should be extended in order to contain extra flow information in a really easy way.<br>
+This new concept adds extra conceptual information to the stories, and also reduces the work the developer has to do to implement the DSL.</p>
+<p>Enjoy !</p>
+<h3 id="in-the-beginning-there-was-nothing-">In the beginning, there was nothing !!!</h3>
+<p>I got started on this idea while I was replying to an email about the limitations of current BDD stories. Since my conversation partner said he had some issues on the current BDD syntax used, I asked him wether he could clarify on the issues.</p>
+<p>While I was replying to the response he sent, I was trying to explain my thoughts by giving an example :</p>
+<p>As a customer<br>
+I want to place orders<br>
+So that I can get the products where and when I want them</p>
+<p>Scenario Place an order<br>
+When I want to place an order<br>
+Then I should be able to select products in a catalog</p>
+<p>Scenario Order products<br>
+Given I have selected on or more products in a catalog<br>
+When I add it to my shopping cart<br>
+Then the shopping cart should contain the selected product</p>
+<p>Scenario Modify a product in the shopping cart<br>
+Given I have some products in my shopping cart<br>
+When I edit a product order<br>
+Then the edited product order should have changed</p>
+<h3 id="eureka-">Eureka !!</h3>
+<p>This was the moment I noticed that something was wrong. Let us take a good look at the last Scenario : &ldquo;Modify a product in the shopping cart&rdquo; . What is wrong with it, one might ask ? While I was writing this story I was thinking the following :</p>
+<ul>
+<li>What if the shopping cart is empty ?</li>
+<li>Hmmz I don&rsquo;t know, I suppose we need another scenario for that</li>
+<li>Another scenario for what ?</li>
+<li>We define two scenarios : one for a shopping carts with products in it, and one for the case where it&rsquo;s empty, and we add &ldquo;Given the shopping cart is (not) empty&rdquo;</li>
+<li>But hey, why ? I&rsquo;m not interested in the &ldquo;Modify the shopping cart if the shopping cart is empty&rdquo; because it is just litter, it doesn&rsquo;t really add to the conceptual story.</li>
+<li>Yeah, but as a developer I need to know what to do if it is empty and you try to modify it.</li>
+<li>Are you stupid ?  Ok, maybe you need to say that it is not possible, but it adds no conceptual info at all to the story !!</li>
+<li>Oh, you mean that it is actually some extra information on the scenario; the &ldquo;shopping cart is not empty&rdquo; is not just a given for this example; it is a requirement ???</li>
+<li>Yes, it&rsquo;s not a given, it is a requirement that should say that this story is only valid in this particular case</li>
+<li>Hmmz interesting concept, let&rsquo;s try :</li>
+</ul>
+<p>Scenario Modify a product in the shopping cart<br>
+If I have some products in my shopping cart<br>
+When I edit an ordered product<br>
+Then the edited product should have changed</p>
+<ul>
+<li>Whoa ! that looks nice; If we have this scenario, we do not need an extra scenario for the empty shopping cart</li>
+<li>But wait, we could also say it like this</li>
+</ul>
+<p>Scenario Modify a product in the shopping cart<br>
+Given I have some products in my shopping cart<br>
+When I edit an ordered product<br>
+Then the edited product should have changed</p>
+<ul>
+<li>What is the difference ?</li>
+<li>Well, it is really a conceptual thing; I&rsquo;ll try to think about another example</li>
+</ul>
+<p>Scenario Place the order<br>
+If I have identified myself as a valid customer<br>
+When I edit an ordered product<br>
+Then the edited product should have changed</p>
+<ul>
+<li>Hmmz something is wrong with it ?</li>
+<li>What ?</li>
+</ul>
+<h3 id="eureka--part-deux">Eureka : Part deux</h3>
+<ul>
+<li>EUREKA !!!</li>
+<li>What ? Again ???</li>
+<li>I found it ; the &ldquo;If&rdquo; clause is actually describing something you did previously.</li>
+<li>In the example the &ldquo;If I have identified myself as a valid customer&rdquo; actually means we should have some kind of a scenario called &ldquo;Identify myself as a valid customer&rdquo;</li>
+<li>Oh, you are describing the flow here ?</li>
+<li>Yups, that is it; it is extra information you are providing&hellip;.</li>
+<li>Wow, that is interesting !!</li>
+<li>But, I see a small problem; the name of the scenario does not match the &ldquo;If &ldquo;clause</li>
+<li>&hellip;. let&rsquo;s see&hellip;. AHA !!</li>
+<li>Yes ?</li>
+<li>Here is the example :</li>
+</ul>
+<p>Scenario Identify myself as a valid customer<br>
+Given  I have some valid id method<br>
+When  I identify myself<br>
+Then   it should state me as a valid customer</p>
+<p>Scenario Place the order<br>
+Given I did identify myself as a valid customer<br>
+  And I did order products<br>
+When place the order<br>
+Then order should be confirmed</p>
+<p>Scenario Order products<br>
+Given I did select one or more products in a catalog<br>
+When I add it to my shopping cart<br>
+Then the shopping cart should contain the selected product</p>
+<ul>
+<li>Whoa, that looks nice ! So what you are actually doing is extending the story the whole time ?</li>
+<li>Yes, that&rsquo;s it.</li>
+<li>So we are gradually replacing all the &ldquo;Given&quot;s by the &ldquo;Given I did&rdquo; and thus including extra flow in the context ?</li>
+<li>Yes !! And in theory we could go all the way until we get to the very bottom of every single implemented line of code&hellip;</li>
+<li>Man ! So the developer only has to implement the &ldquo;Given&quot;s , and not the &ldquo;Given I did&rdquo; ?</li>
+<li>Yups !!</li>
+<li>That should save a lot of work !! nice !!</li>
+</ul>
+<h3 id="in-conclusion">In conclusion</h3>
+<p>Using the &ldquo;Given I did&rdquo; clause, we can include extra conceptual information in the BDD stories; the stories become tighter, but they contain even more information then before.</p>
+<p>By analyzing the &ldquo;Given I did&rdquo; specs, one can deduct the flow an application should allow. In the example stated above, the option of ordering with an empty shopping cart should not be available since it is not mentioned in the stories; the developer should only allow state transitions mentioned in the stories&hellip;.</p>
+<p>I truly think that we have something new here, and hope that this essay is a viable contribution to the BDD community on it&rsquo;s own !!</p>
+<p>Kind Regards,</p>
+<p>Tom Janssens</p>
+<p>PS : I&rsquo;m not really schizophrenic; I was just looking for a way to reflect my thaughts ;)</p>
+<h3 id="appendix-a--a-working-example-story-">Appendix A : a working example story :</h3>
+<div class="highlight"><pre class="chroma"><code class="language-gherkin" data-lang="gherkin"><span class="nf">Context      Be.Corebvba.Aubergine.Examples.Accounts.Contexts.AccountContext  
+</span><span class="nf">ContextDLL   Be.Corebvba.Aubergine.Examples.DLL  
+</span><span class="nf">
+</span><span class="nf">Story Transfer money between accounts  
+</span><span class="nf">
+</span><span class="nf">    As a user  
+</span><span class="nf">    </span><span class="k">I </span><span class="nf">want to transfer money between accounts  
+</span><span class="nf">    So that I can have real use for my money  
+</span><span class="nf">
+</span><span class="nf">    </span><span class="k">Given </span><span class="nf">the balance of AccountA is </span><span class="s">3</span><span class="nf">m  
+</span><span class="nf">    </span><span class="k">Given </span><span class="nf">the balance of AccountB is </span><span class="s">2</span><span class="nf">m  
+</span><span class="nf">    </span><span class="k">Given </span><span class="nf">the owner of AccountA is the current user  
+</span><span class="nf">
+</span><span class="nf">    Scenario Authenticate the current user as a &#39;valid or invalid&#39; user  
+</span><span class="nf">        </span><span class="k">Given </span><span class="nf">the name of the current user is &#39;username&#39;  
+</span><span class="nf">          </span><span class="k">And </span><span class="nf">the password of the current user is &#39;password&#39;  
+</span><span class="nf">        </span><span class="k">When </span><span class="nf">I request authentication for the current user  
+</span><span class="nf">        </span><span class="k">Then </span><span class="nf">the process should &#39;fail or succeed&#39;  
+</span><span class="nf">
+</span><span class="nf">        Example  
+</span><span class="nf">            +--------------------+------------+------------+------------------+</span><span class="k">  
+</span><span class="k">            |</span><span class="s"> &#39;valid or invalid&#39;</span><span class="k"> |</span><span class="s"> &#39;username&#39;</span><span class="k"> |</span><span class="s"> &#39;password&#39;</span><span class="k"> |</span><span class="s"> &#39;fail or succeed&#39;</span><span class="k">|</span><span class="s">  
+</span><span class="s">            +--------------------+------------+------------+------------------+</span><span class="k">  
+</span><span class="k">            |</span><span class="s"> valid</span><span class="k">              |</span><span class="s"> Neo</span><span class="k">        |</span><span class="s"> Red pill</span><span class="k">   |</span><span class="s"> succeed</span><span class="k">          |  </span><span class="nf">
+</span><span class="nf"></span><span class="k">            |</span><span class="s"> invalid</span><span class="k">            |</span><span class="s"> Neo</span><span class="k">        |</span><span class="s"> Blue pill</span><span class="k">  |</span><span class="s"> fail</span><span class="k">             |  </span><span class="nf">
+</span><span class="nf">            +--------------------+------------+------------+------------------+  
+</span><span class="nf">
+</span><span class="nf">    Scenario Authenticate the current user for &#39;an account&#39;  
+</span><span class="nf">        </span><span class="k">Given </span><span class="nf">I did authenticate the current user as a valid user  
+</span><span class="nf">        </span><span class="k">When </span><span class="nf">I request authentication for &#39;an account&#39; with the current user  
+</span><span class="nf">        </span><span class="k">Then </span><span class="nf">the process should &#39;fail or succeed&#39;  
+</span><span class="nf">
+</span><span class="nf">        Example accounts :  
+</span><span class="nf">            +--------------+-------------------+</span><span class="k">  
+</span><span class="k">            |</span><span class="s"> &#39;an account&#39;</span><span class="k"> |</span><span class="s"> &#39;fail or succeed&#39;</span><span class="k"> |  </span><span class="nf">
+</span><span class="nf">            +--------------+-------------------+</span><span class="k">  
+</span><span class="k">            |</span><span class="s">  AccountA</span><span class="k">    |</span><span class="s"> succeed</span><span class="k">           |  </span><span class="nf">
+</span><span class="nf"></span><span class="k">            |</span><span class="s">  AccountB</span><span class="k">    |</span><span class="s"> fail</span><span class="k">              |  </span><span class="nf">
+</span><span class="nf">            +--------------+-------------------+  
+</span><span class="nf">
+</span><span class="nf">    Scenario Transfer AAm between </span><span class="s">2</span><span class="nf"> accounts  
+</span><span class="nf">        </span><span class="k">Given </span><span class="nf">I did authenticate the current user for AccountA  
+</span><span class="nf">        </span><span class="k">When </span><span class="nf">I transfer AAm from AccountA to AccountB with the current user  
+</span><span class="nf">        </span><span class="k">Then </span><span class="nf">the balance of AccountA should be BBm   
+</span><span class="nf">        </span><span class="k">Then </span><span class="nf">the balance of AccountB should be CCm   
+</span><span class="nf">        </span><span class="k">Then </span><span class="nf">the process should &#39;fail or succeed&#39;  
+</span><span class="nf">
+</span><span class="nf">        Example for the transfer  
+</span><span class="nf">
+</span><span class="nf">            +----+----+----+-------------------+</span><span class="k">  
+</span><span class="k">            |</span><span class="s"> AA</span><span class="k"> |</span><span class="s"> BB</span><span class="k"> |</span><span class="s"> CC</span><span class="k"> |</span><span class="s"> &#39;fail or succeed&#39;</span><span class="k"> |  </span><span class="nf">
+</span><span class="nf">            +----+----+----+-------------------+</span><span class="k">  
+</span><span class="k">            |</span><span class="s">  1</span><span class="k"> |</span><span class="s">  2</span><span class="k"> |</span><span class="s">  3</span><span class="k"> |</span><span class="s"> succeed</span><span class="k">           |  </span><span class="nf">
+</span><span class="nf"></span><span class="k">            |</span><span class="s">  2</span><span class="k"> |</span><span class="s">  1</span><span class="k"> |</span><span class="s">  4</span><span class="k"> |</span><span class="s"> succeed</span><span class="k">           |  </span><span class="nf">
+</span><span class="nf"></span><span class="k">            |</span><span class="s">  3</span><span class="k"> |</span><span class="s">  0</span><span class="k"> |</span><span class="s">  5</span><span class="k"> |</span><span class="s"> succeed</span><span class="k">           |  </span><span class="nf">
+</span><span class="nf"></span><span class="k">            |</span><span class="s">  4</span><span class="k"> |</span><span class="s">  3</span><span class="k"> |</span><span class="s">  2</span><span class="k"> |</span><span class="s"> fail</span><span class="k">              |  </span><span class="nf">
+</span><span class="nf">            +----+----+----+-------------------+</span><span class="c">  
+</span><span class="c">
+</span><span class="c">
+</span><span class="c">### Appendix B : the resulting output of my runner:</span><span class="nf">
+</span><span class="nf">
+</span><span class="nf">Aubergine Console Runner - Core bvba - Tom Janssens </span><span class="s">2009</span><span class="nf">  
+</span><span class="nf">
+</span><span class="nf">Processing file(s) : accounts\stories\*.txt  
+</span><span class="nf">  Processing file : C:\Projecten\Be.Corebvba.Aubergine\Be.Corebvba.Aubergine.ConsoleRunner\bin\Debug\accounts\stories\Transfer_money_between_accounts.txt  
+</span><span class="nf">
+</span><span class="nf">    Story Transfer money between accounts =&gt;OK  
+</span><span class="nf">        </span><span class="k">Given </span><span class="nf">the balance of AccountA is </span><span class="s">3</span><span class="nf">m =&gt;OK  
+</span><span class="nf">        </span><span class="k">Given </span><span class="nf">the balance of AccountB is </span><span class="s">2</span><span class="nf">m =&gt;OK  
+</span><span class="nf">        </span><span class="k">Given </span><span class="nf">the owner of AccountA is the current user =&gt;OK  
+</span><span class="nf">        Scenario Authenticate the current user as a valid user =&gt;OK  
+</span><span class="nf">            </span><span class="k">Given </span><span class="nf">the name of the current user is Neo =&gt;OK  
+</span><span class="nf">            </span><span class="k">Given </span><span class="nf">the password of the current user is Red pill =&gt;OK  
+</span><span class="nf">            </span><span class="k">When </span><span class="nf">I request authentication for the current user =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the process should succeed =&gt;OK  
+</span><span class="nf">
+</span><span class="nf">        Scenario Authenticate the current user as a invalid user =&gt;OK  
+</span><span class="nf">            </span><span class="k">Given </span><span class="nf">the name of the current user is Neo =&gt;OK  
+</span><span class="nf">            </span><span class="k">Given </span><span class="nf">the password of the current user is Blue pill =&gt;OK  
+</span><span class="nf">            </span><span class="k">When </span><span class="nf">I request authentication for the current user =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the process should fail =&gt;OK  
+</span><span class="nf">
+</span><span class="nf">        Scenario Authenticate the current user for AccountA =&gt;OK  
+</span><span class="nf">            </span><span class="k">Given </span><span class="nf">I did authenticate the current user as a valid user =&gt;OK  
+</span><span class="nf">            </span><span class="k">When </span><span class="nf">I request authentication for AccountA with the current user =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the process should succeed =&gt;OK  
+</span><span class="nf">
+</span><span class="nf">        Scenario Authenticate the current user for AccountB =&gt;OK  
+</span><span class="nf">            </span><span class="k">Given </span><span class="nf">I did authenticate the current user as a valid user =&gt;OK  
+</span><span class="nf">            </span><span class="k">When </span><span class="nf">I request authentication for AccountB with the current user =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the process should fail =&gt;OK  
+</span><span class="nf">
+</span><span class="nf">        Scenario Transfer </span><span class="s">1</span><span class="nf">m between </span><span class="s">2</span><span class="nf"> accounts =&gt;OK  
+</span><span class="nf">            </span><span class="k">Given </span><span class="nf">I did authenticate the current user for AccountA =&gt;OK  
+</span><span class="nf">            </span><span class="k">When </span><span class="nf">I transfer </span><span class="s">1</span><span class="nf">m from AccountA to AccountB with the current user =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the balance of AccountA should be </span><span class="s">2</span><span class="nf">m =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the balance of AccountB should be </span><span class="s">3</span><span class="nf">m =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the process should succeed =&gt;OK  
+</span><span class="nf">
+</span><span class="nf">        Scenario Transfer </span><span class="s">2</span><span class="nf">m between </span><span class="s">2</span><span class="nf"> accounts =&gt;OK  
+</span><span class="nf">            </span><span class="k">Given </span><span class="nf">I did authenticate the current user for AccountA =&gt;OK  
+</span><span class="nf">            </span><span class="k">When </span><span class="nf">I transfer </span><span class="s">2</span><span class="nf">m from AccountA to AccountB with the current user =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the balance of AccountA should be </span><span class="s">1</span><span class="nf">m =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the balance of AccountB should be </span><span class="s">4</span><span class="nf">m =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the process should succeed =&gt;OK  
+</span><span class="nf">
+</span><span class="nf">        Scenario Transfer </span><span class="s">3</span><span class="nf">m between </span><span class="s">2</span><span class="nf"> accounts =&gt;OK  
+</span><span class="nf">            </span><span class="k">Given </span><span class="nf">I did authenticate the current user for AccountA =&gt;OK  
+</span><span class="nf">            </span><span class="k">When </span><span class="nf">I transfer </span><span class="s">3</span><span class="nf">m from AccountA to AccountB with the current user =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the balance of AccountA should be </span><span class="s">0</span><span class="nf">m =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the balance of AccountB should be </span><span class="s">5</span><span class="nf">m =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the process should succeed =&gt;OK  
+</span><span class="nf">
+</span><span class="nf">        Scenario Transfer </span><span class="s">4</span><span class="nf">m between </span><span class="s">2</span><span class="nf"> accounts =&gt;OK  
+</span><span class="nf">            </span><span class="k">Given </span><span class="nf">I did authenticate the current user for AccountA =&gt;OK  
+</span><span class="nf">            </span><span class="k">When </span><span class="nf">I transfer </span><span class="s">4</span><span class="nf">m from AccountA to AccountB with the current user =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the balance of AccountA should be </span><span class="s">3</span><span class="nf">m =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the balance of AccountB should be </span><span class="s">2</span><span class="nf">m =&gt;OK  
+</span><span class="nf">            </span><span class="k">Then </span><span class="nf">the process should fail =&gt;OK
+</span></code></pre></div><h3 id="appendix-c--the-context--dsl">Appendix C : The context + DSL</h3>
+<p>    internal class</p>
+<div class="highlight"><pre class="chroma"><code class="language-C#" data-lang="C#"><span class="n">AccountContext</span>  
+    <span class="p">{</span>  
+        <span class="k">public</span> <span class="n">User</span> <span class="n">currentUser</span> <span class="p">=</span> <span class="k">new</span> <span class="n">User</span><span class="p">();</span>  
+        <span class="k">public</span> <span class="n">Account</span> <span class="n">AccountA</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Account</span><span class="p">();</span>  
+        <span class="k">public</span> <span class="n">Account</span> <span class="n">AccountB</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Account</span><span class="p">();</span>  
+        <span class="k">public</span> <span class="n">AccountService</span> <span class="n">AccountService</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AccountService</span><span class="p">();</span>  
+        <span class="k">public</span> <span class="n">ProcessStatus</span> <span class="n">LastStatus</span><span class="p">;</span>  
+<span class="na">
+</span><span class="na">        [DSL(@&#34;the (?&lt;member&gt;.+) of (?&lt;instance&gt;.+) is (?&lt;value&gt;.+)&#34;)]</span>  
+        <span class="k">void</span> <span class="n">assignfield</span><span class="p">(</span><span class="kt">object</span> <span class="n">instance</span><span class="p">,</span><span class="kt">string</span> <span class="n">member</span><span class="p">,</span><span class="kt">object</span> <span class="k">value</span><span class="p">)</span>  
+        <span class="p">{</span>  
+            <span class="n">instance</span><span class="p">.</span><span class="n">Set</span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="k">value</span><span class="p">);</span>  
+        <span class="p">}</span>  
+<span class="na">
+</span><span class="na">        [DSL(@&#34;the (?&lt;member&gt;.+) of (?&lt;instance&gt;.+) should be (?&lt;value&gt;.*)&#34;)]</span>  
+        <span class="kt">bool</span> <span class="n">shouldbefield</span><span class="p">(</span><span class="kt">object</span> <span class="n">instance</span><span class="p">,</span> <span class="kt">string</span> <span class="n">member</span><span class="p">,</span> <span class="kt">object</span> <span class="k">value</span><span class="p">)</span>  
+        <span class="p">{</span>  
+            <span class="kt">var</span> <span class="n">obj</span> <span class="p">=</span> <span class="n">instance</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">object</span><span class="p">&gt;(</span><span class="n">member</span><span class="p">);</span>  
+            <span class="k">return</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ChangeType</span><span class="p">(</span><span class="k">value</span><span class="p">,</span> <span class="n">obj</span><span class="p">.</span><span class="n">GetType</span><span class="p">()).</span><span class="n">Equals</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span>  
+        <span class="p">}</span>  
+<span class="na">
+</span><span class="na">        [DSL(@&#34;I request authentication for (?&lt;user&gt;.+)&#34;)]</span>  
+        <span class="k">void</span> <span class="n">authenticate_for_account_x</span><span class="p">(</span><span class="n">User</span> <span class="n">user</span><span class="p">)</span>  
+        <span class="p">{</span>  
+            <span class="n">LastStatus</span> <span class="p">=</span> <span class="n">AccountService</span><span class="p">.</span><span class="n">AuthenticateUser</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>  
+        <span class="p">}</span>  
+<span class="na">
+</span><span class="na">        [DSL(@&#34;I request authentication for (?&lt;account&gt;.+) with (?&lt;user&gt;.+)&#34;)]</span>  
+        <span class="k">void</span> <span class="n">authenticate_for_account_x</span><span class="p">(</span><span class="n">User</span> <span class="n">user</span><span class="p">,</span> <span class="n">Account</span> <span class="n">account</span><span class="p">)</span>  
+        <span class="p">{</span>  
+            <span class="n">LastStatus</span> <span class="p">=</span>  <span class="n">AccountService</span><span class="p">.</span><span class="n">AuthenticateUserForAccount</span><span class="p">(</span><span class="n">account</span><span class="p">,</span><span class="n">user</span><span class="p">);</span>  
+        <span class="p">}</span>  
+<span class="na">
+</span><span class="na">        [DSL(@&#34;I transfer (?&lt;amount&gt;.+) from (?&lt;from&gt;.+) to (?&lt;to&gt;.+) with (?&lt;user&gt;.+)&#34;)]</span>  
+        <span class="k">void</span> <span class="n">transfering_xm_from_a_to_b</span><span class="p">(</span><span class="kt">decimal</span> <span class="n">amount</span><span class="p">,</span> <span class="n">Account</span> <span class="k">from</span><span class="p">,</span> <span class="n">Account</span> <span class="n">to</span><span class="p">,</span><span class="n">User</span> <span class="n">user</span><span class="p">)</span>  
+        <span class="p">{</span>  
+            <span class="n">LastStatus</span> <span class="p">=</span> <span class="n">AccountService</span><span class="p">.</span><span class="n">Transfer</span><span class="p">(</span><span class="n">user</span><span class="p">,</span><span class="n">amount</span><span class="p">,</span> <span class="k">from</span><span class="p">,</span><span class="n">to</span><span class="p">);</span>  
+        <span class="p">}</span>  
+<span class="na">
+</span><span class="na">        [DSL]</span>  
+        <span class="kt">bool</span> <span class="n">The_process_should_fail</span><span class="p">()</span>  
+        <span class="p">{</span>  
+            <span class="k">return</span> <span class="n">LastStatus</span><span class="p">.</span><span class="n">Success</span> <span class="p">==</span> <span class="k">false</span><span class="p">;</span>  
+        <span class="p">}</span>  
+<span class="na">
+</span><span class="na">        [DSL]</span>  
+        <span class="kt">bool</span> <span class="n">The_process_should_succeed</span><span class="p">()</span>  
+        <span class="p">{</span>  
+            <span class="k">return</span> <span class="n">LastStatus</span><span class="p">.</span><span class="n">Success</span> <span class="p">==</span> <span class="k">true</span><span class="p">;</span>  
+        <span class="p">}</span>  
+<span class="na">
+</span><span class="na">        [DSL(&#34;(?&lt;name&gt;Account[AB]</span><span class="p">)</span><span class="s">&#34;)]  
+</span><span class="s"></span>        <span class="n">Account</span> <span class="n">getaccountAB</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>  
+        <span class="p">{</span>  
+            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="n">Account</span><span class="p">&gt;(</span><span class="n">name</span><span class="p">);</span>  
+        <span class="p">}</span>  
+<span class="na">
+</span><span class="na">        [DSL(@&#34;(?&lt;amount&gt;\d+)(?&lt;ismillion&gt;m?)&#34;)]</span>  
+        <span class="kt">decimal</span> <span class="n">getmillion</span><span class="p">(</span><span class="kt">decimal</span> <span class="n">amount</span><span class="p">,</span><span class="kt">string</span>  <span class="n">ismillon</span><span class="p">)</span>  
+        <span class="p">{</span>  
+            <span class="k">return</span> <span class="n">amount</span><span class="p">*(</span><span class="n">ismillon</span><span class="p">==</span><span class="s">&#34;m&#34;</span><span class="p">?</span><span class="m">1</span><span class="n">m</span><span class="p">:</span><span class="m">1</span><span class="p">);</span>  
+        <span class="p">}</span>  
+<span class="na">
+</span><span class="na">        [DSL]</span>  
+        <span class="n">User</span> <span class="n">the_current_user</span><span class="p">()</span>  
+        <span class="p">{</span>  
+            <span class="k">return</span> <span class="n">currentUser</span><span class="p">;</span>  
+        <span class="p">}</span>  
+    <span class="p">}</span>  
+</code></pre></div></div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

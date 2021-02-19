@@ -1058,6 +1058,15 @@ IntroductionI love appharbour, in fact, I have 8 apps running over there at thi
     </item>
     
     <item>
+      <title>Essay : Extending BDD stories ; the &#34;Given I did&#34; clause - including flow in user stories</title>
+      <link>https://tojans.me/posts/bdd-given-i-did-to-support-flow-in-user-stories/</link>
+      <pubDate>Thu, 03 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://tojans.me/posts/bdd-given-i-did-to-support-flow-in-user-stories/</guid>
+      <description>Introduction In this essay I am going to reflect my personal ideas and opinions on the DSL syntax used for BDD, and I will propose a new concept for the common BDD language.</description>
+    </item>
+    
+    <item>
       <title>Quick tip: How to do TDD/BDD and debug unit tests with Visual Studio Express editions</title>
       <link>https://tojans.me/posts/quick-tip-how-to-do-tdd-bdd-and-debug-unit-tests-with-visual-studio-express-editions/</link>
       <pubDate>Tue, 25 Oct 2011 00:00:00 +0000</pubDate>
