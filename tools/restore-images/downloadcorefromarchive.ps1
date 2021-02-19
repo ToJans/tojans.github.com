@@ -74,15 +74,17 @@ $files = "2010%2f1%2fIMAG0006.jpg
 2012%2f9%2fsilver.png
 2012%2f5%2fpower.jpg".Split([Environment]::NewLine)
 
+$files="2012%2f9%2fsilver.png
+2012%2f5%2fpower.jpg".Split([Environment]::NewLine)
+
+$files = "2013%2f3%2fCunningplan.jpg".Split([Environment]::NewLine)
+ 
 $targetFolder="output/"
 
-$prefix="https://web.archive.org/web/20131220042054/http://corebvba.be/blog/image.axd?picture="
+$prefix = "https://archive.org/wayback/available?url=http://corebvba.be/blog/image.axd?picture="
 
 foreach($file in $files) {
     $container = ""
-    $imageurl=""
-    $container = Invoke-WebRequest ($prefix+$file)
-    $imageurl = $container.ParsedHtml.getElementById("playback").src # iframe container
-    #Invoke-WebRequest ($imageurl) -OutFile ($targetFolder+$file)
-    $imageurl
+    $container = Invoke-WebRequest ($prefix + [uri]::EscapeDataString($file))
+    $container
 }
