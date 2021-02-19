@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2005-05-30"
-slug: "opengl-c#-source-paul-bourke-3d-supershapes"
+slug: "opengl-c-sharp-source-paul-bourke-3d-supershapes"
 title: Opengl / c# source -  Paul Bourke 3d Supershapes
 ---
 

@@ -1209,15 +1209,6 @@ Commercial impact: why use CQRS ?
     </item>
     
     <item>
-      <title>Started on an #NUnit addin for #Aubergine #BDD and got the testsuitebuilder up and running. Up next: engine refactoring</title>
-      <link>https://tojans.me/posts/started-on-an-#nunit-addin-for-%23aubergine-%23bdd-and-got-the-testsuitebuilder-up-and-running.-up-next-engine-refactoring/</link>
-      <pubDate>Sun, 26 Sep 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://tojans.me/posts/started-on-an-#nunit-addin-for-%23aubergine-%23bdd-and-got-the-testsuitebuilder-up-and-running.-up-next-engine-refactoring/</guid>
-      <description> Posted via email from tojans&#39;s posterous </description>
-    </item>
-    
-    <item>
       <title>Waarom NVA deze match verloren heeft - een handanalyse</title>
       <link>https://tojans.me/posts/waarom-nva-deze-match-verloren-heeft-een-handanalyse/</link>
       <pubDate>Mon, 06 Sep 2010 00:00:00 +0000</pubDate>
@@ -1899,10 +1890,10 @@ This is the top 10 of current pay-per-clicks :</description>
     
     <item>
       <title>Opengl / c# source -  Paul Bourke 3d Supershapes</title>
-      <link>https://tojans.me/posts/opengl-c#-source-paul-bourke-3d-supershapes/</link>
+      <link>https://tojans.me/posts/opengl-c-sharp-source-paul-bourke-3d-supershapes/</link>
       <pubDate>Mon, 30 May 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://tojans.me/posts/opengl-c#-source-paul-bourke-3d-supershapes/</guid>
+      <guid>https://tojans.me/posts/opengl-c-sharp-source-paul-bourke-3d-supershapes/</guid>
       <description>(Programmers only !!! )
 While checking out some stuff on my PC I noticed some old sloppy code lying around : A quick and dirty hack to show how Paul Bourke&#39;s supershape works in 3d.</description>
     </item>
