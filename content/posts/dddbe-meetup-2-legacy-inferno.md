@@ -8,7 +8,7 @@ categories: ["Development", "DDD"]
 ---
 ![This is probably what it looks just before matter turns into antimatter](https://i.snag.gy/azzFo.jpg)
 
-After [the great feedback of the first event](https://tojans.me/blog/2013/09/04/the-very-first-dddbe-event-the-modellathon/), the [Belgian DDD community](https://domaindriven.be/) had to do [a second one](https://legacy-inferno.eventbrite.com/), and last Thursday we did:
+After [the great feedback of the first event](/posts/the-very-first-dddbe-event-the-modellathon/), the [Belgian DDD community](https://domaindriven.be/) had to do [a second one](https://legacy-inferno.eventbrite.com//), and last Thursday we did:
 
 <blockquote class="twitter-tweet"><p>De <a href="https://twitter.com/DDDBE">@dddbe</a> meeting at <a href="https://twitter.com/nucleus_hosting">@nucleus_hosting</a> begint behoorlijk vol te lopen :) <a href="https://t.co/E70TaIvQNd">pic.twitter.com/E70TaIvQNd</a></p>&mdash; Chris Ramakers (@ChrisRamakers) <a href="https://twitter.com/ChrisRamakers/statuses/390881240577892352">October 17, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -72,7 +72,7 @@ This is an IDE that allows you to write software in the same way Excel works, an
 ## Software design principles apply
 
 In Excel these are in fact even more obvious; the classic paradigm of easy versus simple especially applies in Excel; things might be easy to write,
-but they are hard to figure out, so they are not simple. If attendees wonder what I was rambling about afterwards during the lean coffee over "easy versus simple", I would like to take a look at this video, or [a more detailed post I wrote about it](https://tojans.me/blog/2012/10/31/continuous-thinking-essay-ease-and-simplicity-in-software-architecture/):
+but they are hard to figure out, so they are not simple. If attendees wonder what I was rambling about afterwards during the lean coffee over "easy versus simple", I would like to take a look at this video, or [a more detailed post I wrote about it](/posts/continuous-thinking-essay-ease-and-simplicity-in-software-architecture//):
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/rI8tNMsozo0" frameborder="0" allowfullscreen></iframe>
 

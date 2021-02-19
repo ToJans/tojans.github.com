@@ -9,7 +9,7 @@ categories:
 
 ## Introduction
 
-This post is an attempt to predict what the following decades will look like. I wrote a more technical post [about this 3 years ago](https://tojans.me/blog/2010/12/15/continuous-thinking-the-future-of-software/), which still makes sense far as I'm concerned.
+This post is an attempt to predict what the following decades will look like. I wrote a more technical post [about this 3 years ago](/posts/continuous-thinking-the-future-of-software//), which still makes sense far as I'm concerned.
 
 Somehow, my understanding about how this applies to non-software things has evolved, and after trying to make my point on twitter, I decided to elaborate in this blog post about my assumptions on the future.
 
@@ -54,11 +54,11 @@ Think about this: in the future not even knowledge will be a commodity, but also
 
 This would of course imply that the need for middle-men, or even the classical big organisations as we know them today will simply cease to exist, just because people can do stuff themselves.
 
-This is also one of the reasons I consider ["anti-fragile" by Taleb](https://tojans.me/blog/2013/08/10/reply-to-mathias-blog-post-about-systemantics-the-systems-bible/) to be such a ground-breaking book. I think his vision will align with the future of society.
+This is also one of the reasons I consider ["anti-fragile" by Taleb](/posts/reply-to-mathias-blog-post-about-systemantics-the-systems-bible//) to be such a ground-breaking book. I think his vision will align with the future of society.
 
 ## On to the tech part - Conway's law
 
-Respecting Conway's law - which is [quite popular lately](https://tojans.me/blog/2013/12/16/the-extrema-of-system-integration/) -, the need for one big service/website/server/... would cease to exist, but every single person would have their own server, or even better multiple servers. Think about this for a while: why would you need Facebook, if you would be able to share your pictures and messages directly with your relatives and friends, just by having some kind of a digital handshake that somehow allows access to things.
+Respecting Conway's law - which is [quite popular lately](/posts/the-extrema-of-system-integration//) -, the need for one big service/website/server/... would cease to exist, but every single person would have their own server, or even better multiple servers. Think about this for a while: why would you need Facebook, if you would be able to share your pictures and messages directly with your relatives and friends, just by having some kind of a digital handshake that somehow allows access to things.
 
 Why would we need to have one big organisation that indexes the whole of internet (i.e. Google etc), if we would be able to access all this information directly on the devices they were published on?
 

@@ -8,7 +8,7 @@ categories:
 ---
 During the DDDQ lean coffee last weekend the question on [microservices](https://martinfowler.com/articles/microservices.html) popped up once again.
 
-This is [not my first post about this subject](https://tojans.me/blog/2014/01/30/micro-service-architecture-versus-soa-eda/), 
+This is [not my first post about this subject](/posts/micro-service-architecture-versus-soa-eda//), 
 but apparently [people wanted to know more](https://twitter.com/ToJans/status/504718485403222016).
 
 # Whyyyy !?! Whyyyyy!

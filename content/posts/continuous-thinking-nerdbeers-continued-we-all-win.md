@@ -5,7 +5,7 @@ slug: "continuous-thinking-nerdbeers-continued-we-all-win"
 title: 'Continuous thinking: Nerdbeers continued - We all win !!'
 ---
 
-<p><strong>Note: this post is the successor to<a href="https://www.corebvba.be/blog/post/Continuous-thinking-just-ship-it-the-story-of-NerdBeers.aspx"> the previous post</a> on <a href="https://github.com/ToJans/NerdBeers" target="_blank">NerdBeers</a>; if you have not read it yet, you might want to browse through that one first in order to have some context for this one.</strong></p>
+<p><strong>Note: this post is the successor to<a href="/posts/Continuous-thinking-just-ship-it-the-story-of-NerdBeers"> the previous post</a> on <a href="https://github.com/ToJans/NerdBeers" target="_blank/">NerdBeers</a>; if you have not read it yet, you might want to browse through that one first in order to have some context for this one.</strong></p>
 <p><strong><br /></strong></p>
 <p><span style="font-size: 12px; font-weight: bold; ">Introduction</span></p>
 <p>The initial development on the Nerdbeers app was started <a href="https://github.com/ToJans/NerdBeers/commit/b5077c460aab1abd26ceeb49bf045ee63a850fe0" target="_blank">about two weeks ago</a>, and I never imagined it to be such a big thing really; I just wanted to build a small app to prove to myself that I could write an app without falling in the usual architecture trap.</p>
@@ -15,7 +15,7 @@ title: 'Continuous thinking: Nerdbeers continued - We all win !!'
 <p>&nbsp;</p>
 <h3><span style="font-weight: bold; ">The components matched perfectly</span></h3>
 <p>As I had been reading around on the web about <a href="https://github.com/jacksonh/manos" target="_blank">Manos</a>, <a href="https://github.com/kayak/kayak" target="_blank">Kayak</a>, <a href="https://github.com/robconery/massive" target="_blank">Massive</a>, <a href="https://en.wikipedia.org/wiki/Lean_software_development" target="_blank">lean software practices</a>, <a href="https://en.wikipedia.org/wiki/Getting_things_done" target="_blank">getting things done</a>, ..., I was looking for an opportunity. The main focus point for me was avoiding protocol/boilerplate code, and thus having as much functionality as possible while writing the smallest possible amount LOC (Lines Of Code)&nbsp;&nbsp;.</p>
-<p>The minute I saw the Nancy web framework at github I knew that this would have to be it; it had such a nice and clean syntax, and it was similar <a href="https://www.corebvba.be/blog/post/SoWhatcs-An-example-of-a-possible-Net-web-framework-looking-like-Sinatra.aspx" target="_blank">to the thing I had been thinking about building myself.</a> After one of the main coders provided the idea of reimplementing nerddinner, I just started implementing it.</p>
+<p>The minute I saw the Nancy web framework at github I knew that this would have to be it; it had such a nice and clean syntax, and it was similar <a href="/posts/SoWhatcs-An-example-of-a-possible-Net-web-framework-looking-like-Sinatra" target="_blank/">to the thing I had been thinking about building myself.</a> After one of the main coders provided the idea of reimplementing nerddinner, I just started implementing it.</p>
 <p>Doing this, I did notice that I needed some kind of a data access layer as wel. Looking for&nbsp;the ultimate LOC/efficiency, I opted for the relatively new Simple.Data, which looked like it was the tersest possible approach possible to data access for me.</p>
 <p>They matched perfectly !</p>
 <p>&nbsp;</p>

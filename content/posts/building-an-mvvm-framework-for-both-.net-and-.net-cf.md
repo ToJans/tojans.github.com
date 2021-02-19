@@ -12,7 +12,7 @@ title: Building an MVVM framework for both .Net and .Net CF
 <h3>Yet another framework ?</h3>
 <p>Actually, yes !! My main concern about this app framework is keeping it lightweight, flexible, ultraportable and easy to use. By ultraportable I mean that the app should both run on the default .Net, as well as on the Compact Framework, <strong>without recompilation</strong>.</p>
 <p>Since no framework known to me meets my criteria, I decided to get started on yet another framework.</p>
-<p>The main design decisions are heavily based on my previous experiences with <a href="https://github.com/tojans/mvcextensions" target="_blank">MvcExtensions</a>, my other framework, as well as a very inspiring and well-know lecture by <a href="https://devlicio.us/blogs/rob_eisenberg/default.aspx" target="_blank">Rob Eisenberg</a>: <a href="https://live.visitmix.com/MIX10/Sessions/EX15" target="_blank">"Build your own MVVM framework"</a>.</p>
+<p>The main design decisions are heavily based on my previous experiences with <a href="https://github.com/tojans/mvcextensions" target="_blank">MvcExtensions</a>, my other framework, as well as a very inspiring and well-know lecture by <a href="https://devlicio.us/blogs/rob_eisenberg/default" target="_blank">Rob Eisenberg</a>: <a href="https://live.visitmix.com/MIX10/Sessions/EX15" target="_blank">"Build your own MVVM framework"</a>.</p>
 <p></p>
 <h3>Service tools<br /></h3>
 <p>I have written and implemented the following interfaces which help me in developping the app.</p>

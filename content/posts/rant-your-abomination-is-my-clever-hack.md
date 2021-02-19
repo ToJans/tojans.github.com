@@ -5,7 +5,7 @@ slug: "rant-your-abomination-is-my-clever-hack"
 title: 'Rant : Your abomination is my clever hack'
 ---
 
-<p>When I read the <a href="https://odetocode.com/Blogs/scott/archive/2009/11/30/your-abomination-is-my-clever-hack.aspx" target="_blank">article from OdeToCode about the abuse of a programming language to create shortcuts</a>, I felt the need to respond.</p>
+<p>When I read the <a href="https://odetocode.com/Blogs/scott/archive/2009/11/30/your-abomination-is-my-clever-hack" target="_blank">article from OdeToCode about the abuse of a programming language to create shortcuts</a>, I felt the need to respond.</p>
 <h3>What is it about ?</h3>
 <p>Simply stated, it is about using some clever tricks to make it easier for the developer to reach his goal. The example was a stackoverflow post : <a href="https://stackoverflow.com/questions/1718037/abuse-of-c-lambda-expressions-or-syntax-brilliance">Abuse of C# lambda expressions or Syntax brilliance? </a></p>
 <p>Which discusses code that looks like this :</p>

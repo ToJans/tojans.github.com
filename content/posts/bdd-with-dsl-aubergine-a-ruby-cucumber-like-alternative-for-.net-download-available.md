@@ -7,7 +7,7 @@ title: 'BDD with DSL: Aubergine, a ruby/cucumber like alternative for .NET -  do
 ---
 
 <h2>Update</h2>
-<p style="padding-left: 30px;">Again a lot has changed : look <a href="https://www.corebvba.be/blog/post/Aubergine-Net-BDD-support-for-namedtyped-parameters-2b-RECURSIVE-DSL-2b-bugfix.aspx">here</a></p>
+<p style="padding-left: 30px;">Again a lot has changed : look <a href="/posts/Aubergine-Net-BDD-support-for-namedtyped-parameters-2b-RECURSIVE-DSL-2b-bugfix/">here</a></p>
 <p style="padding-left: 30px;">&nbsp;</p>
 <p style="padding-left: 30px;">&nbsp;</p>
 <h2>Introduction</h2>

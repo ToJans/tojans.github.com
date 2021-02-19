@@ -20,7 +20,7 @@ title: 'Aubergine .Net BDD : support for named/typed parameters + RECURSIVE DSL
 <p><a href="https://www.corebvba.be/blog/file.axd?file=2009%2f11%2fBe.Corebvba.Aubergine.Examplesv0.03.zip">Be.Corebvba.Aubergine.Examplesv0.03.zip (16,87 kb)</a></p>
 <p>&nbsp;</p>
 <h3>Edit : v0.04</h3>
-<p><a href="https://www.corebvba.be/blog/post/Published-a-new-Article-on-CodeProject-Getting-started-with-BDD-2b-new-version-of-aubergine.aspx">look here</a></p>
+<p><a href="/posts/Published-a-new-Article-on-CodeProject-Getting-started-with-BDD-2b-new-version-of-aubergine/">look here</a></p>
 <p>&nbsp;</p>
 <h3>Example<br /></h3>
 <p>This has simplified the more complicated DSL definitions a LOT ; check out the new defintion for the AccountContext :</p>

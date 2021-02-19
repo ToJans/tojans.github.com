@@ -17,7 +17,7 @@ This is the result of an hour of hacking (mostly figuring out how to libs work):
 
 ## Prerequistes
 
-I have previously written an extensive blog post on how to install the prerequisites on Windows [here](https://tojans.me/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/). Please follow this guide.
+I have previously written an extensive blog post on how to install the prerequisites on Windows [here](/posts/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows//). Please follow this guide.
 
 Once you followed this, we are ready to get started on our web app.
 

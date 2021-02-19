@@ -8,7 +8,7 @@ title: 'Live Blogging: getting started with Erlang and Nitrogen'
 <h3>Note</h3>
 <p>This is an experiment where I try "live blogging": I blog as I get along further in the process... Feel free to comment/tweet during the process...</p>
 <blockquote class="twitter-tweet">
-<p>Trying a new concept: "Live blogging: getting started with Erlang and Nitrogen" - feel free to comment during the post <a title="https://www.corebvba.be/blog/post/Live-Blogging-getting-started-with-Erlang-and-Nitrogen.aspx" href="https://t.co/VlzLeMqt">corebvba.be/blog/post/Live&hellip;</a></p>
+<p>Trying a new concept: "Live blogging: getting started with Erlang and Nitrogen" - feel free to comment during the post <a title="/posts/Live-Blogging-getting-started-with-Erlang-and-Nitrogen" href="https://t.co/VlzLeMqt/">corebvba.be/blog/post/Live&hellip;</a></p>
 &mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/246174492982902784">September 13, 2012</a></blockquote>
 <p>
 <script src="//platform.twitter.com/widgets.js"></script>
@@ -80,7 +80,7 @@ title: 'Live Blogging: getting started with Erlang and Nitrogen'
 <p><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fnitro-compilation-fail.png" alt="" /></p>
 <p>So I checked to see if there was any Erlang feedback available on twitter...</p>
 <blockquote class="twitter-tweet">
-<p>Well, the live blogging experiment is certainly a challenge: still not able to run nitrogen on windows <a href="https://twitter.com/search/%23erlang">#erlang</a> <a href="https://twitter.com/search/%23help">#help</a> <a title="https://www.corebvba.be/blog/post/Live-Blogging-getting-started-with-Erlang-and-Nitrogen.aspx" href="https://t.co/VlzLeMqt">corebvba.be/blog/post/Live&hellip;</a></p>
+<p>Well, the live blogging experiment is certainly a challenge: still not able to run nitrogen on windows <a href="https://twitter.com/search/%23erlang">#erlang</a> <a href="https://twitter.com/search/%23help">#help</a> <a title="/posts/Live-Blogging-getting-started-with-Erlang-and-Nitrogen" href="https://t.co/VlzLeMqt/">corebvba.be/blog/post/Live&hellip;</a></p>
 &mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/246196814615826434">September 13, 2012</a></blockquote>
 <p>
 <script src="//platform.twitter.com/widgets.js"></script>
@@ -105,7 +105,7 @@ title: 'Live Blogging: getting started with Erlang and Nitrogen'
 <p>Still no go; I'll call it a day for today, as I have some other stuff to do as well, and this took way longer then I hoped.... Laters!</p>
 <p><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f9%2fnitro-compiles-or-not.png" alt="" /></p>
 <blockquote class="twitter-tweet">
-<p>Put the Live Blog on hold, as it took to much of my time already... To be continued <a href="https://twitter.com/search/%23erlang">#erlang</a> <a href="https://twitter.com/search/%23nitrogen">#nitrogen</a> <a title="https://www.corebvba.be/blog/post/Live-Blogging-getting-started-with-Erlang-and-Nitrogen.aspx" href="https://t.co/VlzLeMqt">corebvba.be/blog/post/Live&hellip;</a></p>
+<p>Put the Live Blog on hold, as it took to much of my time already... To be continued <a href="https://twitter.com/search/%23erlang">#erlang</a> <a href="https://twitter.com/search/%23nitrogen">#nitrogen</a> <a title="/posts/Live-Blogging-getting-started-with-Erlang-and-Nitrogen" href="https://t.co/VlzLeMqt/">corebvba.be/blog/post/Live&hellip;</a></p>
 &mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/246229805404672000">September 13, 2012</a></blockquote>
 <p>
 <script src="//platform.twitter.com/widgets.js"></script>
@@ -113,7 +113,7 @@ title: 'Live Blogging: getting started with Erlang and Nitrogen'
 <h3>I'm back</h3>
 <p>... with a vengeance, I hope...</p>
 <blockquote class="twitter-tweet">
-<p>Time to resume my Live Blogging: getting started with Erlang and Nitrogen <a title="https://www.corebvba.be/blog/post/Live-Blogging-getting-started-with-Erlang-and-Nitrogen.aspx" href="https://t.co/VlzLeMqt">corebvba.be/blog/post/Live&hellip;</a></p>
+<p>Time to resume my Live Blogging: getting started with Erlang and Nitrogen <a title="/posts/Live-Blogging-getting-started-with-Erlang-and-Nitrogen" href="https://t.co/VlzLeMqt/">corebvba.be/blog/post/Live&hellip;</a></p>
 &mdash; Tom * suǝssuɐſ (@ToJans) <a href="https://twitter.com/ToJans/status/246552005630361600">September 14, 2012</a></blockquote>
 <p>
 <script src="//platform.twitter.com/widgets.js"></script>
@@ -127,4 +127,4 @@ title: 'Live Blogging: getting started with Erlang and Nitrogen'
 <p>&nbsp;</p>
 <p><img src="https://www.corebvba.be/blog/image.axd?picture=2012%2f9%2ffinally.png" alt="" /></p>
 <h3>Finally</h3>
-<p>I wrote a small<a href="https://www.corebvba.be/blog/post/Getting-started-with-Erlang-and-Nitrogen-(in-a-single-tweet).aspx"> follow-up post</a>.</p>
+<p>I wrote a small<a href="/posts/Getting-started-with-Erlang-and-Nitrogen-(in-a-single-tweet)/"> follow-up post</a>.</p>

@@ -6,7 +6,7 @@ title: "Why 100% test coverage proves nothing"
 comments: true
 categories: 
 ---
-This is the follow-up to [my previous post](https://tojans.me/blog/2014/02/24/trolling-the-100-percent-tdd-coverage-approach-or-not/).
+This is the follow-up to [my previous post](/posts/trolling-the-100-percent-tdd-coverage-approach-or-not//).
 
 I wrote an example - obviously badly written on purpose - by which I prove why 100% code coverage is useless.
 

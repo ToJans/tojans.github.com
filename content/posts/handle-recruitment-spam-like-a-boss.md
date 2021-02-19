@@ -7,8 +7,8 @@ comments: true
 categories: 
 ---
 As you all know, I am fed up with 
-[recruiters playing keyword lottery](https://tojans.me/blog/2012/11/16/fallacies-of-the-tech-recruitment-process/)
-, and [I did post how recruiters should act](https://tojans.me/blog/2013/05/30/how-to-hire-a-senior-developer/), 
+[recruiters playing keyword lottery](/posts/fallacies-of-the-tech-recruitment-process//)
+, and [I did post how recruiters should act](/posts/how-to-hire-a-senior-developer//), 
 but most of them still continue playing keyword lottery.
 Sometimes being polite does not work anymore, so I decided to fight fire with fire.
 

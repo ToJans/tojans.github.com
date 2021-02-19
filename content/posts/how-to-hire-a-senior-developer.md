@@ -9,7 +9,7 @@ footer: true
 ---
 
 <h3>Introduction</h3>
-<p>A little while ago I wrote a post <a href="https://www.corebvba.be/blog/post/Fallacies-of-the-tech-recruitment-process.aspx">the fallacies of the tech recruitment process</a>. While it is nice to point out what is wrong, I never actually provided the proper way to find out if a senior developer might be experienced enough and the right fit for your company, so this time I decided to put my money where my mouth is, and tell you how to hire a senior developer.</p>
+<p>A little while ago I wrote a post <a href="/posts/Fallacies-of-the-tech-recruitment-process/">the fallacies of the tech recruitment process</a>. While it is nice to point out what is wrong, I never actually provided the proper way to find out if a senior developer might be experienced enough and the right fit for your company, so this time I decided to put my money where my mouth is, and tell you how to hire a senior developer.</p>
 <h3>Why hire a "senior developer" and what is a senior developer exactly</h3>
 <p>In my opinion, a senior developer is a developer who manages to think out of the box, and who does not stop reasoning about finding a solution at technical boundaries. A senior developer is somebody who tries to provide business value for every single step he makes, while a junior is more or less focussed on implementing the whole thing, a senior thinks about what he has to do and why he has to do it...</p>
 <!--more-->

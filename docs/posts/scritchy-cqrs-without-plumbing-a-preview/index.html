@@ -123,7 +123,13 @@
             <li><a 
                    href="/about/"
                         
-                   title="">About</a></li>
+                   title="">About me</a></li>
+        
+            
+            <li><a 
+                   href="/services/"
+                        
+                   title="">Services</a></li>
         
             
             <li><a 
@@ -154,7 +160,7 @@
 
             <h3>Introduction</h3>
 <p><a href="https://martinfowler.com/bliki/CQRS.html">CQRS</a> is one of my architectural pet peeves, as you might have noticed<a href="https://www.corebvba.be/blog/?tag=/CQRS"> from the numerous amount of blog posts I made on this subject</a>. However, I noticed the concept is complicated and hard to grasp for newcomers to CQRS. I have been spiking numerous attempts of a framework that makes CQRS both more manageable and understandable, failed hundreds of times, and even published a few of my acceptable attempts as gists <a href="https://github.com/tojans">over at github</a>...</p>
-<p>A few days ago I was messing around with <a href="https://www.hanselman.com/blog/AsynchronousScalableWebApplicationsWithRealtimePersistentLongrunningConnectionsWithSignalR.aspx" target="_blank">SignalR</a> trying to setup again another CQRS attempt, and failed miserably.... However, 2 nights after that approach I had an ephiphany which had been lingering around in my head ever since.</p>
+<p>A few days ago I was messing around with <a href="https://www.hanselman.com/blog/AsynchronousScalableWebApplicationsWithRealtimePersistentLongrunningConnectionsWithSignalR" target="_blank">SignalR</a> trying to setup again another CQRS attempt, and failed miserably.... However, 2 nights after that approach I had an ephiphany which had been lingering around in my head ever since.</p>
 <p>Today I decided to get back to business, so this afternoon I started spiking a proof of concept (POC).</p>
 <p>I think you will be happy to see that I managed to get most of the annoyance out of CQRS with this simple concept.</p>
 <p></p>
@@ -164,7 +170,7 @@
 <li>My eventstore is currently implemented as a List of objects. While this works for this concept, you can imagine that this might get you into trouble</li>
 <li>The Aggregate roots get completely rebuilt every single time (no cache), so the app might get a litlle bit slow when you push numerous commands to it</li>
 <li>The concept is completely synchronous, but making it asynchronous should be effortless.</li>
-<li>The functionality I talked about in these 3 points are currently implemented as overrides of the abstract class ScratchBus, which requires you to override the function to load an ar, and to replay events on an object. As there are some nice alternatives available, I am not planning on reimplementing them, but for now I opt for <a href="https://www.corebvba.be/blog/post/Continuous-thinking-just-ship-it-the-story-of-NerdBeers.aspx">the simplest thing that could possibly work</a>.</li>
+<li>The functionality I talked about in these 3 points are currently implemented as overrides of the abstract class ScratchBus, which requires you to override the function to load an ar, and to replay events on an object. As there are some nice alternatives available, I am not planning on reimplementing them, but for now I opt for <a href="/posts/Continuous-thinking-just-ship-it-the-story-of-NerdBeers/">the simplest thing that could possibly work</a>.</li>
 <li><span style="text-decoration: line-through;">I am currently still thinking about conventions for the viewmodels as these conventions need to provide more flexibiltity then just EVENT/AR.ID binding... I am not sure whether I will find an acceptable solution on that matter...</span>&nbsp;<strong>Update:</strong> KISS as usual, view instances are built/modified by stateless handlers; piece of cake !</li>
 </ul>
 <div>Anyway, enough stalling, here we go:</div>

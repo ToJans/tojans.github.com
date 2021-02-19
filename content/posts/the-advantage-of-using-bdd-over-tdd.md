@@ -6,7 +6,7 @@ title: The advantage of using BDD over TDD
 ---
 
 <h3>Introduction</h3>
-<p>After reading <a href="https://codebetter.com/blogs/jeremy.miller/archive/2010/01/24/a-train-of-thought-january-2010-edition.aspx" target="_blank">the latest post</a> from <a href="https://twitter.com/JeremyDMiller" target="_blank">@jeremydmiller</a> I felt the urge to write a small article about the BDD part since there might be missing a vital part here about BDD...</p>
+<p>After reading <a href="https://codebetter.com/blogs/jeremy.miller/archive/2010/01/24/a-train-of-thought-january-2010-edition" target="_blank">the latest post</a> from <a href="https://twitter.com/JeremyDMiller" target="_blank">@jeremydmiller</a> I felt the urge to write a small article about the BDD part since there might be missing a vital part here about BDD...</p>
 <p></p>
 <h3>What is true BDD ?</h3>
 <p>For a general introduction on BDD I would like to refer you to <a href="https://en.wikipedia.org/wiki/Behavior_driven_development">wikipedia</a>. There are also a lot of <a href="https://www.corebvba.be/blog/?tag=/bdd">articles on this blog on specific issues as well</a>.</p>

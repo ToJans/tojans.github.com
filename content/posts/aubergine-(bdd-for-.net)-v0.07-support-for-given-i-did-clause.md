@@ -9,7 +9,7 @@ title: 'Aubergine (BDD for .net) v0.07 : support for Given-I-did-clause'
 <p>V0.07 is here :</p>
 <p><a href="https://www.corebvba.be/blog/file.axd?file=2009%2f11%2fAuberginev0.07.zip">Auberginev0.07.zip (28,61 kb)</a></p>
 <h3>Changes:</h3>
-<p>* Support for "Given I did" clause (more info in<a href="https://www.corebvba.be/blog/page/BDD-Given-I-Did-to-support-flow-in-user-stories.aspx"> this essay</a> )<br />* Complete refactoring of the Account example after extending the account story (my usual Model/Service layout, although the interfaces are missing here)</p>
+<p>* Support for "Given I did" clause (more info in<a href="https://www.corebvba.be/blog/page/BDD-Given-I-Did-to-support-flow-in-user-stories"> this essay</a> )<br />* Complete refactoring of the Account example after extending the account story (my usual Model/Service layout, although the interfaces are missing here)</p>
 <p>Here is the current example of the account story (copied from the essay):</p>
 <p>&nbsp;</p>
 <p></p>

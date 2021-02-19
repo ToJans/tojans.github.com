@@ -8,13 +8,13 @@ categories:
 ---
 Note: This is the last post in what had to be a series of posts about my experiences working for [HappyPancake](https://www.happypancake.com/). However, due to circumstances mentioned later in this post, my part of the project ended a bit sooner then initially provisioned :
  
-- [Introduction & Swedish culture.](https://tojans.me/blog/2013/11/30/enjoying-programmer-anarchy-happypancake)
-- [Working remote.](https://tojans.me/blog/2013/11/30/enjoying-programmer-anarchy-happypancake-2)
+- [Introduction & Swedish culture.](/posts/enjoying-programmer-anarchy-happypancake/)
+- [Working remote.](/posts/enjoying-programmer-anarchy-happypancake-2/)
 - ~~Programmer anarchy.~~
 - ~~The bit with Rinat.~~
 - ~~The dev stack.~~
 - ~~The infrastructure part.~~
-- [Enjoyed programmer anarchy - looking for the next project](https://tojans.me/blog/2014/01/13/enjoyed-programmer-anarchy-looking-for-the-next-project/)
+- [Enjoyed programmer anarchy - looking for the next project](/posts/enjoyed-programmer-anarchy-looking-for-the-next-project//)
 
 ### A small clarification first
 

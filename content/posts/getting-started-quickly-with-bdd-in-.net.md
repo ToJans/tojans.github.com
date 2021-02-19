@@ -6,10 +6,10 @@ title: Getting started quickly with BDD in .Net
 ---
 
 <h3>Introduction</h3>
-<p>This article will give you a brief introduction on how to get started with BDD (Behaviour driven development). It is <a href="https://www.corebvba.be/blog/page/Getting-started-with-BDD-%28behavior-driven-development%29-in-Net.aspx">my second attempt</a> for such an article.</p>
+<p>This article will give you a brief introduction on how to get started with BDD (Behaviour driven development). It is <a href="https://www.corebvba.be/blog/page/Getting-started-with-BDD-%28behavior-driven-development%29-in-Net">my second attempt</a> for such an article.</p>
 <p>I will show you the complete workflow on how to write an app using BDD in .Net.</p>
 <h3>Background</h3>
-<p>Small note: if you want to know why you should use BDD, I would like to refer you to another one of my articles: <a href="https://www.corebvba.be/blog/post/The-advantage-of-using-BDD-over-TDD.aspx">The advantage of using BDD over TDD</a></p>
+<p>Small note: if you want to know why you should use BDD, I would like to refer you to another one of my articles: <a href="/posts/The-advantage-of-using-BDD-over-TDD/">The advantage of using BDD over TDD</a></p>
 <p>Today I finally managed to upgrade my Aubergine BDD framework to v0.1.</p>
 <p>This is now starting to get really usable (I've been dogfooding it for a while now).</p>
 <p>This release contains the following changes:</p>

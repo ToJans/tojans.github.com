@@ -375,7 +375,7 @@ We are looking for a senior recruitment supervisor manager leadership executive 
       
       <guid>https://tojans.me/posts/the-future-of-society-why-a-lot-of-big-organisations-will-cease-to-exist/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This post is an attempt to predict what the following decades will look like. I wrote a more technical post &lt;a href=&#34;https://tojans.me/blog/2010/12/15/continuous-thinking-the-future-of-software/&#34;&gt;about this 3 years ago&lt;/a&gt;, which still makes sense far as I&amp;rsquo;m concerned.&lt;/p&gt;
+&lt;p&gt;This post is an attempt to predict what the following decades will look like. I wrote a more technical post &lt;a href=&#34;https://tojans.me/posts/continuous-thinking-the-future-of-software//&#34;&gt;about this 3 years ago&lt;/a&gt;, which still makes sense far as I&amp;rsquo;m concerned.&lt;/p&gt;
 &lt;p&gt;Somehow, my understanding about how this applies to non-software things has evolved, and after trying to make my point on twitter, I decided to elaborate in this blog post about my assumptions on the future.&lt;/p&gt;
 &lt;h2 id=&#34;disclaimer&#34;&gt;Disclaimer&lt;/h2&gt;
 &lt;p&gt;I&amp;rsquo;m only slightly aware about &amp;ldquo;the how&amp;rdquo; of the technology that could drive these things. My assumptions are purely based on my observations about how people interact with devices and technology at this very moment.&lt;/p&gt;
@@ -617,7 +617,7 @@ Some people have been asking me why I spend so many time on contributing patches
       <description>&lt;h3&gt;Introduction&lt;/h3&gt;
 &lt;p&gt;People following me on twitter noticed I got entangled in yet another new language for the Erlang/BEAM VM:&amp;nbsp;&lt;/p&gt;
 &lt;h3&gt;&lt;img style=&#34;font-size: 10px;&#34; src=&#34;https://www.corebvba.be/blog/image.axd?picture=2013%2f6%2felixir-logo.png&#34; alt=&#34;&#34; /&gt;&lt;/h3&gt;
-&lt;p&gt;Elixir could be easily described as &#34;ruby for the BEAM/Erlang VM&#34;. In previous posts, I mentioned &lt;a href=&#34;https://www.corebvba.be/blog/post/Erlang-Camp-Amsterdam-why-you-should-follow-it-and-getting-started-with-Erlang-and-Axiom.aspx&#34;&gt;why people should learn Erlang&lt;/a&gt;, but in fact, I think most people might be better off when they skip Erlang and opt directly for Elixir. It has all the advantages of Erlang, but offers a Ruby-like syntax, macros, polymorphism and more.&lt;/p&gt;
+&lt;p&gt;Elixir could be easily described as &#34;ruby for the BEAM/Erlang VM&#34;. In previous posts, I mentioned &lt;a href=&#34;https://tojans.me/posts/Erlang-Camp-Amsterdam-why-you-should-follow-it-and-getting-started-with-Erlang-and-Axiom/&#34;&gt;why people should learn Erlang&lt;/a&gt;, but in fact, I think most people might be better off when they skip Erlang and opt directly for Elixir. It has all the advantages of Erlang, but offers a Ruby-like syntax, macros, polymorphism and more.&lt;/p&gt;
 &lt;p&gt;As &lt;a href=&#34;https://benjamintanweihao.github.io/blog/2013/06/08/why-my-next-programming-language-is-elixir/&#34; target=&#34;_blank&#34;&gt;someone else made a perfect blog post on why you should learn Elixir&lt;/a&gt;, I will not elaborate further on it in this post. Read his post; the info is all there.&lt;/p&gt;
 &lt;p&gt;As usual, you can find more info about Elixir on &lt;a href=&#34;https://en.wikipedia.org/wiki/Elixir_(programming_language)&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt;&amp;nbsp;, or on the &lt;a href=&#34;https://elixir-lang.org/&#34; target=&#34;_blank&#34;&gt;Elixir site&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In this post, I will show you how to get started with Elixir and generate a template website using the &lt;a href=&#34;https://github.com/elixir-lang/dynamo&#34; target=&#34;_blank&#34;&gt;Dynamo web framework&lt;/a&gt;.&lt;/p&gt;
@@ -631,7 +631,7 @@ Some people have been asking me why I spend so many time on contributing patches
       
       <guid>https://tojans.me/posts/how-to-hire-a-senior-developer/</guid>
       <description>&lt;h3&gt;Introduction&lt;/h3&gt;
-&lt;p&gt;A little while ago I wrote a post &lt;a href=&#34;https://www.corebvba.be/blog/post/Fallacies-of-the-tech-recruitment-process.aspx&#34;&gt;the fallacies of the tech recruitment process&lt;/a&gt;. While it is nice to point out what is wrong, I never actually provided the proper way to find out if a senior developer might be experienced enough and the right fit for your company, so this time I decided to put my money where my mouth is, and tell you how to hire a senior developer.&lt;/p&gt;
+&lt;p&gt;A little while ago I wrote a post &lt;a href=&#34;https://tojans.me/posts/Fallacies-of-the-tech-recruitment-process/&#34;&gt;the fallacies of the tech recruitment process&lt;/a&gt;. While it is nice to point out what is wrong, I never actually provided the proper way to find out if a senior developer might be experienced enough and the right fit for your company, so this time I decided to put my money where my mouth is, and tell you how to hire a senior developer.&lt;/p&gt;
 &lt;h3&gt;Why hire a &#34;senior developer&#34; and what is a senior developer exactly&lt;/h3&gt;
 &lt;p&gt;In my opinion, a senior developer is a developer who manages to think out of the box, and who does not stop reasoning about finding a solution at technical boundaries. A senior developer is somebody who tries to provide business value for every single step he makes, while a junior is more or less focussed on implementing the whole thing, a senior thinks about what he has to do and why he has to do it...&lt;/p&gt;</description>
     </item>
@@ -871,10 +871,10 @@ IntroductionThis is a follow-up for an attempt to read the current trend in Sil
     
     <item>
       <title>Project #Startup10: Working title - BIG</title>
-      <link>https://tojans.me/posts/project-#startup10-working-title-big/</link>
+      <link>https://tojans.me/posts/project-startup10-working-title-big/</link>
       <pubDate>Thu, 09 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://tojans.me/posts/project-#startup10-working-title-big/</guid>
+      <guid>https://tojans.me/posts/project-startup10-working-title-big/</guid>
       <description>note: The source for this project is on Github; the following text is a copy of the file Readme.md.
 Project #Startup10 - Startup #3 : Project Big</description>
     </item>
@@ -891,10 +891,10 @@ Project #Startup10 - Startup #3 : Project Big</description>
     
     <item>
       <title>Project #Startup10: Lessons learned with Blommekes.be</title>
-      <link>https://tojans.me/posts/project-#startup10-lessons-learned-with-blommekes.be/</link>
+      <link>https://tojans.me/posts/project-startup10-lessons-learned-with-blommekes.be/</link>
       <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://tojans.me/posts/project-#startup10-lessons-learned-with-blommekes.be/</guid>
+      <guid>https://tojans.me/posts/project-startup10-lessons-learned-with-blommekes.be/</guid>
       <description>Note: this is a post from&amp;nbsp;a blog post series about starting up 10 businesses in a year.
 #1:&amp;nbsp;https://Blommekes.Be&amp;nbsp;- koopt een blommeke voor u vrouw en het zal wa beter gaan IntroductionThe biggest problem in getting started with startups, is finding your inspiration, and deriving a business plan; in this post I will describe how blommekes.</description>
     </item>
@@ -938,10 +938,10 @@ Over the years, I have been trying to minimize CQRS in several iterations, even 
     
     <item>
       <title>Project #Startup10: You pay peanuts, you get the monkeys</title>
-      <link>https://tojans.me/posts/project-#startup10-you-pay-peanuts-you-get-the-monkeys/</link>
+      <link>https://tojans.me/posts/project-startup10-you-pay-peanuts-you-get-the-monkeys/</link>
       <pubDate>Wed, 29 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://tojans.me/posts/project-#startup10-you-pay-peanuts-you-get-the-monkeys/</guid>
+      <guid>https://tojans.me/posts/project-startup10-you-pay-peanuts-you-get-the-monkeys/</guid>
       <description>Note: this is a post from&amp;nbsp;a blog post series about starting up 10 businesses in a year.
 &amp;nbsp;
 IntroductionI love appharbour, in fact, I have 8 apps running over there at this moment.</description>
@@ -949,10 +949,10 @@ IntroductionI love appharbour, in fact, I have 8 apps running over there at thi
     
     <item>
       <title>Project #Startup10 : Learning to build your own business</title>
-      <link>https://tojans.me/posts/project-#startup10-learning-to-build-your-own-business/</link>
+      <link>https://tojans.me/posts/project-startup10-learning-to-build-your-own-business/</link>
       <pubDate>Tue, 28 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://tojans.me/posts/project-#startup10-learning-to-build-your-own-business/</guid>
+      <guid>https://tojans.me/posts/project-startup10-learning-to-build-your-own-business/</guid>
       <description>Note: this is the first post in the series &#34;Project #Startup10&#34; :&amp;nbsp;a blog post series about starting up 10 businesses in a single year.</description>
     </item>
     
@@ -1498,7 +1498,7 @@ IntroductionIn this article you can download the very first alpha version of Au
       <pubDate>Wed, 04 Nov 2009 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/posts/a-new-bdd-framework-in-.net-aubergine/</guid>
-      <description>REMARK : An executable testrunner and some sample code is availableHere : https://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx
+      <description>REMARK : An executable testrunner and some sample code is availableHere : /posts/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx
 REMARK : Skip to &#34;Edit 2&#34; to see the current syntax&amp;nbsp;</description>
     </item>
     
@@ -1985,7 +1985,7 @@ While checking out some stuff on my PC I noticed some old sloppy code lying arou
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tojans.me/about/</guid>
-      <description>My parents bought their first computer - a TRS-80 Model III - when I was about 8 years old. I found a book in English about programming, and it got me hooked for life.</description>
+      <description>My parents bought their first computer - a TRS-80 Model III - when I was about 8 years old. I found a book about programming in basic, and it got me hooked for life.</description>
     </item>
     
     <item>
@@ -1995,6 +1995,16 @@ While checking out some stuff on my PC I noticed some old sloppy code lying arou
       
       <guid>https://tojans.me/contact/</guid>
       <description>Tom Janssens Tom@corebvba.be+32 478 336 376CoreNieuwegestraat 76 B9620 Zottegem BELGIUM VAT nr.</description>
+    </item>
+    
+    <item>
+      <title>Services</title>
+      <link>https://tojans.me/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tojans.me/services/</guid>
+      <description>Over a decade of consulting helped me to identify what I do best:
+Fit-gap analysis:I convert your challenge - i.</description>
     </item>
     
   </channel>

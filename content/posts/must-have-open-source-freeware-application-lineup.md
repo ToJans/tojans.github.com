@@ -48,7 +48,7 @@ An open source .NET IDE (no ASP.NET) <br />
 <h4>Visual C# Express Beta</h4>
 <p>
 A c# editor from Microsoft <br />
-<a href="https://lab.msdn.microsoft.com/express/vcsharp/default.aspx">link</a> 
+<a href="https://lab.msdn.microsoft.com/express/vcsharp/default">link</a> 
 </p>
 <h4>TestDriven.Net</h4>
 <p>

@@ -48,7 +48,7 @@ The role of the expert was just to find a way to get started, but once you have 
 
 During the first pomodoro of the modellathon (after a general introduction by the domain experts), people started experimenting with different kinds of modelling at different groups.
 
-A lot of people were trying to use the event storming approach - as they had experienced the value of the technique in a really great workshop with [Alberto Brandolini](https://twitter.com/ziobrando) during [Vaughn Vernon](https://twitter.com/VaughnVernon)'s [IDDD tour](https://idddtour.com/) in [Belgium](https://tojans.me/blog/2013/05/01/idddtour-2013-belgium-an-immersive-experience/).
+A lot of people were trying to use the event storming approach - as they had experienced the value of the technique in a really great workshop with [Alberto Brandolini](https://twitter.com/ziobrando) during [Vaughn Vernon](https://twitter.com/VaughnVernon)'s [IDDD tour](https://idddtour.com/) in [Belgium](/posts/idddtour-2013-belgium-an-immersive-experience//).
 
 Somehow this approach did not feel valuable to us in this phase of the domain analysis, as the question was more about the report we initially got:
 

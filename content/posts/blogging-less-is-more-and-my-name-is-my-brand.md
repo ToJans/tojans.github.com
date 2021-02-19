@@ -58,8 +58,8 @@ I still use my old hosting provider I started with a decade ago, and now probabl
 provider was hosting my blog, I am now planning on gradually migrating all content from there.
 
 I am considering a VPS or something similar in the future to run my 
-[Erlang](https://tojans.me/blog/2013/05/17/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom/)/
-[Elixir](https://tojans.me/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/) experiments, or I might even drop that, and just opt for cloud-based solutions.
+[Erlang](/posts/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom//)/
+[Elixir](/posts/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows//) experiments, or I might even drop that, and just opt for cloud-based solutions.
 
 ### Usability: overly complicated, too much features almost nobody used, mobile/tablet usage was a mess
 

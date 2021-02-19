@@ -25,17 +25,17 @@ is pretty straightforward:
 
 ### Why work for free?
 
-I have written a [detailed blog post](https://tojans.me/blog/2013/03/30/freedom-learning-stuff-doing-consulting-aka-the-fun-and-money-balance/) 
+I have written a [detailed blog post](/posts/freedom-learning-stuff-doing-consulting-aka-the-fun-and-money-balance//) 
 where I explain in great detail why I work for free, but I will make a short recap here:
 
 - My income comes in bursts; I deliberately take time off every n months to study something I consider to be emerging and interesting. An excerpt of things I studied in the 
 past over several 'sabatticals':
-    - BDD ([first post](https://tojans.me/blog/2009/11/03/a-new-bdd-framework-in-.net-aubergine/))
-    - CQRS ([first post](https://tojans.me/blog/2010/09/01/winning-the-game-with-cqrs-event-sourcing-and-bdd/))
-    - NancyFx/Simple.Data ([first post](https://tojans.me/blog/2011/03/07/continuous-thinking-just-ship-it-the-story-of-nerdbeers/))
-    - Lean Start-up ([first post](https://tojans.me/blog/2012/02/28/project-%23startup10-learning-to-build-your-own-business/))
-    - Now Erlang/Elixir ([a post](https://tojans.me/blog/2013/05/17/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom/),
-    [another post](https://tojans.me/blog/2013/06/09/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/))
+    - BDD ([first post](/posts/a-new-bdd-framework-in-.net-aubergine/)/)
+    - CQRS ([first post](/posts/winning-the-game-with-cqrs-event-sourcing-and-bdd/)/)
+    - NancyFx/Simple.Data ([first post](/posts/continuous-thinking-just-ship-it-the-story-of-nerdbeers/)/)
+    - Lean Start-up ([first post](/posts/project-startup10-learning-to-build-your-own-business/)/)
+    - Now Erlang/Elixir ([a post](/posts/erlang-camp-amsterdam-why-you-should-follow-it-and-getting-started-with-erlang-and-axiom//),
+    [another post](/posts/installing-and-compiling-elixir-and-the-dynamo-web-framework-on-windows/)/)
 - I study new things all the time to grow as both a person and a consultant
 - Being in an emerging field allows you to connect with thought leaders and people who matter in the community
 - Expanding your horizon allows you to can contribute more value to organisations
@@ -44,7 +44,7 @@ past over several 'sabatticals':
 ### Why contribute to OSS
 
 I am a developer. As I said, I consider the best way to learn a new platform, is [to get involved and talk with the people that
-conceived the platform](https://tojans.me/blog/2011/03/16/continuous-thinking-nerdbeers-continued-we-all-win/). 
+conceived the platform](/posts/continuous-thinking-nerdbeers-continued-we-all-win//). 
 This is hard in an established community, as people tend to flock around the thought leaders, they are not really accessible any 
 more. In newer communities, this is not the fact. 
 

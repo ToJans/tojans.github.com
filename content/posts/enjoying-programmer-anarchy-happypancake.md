@@ -9,17 +9,17 @@ categories:
 
 Note: This is the first post in a series of posts about my experiences working for [HappyPancake](https://www.happypancake.com/):
  
-- [Introduction & Swedish culture.](https://tojans.me/blog/2013/11/30/enjoying-programmer-anarchy-happypancake)
-- [Working remote.](https://tojans.me/blog/2013/11/30/enjoying-programmer-anarchy-happypancake-2)
+- [Introduction & Swedish culture.](/posts/enjoying-programmer-anarchy-happypancake/)
+- [Working remote.](/posts/enjoying-programmer-anarchy-happypancake-2/)
 - ~~Programmer anarchy.~~
 - ~~The bit with Rinat.~~
 - ~~The dev stack.~~
 - ~~The infrastructure part.~~
-- [Enjoyed programmer anarchy - looking for the next project](https://tojans.me/blog/2014/01/13/enjoyed-programmer-anarchy-looking-for-the-next-project/)
+- [Enjoyed programmer anarchy - looking for the next project](/posts/enjoyed-programmer-anarchy-looking-for-the-next-project//)
 
 ## Introduction
 
-About three months ago, I was looking for a new project after [a mini-retirement](https://tojans.me/blog/2013/03/30/freedom-learning-stuff-doing-consulting-aka-the-fun-and-money-balance/) where I spent most time with the kids and [on some OSS-work](https://tojans.me/blog/2013/06/25/why-i-contribute-to-oss-projects/) for [Elixir](https://elixir-lang.org/).
+About three months ago, I was looking for a new project after [a mini-retirement](/posts/freedom-learning-stuff-doing-consulting-aka-the-fun-and-money-balance/) where I spent most time with the kids and [on some OSS-work](https://tojans.me/blog/2013/06/25/why-i-contribute-to-oss-projects/) for [Elixir](https://elixir-lang.org//).
 
 When I posted this quest for a new project on [my LinkedIn profile](https://www.linkedin.com/in/tomjanssens), I got this reply:
 
@@ -62,7 +62,7 @@ I don't think I ever needed to use "Opera", but as I am quite a big-mouth Tomas 
 
 This approach to work and life is quite new to me, but also very refreshing. I am looking forward to the next months in the project!
 
-You can find the next blog post on this subject [here](https://tojans.me/blog/2013/11/30/enjoying-programmer-anarchy-happypancake-2).
+You can find the next blog post on this subject [here](/posts/enjoying-programmer-anarchy-happypancake-2/).
 
 
 

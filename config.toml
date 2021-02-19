@@ -95,10 +95,17 @@ identifier = "posts"
 url = "/posts/"
 
 [[menu.main]]
-name = "About"
+name = "About me"
 weight = 350
 identifier = "about"
 url = "/about/"
+
+[[menu.main]]
+name = "Services"
+weight = 375
+identifier = "services"
+url = "/services/"
+
 
 [[menu.main]]
 name = "Contact"

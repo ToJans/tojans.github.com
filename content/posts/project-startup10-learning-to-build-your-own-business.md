@@ -1,19 +1,19 @@
 ---
 layout: post
 date: "2012-02-28"
-slug: "project-#startup10-learning-to-build-your-own-business"
+slug: "project-startup10-learning-to-build-your-own-business"
 title: 'Project #Startup10 : Learning to build your own business'
 ---
 
 <p>Note: this is the first post in the series "Project #Startup10" :&nbsp;a blog post series about starting up 10 businesses in a single year. Here is a list of all the relevant articles:</p>
 <ul>
 <li>Introduction (this post)</li>
-<li><a href="https://www.corebvba.be/blog/post/Project-Startup10-You-pay-peanuts-you-get-the-monkeys.aspx">You pay peanuts, you get the monkeys</a></li>
-<li><a href="https://www.corebvba.be/blog/post/Project-Startup10-Blommekesbe.aspx">#1: Blommekes.be</a>&nbsp;</li>
+<li><a href="/posts/Project-Startup10-You-pay-peanuts-you-get-the-monkeys/">You pay peanuts, you get the monkeys</a></li>
+<li><a href="/posts/Project-Startup10-Blommekesbe/">#1: Blommekes.be</a>&nbsp;</li>
 <li>E-Payment and logistics</li>
 <li>#2: Dampen.be -</li>
-<li><span style="text-decoration: underline;"><span style="text-decoration: line-through;"><strong><a href="https://www.corebvba.be/blog/post/It-is-official-on-the-second-of-May-I-will-join-the-start-up-Paycento.aspx">[This project has been put on hold]</a></strong>...</span></span></li>
-<li><a href="https://www.corebvba.be/blog/post/Project-Startup10-Working-title-BIG.aspx">#3: Working title: BIG</a></li>
+<li><span style="text-decoration: underline;"><span style="text-decoration: line-through;"><strong><a href="/posts/It-is-official-on-the-second-of-May-I-will-join-the-start-up-Paycento/">[This project has been put on hold]</a></strong>...</span></span></li>
+<li><a href="/posts/Project-Startup10-Working-title-BIG/">#3: Working title: BIG</a></li>
 <li>TBD</li>
 </ul>
 <p>&nbsp;</p>
@@ -22,12 +22,12 @@ title: 'Project #Startup10 : Learning to build your own business'
 <p>In the first post of this series I will give you a primer on my background, and also a few pointers to the things that inspire and motivate me; I hope they might inspire you too...</p>
 <h3>The&nbsp;**drumroll** "Big Idea" about a decade ago</h3>
 <p>The first thing I decided to build when I decided to quit my day job about a decade ago, was a single software product that would allow me to apply it to all kind of different problem domains, it required me to setup the database, and do little or no&nbsp;extra&nbsp;custom development. Little did I know that the software part was the least important of all...</p>
-<p>Even though I did manage to sell a few user licenses at 1.5K, <a href="https://www.corebvba.be/blog/post/Cudi-Core-universal-database-interface.aspx">the product</a> never really hit the market bigtime; here is why: I did not have a clue who my target audience was, so I had no idea how to market the product.</p>
+<p>Even though I did manage to sell a few user licenses at 1.5K, <a href="/posts/Cudi-Core-universal-database-interface/">the product</a> never really hit the market bigtime; here is why: I did not have a clue who my target audience was, so I had no idea how to market the product.</p>
 <p>While the product in itself was not that bad, it was obvious that it was not going to allow me to make a living out of it, so I opted for the path most ICT-people opt: &nbsp;<a href="https://www.linkedin.com/in/tomjanssens" target="_blank">freelance consultancy</a>...</p>
 <p>So one could say that this was actually my first startup attempt....</p>
 <h3>Enter 10 years later.... Project #Startup10</h3>
 <p></p>
-<p>Over the years and multiple consultancy jobs later, my understanding evolved (even after building my first product, check <a href="https://www.corebvba.be/blog/post/CROAM-objective-analysis.aspx" target="_blank">this post from 2004</a>), and I found out that <a href="https://www.corebvba.be/blog/?tag=/BDD" target="_blank">modelling software around behavior instead of data</a> usually results in way better software.</p>
+<p>Over the years and multiple consultancy jobs later, my understanding evolved (even after building my first product, check <a href="/posts/CROAM-objective-analysis" target="_blank">this post from 2004</a>), and I found out that <a href="https://www.corebvba.be/blog/?tag=/BDD" target="_blank/">modelling software around behavior instead of data</a> usually results in way better software.</p>
 <p>However, this fact is not as important as one would think... My biggest failure at the time, was building a product without even knowing what my target audience was and how I would market it ...</p>
 <p>After 10 years of reading about startups and business, I decided to verify whether all my newly acquired knowledge made any sense, so two months ago (Januari 2012) I decided to take a few months off before getting back to consultancy, get a few startups up and running, and continuing on the next ones while doing some freelance consultancy on the side<a href="https://www.linkedin.com/in/tomjanssens" target="_blank">(I am for rent by the way)</a>....</p>
 <p>I am now two months in, the two sites are up and fully functional, and we are ready to launch the first two onto the Belgian market (more in later posts):</p>

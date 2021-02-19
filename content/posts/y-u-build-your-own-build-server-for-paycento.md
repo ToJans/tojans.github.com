@@ -6,7 +6,7 @@ title: Y U build your own build server for Paycento
 ---
 
 <h3>Introduction</h3>
-<p>As you might now <a href="https://www.corebvba.be/blog/post/It-is-official-on-the-second-of-May-I-will-join-the-start-up-Paycento.aspx">I started working quite recently for the startup Paycento</a>. One of the things I am currently doing is setting up a system that allows us to do continuous integration and deployment everywhere and anywhere...</p>
+<p>As you might now <a href="/posts/It-is-official-on-the-second-of-May-I-will-join-the-start-up-Paycento/">I started working quite recently for the startup Paycento</a>. One of the things I am currently doing is setting up a system that allows us to do continuous integration and deployment everywhere and anywhere...</p>
 <blockquote class="twitter-tweet">
 <p>@<a href="https://twitter.com/ToJans">ToJans</a> Why write &amp; maintain it if someone already solved the problem? (assuming something solves it). Spend time on competitive adv :)</p>
 &mdash; Simon Guindon (@simongui) <a href="https://twitter.com/simongui/status/203554104138670080">May 18, 2012</a></blockquote>

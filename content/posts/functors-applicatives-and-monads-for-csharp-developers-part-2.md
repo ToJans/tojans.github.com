@@ -9,7 +9,7 @@ categories:
 
 TL;DR: A C# List implementation respecting [the category theory Haskell usually uses](https://en.wikibooks.org/wiki/Haskell/Category_theory).
 
-So, after implementing [the Maybe Monad in C#](https://tojans.me/blog/2014/06/16/functors-applicatives-and-monads-for-csharp-developers/) respecting category theory yesterday, I decided to implement the list as well, to gain a deeper understanding of it.
+So, after implementing [the Maybe Monad in C#](/posts/functors-applicatives-and-monads-for-csharp-developers//) respecting category theory yesterday, I decided to implement the list as well, to gain a deeper understanding of it.
 
 This is the result:
 

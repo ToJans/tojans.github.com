@@ -7,7 +7,7 @@ title: Trading the Elliott Wave - Silver 05/09/2012
 
 <p>&nbsp;</p>
 <h3 style="font-size: 11px; margin-bottom: -10px; padding: 0px; color: #444444; font-family: Verdana; line-height: 17px;">Introduction</h3>
-<p style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px;">This is a follow-up for an attempt to read the current trend in Silver, using mostly Elliott waves, Fibonacci retracements and RSI/MACD divergence. Feel free to state your opinion on my interpretation, and be aware that I am a complete newbie concerning this subject. The first post can be found <a href="https://www.corebvba.be/blog/post/Elliot-Wave-An-attempt-for-silver.aspx">here</a>...</p>
+<p style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px;">This is a follow-up for an attempt to read the current trend in Silver, using mostly Elliott waves, Fibonacci retracements and RSI/MACD divergence. Feel free to state your opinion on my interpretation, and be aware that I am a complete newbie concerning this subject. The first post can be found <a href="/posts/Elliot-Wave-An-attempt-for-silver/">here</a>...</p>
 <p style="color: #444444; font-family: Verdana; font-size: 11px; line-height: 17px;">&nbsp;</p>
 <p style="color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; line-height: normal;"></p>
 <p>&nbsp;</p>

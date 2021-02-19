@@ -46,7 +46,7 @@ he can learn them at heart when he needs them. Because the architect needs to li
 When you build software, you start out with an idea. However, this is just one model; as you develop your piece of software you will notice it evolves.
 This implies that your software architecture also might no longer be the best fit for the solution space.
 
-> There is a [difference between easy and simple](https://tojans.me/blog/2012/10/31/continuous-thinking-essay-ease-and-simplicity-in-software-architecture/).
+> There is a [difference between easy and simple](/posts/continuous-thinking-essay-ease-and-simplicity-in-software-architecture//).
 > Software architects should understand this, and use easy things for rigid parts, and simple things for instable parts.
 
 A software architect needs to understand the potential cost and risk of his choices, and evolve his architecture where necessary, which brings us to the next 
@@ -117,7 +117,7 @@ Why are you messing around with event buses and scalable platforms when you have
 ## 7. Five simple rules
 ![6 would be to hard to remember](https://i.snag.gy/wYIRC.jpg)
 
-Respect the basic practices of software development, and teach your developers about them. I wrote some down [here](https://tojans.me/blog/2013/08/22/the-5-simple-rules-of-software-development/), but there is a plethora of resources available on the net.
+Respect the basic practices of software development, and teach your developers about them. I wrote some down [here](/posts/the-5-simple-rules-of-software-development//), but there is a plethora of resources available on the net.
 
 > Make sure you and developers understand proper development practices and use them.
 

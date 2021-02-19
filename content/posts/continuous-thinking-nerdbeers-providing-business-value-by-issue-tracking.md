@@ -5,7 +5,7 @@ slug: "continuous-thinking-nerdbeers-providing-business-value-by-issue-tracking"
 title: 'Continuous thinking: Nerdbeers - Providing business value by issue tracking'
 ---
 
-<p>Note: this post is part of a series; you can find the first post <a href="https://www.corebvba.be/blog/post/Continuous-thinking-just-ship-it-the-story-of-NerdBeers.aspx">here</a>.</p>
+<p>Note: this post is part of a series; you can find the first post <a href="/posts/Continuous-thinking-just-ship-it-the-story-of-NerdBeers/">here</a>.</p>
 <h3>Introduction</h3>
 <p>Well, another 14 days passed by for the <a href="https://github.com/ToJans/NerdBeers" target="_blank">NerdBeers</a> project, and a lot has happened:</p>
 <ul>

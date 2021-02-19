@@ -7,10 +7,10 @@ title: 'w00t : Building a new app from the ground up : First specs and getting s
 
 This is one of the articles in our series; the parts are:<br />
 <ol>
-	<li><a href="https://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-methodology-technology-tools-used.aspx">Methodology, technology &amp; tools used</a></li>
-	<li><a href="https://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-setting-up-the-environment.aspx">Setting up the environment</a></li>
-	<li><a href="https://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-First-specs-and-getting-started.aspx">First specs and getting started</a></li>
-	<li><a href="https://www.corebvba.be/blog/post/w00t-Building-a-new-app-from-the-ground-up-IOC-database-and-other-stuff3b-a-real-framework.aspx">IOC, database and other stuff; a real framework</a>&nbsp; <br />
+	<li><a href="/posts/w00t-Building-a-new-app-from-the-ground-up-methodology-technology-tools-used/">Methodology, technology &amp; tools used</a></li>
+	<li><a href="/posts/w00t-Building-a-new-app-from-the-ground-up-setting-up-the-environment/">Setting up the environment</a></li>
+	<li><a href="/posts/w00t-Building-a-new-app-from-the-ground-up-First-specs-and-getting-started/">First specs and getting started</a></li>
+	<li><a href="/posts/w00t-Building-a-new-app-from-the-ground-up-IOC-database-and-other-stuff3b-a-real-framework/">IOC, database and other stuff; a real framework</a>&nbsp; <br />
 	</li>
 </ol>
 <p>

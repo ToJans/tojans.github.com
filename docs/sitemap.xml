@@ -508,7 +508,7 @@
   </url>
   
   <url>
-    <loc>https://tojans.me/posts/project-#startup10-working-title-big/</loc>
+    <loc>https://tojans.me/posts/project-startup10-working-title-big/</loc>
     <lastmod>2012-08-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -518,7 +518,7 @@
   </url>
   
   <url>
-    <loc>https://tojans.me/posts/project-#startup10-lessons-learned-with-blommekes.be/</loc>
+    <loc>https://tojans.me/posts/project-startup10-lessons-learned-with-blommekes.be/</loc>
     <lastmod>2012-07-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -543,12 +543,12 @@
   </url>
   
   <url>
-    <loc>https://tojans.me/posts/project-#startup10-you-pay-peanuts-you-get-the-monkeys/</loc>
+    <loc>https://tojans.me/posts/project-startup10-you-pay-peanuts-you-get-the-monkeys/</loc>
     <lastmod>2012-02-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tojans.me/posts/project-#startup10-learning-to-build-your-own-business/</loc>
+    <loc>https://tojans.me/posts/project-startup10-learning-to-build-your-own-business/</loc>
     <lastmod>2012-02-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -1103,6 +1103,10 @@
   
   <url>
     <loc>https://tojans.me/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://tojans.me/services/</loc>
   </url>
   
 </urlset>

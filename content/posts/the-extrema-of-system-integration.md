@@ -49,7 +49,7 @@ So there you have it: the two extrema of software integration. Both have their a
 
 Take a look at the organisation culture you have, and base your architecture decision on that.
 
-Other than that, be pragmatic. Executing multiple AR updates in a single UOW might not be a problem, if you are aware about it. It's all about [easy vs simplicity](https://tojans.me/blog/2012/10/31/continuous-thinking-essay-ease-and-simplicity-in-software-architecture/) in the end.
+Other than that, be pragmatic. Executing multiple AR updates in a single UOW might not be a problem, if you are aware about it. It's all about [easy vs simplicity](/posts/continuous-thinking-essay-ease-and-simplicity-in-software-architecture//) in the end.
 
 > Technical debt only becomes debt when "the loan" is claimed. If you have an ugly hack, but it works, and you'll never have to change it, so be it. However, one can always come in to claim the loan (one or multiple times), you need to be aware of that. In the end it is all about risk management.
 

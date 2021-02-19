@@ -7,7 +7,7 @@ title: 'Continuous thinking: Essay: TL;DR - functional programming = SQL SELECT
 ---
 
 <h3>Introduction</h3>
-<p>I am currently in the process of studying F# - a functional programming language -.&nbsp;Since I am a <a href="https://www.corebvba.be/blog/post/Essay-the-duality-of-knowledge.aspx">big fan of meta-cognition</a>, I am trying to find out how the mindset of the functional programming paradigm differs from that of a C# one (i.e. the more conventional, object oriented paradigm).</p>
+<p>I am currently in the process of studying F# - a functional programming language -.&nbsp;Since I am a <a href="/posts/Essay-the-duality-of-knowledge/">big fan of meta-cognition</a>, I am trying to find out how the mindset of the functional programming paradigm differs from that of a C# one (i.e. the more conventional, object oriented paradigm).</p>
 <p>This essay also tries to point out some existing bridges to the functional paradigm that are currently implemented in the imperative programming language C#.</p>
 <h3>What is "Functional programming" exactly ?</h3>
 <p>I will reference <a href="https://en.wikipedia.org/wiki/Functional_programming" target="_blank">wikipedia</a>&nbsp;- while it still exists - for the definitions:</p>

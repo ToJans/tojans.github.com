@@ -20,7 +20,7 @@ First things first:
 
 When people start talking about MSA, they usually mention the fact that a micro-service should be about a 100 lines of code. And then... it stops, and they fail to explain the difference between MSA and SOA, except for the fact that the services need to be smaller.
 
-Luckily, I have had the time to investigate this concept during my [recently finished client project](https://tojans.me/blog/2014/01/13/enjoyed-programmer-anarchy-looking-for-the-next-project/), and it took me a while to grasp the difference; here is the gist of it:
+Luckily, I have had the time to investigate this concept during my [recently finished client project](/posts/enjoyed-programmer-anarchy-looking-for-the-next-project//), and it took me a while to grasp the difference; here is the gist of it:
 
 ### Micro-service architecture and the human body
 

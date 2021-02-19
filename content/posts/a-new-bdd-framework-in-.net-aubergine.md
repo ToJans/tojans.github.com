@@ -6,11 +6,11 @@ title: 'A new BDD framework in .Net : Aubergine'
 ---
 
 <h3>REMARK : An executable testrunner and some sample code is available</h3>
-<p>Here : <a href="https://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx">https://www.corebvba.be/blog/post/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx</a></p>
+<p>Here : <a href="/posts/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available/">/posts/BDD-with-DSL-Aubergine-a-rubycucumber-like-alternative-for-NET-download-available.aspx</a></p>
 <h3>REMARK : Skip to "Edit 2" to see the current syntax</h3>
 <p>&nbsp;</p>
 <p>Just a quick update !!</p>
-<p>After thinking a bit more about the problems mentioned by Aaron <a href="https://www.corebvba.be/blog/post/A-new-BDD-framework-in-Net-NetSpec.aspx">in my previous post</a>, and taking a look at <a href="https://cukes.info/" target="_blank">Cucumber (in ruby)</a>, I decided to give it another go. Since I have to be in the shop within<span style="text-decoration: line-through;"> half an hour</span> 20 mins I can only give you a sample of what the current spec looks like; explanations will come in later posts..</p>
+<p>After thinking a bit more about the problems mentioned by Aaron <a href="/posts/A-new-BDD-framework-in-Net-NetSpec">in my previous post</a>, and taking a look at <a href="https://cukes.info/" target="_blank">Cucumber (in ruby)</a>, I decided to give it another go. Since I have to be in the shop within<span style="text-decoration: line-through;/"> half an hour</span> 20 mins I can only give you a sample of what the current spec looks like; explanations will come in later posts..</p>
 <p>I'm also considering a rename, since <a href="https://gitorious.org/netspec" target="_blank">netspec already seems to exist</a> as a .Net spec platform... Since Cucumber was my inspiration, I'm currently thinking about <a href="https://simple.wikipedia.org/wiki/Aubergine" target="_blank">Aubergine/Eggplant</a>. Suggestions are welcome</p>
 <p>I'm not really fond of the implementation yet, but I'll have to think about that a little bit more... As you might notice there has been a slight shift towards the Cucumber method of doing things.</p>
 <p>Here we go :</p>

@@ -5,7 +5,7 @@ slug: "presentation-cqrs-101-all-your-base-belong-to-us-on-march-6th-for-visug.b
 title: 'Presentation: CQRS 101 - All your BASE belong to us - on march 6th for visug.be'
 ---
 
-<p>I <a href="https://www.visug.be/Eventdetails/tabid/95/EventId/54/Default.aspx" target="_blank">am presenting for Visug on the 6th of march</a>; it is a session about CQRS; here is the abstract:</p>
+<p>I <a href="https://www.visug.be/Eventdetails/tabid/95/EventId/54/Default" target="_blank">am presenting for Visug on the 6th of march</a>; it is a session about CQRS; here is the abstract:</p>
 <hr />
 <h3>CQRS 101 - All Your BASE Belong To Us</h3>
 <p>CQRS is a relatively new approach to software development in complex, distributed and/or asynchronous problem domains.</p>

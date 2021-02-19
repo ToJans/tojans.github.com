@@ -15,7 +15,7 @@ The basic lean start-up diagram looks like this:
 
 ![Build-measure-learn triangle](https://i.snag.gy/xg4LB.jpg)
 
-A while a go, [when I decided to do 10 start-ups](https://tojans.me/blog/2012/02/28/project-%23startup10-learning-to-build-your-own-business/) 
+A while a go, [when I decided to do 10 start-ups](/posts/project-startup10-learning-to-build-your-own-business//) 
 the process usually was like this (simplification):
 
 - brainstorm with another person on a start-up ideas
