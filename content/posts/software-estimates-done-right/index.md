@@ -170,7 +170,7 @@ As everything else is routine, only the things concerning the integration API wi
 
 In reality, when executing these integration tasks, some will take a lot longer, and some will be shorter. Because we do not know what the actual distribution would be, we fall back to the distribution that occurs naturally in most of these cases: the Gaussian distribution. So converting from a standard uniform distribution to a Gaussian distribution should help. 
 
-To convert from one to the other, we divide by the differential (the filled part of the graph) of the standard uniform distribution (1), and multiply with the differential of the Gaussian distribution (&Sqrt; &Pi;). Note that all tasks still have a mean and median of 1, but we introduced the standard deviation.
+To convert from one to the other, we divide by the area of the standard uniform distribution (1), and multiply with the area of the Gaussian distribution (&Sqrt; &Pi;). Note that all tasks still have a mean and median of 1, but we introduced the standard deviation.
 
 Now, let's assume you also need to interact with another organisation that has control over the API for every task, and that you will estimate this with an overhead multiplier of 30% if everything goes well (so estimates should be multiplied by 1.3). 
 As you have not worked with the provider before, your estimate will probably not have a uniform distribution but a Gaussian distribution, so multiply with (&Sqrt; &Pi;) again.

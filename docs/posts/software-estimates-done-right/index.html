@@ -281,7 +281,7 @@ Given enough historical data, we can run a <a href="https://en.wikipedia.org/wik
 This would imply your tasks would have a standard uniform distribution.</p>
 <p>As everything else is routine, only the things concerning the integration API will have uncertainty included&hellip;</p>
 <p>In reality, when executing these integration tasks, some will take a lot longer, and some will be shorter. Because we do not know what the actual distribution would be, we fall back to the distribution that occurs naturally in most of these cases: the Gaussian distribution. So converting from a standard uniform distribution to a Gaussian distribution should help.</p>
-<p>To convert from one to the other, we divide by the differential (the filled part of the graph) of the standard uniform distribution (1), and multiply with the differential of the Gaussian distribution (√ Π). Note that all tasks still have a mean and median of 1, but we introduced the standard deviation.</p>
+<p>To convert from one to the other, we divide by the area of the standard uniform distribution (1), and multiply with the area of the Gaussian distribution (√ Π). Note that all tasks still have a mean and median of 1, but we introduced the standard deviation.</p>
 <p>Now, let&rsquo;s assume you also need to interact with another organisation that has control over the API for every task, and that you will estimate this with an overhead multiplier of 30% if everything goes well (so estimates should be multiplied by 1.3). 
 As you have not worked with the provider before, your estimate will probably not have a uniform distribution but a Gaussian distribution, so multiply with (√ Π) again.</p>
 <p>So the actual estimate for our integration task would be:</p>
