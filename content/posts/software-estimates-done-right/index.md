@@ -8,7 +8,7 @@ title = "Software estimates done right"
 
 So, **how do you estimate** a software development effort?
 
->Ha, that's easy; there is a website called [The Estimate Goat][3], that provides you random estimates every time you resresh the page!
+>Ha, that's easy; there is a website called [The Estimate Goat][3], that provides you random estimates every time you refresh the page!
 
 ![An estimation by the estimate goat][4]
 
