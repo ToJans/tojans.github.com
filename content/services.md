@@ -18,7 +18,7 @@ I commit to tangible deliverables with discrete timelines.
 
 ## Challenges
 
-Due to my background in [EA](https://en.wikipedia.org/wiki/Enterprise_architecture)/[DDD](https://en.wikipedia.org/wiki/Domain-driven_design), organizations usually hire me for strategic engagements. Some of their challenges:
+Due to my diverse background in [EA](https://en.wikipedia.org/wiki/Enterprise_architecture)/[DDD](https://en.wikipedia.org/wiki/Domain-driven_design), organizations usually hire me for very diverse engagements. Some of their challenges:
  
  - Lack of trust between business and IT;
  - Our IT landscape is fragmented and/or outdated;
