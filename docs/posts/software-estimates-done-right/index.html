@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | Software estimates done right </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="https://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="https://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://tojans.me/posts/software-estimates-done-right/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="https://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Software estimates done right"/>
+<meta name="twitter:description" content="Software estimates done right"/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About me</a></li>
+        
+            
+            <li><a 
+                   href="/services/"
+                        
+                   title="">Services</a></li>
+        
+            
+            <li><a 
+                   href="/contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Software estimates done right</h3>
+                
+            </div>
+
+            <p>So, <strong>how do you estimate</strong> a software development effort?</p>
+<blockquote>
+<p>Ha, that&rsquo;s easy; there is a website called <a href="http://theestimategoat.com/">The Estimate Goat</a>, that provides you random estimates every time you resresh the page!</p>
+</blockquote>
+<p><img src="./estimate-goat.png" alt="An estimation by the estimate goat"></p>
+<p>Joking aside, let me rephrase the question: <strong>how do you reasonably estimate</strong> a software effort?</p>
+<p>According to software developers, this is hard.</p>
+<p>In fact, some people considered this so hard that they started the <a href="http://zuill.us/WoodyZuill/2013/01/25/if-you-found-estimates-bring-no-value-what-would-you-do/">#NoEstimates movement</a> in 2013, with the following motto:</p>
+<blockquote>
+<p>Estimates are waste and we must eliminate estimates in software development.</p>
+</blockquote>
+<p>It grew quite a following, so let&rsquo;s start by begging the question:</p>
+<h3 id="can-we-do-without-estimates">Can we do without estimates?</h3>
+<p>Yes! No! Well, it depends&hellip;</p>
+<p>Typically we <strong>commit</strong> to an engagement in the following ways:</p>
+<ul>
+<li><strong>Time and material</strong>: provide <strong>labour and resources</strong> for <strong>n units of time</strong> - mostly freelancing or employment;</li>
+<li><strong>Fixed price</strong>: provide certain <strong>deliverables</strong> according to <strong>predefined acceptance criteria</strong>. This can be time-boxed and/or scoped, for example &ldquo;renovate my bathroom&rdquo;;</li>
+<li>A <strong>hybrid</strong>, for example T&amp;M development, but a fixed price analysis and support contract.</li>
+</ul>
+<p>Based on the type of <strong>engagement</strong>, engaged stakeholders are exposed to <strong>diffent kinds of uncertainty</strong>:</p>
+<ul>
+<li><strong>Cost</strong> - &ldquo;How much will it cost? How much effort do we need to invest?&quot;;</li>
+<li><strong>Time</strong> - &ldquo;How long will it take?&quot;;</li>
+<li><strong>Scope</strong> - &ldquo;What is included, and what is not?&rdquo;.</li>
+</ul>
+<p>If <strong>all engaged stakeholders are willing to accept uncertainty</strong>, i.e. &ldquo;I don&rsquo;t care how much it costs or how long it takes, just get it done&rdquo;, <strong>estimates are useless</strong>.</p>
+<p>But even in this case, people ask how long it typically takes, which is interpreted as an estimate with high uncertainty&hellip; So they do end up with an <strong>implicit estimate</strong>&hellip;</p>
+<h3 id="noestimates-and-the-maturity-of-software-development">#NoEstimates and the maturity of software development</h3>
+<p>Software development is a relatively young discipline; this implies some of our methodologies are very immature, and for some areas we do not even have a methodology.</p>
+<p>If we want to increase the maturity of our profession, we need to use proven methodologies deeply rooted in scientific 
+backgrounds, so we can do <em>proper engineering</em> as opposed to going with a hunch&hellip;</p>
+<p>In my opinion, the #NoEstimates movement exposes a lack of proper methodologies regarding estimations.</p>
+<p>The goal of this post is to present two complementary estimation approaches, backed by at least some scientific reasoning.</p>
+<blockquote>
+<p><strong>Disclaimer:</strong></p>
+<p>There is no silver bullet, but I hope that this approach at least inspires you to sit down and think about how you do estimates.</p>
+</blockquote>
+<h3 id="estimating-in-a-historical-context-monte-carlo-forecasting">Estimating in a historical context: &lsquo;&lsquo;Monte-Carlo forecasting&rsquo;&rsquo;</h3>
+<p>Let&rsquo;s assume you have a team that has been developing software for a few weeks, months or even years.
+Given enough historical data, we can run a <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte-Carlo simulation</a> to forecast effort and duration with probablity ranges.</p>
+<p>I could go to great lenghts explaining why you could use this approach, but the <a href="https://github.com/rodrigozr/ProjectForecaster/wiki">wiki of this project</a> motivates this approach rather well.</p>
+<p>If you have your own data available, you can create your own forecast using <a href="https://rodrigozr.github.io/ProjectForecaster/">this webpage</a></p>
+<p>This tool was mentioned to me by <a href="https://twitter.com/aramkoukia">Aram Koukia</a>, and here is an excerpt about the data he uses for input:</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I use 7 weeks of historical data from past projects and with considering some % tasks being added to scope from the initial set of tasks. I also assume most tasks finish between 1 - 5 days. I report with 80% confidence. My estimate-less forecasts has been pretty accurate</p>&mdash; Aram Koukia (@aramkoukia) <a href="https://twitter.com/aramkoukia/status/1351754189441957889?ref_src=twsrc%5Etfw">January 20, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Here is a screenshot of the <a href="https://rodrigozr.github.io/ProjectForecaster/#eyJwcm9qZWN0TmFtZSI6IlRlc3QgcHJvamVjdCIsIm51bWJlck9mU2ltdWxhdGlvbnMiOjEwMDAwMCwiY29uZmlkZW5jZUxldmVsIjo4NSwidHBTYW1wbGVzIjpbOCw1LDQsNiw2LDUsMywxLDMsMywyLDcsNiw2LDMsNSwyLDIsNSw2LDQsM10sImx0U2FtcGxlcyI6WzEzLjEsOSwxMy44LDcuMiw4LjgsMC41LDE1LDguMiwyMS45LDIyLjUsOS43LDcuMiwyLjEsMjkuOSwxNi4zLDguMSw1LDguNiwyOC40LDAuNSw3LDIxLjcsMC41LDQsNy4xLDUsMi4xLDIuMyw0LDMuMSwxLjIsMi41LDEuOCw2LjEsNi4zLDIsMTIsMTIuMywyLjEsNy4zLDIwLjQsMTMuMSwwLjUsNDguOSw5LjgsNy40LDEuOCwxNywxMi4xLDMyLjcsMTQuMywwLjksMjIuMiw3LDE2LDEzLjIsNS4yLDE0LjUsNi4yLDIuMiwzLjIsNi4zLDkuNSwxOC4zLDcsMTMsMS40LDcuMywxMC4xLDE5LDEyLjMsMC44LDcuMiwyNC4xLDMuMiwwLjUsNy4xLDEwLjEsNiwyMy4xLDE0LjMsMTIsMjAsMTYuNyw2LjksMi4xLDEuMiw1LjcsNy4xLDcsNC41LDcsNSwxMC4xLDYuM10sInNwbGl0UmF0ZVNhbXBsZXMiOlsxLjI5LDEuNTYsMS40NywwLjc1LDEuMjUsMS4yNSwxLjE4LDEsMV0sInJpc2tzIjpbeyJsaWtlbGlob29kIjo1MCwibG93SW1wYWN0IjoxMiwiaGlnaEltcGFjdCI6MTUsImRlc2NyaXB0aW9uIjoiUGVudGVzdCBtYXkgYmUgcmVxdWlyZWQifSx7Imxpa2VsaWhvb2QiOjc1LCJsb3dJbXBhY3QiOjUsImhpZ2hJbXBhY3QiOjgsImRlc2NyaXB0aW9uIjoiRGF0YWJhc2UgdXBncmFkZSBtYXkgYmUgcmVxdWlyZWQifSx7Imxpa2VsaWhvb2QiOjUsImxvd0ltcGFjdCI6MTUsImhpZ2hJbXBhY3QiOjIwLCJkZXNjcmlwdGlvbiI6IlBvdGVudGlhbCB3b3JsZC13aWRlIHBhbmRlbWljIn1dLCJudW1iZXJPZlRhc2tzIjozOCwidG90YWxDb250cmlidXRvcnMiOjEwLCJtaW5Db250cmlidXRvcnMiOjEsIm1heENvbnRyaWJ1dG9ycyI6NSwic0N1cnZlU2l6ZSI6MjAsInN0YXJ0RGF0ZSI6IjIwMjAtMDktMDcifQ==">example forecast included in the project</a>:</p>
+<p><img src="./monte-carlo.png" alt="A monte-carlo forecast example"></p>
+<p>Feel free to take a look at the <a href="https://github.com/rodrigozr/ProjectForecaster">source-code</a>, if that is your kind of thing.</p>
+<p>This approach has 2 main advantages:</p>
+<ol>
+<li>The outcome should be at least as good, if not better than the <a href="https://en.wikipedia.org/wiki/Fingerspitzengef%C3%BChl">&lsquo;&lsquo;Fingerspitzengefühl&rsquo;'</a> your team is using right now;</li>
+<li>You no longer have to bother your team asking for estimates.</li>
+</ol>
+<p>So it&rsquo;s a win-win for everyone!</p>
+<h3 id="2-estimating-for-a-future-context-gaussian-estimates">2. Estimating for a future context: &lsquo;&lsquo;Gaussian estimates&rsquo;&rsquo;</h3>
+<p>In some cases you need to provide an estimate in a context you do not know yet.</p>
+<p>For a lot of those cases, I used to think about the happy path, and then applied a multiplier of 3. I had no idea why this worked, but it worked reasonably well&hellip;</p>
+<blockquote>
+<p><strong>Remark:</strong></p>
+<p>People described this approach <a href="https://web.archive.org/web/20140329201346/http://alistair.cockburn.us/The+magic+of+pi+for+project+managers">before</a> (multiply with √ Π, Π or Π²), but I never found any scientific reasoning behind it.</p>
+<p>Because it had not been properly named, I baptized it &lsquo;&lsquo;Gaussian estimates&rsquo;&rsquo;.</p>
+<p>If this approach already has a well-defined name - which seems very likely, as my reasoning seems quite obvious after the fact - please let me know!</p>
+</blockquote>
+<p>So let&rsquo;s try to figure out why 3 (or Π) might be a good multiplier in some cases:</p>
+<h4 id="about-uncertainty">About uncertainty</h4>
+<p>In a future context you have the following <strong><a href="https://en.wikipedia.org/wiki/There_are_known_knowns">knowns and unknowns</a></strong>:</p>
+<ul>
+<li><strong>The known knowns</strong>: what you know you know;</li>
+<li><strong>The known unknowns</strong>:  what you know you don&rsquo;t know;</li>
+<li><strong>The unknown unknowns</strong>: what you don&rsquo;t know you don&rsquo;t know.</li>
+</ul>
+<p>Some examples of known knowns:</p>
+<ul>
+<li>We will have to integrate with systems a, b &amp; c;</li>
+<li>The functionality need to cover e, f &amp; g;</li>
+<li>Our SLA will need to be h.</li>
+</ul>
+<p>Some examples of known unknowns:</p>
+<ul>
+<li>How responsive is the customer;</li>
+<li>How well defined is the scope;</li>
+<li>Do we have any constraints we need to take into account.</li>
+</ul>
+<p>Next to this, there will be unknown unknowns: aspects that we do not know we do not know, for example</p>
+<ul>
+<li>Person x might provide subpar cooperation;</li>
+<li>Person y might get ill and not be available for a while;</li>
+<li>There might be a history with technology z in the past, which results in a lack of trust.</li>
+</ul>
+<p>We can factor in the known unknowns in the constraints and assumptions of our contract, but what about the unknown unknowns?</p>
+<h4 id="a-little-statistics-primer">A little statistics primer</h4>
+<p>My approach to factoring in the unknown unknowns is rooted in statistics.</p>
+<blockquote>
+<p><em>There are 3 kinds of lies: lies, damned lies &amp; statistics - Mark Twain</em></p>
+</blockquote>
+<p>First we will take a look at 2 different statistical distributions:</p>
+<p>We have something called a <strong>Standard Uniform Distribution</strong>:</p>
+<p><img src="./rectangular-distribution.jpg" alt="Standard uniform distribution"></p>
+<ul>
+<li>mean = 1;</li>
+<li>median = 1;</li>
+<li>standard deviation = 0;</li>
+<li>area = 1.</li>
+</ul>
+<p>Basically this just means that <code>f(x) = 1</code>.</p>
+<p>We also have something called the <strong>Gaussian Distribution</strong> or normal distribution:</p>
+<p><img src="./gaussian-distribution.jpg" alt="Gaussian distribution"></p>
+<ul>
+<li>mean = 1;</li>
+<li>median = 1;</li>
+<li>standard deviation = σ (sigma);</li>
+<li>area = √ Π.</li>
+</ul>
+<p>The most important aspect to Gaussian distribution is the relationship with randomness; here is an excerpt <a href="https://en.wikipedia.org/wiki/Normal_distribution#Standard_deviation_and_coverage">from wikipedia</a>:</p>
+<blockquote>
+<p>Normal distributions are important in statistics and are often used in the natural and social sciences to represent real-valued random variables whose distributions are not known.Their importance is partly due to the central limit theorem. It states that, under some conditions, the average of many samples (observations) of a random variable with finite mean and variance is itself a random variable—whose distribution converges to a normal distribution as the number of samples increases. Therefore, physical quantities that are expected to be the sum of many independent processes, such as measurement errors, often have distributions that are nearly normal.</p>
+</blockquote>
+<h4 id="the-gaussian-multiplier">The &lsquo;&lsquo;Gaussian multiplier&rsquo;&rsquo;</h4>
+<p>Imagine we are estimating a project where the requirements are very well defined and the team is operating smoothly; the only unknown you have is not knowing the integration API well.</p>
+<p>We ask to estimate the happy path, broken down in fixed units of time (one day).
+This would imply your tasks would have a standard uniform distribution.</p>
+<p>As everything else is routine, only the things concerning the integration API will have uncertainty included&hellip;</p>
+<p>In reality, when executing these integration tasks, some will take a lot longer, and some will be shorter. Because we do not know what the actual distribution would be, we fall back to the distribution that occurs naturally in most of these cases: the Gaussian distribution. So converting from a standard uniform distribution to a Gaussian distribution should help.</p>
+<p>To convert from one to the other, we divide by the differential (the filled part of the graph) of the standard uniform distribution (1), and multiply with the differential of the Gaussian distribution (√ Π). Note that all tasks still have a mean and median of 1, but we introduced the standard deviation.</p>
+<p>Now, let&rsquo;s assume you also need to interact with another organisation that has control over the API for every task, and that you will estimate this with an overhead multiplier of 30% if everything goes well (so estimates should be multiplied by 1.3). 
+As you have not worked with the provider before, your estimate will probably not have a uniform distribution but a Gaussian distribution, so multiply with (√ Π) again.</p>
+<p>So the actual estimate for our integration task would be:</p>
+<blockquote>
+<p>happy path * 1.3 * (√ Π) * (√ Π)</p>
+</blockquote>
+<blockquote>
+<p>= happy path * 1.3 * Π</p>
+</blockquote>
+<h4 id="a-more-pragmatic-approach-to-the-gaussian-multiplier">A more pragmatic approach to the &lsquo;&lsquo;Gaussian multiplier&rsquo;&rsquo;.</h4>
+<p>The above explanation contains the gist of the idea, but requires you to have a very good grasp of what an uncertainty dimension is:</p>
+<ul>
+<li>Time;</li>
+<li>Scope;</li>
+<li>Cost;</li>
+<li>&hellip; .</li>
+</ul>
+<p>In order to make this a bit more digestable, I created a pragmatic heuristic that should be good enough for most cases. 
+Without further ado, I present to you my suggested model:</p>
+<p><img src="./gaussian-estimates.png" alt="Gaussian estimates"></p>
+<p>This should provide you a pragmatic, but scientifically sound approach to doing estimates for future contexts.</p>
+<p>I did not bother to go beyond Π², because the probability of your estimate would be too low beyond that point&hellip;</p>
+<h3 id="in-closing">In closing</h3>
+<p>It has been over 5 years since my last blog post, but I sure enjoyed myself organizing my thoughts.</p>
+<p>I hope this post is as valuable to you as it has been to me.</p>
+<p>If you see any flaws, mistakes or even typos feel free to contact me&hellip;</p>
+<p>All the best, and let&rsquo;s hope it doesn&rsquo;t take another 5 years to publish a blog post,</p>
+<p>Tom</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

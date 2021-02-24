@@ -6,7 +6,17 @@
     <description>Recent content in Hello on Tom&#39;s ramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Sep 2016 09:26:11 +0200</lastBuildDate><atom:link href="https://tojans.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Feb 2021 12:00:00 +0100</lastBuildDate><atom:link href="https://tojans.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software estimates done right</title>
+      <link>https://tojans.me/posts/software-estimates-done-right/</link>
+      <pubDate>Tue, 23 Feb 2021 12:00:00 +0100</pubDate>
+      
+      <guid>https://tojans.me/posts/software-estimates-done-right/</guid>
+      <description>So, how do you estimate a software development effort?
+ Ha, that&amp;rsquo;s easy; there is a website called The Estimate Goat, that provides you random estimates every time you resresh the page!</description>
+    </item>
+    
     <item>
       <title>An update</title>
       <link>https://tojans.me/posts/an-update/</link>
