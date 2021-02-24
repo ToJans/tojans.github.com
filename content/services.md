@@ -8,7 +8,7 @@ nopaging = true
 Over a decade of consulting helped me to identify what I do best: 
 
 <blockquote>
- <h3>Fit-gap analysis:</h3>
+ <h3>Strategic consultancy:</h3>
  I convert <b>your challenge</b> - i.e. "what keeps you awake at night?" - into an <b>actionable plan</b>.
  </blockquote>
 
