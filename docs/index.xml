@@ -6,7 +6,16 @@
     <description>Recent content in Hello on Tom&#39;s ramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Feb 2021 12:00:00 +0100</lastBuildDate><atom:link href="https://tojans.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Mar 2021 12:00:00 +0100</lastBuildDate><atom:link href="https://tojans.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reference by value in TypeScript</title>
+      <link>https://tojans.me/posts/reference-by-value-in-typescript/</link>
+      <pubDate>Fri, 05 Mar 2021 12:00:00 +0100</pubDate>
+      
+      <guid>https://tojans.me/posts/reference-by-value-in-typescript/</guid>
+      <description>I am currently examining ways to improve development UX for a low-code platform that I&amp;rsquo;m opening up to the public.</description>
+    </item>
+    
     <item>
       <title>Software estimates done right</title>
       <link>https://tojans.me/posts/software-estimates-done-right/</link>

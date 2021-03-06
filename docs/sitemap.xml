@@ -4,12 +4,17 @@
   
   <url>
     <loc>https://tojans.me/</loc>
-    <lastmod>2021-02-23T12:00:00+01:00</lastmod>
+    <lastmod>2021-03-05T12:00:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://tojans.me/posts/</loc>
-    <lastmod>2021-02-23T12:00:00+01:00</lastmod>
+    <lastmod>2021-03-05T12:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tojans.me/posts/reference-by-value-in-typescript/</loc>
+    <lastmod>2021-03-05T12:00:00+01:00</lastmod>
   </url>
   
   <url>

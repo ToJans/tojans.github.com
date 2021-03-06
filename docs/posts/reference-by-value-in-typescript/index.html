@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | Reference by value in TypeScript </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="https://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="https://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://tojans.me/posts/reference-by-value-in-typescript/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="https://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Reference by value in TypeScript"/>
+<meta name="twitter:description" content="Reference by value in TypeScript"/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About me</a></li>
+        
+            
+            <li><a 
+                   href="/services/"
+                        
+                   title="">Services</a></li>
+        
+            
+            <li><a 
+                   href="/contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>Reference by value in TypeScript</h3>
+                
+            </div>
+
+            <p>I am currently examining ways to improve development UX for a low-code platform that I&rsquo;m opening up to the public.</p>
+<p>As I started experimenting with TypeScript I tweeted about it.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I constructed a minimal example in the TypeScript playground:<br>- convert a data interface to a template interface<br>- verify references at compile time<br>Try it yourself here:<a href="https://t.co/xLFU3LcB8F">https://t.co/xLFU3LcB8F</a> <a href="https://t.co/SlkHVVOsd6">pic.twitter.com/SlkHVVOsd6</a></p>&mdash; Tom Janssens (@ToJans) <a href="https://twitter.com/ToJans/status/1367490555433910288?ref_src=twsrc%5Etfw">March 4, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Because I received quite a lot of inquiries, I decided to blog about it.</p>
+<p>This is potentially the first post in a series about leveraging the TypeScript type system to the extreme.</p>
+<h2 id="the-context">The context</h2>
+<p>I am currently extending the <a href="https://www.virtualsaleslab.com/?lang=en">Virtual Sales Lab</a> platform, so we can open it up to external developers.</p>
+<p>Virtual Sales Lab is a SaaS that provides online 3D configurators for sales and marketing; below you can see a screenshot from one of our customers' configurator; you can test a copy of the configurator <a href="https://productconfigurator.virtualsaleslab.com/r/vsl/vsl/en/designer/index/patioroof3">here</a>.</p>
+<p><img src="./patioroof3.png" alt="Virtual Sales Lab"></p>
+<p>It allows a developer to build something usable in a couple of hours, and a full blown configurator usually takes 1 to 4 weeks.</p>
+<p>However, it requires a little bit of effort to get acquinted with the platform as a developer.</p>
+<p>As the intent is to make this platform open to all developers as a low-code platform with a low barrier to entry, I was wondering if I could make the developer experience extremely user friendly.</p>
+<p>I am a strong believer of leveraging existing tools as much as possible, so I started experimenting with TypeScript. It turns out a lot is possible by being creative with the type system.</p>
+<h2 id="my-first-experiment-referential-integrity">My first experiment: referential integrity.</h2>
+<p>Our platform takes in a strongly-typed JSON file and converts it into an online 3D configurator like the one I mentioned above.</p>
+<p>As the JSON is type-checked, you cannot provide an absolute bogus representation, but bugs are still possible.</p>
+<p>Here is an example of a potential bug:</p>
+<div class="highlight"><pre class="chroma"><code class="language-TypeScript" data-lang="TypeScript">    <span class="s2">&#34;doorpanel&#34;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&#34;elementType&#34;</span><span class="o">:</span> <span class="s2">&#34;panel&#34;</span><span class="p">,</span>
+        <span class="s2">&#34;baseMaterialId&#34;</span><span class="o">:</span> <span class="s2">&#34;wood &#34;</span><span class="p">,</span>
+        <span class="s2">&#34;width&#34;</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&#34;height&#34;</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&#34;opts&#34;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&#34;thickness&#34;</span><span class="o">:</span> <span class="mi">2</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div><p>Did you spot the problem? Instead of <code>&quot;wood&quot;</code>, I accidentily typed <code>&quot;wood &quot;</code>.</p>
+<p>Luckily it raises a proper error at runtime, which allows you to fix the problem, but it does require a round-trip to the engine.</p>
+<p>As short feedback loops are the bee&rsquo;s knees, I wondered if there was a way to catch this at compile-time&hellip;.</p>
+<h2 id="basics-first-whatever-happened-to-typescript">Basics first: whatever happened to TypeScript?</h2>
+<p>As my TypeScript was a bit rusty - I was mostly <a href="/services/">consulting</a> over the past few years -, this was like a TypeScript-101 experience for me, so let&rsquo;s start with the basics&hellip;</p>
+<p>Let&rsquo;s say we have 2 simple types: a <code>TProductCatalog</code> and a <code>TOrder</code> type. How would we represent these?</p>
+<div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">type</span> <span class="nx">TProductCatalog</span> <span class="o">=</span> <span class="nx">Record</span><span class="p">&lt;</span><span class="nt">string</span><span class="err">,</span> <span class="p">{</span>
+    <span class="na">name</span><span class="err">:</span> <span class="na">string</span><span class="err">,</span>
+    <span class="na">price</span><span class="err">:</span> <span class="na">number</span>
+<span class="p">}&gt;;</span>
+
+<span class="kr">type</span> <span class="nx">TOrder</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">customerId</span>: <span class="kt">string</span><span class="p">,</span>
+    <span class="nx">orderDate</span>: <span class="kt">Date</span><span class="p">,</span>
+    <span class="nx">orderLines</span><span class="o">:</span> <span class="p">{</span> <span class="nx">productId</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">quantity</span>: <span class="kt">number</span> <span class="p">}[]</span>
+<span class="p">}</span>
+</code></pre></div><p>This would allow you to define the following constants:</p>
+<div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">productCatalog</span>: <span class="kt">TProductCatalog</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&#34;apple&#34;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;An apple&#34;</span><span class="p">,</span> <span class="nx">price</span>: <span class="kt">.5</span> <span class="p">},</span>
+    <span class="s2">&#34;pear&#34;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Pear&#34;</span><span class="p">,</span> <span class="nx">price</span>: <span class="kt">.6</span> <span class="p">},</span>
+    <span class="s2">&#34;pineapple&#34;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;A pineapple - or Ananananananas as they say in Dutch&#34;</span><span class="p">,</span> <span class="nx">price</span>: <span class="kt">2.5</span> <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">order</span>: <span class="kt">TOrder</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">customerId</span><span class="o">:</span> <span class="s2">&#34;ToJans&#34;</span><span class="p">,</span>
+    <span class="nx">orderDate</span>: <span class="kt">new</span> <span class="nb">Date</span><span class="p">(),</span>
+    <span class="nx">orderLines</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nx">productId</span><span class="o">:</span> <span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="nx">quantity</span>: <span class="kt">5</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nx">productId</span><span class="o">:</span> <span class="s2">&#34;pear&#34;</span><span class="p">,</span> <span class="nx">quantity</span>: <span class="kt">5</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nx">productId</span><span class="o">:</span> <span class="s2">&#34;pine-apple&#34;</span><span class="p">,</span> <span class="nx">quantity</span>: <span class="kt">5</span> <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div><blockquote>
+<p>You can <a href="https://www.TypeScriptlang.org/play?#code/PTAEBkFMBcHIGdTwIYE9QHdKgBbIG7YBMSAlgLYAOANttKpZPAFwBQr9joAKgAoBOAewAmAVwDG0AMLJoyaoIDmoALygASpHGD+wgDzxo-UgDtFAGlABvVqDugTycpGZIjpi7fuVj4lw9FyACNIflYAXwA+AG52TmxuAHldUNVrLztxUUNBZ34ASWFXQ2MzcwzQHWFQgBFZfzroSHL7SpT+cFMmVytQHxEJaELi9zLQAEdRZBNoUnpXE0CQ-lBwgG0AXQj2EB4cUkQMQVFqYVB5BQxQVGPQaEFQaoAzLrucbCfBakuPUG0TQzTaAsdj-Qx9IRiSQyOQKRSuPiQwYw+RKNI2VoAImQlBokExPQcTn8mIAgiZzrjaJjLD5SH5XAA6ACsqxa9kxjGQ-AJ1iJzlcmN4kG5NIh9P8jIAbGyKpyuji8bzeo4BaAyX0FVTsABaNqgcnTI2OE3IRBmt6QdAodCmUA1UTQcQ4MV0hmgIgs2XhUGCAHQNrVfgI5JB9EVLI5PLDdXcQQAKWm8BpFSqtXqC0gV0akAAFABKdl2NMdLosUBrCqtXr9KFDIrqxXUyyTIFzVCuVnhIutPm1wYxzkinktqYzdud2W9+w1pGSQeULo6pv40dt+agLs9rbhUBAA">try adjusting the order or productcatalog yourself here</a>. 
+Please note you have auto-complete on the field members automatically; thank you TypeScript!</p>
+</blockquote>
+<p>But, did you spot the error?</p>
+<p>Yes, the dreaded reference-by-id: not <code>&quot;pine-apple&quot;</code>, but <code>&quot;pineapple&quot;</code>.</p>
+<h2 id="the-keyof-keyword-to-the-rescue">The <code>keyof</code> keyword to the rescue!</h2>
+<p>It took some digging, but this was one of the easier finds: I only had to figure out the correct keyword: <code>keyof</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">productCatalog</span>: <span class="kt">TProductCatalog</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&#34;apple&#34;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;An apple&#34;</span><span class="p">,</span> <span class="nx">price</span>: <span class="kt">.5</span> <span class="p">},</span>
+    <span class="s2">&#34;pear&#34;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Pear&#34;</span><span class="p">,</span> <span class="nx">price</span>: <span class="kt">.6</span> <span class="p">},</span>
+    <span class="s2">&#34;pineapple&#34;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;A pineapple - or Ananananananas as they say in Dutch&#34;</span><span class="p">,</span> <span class="nx">price</span>: <span class="kt">2.5</span> <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="kr">type</span> <span class="nx">TProductId</span> <span class="o">=</span> <span class="k">keyof</span> <span class="k">typeof</span> <span class="nx">productCatalog</span><span class="p">;</span>
+
+<span class="kr">type</span> <span class="nx">TOrder</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">customerId</span>: <span class="kt">string</span><span class="p">,</span>
+    <span class="nx">orderDate</span>: <span class="kt">Date</span><span class="p">,</span>
+    <span class="nx">orderLines</span><span class="o">:</span> <span class="p">{</span> <span class="nx">productId</span>: <span class="kt">TProductId</span><span class="p">,</span> <span class="nx">quantity</span>: <span class="kt">number</span> <span class="p">}[]</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">order</span>: <span class="kt">TOrder</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">customerId</span><span class="o">:</span> <span class="s2">&#34;ToJans&#34;</span><span class="p">,</span>
+    <span class="nx">orderDate</span>: <span class="kt">new</span> <span class="nb">Date</span><span class="p">(),</span>
+    <span class="nx">orderLines</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nx">productId</span><span class="o">:</span> <span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="nx">quantity</span>: <span class="kt">5</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nx">productId</span><span class="o">:</span> <span class="s2">&#34;pear&#34;</span><span class="p">,</span> <span class="nx">quantity</span>: <span class="kt">5</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nx">productId</span><span class="o">:</span> <span class="s2">&#34;pine-apple&#34;</span><span class="p">,</span> <span class="nx">quantity</span>: <span class="kt">5</span> <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span> 
+
+</code></pre></div><p>However, the type for <code>TProductId</code> was a <code>string</code>&hellip;</p>
+<h2 id="why-was-tproductid-a-string-and-not-an-applepearpineapple">Why was <code>TProductId</code> a <code>string</code> and not an <code>&quot;apple&quot;|&quot;pear&quot;|&quot;pineapple&quot;</code></h2>
+<p>At first I was puzzled, but then it hit me&hellip; This makes sense because we literally declare the type of <code>productCatalog</code> as a <code>Record&lt;string,...&gt;</code>. which is the type parameter we pass to the <code>keyof</code> &hellip;</p>
+<p>Hello Captain Obvious!</p>
+<p>So I tried removing the typing from the const, and I was thrilled!</p>
+<p><img src="./comment-type.png" alt="Working automcomplete!"></p>
+<blockquote>
+<p>Try it yourself in the <a href="https://www.TypeScriptlang.org/play?#code/C4TwDgpgBAKgCgJwPYBMCuBjYBhAhsXAGyQHMoBeKAJQgyQRQB4BnYBASwDsSAaKAbwBQUEVE64AthABcUVh249hosBwwyxaCQCMICQQF8AfAG5BggPQXqECUgBu0YAAtoAA3jJ0WPAWIk3KFBIOXYScWA0BCckKGdcRyg6CTB2Qid2KUtraIAzPQhOYHYiKC5gCBIOUCTXDABrZigkTiDXKDd6FD0AGS4IZjdzOk5WKFVUTBx8IlIoWU9Jnxn-CgFlEQAiXDAwdM3ZfjFJDU2AQVadvYhNvlV2dVkAOgBWKAMlUShNyFwEA4Exyksk2cAgf1u4zUGieADZ3p9RD9+ld9ocgaczuMUbt9ndobIAEyvBGGczBaCLbzAACSKDW9QgICQuSC4AgLKhS2mflIZkEFNgAHkGHo1kIvhg0KwkFIEHTZPIuLwNs1RQgACL4DRaiqIkRdXr9ZjoibUhWwRDcul8ACOaFwRXYoFknC0ugQ7wA2gBdMmCEZjQ0IBYi7qeygS0RSmVyi2bGBIABSjuYt1Vwd1Gk4EAA7lAswAKACU+rV4b6OZNUC9qq+RzNU3jqJudodTpdUDeHzrogbXibKBBv3+bcdxU73bL9a55qH31SOYAtC3Ifbx86QLIp6q-QYoOYgA">Playground Link</a></p>
+</blockquote>
+<p>So how can we avoid this?
+So autocomplete/referential integrity works, but we cannot have types?</p>
+<h2 id="helper-functions-to-the-rescue">Helper functions to the rescue!</h2>
+<p>This took some digging, and apparently there is a simple workaround: use a helper function:</p>
+<div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kd">function</span> <span class="nx">defineCatalog</span><span class="p">&lt;</span><span class="nt">T</span> <span class="na">extends</span> <span class="na">TProductCatalog</span><span class="p">&gt;(</span><span class="nx">instance</span>:<span class="kt">T</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">instance</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>This function takes in an instance of any type <code>T</code>, as long as <code>T</code> implements the <code>TProductCatalog</code>&hellip;</p>
+<p>And voila, you have reference-by-value at compile time.</p>
+<p><img src="./voila.png" alt="The end result"></p>
+<blockquote>
+<p>Try it yourself in <a href="https://www.TypeScriptlang.org/play?#code/C4TwDgpgBAKgCgJwPYBMCuBjYBhAhsXAGyQHMoBeKAJQgyQRQB4BnYBASwDsSAaKAbwBQUEVE64AthABcUVh249hosBwwyxaCQCMICQQF8AfAG5BggGZpOWdkk5QUEC1wh4CxEoxhQIAD2AIThRmWERUTBx8IlIjAAouVlwbGRgASiFRKAQIYDQEB0SCFLMDczpOVihVCKx3GLJKJxdON2jPOMzRACJcMDBCCG7ZfjFJDW6AQQc+gaG+VXZ1WQA6AFYoAyUs7shcBGGBMalZbrgIfe6FtQ0VgDZN7Z6wV1nBw9HxE6gp6tf+97XJYaABM60ehjSZkEoEgYWQ6CwAEkUBQoABrCAgJAWKCwiA46oIyL1TzQ-GwADyDD0aK6IgwaFYSCkCBRsnkXF4yhE9CcCAAIvgNELAk9eTSEAAZVzMEZE2rAdnwxUovgARzQyWA7FAsk4Wl0CE2AG0ALqGcr2Kp8vSyGDU-l0nlQRnM1nK7owJAAKWSzCuLttguF+ogAHcoKKIHE0uKoMGZa05VATS6sqMaoilShTm95lBNdrdSBZBstunRJnicjcz89gcNVrODq9VBy-GMwrs56roXm63S+2IVkLQYoOYgA">this playground</a></p>
+</blockquote>
+<h2 id="in-closing">In closing</h2>
+<p>There you have it; referential integrity checking at compile-time. While this is not exactly rocket-science, it required a little bit out-of-the-box thinking.</p>
+<p>While I might use the type system beyond it&rsquo;s initial intent, I think this will provide a lot of value the well well-constrained low-code platform we are building for Virtual Sales Lab.</p>
+<p>Please note that this is still a little bit rough around the edges, especially as you start creating dependencies on other types.</p>
+<p>I hope this was an interesting read; if I receive a lot of feedback on this I will probably write more posts about this,so let me know!</p>
+<script type="text/javascript">
+    // fix error in TypeScript syntax highlighting
+    window.addEventListener("load",function(){
+        [].forEach.call(document.querySelectorAll(".language-ts .err"),function(el){
+            console.log(el.textContent);
+            if (el.textContent == "," || el.textContent == ":") {
+                el.classList.remove("err")
+            }
+        });
+    })
+</script>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>
