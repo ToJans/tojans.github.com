@@ -177,7 +177,7 @@ I might be using the type system beyond it's initial intent, but I think this wi
 
 Please note that this is still a little bit rough around the edges, especially as you start creating dependencies on other types. 
 
-I hope this was an interesting read; if I receive a lot of feedback on this I will probably write more posts about this,so let me know!
+I hope this was an interesting read; if I receive a lot of feedback on this I will probably write more posts about some of my other, more advanced findings, so let me know!
 
 
 [1]: https://www.virtualsaleslab.com/?lang=en
