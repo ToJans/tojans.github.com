@@ -212,7 +212,21 @@ Given enough historical data, we can run a <a href="https://en.wikipedia.org/wik
 <li>You no longer have to bother your team asking for estimates.</li>
 </ol>
 <p>So it&rsquo;s a win-win for everyone!</p>
-<h3 id="2-estimating-for-a-future-context-gaussian-estimates">2. Estimating for a future context: &lsquo;&lsquo;Gaussian estimates&rsquo;&rsquo;</h3>
+<h3 id="2-estimating-for-a-future-context-gaussian-estimates">2. <del>Estimating for a future context: &lsquo;&lsquo;Gaussian estimates&rsquo;'</del></h3>
+<div style="background-color:#f33;padding:2em;color:white" >
+<h4 id="update">UPDATE</h4>
+<p>Apparently this was a completely wrong interpretation from my side; I mixed up several things, probably because I had a hammer and was looking for a nail, i.e. matching √ Π to something I envisioned, so I was starting from the solution and working my way back.</p>
+<p>Here is an excerpt from a <a href="https://news.ycombinator.com/item?id=26327627">hacker news comment</a> that did not sugarcoat it, but was very valuable to me:</p>
+<div  style="padding:2em">
+<p><em>Your blog post has so many errors that I don&rsquo;t even know where to start. As another poster mentioned, areas under non-degenerate probability density functions are 1 by definition, whether they&rsquo;re uniform, Gaussian, standardized or not. What you described as a &ldquo;standard uniform distribution&rdquo; is really <a href="https://en.wikipedia.org/wiki/Degenerate_distribution">degenerate distribution</a>, meaning that you assume no uncertainty at all (stdev=0). There&rsquo;s nothing &ldquo;uniform&rdquo; about that, you might just as well start with a Gaussian with stdev=0.</em></p>
+<p><em>&ldquo;converting from a standard uniform distribution to a Gaussian distribution&rdquo; as you described does not make any sense at all. If you replace an initial assumption of a degenerate distribution with a Gaussian, as you seem to be doing, you replace a no-uncertainty (stdev=0) assumption with some uncertainty (so the uncertainty blow-up is infinite), but it doesn&rsquo;t affect point estimates such as the mean or median, unless you make separate assumptions about that. There is nothing in your story that leads to multiplying some initial time estimate by sqrt(pi). The only tenuous connection with sqrt(pi) in the whole story is that the Gaussian integral happens to be sqrt(pi). There are some deep mathematical reasons for that, which has to do with polar coordinates transformations. But it has nothing to do with adjusting uncertainties or best estimates.</em></p>
+</div>
+<p>After this comment I decided to do some digging, so I reached out to someone who I consider an absolute math wizard: <a href="https://twitter.com/enkimute">Steven De Keninck</a></p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">without context I can only observe that its trivially equal to &quot;Est = hpEst * PI^{dims/2}&quot; - I would venture to say few mathematicians would stop before that simplification. Also PI as base for the exponential feels very arbitrary. I&#39;ll go with option 2.</p>&mdash; Steven De Keninck (@enkimute) <a href="https://twitter.com/enkimute/status/1367374586258595841?ref_src=twsrc%5Etfw">March 4, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>&hellip; Which is a very polite answer that you can interpret as &ldquo;your idea has nothing to do with math, you might as well go for numerology&rdquo;.</p>
+<p>Please consider this part as one of my not so sucessful thought experiments ;).</p>
+</div>
+<div style="opacity:25%;text-decoration:line-through">
 <p>In some cases you need to provide an estimate in a context you do not know yet.</p>
 <p>For a lot of those cases, I used to think about the happy path, and then applied a multiplier of 3. I had no idea why this worked, but it worked reasonably well&hellip;</p>
 <blockquote>
@@ -282,7 +296,7 @@ This would imply your tasks would have a standard uniform distribution.</p>
 <p>As everything else is routine, only the things concerning the integration API will have uncertainty included&hellip;</p>
 <p>In reality, when executing these integration tasks, some will take a lot longer, and some will be shorter. Because we do not know what the actual distribution would be, we fall back to the distribution that occurs naturally in most of these cases: the Gaussian distribution. So converting from a standard uniform distribution to a Gaussian distribution should help.</p>
 <p>To convert from one to the other, we divide by the area of the standard uniform distribution (1), and multiply with the area of the Gaussian distribution (√ Π). Note that all tasks still have a mean and median of 1, but we introduced the standard deviation.</p>
-<p>Now, let&rsquo;s assume you also need to interact with another organisation that has control over the API for every task, and that you will estimate this with an overhead multiplier of 30% if everything goes well (so estimates should be multiplied by 1.3). 
+<p>Now, let&rsquo;s assume you also need to interact with another organisation that has control over the API for every task, and that you will estimate this with an overhead multiplier of 30% if everything goes well (so estimates should be multiplied by 1.3).
 As you have not worked with the provider before, your estimate will probably not have a uniform distribution but a Gaussian distribution, so multiply with (√ Π) again.</p>
 <p>So the actual estimate for our integration task would be:</p>
 <blockquote>
@@ -304,6 +318,7 @@ Without further ado, I present to you my suggested model:</p>
 <p><img src="./gaussian-estimates.png" alt="Gaussian estimates"></p>
 <p>This should provide you a pragmatic, but scientifically sound approach to doing estimates for future contexts.</p>
 <p>I did not bother to go beyond Π², because the probability of your estimate would be too low beyond that point&hellip;</p>
+</div>
 <h3 id="in-closing">In closing</h3>
 <p>It has been over 5 years since my last blog post, but I sure enjoyed myself organizing my thoughts.</p>
 <p>I hope this post is as valuable to you as it has been to me.</p>

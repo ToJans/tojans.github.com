@@ -83,7 +83,33 @@ This approach has 2 main advantages:
 
 So it's a win-win for everyone!
 
-### 2. Estimating for a future context: ''Gaussian estimates''
+### 2. ~~Estimating for a future context: ''Gaussian estimates''~~
+
+<div style="background-color:#f33;padding:2em;color:white" >
+
+#### UPDATE
+
+Apparently this was a completely wrong interpretation from my side; I mixed up several things, probably because I had a hammer and was looking for a nail, i.e. matching &Sqrt; &Pi; to something I envisioned, so I was starting from the solution and working my way back.
+
+Here is an excerpt from a [hacker news comment][18] that did not sugarcoat it, but was very valuable to me:
+
+<div  style="padding:2em">
+
+*Your blog post has so many errors that I don't even know where to start. As another poster mentioned, areas under non-degenerate probability density functions are 1 by definition, whether they're uniform, Gaussian, standardized or not. What you described as a "standard uniform distribution" is really [degenerate distribution][19], meaning that you assume no uncertainty at all (stdev=0). There's nothing "uniform" about that, you might just as well start with a Gaussian with stdev=0.*
+
+*"converting from a standard uniform distribution to a Gaussian distribution" as you described does not make any sense at all. If you replace an initial assumption of a degenerate distribution with a Gaussian, as you seem to be doing, you replace a no-uncertainty (stdev=0) assumption with some uncertainty (so the uncertainty blow-up is infinite), but it doesn't affect point estimates such as the mean or median, unless you make separate assumptions about that. There is nothing in your story that leads to multiplying some initial time estimate by sqrt(pi). The only tenuous connection with sqrt(pi) in the whole story is that the Gaussian integral happens to be sqrt(pi). There are some deep mathematical reasons for that, which has to do with polar coordinates transformations. But it has nothing to do with adjusting uncertainties or best estimates.*
+</div>
+
+After this comment I decided to do some digging, so I reached out to someone who I consider an absolute math wizard: [Steven De Keninck][20]
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">without context I can only observe that its trivially equal to &quot;Est = hpEst * PI^{dims/2}&quot; - I would venture to say few mathematicians would stop before that simplification. Also PI as base for the exponential feels very arbitrary. I&#39;ll go with option 2.</p>&mdash; Steven De Keninck (@enkimute) <a href="https://twitter.com/enkimute/status/1367374586258595841?ref_src=twsrc%5Etfw">March 4, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+... Which is a very polite answer that you can interpret as "your idea has nothing to do with math, you might as well go for numerology".
+
+Please consider this part as one of my not so sucessful thought experiments ;).
+</div>
+
+<div style="opacity:25%;text-decoration:line-through">
 
 In some cases you need to provide an estimate in a context you do not know yet.
 
@@ -97,7 +123,7 @@ For a lot of those cases, I used to think about the happy path, and then applied
 >
 > If this approach already has a well-defined name - which seems very likely, as my reasoning seems quite obvious after the fact - please let me know!
 
-So let's try to figure out why 3 (or &Pi;) might be a good multiplier in some cases:
+ So let's try to figure out why 3 (or &Pi;) might be a good multiplier in some cases:
 
 #### About uncertainty
 
@@ -148,6 +174,7 @@ Basically this just means that `f(x) = 1`.
 
 We also have something called the **Gaussian Distribution** or normal distribution:
 
+
 ![Gaussian distribution][12]
 
   - mean = 1;
@@ -168,11 +195,11 @@ This would imply your tasks would have a standard uniform distribution.
 
 As everything else is routine, only the things concerning the integration API will have uncertainty included...
 
-In reality, when executing these integration tasks, some will take a lot longer, and some will be shorter. Because we do not know what the actual distribution would be, we fall back to the distribution that occurs naturally in most of these cases: the Gaussian distribution. So converting from a standard uniform distribution to a Gaussian distribution should help. 
+In reality, when executing these integration tasks, some will take a lot longer, and some will be shorter. Because we do not know what the actual distribution would be, we fall back to the distribution that occurs naturally in most of these cases: the Gaussian distribution. So converting from a standard uniform distribution to a Gaussian distribution should help.
 
 To convert from one to the other, we divide by the area of the standard uniform distribution (1), and multiply with the area of the Gaussian distribution (&Sqrt; &Pi;). Note that all tasks still have a mean and median of 1, but we introduced the standard deviation.
 
-Now, let's assume you also need to interact with another organisation that has control over the API for every task, and that you will estimate this with an overhead multiplier of 30% if everything goes well (so estimates should be multiplied by 1.3). 
+Now, let's assume you also need to interact with another organisation that has control over the API for every task, and that you will estimate this with an overhead multiplier of 30% if everything goes well (so estimates should be multiplied by 1.3).
 As you have not worked with the provider before, your estimate will probably not have a uniform distribution but a Gaussian distribution, so multiply with (&Sqrt; &Pi;) again.
 
 So the actual estimate for our integration task would be: 
@@ -198,6 +225,7 @@ Without further ado, I present to you my suggested model:
 This should provide you a pragmatic, but scientifically sound approach to doing estimates for future contexts.
 
 I did not bother to go beyond &Pi;², because the probability of your estimate would be too low beyond that point...
+</div>
 
 ### In closing
 
@@ -229,3 +257,8 @@ Tom
 [15]: ./gaussian-estimates.png
 [16]: https://en.wikipedia.org/wiki/Normal_distribution#Standard_deviation_and_coverage
 [17]: https://rodrigozr.github.io/ProjectForecaster/#eyJwcm9qZWN0TmFtZSI6IlRlc3QgcHJvamVjdCIsIm51bWJlck9mU2ltdWxhdGlvbnMiOjEwMDAwMCwiY29uZmlkZW5jZUxldmVsIjo4NSwidHBTYW1wbGVzIjpbOCw1LDQsNiw2LDUsMywxLDMsMywyLDcsNiw2LDMsNSwyLDIsNSw2LDQsM10sImx0U2FtcGxlcyI6WzEzLjEsOSwxMy44LDcuMiw4LjgsMC41LDE1LDguMiwyMS45LDIyLjUsOS43LDcuMiwyLjEsMjkuOSwxNi4zLDguMSw1LDguNiwyOC40LDAuNSw3LDIxLjcsMC41LDQsNy4xLDUsMi4xLDIuMyw0LDMuMSwxLjIsMi41LDEuOCw2LjEsNi4zLDIsMTIsMTIuMywyLjEsNy4zLDIwLjQsMTMuMSwwLjUsNDguOSw5LjgsNy40LDEuOCwxNywxMi4xLDMyLjcsMTQuMywwLjksMjIuMiw3LDE2LDEzLjIsNS4yLDE0LjUsNi4yLDIuMiwzLjIsNi4zLDkuNSwxOC4zLDcsMTMsMS40LDcuMywxMC4xLDE5LDEyLjMsMC44LDcuMiwyNC4xLDMuMiwwLjUsNy4xLDEwLjEsNiwyMy4xLDE0LjMsMTIsMjAsMTYuNyw2LjksMi4xLDEuMiw1LjcsNy4xLDcsNC41LDcsNSwxMC4xLDYuM10sInNwbGl0UmF0ZVNhbXBsZXMiOlsxLjI5LDEuNTYsMS40NywwLjc1LDEuMjUsMS4yNSwxLjE4LDEsMV0sInJpc2tzIjpbeyJsaWtlbGlob29kIjo1MCwibG93SW1wYWN0IjoxMiwiaGlnaEltcGFjdCI6MTUsImRlc2NyaXB0aW9uIjoiUGVudGVzdCBtYXkgYmUgcmVxdWlyZWQifSx7Imxpa2VsaWhvb2QiOjc1LCJsb3dJbXBhY3QiOjUsImhpZ2hJbXBhY3QiOjgsImRlc2NyaXB0aW9uIjoiRGF0YWJhc2UgdXBncmFkZSBtYXkgYmUgcmVxdWlyZWQifSx7Imxpa2VsaWhvb2QiOjUsImxvd0ltcGFjdCI6MTUsImhpZ2hJbXBhY3QiOjIwLCJkZXNjcmlwdGlvbiI6IlBvdGVudGlhbCB3b3JsZC13aWRlIHBhbmRlbWljIn1dLCJudW1iZXJPZlRhc2tzIjozOCwidG90YWxDb250cmlidXRvcnMiOjEwLCJtaW5Db250cmlidXRvcnMiOjEsIm1heENvbnRyaWJ1dG9ycyI6NSwic0N1cnZlU2l6ZSI6MjAsInN0YXJ0RGF0ZSI6IjIwMjAtMDktMDcifQ==
+
+[18]: https://news.ycombinator.com/item?id=26327627
+[19]: https://en.wikipedia.org/wiki/Degenerate_distribution
+[20]: https://twitter.com/enkimute
+[21]: https://twitter.com/enkimute/status/1367374586258595841
