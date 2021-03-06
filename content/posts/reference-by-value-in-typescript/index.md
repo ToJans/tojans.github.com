@@ -173,7 +173,7 @@ And voila, you have reference-by-value at compile time.
 
 There you have it; referential integrity checking at compile-time. While this is not exactly rocket-science, it required a little bit out-of-the-box thinking.
 
-While I might use the type system beyond it's initial intent, I think this will provide a lot of value the well well-constrained low-code platform we are building for Virtual Sales Lab.
+I might be using the type system beyond it's initial intent, but I think this will provide a lot of value in the  well-constrained low-code platform that we are building for Virtual Sales Lab.
 
 Please note that this is still a little bit rough around the edges, especially as you start creating dependencies on other types. 
 
