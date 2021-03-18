@@ -6,7 +6,16 @@
     <description>Recent content in Hello on Tom&#39;s ramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Mar 2021 12:00:00 +0100</lastBuildDate><atom:link href="https://tojans.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Mar 2021 12:30:00 +0100</lastBuildDate><atom:link href="https://tojans.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The issue with SCRUM, SAFe, DDD and other methodologies</title>
+      <link>https://tojans.me/posts/the-issue-with-scrum-safe-ddd-and-other-methodologies/</link>
+      <pubDate>Thu, 18 Mar 2021 12:30:00 +0100</pubDate>
+      
+      <guid>https://tojans.me/posts/the-issue-with-scrum-safe-ddd-and-other-methodologies/</guid>
+      <description>Today I saw a post by dansaertvlamingen on Instagram, checking out what SCRUM means, and to be honest, it is both hilarious and cringeworthy (Dutch only):</description>
+    </item>
+    
     <item>
       <title>Reference by value in TypeScript</title>
       <link>https://tojans.me/posts/reference-by-value-in-typescript/</link>

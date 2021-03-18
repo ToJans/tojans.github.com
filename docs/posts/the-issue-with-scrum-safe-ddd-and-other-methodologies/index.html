@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | The issue with SCRUM, SAFe, DDD and other methodologies </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="https://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="https://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://tojans.me/posts/the-issue-with-scrum-safe-ddd-and-other-methodologies/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="https://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="The issue with SCRUM, SAFe, DDD and other methodologies"/>
+<meta name="twitter:description" content="The issue with SCRUM, SAFe, DDD and other methodologies"/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About me</a></li>
+        
+            
+            <li><a 
+                   href="/services/"
+                        
+                   title="">Services</a></li>
+        
+            
+            <li><a 
+                   href="/contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>The issue with SCRUM, SAFe, DDD and other methodologies</h3>
+                
+            </div>
+
+            <p>Today I saw a post by <code>dansaertvlamingen</code> on Instagram, checking out what <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)">SCRUM</a> means, and to be honest, it is both hilarious and cringeworthy (Dutch only):</p>
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/tv/CIidP7OBF6g/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/tv/CIidP7OBF6g/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/tv/CIidP7OBF6g/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Dansaertvlamingen (@dansaertvlamingen)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+<p>She starts reading about <code>SCRUM</code>, and then receives a waterfall of terminology like <a href="https://en.wikipedia.org/wiki/Agile_software_development">Agile</a>, <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)#Sprint">sprints</a>, <a href="https://en.wikipedia.org/wiki/Agile_software_development#Problem-solving_in_the_daily_standup">daily standups</a>, <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)#Product_owner">product owners</a>, [backlog] and so on&hellip; Which makes her head hurt&hellip;</p>
+<p>Having been in industry for a few decades, I have seen more and more of these concepts emerge: <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)">SCRUM</a>, <a href="https://en.wikipedia.org/wiki/Kanban">Kanban</a>, <a href="https://en.wikipedia.org/wiki/SAFe">SAFe</a>, <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)#Large-scale_Scrum">LESS</a>, but also other approaches like <a href="https://en.wikipedia.org/wiki/Test-driven_development">TDD</a>, <a href="https://en.wikipedia.org/wiki/Behavior-driven_development">BDD</a>, <a href="https://en.wikipedia.org/wiki/Domain-driven_design">DDD</a> and many, many more&hellip;</p>
+<p>Over the years these very interesting methodologies - which potentially all have a lot of value - tend to emerge in areas where they should not, which leads to a lot of mismatched expectations, wrong assumptions and a lot of frustration, mostly caused by cognative bias.</p>
+<h2 id="cognative-bias-what-is-that-and-how-is-this-related">Cognative bias? What is that and how is this related?</h2>
+<p>Let&rsquo;s start with the definition of cognative bias by <a href="https://en.wikipedia.org/wiki/Cognitive_bias%5D">Wikipedia</a>:</p>
+<blockquote>
+<p>A cognitive bias is a systematic pattern of deviation from norm or rationality in judgment.</p>
+<p>Individuals create their own &ldquo;subjective reality&rdquo; from their perception of the input. An individual&rsquo;s construction of reality, not the objective input, may dictate their behavior in the world. Thus, cognitive biases may sometimes lead to perceptual distortion, inaccurate judgment, illogical interpretation, or what is broadly called irrationality.</p>
+</blockquote>
+<p>So, in essence it is about making irrational choices, while you assume that you make a rational choice because you make some wrong assumptions.</p>
+<h2 id="recently-i-had-my-shower-and-bath-tub-replaced">Recently, I had my shower and bath tub replaced&hellip;</h2>
+<p>I called one of my friend who does bath room renovations, and the following steps happened:</p>
+<ol>
+<li>He came over to take a look, get some ideas about what we are looking for, expected timeframes etc;</li>
+<li>He redirected us to a couple of his dealers to choose the products we wanted;</li>
+<li>He delivered us the quote for the products;</li>
+<li>He came over to check how much actual days of work he expected;</li>
+<li>He provided me a rough estimate of a couple of days, given not too much unexpected things occured;</li>
+<li>We confirmed;</li>
+<li>He ordered;</li>
+<li>When everything was ready to ship, we agreed on a precise date;</li>
+<li>He came over and started on the work;</li>
+<li>While some unexpected extra work emerged, he kept me posted on a daily basis;</li>
+<li>Work was delivered and invoiced;</li>
+<li>We paid.</li>
+</ol>
+<p>So we basically trusted each other, asked for reasonable ranges and accepted that some risk might have been involved. Which is typically how every project goes&hellip;</p>
+<h3 id="so-what-does-this-have-to-do-with-scrum">So what does this have to do with SCRUM?</h3>
+<p>Nothing, although one could argue that this approach shares a few common patterns. Does my friend know about SCRUM? I expect he does not, and he should not care either.</p>
+<p>SCRUM, Agile and all those other methodologies provide a lot of value to the one executing it, but it does not provide any actual value to the end result.</p>
+<p>As long as my friend gave me the confidence that he could deliver something reasonable at a reasonable price, within a reasonable time frame, I couln&rsquo;t care less whether he was using SCRUM, or Agile, or Waterfall, or whatever the flavor of the month was&hellip; And neither did he&hellip;</p>
+<p>I also did not care which hammer or drill he used either; I assumed he was professional enough to properly handle it.</p>
+<h2 id="whats-your-point">What&rsquo;s your point?</h2>
+<p>Matching expectations in software development is not an easy task per sé, as scope evolves or is partly unknown, priorities shift, unexpected things happen&hellip; Involved experts use methodologies like SCRUM, DDD and whatever might be relevant to them, because it is well fit for purpose.</p>
+<p>This is where congative bias emerges; there are major 3 things happening:</p>
+<h3 id="1-clients-are-exposed-to-it-terminology">1. Clients are exposed to IT terminology</h3>
+<p>As far as I am concerned, this is mostly caused by the way IT&rsquo;ers communicate with their clients: IT&rsquo;ers speak their own lingo, and clients automatically pick this up.</p>
+<p>As a result, clients talk to IT&rsquo;ers in solution or product space (cloud, databases, screens, &hellip;) instead of problem space/their actual business language.</p>
+<p>As they only have an external view of these solutions, they lack the intimate intricacies that lay underneath the surface, so they might pick the wrong kind of solution/product to start with.</p>
+<p>Enterprise architecture makes the explicit distinction between problem space/value proposition, solution design and products, but most clients have a hard time discussing their case at the right level.</p>
+<p>This might cause you to boot a project with the wrong solution from the start, actually creating more overhead instead of less.</p>
+<h3 id="2-a-tool-or-methodology-does-not-guarantee-success">2. A tool or methodology does not guarantee success</h3>
+<p>Clients associate a methodology with success rates, thinking it is a <a href="https://en.wikipedia.org/wiki/No_Silver_Bullet">silver bullet</a> (i.e. using it will guarantee success in all contexts).</p>
+<p>However, there is always a context where a methodology works, and where it does not work at all.</p>
+<p>Most methodologies have both advantages and disadvantages, so the more experience you have with a methodology, the better you can understand when to use which parts, and when to avoid it.</p>
+<p>As methodologies usually need to be adapted to their context (cfr. the &ldquo;No silver bullet&rdquo;), there is room for interpretation. As less experienced people  tend to follow the <a href="https://en.wikipedia.org/wiki/Thought_leader">thought leaders</a>/flavour of the month or even use <a href="http://radar.oreilly.com/2014/10/resume-driven-development.html">resumé-driven-development</a>, you might end up with a half-assed implementation that is more of a nuisance than a benefit.</p>
+<p>For a simple example, just look at the whole micro-service movement: it&rsquo;s not because it was successfull in some very big or volatile organisations, that it is well suited everywhere. (My advice would be to start with a well-architected mono-repo, and only split up when you have non-functional constraints - whether that&rsquo;s organizational, quality-driven or whatever&hellip;)</p>
+<h3 id="3-leaky-abstractions">3. Leaky abstractions</h3>
+<p>As clients are lacking expertise in these areas, they become the victim of leaky abstractions.</p>
+<p>A good example would be a progress report:</p>
+<ul>
+<li>If the project has a bigger timeframe, clients typically wants intermediate progress reports, preferrable expressed in percent complete and absolute scope/time/quality.</li>
+<li>If you are lucky the client will accept (some percentage of) uncertainty, but most of the time he will want you to include this uncertainty into your calculations, which leads to <a href="https://en.wikipedia.org/wiki/Hofstadter%27s_law">Hofstadter&rsquo;s law</a>:</li>
+</ul>
+<blockquote>
+<p>Hofstadter&rsquo;s Law: It always takes longer than you expect, even when you take into account Hofstadter&rsquo;s Law.</p>
+</blockquote>
+<ul>
+<li>As you expose clients to your <a href="https://en.wikipedia.org/wiki/Burn_down_chart">burndow charts</a>, <a href="https://www.scaledagileframework.com/pi-planning/">PI-planning</a> or whatever you are using, the client usually has a highly simplified interpretation of a metric, because truly understanding metrics requires a deep insight and a lot of expertise.
+A good example of this is the concept of story points: people just convert it into hours, days, not understanding the risk involved.</li>
+<li>As progress advances, metrics change. Most of the time the client fails to accept the volatility part of the metric, so he gets frustrated, resulting in less trust.</li>
+</ul>
+<h2 id="the-solution">The solution</h2>
+<p>The solution is tri-fold in my opinion:</p>
+<h3 id="1-avoid-tech-lingosolution-space-when-talking-to-your-clients">1. Avoid tech lingo/solution space when talking to your clients,</h3>
+<p>Try to speak the language of the business. You might think you make an impression by exposing all your knowledge about a certain methodology, but in reality this does not bring the client any closer to the solution. Only share the absolute minimum you cannot avoid.</p>
+<h3 id="2-fit-gap-analysis">2. FIT-GAP analysis</h3>
+<p>Is the methodology actually fit for purpose, or is it driven by something else?</p>
+<p>If it is based on success stories, how similar is the current context to the context of the story?</p>
+<p>How big is the learning curve of the methodology, and how much experience do you have? Will it require capability development? Does the methodology fit within the current capabilities? (Both for you and/or the client.)</p>
+<h3 id="3-scope-and-risk-management">3. Scope and risk management</h3>
+<p>Progress is hard measure with a lot of unknowns.</p>
+<p>Estimates are even harder. Luckily for existing teams in an evolving context, there are scientific ways to estimate based on Monte-Carlo simulations. For new projects I failed to find a proper technique that&rsquo;s based on science&hellip; (Check one of my <a href="../software-estimates-done-right/">previous blog posts</a> on this.)</p>
+<p>Figure out the best way to communicate to the client about your product. Usually they are bound to a similar framework within their organisation, so adapt and be flexible.</p>
+<p>This is more an issue about trust. Take that into account next time you report progress!</p>
+<hr>
+<blockquote>
+<h2 id="bonus-what-i-learned-managing-my-own-saas">Bonus: What I learned managing my own SaaS</h2>
+<p>For <a href="https://www.virtualsaleslab.com/?lang=en">Virtual Sales Lab</a>, a SaaS that provides online product configurators, we tried many different approaches when selling a project.</p>
+<p>In our early projects, we took huge losses because we failed to have a proper definition of done etc&hellip; In one case we even failed to deliver.</p>
+<p>Fast forward to a few years later&hellip;</p>
+<p>For new clients, we now typically start with 1 to 3 weeks for development, which is enough time to build something that they can actually put on their website. We post our progress on the first or second day, so the client can see how everything evolves, and we are up for the challenge.</p>
+<p>After a few days trust is there, and by the end of the agreed term we end up with satisfaction both on the client side and on our side.</p>
+<p>The client does not care about the fact that the current front-end architecture is a bit of a mess, or that we track some of our stuff in Excel.</p>
+<p>We could use SC(R)UM, Kanban or anything else, but, quite frankly my dear, it does not matter for the client. All he cares about is having a tool on his website that allows people to experiment with different product configurations, and ask for more info.</p>
+</blockquote>
+<hr>
+<h2 id="wrapping-up">Wrapping up</h2>
+<p>Every single time I start with the goal of writing a simple and short blog post, but I end up writing a lot more&hellip;</p>
+<p>I guess estimating things is realy hard ;).</p>
+<p>Nevertheless, I hope this post influences your approach a little bit when working on your next project.</p>
+<p>T.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>
