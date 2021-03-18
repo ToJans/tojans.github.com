@@ -50,7 +50,7 @@ Nothing, although one could argue that this approach shares a few common pattern
 
 SCRUM, Agile and all those other methodologies provide a lot of value to the one executing it, but it does not provide any actual value to the end result. 
 
-As long as my friend gave me the confidence that he could deliver something reasonable at a reasonable price, within a reasonable time frame, I couln't care less whether he was using SCRUM, or Agile, or Waterfall, or whatever the flavor of the month was... And neither did he...
+As long as my friend gave me the confidence that he could deliver something reasonable at a reasonable price, within a reasonable time frame, I could not care less whether he was using SCRUM, or Agile, or Waterfall, or whatever the flavor of the month was... And neither did he...
 
 I also did not care which hammer or drill he used either; I assumed he was professional enough to properly handle it.
 
@@ -99,7 +99,7 @@ A good example would be a progress report:
 A good example of this is the concept of story points: people just convert it into hours, days, not understanding the risk involved;
 - As progress advances, metrics change. Most of the time the client fails to accept the volatility part of the metric, so he gets frustrated, resulting in less trust.
 
-Client almost never interpret results in the same way you do; there are always nuances that fall through the gap.
+Clients rarely interpret results in the same way you do; there are always little nuances that get lost in translation.
 
 ## The solution
 
