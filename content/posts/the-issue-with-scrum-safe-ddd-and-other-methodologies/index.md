@@ -82,7 +82,7 @@ Most methodologies have both advantages and disadvantages, so the more experienc
 
 As methodologies usually need to be adapted to their context (cfr. the "No silver bullet"), there is room for interpretation. As less experienced people  tend to follow the [thought leaders][11]/flavour of the month or even use [resumé-driven-development][10], you might end up with a half-assed implementation that is more of a nuisance than a benefit. 
 
-For a simple example, just look at the whole micro-service movement: it's not because it was successfull in some very big or volatile organisations, that it is well suited everywhere. (My advice would be to start with a well-architected mono-repo, and only split up when you have non-functional constraints - whether that's organizational, quality-driven or whatever...)
+For a simple example, just look at the whole micro-service movement: it's not because it was successfull in some very big or volatile organisations, that it is well suited everywhere. (My advice would be to start with a well-architected mono-repo, and only split up when you have non-functional constraints - whether that's organizational, quality-attribute-driven or whatever...)
 
 ### 3. Leaky abstractions
 
@@ -124,11 +124,11 @@ How big is the learning curve of the methodology, and how much experience do you
 
 ### 3. Scope and risk management
 
-Progress is hard measure with a lot of unknowns. 
+Progress is hard to measure with a lot of unknowns. 
 
 Estimates are even harder. Luckily for existing teams in an evolving context, there are scientific ways to estimate based on Monte-Carlo simulations. For new projects I failed to find a proper technique that's based on science... (Check one of my [previous blog posts][20] on this.)
 
-Figure out the best way to communicate to the client about your product. Usually they are bound to a similar framework within their organisation, so adapt and be flexible.
+Figure out the best way to communicate to the client about your progress. Usually they are bound to a similar framework within their organisation, so adapt and be flexible.
 
 This is more an issue about trust. Take that into account next time you report progress!
 
