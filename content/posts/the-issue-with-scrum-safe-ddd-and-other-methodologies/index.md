@@ -109,7 +109,7 @@ Definitely my favorite <a href="https://www.imdb.com/title/tt0335266/">Bill Murr
 
 The solution is tri-fold in my opinion:
 
-### 1. Avoid tech lingo/solution space when talking to your clients, 
+### 1. Avoid tech lingo/solution space when talking to your clients
 
 Try to speak the language of the business. You might think you make an impression by exposing all your knowledge about a certain methodology, but in reality this does not bring the client any closer to the solution. Only share the absolute minimum you cannot avoid.
 
@@ -125,7 +125,7 @@ How big is the learning curve of the methodology, and how much experience do you
 
 Progress is hard to measure with a lot of unknowns. 
 
-Estimates are even harder. Luckily for existing teams in an evolving context, there are scientific ways to estimate based on Monte-Carlo simulations. For new projects I failed to find a proper technique that's based on science... (Check one of my [previous blog posts][20] on this.)
+Estimates are even harder. Luckily for existing teams in an evolving context, there are scientific ways to estimate based on Monte-Carlo simulations. For new projects I failed to find a proper technique that's based on science... (Check one of my [previous blog posts about both of these subjects][20] if you are into that kind of stuff.)
 
 Figure out the best way to communicate to the client about your progress. Usually they are bound to a similar framework within their organisation, so adapt and be flexible.
 
