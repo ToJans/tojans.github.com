@@ -72,8 +72,7 @@ Enterprise architecture makes the explicit distinction between problem space/val
 
 This might cause you to boot a project with the wrong solution from the start, actually creating more overhead instead of less.
 
-### 2. A tool or methodology does not guarantee success
-
+### 2. A methodology might be picked for the wrong reasons
 Sometimes clients associate a methodology with success rates, thinking it is a [silver bullet][9] (i.e. using it will guarantee success in all contexts).
 
 However, there is always a context where a methodology works, and one where it does not work at all.
