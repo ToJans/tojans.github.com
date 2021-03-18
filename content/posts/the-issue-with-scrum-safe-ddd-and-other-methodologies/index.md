@@ -99,7 +99,12 @@ A good example would be a progress report:
 A good example of this is the concept of story points: people just convert it into hours, days, not understanding the risk involved;
 - As progress advances, metrics change. Most of the time the client fails to accept the volatility part of the metric, so he gets frustrated, resulting in less trust.
 
-Clients rarely interpret results in the same way you do; there are always little nuances that get lost in translation.
+Clients rarely interpret results in the same way you do; there are always little nuances that get [lost in translation][22].
+
+<div style="text-align:center">
+<img src="./lost.jpg"><br/>
+Definitely my favorite <a href="https://www.imdb.com/title/tt0335266/">Bill Murray movie</a>
+</div>
 
 ## The solution
 
@@ -175,3 +180,4 @@ T.
 [19]: https://en.wikipedia.org/wiki/Scrum_(software_development)#Product_backlog
 [20]: ../software-estimates-done-right/
 [21]: https://www.virtualsaleslab.com/?lang=en
+[22]: https://www.imdb.com/title/tt0335266/
