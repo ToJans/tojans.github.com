@@ -168,7 +168,7 @@
 <p>Virtual Sales Lab is a SaaS that provides online 3D configurators for sales and marketing; below you can see a screenshot from one of our customers' configurator; you can test a copy of the configurator <a href="https://productconfigurator.virtualsaleslab.com/r/vsl/vsl/en/designer/index/patioroof3">here</a>.</p>
 <p><img src="./patioroof3.png" alt="Virtual Sales Lab"></p>
 <p>It allows a developer to build something usable in a couple of hours, and a full blown configurator usually takes 1 to 4 weeks.</p>
-<p>However, it requires a little bit of effort to get acquinted with the platform as a developer.</p>
+<p>However, it requires a little bit of effort to get acquainted with the platform as a developer.</p>
 <p>As the intent is to make this platform open to all developers as a low-code platform with a low barrier to entry, I was wondering if I could make the developer experience extremely user friendly.</p>
 <p>I am a strong believer of leveraging existing tools as much as possible, so I started experimenting with TypeScript. It turns out a lot is possible by being creative with the type system.</p>
 <h2 id="my-first-experiment-referential-integrity">My first experiment: referential integrity.</h2>
@@ -184,7 +184,7 @@
             <span class="s2">&#34;thickness&#34;</span><span class="o">:</span> <span class="mi">2</span>
         <span class="p">}</span>
     <span class="p">}</span>
-</code></pre></div><p>Did you spot the problem? Instead of <code>&quot;wood&quot;</code>, I accidentily typed <code>&quot;wood &quot;</code>.</p>
+</code></pre></div><p>Did you spot the problem? Instead of <code>&quot;wood&quot;</code>, I accidentally typed <code>&quot;wood &quot;</code>.</p>
 <p>Luckily it raises a proper error at runtime, which allows you to fix the problem, but it does require a round-trip to the engine.</p>
 <p>As short feedback loops are the bee&rsquo;s knees, I wondered if there was a way to catch this at compile-time&hellip;.</p>
 <h2 id="basics-first-whatever-happened-to-typescript">Basics first: whatever happened to TypeScript?</h2>
@@ -217,7 +217,7 @@
     <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div><blockquote>
-<p>You can <a href="https://www.TypeScriptlang.org/play?#code/PTAEBkFMBcHIGdTwIYE9QHdKgBbIG7YBMSAlgLYAOANttKpZPAFwBQr9joAKgAoBOAewAmAVwDG0AMLJoyaoIDmoALygASpHGD+wgDzxo-UgDtFAGlABvVqDugTycpGZIjpi7fuVj4lw9FyACNIflYAXwA+AG52TmxuAHldUNVrLztxUUNBZ34ASWFXQ2MzcwzQHWFQgBFZfzroSHL7SpT+cFMmVytQHxEJaELi9zLQAEdRZBNoUnpXE0CQ-lBwgG0AXQj2EB4cUkQMQVFqYVB5BQxQVGPQaEFQaoAzLrucbCfBakuPUG0TQzTaAsdj-Qx9IRiSQyOQKRSuPiQwYw+RKNI2VoAImQlBokExPQcTn8mIAgiZzrjaJjLD5SH5XAA6ACsqxa9kxjGQ-AJ1iJzlcmN4kG5NIh9P8jIAbGyKpyuji8bzeo4BaAyX0FVTsABaNqgcnTI2OE3IRBmt6QdAodCmUA1UTQcQ4MV0hmgIgs2XhUGCAHQNrVfgI5JB9EVLI5PLDdXcQQAKWm8BpFSqtXqC0gV0akAAFABKdl2NMdLosUBrCqtXr9KFDIrqxXUyyTIFzVCuVnhIutPm1wYxzkinktqYzdud2W9+w1pGSQeULo6pv40dt+agLs9rbhUBAA">try adjusting the order or productcatalog yourself here</a>. 
+<p>You can <a href="https://www.TypeScriptlang.org/play?#code/PTAEBkFMBcHIGdTwIYE9QHdKgBbIG7YBMSAlgLYAOANttKpZPAFwBQr9joAKgAoBOAewAmAVwDG0AMLJoyaoIDmoALygASpHGD+wgDzxo-UgDtFAGlABvVqDugTycpGZIjpi7fuVj4lw9FyACNIflYAXwA+AG52TmxuAHldUNVrLztxUUNBZ34ASWFXQ2MzcwzQHWFQgBFZfzroSHL7SpT+cFMmVytQHxEJaELi9zLQAEdRZBNoUnpXE0CQ-lBwgG0AXQj2EB4cUkQMQVFqYVB5BQxQVGPQaEFQaoAzLrucbCfBakuPUG0TQzTaAsdj-Qx9IRiSQyOQKRSuPiQwYw+RKNI2VoAImQlBokExPQcTn8mIAgiZzrjaJjLD5SH5XAA6ACsqxa9kxjGQ-AJ1iJzlcmN4kG5NIh9P8jIAbGyKpyuji8bzeo4BaAyX0FVTsABaNqgcnTI2OE3IRBmt6QdAodCmUA1UTQcQ4MV0hmgIgs2XhUGCAHQNrVfgI5JB9EVLI5PLDdXcQQAKWm8BpFSqtXqC0gV0akAAFABKdl2NMdLosUBrCqtXr9KFDIrqxXUyyTIFzVCuVnhIutPm1wYxzkinktqYzdud2W9+w1pGSQeULo6pv40dt+agLs9rbhUBAA">try adjusting the order or product catalog yourself here</a>. 
 Please note you have auto-complete on the field members automatically; thank you TypeScript!</p>
 </blockquote>
 <p>But, did you spot the error?</p>
@@ -253,7 +253,7 @@ Please note you have auto-complete on the field members automatically; thank you
 <p>At first I was puzzled, but then it hit me&hellip; This makes sense because we literally declare the type of <code>productCatalog</code> as a <code>Record&lt;string,...&gt;</code>. which is the type parameter we pass to the <code>keyof</code> &hellip;</p>
 <p>Hello Captain Obvious!</p>
 <p>So I tried removing the typing from the const, and I was thrilled!</p>
-<p><img src="./comment-type.png" alt="Working automcomplete!"></p>
+<p><img src="./comment-type.png" alt="Working autocomplete!"></p>
 <blockquote>
 <p>Try it yourself in the <a href="https://www.TypeScriptlang.org/play?#code/C4TwDgpgBAKgCgJwPYBMCuBjYBhAhsXAGyQHMoBeKAJQgyQRQB4BnYBASwDsSAaKAbwBQUEVE64AthABcUVh249hosBwwyxaCQCMICQQF8AfAG5BggPQXqECUgBu0YAAtoAA3jJ0WPAWIk3KFBIOXYScWA0BCckKGdcRyg6CTB2Qid2KUtraIAzPQhOYHYiKC5gCBIOUCTXDABrZigkTiDXKDd6FD0AGS4IZjdzOk5WKFVUTBx8IlIoWU9Jnxn-CgFlEQAiXDAwdM3ZfjFJDU2AQVadvYhNvlV2dVkAOgBWKAMlUShNyFwEA4Exyksk2cAgf1u4zUGieADZ3p9RD9+ld9ocgaczuMUbt9ndobIAEyvBGGczBaCLbzAACSKDW9QgICQuSC4AgLKhS2mflIZkEFNgAHkGHo1kIvhg0KwkFIEHTZPIuLwNs1RQgACL4DRaiqIkRdXr9ZjoibUhWwRDcul8ACOaFwRXYoFknC0ugQ7wA2gBdMmCEZjQ0IBYi7qeygS0RSmVyi2bGBIABSjuYt1Vwd1Gk4EAA7lAswAKACU+rV4b6OZNUC9qq+RzNU3jqJudodTpdUDeHzrogbXibKBBv3+bcdxU73bL9a55qH31SOYAtC3Ifbx86QLIp6q-QYoOYgA">Playground Link</a></p>
 </blockquote>

@@ -32,7 +32,7 @@ Typically we __commit__ to an engagement in the following ways:
 - __Fixed price__: provide certain __deliverables__ according to __predefined acceptance criteria__. This can be time-boxed and/or scoped, for example "renovate my bathroom";
 - A __hybrid__, for example T&M development, but a fixed price analysis and support contract.
 
-Based on the type of __engagement__, engaged stakeholders are exposed to __diffent kinds of uncertainty__:
+Based on the type of __engagement__, engaged stakeholders are exposed to __different kinds of uncertainty__:
 
 - __Cost__ - "How much will it cost? How much effort do we need to invest?";
 - __Time__ - "How long will it take?";
@@ -60,9 +60,9 @@ The goal of this post is to present two complementary estimation approaches, bac
 ### Estimating in a historical context: ''Monte-Carlo forecasting''
 
 Let's assume you have a team that has been developing software for a few weeks, months or even years.
-Given enough historical data, we can run a [Monte-Carlo simulation][10] to forecast effort and duration with probablity ranges.
+Given enough historical data, we can run a [Monte-Carlo simulation][10] to forecast effort and duration with probability ranges.
 
-I could go to great lenghts explaining why you could use this approach, but the [wiki of this project][8] motivates this approach rather well.
+I could go to great lengths explaining why you could use this approach, but the [wiki of this project][8] motivates this approach rather well.
 
 If you have your own data available, you can create your own forecast using [this webpage][6]
 
@@ -106,7 +106,7 @@ After this comment I decided to do some digging, so I reached out to someone who
 
 ... Which is a very polite answer that you can interpret as "your idea has nothing to do with math, you might as well go for numerology".
 
-Please consider this part as one of my not so sucessful thought experiments ;).
+Please consider this part as one of my not so successful thought experiments ;).
 </div>
 
 <div style="opacity:25%;text-decoration:line-through">
@@ -199,7 +199,7 @@ In reality, when executing these integration tasks, some will take a lot longer,
 
 To convert from one to the other, we divide by the area of the standard uniform distribution (1), and multiply with the area of the Gaussian distribution (&Sqrt; &Pi;). Note that all tasks still have a mean and median of 1, but we introduced the standard deviation.
 
-Now, let's assume you also need to interact with another organisation that has control over the API for every task, and that you will estimate this with an overhead multiplier of 30% if everything goes well (so estimates should be multiplied by 1.3).
+Now, let's assume you also need to interact with another organization that has control over the API for every task, and that you will estimate this with an overhead multiplier of 30% if everything goes well (so estimates should be multiplied by 1.3).
 As you have not worked with the provider before, your estimate will probably not have a uniform distribution but a Gaussian distribution, so multiply with (&Sqrt; &Pi;) again.
 
 So the actual estimate for our integration task would be: 
@@ -217,7 +217,7 @@ The above explanation contains the gist of the idea, but requires you to have a 
 - Cost;
 - ... .
 
-In order to make this a bit more digestable, I created a pragmatic heuristic that should be good enough for most cases. 
+In order to make this a bit more digestible, I created a pragmatic heuristic that should be good enough for most cases. 
 Without further ado, I present to you my suggested model:
 
 ![Gaussian estimates][15]

@@ -25,7 +25,7 @@ Virtual Sales Lab is a SaaS that provides online 3D configurators for sales and 
 
 It allows a developer to build something usable in a couple of hours, and a full blown configurator usually takes 1 to 4 weeks.
 
-However, it requires a little bit of effort to get acquinted with the platform as a developer.
+However, it requires a little bit of effort to get acquainted with the platform as a developer.
 
 As the intent is to make this platform open to all developers as a low-code platform with a low barrier to entry, I was wondering if I could make the developer experience extremely user friendly.
 
@@ -51,7 +51,7 @@ Here is an example of a potential bug:
     }
 ```
 
-Did you spot the problem? Instead of `"wood"`, I accidentily typed `"wood "`.
+Did you spot the problem? Instead of `"wood"`, I accidentally typed `"wood "`.
 
 Luckily it raises a proper error at runtime, which allows you to fix the problem, but it does require a round-trip to the engine.
 
@@ -96,7 +96,7 @@ const order: TOrder = {
 }
 ```
 
-> You can [try adjusting the order or productcatalog yourself here][3]. 
+> You can [try adjusting the order or product catalog yourself here][3]. 
 > Please note you have auto-complete on the field members automatically; thank you TypeScript!
 
 But, did you spot the error?
@@ -144,7 +144,7 @@ Hello Captain Obvious!
 
 So I tried removing the typing from the const, and I was thrilled!
 
-![Working automcomplete!](./comment-type.png)
+![Working autocomplete!](./comment-type.png)
 
 > Try it yourself in the [Playground Link][5]
 
