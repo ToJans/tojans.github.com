@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Tom Janssens | The goal of software architecture </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Random opinionated blurbs">
+    
+    <link rel="stylesheet"
+          href="https://tojans.me/css/style.min.9a6700e4461b50dccdddfc4f81dc65d77e7fca22c35665e398a0c36568db59c7.css"
+          integrity="sha256-mmcA5EYbUNzN3fxPgdxl135/yiLDVmXjmKDDZWjbWcc="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="https://tojans.me/css/markupHighlight.min.cc84ed683057cc175ddfa738ea6ba2d5c882b95cb64f50bf9be918cb3791887b.css"
+        integrity="sha256-zITtaDBXzBdd36c46mui1ciCuVy2T1C/m&#43;kYyzeRiHs="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://tojans.me/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tojans.me/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tojans.me/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tojans.me/favicons/favicon-16x16.png">
+
+    <link rel="canonical" href="https://tojans.me/posts/the-goal-of-software-architecture/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://tojans.me/js/anatole-header.min.d8599ee07b7d3f11bafbac30657ccc591e8d7fd36a9f580cd4c09e24e0e4a971.js"
+            integrity="sha256-2Fme4Ht9PxG6&#43;6wwZXzMWR6Nf9Nqn1gM1MCeJODkqXE="
+            crossorigin="anonymous"></script>
+
+
+    
+        
+        
+        <script type="text/javascript"
+                src="https://tojans.me/js/anatole-theme-switcher.min.e289e9ebb2a4e7a7f895859c8a2b0da2de1ec73f22cea58d8475aa0597023837.js"
+                integrity="sha256-4onp67Kk56f4lYWciisNot4exz8izqWNhHWqBZcCODc="
+                crossorigin="anonymous"></script>
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tojans.me/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="The goal of software architecture"/>
+<meta name="twitter:description" content="The goal of software architecture is to build abstract models on top of behavioral models, so your software becomes easier to maintain and/or optimize."/>
+
+</head>
+<body><div class="sidebar . ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://tojans.me/images/profile.jpg" alt="profile picture">
+            <h3 title=""><a href="/">Tom&#39;s ramblings</a></h3>
+            <div class="description">
+                <p>Random opinionated blurbs</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://www.twitter.com/tojans" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/tomjanssens" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.github.com/tojans" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:tom@corebvba.be" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="/index.xml" rel="me" aria-label="RSS">
+                    <i class="fas fa-rss fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Tom Janssens  2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  . ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/posts/"
+                        
+                   title="">Blog posts</a></li>
+        
+            
+            <li><a 
+                   href="/about/"
+                        
+                   title="">About me</a></li>
+        
+            
+            <li><a 
+                   href="/services/"
+                        
+                   title="">Services</a></li>
+        
+            
+            <li><a 
+                   href="/contact/"
+                        
+                   title="">Contact</a></li>
+        
+        
+        
+            <li class="theme-switch-item">
+                <a class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  . ">
+        <div class="post-content">
+            
+            <div class="post-title">
+                <h3>The goal of software architecture</h3>
+                
+            </div>
+
+            <p>The goal of software architecture is to build abstract models on top of behavioral models, so your software becomes easier to maintain and/or optimize.</p>
+<h2 id="why-do-you-need-software-architects">Why do you need software architects?</h2>
+<p>If you look at it from a user point-of-view, the most adaptable software architecture is basically a PC with an office suite, custom apps and an internet connection.</p>
+<p>However, from an IT point-of-view, this approach is not very cost-efficient and has some risks implied, especially if the process of the user is intertwined with other users or systems:</p>
+<ol>
+<li>The cost of changing your process;</li>
+<li>The risk of discontinued and or wrongly interpreted steps in the process.</li>
+</ol>
+<p>Users tend to understand that cost and risk if they create their own solution using Excel, email and a plethora of other tools.
+They even understand it increases exponentially if other people are using their solution, when it has a longer lifecycle, &hellip;</p>
+<p>This is where a software architect comes in: a software architect is usually quite good at assuming which dependencies will remain fixed, and worth his/her value if he/she manages to bring the cost and risk down to the point where the decrease in cost of change and risk outweigh the expenses paid to support the software architect.</p>
+<p>This also implies that the boundary between senior developers and software architects is a very fluffy line, some might even state there is no distinction.</p>
+<p>In my opinion a software (or system/infra/marketplace/enterprise/&hellip; - and whatever else is possible) architect is someone who has <strong>a lot</strong> of experience in designing these systems and focuses more on the design than on the actual implementation. He/she identifies the foundations which typically remain over the whole lifecycle of a project. And as everybody knows, choosing the wrong foundations will have a <strong>huge impact</strong> on the rest of the lifecycle.</p>
+<h2 id="what-is-wrong-with-a-lot-of-software-and-other---architecture">What is wrong with a lot of software (and other -) architecture</h2>
+<p><img src="./babel.png" alt="Tower of Babel by Breughel"></p>
+<p>Over the years, the field has evolved into something that resembles a cargo-cult community, or even a small echo chamber if you will.</p>
+<p>While it is certainly not the norm, I have seen some very high-potential projects going haywire because the software/system architect made the wrong decisions from the start, due to not listening to the client&rsquo;s problems, but going for the &ldquo;architectural-pattern-of-the-day&rdquo; flavor instead, because the client asked for it.</p>
+<p>As I have done a lot of IT road maps for large organizations during my last consulting gig, I noticed clients themselves are asking us for solutions instead of telling them our problems. This typically results in technology-driven road maps, where &ldquo;approach XYZ&rdquo; will resolve all the issues. This is not the client&rsquo;s fault, but our fault as ITers.</p>
+<p>Let me get one thing clear: a technology or process alone cannot exist in the void, it is always a people thing first. We as IT people seem to be unable to properly declare our intent without introducing terminology like micro-services, blockchain, SAFe, or whatever the latest CxO-hipster trends are. We are now at a point where clients ask organizations to &ldquo;go to the cloud&rdquo;, &ldquo;set-up a block-chain&rdquo; or use &ldquo;technology ABC&rdquo; because it is what society expects them to do.</p>
+<p>It is unfortunate that in the world we live in today, we tend to be disconnected from the actual problems we are solving, and go directly into the solution space. This is where you might be solving the wrong problem, and are stuck in a local maxima due to the inability of the client to see beyond the horizon of the local maxima.</p>
+<p>It is only a hunch, but I think that the mythical &ldquo;10X engineer&rdquo; people talk about actually exists, but&hellip; Instead of writing 10 times more code/faster implementations/&hellip; he manages to multiply the value of the outcome his efforts by 10, by simply looking for the best solution for a problem as opposed to blindly implementing the solution as proposed. It is my firm belief that you can bring the most value if you truly understand why people are asking you to do something.</p>
+<p>For the people who are into this kind of thing: this is one of my pet-peeves; here&rsquo;s an almost impromptu lightning talk I gave at DDD Europe in 2020.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UYw7Kzk_gdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>As far as I am concerned, we need to stop thinking about software architecture in an abstract way, and use more real-world inspiration to model our software.</p>
+<h2 id="the-real-world-trade-">The real-world ™ ?</h2>
+<p>All these Babylonian layers of indirection we tend to introduce result in a disconnection from the true purpose of why we are doing things. Systems exist for a purpose, and every component in a system exists for a reason. Sometimes these systems get so complicated the initial goal gets lost, and people start optimizing for the sake of the system.</p>
+<p>It is my firm belief that everything on this world is governed by the laws of physics/nature, even IT. To model our systems, we need to take a good deep look at the real world, both at the macro- and micro-level.</p>
+<p>In order to prove my point, I&rsquo;ll explain it with a well known, universal concept that most people are familiar with: <a href="https://en.wikipedia.org/wiki/Laws_of_thermodynamics">the 3 fundamental laws of thermodynamics</a>, and I&rsquo;ll explain how these apply to software architecture as well:</p>
+<h3 id="1-conservation-of-energy">1/ Conservation of energy</h3>
+<p>In general, the conservation law states that the total energy of an isolated system is constant; energy can be transformed from one form to another, but can be neither created nor destroyed.</p>
+<p>The same goes for software architecture: abstractions always require constraints on the behavior, so you exchange flexibility for maintainability.
+Introducing an abstraction implies that you also introduce at least one constraint. These constraints are a liability. You cannot introduce abstractions and think it has no associated cost or risk.</p>
+<h3 id="2-the-sum-of-entropies-never-changes">2/ The sum of entropies never changes</h3>
+<p>you cannot remove complexity, only move it somewhere else.</p>
+<p>This is why I consider the micro-services movement so ridiculous: instead of separating your system based on non-functional constraints, you group everything into small units. 
+Your small units might now be more maintainable, but you ignore the fact that services are part of bigger systems, and the relationship between these systems is usually equally important. With micro-services you usually end up implicit service relationships.</p>
+<p>You need to go for a &ldquo;natural equilibrium&rdquo; instead, where your design is driven by your needs, not by some &ldquo;fashion du jour&rdquo;.</p>
+<blockquote>
+<p>This statement caused a little bit of a stir on twitter, so I would like to elaborate: for some systems there might be an actual need for micro-services, but it needs to be a conscious decision, that also takes in to account the disadvantages of micro-services. Turning your system into micro-services will not magically fix your design, and it introduces the concept of distribution, which is - according to a famous quote - on of the hardest problems in computer science.</p>
+</blockquote>
+<h3 id="3-a-systems-entropy-approaches-a-constant-value-as-its-temperature-approaches-absolute-zero">3/ A system&rsquo;s entropy approaches a constant value as its temperature approaches absolute zero</h3>
+<p>You can build a perfectly abstracted software architecture with all complexities logically grouped if and only if your requirements are fully frozen.</p>
+<p>Any change increases entropy. If you start from the solution space, you might have missed an import aspect which will result in having the wrong foundations from the start.</p>
+<h2 id="in-closing-2-simple-tips">In closing: 2 simple tips</h2>
+<p>Instead of trying to hide reality, try to embrace it. Here are 2 simple tips:</p>
+<ul>
+<li>Think about your software architecture as if there were no computers: how would you organize your work if you only had pens, paper, cabinets and a copier?</li>
+<li>As always, this is a people problem first, so while this post is very nice in theory, in practice you might have to take into account the people you are working with/for might have other drivers, so get to know your stakeholders and figure out what kinds of impact they can have on the system, and what kind of an impact the system can have on them as well.</li>
+</ul>
+<p>TL;DR: thousands of years of evolution has created a magnificently designed systems; think about what you are doing and how it would be resolved by nature.</p>
+<p>Tom.</p>
+<hr>
+<p>Note: The gist of this post was originally a <a href="https://twitter.com/ToJans/status/1383363888008232967">series of tweets</a>, but I turned it into a blog post to make it more digestible, and added some side notes an elaborated a bit on some aspects that needed clarification.</p>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://tojans.me/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://tojans.me/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-41936060-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</body>
+
+</html>

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Tom&#39;s ramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Mar 2021 12:30:00 +0100</lastBuildDate><atom:link href="https://tojans.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Apr 2021 10:00:00 +0200</lastBuildDate><atom:link href="https://tojans.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The goal of software architecture</title>
+      <link>https://tojans.me/posts/the-goal-of-software-architecture/</link>
+      <pubDate>Sun, 18 Apr 2021 10:00:00 +0200</pubDate>
+      
+      <guid>https://tojans.me/posts/the-goal-of-software-architecture/</guid>
+      <description>The goal of software architecture is to build abstract models on top of behavioral models, so your software becomes easier to maintain and/or optimize.</description>
+    </item>
+    
     <item>
       <title>The issue with SCRUM, SAFe, DDD and other methodologies</title>
       <link>https://tojans.me/posts/the-issue-with-scrum-safe-ddd-and-other-methodologies/</link>
