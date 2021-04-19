@@ -33,7 +33,7 @@ Over the years, the field has evolved into something that resembles a cargo-cult
 
 While it is certainly not the norm, I have seen some very high-potential projects going haywire because the software/system architect made the wrong decisions from the start, due to not listening to the client's problems, but going for the "architectural-pattern-of-the-day" flavor instead, because the client asked for it.
 
-As I have done a lot of IT road maps for large organizations during my last consulting gig, I noticed clients themselves are asking us for solutions instead of telling them our problems. This typically results in technology-driven road maps, where "approach XYZ" will resolve all the issues. This is not the client's fault, but our fault as ITers.
+As I have done a lot of IT road maps for large organizations during my last consulting gig, I noticed clients themselves are asking us for solutions instead of telling us what their problems are. This typically results in technology-driven road maps, where "approach XYZ" will resolve all the issues. This is not the client's fault, but our fault as ITers.
 
 Let me get one thing clear: a technology or process alone cannot exist in the void, it is always a people thing first. We as IT people seem to be unable to properly declare our intent without introducing terminology like micro-services, blockchain, SAFe, or whatever the latest CxO-hipster trends are. We are now at a point where clients ask organizations to "go to the cloud", "set-up a block-chain" or use "technology ABC" because it is what society expects them to do.
 
@@ -83,9 +83,9 @@ Any change increases entropy. If you start from the solution space, you might ha
 
 Instead of trying to hide reality, try to embrace it. Here are 2 simple tips:
  - Think about your software architecture as if there were no computers: how would you organize your work if you only had pens, paper, cabinets and a copier?
- - As always, this is a people problem first, so while this post is very nice in theory, in practice you might have to take into account the people you are working with/for might have other drivers, so get to know your stakeholders and figure out what kinds of impact they can have on the system, and what kind of an impact the system can have on them as well.
+ - As always, it is a people problem first, so while this post is very nice in theory, in practice you might have to take into account the people you are working with/for might have other drivers, so get to know your stakeholders and figure out what kind of impact they can have on the system, and what kind of impact the system can have on them as well.
 
-TL;DR: thousands of years of evolution has created a magnificently designed systems; think about what you are doing and how it would be resolved by nature.
+TL;DR: thousands of years of evolution resulted in magnificently designed systems; think about what you are doing and how it would be resolved by nature.
 
 Tom.
 
